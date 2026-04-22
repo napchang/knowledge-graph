@@ -1,0 +1,5351 @@
+{
+  "generated_at": "2026-04-22T23:15:51.839997",
+  "date": "2026-04-22",
+  "total_articles": 300,
+  "categories": [
+    "ai-search",
+    "agentic-b2b",
+    "ai-industry",
+    "academic"
+  ],
+  "category_names": {
+    "ai-search": "AI搜索",
+    "agentic-b2b": "Agentic B2B",
+    "ai-industry": "AI行业动态",
+    "academic": "前沿研究"
+  },
+  "category_colors": {
+    "ai-search": "#F97316",
+    "agentic-b2b": "#3B82F6",
+    "ai-industry": "#10B981",
+    "academic": "#8B5CF6"
+  },
+  "nodes": [
+    {
+      "id": "cat_ai-search",
+      "type": "category",
+      "label": "AI搜索",
+      "color": "#F97316",
+      "size": 40
+    },
+    {
+      "id": "cat_agentic-b2b",
+      "type": "category",
+      "label": "Agentic B2B",
+      "color": "#3B82F6",
+      "size": 40
+    },
+    {
+      "id": "cat_ai-industry",
+      "type": "category",
+      "label": "AI行业动态",
+      "color": "#10B981",
+      "size": 40
+    },
+    {
+      "id": "cat_academic",
+      "type": "category",
+      "label": "前沿研究",
+      "color": "#8B5CF6",
+      "size": 40
+    },
+    {
+      "id": "tag_大厂战略",
+      "type": "tag",
+      "label": "大厂战略",
+      "category": "ai-industry",
+      "color": "#10B981",
+      "size": 35,
+      "count": 30
+    },
+    {
+      "id": "tag_SEO",
+      "type": "tag",
+      "label": "SEO",
+      "category": "ai-search",
+      "color": "#F97316",
+      "size": 35,
+      "count": 63
+    },
+    {
+      "id": "tag_marketing",
+      "type": "tag",
+      "label": "marketing",
+      "category": "agentic-b2b",
+      "color": "#3B82F6",
+      "size": 32,
+      "count": 17
+    },
+    {
+      "id": "tag_strategy",
+      "type": "tag",
+      "label": "strategy",
+      "category": "agentic-b2b",
+      "color": "#3B82F6",
+      "size": 35,
+      "count": 38
+    },
+    {
+      "id": "tag_行业趋势",
+      "type": "tag",
+      "label": "行业趋势",
+      "category": "ai-industry",
+      "color": "#10B981",
+      "size": 35,
+      "count": 96
+    },
+    {
+      "id": "tag_信息检索",
+      "type": "tag",
+      "label": "信息检索",
+      "category": "academic",
+      "color": "#8B5CF6",
+      "size": 22,
+      "count": 7
+    },
+    {
+      "id": "tag_automation",
+      "type": "tag",
+      "label": "automation",
+      "category": "agentic-b2b",
+      "color": "#3B82F6",
+      "size": 35,
+      "count": 21
+    },
+    {
+      "id": "tag_度量指标",
+      "type": "tag",
+      "label": "度量指标",
+      "category": "ai-search",
+      "color": "#F97316",
+      "size": 32,
+      "count": 17
+    },
+    {
+      "id": "tag_AEO",
+      "type": "tag",
+      "label": "AEO",
+      "category": "ai-search",
+      "color": "#F97316",
+      "size": 27,
+      "count": 12
+    },
+    {
+      "id": "tag_研究",
+      "type": "tag",
+      "label": "研究",
+      "category": "academic",
+      "color": "#8B5CF6",
+      "size": 19,
+      "count": 4
+    },
+    {
+      "id": "tag_平台特定",
+      "type": "tag",
+      "label": "平台特定",
+      "category": "ai-search",
+      "color": "#F97316",
+      "size": 22,
+      "count": 7
+    },
+    {
+      "id": "tag_GEO",
+      "type": "tag",
+      "label": "GEO",
+      "category": "ai-search",
+      "color": "#F97316",
+      "size": 26,
+      "count": 11
+    },
+    {
+      "id": "tag_CX",
+      "type": "tag",
+      "label": "CX",
+      "category": "agentic-b2b",
+      "color": "#3B82F6",
+      "size": 19,
+      "count": 4
+    },
+    {
+      "id": "tag_sales",
+      "type": "tag",
+      "label": "sales",
+      "category": "agentic-b2b",
+      "color": "#3B82F6",
+      "size": 17,
+      "count": 2
+    },
+    {
+      "id": "art_0",
+      "type": "article",
+      "label": "What we learned about AI, Disc...",
+      "title": "What we learned about AI, Discover and Shopping from Google during the Search Central Zurich 2025",
+      "link": "https://www.aleydasolis.com/en/search-engine-optimization/what-we-learned-google-search-central-zurich-2025/",
+      "date": "Wed, 10 De",
+      "summary": "<p>A summary of three key topics discussed throughout the day, based on insights shared both in the Googlers' presentations and during the Q&#038;A at",
+      "category": "ai-industry",
+      "tags": [
+        "大厂战略"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_1",
+      "type": "article",
+      "label": "谷歌苏黎世搜索大会AI洞察",
+      "title": "谷歌苏黎世搜索大会AI洞察",
+      "link": "https://www.aleydasolis.com/en/search-engine-optimization/what-we-learned-google-search-central-zurich-2025/",
+      "date": "Wed, 10 De",
+      "summary": "基于谷歌团队演讲与问答环节，总结大会关于AI、探索与购物三大主题的核心讨论。",
+      "category": "ai-industry",
+      "tags": [
+        "大厂战略"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_2",
+      "type": "article",
+      "label": "苏黎世搜索大会AI与购物洞察",
+      "title": "苏黎世搜索大会AI与购物洞察",
+      "link": "https://www.aleydasolis.com/en/search-engine-optimization/what-we-learned-google-search-central-zurich-2025/",
+      "date": "Wed, 10 De",
+      "summary": "基于谷歌专家演讲及问答环节，总结大会三大核心议题：AI技术进展、Discover信息流与购物功能更新。",
+      "category": "ai-industry",
+      "tags": [
+        "大厂战略"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_3",
+      "type": "article",
+      "label": "谷歌苏黎世搜索大会AI洞察",
+      "title": "谷歌苏黎世搜索大会AI洞察",
+      "link": "https://www.aleydasolis.com/en/search-engine-optimization/what-we-learned-google-search-central-zurich-2025/",
+      "date": "Wed, 10 De",
+      "summary": "基于谷歌团队演讲与问答环节，总结大会关于人工智能、探索与购物三大核心议题的讨论要点。",
+      "category": "ai-industry",
+      "tags": [
+        "大厂战略"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_4",
+      "type": "article",
+      "label": "苏黎世搜索大会AI洞察",
+      "title": "苏黎世搜索大会AI洞察",
+      "link": "https://www.aleydasolis.com/en/search-engine-optimization/what-we-learned-google-search-central-zurich-2025/",
+      "date": "Wed, 10 De",
+      "summary": "基于谷歌专家演讲与问答，总结大会三大核心议题：AI技术进展、Discover功能与购物体验优化。",
+      "category": "ai-industry",
+      "tags": [
+        "大厂战略"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_5",
+      "type": "article",
+      "label": "苏黎世搜索大会AI洞察",
+      "title": "苏黎世搜索大会AI洞察",
+      "link": "https://www.aleydasolis.com/en/search-engine-optimization/what-we-learned-google-search-central-zurich-2025/",
+      "date": "Wed, 10 De",
+      "summary": "基于谷歌专家演讲与问答，总结大会三大核心议题：人工智能、探索与购物领域的最新进展与趋势。",
+      "category": "ai-industry",
+      "tags": [
+        "大厂战略"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_6",
+      "type": "article",
+      "label": "苏黎世搜索大会AI洞察",
+      "title": "苏黎世搜索大会AI洞察",
+      "link": "https://www.aleydasolis.com/en/search-engine-optimization/what-we-learned-google-search-central-zurich-2025/",
+      "date": "Wed, 10 De",
+      "summary": "基于谷歌专家演讲与问答，总结大会三大核心议题：AI技术进展、Discover功能与购物体验升级。",
+      "category": "ai-industry",
+      "tags": [
+        "大厂战略"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_7",
+      "type": "article",
+      "label": "谷歌关键词规划工具使用指南",
+      "title": "谷歌关键词规划工具使用指南",
+      "link": "https://www.semrush.com/blog/google-keyword-planner/",
+      "date": "Wed, 08 Ap",
+      "summary": "本文详细解析谷歌关键词规划工具的操作步骤，帮助用户高效挖掘搜索词数据，优化广告与SEO策略。",
+      "category": "ai-search",
+      "tags": [
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_8",
+      "type": "article",
+      "label": "谷歌关键词规划工具使用指南",
+      "title": "谷歌关键词规划工具使用指南",
+      "link": "https://www.semrush.com/blog/google-keyword-planner/",
+      "date": "Wed, 08 Ap",
+      "summary": "本文详细介绍了谷歌关键词规划工具的操作步骤，帮助用户高效挖掘关键词，优化广告投放与SEO策略。",
+      "category": "ai-search",
+      "tags": [
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_9",
+      "type": "article",
+      "label": "谷歌关键词规划工具使用指南",
+      "title": "谷歌关键词规划工具使用指南",
+      "link": "https://www.semrush.com/blog/google-keyword-planner/",
+      "date": "Wed, 08 Ap",
+      "summary": "本文详细解析如何利用Google Keyword Planner进行关键词研究，包括工具入口、功能操作及数据解读，帮助用户制定有效的SEO和广告策略。",
+      "category": "ai-search",
+      "tags": [
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_10",
+      "type": "article",
+      "label": "循环营销与传统营销差异解析",
+      "title": "循环营销与传统营销差异解析",
+      "link": "https://blog.hubspot.com/marketing/loop-marketing-vs-traditional-marketing",
+      "date": "Wed, 08 Ap",
+      "summary": "循环营销通过持续互动创造增长闭环，传统营销依赖单向广告投放。前者注重用户全周期参与，后者侧重广泛触达。",
+      "category": "agentic-b2b",
+      "tags": [
+        "marketing"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_11",
+      "type": "article",
+      "label": "增长团队必备营销预测基础",
+      "title": "增长团队必备营销预测基础",
+      "link": "https://blog.hubspot.com/marketing/marketing-forecast",
+      "date": "Wed, 08 Ap",
+      "summary": "营销预测是制定增长策略的核心工具，能帮助团队量化目标、分配资源并预判市场趋势。",
+      "category": "agentic-b2b",
+      "tags": [
+        "marketing"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_12",
+      "type": "article",
+      "label": "超越认知，实践AI",
+      "title": "超越认知，实践AI",
+      "link": "https://blog.hubspot.com/marketing/ai-enablement",
+      "date": "Wed, 08 Ap",
+      "summary": "仅了解人工智能已不足够，关键在于实际应用。本文探讨如何将AI工具融入日常工作，真正提升效率与创新能力。",
+      "category": "agentic-b2b",
+      "tags": [
+        "strategy"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_13",
+      "type": "article",
+      "label": "循环营销与传统营销差异解析",
+      "title": "循环营销与传统营销差异解析",
+      "link": "https://blog.hubspot.com/marketing/loop-marketing-vs-traditional-marketing",
+      "date": "Wed, 08 Ap",
+      "summary": "循环营销以客户为中心，通过持续互动建立长期关系；传统营销侧重单向信息传播，追求短期曝光。两者在策略、渠道和效果评估上存在本质区别。",
+      "category": "agentic-b2b",
+      "tags": [
+        "marketing"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_14",
+      "type": "article",
+      "label": "增长团队必备营销预测基础",
+      "title": "增长团队必备营销预测基础",
+      "link": "https://blog.hubspot.com/marketing/marketing-forecast",
+      "date": "Wed, 08 Ap",
+      "summary": "本文阐述了营销预测的核心要素，帮助团队科学规划增长路径，实现可预期的业务目标。",
+      "category": "agentic-b2b",
+      "tags": [
+        "marketing"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_15",
+      "type": "article",
+      "label": "超越认知，实践AI应用",
+      "title": "超越认知，实践AI应用",
+      "link": "https://blog.hubspot.com/marketing/ai-enablement",
+      "date": "Wed, 08 Ap",
+      "summary": "本文指出仅了解人工智能已不足够，关键在于掌握其实际应用方法，并介绍了相关工具与策略。",
+      "category": "agentic-b2b",
+      "tags": [
+        "strategy"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_16",
+      "type": "article",
+      "label": "循环营销与传统营销差异解析",
+      "title": "循环营销与传统营销差异解析",
+      "link": "https://blog.hubspot.com/marketing/loop-marketing-vs-traditional-marketing",
+      "date": "Wed, 08 Ap",
+      "summary": "循环营销通过持续互动创造增长闭环，传统营销依赖单向广告投放。前者注重用户全周期参与，后者侧重广泛触达。",
+      "category": "agentic-b2b",
+      "tags": [
+        "marketing"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_17",
+      "type": "article",
+      "label": "增长团队必备营销预测基础",
+      "title": "增长团队必备营销预测基础",
+      "link": "https://blog.hubspot.com/marketing/marketing-forecast",
+      "date": "Wed, 08 Ap",
+      "summary": "营销预测是制定有效增长策略的核心工具，能帮助团队量化目标、分配资源并评估活动成效。",
+      "category": "agentic-b2b",
+      "tags": [
+        "marketing"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_18",
+      "type": "article",
+      "label": "超越认知，实践AI应用",
+      "title": "超越认知，实践AI应用",
+      "link": "https://blog.hubspot.com/marketing/ai-enablement",
+      "date": "Wed, 08 Ap",
+      "summary": "仅了解人工智能已不足够，关键在于将其融入实际工作流程。本文探讨如何跨越理论，通过具体工具与方法实现AI技术落地。",
+      "category": "agentic-b2b",
+      "tags": [
+        "strategy"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_19",
+      "type": "article",
+      "label": "循环营销与传统营销差异解析",
+      "title": "循环营销与传统营销差异解析",
+      "link": "https://blog.hubspot.com/marketing/loop-marketing-vs-traditional-marketing",
+      "date": "Wed, 08 Ap",
+      "summary": "循环营销以客户为中心，通过持续互动和数据反馈优化策略，形成闭环；传统营销则依赖单向广告投放，缺乏即时互动与精准调整。",
+      "category": "agentic-b2b",
+      "tags": [
+        "marketing"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_20",
+      "type": "article",
+      "label": "增长团队必备营销预测基础",
+      "title": "增长团队必备营销预测基础",
+      "link": "https://blog.hubspot.com/marketing/marketing-forecast",
+      "date": "Wed, 08 Ap",
+      "summary": "营销预测是制定增长策略的核心工具，能帮助团队量化目标、分配资源并预测市场趋势。",
+      "category": "agentic-b2b",
+      "tags": [
+        "marketing"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_21",
+      "type": "article",
+      "label": "超越认知，实践AI应用",
+      "title": "超越认知，实践AI应用",
+      "link": "https://blog.hubspot.com/marketing/ai-enablement",
+      "date": "Wed, 08 Ap",
+      "summary": "本文指出仅了解人工智能已不足够，关键在于掌握其实际应用方法，并介绍了相关工具与策略。",
+      "category": "agentic-b2b",
+      "tags": [
+        "strategy"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_22",
+      "type": "article",
+      "label": "循环营销与传统营销差异解析",
+      "title": "循环营销与传统营销差异解析",
+      "link": "https://blog.hubspot.com/marketing/loop-marketing-vs-traditional-marketing",
+      "date": "Wed, 08 Ap",
+      "summary": "循环营销通过持续互动与反馈优化客户体验，形成闭环；传统营销更侧重单向信息传播与短期转化。两者在策略重心与效果持续性上存在本质区别。",
+      "category": "agentic-b2b",
+      "tags": [
+        "marketing"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_23",
+      "type": "article",
+      "label": "增长团队必备营销预测基础",
+      "title": "增长团队必备营销预测基础",
+      "link": "https://blog.hubspot.com/marketing/marketing-forecast",
+      "date": "Wed, 08 Ap",
+      "summary": "本文阐述了营销预测的核心要素，帮助团队科学规划增长路径，实现可预期的业务目标。",
+      "category": "agentic-b2b",
+      "tags": [
+        "marketing"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_24",
+      "type": "article",
+      "label": "超越认知，实践AI应用",
+      "title": "超越认知，实践AI应用",
+      "link": "https://blog.hubspot.com/marketing/ai-enablement",
+      "date": "Wed, 08 Ap",
+      "summary": "本文指出仅了解人工智能已不足够，关键在于掌握其实际应用方法，并提供了从理论到实践的转化路径。",
+      "category": "agentic-b2b",
+      "tags": [
+        "strategy"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_25",
+      "type": "article",
+      "label": "谷歌关键词规划师使用指南",
+      "title": "谷歌关键词规划师使用指南",
+      "link": "https://www.semrush.com/blog/google-keyword-planner/",
+      "date": "Wed, 08 Ap",
+      "summary": "本文详细介绍了谷歌关键词规划师的核心功能与操作步骤，帮助用户高效挖掘关键词数据，为搜索引擎优化和广告投放提供依据。",
+      "category": "ai-industry",
+      "tags": [
+        "大厂战略"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_26",
+      "type": "article",
+      "label": "竞争情报入门指南",
+      "title": "竞争情报入门指南",
+      "link": "https://www.semrush.com/blog/competitive-intelligence/",
+      "date": "Wed, 08 Ap",
+      "summary": "竞争情报指系统收集分析对手信息以制定市场策略。本文详解其定义与核心采集方法，帮助企业掌握市场动态。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_27",
+      "type": "article",
+      "label": "竞争情报入门指南",
+      "title": "竞争情报入门指南",
+      "link": "https://www.semrush.com/blog/competitive-intelligence/",
+      "date": "Wed, 08 Ap",
+      "summary": "竞争情报指系统收集分析竞争对手信息，以制定市场策略。本文详解其定义与核心采集方法，助力企业洞察市场动态。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_28",
+      "type": "article",
+      "label": "竞争情报入门指南",
+      "title": "竞争情报入门指南",
+      "link": "https://www.semrush.com/blog/competitive-intelligence/",
+      "date": "Wed, 08 Ap",
+      "summary": "竞争情报指系统收集分析对手信息以制定市场策略。本文详解其定义与核心搜集方法，帮助企业掌握市场动态。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_29",
+      "type": "article",
+      "label": "谷歌关键词规划工具使用指南",
+      "title": "谷歌关键词规划工具使用指南",
+      "link": "https://www.semrush.com/blog/google-keyword-planner/",
+      "date": "Wed, 08 Ap",
+      "summary": "本文详细解析如何利用Google Keyword Planner进行关键词研究，包括功能操作与数据解读，助力优化搜索营销策略。",
+      "category": "ai-industry",
+      "tags": [
+        "大厂战略"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_30",
+      "type": "article",
+      "label": "竞争情报入门指南",
+      "title": "竞争情报入门指南",
+      "link": "https://www.semrush.com/blog/competitive-intelligence/",
+      "date": "Wed, 08 Ap",
+      "summary": "竞争情报指系统收集分析对手信息以制定市场策略。本文详解其定义与核心采集方法，帮助企业掌握市场动态。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_31",
+      "type": "article",
+      "label": "竞争情报入门指南",
+      "title": "竞争情报入门指南",
+      "link": "https://www.semrush.com/blog/competitive-intelligence/",
+      "date": "Wed, 08 Ap",
+      "summary": "竞争情报指系统收集分析对手信息以制定市场策略。本文详解其定义与核心搜集方法，帮助企业掌握市场动态。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_32",
+      "type": "article",
+      "label": "8 Best AI SEO Tools for 2026 (...",
+      "title": "8 Best AI SEO Tools for 2026 (Tested Firsthand)",
+      "link": "https://www.semrush.com/blog/best-ai-seo-tools/",
+      "date": "Wed, 01 Ap",
+      "summary": "<p><img alt=\"8 Best AI SEO Tools for 2026 (Tested Firsthand)\" src=\"https://static.semrush.com/blog/uploads/media/bd/e0/bde0ecced7ff4b219b263f04ad37849",
+      "category": "ai-search",
+      "tags": [
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_33",
+      "type": "article",
+      "label": "2026年八大AI SEO工具实测",
+      "title": "2026年八大AI SEO工具实测",
+      "link": "https://www.semrush.com/blog/best-ai-seo-tools/",
+      "date": "Wed, 01 Ap",
+      "summary": "本文基于一手测试，精选出2026年最具潜力的AI驱动SEO工具，涵盖内容优化、关键词分析等核心功能，助力高效提升网站搜索排名。",
+      "category": "ai-search",
+      "tags": [
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_34",
+      "type": "article",
+      "label": "2026八大AI SEO工具实测推荐",
+      "title": "2026八大AI SEO工具实测推荐",
+      "link": "https://www.semrush.com/blog/best-ai-seo-tools/",
+      "date": "Wed, 01 Ap",
+      "summary": "本文基于一手测试，精选出2026年最具潜力的八款AI SEO工具，助力企业高效优化搜索引擎排名。",
+      "category": "ai-search",
+      "tags": [
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_35",
+      "type": "article",
+      "label": "2026年八大AI SEO工具实测推荐",
+      "title": "2026年八大AI SEO工具实测推荐",
+      "link": "https://www.semrush.com/blog/best-ai-seo-tools/",
+      "date": "Wed, 01 Ap",
+      "summary": "本文基于一手测试，精选出2026年最具潜力的AI驱动SEO工具，助力企业高效优化搜索引擎排名。",
+      "category": "ai-search",
+      "tags": [
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_36",
+      "type": "article",
+      "label": "2026年八大AI SEO工具实测推荐",
+      "title": "2026年八大AI SEO工具实测推荐",
+      "link": "https://www.semrush.com/blog/best-ai-seo-tools/",
+      "date": "Wed, 01 Ap",
+      "summary": "本文基于一手测试，精选出2026年最具潜力的AI SEO工具，涵盖内容优化、关键词分析等核心功能，助力高效提升网站搜索排名。",
+      "category": "ai-search",
+      "tags": [
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_37",
+      "type": "article",
+      "label": "The 9 Best LLM Monitoring Tool...",
+      "title": "The 9 Best LLM Monitoring Tools for Brand Visibility in 2026",
+      "link": "https://www.semrush.com/blog/llm-monitoring-tools/",
+      "date": "Wed, 01 Ap",
+      "summary": "<p><img alt=\"The 9 Best LLM Monitoring Tools for Brand Visibility in 2026\" src=\"https://static.semrush.com/blog/uploads/media/1b/38/1b38f6b3fcdf31dec8",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_38",
+      "type": "article",
+      "label": "AI content optimization: The c...",
+      "title": "AI content optimization: The complete guide",
+      "link": "https://www.semrush.com/blog/ai-content-optimization/",
+      "date": "Wed, 01 Ap",
+      "summary": "<p><img alt=\"AI content optimization: The complete guide\" src=\"https://static.semrush.com/blog/uploads/media/75/0b/750b00adf4528ac2c1510e1c12de8af7/36",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_39",
+      "type": "article",
+      "label": "2026品牌可见性九大LLM监测工具",
+      "title": "2026品牌可见性九大LLM监测工具",
+      "link": "https://www.semrush.com/blog/llm-monitoring-tools/",
+      "date": "Wed, 01 Ap",
+      "summary": "本文精选2026年提升品牌可见性的九款LLM监测工具，通过实时追踪与分析语言模型表现，助力企业优化数字营销策略。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_40",
+      "type": "article",
+      "label": "AI内容优化全攻略",
+      "title": "AI内容优化全攻略",
+      "link": "https://www.semrush.com/blog/ai-content-optimization/",
+      "date": "Wed, 01 Ap",
+      "summary": "本文全面解析AI内容优化的核心策略，涵盖从基础概念到高级技巧，助力提升内容质量与搜索引擎表现。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_41",
+      "type": "article",
+      "label": "2026年九大LLM监测工具提升品牌能见度",
+      "title": "2026年九大LLM监测工具提升品牌能见度",
+      "link": "https://www.semrush.com/blog/llm-monitoring-tools/",
+      "date": "Wed, 01 Ap",
+      "summary": "本文精选2026年九款高效LLM监测工具，帮助品牌实时追踪AI模型表现，优化内容策略，确保市场信息精准触达目标受众。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_42",
+      "type": "article",
+      "label": "AI内容优化全攻略",
+      "title": "AI内容优化全攻略",
+      "link": "https://www.semrush.com/blog/ai-content-optimization/",
+      "date": "Wed, 01 Ap",
+      "summary": "本文全面解析AI内容优化的核心策略，涵盖技术要点与实用工具，助您高效提升内容质量与传播效果。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_43",
+      "type": "article",
+      "label": "2026年九大LLM监测工具提升品牌能见度",
+      "title": "2026年九大LLM监测工具提升品牌能见度",
+      "link": "https://www.semrush.com/blog/llm-monitoring-tools/",
+      "date": "Wed, 01 Ap",
+      "summary": "本文精选2026年九款高效LLM监测工具，帮助品牌实时追踪模型表现与舆论动态，优化市场策略。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_44",
+      "type": "article",
+      "label": "AI内容优化全攻略",
+      "title": "AI内容优化全攻略",
+      "link": "https://www.semrush.com/blog/ai-content-optimization/",
+      "date": "Wed, 01 Ap",
+      "summary": "本文全面解析AI内容优化的核心策略与工具，涵盖从关键词分析到内容生成的全流程，助力提升内容质量与搜索引擎表现。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_45",
+      "type": "article",
+      "label": "2026品牌可见性最佳LLM监测工具",
+      "title": "2026品牌可见性最佳LLM监测工具",
+      "link": "https://www.semrush.com/blog/llm-monitoring-tools/",
+      "date": "Wed, 01 Ap",
+      "summary": "本文精选2026年九款领先的LLM监测工具，通过实时追踪AI生成内容与品牌关联度，帮助企业提升数字曝光与声誉管理效率。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_46",
+      "type": "article",
+      "label": "AI内容优化全指南",
+      "title": "AI内容优化全指南",
+      "link": "https://www.semrush.com/blog/ai-content-optimization/",
+      "date": "Wed, 01 Ap",
+      "summary": "本文全面解析如何利用人工智能技术优化内容创作，涵盖策略、工具与实践案例，助力提升内容质量与传播效果。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_47",
+      "type": "article",
+      "label": "Does AI content rank well in s...",
+      "title": "Does AI content rank well in search? [Survey + Data study]",
+      "link": "https://www.semrush.com/blog/does-ai-content-rank-in-search-data-study/",
+      "date": "Wed, 01 Ap",
+      "summary": "<p>Does AI content rank on Google? We analyzed 42,000 blog posts to find out. The answer depends less on whether you used AI — and more on whether you",
+      "category": "academic",
+      "tags": [
+        "信息检索"
+      ],
+      "color": "#8B5CF6",
+      "size": 6
+    },
+    {
+      "id": "art_48",
+      "type": "article",
+      "label": "AI内容搜索排名调查",
+      "title": "AI内容搜索排名调查",
+      "link": "https://www.semrush.com/blog/does-ai-content-rank-in-search-data-study/",
+      "date": "Wed, 01 Ap",
+      "summary": "针对AI生成内容在谷歌的排名表现，我们分析了4.2万篇博客文章。结果显示，关键并非是否使用AI，而是内容是否体现其价值。",
+      "category": "academic",
+      "tags": [
+        "信息检索"
+      ],
+      "color": "#8B5CF6",
+      "size": 6
+    },
+    {
+      "id": "art_49",
+      "type": "article",
+      "label": "AI内容搜索排名调查",
+      "title": "AI内容搜索排名调查",
+      "link": "https://www.semrush.com/blog/does-ai-content-rank-in-search-data-study/",
+      "date": "Wed, 01 Ap",
+      "summary": "针对AI生成内容在谷歌的排名表现，我们分析了4.2万篇博客文章。结果显示，关键并非是否使用AI，而是内容是否体现其价值。",
+      "category": "academic",
+      "tags": [
+        "信息检索"
+      ],
+      "color": "#8B5CF6",
+      "size": 6
+    },
+    {
+      "id": "art_50",
+      "type": "article",
+      "label": "AI内容搜索排名调查",
+      "title": "AI内容搜索排名调查",
+      "link": "https://www.semrush.com/blog/does-ai-content-rank-in-search-data-study/",
+      "date": "Wed, 01 Ap",
+      "summary": "针对AI生成内容在谷歌的排名表现，我们分析了4.2万篇博客文章。结果显示，排名关键并非是否使用AI，而在于内容是否体现其价值。",
+      "category": "academic",
+      "tags": [
+        "信息检索"
+      ],
+      "color": "#8B5CF6",
+      "size": 6
+    },
+    {
+      "id": "art_51",
+      "type": "article",
+      "label": "AI内容搜索排名调查",
+      "title": "AI内容搜索排名调查",
+      "link": "https://www.semrush.com/blog/does-ai-content-rank-in-search-data-study/",
+      "date": "Wed, 01 Ap",
+      "summary": "AI生成内容能否在谷歌获得良好排名？我们分析了4.2万篇博客发现，关键并非是否使用AI，而在于内容是否展现其价值。",
+      "category": "academic",
+      "tags": [
+        "信息检索"
+      ],
+      "color": "#8B5CF6",
+      "size": 6
+    },
+    {
+      "id": "art_52",
+      "type": "article",
+      "label": "AI内容搜索排名调查",
+      "title": "AI内容搜索排名调查",
+      "link": "https://www.semrush.com/blog/does-ai-content-rank-in-search-data-study/",
+      "date": "Wed, 01 Ap",
+      "summary": "AI生成内容能否在谷歌获得良好排名？我们分析了4.2万篇博客发现，关键并非是否使用AI，而在于内容是否展现其价值。",
+      "category": "academic",
+      "tags": [
+        "信息检索"
+      ],
+      "color": "#8B5CF6",
+      "size": 6
+    },
+    {
+      "id": "art_53",
+      "type": "article",
+      "label": "AI内容搜索排名调查",
+      "title": "AI内容搜索排名调查",
+      "link": "https://www.semrush.com/blog/does-ai-content-rank-in-search-data-study/",
+      "date": "Wed, 01 Ap",
+      "summary": "针对AI生成内容在谷歌的排名表现，我们分析了4.2万篇博客文章。结果显示，关键并非是否使用AI，而在于内容是否体现其价值。",
+      "category": "academic",
+      "tags": [
+        "信息检索"
+      ],
+      "color": "#8B5CF6",
+      "size": 6
+    },
+    {
+      "id": "art_54",
+      "type": "article",
+      "label": "Page Authority: How to Build P...",
+      "title": "Page Authority: How to Build Pages That Rank",
+      "link": "https://blog.hubspot.com/marketing/page-authority",
+      "date": "Tue, 31 Ma",
+      "summary": "<div class=\"hs-featured-image-wrapper\">",
+      "category": "agentic-b2b",
+      "tags": [
+        "strategy"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_55",
+      "type": "article",
+      "label": "页面权威性提升指南",
+      "title": "页面权威性提升指南",
+      "link": "https://blog.hubspot.com/marketing/page-authority",
+      "date": "Tue, 31 Ma",
+      "summary": "本文探讨如何通过优化内容质量、获取高质量外链及提升用户体验，构建具备高搜索排名的网页。",
+      "category": "agentic-b2b",
+      "tags": [
+        "strategy"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_56",
+      "type": "article",
+      "label": "页面权威性提升指南",
+      "title": "页面权威性提升指南",
+      "link": "https://blog.hubspot.com/marketing/page-authority",
+      "date": "Tue, 31 Ma",
+      "summary": "本文探讨如何通过优化内容质量、获取高质量外链及提升用户体验，构建具有高排名潜力的网页。",
+      "category": "agentic-b2b",
+      "tags": [
+        "strategy"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_57",
+      "type": "article",
+      "label": "页面权威性提升指南",
+      "title": "页面权威性提升指南",
+      "link": "https://blog.hubspot.com/marketing/page-authority",
+      "date": "Tue, 31 Ma",
+      "summary": "本文探讨如何通过优化内容质量、获取高质量外链及提升用户体验，构建具备高排名潜力的网页。",
+      "category": "agentic-b2b",
+      "tags": [
+        "strategy"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_58",
+      "type": "article",
+      "label": "The 10 Key Characteristics of ...",
+      "title": "The 10 Key Characteristics of  AI Search Winning Brands [With an Assessment Checklist]",
+      "link": "https://www.aleydasolis.com/en/ai-search/ai-search-winning-brands-characteristics/",
+      "date": "Tue, 31 Ma",
+      "summary": "<p>What makes a brand to show up and get recommended across AI search platforms? Here's a list with a checklist to assess and optimize for AI visibili",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_59",
+      "type": "article",
+      "label": "AI搜索领先品牌的十大特征（附评估清单）",
+      "title": "AI搜索领先品牌的十大特征（附评估清单）",
+      "link": "https://www.aleydasolis.com/en/ai-search/ai-search-winning-brands-characteristics/",
+      "date": "Tue, 31 Ma",
+      "summary": "品牌如何在AI搜索平台脱颖而出并获得推荐？本文提供评估清单，助您优化AI可见性。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_60",
+      "type": "article",
+      "label": "AI搜索领先品牌的十大特征（附评估清单）",
+      "title": "AI搜索领先品牌的十大特征（附评估清单）",
+      "link": "https://www.aleydasolis.com/en/ai-search/ai-search-winning-brands-characteristics/",
+      "date": "Tue, 31 Ma",
+      "summary": "品牌如何在AI搜索平台脱颖而出并获得推荐？本文提供评估清单，助您优化AI可见性。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_61",
+      "type": "article",
+      "label": "AI搜索领先品牌的十大特征（附评估清单）",
+      "title": "AI搜索领先品牌的十大特征（附评估清单）",
+      "link": "https://www.aleydasolis.com/en/ai-search/ai-search-winning-brands-characteristics/",
+      "date": "Tue, 31 Ma",
+      "summary": "品牌如何在AI搜索平台脱颖而出并获得推荐？本文提供清单，助您评估并优化AI可见性。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_62",
+      "type": "article",
+      "label": "AI搜索领先品牌的十大特征（附评估清单）",
+      "title": "AI搜索领先品牌的十大特征（附评估清单）",
+      "link": "https://www.aleydasolis.com/en/ai-search/ai-search-winning-brands-characteristics/",
+      "date": "Tue, 31 Ma",
+      "summary": "品牌如何在AI搜索平台脱颖而出并获得推荐？本文提供评估清单，助您优化AI可见性。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_63",
+      "type": "article",
+      "label": "AI搜索领先品牌的十大特征（附评估清单）",
+      "title": "AI搜索领先品牌的十大特征（附评估清单）",
+      "link": "https://www.aleydasolis.com/en/ai-search/ai-search-winning-brands-characteristics/",
+      "date": "Tue, 31 Ma",
+      "summary": "品牌如何在AI搜索平台脱颖而出并获得推荐？本文提供清单，助您评估并优化AI可见性。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_64",
+      "type": "article",
+      "label": "AI搜索领先品牌的十大特质[附评估清单]",
+      "title": "AI搜索领先品牌的十大特质[附评估清单]",
+      "link": "https://www.aleydasolis.com/en/ai-search/ai-search-winning-brands-characteristics/",
+      "date": "Tue, 31 Ma",
+      "summary": "揭秘品牌在AI搜索平台获得曝光与推荐的关键要素，并提供评估清单助力优化AI可见性。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_65",
+      "type": "article",
+      "label": "What UCP Means for Ecommerce S...",
+      "title": "What UCP Means for Ecommerce SEO: Preparing for Agentic Commerce",
+      "link": "https://www.aleydasolis.com/en/search-engine-optimization/ugc-agentic-commerce-seo/",
+      "date": "Tue, 13 Ja",
+      "summary": "<p>UCP changes ecommerce SEO by expanding its scope. Here's an initial view of what UCP means for ecommerce SEO, based on what has been disclosed in t",
+      "category": "ai-search",
+      "tags": [
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_66",
+      "type": "article",
+      "label": "UCP对电商SEO的影响与机遇",
+      "title": "UCP对电商SEO的影响与机遇",
+      "link": "https://www.aleydasolis.com/en/search-engine-optimization/ugc-agentic-commerce-seo/",
+      "date": "Tue, 13 Ja",
+      "summary": "UCP通过拓展搜索范围，重塑电商SEO格局。本文基于已披露信息，初步解读其核心变革方向。",
+      "category": "ai-search",
+      "tags": [
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_67",
+      "type": "article",
+      "label": "UCP对电商SEO的影响与应对",
+      "title": "UCP对电商SEO的影响与应对",
+      "link": "https://www.aleydasolis.com/en/search-engine-optimization/ugc-agentic-commerce-seo/",
+      "date": "Tue, 13 Ja",
+      "summary": "UCP通过扩展SEO范畴改变电商搜索优化。本文基于已披露信息，初步解读UCP对电商SEO的意义与调整方向。",
+      "category": "ai-search",
+      "tags": [
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_68",
+      "type": "article",
+      "label": "UCP对电商SEO的影响与应对",
+      "title": "UCP对电商SEO的影响与应对",
+      "link": "https://www.aleydasolis.com/en/search-engine-optimization/ugc-agentic-commerce-seo/",
+      "date": "Tue, 13 Ja",
+      "summary": "UCP通过扩展搜索范围改变电商SEO格局，基于已披露信息，本文初步解读其核心影响。",
+      "category": "ai-search",
+      "tags": [
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_69",
+      "type": "article",
+      "label": "UCP对电商SEO的影响与应对",
+      "title": "UCP对电商SEO的影响与应对",
+      "link": "https://www.aleydasolis.com/en/search-engine-optimization/ugc-agentic-commerce-seo/",
+      "date": "Tue, 13 Ja",
+      "summary": "UCP通过扩展搜索范围改变电商SEO格局，本文基于已披露信息，初步解析其核心影响与商业准备方向。",
+      "category": "ai-search",
+      "tags": [
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_70",
+      "type": "article",
+      "label": "UCP对电商SEO的影响与应对",
+      "title": "UCP对电商SEO的影响与应对",
+      "link": "https://www.aleydasolis.com/en/search-engine-optimization/ugc-agentic-commerce-seo/",
+      "date": "Tue, 13 Ja",
+      "summary": "UCP通过扩展搜索范围改变电商SEO格局。本文基于已披露信息，初步解读其影响及应对方向。",
+      "category": "ai-search",
+      "tags": [
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_71",
+      "type": "article",
+      "label": "UCP重塑电商SEO新格局",
+      "title": "UCP重塑电商SEO新格局",
+      "link": "https://www.aleydasolis.com/en/search-engine-optimization/ugc-agentic-commerce-seo/",
+      "date": "Tue, 13 Ja",
+      "summary": "UCP通过扩展搜索范围，正在改变电商SEO的运作逻辑。本文基于官方披露信息，初步解读其对行业的影响路径。",
+      "category": "ai-search",
+      "tags": [
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_72",
+      "type": "article",
+      "label": "零点击搜索与营销漏斗变革",
+      "title": "零点击搜索与营销漏斗变革",
+      "link": "https://blog.hubspot.com/marketing/zero-click-searches",
+      "date": "Tue, 07 Ap",
+      "summary": "零点击搜索正在重塑用户获取信息的方式，传统营销漏斗顶端面临压缩，品牌需调整策略以应对直接答案式搜索的挑战。",
+      "category": "agentic-b2b",
+      "tags": [
+        "marketing"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_73",
+      "type": "article",
+      "label": "零点击搜索与营销漏斗未来",
+      "title": "零点击搜索与营销漏斗未来",
+      "link": "https://blog.hubspot.com/marketing/zero-click-searches",
+      "date": "Tue, 07 Ap",
+      "summary": "零点击搜索正改变用户获取信息方式，传统营销漏斗面临重构，品牌需重新思考流量获取与转化策略。",
+      "category": "agentic-b2b",
+      "tags": [
+        "marketing"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_74",
+      "type": "article",
+      "label": "零点击搜索重塑营销漏斗",
+      "title": "零点击搜索重塑营销漏斗",
+      "link": "https://blog.hubspot.com/marketing/zero-click-searches",
+      "date": "Tue, 07 Ap",
+      "summary": "谷歌等搜索引擎的零点击搜索结果占比持续攀升，用户无需点击链接即可获取信息，这正在深刻改变传统的营销获客路径。",
+      "category": "agentic-b2b",
+      "tags": [
+        "marketing"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_75",
+      "type": "article",
+      "label": "零点击搜索与营销漏斗变革",
+      "title": "零点击搜索与营销漏斗变革",
+      "link": "https://blog.hubspot.com/marketing/zero-click-searches",
+      "date": "Tue, 07 Ap",
+      "summary": "零点击搜索正在重塑用户获取信息的方式，传统营销漏斗顶端面临流量减少的挑战，品牌需调整策略应对。",
+      "category": "agentic-b2b",
+      "tags": [
+        "marketing"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_76",
+      "type": "article",
+      "label": "零点击搜索重塑营销漏斗",
+      "title": "零点击搜索重塑营销漏斗",
+      "link": "https://blog.hubspot.com/marketing/zero-click-searches",
+      "date": "Tue, 07 Ap",
+      "summary": "零点击搜索指用户直接在搜索结果页面获取答案，无需点击进入网站。这改变了传统营销漏斗模型，品牌需调整策略以应对用户行为变化。",
+      "category": "agentic-b2b",
+      "tags": [
+        "marketing"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_77",
+      "type": "article",
+      "label": "智能体搜索重塑品牌曝光",
+      "title": "智能体搜索重塑品牌曝光",
+      "link": "https://www.semrush.com/blog/what-is-agentic-search/",
+      "date": "Tue, 07 Ap",
+      "summary": "智能体搜索是代表用户评估并行动的AI技术，它将深刻影响品牌在数字环境中的可见度与触达效率。",
+      "category": "agentic-b2b",
+      "tags": [
+        "automation"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_78",
+      "type": "article",
+      "label": "智能体搜索重塑品牌曝光新格局",
+      "title": "智能体搜索重塑品牌曝光新格局",
+      "link": "https://www.semrush.com/blog/what-is-agentic-search/",
+      "date": "Tue, 07 Ap",
+      "summary": "智能体搜索指AI代理主动评估并代用户执行决策。了解其运作机制对把握品牌可见性至关重要。",
+      "category": "agentic-b2b",
+      "tags": [
+        "automation"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_79",
+      "type": "article",
+      "label": "智能体搜索重塑品牌可见性",
+      "title": "智能体搜索重塑品牌可见性",
+      "link": "https://www.semrush.com/blog/what-is-agentic-search/",
+      "date": "Tue, 07 Ap",
+      "summary": "智能体搜索指AI代理主动评估并代表用户决策的搜索模式，将深刻影响品牌被发现的路径与机会。",
+      "category": "agentic-b2b",
+      "tags": [
+        "automation"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_80",
+      "type": "article",
+      "label": "智能体搜索重塑品牌曝光新格局",
+      "title": "智能体搜索重塑品牌曝光新格局",
+      "link": "https://www.semrush.com/blog/what-is-agentic-search/",
+      "date": "Tue, 07 Ap",
+      "summary": "智能体搜索指AI代理主动评估并代用户执行决策。了解其运作机制，将直接影响品牌在数字环境中的可见度与竞争力。",
+      "category": "agentic-b2b",
+      "tags": [
+        "automation"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_81",
+      "type": "article",
+      "label": "智能体搜索重塑品牌曝光新格局",
+      "title": "智能体搜索重塑品牌曝光新格局",
+      "link": "https://www.semrush.com/blog/what-is-agentic-search/",
+      "date": "Tue, 07 Ap",
+      "summary": "智能体搜索指AI代理主动评估并代表用户执行决策。了解其运作机制，将直接影响品牌在数字环境中的可见度与竞争力。",
+      "category": "agentic-b2b",
+      "tags": [
+        "automation"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_82",
+      "type": "article",
+      "label": "ChatGPT流量洞察报告",
+      "title": "ChatGPT流量洞察报告",
+      "link": "https://www.semrush.com/blog/chatgpt-search-insights/",
+      "date": "Tue, 07 Ap",
+      "summary": "基于17个月点击流数据分析，揭示ChatGPT用户访问趋势与行为特征，为AI产品发展提供关键参考。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_83",
+      "type": "article",
+      "label": "ChatGPT流量趋势洞察",
+      "title": "ChatGPT流量趋势洞察",
+      "link": "https://www.semrush.com/blog/chatgpt-search-insights/",
+      "date": "Tue, 07 Ap",
+      "summary": "基于17个月点击流数据分析，揭示ChatGPT用户访问规律与市场渗透动态，为行业竞争格局提供数据参照。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_84",
+      "type": "article",
+      "label": "ChatGPT流量洞察报告",
+      "title": "ChatGPT流量洞察报告",
+      "link": "https://www.semrush.com/blog/chatgpt-search-insights/",
+      "date": "Tue, 07 Ap",
+      "summary": "基于17个月点击流数据分析，揭示ChatGPT用户访问趋势与行为模式，为AI产品发展提供关键参考。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_85",
+      "type": "article",
+      "label": "ChatGPT流量洞察报告",
+      "title": "ChatGPT流量洞察报告",
+      "link": "https://www.semrush.com/blog/chatgpt-search-insights/",
+      "date": "Tue, 07 Ap",
+      "summary": "基于17个月点击流数据分析，揭示ChatGPT用户访问趋势与行为模式，为AI产品发展提供关键参考。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_86",
+      "type": "article",
+      "label": "ChatGPT流量洞察报告",
+      "title": "ChatGPT流量洞察报告",
+      "link": "https://www.semrush.com/blog/chatgpt-search-insights/",
+      "date": "Tue, 07 Ap",
+      "summary": "基于17个月点击流数据分析，揭示ChatGPT用户访问趋势与行为模式，为AI产品发展提供关键参考。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_87",
+      "type": "article",
+      "label": "Seed Keywords: The Starting Po...",
+      "title": "Seed Keywords: The Starting Point for SEO Research",
+      "link": "https://blog.hubspot.com/marketing/seed-keywords",
+      "date": "Thu, 26 Ma",
+      "summary": "<div class=\"hs-featured-image-wrapper\">",
+      "category": "ai-search",
+      "tags": [
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_88",
+      "type": "article",
+      "label": "种子关键词：SEO研究的起点",
+      "title": "种子关键词：SEO研究的起点",
+      "link": "https://blog.hubspot.com/marketing/seed-keywords",
+      "date": "Thu, 26 Ma",
+      "summary": "种子关键词是SEO研究的核心基础，用于拓展相关关键词组合，帮助明确内容方向与用户搜索意图。",
+      "category": "ai-search",
+      "tags": [
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_89",
+      "type": "article",
+      "label": "Beyond the Spreadsheet: Omnime...",
+      "title": "Beyond the Spreadsheet: Omnimedia Content Audits for the AI Era",
+      "link": "https://ipullrank.com/omnimedia-content-audits",
+      "date": "Thu, 26 Ma",
+      "summary": "<p>“An audit doesn’t just find what’s not working,” said iPullRank VP of Content Strategy Fajr Muhammad. “It finds what is working so brands can conti",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_90",
+      "type": "article",
+      "label": "超越表格：AI时代全媒体内容审计",
+      "title": "超越表格：AI时代全媒体内容审计",
+      "link": "https://ipullrank.com/omnimedia-content-audits",
+      "date": "Thu, 26 Ma",
+      "summary": "iPullRank内容战略副总裁指出，审计不仅发现问题，更能识别有效内容，助力品牌持续发挥优势。未来内容策略将更注重全媒体整合与AI驱动分析。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_91",
+      "type": "article",
+      "label": "超越表格：AI时代全媒体内容审计",
+      "title": "超越表格：AI时代全媒体内容审计",
+      "link": "https://ipullrank.com/omnimedia-content-audits",
+      "date": "Thu, 26 Ma",
+      "summary": "iPullRank内容策略副总裁指出，审计不仅发现问题，更能识别有效内容，助力品牌持续发挥优势。未来内容策略将深度融合AI技术，实现全媒体生态的精准评估与优化。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_92",
+      "type": "article",
+      "label": "超越表格：AI时代全媒体内容审计",
+      "title": "超越表格：AI时代全媒体内容审计",
+      "link": "https://ipullrank.com/omnimedia-content-audits",
+      "date": "Thu, 26 Ma",
+      "summary": "iPullRank内容策略副总裁指出，审计不仅发现问题，更能识别有效内容，助力品牌持续发挥优势。未来内容策略将深度融合AI技术，实现全媒体生态的智能评估与优化。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_93",
+      "type": "article",
+      "label": "超越表格：AI时代全媒体内容审计",
+      "title": "超越表格：AI时代全媒体内容审计",
+      "link": "https://ipullrank.com/omnimedia-content-audits",
+      "date": "Thu, 26 Ma",
+      "summary": "iPullRank内容策略副总裁Fajr Muhammad指出，内容审计不仅发现问题，更能发掘有效内容，助力品牌持续增值。未来内容策略将……",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_94",
+      "type": "article",
+      "label": "超越表格：AI时代全媒体内容审计",
+      "title": "超越表格：AI时代全媒体内容审计",
+      "link": "https://ipullrank.com/omnimedia-content-audits",
+      "date": "Thu, 26 Ma",
+      "summary": "iPullRank内容策略副总裁指出，审计不仅发现问题，更能识别有效内容，助力品牌持续发挥优势。未来内容策略将深度融合AI技术，实现全媒体生态的智能评估与优化。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_95",
+      "type": "article",
+      "label": "超越表格：AI时代全媒体内容审计",
+      "title": "超越表格：AI时代全媒体内容审计",
+      "link": "https://ipullrank.com/omnimedia-content-audits",
+      "date": "Thu, 26 Ma",
+      "summary": "iPullRank内容策略副总裁指出，审计不仅发现问题，更能识别有效内容，助力品牌持续发挥优势。未来内容策略将……",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_96",
+      "type": "article",
+      "label": "Confirmed: ChatGPT uses Google...",
+      "title": "Confirmed: ChatGPT uses Google SERP Snippets for its Answers [A Test with Proof]",
+      "link": "https://www.aleydasolis.com/en/ai-search/chatgpt-uses-google-serp-snippets-for-answers/",
+      "date": "Thu, 24 Ju",
+      "summary": "<p>I've run a simple but straight-forward to follow test that confirms the reliance of ChatGPT on Google SERPs snippets for its answers.</p>",
+      "category": "ai-industry",
+      "tags": [
+        "大厂战略"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_97",
+      "type": "article",
+      "label": "ChatGPT答案源自谷歌搜索摘要获证实",
+      "title": "ChatGPT答案源自谷歌搜索摘要获证实",
+      "link": "https://www.aleydasolis.com/en/ai-search/chatgpt-uses-google-serp-snippets-for-answers/",
+      "date": "Thu, 24 Ju",
+      "summary": "通过一项简单直接的测试，证实ChatGPT的回答依赖谷歌搜索结果摘要。测试过程清晰可追溯，揭示了AI生成内容与搜索引擎的关联性。",
+      "category": "ai-industry",
+      "tags": [
+        "大厂战略"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_98",
+      "type": "article",
+      "label": "ChatGPT答案源自谷歌搜索摘要获证实",
+      "title": "ChatGPT答案源自谷歌搜索摘要获证实",
+      "link": "https://www.aleydasolis.com/en/ai-search/chatgpt-uses-google-serp-snippets-for-answers/",
+      "date": "Thu, 24 Ju",
+      "summary": "通过一项简单直接的测试，证实ChatGPT的回答依赖谷歌搜索结果摘要，揭示了其信息处理机制。",
+      "category": "ai-industry",
+      "tags": [
+        "大厂战略"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_99",
+      "type": "article",
+      "label": "ChatGPT答案源自谷歌搜索摘要获证实",
+      "title": "ChatGPT答案源自谷歌搜索摘要获证实",
+      "link": "https://www.aleydasolis.com/en/ai-search/chatgpt-uses-google-serp-snippets-for-answers/",
+      "date": "Thu, 24 Ju",
+      "summary": "通过一项简单直接的测试，证实ChatGPT的回答依赖谷歌搜索结果摘要，揭示了其信息抓取机制。",
+      "category": "ai-industry",
+      "tags": [
+        "大厂战略"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_100",
+      "type": "article",
+      "label": "ChatGPT答案依赖谷歌搜索摘要获证实",
+      "title": "ChatGPT答案依赖谷歌搜索摘要获证实",
+      "link": "https://www.aleydasolis.com/en/ai-search/chatgpt-uses-google-serp-snippets-for-answers/",
+      "date": "Thu, 24 Ju",
+      "summary": "通过一项简单直接的测试，证实ChatGPT在生成答案时确实依赖谷歌搜索结果摘要。",
+      "category": "ai-industry",
+      "tags": [
+        "大厂战略"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_101",
+      "type": "article",
+      "label": "ChatGPT答案源自谷歌搜索摘要",
+      "title": "ChatGPT答案源自谷歌搜索摘要",
+      "link": "https://www.aleydasolis.com/en/ai-search/chatgpt-uses-google-serp-snippets-for-answers/",
+      "date": "Thu, 24 Ju",
+      "summary": "一项简单直接的测试证实，ChatGPT的回答依赖于谷歌搜索结果摘要。",
+      "category": "ai-industry",
+      "tags": [
+        "大厂战略"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_102",
+      "type": "article",
+      "label": "ChatGPT答案源自谷歌搜索摘要获证实",
+      "title": "ChatGPT答案源自谷歌搜索摘要获证实",
+      "link": "https://www.aleydasolis.com/en/ai-search/chatgpt-uses-google-serp-snippets-for-answers/",
+      "date": "Thu, 24 Ju",
+      "summary": "通过一项简单直接的测试，证实ChatGPT的回答依赖谷歌搜索结果摘要。",
+      "category": "ai-industry",
+      "tags": [
+        "大厂战略"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_103",
+      "type": "article",
+      "label": "Beyond Rankings: Designing AI ...",
+      "title": "Beyond Rankings: Designing AI Search Metrics for the Next Era of SEO",
+      "link": "https://ipullrank.com/ai-search-metrics",
+      "date": "Thu, 12 Ma",
+      "summary": "<p>Rankings don’t equal revenue anymore. Search is different and as marketers, we need to learn how to handle the new requirements of AI Search. It’s",
+      "category": "ai-search",
+      "tags": [
+        "SEO",
+        "度量指标"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_104",
+      "type": "article",
+      "label": "超越排名：设计AI搜索新指标",
+      "title": "超越排名：设计AI搜索新指标",
+      "link": "https://ipullrank.com/ai-search-metrics",
+      "date": "Thu, 12 Ma",
+      "summary": "排名不再直接等同于收益，AI搜索时代要求营销者突破传统SEO思维，建立新的评估体系与应对策略。",
+      "category": "ai-search",
+      "tags": [
+        "SEO",
+        "度量指标"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_105",
+      "type": "article",
+      "label": "超越排名：AI搜索时代SEO新指标",
+      "title": "超越排名：AI搜索时代SEO新指标",
+      "link": "https://ipullrank.com/ai-search-metrics",
+      "date": "Thu, 12 Ma",
+      "summary": "排名不再直接等同于收益，AI搜索正重塑规则。营销者需超越传统SEO，建立适应新一代搜索需求的全新评估体系与策略框架。",
+      "category": "ai-search",
+      "tags": [
+        "SEO",
+        "度量指标"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_106",
+      "type": "article",
+      "label": "超越排名：AI搜索时代SEO新指标",
+      "title": "超越排名：AI搜索时代SEO新指标",
+      "link": "https://ipullrank.com/ai-search-metrics",
+      "date": "Thu, 12 Ma",
+      "summary": "排名不再直接等同于收益，AI搜索正重塑营销规则。本文探讨如何突破传统SEO思维，构建适应新一代搜索的评估体系。",
+      "category": "ai-search",
+      "tags": [
+        "SEO",
+        "度量指标"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_107",
+      "type": "article",
+      "label": "超越排名：设计AI搜索新指标",
+      "title": "超越排名：设计AI搜索新指标",
+      "link": "https://ipullrank.com/ai-search-metrics",
+      "date": "Thu, 12 Ma",
+      "summary": "传统排名已无法直接带来收益，AI搜索时代要求营销者突破SEO思维，建立全新的评估体系与应对策略。",
+      "category": "ai-search",
+      "tags": [
+        "SEO",
+        "度量指标"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_108",
+      "type": "article",
+      "label": "超越排名：设计AI搜索新指标",
+      "title": "超越排名：设计AI搜索新指标",
+      "link": "https://ipullrank.com/ai-search-metrics",
+      "date": "Thu, 12 Ma",
+      "summary": "排名已不等同收入，AI搜索正重塑规则。营销者需超越传统SEO，掌握新一代搜索逻辑与评估体系。",
+      "category": "ai-search",
+      "tags": [
+        "SEO",
+        "度量指标"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_109",
+      "type": "article",
+      "label": "超越排名：设计AI搜索新指标",
+      "title": "超越排名：设计AI搜索新指标",
+      "link": "https://ipullrank.com/ai-search-metrics",
+      "date": "Thu, 12 Ma",
+      "summary": "排名不再直接等同于收益，AI搜索正重塑营销规则。我们需要超越传统SEO思维，建立适应新一代搜索的核心衡量体系。",
+      "category": "ai-search",
+      "tags": [
+        "SEO",
+        "度量指标"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_110",
+      "type": "article",
+      "label": "SaaS获客转化六策",
+      "title": "SaaS获客转化六策",
+      "link": "https://blog.hubspot.com/marketing/aeo-for-saas-companies",
+      "date": "Thu, 09 Ap",
+      "summary": "本文针对SaaS企业，提出六种AEO策略，旨在将潜在客户有效转化为产品试用用户，提升获客效率。",
+      "category": "ai-search",
+      "tags": [
+        "AEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_111",
+      "type": "article",
+      "label": "SaaS获客策略：6招促试用",
+      "title": "SaaS获客策略：6招促试用",
+      "link": "https://blog.hubspot.com/marketing/aeo-for-saas-companies",
+      "date": "Thu, 09 Ap",
+      "summary": "本文针对SaaS企业，提出六种AEO策略，旨在将潜在客户高效转化为产品试用，提升获客转化率。",
+      "category": "ai-search",
+      "tags": [
+        "AEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_112",
+      "type": "article",
+      "label": "SaaS获客策略：6招促试用转化",
+      "title": "SaaS获客策略：6招促试用转化",
+      "link": "https://blog.hubspot.com/marketing/aeo-for-saas-companies",
+      "date": "Thu, 09 Ap",
+      "summary": "本文针对SaaS企业，提出六种AEO（获客引擎优化）策略，旨在将潜在客户有效转化为产品试用，提升初期用户参与度。",
+      "category": "ai-search",
+      "tags": [
+        "AEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_113",
+      "type": "article",
+      "label": "AI竞赛核心在场景",
+      "title": "AI竞赛核心在场景",
+      "link": "https://blog.hubspot.com/marketing/the-real-ai-race-isnt-about-models-or-data-its-about-context",
+      "date": "Thu, 09 Ap",
+      "summary": "真正的AI竞争并非模型或数据之争，而在于对应用场景的深度理解与适配。企业需聚焦业务场景，构建专属上下文体系。",
+      "category": "agentic-b2b",
+      "tags": [
+        "strategy"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_114",
+      "type": "article",
+      "label": "AI竞赛核心在场景",
+      "title": "AI竞赛核心在场景",
+      "link": "https://blog.hubspot.com/marketing/the-real-ai-race-isnt-about-models-or-data-its-about-context",
+      "date": "Thu, 09 Ap",
+      "summary": "真正的AI竞争并非模型或数据之争，而在于场景应用能力。企业需将AI深度融入业务流程，才能释放实际价值。",
+      "category": "agentic-b2b",
+      "tags": [
+        "strategy"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_115",
+      "type": "article",
+      "label": "AI竞赛核心是场景",
+      "title": "AI竞赛核心是场景",
+      "link": "https://blog.hubspot.com/marketing/the-real-ai-race-isnt-about-models-or-data-its-about-context",
+      "date": "Thu, 09 Ap",
+      "summary": "真正的AI竞争焦点并非模型或数据，而是场景理解与应用能力。企业需将AI深度融入业务流程，才能释放实际价值。",
+      "category": "agentic-b2b",
+      "tags": [
+        "strategy"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_116",
+      "type": "article",
+      "label": "From Clicks to Citations: New ...",
+      "title": "From Clicks to Citations: New AI Search Measurement Metrics",
+      "link": "https://ipullrank.com/ai-search-measurement",
+      "date": "Thu, 02 Ap",
+      "summary": "<p>For decades, the SEO industry has lived and died by a predictable set of numbers: rankings, sessions, and clicks. We built measurement plans that a",
+      "category": "ai-search",
+      "tags": [
+        "度量指标"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_117",
+      "type": "article",
+      "label": "从点击到引用：AI搜索新度量指标",
+      "title": "从点击到引用：AI搜索新度量指标",
+      "link": "https://ipullrank.com/ai-search-measurement",
+      "date": "Thu, 02 Ap",
+      "summary": "SEO行业长期依赖排名、会话与点击等传统指标。如今，AI搜索正推动衡量体系变革，需重新审视数据源与评估逻辑。",
+      "category": "ai-search",
+      "tags": [
+        "SEO",
+        "度量指标"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_118",
+      "type": "article",
+      "label": "从点击到引用：AI搜索新度量标准",
+      "title": "从点击到引用：AI搜索新度量标准",
+      "link": "https://ipullrank.com/ai-search-measurement",
+      "date": "Thu, 02 Ap",
+      "summary": "SEO行业长期依赖排名、会话与点击等传统指标。如今，AI搜索的兴起推动衡量标准变革，需重新审视数据源与流程，以应对从交互行为到权威引用的价值转变。",
+      "category": "ai-search",
+      "tags": [
+        "SEO",
+        "度量指标"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_119",
+      "type": "article",
+      "label": "从点击到引用：AI搜索新度量标准",
+      "title": "从点击到引用：AI搜索新度量标准",
+      "link": "https://ipullrank.com/ai-search-measurement",
+      "date": "Thu, 02 Ap",
+      "summary": "SEO行业长期依赖排名、访问量与点击量等传统指标。如今，AI搜索的兴起推动衡量标准向内容引用与影响力转变，要求重构数据评估体系。",
+      "category": "ai-search",
+      "tags": [
+        "SEO",
+        "度量指标"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_120",
+      "type": "article",
+      "label": "从点击到引用：AI搜索新度量标准",
+      "title": "从点击到引用：AI搜索新度量标准",
+      "link": "https://ipullrank.com/ai-search-measurement",
+      "date": "Thu, 02 Ap",
+      "summary": "SEO行业长期依赖排名、访问量与点击量等传统指标。如今，AI搜索的兴起推动衡量标准向内容引用与深度互动转变，要求我们重构数据评估体系。",
+      "category": "ai-search",
+      "tags": [
+        "SEO",
+        "度量指标"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_121",
+      "type": "article",
+      "label": "从点击到引用：AI搜索新度量标准",
+      "title": "从点击到引用：AI搜索新度量标准",
+      "link": "https://ipullrank.com/ai-search-measurement",
+      "date": "Thu, 02 Ap",
+      "summary": "SEO行业长期依赖排名、会话与点击等传统指标。如今，AI搜索的兴起推动衡量标准变革，需重新审视数据源与评估体系。",
+      "category": "ai-search",
+      "tags": [
+        "SEO",
+        "度量指标"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_122",
+      "type": "article",
+      "label": "从点击到引用：AI搜索新度量标准",
+      "title": "从点击到引用：AI搜索新度量标准",
+      "link": "https://ipullrank.com/ai-search-measurement",
+      "date": "Thu, 02 Ap",
+      "summary": "SEO行业长期依赖排名、访问量与点击量等传统指标。如今，AI搜索的兴起推动衡量标准向内容引用与深度互动转变，需重构数据评估体系。",
+      "category": "ai-search",
+      "tags": [
+        "SEO",
+        "度量指标"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_123",
+      "type": "article",
+      "label": "How AI improves email delivera...",
+      "title": "How AI improves email deliverability beyond send times",
+      "link": "https://blog.hubspot.com/marketing/ai-email-deliverability-optimization",
+      "date": "Thu, 02 Ap",
+      "summary": "<div class=\"hs-featured-image-wrapper\">",
+      "category": "agentic-b2b",
+      "tags": [
+        "strategy"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_124",
+      "type": "article",
+      "label": "AI提升邮件送达率新策略",
+      "title": "AI提升邮件送达率新策略",
+      "link": "https://blog.hubspot.com/marketing/ai-email-deliverability-optimization",
+      "date": "Thu, 02 Ap",
+      "summary": "AI不仅优化发送时机，更通过内容个性化、信誉监控与收件箱互动分析，全面提升邮件送达效果。",
+      "category": "agentic-b2b",
+      "tags": [
+        "strategy"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_125",
+      "type": "article",
+      "label": "AI提升邮件送达率新策略",
+      "title": "AI提升邮件送达率新策略",
+      "link": "https://blog.hubspot.com/marketing/ai-email-deliverability-optimization",
+      "date": "Thu, 02 Ap",
+      "summary": "AI不仅优化发送时间，更通过内容智能分析、收件人行为预测及反垃圾邮件机制适配，全面提升邮件进入收件箱的概率。",
+      "category": "agentic-b2b",
+      "tags": [
+        "strategy"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_126",
+      "type": "article",
+      "label": "AI提升邮件送达率新策略",
+      "title": "AI提升邮件送达率新策略",
+      "link": "https://blog.hubspot.com/marketing/ai-email-deliverability-optimization",
+      "date": "Thu, 02 Ap",
+      "summary": "AI不仅优化发送时机，更能通过内容分析、收件人互动预测及发件信誉管理，全面提升邮件进入收件箱的概率。",
+      "category": "agentic-b2b",
+      "tags": [
+        "strategy"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_127",
+      "type": "article",
+      "label": "AI提升邮件送达率新策略",
+      "title": "AI提升邮件送达率新策略",
+      "link": "https://blog.hubspot.com/marketing/ai-email-deliverability-optimization",
+      "date": "Thu, 02 Ap",
+      "summary": "本文探讨了人工智能如何超越传统发送时间优化，从内容质量、收件人互动预测及发件信誉管理等多维度提升邮件送达率。",
+      "category": "agentic-b2b",
+      "tags": [
+        "strategy"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_128",
+      "type": "article",
+      "label": "AI提升邮件送达率新策略",
+      "title": "AI提升邮件送达率新策略",
+      "link": "https://blog.hubspot.com/marketing/ai-email-deliverability-optimization",
+      "date": "Thu, 02 Ap",
+      "summary": "AI不仅优化发送时间，更能通过内容分析、收件人互动预测及发送信誉管理，全方位提升邮件进入收件箱的概率。",
+      "category": "agentic-b2b",
+      "tags": [
+        "strategy"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_129",
+      "type": "article",
+      "label": "AI提升邮件送达率新策略",
+      "title": "AI提升邮件送达率新策略",
+      "link": "https://blog.hubspot.com/marketing/ai-email-deliverability-optimization",
+      "date": "Thu, 02 Ap",
+      "summary": "AI不仅优化发送时机，更通过内容个性化、信誉监控与收件箱互动分析，全面提升邮件送达效果。",
+      "category": "agentic-b2b",
+      "tags": [
+        "strategy"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_130",
+      "type": "article",
+      "label": "Updated: The 5 Key AI Search v...",
+      "title": "Updated: The 5 Key AI Search vs Traditional Search Differences – A Visual Comparison",
+      "link": "https://www.aleydasolis.com/en/ai-search/key-traditional-search-ai-comparison/",
+      "date": "Sat, 26 Ju",
+      "summary": "<p>I want to emphasize the key differences between traditional and AI search that I believe have the most significant impact on our work as search mar",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_131",
+      "type": "article",
+      "label": "AI与传统搜索五大差异对比",
+      "title": "AI与传统搜索五大差异对比",
+      "link": "https://www.aleydasolis.com/en/ai-search/key-traditional-search-ai-comparison/",
+      "date": "Sat, 26 Ju",
+      "summary": "本文以可视化方式，重点解析AI搜索与传统搜索对搜索引擎营销工作最具影响的五大核心区别。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_132",
+      "type": "article",
+      "label": "AI与传统搜索五大差异对比",
+      "title": "AI与传统搜索五大差异对比",
+      "link": "https://www.aleydasolis.com/en/ai-search/key-traditional-search-ai-comparison/",
+      "date": "Sat, 26 Ju",
+      "summary": "本文以可视化方式，重点解析AI搜索与传统搜索对搜索引擎营销工作影响最显著的五大核心区别。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_133",
+      "type": "article",
+      "label": "AI与传统搜索五大差异对比",
+      "title": "AI与传统搜索五大差异对比",
+      "link": "https://www.aleydasolis.com/en/ai-search/key-traditional-search-ai-comparison/",
+      "date": "Sat, 26 Ju",
+      "summary": "本文以可视化形式，重点解析AI搜索与传统搜索的核心区别，帮助搜索营销从业者更直观理解其工作影响。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_134",
+      "type": "article",
+      "label": "AI与传统搜索五大差异对比",
+      "title": "AI与传统搜索五大差异对比",
+      "link": "https://www.aleydasolis.com/en/ai-search/key-traditional-search-ai-comparison/",
+      "date": "Sat, 26 Ju",
+      "summary": "本文以可视化形式，重点解析AI搜索与传统搜索的核心区别，帮助搜索营销从业者更直观理解其工作影响。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_135",
+      "type": "article",
+      "label": "AI与传统搜索五大差异对比",
+      "title": "AI与传统搜索五大差异对比",
+      "link": "https://www.aleydasolis.com/en/ai-search/key-traditional-search-ai-comparison/",
+      "date": "Sat, 26 Ju",
+      "summary": "本文以可视化形式，重点解析AI搜索与传统搜索的核心区别，帮助搜索营销从业者更直观理解技术变革带来的影响。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_136",
+      "type": "article",
+      "label": "AI与传统搜索五大差异对比",
+      "title": "AI与传统搜索五大差异对比",
+      "link": "https://www.aleydasolis.com/en/ai-search/key-traditional-search-ai-comparison/",
+      "date": "Sat, 26 Ju",
+      "summary": "本文以可视化形式，重点解析AI搜索与传统搜索的关键区别，帮助搜索营销从业者更直观理解技术变革带来的影响。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_137",
+      "type": "article",
+      "label": "Search Isn’t Just Turning to A...",
+      "title": "Search Isn’t Just Turning to AI, it’s being Re-Monetized: Text Ads Are Taking a Bigger Share of Google SERP Clicks (Data)",
+      "link": "https://www.aleydasolis.com/en/search-engine-optimization/serp-shifts-ads-remonetized/",
+      "date": "Sat, 14 Fe",
+      "summary": "<p>If you’ve been feeling like organic search traffic is getting harder and harder to maintain, it’s not just you, and it’s not just your vertical. In",
+      "category": "ai-industry",
+      "tags": [
+        "大厂战略"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_138",
+      "type": "article",
+      "label": "搜索AI化重塑变现，文字广告点击份额攀升",
+      "title": "搜索AI化重塑变现，文字广告点击份额攀升",
+      "link": "https://www.aleydasolis.com/en/search-engine-optimization/serp-shifts-ads-remonetized/",
+      "date": "Sat, 14 Fe",
+      "summary": "自然搜索流量持续萎缩，行业普遍面临挑战。数据显示，谷歌搜索结果页中文字广告的点击份额正显著扩大，标志着搜索变现模式进入深度调整期。",
+      "category": "ai-industry",
+      "tags": [
+        "大厂战略"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_139",
+      "type": "article",
+      "label": "搜索AI化重构变现，文字广告点击份额攀升",
+      "title": "搜索AI化重构变现，文字广告点击份额攀升",
+      "link": "https://www.aleydasolis.com/en/search-engine-optimization/serp-shifts-ads-remonetized/",
+      "date": "Sat, 14 Fe",
+      "summary": "自然搜索流量持续萎缩，行业普遍承压。最新数据显示，谷歌搜索结果页中文字广告的点击份额显著扩大，标志着搜索生态正经历AI驱动下的商业化重塑。",
+      "category": "ai-industry",
+      "tags": [
+        "大厂战略"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_140",
+      "type": "article",
+      "label": "搜索AI化重构变现，文字广告点击份额攀升",
+      "title": "搜索AI化重构变现，文字广告点击份额攀升",
+      "link": "https://www.aleydasolis.com/en/search-engine-optimization/serp-shifts-ads-remonetized/",
+      "date": "Sat, 14 Fe",
+      "summary": "自然搜索流量持续萎缩，行业普遍承压。最新数据显示，谷歌搜索结果页中文字广告的点击份额显著扩大，标志着搜索生态正经历AI驱动下的商业化重塑。",
+      "category": "ai-industry",
+      "tags": [
+        "大厂战略"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_141",
+      "type": "article",
+      "label": "搜索AI化重构变现，文本广告点击份额攀升",
+      "title": "搜索AI化重构变现，文本广告点击份额攀升",
+      "link": "https://www.aleydasolis.com/en/search-engine-optimization/serp-shifts-ads-remonetized/",
+      "date": "Sat, 14 Fe",
+      "summary": "自然搜索流量持续萎缩，这已是行业普遍困境。最新数据显示，谷歌搜索结果页的点击正加速向付费文本广告集中，标志着搜索生态的变现模式正在被深度重构。",
+      "category": "ai-industry",
+      "tags": [
+        "大厂战略"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_142",
+      "type": "article",
+      "label": "搜索AI化重塑变现，文字广告点击份额扩大",
+      "title": "搜索AI化重塑变现，文字广告点击份额扩大",
+      "link": "https://www.aleydasolis.com/en/search-engine-optimization/serp-shifts-ads-remonetized/",
+      "date": "Sat, 14 Fe",
+      "summary": "自然搜索流量持续萎缩，行业普遍面临挑战。数据显示，谷歌搜索结果页中文字广告的点击份额显著增长，搜索生态正经历AI驱动下的商业化重塑。",
+      "category": "ai-industry",
+      "tags": [
+        "大厂战略"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_143",
+      "type": "article",
+      "label": "搜索AI化重构变现，文本广告点击份额攀升",
+      "title": "搜索AI化重构变现，文本广告点击份额攀升",
+      "link": "https://www.aleydasolis.com/en/search-engine-optimization/serp-shifts-ads-remonetized/",
+      "date": "Sat, 14 Fe",
+      "summary": "自然搜索流量持续萎缩，这已是行业普遍困境。最新数据显示，谷歌搜索结果页的点击正加速向文本广告集中，标志着搜索生态的变现模式正在经历深度重构。",
+      "category": "ai-industry",
+      "tags": [
+        "大厂战略"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_144",
+      "type": "article",
+      "label": "What 3,900 SEO Job Listings Re...",
+      "title": "What 3,900 SEO Job Listings Reveal for 2026: Experiments, AI, and Six-Figure Salaries",
+      "link": "https://www.semrush.com/blog/seo-job-market-study/",
+      "date": "Mon, 30 Ma",
+      "summary": "<p>What does it take to build a career in SEO in 2026? We analyzed 3,900 job listings to uncover how the role is evolving—from experimentation and AI",
+      "category": "ai-search",
+      "tags": [
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_145",
+      "type": "article",
+      "label": "2026年SEO职位趋势洞察",
+      "title": "2026年SEO职位趋势洞察",
+      "link": "https://www.semrush.com/blog/seo-job-market-study/",
+      "date": "Mon, 30 Ma",
+      "summary": "分析3900份招聘清单发现，SEO岗位正朝实验驱动与AI融合转型，薪资与职责范畴同步演变。",
+      "category": "ai-search",
+      "tags": [
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_146",
+      "type": "article",
+      "label": "Brand optimization: What it is...",
+      "title": "Brand optimization: What it is and why your AI visibility depends on it",
+      "link": "https://blog.hubspot.com/marketing/brand-optimization",
+      "date": "Mon, 30 Ma",
+      "summary": "<div class=\"hs-featured-image-wrapper\">",
+      "category": "agentic-b2b",
+      "tags": [
+        "strategy"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_147",
+      "type": "article",
+      "label": "AI content optimization: How t...",
+      "title": "AI content optimization: How to get found in Google and AI search in 2026",
+      "link": "https://blog.hubspot.com/marketing/ai-content-optimization",
+      "date": "Mon, 30 Ma",
+      "summary": "<div class=\"hs-featured-image-wrapper\">",
+      "category": "agentic-b2b",
+      "tags": [
+        "strategy"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_148",
+      "type": "article",
+      "label": "品牌优化决定AI可见度",
+      "title": "品牌优化决定AI可见度",
+      "link": "https://blog.hubspot.com/marketing/brand-optimization",
+      "date": "Mon, 30 Ma",
+      "summary": "品牌优化通过系统化提升品牌数字资产质量与一致性，增强AI搜索与推荐系统中的识别度，直接影响企业在智能时代的市场曝光。",
+      "category": "agentic-b2b",
+      "tags": [
+        "strategy"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_149",
+      "type": "article",
+      "label": "AI内容优化：2026年搜索可见性策略",
+      "title": "AI内容优化：2026年搜索可见性策略",
+      "link": "https://blog.hubspot.com/marketing/ai-content-optimization",
+      "date": "Mon, 30 Ma",
+      "summary": "本文探讨如何通过AI优化内容，以适应2026年谷歌与AI搜索引擎的变化，提升内容被发现的机会。",
+      "category": "agentic-b2b",
+      "tags": [
+        "strategy"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_150",
+      "type": "article",
+      "label": "品牌优化决定AI可见度",
+      "title": "品牌优化决定AI可见度",
+      "link": "https://blog.hubspot.com/marketing/brand-optimization",
+      "date": "Mon, 30 Ma",
+      "summary": "品牌优化是通过系统化策略提升品牌数字形象与认知度的过程，直接影响企业在AI驱动搜索和推荐中的曝光机会。",
+      "category": "agentic-b2b",
+      "tags": [
+        "strategy"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_151",
+      "type": "article",
+      "label": "品牌优化决定AI可见度",
+      "title": "品牌优化决定AI可见度",
+      "link": "https://blog.hubspot.com/marketing/brand-optimization",
+      "date": "Mon, 30 Ma",
+      "summary": "品牌优化通过系统化提升品牌数字资产质量与一致性，直接影响企业在AI驱动搜索环境中的被发现概率。",
+      "category": "agentic-b2b",
+      "tags": [
+        "strategy"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_152",
+      "type": "article",
+      "label": "The agentic web: How AI agents...",
+      "title": "The agentic web: How AI agents decide which brands make the cut",
+      "link": "https://www.semrush.com/blog/the-agentic-web/",
+      "date": "Mon, 30 Ma",
+      "summary": "<p>AI agents are browsing, comparing, and buying on behalf of your customers. Here‘s what the agentic web means for your brand visibility strategy.</p",
+      "category": "agentic-b2b",
+      "tags": [
+        "automation"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_153",
+      "type": "article",
+      "label": "智能体网络如何筛选品牌",
+      "title": "智能体网络如何筛选品牌",
+      "link": "https://www.semrush.com/blog/the-agentic-web/",
+      "date": "Mon, 30 Ma",
+      "summary": "AI智能体正代表消费者浏览、比价并完成购买，品牌需重新思考在智能体网络时代的可见性策略。",
+      "category": "agentic-b2b",
+      "tags": [
+        "automation"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_154",
+      "type": "article",
+      "label": "智能体网络如何筛选品牌",
+      "title": "智能体网络如何筛选品牌",
+      "link": "https://www.semrush.com/blog/the-agentic-web/",
+      "date": "Mon, 30 Ma",
+      "summary": "AI智能体正代表消费者浏览、比价并完成购买，品牌需重新思考在智能体网络时代的可见性策略。",
+      "category": "agentic-b2b",
+      "tags": [
+        "automation"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_155",
+      "type": "article",
+      "label": "智能体网络重塑品牌筛选",
+      "title": "智能体网络重塑品牌筛选",
+      "link": "https://www.semrush.com/blog/the-agentic-web/",
+      "date": "Mon, 30 Ma",
+      "summary": "AI智能体正代表消费者进行浏览、比价与购买，品牌可见性策略需重新审视智能体网络带来的变革。",
+      "category": "agentic-b2b",
+      "tags": [
+        "automation"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_156",
+      "type": "article",
+      "label": "How to measure brand awareness...",
+      "title": "How to measure brand awareness: 9 methods that matter",
+      "link": "https://www.semrush.com/blog/measure-brand-awareness/",
+      "date": "Mon, 30 Ma",
+      "summary": "<p><img alt=\"How to measure brand awareness: 9 methods that matter\" src=\"https://static.semrush.com/blog/uploads/media/76/52/7652095291a418e203762bc35",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_157",
+      "type": "article",
+      "label": "品牌知名度九大衡量法",
+      "title": "品牌知名度九大衡量法",
+      "link": "https://www.semrush.com/blog/measure-brand-awareness/",
+      "date": "Mon, 30 Ma",
+      "summary": "本文介绍九种关键方法，帮助量化品牌在目标市场中的认知度与影响力，涵盖从基础调研到数字分析的多维工具。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_158",
+      "type": "article",
+      "label": "What Is an AI Agent? (And What...",
+      "title": "What Is an AI Agent? (And What AI Agents Mean for Your Brand’s Visibility)",
+      "link": "https://www.semrush.com/blog/what-is-an-ai-agent/",
+      "date": "Mon, 30 Ma",
+      "summary": "<p>AI agents research, evaluate, and act on behalf of users. Learn how they work, why they matter for brand visibility, and how to prepare your digita",
+      "category": "academic",
+      "tags": [
+        "研究"
+      ],
+      "color": "#8B5CF6",
+      "size": 6
+    },
+    {
+      "id": "art_159",
+      "type": "article",
+      "label": "AI智能体与品牌可见性",
+      "title": "AI智能体与品牌可见性",
+      "link": "https://www.semrush.com/blog/what-is-an-ai-agent/",
+      "date": "Mon, 30 Ma",
+      "summary": "AI智能体能代表用户进行研究、评估与行动。了解其运作原理、对品牌可见性的影响，以及如何优化数字布局以应对趋势。",
+      "category": "academic",
+      "tags": [
+        "研究"
+      ],
+      "color": "#8B5CF6",
+      "size": 6
+    },
+    {
+      "id": "art_160",
+      "type": "article",
+      "label": "AI智能体与品牌可见性",
+      "title": "AI智能体与品牌可见性",
+      "link": "https://www.semrush.com/blog/what-is-an-ai-agent/",
+      "date": "Mon, 30 Ma",
+      "summary": "AI智能体能代表用户进行研究、评估并执行行动。了解其运作原理、对品牌可见性的影响，以及如何优化数字布局以应对趋势。",
+      "category": "academic",
+      "tags": [
+        "研究"
+      ],
+      "color": "#8B5CF6",
+      "size": 6
+    },
+    {
+      "id": "art_161",
+      "type": "article",
+      "label": "AI智能体与品牌可见性",
+      "title": "AI智能体与品牌可见性",
+      "link": "https://www.semrush.com/blog/what-is-an-ai-agent/",
+      "date": "Mon, 30 Ma",
+      "summary": "AI智能体能代表用户进行研究、评估与行动。了解其运作原理、对品牌可见性的影响，以及如何优化数字布局。",
+      "category": "academic",
+      "tags": [
+        "研究"
+      ],
+      "color": "#8B5CF6",
+      "size": 6
+    },
+    {
+      "id": "art_162",
+      "type": "article",
+      "label": "Answer engine optimization cas...",
+      "title": "Answer engine optimization case studies that prove the ROI of AEO in 2026",
+      "link": "https://blog.hubspot.com/marketing/answer-engine-optimization-case-studies",
+      "date": "Mon, 23 Ma",
+      "summary": "<div class=\"hs-featured-image-wrapper\">",
+      "category": "ai-search",
+      "tags": [
+        "AEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_163",
+      "type": "article",
+      "label": "2026年AEO投资回报率实证案例",
+      "title": "2026年AEO投资回报率实证案例",
+      "link": "https://blog.hubspot.com/marketing/answer-engine-optimization-case-studies",
+      "date": "Mon, 23 Ma",
+      "summary": "本文通过多个企业案例，分析答案引擎优化（AEO）在提升搜索可见性、用户互动及转化率方面的实际效果。",
+      "category": "ai-search",
+      "tags": [
+        "AEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_164",
+      "type": "article",
+      "label": "Top 11 Best Enterprise SEO Age...",
+      "title": "Top 11 Best Enterprise SEO Agencies of 2026",
+      "link": "https://ipullrank.com/best-enterprise-seo-agencies",
+      "date": "Mon, 09 Ma",
+      "summary": "<p>Searching for an enterprise SEO agency online is brutal.  There are several strategic and philosophical approaches to SEO. GEO has become an unigno",
+      "category": "ai-search",
+      "tags": [
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_165",
+      "type": "article",
+      "label": "2026顶尖企业SEO服务商榜单",
+      "title": "2026顶尖企业SEO服务商榜单",
+      "link": "https://ipullrank.com/best-enterprise-seo-agencies",
+      "date": "Mon, 09 Ma",
+      "summary": "甄选优质企业级SEO服务商常令人却步，不同策略与理念并存，地理定位已成关键考量。",
+      "category": "ai-search",
+      "tags": [
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_166",
+      "type": "article",
+      "label": "2026顶尖企业SEO服务商榜单",
+      "title": "2026顶尖企业SEO服务商榜单",
+      "link": "https://ipullrank.com/best-enterprise-seo-agencies",
+      "date": "Mon, 09 Ma",
+      "summary": "在线筛选企业级SEO服务商竞争激烈，策略理念多样，地理定位优化已成关键议题。众多机构……",
+      "category": "ai-search",
+      "tags": [
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_167",
+      "type": "article",
+      "label": "2026顶尖企业SEO服务商榜单",
+      "title": "2026顶尖企业SEO服务商榜单",
+      "link": "https://ipullrank.com/best-enterprise-seo-agencies",
+      "date": "Mon, 09 Ma",
+      "summary": "线上筛选企业级SEO服务商竞争激烈，各机构策略理念各异，地理定位优化已成不可忽视的要素。",
+      "category": "ai-search",
+      "tags": [
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_168",
+      "type": "article",
+      "label": "2026顶尖企业SEO服务商榜单",
+      "title": "2026顶尖企业SEO服务商榜单",
+      "link": "https://ipullrank.com/best-enterprise-seo-agencies",
+      "date": "Mon, 09 Ma",
+      "summary": "甄选优质企业级SEO服务商常令人却步，各家策略理念迥异，且地理定位优化已成不可忽视的关键维度。",
+      "category": "ai-search",
+      "tags": [
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_169",
+      "type": "article",
+      "label": "Profound vs. AthenaHQ AI: Whic...",
+      "title": "Profound vs. AthenaHQ AI: Which AEO platform fits your growth stack?",
+      "link": "https://blog.hubspot.com/marketing/profound-vs-athenahq",
+      "date": "Mon, 06 Ap",
+      "summary": "<div class=\"hs-featured-image-wrapper\">",
+      "category": "ai-search",
+      "tags": [
+        "AEO",
+        "平台特定"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_170",
+      "type": "article",
+      "label": "Profound与AthenaHQ AI：AEO平台选型指南",
+      "title": "Profound与AthenaHQ AI：AEO平台选型指南",
+      "link": "https://blog.hubspot.com/marketing/profound-vs-athenahq",
+      "date": "Mon, 06 Ap",
+      "summary": "对比分析Profound和AthenaHQ两大AEO平台，解析其核心功能与适用场景，助力企业根据自身增长技术栈做出精准选择。",
+      "category": "ai-search",
+      "tags": [
+        "AEO",
+        "平台特定"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_171",
+      "type": "article",
+      "label": "Profound与AthenaHQ AI平台对比",
+      "title": "Profound与AthenaHQ AI平台对比",
+      "link": "https://blog.hubspot.com/marketing/profound-vs-athenahq",
+      "date": "Mon, 06 Ap",
+      "summary": "本文对比两款AEO（广告体验优化）平台Profound和AthenaHQ，分析其核心功能与适用场景，帮助企业根据自身增长技术栈选择合适工具。",
+      "category": "ai-search",
+      "tags": [
+        "AEO",
+        "平台特定"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_172",
+      "type": "article",
+      "label": "Profound与AthenaHQ AI平台对比",
+      "title": "Profound与AthenaHQ AI平台对比",
+      "link": "https://blog.hubspot.com/marketing/profound-vs-athenahq",
+      "date": "Mon, 06 Ap",
+      "summary": "本文对比两款AEO（广告体验优化）平台Profound和AthenaHQ的核心功能，帮助企业根据自身增长技术栈选择合适工具。",
+      "category": "ai-search",
+      "tags": [
+        "AEO",
+        "平台特定"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_173",
+      "type": "article",
+      "label": "Profound与AthenaHQ AI平台对比",
+      "title": "Profound与AthenaHQ AI平台对比",
+      "link": "https://blog.hubspot.com/marketing/profound-vs-athenahq",
+      "date": "Mon, 06 Ap",
+      "summary": "本文对比两款AEO（广告体验优化）平台Profound和AthenaHQ的核心功能，帮助企业根据自身增长技术栈选择合适工具。",
+      "category": "ai-search",
+      "tags": [
+        "AEO",
+        "平台特定"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_174",
+      "type": "article",
+      "label": "Profound与AthenaHQ AI平台对比",
+      "title": "Profound与AthenaHQ AI平台对比",
+      "link": "https://blog.hubspot.com/marketing/profound-vs-athenahq",
+      "date": "Mon, 06 Ap",
+      "summary": "本文对比两款AEO（广告体验优化）平台Profound和AthenaHQ的核心功能，帮助企业根据自身增长技术栈选择合适工具。",
+      "category": "ai-search",
+      "tags": [
+        "AEO",
+        "平台特定"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_175",
+      "type": "article",
+      "label": "Profound与AthenaHQ AI平台对比",
+      "title": "Profound与AthenaHQ AI平台对比",
+      "link": "https://blog.hubspot.com/marketing/profound-vs-athenahq",
+      "date": "Mon, 06 Ap",
+      "summary": "本文对比两款AEO（广告体验优化）平台——Profound与AthenaHQ AI，分析其核心功能与适用场景，助力企业根据增长需求选择合适工具。",
+      "category": "ai-search",
+      "tags": [
+        "AEO",
+        "平台特定"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_176",
+      "type": "article",
+      "label": "Is AI Killing Web Traffic? How...",
+      "title": "Is AI Killing Web Traffic? How AI Overviews Impact Organic Website Traffic",
+      "link": "https://blog.hubspot.com/marketing/is-ai-killing-web-traffic",
+      "date": "Mon, 06 Ap",
+      "summary": "<div class=\"hs-featured-image-wrapper\">",
+      "category": "agentic-b2b",
+      "tags": [
+        "strategy"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_177",
+      "type": "article",
+      "label": "Best workflow automation softw...",
+      "title": "Best workflow automation software: How to choose the right tool for your growth stage",
+      "link": "https://blog.hubspot.com/marketing/workflow-automation-tools",
+      "date": "Mon, 06 Ap",
+      "summary": "<div class=\"hs-featured-image-wrapper\">",
+      "category": "agentic-b2b",
+      "tags": [
+        "automation"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_178",
+      "type": "article",
+      "label": "AI-driven email personalizatio...",
+      "title": "AI-driven email personalization strategies that actually work",
+      "link": "https://blog.hubspot.com/marketing/ai-driven-email-personalization",
+      "date": "Mon, 06 Ap",
+      "summary": "<div class=\"hs-featured-image-wrapper\">",
+      "category": "agentic-b2b",
+      "tags": [
+        "strategy"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_179",
+      "type": "article",
+      "label": "AI搜索会终结网站流量吗？",
+      "title": "AI搜索会终结网站流量吗？",
+      "link": "https://blog.hubspot.com/marketing/is-ai-killing-web-traffic",
+      "date": "Mon, 06 Ap",
+      "summary": "AI概览功能正改变传统搜索模式，可能大幅降低用户点击网站的需求，引发行业对流量的普遍担忧。",
+      "category": "agentic-b2b",
+      "tags": [
+        "strategy"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_180",
+      "type": "article",
+      "label": "选对自动化工具，驱动业务增长",
+      "title": "选对自动化工具，驱动业务增长",
+      "link": "https://blog.hubspot.com/marketing/workflow-automation-tools",
+      "date": "Mon, 06 Ap",
+      "summary": "本文探讨如何根据企业发展阶段，选择合适的工作流自动化软件，以提升效率并支持规模化运营。",
+      "category": "agentic-b2b",
+      "tags": [
+        "automation"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_181",
+      "type": "article",
+      "label": "AI邮件个性化实战策略",
+      "title": "AI邮件个性化实战策略",
+      "link": "https://blog.hubspot.com/marketing/ai-driven-email-personalization",
+      "date": "Mon, 06 Ap",
+      "summary": "本文探讨基于人工智能的邮件个性化技术，通过动态内容与行为分析实现精准触达，提升用户参与度与转化效果。",
+      "category": "agentic-b2b",
+      "tags": [
+        "strategy"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_182",
+      "type": "article",
+      "label": "精选工作流自动化软件",
+      "title": "精选工作流自动化软件",
+      "link": "https://blog.hubspot.com/marketing/workflow-automation-tools",
+      "date": "Mon, 06 Ap",
+      "summary": "本文探讨如何根据企业不同成长阶段，选择适配的工作流自动化工具，以优化运营效率与促进业务增长。",
+      "category": "agentic-b2b",
+      "tags": [
+        "automation"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_183",
+      "type": "article",
+      "label": "高效AI邮件个性化策略",
+      "title": "高效AI邮件个性化策略",
+      "link": "https://blog.hubspot.com/marketing/ai-driven-email-personalization",
+      "date": "Mon, 06 Ap",
+      "summary": "本文探讨经实践验证的AI驱动邮件个性化方案，通过智能内容定制提升用户参与度与转化效果。",
+      "category": "agentic-b2b",
+      "tags": [
+        "strategy"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_184",
+      "type": "article",
+      "label": "选对自动化工具，驱动业务增长",
+      "title": "选对自动化工具，驱动业务增长",
+      "link": "https://blog.hubspot.com/marketing/workflow-automation-tools",
+      "date": "Mon, 06 Ap",
+      "summary": "本文探讨如何根据企业不同成长阶段，选择合适的工作流自动化软件，以提升效率并支持业务扩展。",
+      "category": "agentic-b2b",
+      "tags": [
+        "automation"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_185",
+      "type": "article",
+      "label": "AI邮件个性化实战策略",
+      "title": "AI邮件个性化实战策略",
+      "link": "https://blog.hubspot.com/marketing/ai-driven-email-personalization",
+      "date": "Mon, 06 Ap",
+      "summary": "本文探讨基于人工智能的邮件个性化技术，通过动态内容与行为分析提升用户参与度，实现精准营销。",
+      "category": "agentic-b2b",
+      "tags": [
+        "strategy"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_186",
+      "type": "article",
+      "label": "精选工作流自动化软件",
+      "title": "精选工作流自动化软件",
+      "link": "https://blog.hubspot.com/marketing/workflow-automation-tools",
+      "date": "Mon, 06 Ap",
+      "summary": "本文探讨如何根据企业不同成长阶段，选择适配的工作流自动化工具，以优化运营效率与促进业务增长。",
+      "category": "agentic-b2b",
+      "tags": [
+        "automation"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_187",
+      "type": "article",
+      "label": "高效AI邮件个性化策略",
+      "title": "高效AI邮件个性化策略",
+      "link": "https://blog.hubspot.com/marketing/ai-driven-email-personalization",
+      "date": "Mon, 06 Ap",
+      "summary": "本文探讨经市场验证的AI邮件个性化方案，通过动态内容与行为数据分析提升用户互动，实现精准触达。",
+      "category": "agentic-b2b",
+      "tags": [
+        "strategy"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_188",
+      "type": "article",
+      "label": "选对自动化工具，驱动业务增长",
+      "title": "选对自动化工具，驱动业务增长",
+      "link": "https://blog.hubspot.com/marketing/workflow-automation-tools",
+      "date": "Mon, 06 Ap",
+      "summary": "本文探讨如何根据企业不同发展阶段，选择适配的工作流自动化软件，以提升运营效率与可扩展性。",
+      "category": "agentic-b2b",
+      "tags": [
+        "automation"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_189",
+      "type": "article",
+      "label": "AI邮件个性化实战策略",
+      "title": "AI邮件个性化实战策略",
+      "link": "https://blog.hubspot.com/marketing/ai-driven-email-personalization",
+      "date": "Mon, 06 Ap",
+      "summary": "本文探讨利用人工智能技术实现邮件内容个性化推送的有效方法，提升用户参与度和转化率。",
+      "category": "agentic-b2b",
+      "tags": [
+        "strategy"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_190",
+      "type": "article",
+      "label": "选择适合发展阶段的工作流自动化软件",
+      "title": "选择适合发展阶段的工作流自动化软件",
+      "link": "https://blog.hubspot.com/marketing/workflow-automation-tools",
+      "date": "Mon, 06 Ap",
+      "summary": "本文探讨如何根据企业不同成长阶段，选择匹配的工作流自动化工具，以提升运营效率与可扩展性。",
+      "category": "agentic-b2b",
+      "tags": [
+        "automation"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_191",
+      "type": "article",
+      "label": "AI邮件个性化实战策略",
+      "title": "AI邮件个性化实战策略",
+      "link": "https://blog.hubspot.com/marketing/ai-driven-email-personalization",
+      "date": "Mon, 06 Ap",
+      "summary": "本文探讨了AI驱动的邮件个性化有效方法，通过智能数据分析与内容优化，提升用户互动与转化率。",
+      "category": "agentic-b2b",
+      "tags": [
+        "strategy"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_192",
+      "type": "article",
+      "label": "SEO VS GEO: Optimizing for Tra...",
+      "title": "SEO VS GEO: Optimizing for Traditional vs AI Search [Updated June 2nd, 2025]",
+      "link": "https://www.aleydasolis.com/en/search-engine-optimization/seo-vs-geo-optimizing-for-traditional-vs-ai-search/",
+      "date": "Mon, 02 Ju",
+      "summary": "<p>What’s the overlap between AI Search vs traditional search results optimization? I’ve created a comparison going through search behavior, areas of",
+      "category": "ai-search",
+      "tags": [
+        "GEO",
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_193",
+      "type": "article",
+      "label": "SEO与GEO：传统与AI搜索优化对比",
+      "title": "SEO与GEO：传统与AI搜索优化对比",
+      "link": "https://www.aleydasolis.com/en/search-engine-optimization/seo-vs-geo-optimizing-for-traditional-vs-ai-search/",
+      "date": "Mon, 02 Ju",
+      "summary": "本文对比AI搜索与传统搜索在用户行为、优化重点及关键指标上的异同，探讨两者重叠与差异，为搜索策略提供更新视角。",
+      "category": "ai-search",
+      "tags": [
+        "GEO",
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_194",
+      "type": "article",
+      "label": "SEO与GEO：传统与AI搜索优化对比",
+      "title": "SEO与GEO：传统与AI搜索优化对比",
+      "link": "https://www.aleydasolis.com/en/search-engine-optimization/seo-vs-geo-optimizing-for-traditional-vs-ai-search/",
+      "date": "Mon, 02 Ju",
+      "summary": "本文对比AI搜索与传统搜索在用户行为、优化重点及关键指标上的异同，探讨两者重叠与差异，为搜索策略提供更新视角。",
+      "category": "ai-search",
+      "tags": [
+        "GEO",
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_195",
+      "type": "article",
+      "label": "SEO与GEO：传统与AI搜索优化对比",
+      "title": "SEO与GEO：传统与AI搜索优化对比",
+      "link": "https://www.aleydasolis.com/en/search-engine-optimization/seo-vs-geo-optimizing-for-traditional-vs-ai-search/",
+      "date": "Mon, 02 Ju",
+      "summary": "本文对比AI搜索与传统搜索在用户行为、优化重点及关键指标上的异同，探讨两者重叠与差异，为搜索策略提供更新视角。",
+      "category": "ai-search",
+      "tags": [
+        "GEO",
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_196",
+      "type": "article",
+      "label": "SEO与GEO：传统与AI搜索优化对比",
+      "title": "SEO与GEO：传统与AI搜索优化对比",
+      "link": "https://www.aleydasolis.com/en/search-engine-optimization/seo-vs-geo-optimizing-for-traditional-vs-ai-search/",
+      "date": "Mon, 02 Ju",
+      "summary": "本文对比AI搜索与传统搜索在用户行为、优化重点及关键指标上的异同，探讨两者重叠与差异，为搜索策略提供更新视角。",
+      "category": "ai-search",
+      "tags": [
+        "GEO",
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_197",
+      "type": "article",
+      "label": "SEO与GEO：传统与AI搜索优化对比",
+      "title": "SEO与GEO：传统与AI搜索优化对比",
+      "link": "https://www.aleydasolis.com/en/search-engine-optimization/seo-vs-geo-optimizing-for-traditional-vs-ai-search/",
+      "date": "Mon, 02 Ju",
+      "summary": "本文对比AI搜索与传统搜索在用户行为、优化重点及关键指标上的异同，探讨两者重叠与差异，为搜索策略提供更新视角。",
+      "category": "ai-search",
+      "tags": [
+        "GEO",
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_198",
+      "type": "article",
+      "label": "SEO与GEO：传统与AI搜索优化对比",
+      "title": "SEO与GEO：传统与AI搜索优化对比",
+      "link": "https://www.aleydasolis.com/en/search-engine-optimization/seo-vs-geo-optimizing-for-traditional-vs-ai-search/",
+      "date": "Mon, 02 Ju",
+      "summary": "本文对比AI搜索与传统搜索在用户行为、优化重点及关键指标上的异同，探讨两者重叠与差异，为搜索策略提供更新视角。",
+      "category": "ai-search",
+      "tags": [
+        "GEO",
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_199",
+      "type": "article",
+      "label": "20 marketing KPIs to track & i...",
+      "title": "20 marketing KPIs to track & improve in 2026",
+      "link": "https://www.semrush.com/blog/kpi-marketing/",
+      "date": "Fri, 27 Ma",
+      "summary": "<p><img alt=\"20 marketing KPIs to track &amp; improve in 2026\" src=\"https://static.semrush.com/blog/uploads/media/f9/21/f9215558063287a2a8aa1372c4b204",
+      "category": "agentic-b2b",
+      "tags": [
+        "marketing"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_200",
+      "type": "article",
+      "label": "2026年20个营销关键指标",
+      "title": "2026年20个营销关键指标",
+      "link": "https://www.semrush.com/blog/kpi-marketing/",
+      "date": "Fri, 27 Ma",
+      "summary": "本文系统梳理了2026年需重点关注的20个营销绩效指标，涵盖流量、转化、留存等维度，助力团队精准评估策略效果。",
+      "category": "agentic-b2b",
+      "tags": [
+        "marketing"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_201",
+      "type": "article",
+      "label": "How to Find Content Ideas with...",
+      "title": "How to Find Content Ideas with Semrush",
+      "link": "https://www.semrush.com/blog/how-to-find-content-ideas-with-semrush/",
+      "date": "Fri, 27 Ma",
+      "summary": "<p>Use Semrush to turn one topic into a data-backed content pipeline for blog, social, email, and more.</p>",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_202",
+      "type": "article",
+      "label": "用Semrush挖掘内容创意",
+      "title": "用Semrush挖掘内容创意",
+      "link": "https://www.semrush.com/blog/how-to-find-content-ideas-with-semrush/",
+      "date": "Fri, 27 Ma",
+      "summary": "借助Semrush将单一主题转化为数据驱动的内容管线，覆盖博客、社交媒体及邮件等多渠道。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_203",
+      "type": "article",
+      "label": "The 10 Steps AI Search Content...",
+      "title": "The 10 Steps AI Search Content Optimization Checklist [With Examples + Google Sheets]",
+      "link": "https://www.aleydasolis.com/en/ai-search/ai-search-optimization-checklist/",
+      "date": "Fri, 25 Ju",
+      "summary": "<p>I’ve created an AI Search Content Optimization Checklist, going through the most important aspects to take into account to optimize your content fo",
+      "category": "ai-industry",
+      "tags": [
+        "大厂战略"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_204",
+      "type": "article",
+      "label": "AI搜索内容优化十步清单",
+      "title": "AI搜索内容优化十步清单",
+      "link": "https://www.aleydasolis.com/en/ai-search/ai-search-optimization-checklist/",
+      "date": "Fri, 25 Ju",
+      "summary": "本文提供一份AI搜索内容优化清单，涵盖关键优化要点及其重要性，并附实例与谷歌表格工具，助您提升内容在AI搜索中的可见性。",
+      "category": "ai-industry",
+      "tags": [
+        "大厂战略"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_205",
+      "type": "article",
+      "label": "AI搜索内容优化十步清单",
+      "title": "AI搜索内容优化十步清单",
+      "link": "https://www.aleydasolis.com/en/ai-search/ai-search-optimization-checklist/",
+      "date": "Fri, 25 Ju",
+      "summary": "本文提供一份AI搜索内容优化清单，涵盖关键优化要点及其重要性，并附实例与谷歌表格工具，助力内容在AI搜索中脱颖而出。",
+      "category": "ai-industry",
+      "tags": [
+        "大厂战略"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_206",
+      "type": "article",
+      "label": "AI搜索内容优化十步清单",
+      "title": "AI搜索内容优化十步清单",
+      "link": "https://www.aleydasolis.com/en/ai-search/ai-search-optimization-checklist/",
+      "date": "Fri, 25 Ju",
+      "summary": "本文提供AI搜索内容优化的十步检查清单，涵盖关键优化要素及其重要性，并附实例与谷歌表格工具。",
+      "category": "ai-industry",
+      "tags": [
+        "大厂战略"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_207",
+      "type": "article",
+      "label": "AI搜索内容优化十步清单",
+      "title": "AI搜索内容优化十步清单",
+      "link": "https://www.aleydasolis.com/en/ai-search/ai-search-optimization-checklist/",
+      "date": "Fri, 25 Ju",
+      "summary": "本文提供AI搜索内容优化的十步检查清单，涵盖关键优化要素及其重要性，并附实例与谷歌表格工具。",
+      "category": "ai-industry",
+      "tags": [
+        "大厂战略"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_208",
+      "type": "article",
+      "label": "AI搜索内容优化十步清单",
+      "title": "AI搜索内容优化十步清单",
+      "link": "https://www.aleydasolis.com/en/ai-search/ai-search-optimization-checklist/",
+      "date": "Fri, 25 Ju",
+      "summary": "本文提供一份AI搜索内容优化清单，涵盖关键优化要点及其重要性，并附实例与谷歌表格工具，助力内容在AI搜索中脱颖而出。",
+      "category": "ai-industry",
+      "tags": [
+        "大厂战略"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_209",
+      "type": "article",
+      "label": "AI搜索内容优化十步清单",
+      "title": "AI搜索内容优化十步清单",
+      "link": "https://www.aleydasolis.com/en/ai-search/ai-search-optimization-checklist/",
+      "date": "Fri, 25 Ju",
+      "summary": "本文提供AI搜索内容优化的十步检查清单，涵盖关键优化要素及其重要性，并附实例与谷歌表格工具。",
+      "category": "ai-industry",
+      "tags": [
+        "大厂战略"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_210",
+      "type": "article",
+      "label": "How AI Search Personalizes Fan...",
+      "title": "How AI Search Personalizes Fan-Out Queries Using Memory and Context",
+      "link": "https://ipullrank.com/query-fan-out-personalization",
+      "date": "Fri, 20 Ma",
+      "summary": "<p>Context is king. Is this already a boring concept? I don&#8217;t think so. It&#8217;s critical for SEOs and marketers to weave into their professio",
+      "category": "ai-search",
+      "tags": [
+        "搜索技术"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_211",
+      "type": "article",
+      "label": "AI搜索如何借记忆与情境实现个性化分发",
+      "title": "AI搜索如何借记忆与情境实现个性化分发",
+      "link": "https://ipullrank.com/query-fan-out-personalization",
+      "date": "Fri, 20 Ma",
+      "summary": "本文探讨AI搜索通过整合用户记忆与实时情境，实现查询结果的个性化精准分发，强调情境因素在SEO与营销中的核心地位。",
+      "category": "ai-search",
+      "tags": [
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_212",
+      "type": "article",
+      "label": "AI搜索如何利用记忆与情境个性化分发查询",
+      "title": "AI搜索如何利用记忆与情境个性化分发查询",
+      "link": "https://ipullrank.com/query-fan-out-personalization",
+      "date": "Fri, 20 Ma",
+      "summary": "情境是王道，对SEO和营销人员至关重要。本文探讨AI搜索如何借助记忆与上下文，实现查询的个性化扩散，提升信息匹配精度。",
+      "category": "ai-search",
+      "tags": [
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_213",
+      "type": "article",
+      "label": "AI搜索如何借记忆与情境实现个性化扩散查询",
+      "title": "AI搜索如何借记忆与情境实现个性化扩散查询",
+      "link": "https://ipullrank.com/query-fan-out-personalization",
+      "date": "Fri, 20 Ma",
+      "summary": "本文探讨AI搜索通过整合用户记忆与情境信息，实现个性化查询扩散的核心机制，强调情境因素对SEO及营销策略的关键影响。",
+      "category": "ai-search",
+      "tags": [
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_214",
+      "type": "article",
+      "label": "AI搜索如何借记忆与情境实现个性化分发",
+      "title": "AI搜索如何借记忆与情境实现个性化分发",
+      "link": "https://ipullrank.com/query-fan-out-personalization",
+      "date": "Fri, 20 Ma",
+      "summary": "本文探讨情境在AI搜索中的核心地位，强调其并非陈旧概念，而是SEO与营销者需内化的关键能力。",
+      "category": "ai-search",
+      "tags": [
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_215",
+      "type": "article",
+      "label": "AI搜索如何借记忆与情境实现个性化分发",
+      "title": "AI搜索如何借记忆与情境实现个性化分发",
+      "link": "https://ipullrank.com/query-fan-out-personalization",
+      "date": "Fri, 20 Ma",
+      "summary": "本文探讨情境在AI搜索中的核心地位，强调其并非陈词滥调，而是SEO与营销者需内化的关键能力。",
+      "category": "ai-search",
+      "tags": [
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_216",
+      "type": "article",
+      "label": "AI搜索如何利用记忆与情境实现个性化查询扩散",
+      "title": "AI搜索如何利用记忆与情境实现个性化查询扩散",
+      "link": "https://ipullrank.com/query-fan-out-personalization",
+      "date": "Fri, 20 Ma",
+      "summary": "本文探讨AI搜索通过整合用户记忆与实时情境，实现个性化查询扩散的核心机制，强调情境理解对SEO与营销的关键价值。",
+      "category": "ai-search",
+      "tags": [
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_217",
+      "type": "article",
+      "label": "AI搜索时代关键词研究三心得",
+      "title": "AI搜索时代关键词研究三心得",
+      "link": "https://ipullrank.com/ai-search-keyword-portfolios",
+      "date": "Fri, 10 Ap",
+      "summary": "SEO从业者分享在AI搜索时代进行关键词研究的核心转变，从传统机械匹配转向理解用户深层意图与内容全面性。",
+      "category": "ai-search",
+      "tags": [
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_218",
+      "type": "article",
+      "label": "AI搜索时代关键词研究三心得",
+      "title": "AI搜索时代关键词研究三心得",
+      "link": "https://ipullrank.com/ai-search-keyword-portfolios",
+      "date": "Fri, 10 Ap",
+      "summary": "SEO从业者分享在AI搜索时代进行关键词研究的新认知，从传统方法到现代策略的演变。",
+      "category": "ai-search",
+      "tags": [
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_219",
+      "type": "article",
+      "label": "SEO自然搜索排名指南",
+      "title": "SEO自然搜索排名指南",
+      "link": "https://www.semrush.com/blog/seo-ranking/",
+      "date": "Fri, 10 Ap",
+      "summary": "本文详解SEO排名的核心要素，包括关键词优化、内容质量和用户体验，帮助网站在自然搜索结果中获得更高可见度。",
+      "category": "ai-search",
+      "tags": [
+        "SEO",
+        "度量指标"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_220",
+      "type": "article",
+      "label": "2026年高效SEO报告制作指南（附模板）",
+      "title": "2026年高效SEO报告制作指南（附模板）",
+      "link": "https://www.semrush.com/blog/seo-report/",
+      "date": "Fri, 10 Ap",
+      "summary": "本文详解2026年SEO报告的核心要素与制作流程，并提供免费模板，助力系统呈现SEO成效与优化方向。",
+      "category": "ai-search",
+      "tags": [
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_221",
+      "type": "article",
+      "label": "2026年11款顶尖本地SEO工具推荐",
+      "title": "2026年11款顶尖本地SEO工具推荐",
+      "link": "https://www.semrush.com/blog/local-seo-tools/",
+      "date": "Fri, 10 Ap",
+      "summary": "本文精选2026年最具效能的本地SEO工具，涵盖排名监控、评论管理与数据分析等功能，助力企业精准触达本地客户。",
+      "category": "ai-search",
+      "tags": [
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_222",
+      "type": "article",
+      "label": "SEO自然搜索排名指南",
+      "title": "SEO自然搜索排名指南",
+      "link": "https://www.semrush.com/blog/seo-ranking/",
+      "date": "Fri, 10 Ap",
+      "summary": "本文解析SEO排名的核心要素，涵盖内容优化、技术SEO及外部链接建设，助您提升网站在自然搜索结果中的可见度。",
+      "category": "ai-search",
+      "tags": [
+        "SEO",
+        "度量指标"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_223",
+      "type": "article",
+      "label": "2026高效SEO报告制作指南（附模板）",
+      "title": "2026高效SEO报告制作指南（附模板）",
+      "link": "https://www.semrush.com/blog/seo-report/",
+      "date": "Fri, 10 Ap",
+      "summary": "本文详解2026年SEO报告的核心要素与制作流程，提供可视化模板，助力系统追踪网站表现与优化成效。",
+      "category": "ai-search",
+      "tags": [
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_224",
+      "type": "article",
+      "label": "2026年11款顶尖本地SEO工具推荐",
+      "title": "2026年11款顶尖本地SEO工具推荐",
+      "link": "https://www.semrush.com/blog/local-seo-tools/",
+      "date": "Fri, 10 Ap",
+      "summary": "本文精选2026年最具效能的本地SEO工具，涵盖排名追踪、评论管理与数据分析等功能，助力企业提升本地搜索可见性。",
+      "category": "ai-search",
+      "tags": [
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_225",
+      "type": "article",
+      "label": "SEO自然搜索排名指南",
+      "title": "SEO自然搜索排名指南",
+      "link": "https://www.semrush.com/blog/seo-ranking/",
+      "date": "Fri, 10 Ap",
+      "summary": "本文解析SEO排名的核心要素，涵盖内容优化、技术SEO及外链策略，助您提升网站在自然搜索结果中的可见度。",
+      "category": "ai-search",
+      "tags": [
+        "SEO",
+        "度量指标"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_226",
+      "type": "article",
+      "label": "十大公关工具精选",
+      "title": "十大公关工具精选",
+      "link": "https://www.semrush.com/blog/best-pr-tools/",
+      "date": "Fri, 10 Ap",
+      "summary": "涵盖媒体拓展、内容分发与舆情监测的最佳公关工具，包括Semrush AI工具包、PitchFriendly等。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_227",
+      "type": "article",
+      "label": "2026十大网站流量分析工具推荐",
+      "title": "2026十大网站流量分析工具推荐",
+      "link": "https://www.semrush.com/blog/website-traffic-analysis-tools/",
+      "date": "Fri, 10 Ap",
+      "summary": "本文精选2026年最具价值的网站流量分析工具，详细对比其核心功能与定价策略，助力企业高效优化数字营销决策。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_228",
+      "type": "article",
+      "label": "十大公关工具精选",
+      "title": "十大公关工具精选",
+      "link": "https://www.semrush.com/blog/best-pr-tools/",
+      "date": "Fri, 10 Ap",
+      "summary": "涵盖媒体拓展、内容分发与舆情监测的最佳公关工具，包括Semrush AI工具包、PitchFriendly等。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_229",
+      "type": "article",
+      "label": "2026十大网站流量分析工具推荐",
+      "title": "2026十大网站流量分析工具推荐",
+      "link": "https://www.semrush.com/blog/website-traffic-analysis-tools/",
+      "date": "Fri, 10 Ap",
+      "summary": "本文精选2026年最具价值的网站流量分析工具，详细解析核心功能与定价策略，助力企业精准评估数字营销效果。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_230",
+      "type": "article",
+      "label": "十大公关必备工具推荐",
+      "title": "十大公关必备工具推荐",
+      "link": "https://www.semrush.com/blog/best-pr-tools/",
+      "date": "Fri, 10 Ap",
+      "summary": "顶尖公关工具涵盖Semrush AI公关套件、PitchFriendly、GlobeNewswire及媒体监测平台，助力品牌高效开展外联传播与舆情管理。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_231",
+      "type": "article",
+      "label": "Top Black Friday Organic Searc...",
+      "title": "Top Black Friday Organic Search Traffic Winners & Trends in 2025",
+      "link": "https://www.aleydasolis.com/en/search-engine-optimization/black-friday-seo-traffic-winners/",
+      "date": "Fri, 05 De",
+      "summary": "<p>Who are the top Black Friday Organic Search Traffic Winners in 2025? What are their main characteristics? What can we learn to maximize your traffi",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_232",
+      "type": "article",
+      "label": "2025黑五搜索流量赢家趋势",
+      "title": "2025黑五搜索流量赢家趋势",
+      "link": "https://www.aleydasolis.com/en/search-engine-optimization/black-friday-seo-traffic-winners/",
+      "date": "Fri, 05 De",
+      "summary": "分析2025年黑五期间自然搜索流量领先品牌的核心特征与市场趋势，为下一年度流量提升提供数据洞察。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_233",
+      "type": "article",
+      "label": "2025黑五搜索流量赢家趋势",
+      "title": "2025黑五搜索流量赢家趋势",
+      "link": "https://www.aleydasolis.com/en/search-engine-optimization/black-friday-seo-traffic-winners/",
+      "date": "Fri, 05 De",
+      "summary": "分析2025年黑五期间自然搜索流量领先品牌的核心特征与市场趋势，为来年流量增长提供策略参考。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_234",
+      "type": "article",
+      "label": "2025黑五搜索赢家趋势",
+      "title": "2025黑五搜索赢家趋势",
+      "link": "https://www.aleydasolis.com/en/search-engine-optimization/black-friday-seo-traffic-winners/",
+      "date": "Fri, 05 De",
+      "summary": "分析2025年黑五期间自然搜索流量领先品牌，总结其核心特征，为下一年度流量增长提供策略参考。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_235",
+      "type": "article",
+      "label": "2025黑五搜索流量赢家趋势",
+      "title": "2025黑五搜索流量赢家趋势",
+      "link": "https://www.aleydasolis.com/en/search-engine-optimization/black-friday-seo-traffic-winners/",
+      "date": "Fri, 05 De",
+      "summary": "分析2025年黑五期间自然搜索流量领先者及其核心特征，为下一年度流量最大化提供数据洞察与策略参考。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_236",
+      "type": "article",
+      "label": "2025黑五搜索流量赢家趋势",
+      "title": "2025黑五搜索流量赢家趋势",
+      "link": "https://www.aleydasolis.com/en/search-engine-optimization/black-friday-seo-traffic-winners/",
+      "date": "Fri, 05 De",
+      "summary": "分析2025年黑五期间自然搜索流量领先者及其核心特征，为下一年度流量最大化提供数据洞察与策略参考。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_237",
+      "type": "article",
+      "label": "2025黑五搜索流量赢家趋势",
+      "title": "2025黑五搜索流量赢家趋势",
+      "link": "https://www.aleydasolis.com/en/search-engine-optimization/black-friday-seo-traffic-winners/",
+      "date": "Fri, 05 De",
+      "summary": "分析2025年黑五期间自然搜索流量领先者及其核心特征，为下一年度流量最大化提供数据洞察与策略参考。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_238",
+      "type": "article",
+      "label": "智能体经济重塑金融体系",
+      "title": "智能体经济重塑金融体系",
+      "link": "https://www.youtube.com/watch?v=eyobeqMdbeI",
+      "date": "2026-04-22",
+      "summary": "Circle联合创始人兼CEO Jeremy Allaire探讨AI智能体如何通过自动化决策与价值交换，驱动金融系统向自主化、高效化演进。",
+      "category": "agentic-b2b",
+      "tags": [
+        "automation"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_239",
+      "type": "article",
+      "label": "应对AI加速攻击的安全方案准备",
+      "title": "应对AI加速攻击的安全方案准备",
+      "link": "https://claude.com/blog/preparing-your-security-program-for-ai-accelerated-offense",
+      "date": "2026-04-22",
+      "summary": "随着AI技术被用于加速网络攻击，企业需升级安全防护体系，以应对更智能、更快速的威胁挑战。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_240",
+      "type": "article",
+      "label": "生成式引擎优化五大趋势重塑营销闭环",
+      "title": "生成式引擎优化五大趋势重塑营销闭环",
+      "link": "https://blog.hubspot.com/marketing/future-of-geo",
+      "date": "2026-04-21",
+      "summary": "生成式引擎优化已站稳搜索生态，其未来前景可期。Datos搜索报告显示，2025年第四季度AI工具占比首度稳定在1.31%-1.34%。",
+      "category": "ai-search",
+      "tags": [
+        "GEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_241",
+      "type": "article",
+      "label": "生成式引擎优化五大趋势重塑营销循环",
+      "title": "生成式引擎优化五大趋势重塑营销循环",
+      "link": "https://blog.hubspot.com/marketing/future-of-geo",
+      "date": "2026-04-21",
+      "summary": "生成式引擎优化已确立其搜索地位，未来前景可期。数据显示，AI工具在2025年第四季度首次实现稳定市场份额，标志结构性转变。",
+      "category": "ai-search",
+      "tags": [
+        "GEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_242",
+      "type": "article",
+      "label": "智能体经济重塑金融体系",
+      "title": "智能体经济重塑金融体系",
+      "link": "https://www.youtube.com/watch?v=eyobeqMdbeI",
+      "date": "2026-04-21",
+      "summary": "Circle联合创始人兼CEO Jeremy Allaire探讨AI智能体如何通过自动化决策与价值交换，驱动金融系统向自主化、高效化演进。",
+      "category": "agentic-b2b",
+      "tags": [
+        "automation"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_243",
+      "type": "article",
+      "label": "从聊天机器人到流程自动化代理的跨越",
+      "title": "从聊天机器人到流程自动化代理的跨越",
+      "link": "https://x.com/levie/status/2046397816755634340",
+      "date": "2026-04-21",
+      "summary": "实现从基础对话机器人到真正能自动化流程的智能代理，需要投入实质性工作。企业需设立专人负责推进自动化，而非依赖员工自发尝试。",
+      "category": "agentic-b2b",
+      "tags": [
+        "strategy"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_244",
+      "type": "article",
+      "label": "从聊天机器人到流程自动化代理的跨越",
+      "title": "从聊天机器人到流程自动化代理的跨越",
+      "link": "https://x.com/levie/status/2046397816755634340",
+      "date": "2026-04-21",
+      "summary": "从使用聊天机器人到部署真正实现流程自动化的代理，需要投入实质性工作。企业需配备专职人员推动自动化，而非依赖员工自发完成。",
+      "category": "agentic-b2b",
+      "tags": [
+        "strategy"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_245",
+      "type": "article",
+      "label": "2026年AP自动化十大智能体AI应用",
+      "title": "2026年AP自动化十大智能体AI应用",
+      "link": "https://www.forrester.com/blogs/top-agentic-ai-use-cases-for-ap-automation-in-2026/",
+      "date": "2026-04-21",
+      "summary": "传统AP自动化聚焦效率微调，如快速捕获发票与减少人工操作，但未改变核心流程。如今，智能体AI正推动根本性变革。",
+      "category": "agentic-b2b",
+      "tags": [
+        "automation"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_246",
+      "type": "article",
+      "label": "2026年AP自动化五大智能体AI应用",
+      "title": "2026年AP自动化五大智能体AI应用",
+      "link": "https://www.forrester.com/blogs/top-agentic-ai-use-cases-for-ap-automation-in-2026/",
+      "date": "2026-04-21",
+      "summary": "传统AP自动化聚焦效率微调，如快速抓取发票与减少人工操作，但未改变核心流程。如今，智能体AI正推动根本性变革。",
+      "category": "agentic-b2b",
+      "tags": [
+        "automation"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_247",
+      "type": "article",
+      "label": "应对AI加速攻击的安全准备",
+      "title": "应对AI加速攻击的安全准备",
+      "link": "https://claude.com/blog/preparing-your-security-program-for-ai-accelerated-offense",
+      "date": "2026-04-21",
+      "summary": "随着AI技术被用于增强网络攻击，企业需升级安全策略以应对更智能、更快速的威胁。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_248",
+      "type": "article",
+      "label": "法鲁兹成坎耶新专辑焦点",
+      "title": "法鲁兹成坎耶新专辑焦点",
+      "link": "https://x.com/amasad/status/2046443294104883693",
+      "date": "2026-04-21",
+      "summary": "黎巴嫩传奇歌手法鲁兹的作品被采样于坎耶·韦斯特最新专辑中，引发全球乐迷关注与讨论。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_249",
+      "type": "article",
+      "label": "法鲁兹成坎耶新专辑焦点",
+      "title": "法鲁兹成坎耶新专辑焦点",
+      "link": "https://x.com/amasad/status/2046443294104883693",
+      "date": "2026-04-21",
+      "summary": "黎巴嫩传奇歌手法鲁兹的作品被采样于坎耶·韦斯特最新专辑中，引发乐迷广泛关注与讨论。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_250",
+      "type": "article",
+      "label": "不确定性如何重塑IT决策逻辑",
+      "title": "不确定性如何重塑IT决策逻辑",
+      "link": "https://www.forrester.com/blogs/why-uncertainty-changes-how-it-must-reason/",
+      "date": "2026-04-21",
+      "summary": "默里·坎特指出技术债务实为经济负债，强调不确定性并非需最小化的干扰，而是IT投资的核心特征。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_251",
+      "type": "article",
+      "label": "不确定性如何重塑IT决策逻辑",
+      "title": "不确定性如何重塑IT决策逻辑",
+      "link": "https://www.forrester.com/blogs/why-uncertainty-changes-how-it-must-reason/",
+      "date": "2026-04-21",
+      "summary": "Murray Cantor在对话中提出，技术债务本质是经济负债，不确定性并非需最小化的干扰，而是IT投资的核心特征。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_252",
+      "type": "article",
+      "label": "YC创业召集令",
+      "title": "YC创业召集令",
+      "link": "https://x.com/garrytan/status/2046465101759500767",
+      "date": "2026-04-21",
+      "summary": "知名创业加速器Y Combinator发布号召，邀请各类人才加入其平台创建初创企业，并附有详细申请链接。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_253",
+      "type": "article",
+      "label": "GBrain迁移方案指南",
+      "title": "GBrain迁移方案指南",
+      "link": "https://x.com/garrytan/status/2046464315918864385",
+      "date": "2026-04-21",
+      "summary": "本文为升级GBrain版本的用户提供迁移方案，确保个人设置能随核心配置同步更新，适用于OpenClaw/Hermes生态中的各类插件或层级。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_254",
+      "type": "article",
+      "label": "我的秘密被发现了👀",
+      "title": "我的秘密被发现了👀",
+      "link": "https://x.com/garrytan/status/2046459740210036938",
+      "date": "2026-04-21",
+      "summary": "神秘推文暗示个人秘密遭破解，附带的链接可能包含关键线索或进一步说明，引发网友好奇与猜测。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_255",
+      "type": "article",
+      "label": "YC创业召集令",
+      "title": "YC创业召集令",
+      "link": "https://x.com/garrytan/status/2046465101759500767",
+      "date": "2026-04-21",
+      "summary": "知名创业加速器Y Combinator发布号召，面向全球人才发出创业邀请，链接直达报名通道。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_256",
+      "type": "article",
+      "label": "GBrain迁移方案指南",
+      "title": "GBrain迁移方案指南",
+      "link": "https://x.com/garrytan/status/2046464315918864385",
+      "date": "2026-04-21",
+      "summary": "本文为升级GBrain版本的用户提供迁移方案，确保个人设置能随核心配置同步更新，适用于OpenClaw/Hermes生态中的各类插件或层级。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_257",
+      "type": "article",
+      "label": "我的秘密被发现了👀",
+      "title": "我的秘密被发现了👀",
+      "link": "https://x.com/garrytan/status/2046459740210036938",
+      "date": "2026-04-21",
+      "summary": "网友通过深度分析，意外破解了作者隐藏的彩蛋或未公开信息，引发广泛好奇与讨论。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_258",
+      "type": "article",
+      "label": "业界携手守护互联网令人振奋",
+      "title": "业界携手守护互联网令人振奋",
+      "link": "https://x.com/rauchg/status/2046406894269747668",
+      "date": "2026-04-21",
+      "summary": "团队与行业伙伴共同加强网络防护，已在Dashboard和CLI推出超20项产品升级，提升安全配置便捷性。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_259",
+      "type": "article",
+      "label": "业界携手守护互联网令人振奋",
+      "title": "业界携手守护互联网令人振奋",
+      "link": "https://x.com/rauchg/status/2046406894269747668",
+      "date": "2026-04-21",
+      "summary": "团队与行业伙伴共同保护互联网的举措令人鼓舞，我们已在控制台和命令行界面推出20余项产品改进，助力提升安全防护。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_260",
+      "type": "article",
+      "label": "年度最佳播客单集推荐",
+      "title": "年度最佳播客单集推荐",
+      "link": "https://x.com/nikunj/status/2046465709438582945",
+      "date": "2026-04-21",
+      "summary": "本期播客以真挚、温暖、真实的叙事打动人心，讲述者@JaredBWeinstein分享的多元故事令人向往，制作团队@jacksondahl与@DialecticPod呈现了非凡水准。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_261",
+      "type": "article",
+      "label": "年度最佳播客单集推荐",
+      "title": "年度最佳播客单集推荐",
+      "link": "https://x.com/nikunj/status/2046465709438582945",
+      "date": "2026-04-21",
+      "summary": "本期播客以真挚、温暖、真实的叙事打动人心，讲述者@JaredBWeinstein分享的多元故事令人向往，@jacksondahl与@DialecticPod团队再次呈现非凡之作。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_262",
+      "type": "article",
+      "label": "智能体设计之趣胜于编程",
+      "title": "智能体设计之趣胜于编程",
+      "link": "https://x.com/petergyang/status/2046434474603446535",
+      "date": "2026-04-21",
+      "summary": "相较于使用智能体进行编程，利用智能体进行设计过程更具趣味性与创造性，展现了人机协作的新维度。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_263",
+      "type": "article",
+      "label": "AI设计工具可弥补前端设计短板",
+      "title": "AI设计工具可弥补前端设计短板",
+      "link": "https://x.com/petergyang/status/2046434019307561342",
+      "date": "2026-04-21",
+      "summary": "作者认为借助AI设计工具，能够轻松弥补Codex在前端设计能力上的不足。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_264",
+      "type": "article",
+      "label": "创新越强，路线图越淡",
+      "title": "创新越强，路线图越淡",
+      "link": "https://x.com/petergyang/status/2046433025337315651",
+      "date": "2026-04-21",
+      "summary": "企业创新程度与长期规划详程度呈反比，过度具体的远期路线图可能反而会限制突破性探索。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_265",
+      "type": "article",
+      "label": "与智能体协同设计，乐趣更胜编程",
+      "title": "与智能体协同设计，乐趣更胜编程",
+      "link": "https://x.com/petergyang/status/2046434474603446535",
+      "date": "2026-04-21",
+      "summary": "相比与智能体共同编程，与其协同进行创意设计能带来更丰富的乐趣与灵感碰撞。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_266",
+      "type": "article",
+      "label": "AI设计工具弥补前端技能缺口",
+      "title": "AI设计工具弥补前端技能缺口",
+      "link": "https://x.com/petergyang/status/2046434019307561342",
+      "date": "2026-04-21",
+      "summary": "作者认为，借助AI设计工具可轻松弥补Codex在前端设计能力上的不足。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_267",
+      "type": "article",
+      "label": "企业越创新，越无固定路线图",
+      "title": "企业越创新，越无固定路线图",
+      "link": "https://x.com/petergyang/status/2046433025337315651",
+      "date": "2026-04-21",
+      "summary": "创新型企业往往不依赖僵化的长期规划，而是保持灵活应变能力，以快速适应市场变化与技术迭代。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_268",
+      "type": "article",
+      "label": "give us back Sky",
+      "title": "give us back Sky",
+      "link": "https://x.com/swyx/status/2046388765820661939",
+      "date": "2026-04-21",
+      "summary": "give us back Sky",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_269",
+      "type": "article",
+      "label": "还我天空",
+      "title": "还我天空",
+      "link": "https://x.com/swyx/status/2046388765820661939",
+      "date": "2026-04-21",
+      "summary": "一则呼吁归还天空的简短网络倡议，附推文链接，表达对开放空间或环境权益的诉求。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_270",
+      "type": "article",
+      "label": "智能体以HTML为母语",
+      "title": "智能体以HTML为母语",
+      "link": "https://x.com/zarazhangrui/status/2046454622852657264",
+      "date": "2026-04-21",
+      "summary": "智能体以HTML作为原生表达语言，能更自然高效地呈现信息，其生成的HTML幻灯片视觉效果显著优于XML格式。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_271",
+      "type": "article",
+      "label": "智能体以HTML为母语",
+      "title": "智能体以HTML为母语",
+      "link": "https://x.com/zarazhangrui/status/2046454622852657264",
+      "date": "2026-04-21",
+      "summary": "智能体以HTML作为原生表达语言，能更自然高效地呈现信息，其生成的HTML幻灯片视觉效果显著优于XML格式。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_272",
+      "type": "article",
+      "label": "地缘经济动荡中CISO的破局之道",
+      "title": "地缘经济动荡中CISO的破局之道",
+      "link": "https://www.forrester.com/blogs/how-cisos-can-thrive-amidst-geopolitical-and-economic-uncertainty/",
+      "date": "2026-04-20",
+      "summary": "地缘冲突与经济波动交织，网络安全已成为现代冲突新维度。CISO面临攻击面持续扩大的挑战，需在不确定性中构建韧性防御体系。",
+      "category": "ai-search",
+      "tags": [
+        "GEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_273",
+      "type": "article",
+      "label": "地缘经济动荡中CISO的破局之道",
+      "title": "地缘经济动荡中CISO的破局之道",
+      "link": "https://www.forrester.com/blogs/how-cisos-can-thrive-amidst-geopolitical-and-economic-uncertainty/",
+      "date": "2026-04-20",
+      "summary": "地缘冲突与经济波动交织，网络攻击已成为现代冲突新维度。CISO面临持续不确定性，攻击面随组织数字化扩张而急剧扩大。",
+      "category": "ai-search",
+      "tags": [
+        "GEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_274",
+      "type": "article",
+      "label": "品牌提及追踪全攻略",
+      "title": "品牌提及追踪全攻略",
+      "link": "https://www.semrush.com/blog/brand-mentions/",
+      "date": "2026-04-20",
+      "summary": "品牌提及对SEO与AI SEO至关重要。本指南将解析其价值，并分享如何获取更多提及及有效追踪方法。",
+      "category": "ai-search",
+      "tags": [
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_275",
+      "type": "article",
+      "label": "SEO优化清单：43个网站提升技巧",
+      "title": "SEO优化清单：43个网站提升技巧",
+      "link": "https://www.semrush.com/blog/seo-checklist/",
+      "date": "2026-04-20",
+      "summary": "本清单助您针对谷歌与AI搜索引擎优化网站，涵盖关键策略与实操步骤。",
+      "category": "ai-search",
+      "tags": [
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_276",
+      "type": "article",
+      "label": "品牌提及追踪与优化全攻略",
+      "title": "品牌提及追踪与优化全攻略",
+      "link": "https://www.semrush.com/blog/brand-mentions/",
+      "date": "2026-04-20",
+      "summary": "了解品牌提及对SEO与AI SEO的重要性，掌握获取更多提及的策略与追踪方法。",
+      "category": "ai-search",
+      "tags": [
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_277",
+      "type": "article",
+      "label": "SEO优化清单：43个网站提升技巧",
+      "title": "SEO优化清单：43个网站提升技巧",
+      "link": "https://www.semrush.com/blog/seo-checklist/",
+      "date": "2026-04-20",
+      "summary": "本清单助您针对谷歌与AI搜索引擎优化网站，涵盖技术设置、内容策略及用户体验等关键维度。",
+      "category": "ai-search",
+      "tags": [
+        "SEO"
+      ],
+      "color": "#F97316",
+      "size": 6
+    },
+    {
+      "id": "art_278",
+      "type": "article",
+      "label": "智能体编码评估中的基础设施噪声量化",
+      "title": "智能体编码评估中的基础设施噪声量化",
+      "link": "https://www.anthropic.com/engineering/infrastructure-noise",
+      "date": "2026-04-20",
+      "summary": "本研究旨在量化智能体编码评估中基础设施引入的噪声，分析其对结果准确性的潜在影响。",
+      "category": "agentic-b2b",
+      "tags": [
+        "automation"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_279",
+      "type": "article",
+      "label": "AI市场等同人力规模？需审慎看待",
+      "title": "AI市场等同人力规模？需审慎看待",
+      "link": "https://x.com/mattturck/status/2046284478151086178",
+      "date": "2026-04-20",
+      "summary": "当前流行观点认为AI的潜在市场规模可直接对标全球劳动力市场总值，但这忽略了技术服务的定价本质。",
+      "category": "agentic-b2b",
+      "tags": [
+        "strategy"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_280",
+      "type": "article",
+      "label": "AI市场新论：等同人力规模？",
+      "title": "AI市场新论：等同人力规模？",
+      "link": "https://x.com/mattturck/status/2046284478151086178",
+      "date": "2026-04-20",
+      "summary": "近期流行观点认为AI总市场规模将完全等同人类劳动力市场价值，达数万亿美元。但历史表明，自动化技术服务的定价始终遵循边际成本加合理利润的规律。",
+      "category": "agentic-b2b",
+      "tags": [
+        "strategy"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_281",
+      "type": "article",
+      "label": "AI重塑客户体验，信任守护成关键",
+      "title": "AI重塑客户体验，信任守护成关键",
+      "link": "https://www.forrester.com/blogs/guest-speakers-reveal-where-ai-belongs-in-cx-and-how-leaders-protect-trust/",
+      "date": "2026-04-20",
+      "summary": "AI正快速重塑客户体验，迫使企业明确AI与人工的边界。论坛嘉宾分享如何平衡技术应用与信任保护。",
+      "category": "agentic-b2b",
+      "tags": [
+        "CX"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_282",
+      "type": "article",
+      "label": "Salesforce新推AgentExchange商店",
+      "title": "Salesforce新推AgentExchange商店",
+      "link": "https://www.forrester.com/blogs/salesforces-new-agentexchange-store-easier-ai-helpers-but-still-inside-their-walled-garden/",
+      "date": "2026-04-20",
+      "summary": "Salesforce整合三大应用商店为统一的AgentExchange平台，显著简化AI与应用的采购流程，但同时也加深了用户对其生态系统的依赖。",
+      "category": "agentic-b2b",
+      "tags": [
+        "sales"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_283",
+      "type": "article",
+      "label": "超越聊天机器人：设计可扩展的对话银行体验",
+      "title": "超越聊天机器人：设计可扩展的对话银行体验",
+      "link": "https://www.forrester.com/blogs/beyond-chatbots-designing-conversational-banking-experiences-that-scale/",
+      "date": "2026-04-20",
+      "summary": "了解银行如何在CX Summit EMEA 2026峰会上，规模化构建对话式客户交互体验。",
+      "category": "agentic-b2b",
+      "tags": [
+        "CX"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_284",
+      "type": "article",
+      "label": "AI重塑客户体验，信任为先",
+      "title": "AI重塑客户体验，信任为先",
+      "link": "https://www.forrester.com/blogs/guest-speakers-reveal-where-ai-belongs-in-cx-and-how-leaders-protect-trust/",
+      "date": "2026-04-20",
+      "summary": "AI正快速改变客户体验管理，迫使企业明确人机协作边界。论坛嘉宾分享如何平衡效率与信任，确保技术应用不损害用户关系。",
+      "category": "agentic-b2b",
+      "tags": [
+        "CX"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_285",
+      "type": "article",
+      "label": "Salesforce新推AgentExchange商店",
+      "title": "Salesforce新推AgentExchange商店",
+      "link": "https://www.forrester.com/blogs/salesforces-new-agentexchange-store-easier-ai-helpers-but-still-inside-their-walled-garden/",
+      "date": "2026-04-20",
+      "summary": "Salesforce整合三大应用商店为统一的AgentExchange平台，显著简化AI工具采购流程，但可能加剧用户对其生态系统的依赖。",
+      "category": "agentic-b2b",
+      "tags": [
+        "sales"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_286",
+      "type": "article",
+      "label": "超越聊天机器人：设计可扩展的对话银行体验",
+      "title": "超越聊天机器人：设计可扩展的对话银行体验",
+      "link": "https://www.forrester.com/blogs/beyond-chatbots-designing-conversational-banking-experiences-that-scale/",
+      "date": "2026-04-20",
+      "summary": "了解银行如何在2026年EMEA客户体验峰会上实现对话式体验的规模化应用。",
+      "category": "agentic-b2b",
+      "tags": [
+        "CX"
+      ],
+      "color": "#3B82F6",
+      "size": 6
+    },
+    {
+      "id": "art_287",
+      "type": "article",
+      "label": "Claude代码自动模式：更安全的权限跳过方案",
+      "title": "Claude代码自动模式：更安全的权限跳过方案",
+      "link": "https://www.anthropic.com/engineering/claude-code-auto-mode",
+      "date": "2026-04-20",
+      "summary": "Claude代码自动模式提供了一种更安全的方式来跳过权限检查，在提升开发效率的同时保障系统安全。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_288",
+      "type": "article",
+      "label": "杰克青年理财博客的深远影响",
+      "title": "杰克青年理财博客的深远影响",
+      "link": "https://x.com/alexalbert__/status/2046277525207466003",
+      "date": "2026-04-20",
+      "summary": "大学期间，杰克的青年理财博客在我迷茫未来方向时给予关键指引，帮助规划职业道路。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_289",
+      "type": "article",
+      "label": "杰克博客引领我职业方向",
+      "title": "杰克博客引领我职业方向",
+      "link": "https://x.com/alexalbert__/status/2046277525207466003",
+      "date": "2026-04-20",
+      "summary": "大学期间，杰克的青年理财博客深刻影响了我对毕业规划的思考，为迷茫中的年轻人提供实用指引。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_290",
+      "type": "article",
+      "label": "付费计划全面上线",
+      "title": "付费计划全面上线",
+      "link": "https://x.com/claudeai/status/2046328622869344429",
+      "date": "2026-04-20",
+      "summary": "Claude应用现已支持所有付费方案，用户更新或下载后即可在Cowork中体验新功能。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_291",
+      "type": "article",
+      "label": "实时成果自动存档，支持版本回溯",
+      "title": "实时成果自动存档，支持版本回溯",
+      "link": "https://x.com/claudeai/status/2046328621611065668",
+      "date": "2026-04-20",
+      "summary": "所有构建内容均自动保存至新版“实时成果”标签页，并附带完整版本历史。无论何时何地重返工作，皆可无缝接续进度。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_292",
+      "type": "article",
+      "label": "Claude可创建实时数据看板",
+      "title": "Claude可创建实时数据看板",
+      "link": "https://x.com/claudeai/status/2046328619249684989",
+      "date": "2026-04-20",
+      "summary": "在Cowork中，Claude现能构建连接应用与文件的动态看板和追踪器，打开即可刷新实时数据。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_293",
+      "type": "article",
+      "label": "付费计划全面上线",
+      "title": "付费计划全面上线",
+      "link": "https://x.com/claudeai/status/2046328622869344429",
+      "date": "2026-04-20",
+      "summary": "Claude应用现已支持所有付费方案，更新或下载即可在Cowork中体验新功能。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_294",
+      "type": "article",
+      "label": "实时成果自动存档，支持版本回溯",
+      "title": "实时成果自动存档，支持版本回溯",
+      "link": "https://x.com/claudeai/status/2046328621611065668",
+      "date": "2026-04-20",
+      "summary": "所有构建内容均自动保存至新版“实时成果”标签页，并附带完整版本历史。无论何时何地重返工作，皆可无缝接续进度。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_295",
+      "type": "article",
+      "label": "Claude可创建实时数据看板",
+      "title": "Claude可创建实时数据看板",
+      "link": "https://x.com/claudeai/status/2046328619249684989",
+      "date": "2026-04-20",
+      "summary": "在Cowork中，Claude现能构建连接应用与文件的实时看板和追踪器，打开即可刷新最新数据。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_296",
+      "type": "article",
+      "label": "媒体行业强势回归",
+      "title": "媒体行业强势回归",
+      "link": "https://x.com/danshipper/status/2046272643133825458",
+      "date": "2026-04-20",
+      "summary": "社交媒体热议\"媒体再度崛起\"现象，附链接引发行业关注，反映数字时代媒体价值重估趋势。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_297",
+      "type": "article",
+      "label": "双智能体优势显著",
+      "title": "双智能体优势显著",
+      "link": "https://x.com/danshipper/status/2046231280430240141",
+      "date": "2026-04-20",
+      "summary": "研究表明，双智能体协作系统在任务处理效率与质量上均超越单一智能体，展现出更强的协同解决问题的能力。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_298",
+      "type": "article",
+      "label": "Opus 4.7高效代码审查",
+      "title": "Opus 4.7高效代码审查",
+      "link": "https://x.com/danshipper/status/2046224034619125871",
+      "date": "2026-04-20",
+      "summary": "Opus 4.7在代码审查方面表现出色，能有效提升开发流程的质量与效率。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    },
+    {
+      "id": "art_299",
+      "type": "article",
+      "label": "媒体行业强势回归",
+      "title": "媒体行业强势回归",
+      "link": "https://x.com/danshipper/status/2046272643133825458",
+      "date": "2026-04-20",
+      "summary": "近期数据显示媒体关注度与用户参与度显著回升，行业正通过创新内容与互动模式重获市场青睐。",
+      "category": "ai-industry",
+      "tags": [
+        "行业趋势"
+      ],
+      "color": "#10B981",
+      "size": 6
+    }
+  ],
+  "edges": [
+    {
+      "source": "cat_ai-industry",
+      "target": "tag_大厂战略",
+      "value": 2
+    },
+    {
+      "source": "tag_大厂战略",
+      "target": "art_0",
+      "value": 1
+    },
+    {
+      "source": "tag_大厂战略",
+      "target": "art_1",
+      "value": 1
+    },
+    {
+      "source": "tag_大厂战略",
+      "target": "art_2",
+      "value": 1
+    },
+    {
+      "source": "tag_大厂战略",
+      "target": "art_3",
+      "value": 1
+    },
+    {
+      "source": "tag_大厂战略",
+      "target": "art_4",
+      "value": 1
+    },
+    {
+      "source": "tag_大厂战略",
+      "target": "art_5",
+      "value": 1
+    },
+    {
+      "source": "tag_大厂战略",
+      "target": "art_6",
+      "value": 1
+    },
+    {
+      "source": "tag_大厂战略",
+      "target": "art_25",
+      "value": 1
+    },
+    {
+      "source": "tag_大厂战略",
+      "target": "art_29",
+      "value": 1
+    },
+    {
+      "source": "tag_大厂战略",
+      "target": "art_96",
+      "value": 1
+    },
+    {
+      "source": "cat_ai-search",
+      "target": "tag_SEO",
+      "value": 2
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_7",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_8",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_9",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_32",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_33",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_34",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_35",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_36",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_65",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_66",
+      "value": 1
+    },
+    {
+      "source": "cat_agentic-b2b",
+      "target": "tag_marketing",
+      "value": 2
+    },
+    {
+      "source": "tag_marketing",
+      "target": "art_10",
+      "value": 1
+    },
+    {
+      "source": "tag_marketing",
+      "target": "art_11",
+      "value": 1
+    },
+    {
+      "source": "tag_marketing",
+      "target": "art_13",
+      "value": 1
+    },
+    {
+      "source": "tag_marketing",
+      "target": "art_14",
+      "value": 1
+    },
+    {
+      "source": "tag_marketing",
+      "target": "art_10",
+      "value": 1
+    },
+    {
+      "source": "tag_marketing",
+      "target": "art_17",
+      "value": 1
+    },
+    {
+      "source": "tag_marketing",
+      "target": "art_19",
+      "value": 1
+    },
+    {
+      "source": "tag_marketing",
+      "target": "art_20",
+      "value": 1
+    },
+    {
+      "source": "tag_marketing",
+      "target": "art_22",
+      "value": 1
+    },
+    {
+      "source": "tag_marketing",
+      "target": "art_14",
+      "value": 1
+    },
+    {
+      "source": "cat_agentic-b2b",
+      "target": "tag_strategy",
+      "value": 2
+    },
+    {
+      "source": "tag_strategy",
+      "target": "art_12",
+      "value": 1
+    },
+    {
+      "source": "tag_strategy",
+      "target": "art_15",
+      "value": 1
+    },
+    {
+      "source": "tag_strategy",
+      "target": "art_18",
+      "value": 1
+    },
+    {
+      "source": "tag_strategy",
+      "target": "art_15",
+      "value": 1
+    },
+    {
+      "source": "tag_strategy",
+      "target": "art_24",
+      "value": 1
+    },
+    {
+      "source": "tag_strategy",
+      "target": "art_54",
+      "value": 1
+    },
+    {
+      "source": "tag_strategy",
+      "target": "art_55",
+      "value": 1
+    },
+    {
+      "source": "tag_strategy",
+      "target": "art_56",
+      "value": 1
+    },
+    {
+      "source": "tag_strategy",
+      "target": "art_57",
+      "value": 1
+    },
+    {
+      "source": "tag_strategy",
+      "target": "art_113",
+      "value": 1
+    },
+    {
+      "source": "cat_ai-industry",
+      "target": "tag_行业趋势",
+      "value": 2
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_26",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_27",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_28",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_26",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_28",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_37",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_38",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_39",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_40",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_41",
+      "value": 1
+    },
+    {
+      "source": "cat_academic",
+      "target": "tag_信息检索",
+      "value": 2
+    },
+    {
+      "source": "tag_信息检索",
+      "target": "art_47",
+      "value": 1
+    },
+    {
+      "source": "tag_信息检索",
+      "target": "art_48",
+      "value": 1
+    },
+    {
+      "source": "tag_信息检索",
+      "target": "art_48",
+      "value": 1
+    },
+    {
+      "source": "tag_信息检索",
+      "target": "art_50",
+      "value": 1
+    },
+    {
+      "source": "tag_信息检索",
+      "target": "art_51",
+      "value": 1
+    },
+    {
+      "source": "tag_信息检索",
+      "target": "art_51",
+      "value": 1
+    },
+    {
+      "source": "tag_信息检索",
+      "target": "art_53",
+      "value": 1
+    },
+    {
+      "source": "cat_agentic-b2b",
+      "target": "tag_automation",
+      "value": 2
+    },
+    {
+      "source": "tag_automation",
+      "target": "art_77",
+      "value": 1
+    },
+    {
+      "source": "tag_automation",
+      "target": "art_78",
+      "value": 1
+    },
+    {
+      "source": "tag_automation",
+      "target": "art_79",
+      "value": 1
+    },
+    {
+      "source": "tag_automation",
+      "target": "art_80",
+      "value": 1
+    },
+    {
+      "source": "tag_automation",
+      "target": "art_81",
+      "value": 1
+    },
+    {
+      "source": "tag_automation",
+      "target": "art_152",
+      "value": 1
+    },
+    {
+      "source": "tag_automation",
+      "target": "art_153",
+      "value": 1
+    },
+    {
+      "source": "tag_automation",
+      "target": "art_153",
+      "value": 1
+    },
+    {
+      "source": "tag_automation",
+      "target": "art_155",
+      "value": 1
+    },
+    {
+      "source": "tag_automation",
+      "target": "art_177",
+      "value": 1
+    },
+    {
+      "source": "cat_ai-search",
+      "target": "tag_度量指标",
+      "value": 2
+    },
+    {
+      "source": "tag_度量指标",
+      "target": "art_103",
+      "value": 1
+    },
+    {
+      "source": "tag_度量指标",
+      "target": "art_104",
+      "value": 1
+    },
+    {
+      "source": "tag_度量指标",
+      "target": "art_105",
+      "value": 1
+    },
+    {
+      "source": "tag_度量指标",
+      "target": "art_106",
+      "value": 1
+    },
+    {
+      "source": "tag_度量指标",
+      "target": "art_107",
+      "value": 1
+    },
+    {
+      "source": "tag_度量指标",
+      "target": "art_108",
+      "value": 1
+    },
+    {
+      "source": "tag_度量指标",
+      "target": "art_109",
+      "value": 1
+    },
+    {
+      "source": "tag_度量指标",
+      "target": "art_116",
+      "value": 1
+    },
+    {
+      "source": "tag_度量指标",
+      "target": "art_117",
+      "value": 1
+    },
+    {
+      "source": "tag_度量指标",
+      "target": "art_118",
+      "value": 1
+    },
+    {
+      "source": "cat_ai-search",
+      "target": "tag_AEO",
+      "value": 2
+    },
+    {
+      "source": "tag_AEO",
+      "target": "art_110",
+      "value": 1
+    },
+    {
+      "source": "tag_AEO",
+      "target": "art_111",
+      "value": 1
+    },
+    {
+      "source": "tag_AEO",
+      "target": "art_112",
+      "value": 1
+    },
+    {
+      "source": "tag_AEO",
+      "target": "art_162",
+      "value": 1
+    },
+    {
+      "source": "tag_AEO",
+      "target": "art_163",
+      "value": 1
+    },
+    {
+      "source": "tag_AEO",
+      "target": "art_169",
+      "value": 1
+    },
+    {
+      "source": "tag_AEO",
+      "target": "art_170",
+      "value": 1
+    },
+    {
+      "source": "tag_AEO",
+      "target": "art_171",
+      "value": 1
+    },
+    {
+      "source": "tag_AEO",
+      "target": "art_172",
+      "value": 1
+    },
+    {
+      "source": "tag_AEO",
+      "target": "art_172",
+      "value": 1
+    },
+    {
+      "source": "cat_academic",
+      "target": "tag_研究",
+      "value": 2
+    },
+    {
+      "source": "tag_研究",
+      "target": "art_158",
+      "value": 1
+    },
+    {
+      "source": "tag_研究",
+      "target": "art_159",
+      "value": 1
+    },
+    {
+      "source": "tag_研究",
+      "target": "art_160",
+      "value": 1
+    },
+    {
+      "source": "tag_研究",
+      "target": "art_161",
+      "value": 1
+    },
+    {
+      "source": "cat_ai-search",
+      "target": "tag_平台特定",
+      "value": 2
+    },
+    {
+      "source": "tag_平台特定",
+      "target": "art_169",
+      "value": 1
+    },
+    {
+      "source": "tag_平台特定",
+      "target": "art_170",
+      "value": 1
+    },
+    {
+      "source": "tag_平台特定",
+      "target": "art_171",
+      "value": 1
+    },
+    {
+      "source": "tag_平台特定",
+      "target": "art_172",
+      "value": 1
+    },
+    {
+      "source": "tag_平台特定",
+      "target": "art_172",
+      "value": 1
+    },
+    {
+      "source": "tag_平台特定",
+      "target": "art_172",
+      "value": 1
+    },
+    {
+      "source": "tag_平台特定",
+      "target": "art_175",
+      "value": 1
+    },
+    {
+      "source": "cat_ai-search",
+      "target": "tag_GEO",
+      "value": 2
+    },
+    {
+      "source": "tag_GEO",
+      "target": "art_192",
+      "value": 1
+    },
+    {
+      "source": "tag_GEO",
+      "target": "art_193",
+      "value": 1
+    },
+    {
+      "source": "tag_GEO",
+      "target": "art_193",
+      "value": 1
+    },
+    {
+      "source": "tag_GEO",
+      "target": "art_193",
+      "value": 1
+    },
+    {
+      "source": "tag_GEO",
+      "target": "art_193",
+      "value": 1
+    },
+    {
+      "source": "tag_GEO",
+      "target": "art_193",
+      "value": 1
+    },
+    {
+      "source": "tag_GEO",
+      "target": "art_193",
+      "value": 1
+    },
+    {
+      "source": "tag_GEO",
+      "target": "art_240",
+      "value": 1
+    },
+    {
+      "source": "tag_GEO",
+      "target": "art_241",
+      "value": 1
+    },
+    {
+      "source": "tag_GEO",
+      "target": "art_272",
+      "value": 1
+    },
+    {
+      "source": "cat_agentic-b2b",
+      "target": "tag_CX",
+      "value": 2
+    },
+    {
+      "source": "tag_CX",
+      "target": "art_281",
+      "value": 1
+    },
+    {
+      "source": "tag_CX",
+      "target": "art_283",
+      "value": 1
+    },
+    {
+      "source": "tag_CX",
+      "target": "art_284",
+      "value": 1
+    },
+    {
+      "source": "tag_CX",
+      "target": "art_286",
+      "value": 1
+    },
+    {
+      "source": "cat_agentic-b2b",
+      "target": "tag_sales",
+      "value": 2
+    },
+    {
+      "source": "tag_sales",
+      "target": "art_282",
+      "value": 1
+    },
+    {
+      "source": "tag_sales",
+      "target": "art_285",
+      "value": 1
+    }
+  ]
+}
