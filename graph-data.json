@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-22T23:15:51.839997",
-  "date": "2026-04-22",
+  "generated_at": "2026-04-23T00:45:25.382708",
+  "date": "2026-04-23",
   "total_articles": 300,
   "categories": [
     "ai-search",
@@ -12,7 +12,7 @@
     "ai-search": "AI搜索",
     "agentic-b2b": "Agentic B2B",
     "ai-industry": "AI行业动态",
-    "academic": "前沿研究"
+    "academic": "学术研究"
   },
   "category_colors": {
     "ai-search": "#F97316",
@@ -26,28 +26,28 @@
       "type": "category",
       "label": "AI搜索",
       "color": "#F97316",
-      "size": 40
+      "size": 55
     },
     {
       "id": "cat_agentic-b2b",
       "type": "category",
       "label": "Agentic B2B",
       "color": "#3B82F6",
-      "size": 40
+      "size": 55
     },
     {
       "id": "cat_ai-industry",
       "type": "category",
       "label": "AI行业动态",
       "color": "#10B981",
-      "size": 40
+      "size": 55
     },
     {
       "id": "cat_academic",
       "type": "category",
-      "label": "前沿研究",
+      "label": "学术研究",
       "color": "#8B5CF6",
-      "size": 40
+      "size": 55
     },
     {
       "id": "tag_大厂战略",
@@ -55,7 +55,7 @@
       "label": "大厂战略",
       "category": "ai-industry",
       "color": "#10B981",
-      "size": 35,
+      "size": 43,
       "count": 30
     },
     {
@@ -64,7 +64,7 @@
       "label": "SEO",
       "category": "ai-search",
       "color": "#F97316",
-      "size": 35,
+      "size": 43,
       "count": 63
     },
     {
@@ -73,7 +73,7 @@
       "label": "marketing",
       "category": "agentic-b2b",
       "color": "#3B82F6",
-      "size": 32,
+      "size": 43,
       "count": 17
     },
     {
@@ -82,7 +82,7 @@
       "label": "strategy",
       "category": "agentic-b2b",
       "color": "#3B82F6",
-      "size": 35,
+      "size": 43,
       "count": 38
     },
     {
@@ -91,7 +91,7 @@
       "label": "行业趋势",
       "category": "ai-industry",
       "color": "#10B981",
-      "size": 35,
+      "size": 43,
       "count": 96
     },
     {
@@ -100,7 +100,7 @@
       "label": "信息检索",
       "category": "academic",
       "color": "#8B5CF6",
-      "size": 22,
+      "size": 28.5,
       "count": 7
     },
     {
@@ -109,7 +109,7 @@
       "label": "automation",
       "category": "agentic-b2b",
       "color": "#3B82F6",
-      "size": 35,
+      "size": 43,
       "count": 21
     },
     {
@@ -118,7 +118,7 @@
       "label": "度量指标",
       "category": "ai-search",
       "color": "#F97316",
-      "size": 32,
+      "size": 43,
       "count": 17
     },
     {
@@ -127,7 +127,7 @@
       "label": "AEO",
       "category": "ai-search",
       "color": "#F97316",
-      "size": 27,
+      "size": 36.0,
       "count": 12
     },
     {
@@ -136,7 +136,7 @@
       "label": "研究",
       "category": "academic",
       "color": "#8B5CF6",
-      "size": 19,
+      "size": 24.0,
       "count": 4
     },
     {
@@ -145,7 +145,7 @@
       "label": "平台特定",
       "category": "ai-search",
       "color": "#F97316",
-      "size": 22,
+      "size": 28.5,
       "count": 7
     },
     {
@@ -154,8 +154,17 @@
       "label": "GEO",
       "category": "ai-search",
       "color": "#F97316",
-      "size": 26,
+      "size": 34.5,
       "count": 11
+    },
+    {
+      "id": "tag_搜索技术",
+      "type": "tag",
+      "label": "搜索技术",
+      "category": "ai-search",
+      "color": "#F97316",
+      "size": 19.5,
+      "count": 1
     },
     {
       "id": "tag_CX",
@@ -163,7 +172,7 @@
       "label": "CX",
       "category": "agentic-b2b",
       "color": "#3B82F6",
-      "size": 19,
+      "size": 24.0,
       "count": 4
     },
     {
@@ -172,13 +181,13 @@
       "label": "sales",
       "category": "agentic-b2b",
       "color": "#3B82F6",
-      "size": 17,
+      "size": 21.0,
       "count": 2
     },
     {
       "id": "art_0",
       "type": "article",
-      "label": "What we learned about AI, Disc...",
+      "label": "What we learned about AI, Di...",
       "title": "What we learned about AI, Discover and Shopping from Google during the Search Central Zurich 2025",
       "link": "https://www.aleydasolis.com/en/search-engine-optimization/what-we-learned-google-search-central-zurich-2025/",
       "date": "Wed, 10 De",
@@ -188,7 +197,7 @@
         "大厂战略"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_1",
@@ -203,7 +212,7 @@
         "大厂战略"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_2",
@@ -218,7 +227,7 @@
         "大厂战略"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_3",
@@ -233,7 +242,7 @@
         "大厂战略"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_4",
@@ -248,7 +257,7 @@
         "大厂战略"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_5",
@@ -263,7 +272,7 @@
         "大厂战略"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_6",
@@ -278,7 +287,7 @@
         "大厂战略"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_7",
@@ -293,7 +302,7 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_8",
@@ -308,7 +317,7 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_9",
@@ -323,7 +332,7 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_10",
@@ -338,7 +347,7 @@
         "marketing"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_11",
@@ -353,7 +362,7 @@
         "marketing"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_12",
@@ -368,7 +377,7 @@
         "strategy"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_13",
@@ -383,7 +392,7 @@
         "marketing"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_14",
@@ -398,7 +407,7 @@
         "marketing"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_15",
@@ -413,7 +422,7 @@
         "strategy"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_16",
@@ -428,7 +437,7 @@
         "marketing"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_17",
@@ -443,7 +452,7 @@
         "marketing"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_18",
@@ -458,7 +467,7 @@
         "strategy"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_19",
@@ -473,7 +482,7 @@
         "marketing"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_20",
@@ -488,7 +497,7 @@
         "marketing"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_21",
@@ -503,7 +512,7 @@
         "strategy"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_22",
@@ -518,7 +527,7 @@
         "marketing"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_23",
@@ -533,7 +542,7 @@
         "marketing"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_24",
@@ -548,7 +557,7 @@
         "strategy"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_25",
@@ -563,7 +572,7 @@
         "大厂战略"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_26",
@@ -578,7 +587,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_27",
@@ -593,7 +602,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_28",
@@ -608,7 +617,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_29",
@@ -623,7 +632,7 @@
         "大厂战略"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_30",
@@ -638,7 +647,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_31",
@@ -653,12 +662,12 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_32",
       "type": "article",
-      "label": "8 Best AI SEO Tools for 2026 (...",
+      "label": "8 Best AI SEO Tools for 2026...",
       "title": "8 Best AI SEO Tools for 2026 (Tested Firsthand)",
       "link": "https://www.semrush.com/blog/best-ai-seo-tools/",
       "date": "Wed, 01 Ap",
@@ -668,7 +677,7 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_33",
@@ -683,7 +692,7 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_34",
@@ -698,7 +707,7 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_35",
@@ -713,7 +722,7 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_36",
@@ -728,12 +737,12 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_37",
       "type": "article",
-      "label": "The 9 Best LLM Monitoring Tool...",
+      "label": "The 9 Best LLM Monitoring To...",
       "title": "The 9 Best LLM Monitoring Tools for Brand Visibility in 2026",
       "link": "https://www.semrush.com/blog/llm-monitoring-tools/",
       "date": "Wed, 01 Ap",
@@ -743,12 +752,12 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_38",
       "type": "article",
-      "label": "AI content optimization: The c...",
+      "label": "AI content optimization: The...",
       "title": "AI content optimization: The complete guide",
       "link": "https://www.semrush.com/blog/ai-content-optimization/",
       "date": "Wed, 01 Ap",
@@ -758,7 +767,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_39",
@@ -773,7 +782,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_40",
@@ -788,7 +797,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_41",
@@ -803,7 +812,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_42",
@@ -818,7 +827,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_43",
@@ -833,7 +842,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_44",
@@ -848,7 +857,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_45",
@@ -863,7 +872,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_46",
@@ -878,12 +887,12 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_47",
       "type": "article",
-      "label": "Does AI content rank well in s...",
+      "label": "Does AI content rank well in...",
       "title": "Does AI content rank well in search? [Survey + Data study]",
       "link": "https://www.semrush.com/blog/does-ai-content-rank-in-search-data-study/",
       "date": "Wed, 01 Ap",
@@ -893,7 +902,7 @@
         "信息检索"
       ],
       "color": "#8B5CF6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_48",
@@ -908,7 +917,7 @@
         "信息检索"
       ],
       "color": "#8B5CF6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_49",
@@ -923,7 +932,7 @@
         "信息检索"
       ],
       "color": "#8B5CF6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_50",
@@ -938,7 +947,7 @@
         "信息检索"
       ],
       "color": "#8B5CF6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_51",
@@ -953,7 +962,7 @@
         "信息检索"
       ],
       "color": "#8B5CF6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_52",
@@ -968,7 +977,7 @@
         "信息检索"
       ],
       "color": "#8B5CF6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_53",
@@ -983,12 +992,12 @@
         "信息检索"
       ],
       "color": "#8B5CF6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_54",
       "type": "article",
-      "label": "Page Authority: How to Build P...",
+      "label": "Page Authority: How to Build...",
       "title": "Page Authority: How to Build Pages That Rank",
       "link": "https://blog.hubspot.com/marketing/page-authority",
       "date": "Tue, 31 Ma",
@@ -998,7 +1007,7 @@
         "strategy"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_55",
@@ -1013,7 +1022,7 @@
         "strategy"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_56",
@@ -1028,7 +1037,7 @@
         "strategy"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_57",
@@ -1043,12 +1052,12 @@
         "strategy"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_58",
       "type": "article",
-      "label": "The 10 Key Characteristics of ...",
+      "label": "The 10 Key Characteristics o...",
       "title": "The 10 Key Characteristics of  AI Search Winning Brands [With an Assessment Checklist]",
       "link": "https://www.aleydasolis.com/en/ai-search/ai-search-winning-brands-characteristics/",
       "date": "Tue, 31 Ma",
@@ -1058,7 +1067,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_59",
@@ -1073,7 +1082,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_60",
@@ -1088,7 +1097,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_61",
@@ -1103,7 +1112,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_62",
@@ -1118,7 +1127,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_63",
@@ -1133,7 +1142,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_64",
@@ -1148,12 +1157,12 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_65",
       "type": "article",
-      "label": "What UCP Means for Ecommerce S...",
+      "label": "What UCP Means for Ecommerce...",
       "title": "What UCP Means for Ecommerce SEO: Preparing for Agentic Commerce",
       "link": "https://www.aleydasolis.com/en/search-engine-optimization/ugc-agentic-commerce-seo/",
       "date": "Tue, 13 Ja",
@@ -1163,7 +1172,7 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_66",
@@ -1178,7 +1187,7 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_67",
@@ -1193,7 +1202,7 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_68",
@@ -1208,7 +1217,7 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_69",
@@ -1223,7 +1232,7 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_70",
@@ -1238,7 +1247,7 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_71",
@@ -1253,7 +1262,7 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_72",
@@ -1268,7 +1277,7 @@
         "marketing"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_73",
@@ -1283,7 +1292,7 @@
         "marketing"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_74",
@@ -1298,7 +1307,7 @@
         "marketing"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_75",
@@ -1313,7 +1322,7 @@
         "marketing"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_76",
@@ -1328,7 +1337,7 @@
         "marketing"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_77",
@@ -1343,7 +1352,7 @@
         "automation"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_78",
@@ -1358,7 +1367,7 @@
         "automation"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_79",
@@ -1373,7 +1382,7 @@
         "automation"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_80",
@@ -1388,7 +1397,7 @@
         "automation"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_81",
@@ -1403,7 +1412,7 @@
         "automation"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_82",
@@ -1418,7 +1427,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_83",
@@ -1433,7 +1442,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_84",
@@ -1448,7 +1457,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_85",
@@ -1463,7 +1472,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_86",
@@ -1478,12 +1487,12 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_87",
       "type": "article",
-      "label": "Seed Keywords: The Starting Po...",
+      "label": "Seed Keywords: The Starting ...",
       "title": "Seed Keywords: The Starting Point for SEO Research",
       "link": "https://blog.hubspot.com/marketing/seed-keywords",
       "date": "Thu, 26 Ma",
@@ -1493,7 +1502,7 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_88",
@@ -1508,12 +1517,12 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_89",
       "type": "article",
-      "label": "Beyond the Spreadsheet: Omnime...",
+      "label": "Beyond the Spreadsheet: Omni...",
       "title": "Beyond the Spreadsheet: Omnimedia Content Audits for the AI Era",
       "link": "https://ipullrank.com/omnimedia-content-audits",
       "date": "Thu, 26 Ma",
@@ -1523,7 +1532,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_90",
@@ -1538,7 +1547,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_91",
@@ -1553,7 +1562,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_92",
@@ -1568,7 +1577,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_93",
@@ -1583,7 +1592,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_94",
@@ -1598,7 +1607,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_95",
@@ -1613,12 +1622,12 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_96",
       "type": "article",
-      "label": "Confirmed: ChatGPT uses Google...",
+      "label": "Confirmed: ChatGPT uses Goog...",
       "title": "Confirmed: ChatGPT uses Google SERP Snippets for its Answers [A Test with Proof]",
       "link": "https://www.aleydasolis.com/en/ai-search/chatgpt-uses-google-serp-snippets-for-answers/",
       "date": "Thu, 24 Ju",
@@ -1628,7 +1637,7 @@
         "大厂战略"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_97",
@@ -1643,7 +1652,7 @@
         "大厂战略"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_98",
@@ -1658,7 +1667,7 @@
         "大厂战略"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_99",
@@ -1673,7 +1682,7 @@
         "大厂战略"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_100",
@@ -1688,7 +1697,7 @@
         "大厂战略"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_101",
@@ -1703,7 +1712,7 @@
         "大厂战略"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_102",
@@ -1718,12 +1727,12 @@
         "大厂战略"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_103",
       "type": "article",
-      "label": "Beyond Rankings: Designing AI ...",
+      "label": "Beyond Rankings: Designing A...",
       "title": "Beyond Rankings: Designing AI Search Metrics for the Next Era of SEO",
       "link": "https://ipullrank.com/ai-search-metrics",
       "date": "Thu, 12 Ma",
@@ -1734,7 +1743,7 @@
         "度量指标"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_104",
@@ -1750,7 +1759,7 @@
         "度量指标"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_105",
@@ -1766,7 +1775,7 @@
         "度量指标"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_106",
@@ -1782,7 +1791,7 @@
         "度量指标"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_107",
@@ -1798,7 +1807,7 @@
         "度量指标"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_108",
@@ -1814,7 +1823,7 @@
         "度量指标"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_109",
@@ -1830,7 +1839,7 @@
         "度量指标"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_110",
@@ -1845,7 +1854,7 @@
         "AEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_111",
@@ -1860,7 +1869,7 @@
         "AEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_112",
@@ -1875,7 +1884,7 @@
         "AEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_113",
@@ -1890,7 +1899,7 @@
         "strategy"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_114",
@@ -1905,7 +1914,7 @@
         "strategy"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_115",
@@ -1920,12 +1929,12 @@
         "strategy"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_116",
       "type": "article",
-      "label": "From Clicks to Citations: New ...",
+      "label": "From Clicks to Citations: Ne...",
       "title": "From Clicks to Citations: New AI Search Measurement Metrics",
       "link": "https://ipullrank.com/ai-search-measurement",
       "date": "Thu, 02 Ap",
@@ -1935,7 +1944,7 @@
         "度量指标"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_117",
@@ -1951,7 +1960,7 @@
         "度量指标"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_118",
@@ -1967,7 +1976,7 @@
         "度量指标"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_119",
@@ -1983,7 +1992,7 @@
         "度量指标"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_120",
@@ -1999,7 +2008,7 @@
         "度量指标"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_121",
@@ -2015,7 +2024,7 @@
         "度量指标"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_122",
@@ -2031,12 +2040,12 @@
         "度量指标"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_123",
       "type": "article",
-      "label": "How AI improves email delivera...",
+      "label": "How AI improves email delive...",
       "title": "How AI improves email deliverability beyond send times",
       "link": "https://blog.hubspot.com/marketing/ai-email-deliverability-optimization",
       "date": "Thu, 02 Ap",
@@ -2046,7 +2055,7 @@
         "strategy"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_124",
@@ -2061,7 +2070,7 @@
         "strategy"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_125",
@@ -2076,7 +2085,7 @@
         "strategy"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_126",
@@ -2091,7 +2100,7 @@
         "strategy"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_127",
@@ -2106,7 +2115,7 @@
         "strategy"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_128",
@@ -2121,7 +2130,7 @@
         "strategy"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_129",
@@ -2136,12 +2145,12 @@
         "strategy"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_130",
       "type": "article",
-      "label": "Updated: The 5 Key AI Search v...",
+      "label": "Updated: The 5 Key AI Search...",
       "title": "Updated: The 5 Key AI Search vs Traditional Search Differences – A Visual Comparison",
       "link": "https://www.aleydasolis.com/en/ai-search/key-traditional-search-ai-comparison/",
       "date": "Sat, 26 Ju",
@@ -2151,7 +2160,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_131",
@@ -2166,7 +2175,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_132",
@@ -2181,7 +2190,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_133",
@@ -2196,7 +2205,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_134",
@@ -2211,7 +2220,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_135",
@@ -2226,7 +2235,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_136",
@@ -2241,12 +2250,12 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_137",
       "type": "article",
-      "label": "Search Isn’t Just Turning to A...",
+      "label": "Search Isn’t Just Turning to...",
       "title": "Search Isn’t Just Turning to AI, it’s being Re-Monetized: Text Ads Are Taking a Bigger Share of Google SERP Clicks (Data)",
       "link": "https://www.aleydasolis.com/en/search-engine-optimization/serp-shifts-ads-remonetized/",
       "date": "Sat, 14 Fe",
@@ -2256,7 +2265,7 @@
         "大厂战略"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_138",
@@ -2271,7 +2280,7 @@
         "大厂战略"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_139",
@@ -2286,7 +2295,7 @@
         "大厂战略"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_140",
@@ -2301,7 +2310,7 @@
         "大厂战略"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_141",
@@ -2316,7 +2325,7 @@
         "大厂战略"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_142",
@@ -2331,7 +2340,7 @@
         "大厂战略"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_143",
@@ -2346,12 +2355,12 @@
         "大厂战略"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_144",
       "type": "article",
-      "label": "What 3,900 SEO Job Listings Re...",
+      "label": "What 3,900 SEO Job Listings ...",
       "title": "What 3,900 SEO Job Listings Reveal for 2026: Experiments, AI, and Six-Figure Salaries",
       "link": "https://www.semrush.com/blog/seo-job-market-study/",
       "date": "Mon, 30 Ma",
@@ -2361,7 +2370,7 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_145",
@@ -2376,12 +2385,12 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_146",
       "type": "article",
-      "label": "Brand optimization: What it is...",
+      "label": "Brand optimization: What it ...",
       "title": "Brand optimization: What it is and why your AI visibility depends on it",
       "link": "https://blog.hubspot.com/marketing/brand-optimization",
       "date": "Mon, 30 Ma",
@@ -2391,12 +2400,12 @@
         "strategy"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_147",
       "type": "article",
-      "label": "AI content optimization: How t...",
+      "label": "AI content optimization: How...",
       "title": "AI content optimization: How to get found in Google and AI search in 2026",
       "link": "https://blog.hubspot.com/marketing/ai-content-optimization",
       "date": "Mon, 30 Ma",
@@ -2406,7 +2415,7 @@
         "strategy"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_148",
@@ -2421,7 +2430,7 @@
         "strategy"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_149",
@@ -2436,7 +2445,7 @@
         "strategy"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_150",
@@ -2451,7 +2460,7 @@
         "strategy"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_151",
@@ -2466,12 +2475,12 @@
         "strategy"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_152",
       "type": "article",
-      "label": "The agentic web: How AI agents...",
+      "label": "The agentic web: How AI agen...",
       "title": "The agentic web: How AI agents decide which brands make the cut",
       "link": "https://www.semrush.com/blog/the-agentic-web/",
       "date": "Mon, 30 Ma",
@@ -2481,7 +2490,7 @@
         "automation"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_153",
@@ -2496,7 +2505,7 @@
         "automation"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_154",
@@ -2511,7 +2520,7 @@
         "automation"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_155",
@@ -2526,12 +2535,12 @@
         "automation"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_156",
       "type": "article",
-      "label": "How to measure brand awareness...",
+      "label": "How to measure brand awarene...",
       "title": "How to measure brand awareness: 9 methods that matter",
       "link": "https://www.semrush.com/blog/measure-brand-awareness/",
       "date": "Mon, 30 Ma",
@@ -2541,7 +2550,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_157",
@@ -2556,12 +2565,12 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_158",
       "type": "article",
-      "label": "What Is an AI Agent? (And What...",
+      "label": "What Is an AI Agent? (And Wh...",
       "title": "What Is an AI Agent? (And What AI Agents Mean for Your Brand’s Visibility)",
       "link": "https://www.semrush.com/blog/what-is-an-ai-agent/",
       "date": "Mon, 30 Ma",
@@ -2571,7 +2580,7 @@
         "研究"
       ],
       "color": "#8B5CF6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_159",
@@ -2586,7 +2595,7 @@
         "研究"
       ],
       "color": "#8B5CF6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_160",
@@ -2601,7 +2610,7 @@
         "研究"
       ],
       "color": "#8B5CF6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_161",
@@ -2616,12 +2625,12 @@
         "研究"
       ],
       "color": "#8B5CF6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_162",
       "type": "article",
-      "label": "Answer engine optimization cas...",
+      "label": "Answer engine optimization c...",
       "title": "Answer engine optimization case studies that prove the ROI of AEO in 2026",
       "link": "https://blog.hubspot.com/marketing/answer-engine-optimization-case-studies",
       "date": "Mon, 23 Ma",
@@ -2631,7 +2640,7 @@
         "AEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_163",
@@ -2646,12 +2655,12 @@
         "AEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_164",
       "type": "article",
-      "label": "Top 11 Best Enterprise SEO Age...",
+      "label": "Top 11 Best Enterprise SEO A...",
       "title": "Top 11 Best Enterprise SEO Agencies of 2026",
       "link": "https://ipullrank.com/best-enterprise-seo-agencies",
       "date": "Mon, 09 Ma",
@@ -2661,7 +2670,7 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_165",
@@ -2676,7 +2685,7 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_166",
@@ -2691,7 +2700,7 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_167",
@@ -2706,7 +2715,7 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_168",
@@ -2721,12 +2730,12 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_169",
       "type": "article",
-      "label": "Profound vs. AthenaHQ AI: Whic...",
+      "label": "Profound vs. AthenaHQ AI: Wh...",
       "title": "Profound vs. AthenaHQ AI: Which AEO platform fits your growth stack?",
       "link": "https://blog.hubspot.com/marketing/profound-vs-athenahq",
       "date": "Mon, 06 Ap",
@@ -2737,12 +2746,12 @@
         "平台特定"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_170",
       "type": "article",
-      "label": "Profound与AthenaHQ AI：AEO平台选型指南",
+      "label": "Profound与AthenaHQ AI：AEO平台选型...",
       "title": "Profound与AthenaHQ AI：AEO平台选型指南",
       "link": "https://blog.hubspot.com/marketing/profound-vs-athenahq",
       "date": "Mon, 06 Ap",
@@ -2753,7 +2762,7 @@
         "平台特定"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_171",
@@ -2769,7 +2778,7 @@
         "平台特定"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_172",
@@ -2785,7 +2794,7 @@
         "平台特定"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_173",
@@ -2801,7 +2810,7 @@
         "平台特定"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_174",
@@ -2817,7 +2826,7 @@
         "平台特定"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_175",
@@ -2833,12 +2842,12 @@
         "平台特定"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_176",
       "type": "article",
-      "label": "Is AI Killing Web Traffic? How...",
+      "label": "Is AI Killing Web Traffic? H...",
       "title": "Is AI Killing Web Traffic? How AI Overviews Impact Organic Website Traffic",
       "link": "https://blog.hubspot.com/marketing/is-ai-killing-web-traffic",
       "date": "Mon, 06 Ap",
@@ -2848,12 +2857,12 @@
         "strategy"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_177",
       "type": "article",
-      "label": "Best workflow automation softw...",
+      "label": "Best workflow automation sof...",
       "title": "Best workflow automation software: How to choose the right tool for your growth stage",
       "link": "https://blog.hubspot.com/marketing/workflow-automation-tools",
       "date": "Mon, 06 Ap",
@@ -2863,12 +2872,12 @@
         "automation"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_178",
       "type": "article",
-      "label": "AI-driven email personalizatio...",
+      "label": "AI-driven email personalizat...",
       "title": "AI-driven email personalization strategies that actually work",
       "link": "https://blog.hubspot.com/marketing/ai-driven-email-personalization",
       "date": "Mon, 06 Ap",
@@ -2878,7 +2887,7 @@
         "strategy"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_179",
@@ -2893,7 +2902,7 @@
         "strategy"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_180",
@@ -2908,7 +2917,7 @@
         "automation"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_181",
@@ -2923,7 +2932,7 @@
         "strategy"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_182",
@@ -2938,7 +2947,7 @@
         "automation"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_183",
@@ -2953,7 +2962,7 @@
         "strategy"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_184",
@@ -2968,7 +2977,7 @@
         "automation"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_185",
@@ -2983,7 +2992,7 @@
         "strategy"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_186",
@@ -2998,7 +3007,7 @@
         "automation"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_187",
@@ -3013,7 +3022,7 @@
         "strategy"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_188",
@@ -3028,7 +3037,7 @@
         "automation"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_189",
@@ -3043,7 +3052,7 @@
         "strategy"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_190",
@@ -3058,7 +3067,7 @@
         "automation"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_191",
@@ -3073,12 +3082,12 @@
         "strategy"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_192",
       "type": "article",
-      "label": "SEO VS GEO: Optimizing for Tra...",
+      "label": "SEO VS GEO: Optimizing for T...",
       "title": "SEO VS GEO: Optimizing for Traditional vs AI Search [Updated June 2nd, 2025]",
       "link": "https://www.aleydasolis.com/en/search-engine-optimization/seo-vs-geo-optimizing-for-traditional-vs-ai-search/",
       "date": "Mon, 02 Ju",
@@ -3089,7 +3098,7 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_193",
@@ -3105,7 +3114,7 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_194",
@@ -3121,7 +3130,7 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_195",
@@ -3137,7 +3146,7 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_196",
@@ -3153,7 +3162,7 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_197",
@@ -3169,7 +3178,7 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_198",
@@ -3185,12 +3194,12 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_199",
       "type": "article",
-      "label": "20 marketing KPIs to track & i...",
+      "label": "20 marketing KPIs to track &...",
       "title": "20 marketing KPIs to track & improve in 2026",
       "link": "https://www.semrush.com/blog/kpi-marketing/",
       "date": "Fri, 27 Ma",
@@ -3200,7 +3209,7 @@
         "marketing"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_200",
@@ -3215,12 +3224,12 @@
         "marketing"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_201",
       "type": "article",
-      "label": "How to Find Content Ideas with...",
+      "label": "How to Find Content Ideas wi...",
       "title": "How to Find Content Ideas with Semrush",
       "link": "https://www.semrush.com/blog/how-to-find-content-ideas-with-semrush/",
       "date": "Fri, 27 Ma",
@@ -3230,7 +3239,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_202",
@@ -3245,12 +3254,12 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_203",
       "type": "article",
-      "label": "The 10 Steps AI Search Content...",
+      "label": "The 10 Steps AI Search Conte...",
       "title": "The 10 Steps AI Search Content Optimization Checklist [With Examples + Google Sheets]",
       "link": "https://www.aleydasolis.com/en/ai-search/ai-search-optimization-checklist/",
       "date": "Fri, 25 Ju",
@@ -3260,7 +3269,7 @@
         "大厂战略"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_204",
@@ -3275,7 +3284,7 @@
         "大厂战略"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_205",
@@ -3290,7 +3299,7 @@
         "大厂战略"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_206",
@@ -3305,7 +3314,7 @@
         "大厂战略"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_207",
@@ -3320,7 +3329,7 @@
         "大厂战略"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_208",
@@ -3335,7 +3344,7 @@
         "大厂战略"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_209",
@@ -3350,12 +3359,12 @@
         "大厂战略"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_210",
       "type": "article",
-      "label": "How AI Search Personalizes Fan...",
+      "label": "How AI Search Personalizes F...",
       "title": "How AI Search Personalizes Fan-Out Queries Using Memory and Context",
       "link": "https://ipullrank.com/query-fan-out-personalization",
       "date": "Fri, 20 Ma",
@@ -3365,7 +3374,7 @@
         "搜索技术"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_211",
@@ -3380,7 +3389,7 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_212",
@@ -3395,7 +3404,7 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_213",
@@ -3410,7 +3419,7 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_214",
@@ -3425,7 +3434,7 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_215",
@@ -3440,7 +3449,7 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_216",
@@ -3455,7 +3464,7 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_217",
@@ -3470,7 +3479,7 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_218",
@@ -3485,7 +3494,7 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_219",
@@ -3501,7 +3510,7 @@
         "度量指标"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_220",
@@ -3516,7 +3525,7 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_221",
@@ -3531,7 +3540,7 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_222",
@@ -3547,7 +3556,7 @@
         "度量指标"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_223",
@@ -3562,7 +3571,7 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_224",
@@ -3577,7 +3586,7 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_225",
@@ -3593,7 +3602,7 @@
         "度量指标"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_226",
@@ -3608,7 +3617,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_227",
@@ -3623,7 +3632,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_228",
@@ -3638,7 +3647,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_229",
@@ -3653,7 +3662,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_230",
@@ -3668,12 +3677,12 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_231",
       "type": "article",
-      "label": "Top Black Friday Organic Searc...",
+      "label": "Top Black Friday Organic Sea...",
       "title": "Top Black Friday Organic Search Traffic Winners & Trends in 2025",
       "link": "https://www.aleydasolis.com/en/search-engine-optimization/black-friday-seo-traffic-winners/",
       "date": "Fri, 05 De",
@@ -3683,7 +3692,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_232",
@@ -3698,7 +3707,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_233",
@@ -3713,7 +3722,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_234",
@@ -3728,7 +3737,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_235",
@@ -3743,7 +3752,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_236",
@@ -3758,7 +3767,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_237",
@@ -3773,7 +3782,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_238",
@@ -3788,7 +3797,7 @@
         "automation"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_239",
@@ -3803,7 +3812,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_240",
@@ -3818,7 +3827,7 @@
         "GEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_241",
@@ -3833,7 +3842,7 @@
         "GEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_242",
@@ -3848,7 +3857,7 @@
         "automation"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_243",
@@ -3863,7 +3872,7 @@
         "strategy"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_244",
@@ -3878,7 +3887,7 @@
         "strategy"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_245",
@@ -3893,7 +3902,7 @@
         "automation"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_246",
@@ -3908,7 +3917,7 @@
         "automation"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_247",
@@ -3923,7 +3932,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_248",
@@ -3938,7 +3947,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_249",
@@ -3953,7 +3962,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_250",
@@ -3968,7 +3977,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_251",
@@ -3983,7 +3992,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_252",
@@ -3998,7 +4007,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_253",
@@ -4013,7 +4022,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_254",
@@ -4028,7 +4037,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_255",
@@ -4043,7 +4052,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_256",
@@ -4058,7 +4067,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_257",
@@ -4073,7 +4082,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_258",
@@ -4088,7 +4097,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_259",
@@ -4103,7 +4112,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_260",
@@ -4118,7 +4127,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_261",
@@ -4133,7 +4142,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_262",
@@ -4148,7 +4157,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_263",
@@ -4163,7 +4172,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_264",
@@ -4178,7 +4187,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_265",
@@ -4193,7 +4202,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_266",
@@ -4208,7 +4217,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_267",
@@ -4223,7 +4232,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_268",
@@ -4238,7 +4247,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_269",
@@ -4253,7 +4262,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_270",
@@ -4268,7 +4277,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_271",
@@ -4283,7 +4292,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_272",
@@ -4298,7 +4307,7 @@
         "GEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_273",
@@ -4313,7 +4322,7 @@
         "GEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_274",
@@ -4328,7 +4337,7 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_275",
@@ -4343,7 +4352,7 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_276",
@@ -4358,7 +4367,7 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_277",
@@ -4373,7 +4382,7 @@
         "SEO"
       ],
       "color": "#F97316",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_278",
@@ -4388,7 +4397,7 @@
         "automation"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_279",
@@ -4403,7 +4412,7 @@
         "strategy"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_280",
@@ -4418,7 +4427,7 @@
         "strategy"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_281",
@@ -4433,7 +4442,7 @@
         "CX"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_282",
@@ -4448,7 +4457,7 @@
         "sales"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_283",
@@ -4463,7 +4472,7 @@
         "CX"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_284",
@@ -4478,7 +4487,7 @@
         "CX"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_285",
@@ -4493,7 +4502,7 @@
         "sales"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_286",
@@ -4508,7 +4517,7 @@
         "CX"
       ],
       "color": "#3B82F6",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_287",
@@ -4523,7 +4532,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_288",
@@ -4538,7 +4547,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_289",
@@ -4553,7 +4562,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_290",
@@ -4568,7 +4577,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_291",
@@ -4583,7 +4592,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_292",
@@ -4598,7 +4607,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_293",
@@ -4613,7 +4622,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_294",
@@ -4628,7 +4637,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_295",
@@ -4643,7 +4652,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_296",
@@ -4658,7 +4667,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_297",
@@ -4673,7 +4682,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_298",
@@ -4688,7 +4697,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     },
     {
       "id": "art_299",
@@ -4703,7 +4712,7 @@
         "行业趋势"
       ],
       "color": "#10B981",
-      "size": 6
+      "size": 7
     }
   ],
   "edges": [
@@ -4763,6 +4772,106 @@
       "value": 1
     },
     {
+      "source": "tag_大厂战略",
+      "target": "art_97",
+      "value": 1
+    },
+    {
+      "source": "tag_大厂战略",
+      "target": "art_98",
+      "value": 1
+    },
+    {
+      "source": "tag_大厂战略",
+      "target": "art_99",
+      "value": 1
+    },
+    {
+      "source": "tag_大厂战略",
+      "target": "art_100",
+      "value": 1
+    },
+    {
+      "source": "tag_大厂战略",
+      "target": "art_101",
+      "value": 1
+    },
+    {
+      "source": "tag_大厂战略",
+      "target": "art_102",
+      "value": 1
+    },
+    {
+      "source": "tag_大厂战略",
+      "target": "art_137",
+      "value": 1
+    },
+    {
+      "source": "tag_大厂战略",
+      "target": "art_138",
+      "value": 1
+    },
+    {
+      "source": "tag_大厂战略",
+      "target": "art_139",
+      "value": 1
+    },
+    {
+      "source": "tag_大厂战略",
+      "target": "art_140",
+      "value": 1
+    },
+    {
+      "source": "tag_大厂战略",
+      "target": "art_141",
+      "value": 1
+    },
+    {
+      "source": "tag_大厂战略",
+      "target": "art_142",
+      "value": 1
+    },
+    {
+      "source": "tag_大厂战略",
+      "target": "art_143",
+      "value": 1
+    },
+    {
+      "source": "tag_大厂战略",
+      "target": "art_203",
+      "value": 1
+    },
+    {
+      "source": "tag_大厂战略",
+      "target": "art_204",
+      "value": 1
+    },
+    {
+      "source": "tag_大厂战略",
+      "target": "art_205",
+      "value": 1
+    },
+    {
+      "source": "tag_大厂战略",
+      "target": "art_206",
+      "value": 1
+    },
+    {
+      "source": "tag_大厂战略",
+      "target": "art_207",
+      "value": 1
+    },
+    {
+      "source": "tag_大厂战略",
+      "target": "art_208",
+      "value": 1
+    },
+    {
+      "source": "tag_大厂战略",
+      "target": "art_209",
+      "value": 1
+    },
+    {
       "source": "cat_ai-search",
       "target": "tag_SEO",
       "value": 2
@@ -4818,6 +4927,271 @@
       "value": 1
     },
     {
+      "source": "tag_SEO",
+      "target": "art_67",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_68",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_69",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_70",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_71",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_87",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_88",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_103",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_104",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_105",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_106",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_107",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_108",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_109",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_117",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_118",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_119",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_120",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_121",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_122",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_144",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_145",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_164",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_165",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_166",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_167",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_168",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_192",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_193",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_194",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_195",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_196",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_197",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_198",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_211",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_212",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_213",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_214",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_215",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_216",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_217",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_218",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_219",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_220",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_221",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_222",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_223",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_224",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_225",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_274",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_275",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_276",
+      "value": 1
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_277",
+      "value": 1
+    },
+    {
       "source": "cat_agentic-b2b",
       "target": "tag_marketing",
       "value": 2
@@ -4844,7 +5218,7 @@
     },
     {
       "source": "tag_marketing",
-      "target": "art_10",
+      "target": "art_16",
       "value": 1
     },
     {
@@ -4869,7 +5243,42 @@
     },
     {
       "source": "tag_marketing",
-      "target": "art_14",
+      "target": "art_23",
+      "value": 1
+    },
+    {
+      "source": "tag_marketing",
+      "target": "art_72",
+      "value": 1
+    },
+    {
+      "source": "tag_marketing",
+      "target": "art_73",
+      "value": 1
+    },
+    {
+      "source": "tag_marketing",
+      "target": "art_74",
+      "value": 1
+    },
+    {
+      "source": "tag_marketing",
+      "target": "art_75",
+      "value": 1
+    },
+    {
+      "source": "tag_marketing",
+      "target": "art_76",
+      "value": 1
+    },
+    {
+      "source": "tag_marketing",
+      "target": "art_199",
+      "value": 1
+    },
+    {
+      "source": "tag_marketing",
+      "target": "art_200",
       "value": 1
     },
     {
@@ -4894,7 +5303,7 @@
     },
     {
       "source": "tag_strategy",
-      "target": "art_15",
+      "target": "art_21",
       "value": 1
     },
     {
@@ -4928,6 +5337,146 @@
       "value": 1
     },
     {
+      "source": "tag_strategy",
+      "target": "art_114",
+      "value": 1
+    },
+    {
+      "source": "tag_strategy",
+      "target": "art_115",
+      "value": 1
+    },
+    {
+      "source": "tag_strategy",
+      "target": "art_123",
+      "value": 1
+    },
+    {
+      "source": "tag_strategy",
+      "target": "art_124",
+      "value": 1
+    },
+    {
+      "source": "tag_strategy",
+      "target": "art_125",
+      "value": 1
+    },
+    {
+      "source": "tag_strategy",
+      "target": "art_126",
+      "value": 1
+    },
+    {
+      "source": "tag_strategy",
+      "target": "art_127",
+      "value": 1
+    },
+    {
+      "source": "tag_strategy",
+      "target": "art_128",
+      "value": 1
+    },
+    {
+      "source": "tag_strategy",
+      "target": "art_129",
+      "value": 1
+    },
+    {
+      "source": "tag_strategy",
+      "target": "art_146",
+      "value": 1
+    },
+    {
+      "source": "tag_strategy",
+      "target": "art_147",
+      "value": 1
+    },
+    {
+      "source": "tag_strategy",
+      "target": "art_148",
+      "value": 1
+    },
+    {
+      "source": "tag_strategy",
+      "target": "art_149",
+      "value": 1
+    },
+    {
+      "source": "tag_strategy",
+      "target": "art_150",
+      "value": 1
+    },
+    {
+      "source": "tag_strategy",
+      "target": "art_151",
+      "value": 1
+    },
+    {
+      "source": "tag_strategy",
+      "target": "art_176",
+      "value": 1
+    },
+    {
+      "source": "tag_strategy",
+      "target": "art_178",
+      "value": 1
+    },
+    {
+      "source": "tag_strategy",
+      "target": "art_179",
+      "value": 1
+    },
+    {
+      "source": "tag_strategy",
+      "target": "art_181",
+      "value": 1
+    },
+    {
+      "source": "tag_strategy",
+      "target": "art_183",
+      "value": 1
+    },
+    {
+      "source": "tag_strategy",
+      "target": "art_185",
+      "value": 1
+    },
+    {
+      "source": "tag_strategy",
+      "target": "art_187",
+      "value": 1
+    },
+    {
+      "source": "tag_strategy",
+      "target": "art_189",
+      "value": 1
+    },
+    {
+      "source": "tag_strategy",
+      "target": "art_191",
+      "value": 1
+    },
+    {
+      "source": "tag_strategy",
+      "target": "art_243",
+      "value": 1
+    },
+    {
+      "source": "tag_strategy",
+      "target": "art_244",
+      "value": 1
+    },
+    {
+      "source": "tag_strategy",
+      "target": "art_279",
+      "value": 1
+    },
+    {
+      "source": "tag_strategy",
+      "target": "art_280",
+      "value": 1
+    },
+    {
       "source": "cat_ai-industry",
       "target": "tag_行业趋势",
       "value": 2
@@ -4949,12 +5498,12 @@
     },
     {
       "source": "tag_行业趋势",
-      "target": "art_26",
+      "target": "art_30",
       "value": 1
     },
     {
       "source": "tag_行业趋势",
-      "target": "art_28",
+      "target": "art_31",
       "value": 1
     },
     {
@@ -4983,6 +5532,436 @@
       "value": 1
     },
     {
+      "source": "tag_行业趋势",
+      "target": "art_42",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_43",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_44",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_45",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_46",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_58",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_59",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_60",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_61",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_62",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_63",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_64",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_82",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_83",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_84",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_85",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_86",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_89",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_90",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_91",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_92",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_93",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_94",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_95",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_130",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_131",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_132",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_133",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_134",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_135",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_136",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_156",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_157",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_201",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_202",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_226",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_227",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_228",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_229",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_230",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_231",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_232",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_233",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_234",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_235",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_236",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_237",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_239",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_247",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_248",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_249",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_250",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_251",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_252",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_253",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_254",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_255",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_256",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_257",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_258",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_259",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_260",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_261",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_262",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_263",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_264",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_265",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_266",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_267",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_268",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_269",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_270",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_271",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_287",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_288",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_289",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_290",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_291",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_292",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_293",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_294",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_295",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_296",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_297",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_298",
+      "value": 1
+    },
+    {
+      "source": "tag_行业趋势",
+      "target": "art_299",
+      "value": 1
+    },
+    {
       "source": "cat_academic",
       "target": "tag_信息检索",
       "value": 2
@@ -4999,7 +5978,7 @@
     },
     {
       "source": "tag_信息检索",
-      "target": "art_48",
+      "target": "art_49",
       "value": 1
     },
     {
@@ -5014,7 +5993,7 @@
     },
     {
       "source": "tag_信息检索",
-      "target": "art_51",
+      "target": "art_52",
       "value": 1
     },
     {
@@ -5064,7 +6043,7 @@
     },
     {
       "source": "tag_automation",
-      "target": "art_153",
+      "target": "art_154",
       "value": 1
     },
     {
@@ -5075,6 +6054,61 @@
     {
       "source": "tag_automation",
       "target": "art_177",
+      "value": 1
+    },
+    {
+      "source": "tag_automation",
+      "target": "art_180",
+      "value": 1
+    },
+    {
+      "source": "tag_automation",
+      "target": "art_182",
+      "value": 1
+    },
+    {
+      "source": "tag_automation",
+      "target": "art_184",
+      "value": 1
+    },
+    {
+      "source": "tag_automation",
+      "target": "art_186",
+      "value": 1
+    },
+    {
+      "source": "tag_automation",
+      "target": "art_188",
+      "value": 1
+    },
+    {
+      "source": "tag_automation",
+      "target": "art_190",
+      "value": 1
+    },
+    {
+      "source": "tag_automation",
+      "target": "art_238",
+      "value": 1
+    },
+    {
+      "source": "tag_automation",
+      "target": "art_242",
+      "value": 1
+    },
+    {
+      "source": "tag_automation",
+      "target": "art_245",
+      "value": 1
+    },
+    {
+      "source": "tag_automation",
+      "target": "art_246",
+      "value": 1
+    },
+    {
+      "source": "tag_automation",
+      "target": "art_278",
       "value": 1
     },
     {
@@ -5133,6 +6167,41 @@
       "value": 1
     },
     {
+      "source": "tag_度量指标",
+      "target": "art_119",
+      "value": 1
+    },
+    {
+      "source": "tag_度量指标",
+      "target": "art_120",
+      "value": 1
+    },
+    {
+      "source": "tag_度量指标",
+      "target": "art_121",
+      "value": 1
+    },
+    {
+      "source": "tag_度量指标",
+      "target": "art_122",
+      "value": 1
+    },
+    {
+      "source": "tag_度量指标",
+      "target": "art_219",
+      "value": 1
+    },
+    {
+      "source": "tag_度量指标",
+      "target": "art_222",
+      "value": 1
+    },
+    {
+      "source": "tag_度量指标",
+      "target": "art_225",
+      "value": 1
+    },
+    {
       "source": "cat_ai-search",
       "target": "tag_AEO",
       "value": 2
@@ -5184,7 +6253,17 @@
     },
     {
       "source": "tag_AEO",
-      "target": "art_172",
+      "target": "art_173",
+      "value": 1
+    },
+    {
+      "source": "tag_AEO",
+      "target": "art_174",
+      "value": 1
+    },
+    {
+      "source": "tag_AEO",
+      "target": "art_175",
       "value": 1
     },
     {
@@ -5239,12 +6318,12 @@
     },
     {
       "source": "tag_平台特定",
-      "target": "art_172",
+      "target": "art_173",
       "value": 1
     },
     {
       "source": "tag_平台特定",
-      "target": "art_172",
+      "target": "art_174",
       "value": 1
     },
     {
@@ -5269,27 +6348,27 @@
     },
     {
       "source": "tag_GEO",
-      "target": "art_193",
+      "target": "art_194",
       "value": 1
     },
     {
       "source": "tag_GEO",
-      "target": "art_193",
+      "target": "art_195",
       "value": 1
     },
     {
       "source": "tag_GEO",
-      "target": "art_193",
+      "target": "art_196",
       "value": 1
     },
     {
       "source": "tag_GEO",
-      "target": "art_193",
+      "target": "art_197",
       "value": 1
     },
     {
       "source": "tag_GEO",
-      "target": "art_193",
+      "target": "art_198",
       "value": 1
     },
     {
@@ -5305,6 +6384,21 @@
     {
       "source": "tag_GEO",
       "target": "art_272",
+      "value": 1
+    },
+    {
+      "source": "tag_GEO",
+      "target": "art_273",
+      "value": 1
+    },
+    {
+      "source": "cat_ai-search",
+      "target": "tag_搜索技术",
+      "value": 2
+    },
+    {
+      "source": "tag_搜索技术",
+      "target": "art_210",
       "value": 1
     },
     {
