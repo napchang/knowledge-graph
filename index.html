@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>卯时AI 知识图谱</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0F172A;
+            color: #F8FAFC;
+            overflow: hidden;
+            height: 100vh;
+        }
+        #header {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: 56px;
+            background: #1E293B;
+            border-bottom: 1px solid #334155;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            z-index: 100;
+        }
+        #header h1 {
+            font-size: 16px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        #header .logo {
+            width: 28px; height: 28px;
+            background: #F97316;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        #stats { font-size: 12px; color: #94A3B8; }
+        #search-box {
+            padding: 6px 12px;
+            background: #0F172A;
+            border: 1px solid #334155;
+            border-radius: 6px;
+            color: #F8FAFC;
+            font-size: 13px;
+            width: 200px;
+            outline: none;
+        }
+        #search-box::placeholder { color: #64748B; }
+        #main { display: flex; height: 100vh; padding-top: 56px; }
+        #sidebar {
+            width: 260px;
+            background: #1E293B;
+            border-right: 1px solid #334155;
+            padding: 16px;
+            overflow-y: auto;
+            flex-shrink: 0;
+        }
+        .section { margin-bottom: 20px; }
+        .section-title {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #94A3B8;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 0;
+            cursor: pointer;
+            font-size: 13px;
+            opacity: 1;
+            transition: opacity 0.2s;
+        }
+        .legend-item:hover { opacity: 0.7; }
+        .legend-item.disabled { opacity: 0.3; }
+        .legend-dot {
+            width: 10px; height: 10px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        #graph-container {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+        }
+        #detail-panel {
+            position: fixed;
+            right: 16px;
+            top: 72px;
+            width: 340px;
+            max-height: calc(100vh - 88px);
+            background: #1E293B;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 20px;
+            display: none;
+            overflow-y: auto;
+            z-index: 50;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+        #detail-panel h3 {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            line-height: 1.5;
+            padding-right: 24px;
+        }
+        #detail-panel .meta {
+            font-size: 11px;
+            color: #94A3B8;
+            margin-bottom: 12px;
+        }
+        #detail-panel .content {
+            font-size: 13px;
+            line-height: 1.7;
+            color: #CBD5E1;
+            margin-bottom: 16px;
+        }
+        #detail-panel a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #F97316;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+        }
+        #detail-panel a:hover { background: #FB923C; }
+        .close-btn {
+            position: absolute;
+            top: 12px; right: 12px;
+            width: 24px; height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: #94A3B8;
+            font-size: 16px;
+            border-radius: 4px;
+        }
+        .close-btn:hover { background: #334155; }
+        .tag-pill {
+            display: inline-block;
+            padding: 2px 8px;
+            background: #0F172A;
+            border: 1px solid #334155;
+            border-radius: 4px;
+            font-size: 11px;
+            margin-right: 4px;
+            margin-bottom: 4px;
+        }
+        #controls {
+            position: fixed;
+            bottom: 16px;
+            left: 276px;
+            display: flex;
+            gap: 8px;
+            z-index: 50;
+        }
+        .ctrl-btn {
+            padding: 6px 12px;
+            background: #1E293B;
+            border: 1px solid #334155;
+            border-radius: 6px;
+            color: #F8FAFC;
+            font-size: 12px;
+            cursor: pointer;
+        }
+        .ctrl-btn:hover { background: #334155; }
+        svg { width: 100%; height: 100%; }
+        .node { cursor: pointer; }
+        .node circle { transition: all 0.3s; }
+        .link { transition: opacity 0.3s; }
+        .node-label {
+            font-size: 10px;
+            fill: #CBD5E1;
+            pointer-events: none;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+        }
+        .dimmed { opacity: 0.1 !important; }
+        .highlighted { opacity: 1 !important; }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>
+            <div class="logo">卯</div>
+            卯时AI 知识图谱
+        </h1>
+        <input type="text" id="search-box" placeholder="搜索节点...">
+        <div id="stats">加载中...</div>
+    </div>
+    
+    <div id="main">
+        <div id="sidebar">
+            <div class="section">
+                <div class="section-title">分类筛选</div>
+                <div id="legend"></div>
+            </div>
+            <div class="section">
+                <div class="section-title">操作说明</div>
+                <p style="font-size: 11px; color: #94A3B8; line-height: 1.6;">
+                    滚轮缩放 / 拖拽平移<br>
+                    点击节点聚焦关联网络<br>
+                    双击空白处重置视图<br>
+                    悬浮查看节点信息
+                </p>
+            </div>
+        </div>
+        
+        <div id="graph-container"></div>
+    </div>
+    
+    <div id="detail-panel">
+        <span class="close-btn" onclick="closeDetail()">&times;</span>
+        <h3 id="detail-title"></h3>
+        <div class="meta" id="detail-meta"></div>
+        <div id="detail-tags"></div>
+        <div class="content" id="detail-content"></div>
+        <a id="detail-link" href="#" target="_blank">阅读原文 &rarr;</a>
+    </div>
+    
+    <div id="controls">
+        <button class="ctrl-btn" onclick="resetZoom()">重置视图</button>
+        <button class="ctrl-btn" onclick="togglePhysics()">暂停/恢复物理</button>
+    </div>
+
+<script>
+let graphData = null;
+let simulation = null;
+let svg, g, zoom;
+let width, height;
+let activeCategories = new Set();
+let physicsEnabled = true;
+
+const categoryNames = {
+    'ai-search': 'AI搜索',
+    'agentic-b2b': 'Agentic B2B',
+    'ai-industry': 'AI行业动态',
+    'academic': '前沿研究'
+};
+
+async function loadData() {
+    try {
+        const resp = await fetch('graph-data.json');
+        graphData = await resp.json();
+        initGraph();
+    } catch (e) {
+        document.getElementById('stats').textContent = '数据加载失败';
+        console.error(e);
+    }
+}
+
+function initGraph() {
+    const container = document.getElementById('graph-container');
+    width = container.clientWidth;
+    height = container.clientHeight;
+    
+    // 初始化分类筛选（全部启用）
+    graphData.categories.forEach(c => activeCategories.add(c));
+    
+    // 创建图例
+    const legend = document.getElementById('legend');
+    graphData.categories.forEach(cat => {
+        const item = document.createElement('div');
+        item.className = 'legend-item';
+        item.dataset.cat = cat;
+        item.innerHTML = `
+            <div class="legend-dot" style="background: ${graphData.category_colors[cat]};"></div>
+            <span>${categoryNames[cat] || cat}</span>
+        `;
+        item.onclick = () => toggleCategory(cat, item);
+        legend.appendChild(item);
+    });
+    
+    // SVG
+    svg = d3.select('#graph-container')
+        .append('svg')
+        .attr('width', width)
+        .attr('height', height);
+    
+    // 缩放
+    zoom = d3.zoom()
+        .scaleExtent([0.1, 4])
+        .on('zoom', (e) => g.attr('transform', e.transform));
+    
+    svg.call(zoom);
+    
+    g = svg.append('g');
+    
+    // 力导向模拟
+    const nodes = graphData.nodes.map(d => ({...d}));
+    const links = graphData.edges.map(d => ({...d}));
+    
+    simulation = d3.forceSimulation(nodes)
+        .force('link', d3.forceLink(links).id(d => d.id).distance(d => {
+            if (d.source.type === 'category' && d.target.type === 'tag') return 80;
+            if (d.source.type === 'tag' && d.target.type === 'article') return 50;
+            return 60;
+        }))
+        .force('charge', d3.forceManyBody().strength(d => {
+            if (d.type === 'category') return -800;
+            if (d.type === 'tag') return -300;
+            return -80;
+        }))
+        .force('center', d3.forceCenter(width / 2, height / 2))
+        .force('collision', d3.forceCollide().radius(d => d.size + 5));
+    
+    // 绘制连线
+    const link = g.append('g')
+        .selectAll('line')
+        .data(links)
+        .join('line')
+        .attr('class', 'link')
+        .attr('stroke', '#334155')
+        .attr('stroke-opacity', 0.4)
+        .attr('stroke-width', d => d.value === 2 ? 1.5 : 0.8);
+    
+    // 绘制节点
+    const node = g.append('g')
+        .selectAll('.node')
+        .data(nodes)
+        .join('g')
+        .attr('class', 'node')
+        .call(d3.drag()
+            .on('start', dragstarted)
+            .on('drag', dragged)
+            .on('end', dragended));
+    
+    node.append('circle')
+        .attr('r', d => d.size)
+        .attr('fill', d => d.color)
+        .attr('stroke', '#F8FAFC')
+        .attr('stroke-width', d => d.type === 'category' ? 3 : 1)
+        .attr('stroke-opacity', 0.6);
+    
+    // 标签（只给 category 和 tag 显示）
+    node.append('text')
+        .attr('class', 'node-label')
+        .attr('dy', d => d.size + 14)
+        .attr('text-anchor', 'middle')
+        .text(d => d.type !== 'article' ? d.label : '');
+    
+    // 交互
+    node.on('click', (e, d) => {
+        e.stopPropagation();
+        focusNode(d);
+    });
+    
+    svg.on('dblclick', () => {
+        resetHighlight();
+    });
+    
+    // 搜索
+    document.getElementById('search-box').addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase();
+        if (!query) {
+            resetHighlight();
+            return;
+        }
+        node.classed('dimmed', d => !d.label.toLowerCase().includes(query));
+        link.classed('dimmed', true);
+    });
+    
+    // Tick
+    simulation.on('tick', () => {
+        link
+            .attr('x1', d => d.source.x)
+            .attr('y1', d => d.source.y)
+            .attr('x2', d => d.target.x)
+            .attr('y2', d => d.target.y);
+        
+        node.attr('transform', d => `translate(${d.x},${d.y})`);
+    });
+    
+    // 更新统计
+    const catCounts = {};
+    nodes.forEach(n => {
+        if (n.type === 'article') {
+            catCounts[n.category] = (catCounts[n.category] || 0) + 1;
+        }
+    });
+    document.getElementById('stats').textContent = 
+        `${nodes.filter(n => n.type === 'article').length} 篇文章 · ${nodes.filter(n => n.type === 'tag').length} 个标签`;
+}
+
+function focusNode(d) {
+    if (d.type === 'article') {
+        showDetail(d);
+    }
+    
+    // 高亮相邻节点
+    const connected = new Set();
+    connected.add(d.id);
+    
+    graphData.edges.forEach(e => {
+        if (e.source.id === d.id) connected.add(e.target.id);
+        if (e.target.id === d.id) connected.add(e.source.id);
+    });
+    
+    d3.selectAll('.node').classed('dimmed', n => !connected.has(n.id));
+    d3.selectAll('.link').classed('dimmed', l => 
+        !connected.has(l.source.id) || !connected.has(l.target.id));
+}
+
+function resetHighlight() {
+    d3.selectAll('.node').classed('dimmed', false);
+    d3.selectAll('.link').classed('dimmed', false);
+    closeDetail();
+}
+
+function toggleCategory(cat, element) {
+    if (activeCategories.has(cat)) {
+        activeCategories.delete(cat);
+        element.classList.add('disabled');
+    } else {
+        activeCategories.add(cat);
+        element.classList.remove('disabled');
+    }
+    
+    d3.selectAll('.node').classed('dimmed', d => {
+        if (d.type === 'category') return false;
+        return !activeCategories.has(d.category);
+    });
+}
+
+function showDetail(d) {
+    document.getElementById('detail-title').textContent = d.title || d.label;
+    document.getElementById('detail-meta').textContent = 
+        `分类: ${categoryNames[d.category] || d.category} | 日期: ${d.date || '未知'}`;
+    
+    const tagsHtml = (d.tags || []).map(t => `<span class="tag-pill">${t}</span>`).join('');
+    document.getElementById('detail-tags').innerHTML = tagsHtml;
+    
+    document.getElementById('detail-content').textContent = d.summary || '';
+    document.getElementById('detail-link').href = d.link || '#';
+    document.getElementById('detail-panel').style.display = 'block';
+}
+
+function closeDetail() {
+    document.getElementById('detail-panel').style.display = 'none';
+}
+
+function resetZoom() {
+    svg.transition().duration(750).call(zoom.transform, d3.zoomIdentity);
+    resetHighlight();
+}
+
+function togglePhysics() {
+    physicsEnabled = !physicsEnabled;
+    if (physicsEnabled) {
+        simulation.restart();
+    } else {
+        simulation.stop();
+    }
+}
+
+function dragstarted(event, d) {
+    if (!event.active) simulation.alphaTarget(0.3).restart();
+    d.fx = d.x;
+    d.fy = d.y;
+}
+
+function dragged(event, d) {
+    d.fx = event.x;
+    d.fy = event.y;
+}
+
+function dragended(event, d) {
+    if (!event.active) simulation.alphaTarget(0);
+    d.fx = null;
+    d.fy = null;
+}
+
+// 加载
+loadData();
+</script>
+</body>
+</html>
