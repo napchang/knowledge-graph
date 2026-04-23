@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-23T09:20:45.794688",
+  "generated_at": "2026-04-23T13:12:24.851278",
   "date": "2026-04-23",
   "total_articles": 300,
   "today_articles": 0,
@@ -170,13 +170,23 @@
       "avg_importance": 3.0
     },
     {
-      "id": "tag_研究",
+      "id": "tag_What Is",
       "type": "tag",
-      "label": "研究",
+      "label": "What Is",
       "category": "academic",
       "color": "#5A92E5",
-      "size": 20.8,
-      "count": 4,
+      "size": 17.2,
+      "count": 1,
+      "avg_importance": 3.0
+    },
+    {
+      "id": "tag_学术前沿",
+      "type": "tag",
+      "label": "学术前沿",
+      "category": "academic",
+      "color": "#5A92E5",
+      "size": 19.6,
+      "count": 3,
       "avg_importance": 3.0
     },
     {
@@ -9323,30 +9333,36 @@
     },
     {
       "source": "cat_academic",
-      "target": "tag_研究",
+      "target": "tag_What Is",
       "value": 2,
       "label": "包含"
     },
     {
-      "source": "tag_研究",
+      "source": "tag_What Is",
       "target": "art_158",
       "value": 1,
       "label": "关联"
     },
     {
-      "source": "tag_研究",
+      "source": "cat_academic",
+      "target": "tag_学术前沿",
+      "value": 2,
+      "label": "包含"
+    },
+    {
+      "source": "tag_学术前沿",
       "target": "art_159",
       "value": 1,
       "label": "关联"
     },
     {
-      "source": "tag_研究",
+      "source": "tag_学术前沿",
       "target": "art_160",
       "value": 1,
       "label": "关联"
     },
     {
-      "source": "tag_研究",
+      "source": "tag_学术前沿",
       "target": "art_161",
       "value": 1,
       "label": "关联"
@@ -9530,6 +9546,30 @@
       "target": "art_285",
       "value": 1,
       "label": "关联"
+    },
+    {
+      "source": "cat_academic",
+      "target": "art_158",
+      "value": 1,
+      "label": "未分类"
+    },
+    {
+      "source": "cat_academic",
+      "target": "art_159",
+      "value": 1,
+      "label": "未分类"
+    },
+    {
+      "source": "cat_academic",
+      "target": "art_160",
+      "value": 1,
+      "label": "未分类"
+    },
+    {
+      "source": "cat_academic",
+      "target": "art_161",
+      "value": 1,
+      "label": "未分类"
     },
     {
       "source": "cat_ai-search",
