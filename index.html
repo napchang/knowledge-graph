@@ -377,7 +377,7 @@
             position: fixed;
             left: 296px;
             top: 66px;
-            width: 280px;
+            width: 320px;
             background: rgba(10, 31, 59, 0.98);
             border: 1px solid var(--qian3);
             border-radius: 12px;
@@ -406,6 +406,16 @@
             color: var(--text3);
             display: flex;
             gap: 16px;
+            margin-bottom: 10px;
+        }
+        #cat-info .cat-summary {
+            font-size: 11px;
+            color: var(--text2);
+            line-height: 1.6;
+            padding: 8px;
+            background: var(--qian2);
+            border-radius: 6px;
+            border-left: 3px solid var(--accent);
         }
     </style>
 </head>
@@ -453,6 +463,7 @@
         <h4 id="cat-info-title"></h4>
         <div class="cat-desc" id="cat-info-desc"></div>
         <div class="cat-stats" id="cat-info-stats"></div>
+        <div class="cat-summary" id="cat-info-summary"></div>
     </div>
     <div id="detail-panel">
         <span class="dp-close" onclick="closeDetail()">×</span>
@@ -480,7 +491,6 @@ const CAT_CONFIG = {
 };
 const HIGHLIGHT_COLOR = '#00E5FF';
 const DIM_COLOR = '#1A365D';
-const DIM_OPACITY = 0.12;
 
 let network, nodes, edges, allNodes, allEdges, graphData;
 let articlesVisible = false;
@@ -494,7 +504,8 @@ let originalNodeColors = {};
 
 async function init() {
     try {
-        const resp = await fetch('graph-data.json');
+        const cacheBuster = '?v=' + Date.now();
+        const resp = await fetch('graph-data.json' + cacheBuster);
         graphData = await resp.json();
         document.getElementById('stat-nodes').textContent = graphData.nodes.length + ' 节点';
         document.getElementById('stat-edges').textContent = graphData.edges.length + ' 连线';
@@ -597,7 +608,6 @@ async function init() {
         allNodes = visNodes;
         allEdges = visEdges;
 
-        // Save original colors for dimming restore
         visNodes.forEach(n => {
             originalNodeColors[n.id] = {
                 background: n.color.background,
@@ -645,7 +655,6 @@ async function init() {
         };
         network = new vis.Network(container, { nodes, edges }, options);
 
-        // Hover pause physics using internal API
         network.on('hoverNode', function(params) {
             container.style.cursor = 'pointer';
             if (physicsEnabled && !hoverPaused && network.physics && network.physics.stopSimulation) {
@@ -683,7 +692,6 @@ async function init() {
     }
 }
 
-// ===== DIMMING: highlight selected + neighbors, dim everything else =====
 function getNeighborIds(nodeId) {
     const neighborIds = new Set([nodeId]);
     allEdges.forEach(e => {
@@ -722,11 +730,11 @@ function dimAllExcept(keepIds) {
         if (keepIds.has(e.from) || keepIds.has(e.to)) {
             edgeUpdates.push({ id: e.id, color: { opacity: e.id.includes('inter') ? 0.25 : 0.55 } });
         } else {
-            edgeUpdates.push({ id: e.id, color: { opacity: 0.06 } });
+            edgeUpdates.push({ id: e.id, color: { opacity: 0.04 } });
         }
     });
-    nodes.update(updates);
-    edges.update(edgeUpdates);
+    if (updates.length > 0) nodes.update(updates);
+    if (edgeUpdates.length > 0) edges.update(edgeUpdates);
 }
 
 function restoreAllDimming() {
@@ -745,27 +753,29 @@ function restoreAllDimming() {
     edges.get().forEach(e => {
         edgeUpdates.push({ id: e.id, color: { opacity: e.id.includes('inter') ? 0.25 : (e.id.includes('cross') ? 0.3 : 0.55) } });
     });
-    nodes.update(updates);
-    edges.update(edgeUpdates);
+    if (updates.length > 0) nodes.update(updates);
+    if (edgeUpdates.length > 0) edges.update(edgeUpdates);
     dimmedNodeIds.clear();
 }
 
 function handleNodeClick(node) {
     const data = node.data || {};
     if (data.type === 'category') {
+        closeDetail();
         showCatInfo(data);
         clearSelection();
         const keepIds = getNeighborIds(node.id);
-        // Also include all nodes in this category
         nodes.get().forEach(n => {
             if (n.data?.category === data.id.replace('cat_', '')) keepIds.add(n.id);
         });
         dimAllExcept(keepIds);
     } else if (data.type === 'tag') {
+        closeCatInfo();
         selectTag(node.id);
         toggleTagArticles(node.id);
         dimAllExcept(getNeighborIds(node.id));
     } else if (data.type === 'article') {
+        closeCatInfo();
         selectArticle(node.id);
         showArticleDetail(data);
         dimAllExcept(getNeighborIds(node.id));
@@ -844,19 +854,27 @@ function showCatInfo(data) {
     const catArticles = allNodes.filter(n => n.data?.category === catId && n.data?.type === 'article');
     const catTags = allNodes.filter(n => n.data?.category === catId && n.data?.type === 'tag');
     const todayCount = catArticles.filter(n => n.data?.is_today).length;
+    const recentCount = catArticles.filter(n => n.data?.is_recent).length;
+
+    // Build summary text
+    const tagNames = catTags.map(t => t.label).join('、');
+    const todayTitles = catArticles.filter(n => n.data?.is_today).map(n => n.data?.cn_title || n.label).slice(0, 3);
+    let summaryText = '该主题包含 ' + catTags.length + ' 个知识标签（' + tagNames + '），' + catArticles.length + ' 篇文章。';
+    if (todayCount > 0) {
+        summaryText += '今日新增 ' + todayCount + ' 篇：' + todayTitles.join('、') + '。';
+    } else if (recentCount > 0) {
+        summaryText += '近期新增 ' + recentCount + ' 篇情报。';
+    }
+    summaryText += '点击标签可展开查看关联文章，探索该领域的知识网络。';
+
     document.getElementById('cat-info-title').innerHTML =
         '<span style="color:' + data.color + '">' + (cfg?.emoji || '') + '</span> ' + data.label;
     document.getElementById('cat-info-desc').textContent = desc;
     document.getElementById('cat-info-stats').innerHTML =
         '文章 ' + catArticles.length + ' &nbsp;|&nbsp; 标签 ' + catTags.length +
         (todayCount > 0 ? ' &nbsp;|&nbsp; 今日 ' + todayCount + ' 条' : '');
+    document.getElementById('cat-info-summary').textContent = summaryText;
     document.getElementById('cat-info').classList.add('visible');
-    closeDetail();
-    const catNodeId = data.id;
-    nodes.update({ id: catNodeId, borderWidth: 5 });
-    setTimeout(() => {
-        nodes.update({ id: catNodeId, borderWidth: 3 });
-    }, 600);
 }
 
 function closeCatInfo() {
@@ -918,7 +936,6 @@ function showArticleDetail(data) {
     document.getElementById('dp-insight').style.display = insight ? 'block' : 'none';
     document.getElementById('dp-link').href = data.link || '#';
     document.getElementById('detail-panel').classList.add('visible');
-    closeCatInfo();
 }
 
 function closeDetail() {
