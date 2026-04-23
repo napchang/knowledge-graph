@@ -6,12 +6,27 @@
     <title>卯时AI · 情报知识图谱</title>
     <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
     <style>
+        :root {
+            --primary: #1A237E;
+            --accent: #FF6B35;
+            --neutral: #E6B85C;
+            --qian1: #0A1F3B;
+            --qian2: #1A365D;
+            --qian3: #2A4D7F;
+            --qian4: #3A64A1;
+            --qian5: #4A7BC3;
+            --qian6: #5A92E5;
+            --text: #E2E8F0;
+            --text2: #94A3B8;
+            --text3: #64748B;
+        }
+        
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background: #0B0F19;
-            color: #E2E8F0;
+            background: var(--qian1);
+            color: var(--text);
             overflow: hidden;
             width: 100vw;
             height: 100vh;
@@ -21,10 +36,10 @@
         #header {
             position: fixed;
             top: 0; left: 0; right: 0;
-            height: 52px;
-            background: rgba(15, 23, 42, 0.95);
+            height: 50px;
+            background: rgba(10, 31, 59, 0.95);
             backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+            border-bottom: 1px solid var(--qian3);
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -33,7 +48,7 @@
         }
         
         #header h1 {
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 600;
             display: flex;
             align-items: center;
@@ -41,48 +56,48 @@
         }
         
         .logo {
-            width: 28px; height: 28px;
-            background: linear-gradient(135deg, #F97316, #EA580C);
-            border-radius: 7px;
+            width: 26px; height: 26px;
+            background: linear-gradient(135deg, var(--accent), #E85D2E);
+            border-radius: 6px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: bold;
-            font-size: 12px;
+            font-size: 11px;
             color: white;
         }
         
         #header-stats {
             font-size: 12px;
-            color: #94A3B8;
+            color: var(--text2);
             display: flex;
             gap: 16px;
         }
         
-        /* Main Layout */
+        /* Main */
         #main {
             display: flex;
             height: 100vh;
-            padding-top: 52px;
+            padding-top: 50px;
         }
         
         /* Sidebar */
         #sidebar {
-            width: 260px;
-            background: rgba(15, 23, 42, 0.95);
-            border-right: 1px solid rgba(148, 163, 184, 0.1);
-            padding: 16px;
+            width: 280px;
+            background: rgba(10, 31, 59, 0.97);
+            border-right: 1px solid var(--qian3);
+            padding: 14px;
             overflow-y: auto;
             flex-shrink: 0;
             z-index: 50;
         }
         
-        .section { margin-bottom: 18px; }
+        .section { margin-bottom: 16px; }
         .section-title {
-            font-size: 11px;
+            font-size: 10px;
             text-transform: uppercase;
             letter-spacing: 0.8px;
-            color: #64748B;
+            color: var(--text3);
             margin-bottom: 8px;
             font-weight: 700;
         }
@@ -90,56 +105,98 @@
         #search-box {
             width: 100%;
             padding: 8px 12px;
-            background: rgba(30, 41, 59, 0.8);
-            border: 1px solid rgba(148, 163, 184, 0.2);
+            background: var(--qian2);
+            border: 1px solid var(--qian3);
             border-radius: 8px;
-            color: #E2E8F0;
+            color: var(--text);
             font-size: 13px;
             outline: none;
         }
-        #search-box:focus { border-color: #F97316; }
-        #search-box::placeholder { color: #475569; }
+        #search-box:focus { border-color: var(--accent); }
+        #search-box::placeholder { color: var(--text3); }
         
-        .legend-item {
+        /* Today badge */
+        .today-badge {
+            background: linear-gradient(135deg, var(--accent), #E85D2E);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 12px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .today-badge .count { font-weight: 700; font-size: 16px; }
+        
+        /* Category items */
+        .cat-item {
+            border-radius: 8px;
+            margin-bottom: 4px;
+            overflow: hidden;
+        }
+        .cat-header {
             display: flex;
             align-items: center;
             gap: 10px;
-            padding: 6px 10px;
-            border-radius: 8px;
+            padding: 8px 10px;
             cursor: pointer;
             transition: all 0.2s;
-            margin-bottom: 2px;
-            font-size: 13px;
+            border-radius: 8px;
         }
-        .legend-item:hover { background: rgba(148, 163, 184, 0.1); }
-        .legend-item.inactive { opacity: 0.3; }
-        .legend-dot {
+        .cat-header:hover { background: var(--qian2); }
+        .cat-header.inactive { opacity: 0.35; }
+        .cat-dot {
             width: 12px; height: 12px;
             border-radius: 50%;
             flex-shrink: 0;
         }
-        .legend-text { flex: 1; }
-        .legend-count { font-size: 11px; color: #64748B; }
+        .cat-name { flex: 1; font-size: 13px; }
+        .cat-count { font-size: 11px; color: var(--text3); }
+        .cat-toggle { font-size: 11px; color: var(--text3); transition: transform 0.2s; }
+        .cat-toggle.open { transform: rotate(90deg); }
+        
+        .tag-list {
+            padding-left: 32px;
+            padding-bottom: 6px;
+            display: none;
+        }
+        .tag-list.open { display: block; }
+        .tag-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 8px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+            color: var(--text2);
+            transition: all 0.15s;
+        }
+        .tag-item:hover { background: var(--qian2); color: var(--text); }
+        .tag-item .tag-dot { width: 6px; height: 6px; border-radius: 50%; }
+        .tag-item .tag-label { flex: 1; }
+        .tag-item .tag-num { font-size: 10px; color: var(--text3); }
         
         .btn {
-            padding: 5px 12px;
+            padding: 6px 12px;
             border-radius: 6px;
-            border: 1px solid rgba(148, 163, 184, 0.2);
-            background: rgba(30, 41, 59, 0.6);
-            color: #E2E8F0;
+            border: 1px solid var(--qian3);
+            background: var(--qian2);
+            color: var(--text);
             font-size: 12px;
             cursor: pointer;
             transition: all 0.2s;
             width: 100%;
             margin-bottom: 6px;
         }
-        .btn:hover { background: rgba(51, 65, 85, 0.8); }
-        .btn.active { background: #F97316; border-color: #F97316; color: white; }
+        .btn:hover { background: var(--qian3); }
+        .btn.active { background: var(--accent); border-color: var(--accent); color: white; }
         
         .hint {
             font-size: 11px;
-            color: #475569;
-            line-height: 1.6;
+            color: var(--text3);
+            line-height: 1.5;
             margin-top: 6px;
         }
         
@@ -148,18 +205,18 @@
             flex: 1;
             position: relative;
             overflow: hidden;
-            background: radial-gradient(ellipse at center, #0F172A 0%, #0B0F19 100%);
+            background: radial-gradient(ellipse at center, var(--qian2) 0%, var(--qian1) 100%);
         }
         
         /* Detail Panel */
         #detail-panel {
             position: fixed;
             right: 16px;
-            top: 68px;
-            width: 380px;
-            max-height: calc(100vh - 90px);
-            background: rgba(15, 23, 42, 0.98);
-            border: 1px solid rgba(148, 163, 184, 0.15);
+            top: 66px;
+            width: 400px;
+            max-height: calc(100vh - 86px);
+            background: rgba(10, 31, 59, 0.98);
+            border: 1px solid var(--qian3);
             border-radius: 12px;
             padding: 20px;
             display: none;
@@ -171,51 +228,94 @@
         #detail-panel .dp-close {
             position: absolute;
             top: 12px; right: 12px;
-            width: 26px; height: 26px;
+            width: 28px; height: 28px;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            color: #64748B;
+            color: var(--text3);
             font-size: 20px;
             border-radius: 6px;
         }
-        #detail-panel .dp-close:hover { background: rgba(148, 163, 184, 0.15); color: #E2E8F0; }
-        #detail-panel h3 {
-            font-size: 15px;
-            font-weight: 600;
-            margin-bottom: 8px;
-            line-height: 1.5;
+        #detail-panel .dp-close:hover { background: var(--qian3); color: var(--text); }
+        
+        #detail-panel .dp-cn-title {
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 4px;
+            line-height: 1.4;
+            color: var(--text);
             padding-right: 30px;
-            color: #F8FAFC;
         }
-        #detail-panel .dp-meta {
+        #detail-panel .dp-en-title {
             font-size: 12px;
-            color: #64748B;
-            margin-bottom: 12px;
+            color: var(--text2);
+            margin-bottom: 10px;
+            line-height: 1.4;
+            font-style: italic;
         }
-        #detail-panel .dp-tags { margin-bottom: 12px; }
-        .tag {
+        #detail-panel .dp-stars {
+            display: flex;
+            gap: 2px;
+            margin-bottom: 8px;
+        }
+        .star { color: var(--neutral); font-size: 14px; }
+        .star.empty { color: var(--qian3); }
+        
+        #detail-panel .dp-meta-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 6px;
+            font-size: 12px;
+            color: var(--text2);
+        }
+        #detail-panel .dp-meta-row .dp-badge {
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: 600;
+        }
+        .badge-today { background: var(--accent); color: white; }
+        .badge-important { background: var(--qian5); color: white; }
+        .badge-major { background: var(--neutral); color: var(--qian1); }
+        
+        #detail-panel .dp-tags { margin: 12px 0; }
+        .tag-chip {
             display: inline-block;
             padding: 3px 10px;
-            background: rgba(30, 41, 59, 0.8);
-            border: 1px solid rgba(148, 163, 184, 0.15);
+            background: var(--qian2);
+            border: 1px solid var(--qian3);
             border-radius: 5px;
             font-size: 11px;
             margin: 0 4px 4px 0;
-            color: #CBD5E1;
+            color: var(--text2);
         }
+        
         #detail-panel .dp-summary {
             font-size: 13px;
             line-height: 1.7;
-            color: #94A3B8;
+            color: var(--text2);
+            margin-bottom: 10px;
+            padding: 10px;
+            background: var(--qian2);
+            border-radius: 8px;
+        }
+        #detail-panel .dp-insight {
+            font-size: 13px;
+            line-height: 1.7;
+            color: var(--accent);
             margin-bottom: 16px;
+            padding: 10px;
+            background: rgba(255, 107, 53, 0.08);
+            border-left: 3px solid var(--accent);
+            border-radius: 0 8px 8px 0;
         }
         #detail-panel a.dp-link {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: linear-gradient(135deg, #F97316, #EA580C);
+            background: linear-gradient(135deg, var(--accent), #E85D2E);
             color: white;
             padding: 10px 18px;
             border-radius: 8px;
@@ -224,14 +324,14 @@
             font-weight: 500;
         }
         
-        /* Category Info Panel */
+        /* Category info panel */
         #cat-info {
             position: fixed;
-            left: 276px;
-            top: 68px;
+            left: 296px;
+            top: 66px;
             width: 280px;
-            background: rgba(15, 23, 42, 0.97);
-            border: 1px solid rgba(148, 163, 184, 0.15);
+            background: rgba(10, 31, 59, 0.98);
+            border: 1px solid var(--qian3);
             border-radius: 12px;
             padding: 16px;
             display: none;
@@ -241,21 +341,23 @@
         #cat-info.visible { display: block; }
         #cat-info h4 {
             font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 8px;
+            font-weight: 700;
+            margin-bottom: 6px;
             display: flex;
             align-items: center;
             gap: 8px;
         }
         #cat-info .cat-desc {
             font-size: 12px;
-            color: #94A3B8;
+            color: var(--text2);
             line-height: 1.6;
             margin-bottom: 10px;
         }
         #cat-info .cat-stats {
             font-size: 12px;
-            color: #64748B;
+            color: var(--text3);
+            display: flex;
+            gap: 16px;
         }
     </style>
 </head>
@@ -266,6 +368,7 @@
             卯时AI · 情报知识图谱
         </h1>
         <div id="header-stats">
+            <span id="stat-today">📅 今日 0 条</span>
             <span id="stat-nodes">0 节点</span>
             <span id="stat-edges">0 连线</span>
         </div>
@@ -274,19 +377,22 @@
     <div id="main">
         <div id="sidebar">
             <div class="section">
-                <div class="section-title">搜索</div>
+                <div class="today-badge" id="today-badge" style="display:none">
+                    <span>🔥 今日新增情报</span>
+                    <span class="count" id="today-count">0</span>
+                </div>
                 <input type="text" id="search-box" placeholder="搜索文章、标签...">
             </div>
             
             <div class="section">
-                <div class="section-title">分类筛选</div>
-                <div id="legend-container"></div>
+                <div class="section-title">分类 & 标签</div>
+                <div id="cat-list"></div>
             </div>
             
             <div class="section">
                 <div class="section-title">显示控制</div>
                 <button class="btn" id="btn-toggle-articles">📄 显示文章节点</button>
-                <button class="btn" id="btn-physics">⏸ 暂停物理模拟</button>
+                <button class="btn" id="btn-physics">⏸ 暂停物理</button>
                 <button class="btn" id="btn-reset">⌂ 重置视图</button>
                 <div class="hint">
                     点击标签展开文章<br>
@@ -308,22 +414,33 @@
     
     <div id="detail-panel">
         <span class="dp-close" onclick="closeDetail()">×</span>
-        <h3 id="dp-title"></h3>
-        <div class="dp-meta" id="dp-meta"></div>
+        <div class="dp-cn-title" id="dp-cn-title"></div>
+        <div class="dp-en-title" id="dp-en-title"></div>
+        <div class="dp-stars" id="dp-stars"></div>
+        <div class="dp-meta-row" id="dp-meta"></div>
         <div class="dp-tags" id="dp-tags"></div>
         <div class="dp-summary" id="dp-summary"></div>
+        <div class="dp-insight" id="dp-insight"></div>
         <a class="dp-link" id="dp-link" href="#" target="_blank">阅读原文 →</a>
     </div>
 
 <script>
-const CAT_CONFIG = {
-    "ai-search": {emoji: "🔍", name: "AI搜索", color: "#F97316", desc: "搜索引擎优化、GEO、AEO、SEO、排名算法、搜索产品商业化（Perplexity/Google/Bing/百度）"},
-    "agentic-b2b": {emoji: "🤖", name: "Agentic B2B", color: "#3B82F6", desc: "营销自动化、销售工具、CRM、Workflow、HubSpot框架、Lead Gen、客户体验优化"},
-    "ai-industry": {emoji: "🏭", name: "AI行业动态", color: "#10B981", desc: "产品发布、融资动态、大厂战略、Builder动态、开发者工具、行业趋势分析"},
-    "academic": {emoji: "📚", name: "学术研究", color: "#8B5CF6", desc: "论文发布、算法研究、模型架构（MIT/Stanford/arXiv），标签映射到业务价值"}
+
+const COLORS = {
+    'ai-search': '#FF6B35',
+    'agentic-b2b': '#4A7BC3',
+    'ai-industry': '#E6B85C',
+    'academic': '#5A92E5'
 };
 
-let network, nodes, edges, allNodes, allEdges;
+const CAT_CONFIG = {
+    'ai-search': {emoji: '🔍', name: 'AI搜索'},
+    'agentic-b2b': {emoji: '🤖', name: 'Agentic B2B'},
+    'ai-industry': {emoji: '🏭', name: 'AI行业动态'},
+    'academic': {emoji: '📚', name: '学术研究'}
+};
+
+let network, nodes, edges, allNodes, allEdges, graphData;
 let articlesVisible = false;
 let physicsEnabled = true;
 let activeCategories = new Set(Object.keys(CAT_CONFIG));
@@ -331,75 +448,111 @@ let expandedTags = new Set();
 
 async function init() {
     const resp = await fetch('graph-data.json');
-    const data = await resp.json();
+    graphData = await resp.json();
+    
+    // Update header stats
+    document.getElementById('stat-nodes').textContent = `${graphData.nodes.length} 节点`;
+    document.getElementById('stat-edges').textContent = `${graphData.edges.length} 连线`;
+    if (graphData.today_articles > 0) {
+        document.getElementById('today-badge').style.display = 'flex';
+        document.getElementById('today-count').textContent = graphData.today_articles;
+        document.getElementById('stat-today').textContent = `📅 今日 ${graphData.today_articles} 条`;
+        document.getElementById('stat-today').style.color = '#FF6B35';
+    }
     
     // Build vis-network nodes
-    const visNodes = data.nodes.map(n => {
+    const visNodes = graphData.nodes.map(n => {
         const base = {
             id: n.id,
             label: n.label,
-            color: n.color,
-            shadow: { enabled: true, color: n.color, size: 10, x: 0, y: 0 }
+            color: {
+                background: n.color,
+                border: n.border_color || '#ffffff',
+                highlight: { background: n.color, border: '#FF6B35' }
+            },
+            shadow: { enabled: true, color: n.color, size: n.type === 'category' ? 20 : 8, x: 0, y: 0 }
         };
         
         if (n.type === 'category') {
-            const cfg = CAT_CONFIG[n.id.replace('cat_', '')];
             return {
                 ...base,
                 shape: 'dot',
-                size: 45,
-                font: { size: 15, color: '#F8FAFC', face: 'sans-serif', strokeWidth: 3, strokeColor: '#0B0F19' },
+                size: n.size || 45,
+                font: { size: 15, color: '#F8FAFC', face: 'sans-serif', strokeWidth: 3, strokeColor: '#0A1F3B' },
                 borderWidth: 3,
                 borderWidthSelected: 5,
-                title: buildTooltip(n, cfg),
-                data: { type: 'category', category: n.id.replace('cat_', ''), ...n }
+                title: `${CAT_CONFIG[n.id.replace('cat_', '')]?.emoji || ''} ${n.label}\n${n.description || ''}\n点击查看详情`,
+                data: { ...n }
             };
         } else if (n.type === 'tag') {
             return {
                 ...base,
                 shape: 'dot',
-                size: 18 + Math.min((n.count || 0), 30) * 0.5,
+                size: n.size || 20,
                 font: { size: 12, color: '#CBD5E1', face: 'sans-serif' },
                 borderWidth: 2,
                 borderWidthSelected: 4,
-                title: buildTooltip(n),
+                title: `标签: ${n.label}\n${n.count || 0} 篇文章\n平均重要度: ${n.avg_importance || 3}\n点击展开文章`,
                 hidden: false,
-                data: { type: 'tag', ...n }
+                data: { ...n }
             };
         } else {
             // Article
-            const imp = n.importance || 3;
+            const isToday = n.is_today;
+            const isImportant = n.is_important_source;
+            const isMajor = n.is_major_news;
+            let titleLines = [];
+            if (n.cn_title) titleLines.push(n.cn_title);
+            else titleLines.push(n.label);
+            if (n.title_en && n.title_en !== n.label) titleLines.push(`(EN) ${n.title_en}`);
+            titleLines.push(`日期: ${n.date || '未知'}`);
+            titleLines.push(`重要度: ${'★'.repeat(n.importance || 3)}${'☆'.repeat(5 - (n.importance || 3))}`);
+            if (isToday) titleLines.push('🔥 今日新增');
+            if (isImportant) titleLines.push('⭐ 重要来源');
+            if (isMajor) titleLines.push('📢 重大新闻');
+            if (n.tags && n.tags.length) titleLines.push(`标签: ${n.tags.join(', ')}`);
+            if (n.cn_summary) titleLines.push(`摘要: ${n.cn_summary.substring(0, 100)}...`);
+            else if (n.summary) titleLines.push(`摘要: ${n.summary.substring(0, 100)}...`);
+            titleLines.push('点击查看详情');
+            
             return {
                 ...base,
                 shape: 'dot',
-                size: 6 + imp * 1.5,
+                size: n.size || 7,
                 font: { size: 10, color: '#94A3B8', face: 'sans-serif' },
-                borderWidth: 1,
-                borderWidthSelected: 3,
-                title: buildTooltip(n),
+                borderWidth: n.border_width || 1,
+                borderWidthSelected: 4,
+                title: titleLines.join('\n'),
                 hidden: true,
-                data: { type: 'article', ...n }
+                data: { ...n }
             };
         }
     });
     
     // Build vis-network edges
-    const visEdges = data.edges.map((e, i) => {
-        const src = data.nodes.find(n => n.id === e.source);
-        const tgt = data.nodes.find(n => n.id === e.target);
+    const visEdges = graphData.edges.map((e, i) => {
+        const src = graphData.nodes.find(n => n.id === e.source);
+        const tgt = graphData.nodes.find(n => n.id === e.target);
         const cat = src?.category || tgt?.category || 'default';
-        const color = data.category_colors[cat] || '#64748B';
+        const color = graphData.category_colors[cat] || '#64748B';
+        
+        const isInterCat = e.type === 'inter-cat';
+        const isCross = e.type === 'cross';
         
         return {
             id: `edge_${i}`,
             from: e.source,
             to: e.target,
-            color: { color: color, opacity: e.type === 'cross' ? 0.3 : 0.6 },
-            width: e.type === 'cross' ? 1 : (src?.type === 'category' ? 2.5 : 1.5),
-            arrows: 'to',
-            dashes: e.type === 'cross',
-            title: e.type === 'cross' ? '跨主题关联' : (src?.type === 'category' ? '分类包含' : '文章关联'),
-            hidden: false
+            color: { 
+                color: isInterCat ? '#3A64A1' : (isCross ? '#8B5CF6' : color), 
+                opacity: isInterCat ? 0.25 : (isCross ? 0.3 : 0.55) 
+            },
+            width: isInterCat ? 1 : (src?.type === 'category' ? 2 : 1.2),
+            arrows: isInterCat ? false : 'to',
+            dashes: isInterCat || isCross,
+            title: e.label || '',
+            hidden: false,
+            smooth: { type: 'continuous' }
         };
     });
     
@@ -423,37 +576,33 @@ async function init() {
         physics: {
             enabled: true,
             forceAtlas2Based: {
-                gravitationalConstant: -80,
+                gravitationalConstant: -70,
                 centralGravity: 0.005,
-                springLength: 120,
+                springLength: 130,
                 springConstant: 0.08,
-                damping: 0.4
+                damping: 0.35
             },
             maxVelocity: 50,
             minVelocity: 0.75,
             solver: 'forceAtlas2Based',
             stabilization: {
                 enabled: true,
-                iterations: 150,
+                iterations: 120,
                 updateInterval: 25
             }
         },
         interaction: {
             hover: true,
-            tooltipDelay: 150,
+            tooltipDelay: 100,
             zoomView: true,
             dragView: true,
             navigationButtons: true,
             keyboard: false
-        },
-        layout: {
-            improvedLayout: true
         }
     };
     
     network = new vis.Network(container, { nodes, edges }, options);
     
-    // Events
     network.on('click', function(params) {
         if (params.nodes.length > 0) {
             const nodeId = params.nodes[0];
@@ -465,41 +614,21 @@ async function init() {
         }
     });
     
-    network.on('hoverNode', function(params) {
-        document.getElementById('graph-container').style.cursor = 'pointer';
+    network.on('hoverNode', function() {
+        container.style.cursor = 'pointer';
     });
-    network.on('blurNode', function(params) {
-        document.getElementById('graph-container').style.cursor = 'default';
+    network.on('blurNode', function() {
+        container.style.cursor = 'default';
     });
     
-    // Stats
-    document.getElementById('stat-nodes').textContent = `${visNodes.length} 节点`;
-    document.getElementById('stat-edges').textContent = `${visEdges.length} 连线`;
-    
-    setupUI(data);
-}
-
-function buildTooltip(node, cfg) {
-    if (node.type === 'category' && cfg) {
-        return `<b>${cfg.emoji} ${cfg.name}</b><br/>${cfg.desc}<br/><i>点击查看详情</i>`;
-    }
-    if (node.type === 'tag') {
-        return `<b>🏷 ${node.label}</b><br/>${node.count || 0} 篇文章<br/><i>点击展开文章</i>`;
-    }
-    if (node.type === 'article') {
-        const title = node.cn_title || node.title || node.label;
-        const summary = (node.summary || '').substring(0, 120);
-        const tags = (node.tags || []).join(', ');
-        return `<b>${title}</b><br/>📅 ${node.date || ''}<br/>🏷 ${tags}<br/>📝 ${summary}${summary.length >= 120 ? '...' : ''}<br/><i>点击查看详情</i>`;
-    }
-    return node.label;
+    setupUI();
 }
 
 function handleNodeClick(node) {
     const data = node.data || {};
     
     if (data.type === 'category') {
-        showCatInfo(data.category);
+        showCatInfo(data);
     } else if (data.type === 'tag') {
         toggleTagArticles(node.id);
     } else if (data.type === 'article') {
@@ -507,18 +636,22 @@ function handleNodeClick(node) {
     }
 }
 
-function showCatInfo(catId) {
+function showCatInfo(data) {
+    const catId = data.id.replace('cat_', '');
     const cfg = CAT_CONFIG[catId];
-    if (!cfg) return;
-    
+    const desc = graphData.category_descriptions[catId] || '';
     const catArticles = allNodes.filter(n => n.data?.category === catId && n.data?.type === 'article');
     const catTags = allNodes.filter(n => n.data?.category === catId && n.data?.type === 'tag');
+    const todayCount = catArticles.filter(n => n.data?.is_today).length;
     
-    document.getElementById('cat-info-title').innerHTML = `<span style="color:${cfg.color}">${cfg.emoji}</span> ${cfg.name}`;
-    document.getElementById('cat-info-desc').textContent = cfg.desc;
+    document.getElementById('cat-info-title').innerHTML = 
+        `<span style="color:${data.color}">${cfg?.emoji || ''}</span> ${data.label}`;
+    document.getElementById('cat-info-desc').textContent = desc;
     document.getElementById('cat-info-stats').innerHTML = 
-        `📄 ${catArticles.length} 篇文章 &nbsp;|&nbsp; 🏷 ${catTags.length} 个标签`;
+        `📄 ${catArticles.length} 篇文章 &nbsp;|&nbsp; 🏷 ${catTags.length} 个标签` +
+        (todayCount > 0 ? ` &nbsp;|&nbsp; 🔥 今日 ${todayCount} 条` : '');
     document.getElementById('cat-info').classList.add('visible');
+    closeDetail();
 }
 
 function closeCatInfo() {
@@ -528,7 +661,6 @@ function closeCatInfo() {
 function toggleTagArticles(tagId) {
     if (expandedTags.has(tagId)) {
         expandedTags.delete(tagId);
-        // Hide articles connected to this tag
         const connectedEdges = allEdges.filter(e => e.from === tagId || e.to === tagId);
         connectedEdges.forEach(e => {
             const otherId = e.from === tagId ? e.to : e.from;
@@ -539,7 +671,6 @@ function toggleTagArticles(tagId) {
         });
     } else {
         expandedTags.add(tagId);
-        // Show articles connected to this tag
         const connectedEdges = allEdges.filter(e => e.from === tagId || e.to === tagId);
         connectedEdges.forEach(e => {
             const otherId = e.from === tagId ? e.to : e.from;
@@ -552,58 +683,117 @@ function toggleTagArticles(tagId) {
             }
         });
     }
+    updateTagListUI();
 }
 
 function showArticleDetail(data) {
-    const title = data.cn_title || data.title || data.label;
-    document.getElementById('dp-title').textContent = title;
+    const cnTitle = data.cn_title || data.label || '';
+    const enTitle = data.title_en || '';
     
+    document.getElementById('dp-cn-title').textContent = cnTitle;
+    document.getElementById('dp-en-title').textContent = enTitle && enTitle !== cnTitle ? enTitle : '';
+    
+    // Stars
+    const imp = data.importance || 3;
+    const starsHtml = Array(5).fill(0).map((_, i) => 
+        `<span class="star ${i < imp ? '' : 'empty'}">★</span>`
+    ).join('');
+    document.getElementById('dp-stars').innerHTML = starsHtml;
+    
+    // Meta row
     const catName = CAT_CONFIG[data.category]?.name || data.category;
-    document.getElementById('dp-meta').textContent = `${data.date || ''} · ${catName}`;
+    let metaHtml = `<span>📅 ${data.date || ''}</span><span>🏷 ${catName}</span>`;
+    if (data.is_today) metaHtml += `<span class="dp-badge badge-today">今日</span>`;
+    if (data.is_important_source) metaHtml += `<span class="dp-badge badge-important">重要来源</span>`;
+    if (data.is_major_news) metaHtml += `<span class="dp-badge badge-major">重大新闻</span>`;
+    document.getElementById('dp-meta').innerHTML = metaHtml;
     
+    // Tags
     const tags = data.tags || [];
-    document.getElementById('dp-tags').innerHTML = tags.map(t => `<span class="tag">${t}</span>`).join('');
+    document.getElementById('dp-tags').innerHTML = tags.map(t => `<span class="tag-chip">${t}</span>`).join('');
     
-    const summary = data.summary || '';
+    // Summary (prefer Chinese)
+    const summary = data.cn_summary || data.summary || '';
+    document.getElementById('dp-summary').textContent = summary;
+    document.getElementById('dp-summary').style.display = summary ? 'block' : 'none';
+    
+    // Insight
     const insight = data.key_insight || '';
-    let content = '';
-    if (summary) content += `<p>${summary}</p>`;
-    if (insight) content += `<p style="color:#F97316;margin-top:8px;">💡 ${insight}</p>`;
-    document.getElementById('dp-summary').innerHTML = content;
+    document.getElementById('dp-insight').textContent = insight ? `💡 ${insight}` : '';
+    document.getElementById('dp-insight').style.display = insight ? 'block' : 'none';
     
     document.getElementById('dp-link').href = data.link || '#';
     document.getElementById('detail-panel').classList.add('visible');
+    closeCatInfo();
 }
 
 function closeDetail() {
     document.getElementById('detail-panel').classList.remove('visible');
 }
 
-function setupUI(graphData) {
-    // Legend
-    const legendContainer = document.getElementById('legend-container');
+function setupUI() {
+    // Build category + tag list in sidebar
+    const catList = document.getElementById('cat-list');
+    
     Object.entries(CAT_CONFIG).forEach(([cat, cfg]) => {
-        const tagCount = graphData.nodes.filter(n => n.type === 'tag' && n.category === cat).length;
+        const catTags = allNodes.filter(n => n.data?.category === cat && n.data?.type === 'tag');
+        const catArticles = allNodes.filter(n => n.data?.category === cat && n.data?.type === 'article');
+        const todayCount = catArticles.filter(n => n.data?.is_today).length;
+        
         const item = document.createElement('div');
-        item.className = 'legend-item';
+        item.className = 'cat-item';
         item.dataset.cat = cat;
-        item.innerHTML = `
-            <div class="legend-dot" style="background:${cfg.color}"></div>
-            <div class="legend-text">${cfg.emoji} ${cfg.name}</div>
-            <div class="legend-count">${tagCount}标签</div>
+        
+        const header = document.createElement('div');
+        header.className = 'cat-header';
+        header.innerHTML = `
+            <div class="cat-dot" style="background:${cfg.color}"></div>
+            <div class="cat-name">${cfg.emoji} ${cfg.name}</div>
+            <div class="cat-count">${catTags.length}标签${todayCount > 0 ? ` · <span style="color:#FF6B35">${todayCount}新</span>` : ''}</div>
+            <div class="cat-toggle">▶</div>
         `;
-        item.addEventListener('click', () => toggleCategory(cat, item));
-        legendContainer.appendChild(item);
+        header.addEventListener('click', (e) => {
+            if (e.target.closest('.cat-toggle')) {
+                toggleTagList(cat, item);
+            } else {
+                toggleCategory(cat, header);
+            }
+        });
+        
+        const tagList = document.createElement('div');
+        tagList.className = 'tag-list';
+        tagList.id = `taglist-${cat}`;
+        
+        catTags.forEach(tagNode => {
+            const tagEl = document.createElement('div');
+            tagEl.className = 'tag-item';
+            tagEl.innerHTML = `
+                <div class="tag-dot" style="background:${cfg.color};opacity:0.6"></div>
+                <div class="tag-label">${tagNode.label}</div>
+                <div class="tag-num">${tagNode.data?.count || 0}</div>
+            `;
+            tagEl.addEventListener('click', (e) => {
+                e.stopPropagation();
+                toggleTagArticles(tagNode.id);
+                // Focus network on this tag
+                network.focus(tagNode.id, { scale: 1.2, animation: true });
+            });
+            tagList.appendChild(tagEl);
+        });
+        
+        item.appendChild(header);
+        item.appendChild(tagList);
+        catList.appendChild(item);
     });
     
     // Search
     document.getElementById('search-box').addEventListener('input', (e) => {
         const query = e.target.value.toLowerCase().trim();
         if (!query) {
-            // Reset visibility
             nodes.forEach(n => {
                 if (n.data?.type === 'article') {
-                    nodes.update({ id: n.id, hidden: !expandedTags.has(getParentTag(n.id)) });
+                    const parentTag = getParentTag(n.id);
+                    nodes.update({ id: n.id, hidden: !expandedTags.has(parentTag) && !articlesVisible });
                 } else {
                     nodes.update({ id: n.id, hidden: false });
                 }
@@ -613,7 +803,7 @@ function setupUI(graphData) {
         
         nodes.forEach(n => {
             const match = (n.label || '').toLowerCase().includes(query) ||
-                         (n.data?.title || '').toLowerCase().includes(query) ||
+                         (n.data?.title_en || '').toLowerCase().includes(query) ||
                          (n.data?.cn_title || '').toLowerCase().includes(query) ||
                          (n.data?.tags || []).some(t => t.toLowerCase().includes(query));
             
@@ -639,7 +829,8 @@ function setupUI(graphData) {
                     const cat = n.data?.category;
                     nodes.update({ id: n.id, hidden: !activeCategories.has(cat) });
                 } else {
-                    nodes.update({ id: n.id, hidden: !expandedTags.has(getParentTag(n.id)) });
+                    const parentTag = getParentTag(n.id);
+                    nodes.update({ id: n.id, hidden: !expandedTags.has(parentTag) });
                 }
             }
         });
@@ -649,7 +840,7 @@ function setupUI(graphData) {
     document.getElementById('btn-physics').addEventListener('click', function() {
         physicsEnabled = !physicsEnabled;
         this.classList.toggle('active', !physicsEnabled);
-        this.textContent = physicsEnabled ? '⏸ 暂停物理模拟' : '▶ 恢复物理模拟';
+        this.textContent = physicsEnabled ? '⏸ 暂停物理' : '▶ 恢复物理';
         network.setOptions({ physics: { enabled: physicsEnabled } });
     });
     
@@ -659,8 +850,23 @@ function setupUI(graphData) {
     });
 }
 
+function toggleTagList(cat, item) {
+    const tagList = item.querySelector('.tag-list');
+    const toggle = item.querySelector('.cat-toggle');
+    tagList.classList.toggle('open');
+    toggle.classList.toggle('open');
+}
+
+function updateTagListUI() {
+    // Update tag list to show which are expanded
+    document.querySelectorAll('.tag-item').forEach(el => {
+        const tagId = el.closest('.tag-list')?.id;
+        if (!tagId) return;
+        // Could add visual indicator here
+    });
+}
+
 function getParentTag(articleId) {
-    // Find tag connected to this article
     const edge = allEdges.find(e => 
         (e.from === articleId && e.to.startsWith('tag_')) ||
         (e.to === articleId && e.from.startsWith('tag_'))
