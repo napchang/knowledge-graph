@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>卯时AI · 情报知识图谱</title>
+    <title>鍗椂AI 路 鎯呮姤鐭ヨ瘑鍥捐氨</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <style>
@@ -116,19 +116,89 @@
         #search-box:focus { border-color: var(--accent); }
         #search-box::placeholder { color: var(--text3); }
         
-        /* Today badge */
-        .today-badge {
-            background: linear-gradient(135deg, var(--accent), #E85D2E);
-            color: white;
-            padding: 8px 12px;
-            border-radius: 8px;
-            font-size: 12px;
+        .search-status {
+            font-size: 11px;
+            color: var(--text3);
+            margin-top: 4px;
+            min-height: 16px;
+        }
+        .search-status .match-count { color: var(--accent); font-weight: 600; }
+        
+        /* Today section */
+        .today-section {
+            background: linear-gradient(135deg, rgba(255,107,53,0.15), rgba(255,107,53,0.05));
+            border: 1px solid rgba(255,107,53,0.3);
+            border-radius: 10px;
+            padding: 12px;
             margin-bottom: 12px;
+        }
+        .today-section.empty {
+            background: var(--qian2);
+            border-color: var(--qian3);
+        }
+        .today-section h3 {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 8px;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            gap: 6px;
         }
-        .today-badge .count { font-weight: 700; font-size: 16px; }
+        .today-section.empty h3 { color: var(--text3); }
+        .today-item {
+            padding: 8px 10px;
+            background: rgba(10,31,59,0.5);
+            border-radius: 6px;
+            margin-bottom: 6px;
+            cursor: pointer;
+            transition: all 0.15s;
+            border-left: 3px solid transparent;
+        }
+        .today-item:hover {
+            background: var(--qian2);
+            border-left-color: var(--accent);
+        }
+        .today-item .ti-title {
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--text);
+            line-height: 1.4;
+            margin-bottom: 3px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+        .today-item .ti-meta {
+            font-size: 10px;
+            color: var(--text3);
+            display: flex;
+            gap: 8px;
+        }
+        .today-item .ti-badge {
+            font-size: 9px;
+            padding: 1px 5px;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+        .ti-badge.important { background: var(--qian5); color: white; }
+        .ti-badge.major { background: var(--neutral); color: var(--qian1); }
+        .today-empty {
+            font-size: 11px;
+            color: var(--text3);
+            text-align: center;
+            padding: 8px 0;
+        }
+        .today-summary-text {
+            font-size: 11px;
+            color: var(--text2);
+            line-height: 1.6;
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px solid rgba(255,107,53,0.15);
+        }
         
         /* Category items */
         .cat-item {
@@ -175,6 +245,7 @@
             transition: all 0.15s;
         }
         .tag-item:hover { background: var(--qian2); color: var(--text); }
+        .tag-item.selected { background: rgba(255,107,53,0.2); color: var(--accent); font-weight: 600; }
         .tag-item .tag-dot { width: 6px; height: 6px; border-radius: 50%; }
         .tag-item .tag-label { flex: 1; }
         .tag-item .tag-num { font-size: 10px; color: var(--text3); }
@@ -365,57 +436,57 @@
 <body>
     <div id="header">
         <h1>
-            <div class="logo">卯</div>
-            卯时AI · 情报知识图谱
+            <div class="logo">鍗?/div>
+            鍗椂AI 路 鎯呮姤鐭ヨ瘑鍥捐氨
         </h1>
         <div id="header-stats">
-            <span id="stat-today">📅 今日 0 条</span>
-            <span id="stat-nodes">0 节点</span>
-            <span id="stat-edges">0 连线</span>
+            <span id="stat-today">馃搮 浠婃棩 0 鏉?/span>
+            <span id="stat-nodes">0 鑺傜偣</span>
+            <span id="stat-edges">0 杩炵嚎</span>
         </div>
     </div>
     
     <div id="main">
         <div id="sidebar">
             <div class="section">
-                <div class="today-badge" id="today-badge" style="display:none">
-                    <span>🔥 今日新增情报</span>
-                    <span class="count" id="today-count">0</span>
-                </div>
-                <input type="text" id="search-box" placeholder="搜索文章、标签...">
+                <input type="text" id="search-box" placeholder="鎼滅储鏂囩珷銆佹爣绛俱€佹潵婧愩€佹憳瑕佸叧閿瘝...">
+                <div class="search-status" id="search-status"></div>
+            </div>
+            
+            <div class="section" id="today-section-wrapper">
+                <div class="section-title">馃敟 浠婃棩鍔ㄦ€?/div>
+                <div id="today-content"></div>
             </div>
             
             <div class="section">
-                <div class="section-title">分类 & 标签</div>
+                <div class="section-title">鍒嗙被 & 鏍囩</div>
                 <div id="cat-list"></div>
             </div>
             
             <div class="section">
-                <div class="section-title">显示控制</div>
-                <button class="btn" id="btn-toggle-articles">📄 显示文章节点</button>
-                <button class="btn" id="btn-physics">⏸ 暂停物理</button>
-                <button class="btn" id="btn-reset">⌂ 重置视图</button>
+                <div class="section-title">鏄剧ず鎺у埗</div>
+                <button class="btn" id="btn-toggle-articles">馃搫 鏄剧ず鏂囩珷鑺傜偣</button>
+                <button class="btn" id="btn-physics">鈴?鏆傚仠鐗╃悊</button>
+                <button class="btn" id="btn-reset">鈱?閲嶇疆瑙嗗浘</button>
                 <div class="hint">
-                    点击标签展开文章<br>
-                    点击分类查看介绍<br>
-                    滚轮缩放 · 拖拽平移
+                    鎮仠鑺傜偣鏆傚仠鐗╃悊 路 鐐瑰嚮鏍囩灞曞紑鏂囩珷<br>
+                    鐐瑰嚮鍒嗙被鏌ョ湅浠嬬粛 路 婊氳疆缂╂斁 路 鎷栨嫿骞崇Щ
                 </div>
             </div>
         </div>
         
         <div id="graph-container"></div>
-        <div id="debug-log" style="position:fixed;bottom:10px;left:300px;right:10px;background:rgba(255,0,0,0.9);color:white;padding:10px;font-size:12px;z-index:999;display:none;max-height:200px;overflow:auto;border-radius:8px;"></div>
     </div>
     
     <div id="cat-info">
-        <span class="dp-close" onclick="closeCatInfo()">×</span>
+        <span class="dp-close" onclick="closeCatInfo()">脳</span>
         <h4 id="cat-info-title"></h4>
         <div class="cat-desc" id="cat-info-desc"></div>
         <div class="cat-stats" id="cat-info-stats"></div>
     </div>
     
     <div id="detail-panel">
-        <span class="dp-close" onclick="closeDetail()">×</span>
+        <span class="dp-close" onclick="closeDetail()">脳</span>
         <div class="dp-cn-title" id="dp-cn-title"></div>
         <div class="dp-en-title" id="dp-en-title"></div>
         <div class="dp-stars" id="dp-stars"></div>
@@ -423,7 +494,7 @@
         <div class="dp-tags" id="dp-tags"></div>
         <div class="dp-summary" id="dp-summary"></div>
         <div class="dp-insight" id="dp-insight"></div>
-        <a class="dp-link" id="dp-link" href="#" target="_blank">阅读原文 →</a>
+        <a class="dp-link" id="dp-link" href="#" target="_blank">闃呰鍘熸枃 鈫?/a>
     </div>
 
 <script>
@@ -436,42 +507,30 @@ const COLORS = {
 };
 
 const CAT_CONFIG = {
-    'ai-search': {emoji: '🔍', name: 'AI搜索'},
-    'agentic-b2b': {emoji: '🤖', name: 'Agentic B2B'},
-    'ai-industry': {emoji: '🏭', name: 'AI行业动态'},
-    'academic': {emoji: '📚', name: '学术研究'}
+    'ai-search': {emoji: '馃攳', name: 'AI鎼滅储'},
+    'agentic-b2b': {emoji: '馃', name: 'Agentic B2B'},
+    'ai-industry': {emoji: '馃彮', name: 'AI琛屼笟鍔ㄦ€?},
+    'academic': {emoji: '馃摎', name: '瀛︽湳鐮旂┒'}
 };
 
 let network, nodes, edges, allNodes, allEdges, graphData;
 let articlesVisible = false;
 let physicsEnabled = true;
+let hoverPausedPhysics = false;
 let activeCategories = new Set(Object.keys(CAT_CONFIG));
 let expandedTags = new Set();
-
-function log(msg) {
-    const el = document.getElementById('debug-log');
-    if (el) {
-        el.style.display = 'block';
-        el.innerHTML += msg + '<br>';
-    }
-    console.log(msg);
-}
+let selectedNodeId = null;
 
 async function init() {
     try {
-    log('Step 1: Fetching data...');
     const resp = await fetch('graph-data.json');
-    log('Step 2: Data fetched, parsing JSON...');
     graphData = await resp.json();
-    log('Step 3: JSON parsed, nodes=' + graphData.nodes.length + ', edges=' + graphData.edges.length);
     
     // Update header stats
-    document.getElementById('stat-nodes').textContent = `${graphData.nodes.length} 节点`;
-    document.getElementById('stat-edges').textContent = `${graphData.edges.length} 连线`;
+    document.getElementById('stat-nodes').textContent = `${graphData.nodes.length} 鑺傜偣`;
+    document.getElementById('stat-edges').textContent = `${graphData.edges.length} 杩炵嚎`;
     if (graphData.today_articles > 0) {
-        document.getElementById('today-badge').style.display = 'flex';
-        document.getElementById('today-count').textContent = graphData.today_articles;
-        document.getElementById('stat-today').textContent = `📅 今日 ${graphData.today_articles} 条`;
+        document.getElementById('stat-today').textContent = `馃搮 浠婃棩 ${graphData.today_articles} 鏉;
         document.getElementById('stat-today').style.color = '#FF6B35';
     }
     
@@ -489,6 +548,8 @@ async function init() {
         };
         
         if (n.type === 'category') {
+            const catId = n.id.replace('cat_', '');
+            const cfg = CAT_CONFIG[catId];
             return {
                 ...base,
                 shape: 'dot',
@@ -496,7 +557,7 @@ async function init() {
                 font: { size: 15, color: '#F8FAFC', face: 'sans-serif', strokeWidth: 3, strokeColor: '#0A1F3B' },
                 borderWidth: 3,
                 borderWidthSelected: 5,
-                title: `${CAT_CONFIG[n.id.replace('cat_', '')]?.emoji || ''} ${n.label}\n${n.description || ''}\n点击查看详情`,
+                title: `${cfg?.emoji || ''} ${n.label}\n${n.description || ''}\n鐐瑰嚮鏌ョ湅璇︽儏`,
                 data: { ...n }
             };
         } else if (n.type === 'tag') {
@@ -507,7 +568,7 @@ async function init() {
                 font: { size: 12, color: '#CBD5E1', face: 'sans-serif' },
                 borderWidth: 2,
                 borderWidthSelected: 4,
-                title: `标签: ${n.label}\n${n.count || 0} 篇文章\n平均重要度: ${n.avg_importance || 3}\n点击展开文章`,
+                title: `鏍囩: ${n.label}\n${n.count || 0} 绡囨枃绔燶n骞冲潎閲嶈搴? ${n.avg_importance || 3}\n鐐瑰嚮灞曞紑鏂囩珷`,
                 hidden: false,
                 data: { ...n }
             };
@@ -520,15 +581,16 @@ async function init() {
             if (n.cn_title) titleLines.push(n.cn_title);
             else titleLines.push(n.label);
             if (n.title_en && n.title_en !== n.label) titleLines.push(`(EN) ${n.title_en}`);
-            titleLines.push(`日期: ${n.date || '未知'}`);
-            titleLines.push(`重要度: ${'★'.repeat(n.importance || 3)}${'☆'.repeat(5 - (n.importance || 3))}`);
-            if (isToday) titleLines.push('🔥 今日新增');
-            if (isImportant) titleLines.push('⭐ 重要来源');
-            if (isMajor) titleLines.push('📢 重大新闻');
-            if (n.tags && n.tags.length) titleLines.push(`标签: ${n.tags.join(', ')}`);
-            if (n.cn_summary) titleLines.push(`摘要: ${n.cn_summary.substring(0, 100)}...`);
-            else if (n.summary) titleLines.push(`摘要: ${n.summary.substring(0, 100)}...`);
-            titleLines.push('点击查看详情');
+            titleLines.push(`鏃ユ湡: ${n.date || '鏈煡'}`);
+            titleLines.push(`閲嶈搴? ${'鈽?.repeat(n.importance || 3)}${'鈽?.repeat(5 - (n.importance || 3))}`);
+            if (isToday) titleLines.push('馃敟 浠婃棩鏂板');
+            if (isImportant) titleLines.push('猸?閲嶈鏉ユ簮');
+            if (isMajor) titleLines.push('馃摙 閲嶅ぇ鏂伴椈');
+            if (n.source) titleLines.push(`鏉ユ簮: ${n.source}`);
+            if (n.tags && n.tags.length) titleLines.push(`鏍囩: ${n.tags.join(', ')}`);
+            if (n.cn_summary) titleLines.push(`鎽樿: ${n.cn_summary.substring(0, 120)}...`);
+            else if (n.summary) titleLines.push(`鎽樿: ${n.summary.substring(0, 120)}...`);
+            titleLines.push('鐐瑰嚮鏌ョ湅璇︽儏');
             
             return {
                 ...base,
@@ -578,8 +640,6 @@ async function init() {
     
     const container = document.getElementById('graph-container');
     
-    log('Step 4: Building visNodes...');
-    
     const options = {
         nodes: {
             borderWidth: 2,
@@ -593,34 +653,48 @@ async function init() {
         physics: {
             enabled: true,
             forceAtlas2Based: {
-                gravitationalConstant: -70,
-                centralGravity: 0.005,
-                springLength: 130,
-                springConstant: 0.08,
-                damping: 0.35
+                gravitationalConstant: -45,
+                centralGravity: 0.018,
+                springLength: 115,
+                springConstant: 0.07,
+                damping: 0.4
             },
-            maxVelocity: 50,
+            maxVelocity: 30,
             minVelocity: 0.75,
             solver: 'forceAtlas2Based',
             stabilization: {
                 enabled: true,
-                iterations: 120,
+                iterations: 250,
                 updateInterval: 25
             }
         },
         interaction: {
             hover: true,
-            tooltipDelay: 100,
+            tooltipDelay: 80,
             zoomView: true,
             dragView: true,
-            navigationButtons: true,
+            navigationButtons: false,
             keyboard: false
         }
     };
     
-    log('Step 5: Creating network...');
     network = new vis.Network(container, { nodes, edges }, options);
-    log('Step 6: Network created!');
+    
+    // === FIX 1: Hover pause physics ===
+    network.on('hoverNode', function(params) {
+        container.style.cursor = 'pointer';
+        if (physicsEnabled && !hoverPausedPhysics) {
+            hoverPausedPhysics = true;
+            network.setOptions({ physics: { enabled: false } });
+        }
+    });
+    network.on('blurNode', function(params) {
+        container.style.cursor = 'default';
+        if (physicsEnabled && hoverPausedPhysics) {
+            hoverPausedPhysics = false;
+            network.setOptions({ physics: { enabled: true } });
+        }
+    });
     
     network.on('click', function(params) {
         if (params.nodes.length > 0) {
@@ -630,23 +704,17 @@ async function init() {
         } else {
             closeDetail();
             closeCatInfo();
+            clearSelection();
         }
     });
     
-    network.on('hoverNode', function() {
-        container.style.cursor = 'pointer';
-    });
-    network.on('blurNode', function() {
-        container.style.cursor = 'default';
-    });
-    
-    log('Step 7: Setting up UI...');
     setupUI();
-    log('Step 8: Init complete!');
-    document.getElementById('debug-log').style.display = 'none';
+    renderTodaySection();
     } catch (err) {
-        log('ERROR: ' + err.message);
-        log('STACK: ' + err.stack);
+        console.error('Init error:', err);
+        document.getElementById('graph-container').innerHTML = 
+            '<div style="display:flex;height:100%;align-items:center;justify-content:center;color:#FF6B35;font-size:16px;">' +
+            '鍔犺浇澶辫触: ' + err.message + '</div>';
     }
 }
 
@@ -655,11 +723,89 @@ function handleNodeClick(node) {
     
     if (data.type === 'category') {
         showCatInfo(data);
+        clearSelection();
     } else if (data.type === 'tag') {
+        selectTag(node.id);
         toggleTagArticles(node.id);
     } else if (data.type === 'article') {
+        selectArticle(node.id);
         showArticleDetail(data);
     }
+}
+
+// === FIX 2: Selection highlighting ===
+function clearSelection() {
+    if (selectedNodeId) {
+        const prev = nodes.get(selectedNodeId);
+        if (prev) {
+            const originalSize = prev.data?.size || (prev.data?.type === 'tag' ? 20 : (prev.data?.type === 'category' ? 45 : 7));
+            const originalBorder = prev.data?.border_color || '#ffffff';
+            nodes.update({
+                id: selectedNodeId,
+                size: originalSize,
+                borderWidth: prev.data?.type === 'category' ? 3 : (prev.data?.type === 'tag' ? 2 : 1),
+                color: { border: originalBorder }
+            });
+        }
+    }
+    selectedNodeId = null;
+    document.querySelectorAll('.tag-item').forEach(el => el.classList.remove('selected'));
+}
+
+function selectTag(tagId) {
+    clearSelection();
+    selectedNodeId = tagId;
+    
+    // Highlight in graph
+    nodes.update({
+        id: tagId,
+        size: 32,
+        borderWidth: 4,
+        color: { border: '#FF6B35' }
+    });
+    
+    // Highlight in sidebar
+    document.querySelectorAll('.tag-item').forEach(el => {
+        el.classList.remove('selected');
+        if (el.dataset.tagId === tagId) {
+            el.classList.add('selected');
+        }
+    });
+    
+    // Focus with precise positioning
+    network.focus(tagId, {
+        scale: 1.4,
+        animation: { duration: 400, easingFunction: 'easeInOutQuad' }
+    });
+    
+    // Flash effect - briefly change color back and forth
+    const node = nodes.get(tagId);
+    if (node) {
+        const origColor = node.color?.background;
+        setTimeout(() => {
+            nodes.update({ id: tagId, color: { background: '#FF6B35', border: '#FF6B35' } });
+            setTimeout(() => {
+                nodes.update({ id: tagId, color: { background: origColor, border: '#FF6B35' } });
+            }, 250);
+        }, 100);
+    }
+}
+
+function selectArticle(articleId) {
+    clearSelection();
+    selectedNodeId = articleId;
+    
+    nodes.update({
+        id: articleId,
+        size: 14,
+        borderWidth: 3,
+        color: { border: '#FF6B35' }
+    });
+    
+    network.focus(articleId, {
+        scale: 1.5,
+        animation: { duration: 400, easingFunction: 'easeInOutQuad' }
+    });
 }
 
 function showCatInfo(data) {
@@ -674,10 +820,17 @@ function showCatInfo(data) {
         `<span style="color:${data.color}">${cfg?.emoji || ''}</span> ${data.label}`;
     document.getElementById('cat-info-desc').textContent = desc;
     document.getElementById('cat-info-stats').innerHTML = 
-        `📄 ${catArticles.length} 篇文章 &nbsp;|&nbsp; 🏷 ${catTags.length} 个标签` +
-        (todayCount > 0 ? ` &nbsp;|&nbsp; 🔥 今日 ${todayCount} 条` : '');
+        `馃搫 ${catArticles.length} 绡囨枃绔?&nbsp;|&nbsp; 馃彿 ${catTags.length} 涓爣绛綻 +
+        (todayCount > 0 ? ` &nbsp;|&nbsp; 馃敟 浠婃棩 ${todayCount} 鏉 : '');
     document.getElementById('cat-info').classList.add('visible');
     closeDetail();
+    
+    // Highlight category node briefly
+    const catNodeId = data.id;
+    nodes.update({ id: catNodeId, borderWidth: 5 });
+    setTimeout(() => {
+        nodes.update({ id: catNodeId, borderWidth: 3 });
+    }, 600);
 }
 
 function closeCatInfo() {
@@ -719,33 +872,29 @@ function showArticleDetail(data) {
     document.getElementById('dp-cn-title').textContent = cnTitle;
     document.getElementById('dp-en-title').textContent = enTitle && enTitle !== cnTitle ? enTitle : '';
     
-    // Stars
     const imp = data.importance || 3;
     const starsHtml = Array(5).fill(0).map((_, i) => 
-        `<span class="star ${i < imp ? '' : 'empty'}">★</span>`
+        `<span class="star ${i < imp ? '' : 'empty'}">鈽?/span>`
     ).join('');
     document.getElementById('dp-stars').innerHTML = starsHtml;
     
-    // Meta row
     const catName = CAT_CONFIG[data.category]?.name || data.category;
-    let metaHtml = `<span>📅 ${data.date || ''}</span><span>🏷 ${catName}</span>`;
-    if (data.is_today) metaHtml += `<span class="dp-badge badge-today">今日</span>`;
-    if (data.is_important_source) metaHtml += `<span class="dp-badge badge-important">重要来源</span>`;
-    if (data.is_major_news) metaHtml += `<span class="dp-badge badge-major">重大新闻</span>`;
+    let metaHtml = `<span>馃搮 ${data.date || ''}</span><span>馃彿 ${catName}</span>`;
+    if (data.source) metaHtml += `<span>${data.source}</span>`;
+    if (data.is_today) metaHtml += `<span class="dp-badge badge-today">浠婃棩</span>`;
+    if (data.is_important_source) metaHtml += `<span class="dp-badge badge-important">閲嶈鏉ユ簮</span>`;
+    if (data.is_major_news) metaHtml += `<span class="dp-badge badge-major">閲嶅ぇ鏂伴椈</span>`;
     document.getElementById('dp-meta').innerHTML = metaHtml;
     
-    // Tags
     const tags = data.tags || [];
     document.getElementById('dp-tags').innerHTML = tags.map(t => `<span class="tag-chip">${t}</span>`).join('');
     
-    // Summary (prefer Chinese)
     const summary = data.cn_summary || data.summary || '';
     document.getElementById('dp-summary').textContent = summary;
     document.getElementById('dp-summary').style.display = summary ? 'block' : 'none';
     
-    // Insight
     const insight = data.key_insight || '';
-    document.getElementById('dp-insight').textContent = insight ? `💡 ${insight}` : '';
+    document.getElementById('dp-insight').textContent = insight ? `馃挕 ${insight}` : '';
     document.getElementById('dp-insight').style.display = insight ? 'block' : 'none';
     
     document.getElementById('dp-link').href = data.link || '#';
@@ -755,6 +904,74 @@ function showArticleDetail(data) {
 
 function closeDetail() {
     document.getElementById('detail-panel').classList.remove('visible');
+}
+
+// === FIX 7: Today section ===
+function renderTodaySection() {
+    const wrapper = document.getElementById('today-content');
+    const todayArticles = allNodes.filter(n => n.data?.is_today && n.data?.type === 'article');
+    
+    if (todayArticles.length === 0) {
+        wrapper.innerHTML = `
+            <div class="today-section empty">
+                <h3>馃搵 浠婃棩鍔ㄦ€?/h3>
+                <div class="today-empty">鏆傛棤浠婃棩鏂板鎯呮姤</div>
+            </div>
+        `;
+        return;
+    }
+    
+    let html = `<div class="today-section">`;
+    html += `<h3>馃敟 浠婃棩鏂板 ${todayArticles.length} 鏉?/h3>`;
+    
+    todayArticles.slice(0, 5).forEach(art => {
+        const d = art.data;
+        const badges = [];
+        if (d.is_important_source) badges.push('<span class="ti-badge important">閲嶈鏉ユ簮</span>');
+        if (d.is_major_news) badges.push('<span class="ti-badge major">閲嶅ぇ鏂伴椈</span>');
+        
+        html += `
+            <div class="today-item" data-node-id="${art.id}">
+                <div class="ti-title">${d.cn_title || d.label || '鏃犳爣棰?}</div>
+                <div class="ti-meta">
+                    <span>${CAT_CONFIG[d.category]?.name || d.category}</span>
+                    ${badges.join('')}
+                </div>
+            </div>
+        `;
+    });
+    
+    if (todayArticles.length > 5) {
+        html += `<div class="today-empty">杩樻湁 ${todayArticles.length - 5} 鏉?..</div>`;
+    }
+    
+    // Add category summary text
+    const summary = graphData.today_summary || {};
+    const summaryTexts = [];
+    for (const [cat, text] of Object.entries(summary)) {
+        if (text && text.trim()) {
+            summaryTexts.push(`<strong>${CAT_CONFIG[cat]?.name || cat}</strong>: ${text.trim()}`);
+        }
+    }
+    if (summaryTexts.length > 0) {
+        html += `<div class="today-summary-text">${summaryTexts.join('<br>')}</div>`;
+    }
+    
+    html += `</div>`;
+    wrapper.innerHTML = html;
+    
+    // Bind click events
+    wrapper.querySelectorAll('.today-item').forEach(el => {
+        el.addEventListener('click', () => {
+            const nodeId = el.dataset.nodeId;
+            const node = nodes.get(nodeId);
+            if (node) {
+                // Make sure article is visible
+                nodes.update({ id: nodeId, hidden: false });
+                handleNodeClick(node);
+            }
+        });
+    });
 }
 
 function setupUI() {
@@ -775,8 +992,8 @@ function setupUI() {
         header.innerHTML = `
             <div class="cat-dot" style="background:${cfg.color}"></div>
             <div class="cat-name">${cfg.emoji} ${cfg.name}</div>
-            <div class="cat-count">${catTags.length}标签${todayCount > 0 ? ` · <span style="color:#FF6B35">${todayCount}新</span>` : ''}</div>
-            <div class="cat-toggle">▶</div>
+            <div class="cat-count">${catTags.length}鏍囩${todayCount > 0 ? ` 路 <span style="color:#FF6B35">${todayCount}鏂?/span>` : ''}</div>
+            <div class="cat-toggle">鈻?/div>
         `;
         header.addEventListener('click', (e) => {
             if (e.target.closest('.cat-toggle')) {
@@ -793,6 +1010,7 @@ function setupUI() {
         catTags.forEach(tagNode => {
             const tagEl = document.createElement('div');
             tagEl.className = 'tag-item';
+            tagEl.dataset.tagId = tagNode.id;
             tagEl.innerHTML = `
                 <div class="tag-dot" style="background:${cfg.color};opacity:0.6"></div>
                 <div class="tag-label">${tagNode.label}</div>
@@ -800,9 +1018,8 @@ function setupUI() {
             `;
             tagEl.addEventListener('click', (e) => {
                 e.stopPropagation();
+                selectTag(tagNode.id);
                 toggleTagArticles(tagNode.id);
-                // Focus network on this tag
-                network.focus(tagNode.id, { scale: 1.2, animation: true });
             });
             tagList.appendChild(tagEl);
         });
@@ -812,10 +1029,13 @@ function setupUI() {
         catList.appendChild(item);
     });
     
-    // Search
+    // === FIX 3: Search with expanded fields ===
     document.getElementById('search-box').addEventListener('input', (e) => {
         const query = e.target.value.toLowerCase().trim();
+        const statusEl = document.getElementById('search-status');
+        
         if (!query) {
+            statusEl.textContent = '';
             nodes.forEach(n => {
                 if (n.data?.type === 'article') {
                     const parentTag = getParentTag(n.id);
@@ -827,27 +1047,58 @@ function setupUI() {
             return;
         }
         
+        let matchCount = 0;
+        const firstMatch = null;
+        const matchedIds = [];
+        
         nodes.forEach(n => {
-            const match = (n.label || '').toLowerCase().includes(query) ||
-                         (n.data?.title_en || '').toLowerCase().includes(query) ||
-                         (n.data?.cn_title || '').toLowerCase().includes(query) ||
-                         (n.data?.tags || []).some(t => t.toLowerCase().includes(query));
+            const d = n.data || {};
             
-            if (n.data?.type === 'category') {
+            // Expanded search across all text fields
+            const searchable = [
+                n.label, d.title_en, d.cn_title, d.summary, d.cn_summary,
+                d.key_insight, d.source
+            ].filter(Boolean).join(' ').toLowerCase();
+            
+            const tagMatch = (d.tags || []).some(t => t.toLowerCase().includes(query));
+            const match = searchable.includes(query) || tagMatch;
+            
+            if (d.type === 'category') {
                 nodes.update({ id: n.id, hidden: false });
             } else if (match) {
                 nodes.update({ id: n.id, hidden: false });
+                matchCount++;
+                matchedIds.push(n.id);
             } else {
                 nodes.update({ id: n.id, hidden: true });
             }
         });
+        
+        statusEl.innerHTML = matchCount > 0 
+            ? `鎵惧埌 <span class="match-count">${matchCount}</span> 涓尮閰嶇粨鏋渀
+            : '鏈壘鍒板尮閰嶇粨鏋?;
+        
+        // Focus and highlight first match
+        if (matchedIds.length > 0) {
+            const firstId = matchedIds[0];
+            const firstNode = nodes.get(firstId);
+            if (firstNode) {
+                if (firstNode.data?.type === 'tag') {
+                    selectTag(firstId);
+                } else if (firstNode.data?.type === 'article') {
+                    selectArticle(firstId);
+                } else {
+                    network.focus(firstId, { scale: 1.3, animation: true });
+                }
+            }
+        }
     });
     
     // Toggle articles
     document.getElementById('btn-toggle-articles').addEventListener('click', function() {
         articlesVisible = !articlesVisible;
         this.classList.toggle('active', articlesVisible);
-        this.textContent = articlesVisible ? '📄 隐藏文章节点' : '📄 显示文章节点';
+        this.textContent = articlesVisible ? '馃搫 闅愯棌鏂囩珷鑺傜偣' : '馃搫 鏄剧ず鏂囩珷鑺傜偣';
         
         nodes.forEach(n => {
             if (n.data?.type === 'article') {
@@ -866,13 +1117,14 @@ function setupUI() {
     document.getElementById('btn-physics').addEventListener('click', function() {
         physicsEnabled = !physicsEnabled;
         this.classList.toggle('active', !physicsEnabled);
-        this.textContent = physicsEnabled ? '⏸ 暂停物理' : '▶ 恢复物理';
+        this.textContent = physicsEnabled ? '鈴?鏆傚仠鐗╃悊' : '鈻?鎭㈠鐗╃悊';
         network.setOptions({ physics: { enabled: physicsEnabled } });
     });
     
     // Reset
     document.getElementById('btn-reset').addEventListener('click', () => {
         network.fit({ animation: { duration: 500 } });
+        clearSelection();
     });
 }
 
@@ -886,9 +1138,14 @@ function toggleTagList(cat, item) {
 function updateTagListUI() {
     // Update tag list to show which are expanded
     document.querySelectorAll('.tag-item').forEach(el => {
-        const tagId = el.closest('.tag-list')?.id;
-        if (!tagId) return;
-        // Could add visual indicator here
+        const tagId = el.dataset.tagId;
+        if (tagId) {
+            if (expandedTags.has(tagId)) {
+                el.style.opacity = '1';
+            } else {
+                el.style.opacity = '0.7';
+            }
+        }
     });
 }
 
