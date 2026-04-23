@@ -11,6 +11,7 @@
             --primary: #1A237E;
             --accent: #FF6B35;
             --neutral: #E6B85C;
+            --highlight: #00E5FF;
             --qian1: #0A1F3B;
             --qian2: #1A365D;
             --qian3: #2A4D7F;
@@ -224,9 +225,15 @@
             font-size: 12px;
             color: var(--text2);
             transition: all 0.15s;
+            border-left: 3px solid transparent;
         }
         .tag-item:hover { background: var(--qian2); color: var(--text); }
-        .tag-item.selected { background: rgba(255,107,53,0.2); color: var(--accent); font-weight: 600; }
+        .tag-item.selected {
+            background: rgba(0, 229, 255, 0.12);
+            color: var(--highlight);
+            font-weight: 600;
+            border-left-color: var(--highlight);
+        }
         .tag-item .tag-dot { width: 6px; height: 6px; border-radius: 50%; }
         .tag-item .tag-label { flex: 1; }
         .tag-item .tag-num { font-size: 10px; color: var(--text3); }
@@ -471,6 +478,10 @@ const CAT_CONFIG = {
     'ai-industry': {emoji: '🏭', name: 'AI行业动态'},
     'academic': {emoji: '📚', name: '学术研究'}
 };
+const HIGHLIGHT_COLOR = '#00E5FF';
+const DIM_COLOR = '#1A365D';
+const DIM_OPACITY = 0.12;
+
 let network, nodes, edges, allNodes, allEdges, graphData;
 let articlesVisible = false;
 let physicsEnabled = true;
@@ -478,6 +489,8 @@ let hoverPaused = false;
 let activeCategories = new Set(Object.keys(CAT_CONFIG));
 let expandedTags = new Set();
 let selectedNodeId = null;
+let dimmedNodeIds = new Set();
+let originalNodeColors = {};
 
 async function init() {
     try {
@@ -496,7 +509,7 @@ async function init() {
                 color: {
                     background: n.color,
                     border: n.border_color || '#ffffff',
-                    highlight: { background: n.color, border: '#FF6B35' }
+                    highlight: { background: n.color, border: HIGHLIGHT_COLOR }
                 },
                 shadow: { enabled: true, color: n.color, size: n.type === 'category' ? 20 : 8, x: 0, y: 0 }
             };
@@ -583,6 +596,15 @@ async function init() {
         edges = new vis.DataSet(visEdges);
         allNodes = visNodes;
         allEdges = visEdges;
+
+        // Save original colors for dimming restore
+        visNodes.forEach(n => {
+            originalNodeColors[n.id] = {
+                background: n.color.background,
+                border: n.color.border
+            };
+        });
+
         const container = document.getElementById('graph-container');
         const options = {
             nodes: {
@@ -623,7 +645,7 @@ async function init() {
         };
         network = new vis.Network(container, { nodes, edges }, options);
 
-        // Hover pause physics: use internal physics API instead of setOptions
+        // Hover pause physics using internal API
         network.on('hoverNode', function(params) {
             container.style.cursor = 'pointer';
             if (physicsEnabled && !hoverPaused && network.physics && network.physics.stopSimulation) {
@@ -661,17 +683,92 @@ async function init() {
     }
 }
 
+// ===== DIMMING: highlight selected + neighbors, dim everything else =====
+function getNeighborIds(nodeId) {
+    const neighborIds = new Set([nodeId]);
+    allEdges.forEach(e => {
+        if (e.from === nodeId) neighborIds.add(e.to);
+        if (e.to === nodeId) neighborIds.add(e.from);
+    });
+    return neighborIds;
+}
+
+function dimAllExcept(keepIds) {
+    const updates = [];
+    const edgeUpdates = [];
+    nodes.get().forEach(n => {
+        if (keepIds.has(n.id)) {
+            if (dimmedNodeIds.has(n.id)) {
+                const orig = originalNodeColors[n.id];
+                updates.push({
+                    id: n.id,
+                    color: { background: orig.background, border: orig.border },
+                    font: { color: n.data?.type === 'category' ? '#F8FAFC' : (n.data?.type === 'tag' ? '#CBD5E1' : '#94A3B8') }
+                });
+                dimmedNodeIds.delete(n.id);
+            }
+        } else {
+            if (!dimmedNodeIds.has(n.id)) {
+                updates.push({
+                    id: n.id,
+                    color: { background: DIM_COLOR, border: 'rgba(100,116,139,0.3)' },
+                    font: { color: 'rgba(100,116,139,0.4)' }
+                });
+                dimmedNodeIds.add(n.id);
+            }
+        }
+    });
+    edges.get().forEach(e => {
+        if (keepIds.has(e.from) || keepIds.has(e.to)) {
+            edgeUpdates.push({ id: e.id, color: { opacity: e.id.includes('inter') ? 0.25 : 0.55 } });
+        } else {
+            edgeUpdates.push({ id: e.id, color: { opacity: 0.06 } });
+        }
+    });
+    nodes.update(updates);
+    edges.update(edgeUpdates);
+}
+
+function restoreAllDimming() {
+    const updates = [];
+    const edgeUpdates = [];
+    nodes.get().forEach(n => {
+        if (dimmedNodeIds.has(n.id)) {
+            const orig = originalNodeColors[n.id];
+            updates.push({
+                id: n.id,
+                color: { background: orig.background, border: orig.border },
+                font: { color: n.data?.type === 'category' ? '#F8FAFC' : (n.data?.type === 'tag' ? '#CBD5E1' : '#94A3B8') }
+            });
+        }
+    });
+    edges.get().forEach(e => {
+        edgeUpdates.push({ id: e.id, color: { opacity: e.id.includes('inter') ? 0.25 : (e.id.includes('cross') ? 0.3 : 0.55) } });
+    });
+    nodes.update(updates);
+    edges.update(edgeUpdates);
+    dimmedNodeIds.clear();
+}
+
 function handleNodeClick(node) {
     const data = node.data || {};
     if (data.type === 'category') {
         showCatInfo(data);
         clearSelection();
+        const keepIds = getNeighborIds(node.id);
+        // Also include all nodes in this category
+        nodes.get().forEach(n => {
+            if (n.data?.category === data.id.replace('cat_', '')) keepIds.add(n.id);
+        });
+        dimAllExcept(keepIds);
     } else if (data.type === 'tag') {
         selectTag(node.id);
         toggleTagArticles(node.id);
+        dimAllExcept(getNeighborIds(node.id));
     } else if (data.type === 'article') {
         selectArticle(node.id);
         showArticleDetail(data);
+        dimAllExcept(getNeighborIds(node.id));
     }
 }
 
@@ -691,6 +788,7 @@ function clearSelection() {
     }
     selectedNodeId = null;
     document.querySelectorAll('.tag-item').forEach(el => el.classList.remove('selected'));
+    restoreAllDimming();
 }
 
 function selectTag(tagId) {
@@ -700,7 +798,7 @@ function selectTag(tagId) {
         id: tagId,
         size: 32,
         borderWidth: 4,
-        color: { border: '#FF6B35' }
+        color: { border: HIGHLIGHT_COLOR }
     });
     document.querySelectorAll('.tag-item').forEach(el => {
         el.classList.remove('selected');
@@ -716,9 +814,9 @@ function selectTag(tagId) {
     if (node) {
         const origColor = node.color?.background;
         setTimeout(() => {
-            nodes.update({ id: tagId, color: { background: '#FF6B35', border: '#FF6B35' } });
+            nodes.update({ id: tagId, color: { background: HIGHLIGHT_COLOR, border: HIGHLIGHT_COLOR } });
             setTimeout(() => {
-                nodes.update({ id: tagId, color: { background: origColor, border: '#FF6B35' } });
+                nodes.update({ id: tagId, color: { background: origColor, border: HIGHLIGHT_COLOR } });
             }, 250);
         }, 100);
     }
@@ -731,7 +829,7 @@ function selectArticle(articleId) {
         id: articleId,
         size: 14,
         borderWidth: 3,
-        color: { border: '#FF6B35' }
+        color: { border: HIGHLIGHT_COLOR }
     });
     network.focus(articleId, {
         scale: 1.5,
@@ -943,6 +1041,7 @@ function setupUI() {
                 }
             });
             nodes.update(updates);
+            restoreAllDimming();
             return;
         }
         let matchCount = 0;
@@ -963,7 +1062,6 @@ function setupUI() {
                 updates.push({ id: n.id, hidden: false });
                 matchCount++;
                 matchedIds.push(n.id);
-                // Include neighbors
                 allEdges.forEach(ed => {
                     if (ed.from === n.id) neighborIds.add(ed.to);
                     if (ed.to === n.id) neighborIds.add(ed.from);
@@ -972,13 +1070,13 @@ function setupUI() {
                 updates.push({ id: n.id, hidden: true });
             }
         });
-        // Unhide neighbors of matched nodes
         neighborIds.forEach(nid => {
             const existing = updates.find(u => u.id === nid);
             if (existing) existing.hidden = false;
             else updates.push({ id: nid, hidden: false });
         });
         nodes.update(updates);
+        dimAllExcept(new Set([...matchedIds, ...neighborIds]));
         statusEl.innerHTML = matchCount > 0
             ? '找到 <span class="match-count">' + matchCount + '</span> 个匹配结果'
             : '未找到匹配结果';
