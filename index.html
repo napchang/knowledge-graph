@@ -403,6 +403,7 @@
         </div>
         
         <div id="graph-container"></div>
+        <div id="debug-log" style="position:fixed;bottom:10px;left:300px;right:10px;background:rgba(255,0,0,0.9);color:white;padding:10px;font-size:12px;z-index:999;display:none;max-height:200px;overflow:auto;border-radius:8px;"></div>
     </div>
     
     <div id="cat-info">
@@ -446,9 +447,22 @@ let physicsEnabled = true;
 let activeCategories = new Set(Object.keys(CAT_CONFIG));
 let expandedTags = new Set();
 
+function log(msg) {
+    const el = document.getElementById('debug-log');
+    if (el) {
+        el.style.display = 'block';
+        el.innerHTML += msg + '<br>';
+    }
+    console.log(msg);
+}
+
 async function init() {
+    try {
+    log('Step 1: Fetching data...');
     const resp = await fetch('graph-data.json');
+    log('Step 2: Data fetched, parsing JSON...');
     graphData = await resp.json();
+    log('Step 3: JSON parsed, nodes=' + graphData.nodes.length + ', edges=' + graphData.edges.length);
     
     // Update header stats
     document.getElementById('stat-nodes').textContent = `${graphData.nodes.length} 节点`;
@@ -548,7 +562,7 @@ async function init() {
                 opacity: isInterCat ? 0.25 : (isCross ? 0.3 : 0.55) 
             },
             width: isInterCat ? 1 : (src?.type === 'category' ? 2 : 1.2),
-            arrows: isInterCat ? false : 'to',
+            arrows: isInterCat ? undefined : 'to',
             dashes: isInterCat || isCross,
             title: e.label || '',
             hidden: false,
@@ -562,6 +576,8 @@ async function init() {
     allEdges = visEdges;
     
     const container = document.getElementById('graph-container');
+    
+    log('Step 4: Building visNodes...');
     
     const options = {
         nodes: {
@@ -601,7 +617,9 @@ async function init() {
         }
     };
     
+    log('Step 5: Creating network...');
     network = new vis.Network(container, { nodes, edges }, options);
+    log('Step 6: Network created!');
     
     network.on('click', function(params) {
         if (params.nodes.length > 0) {
@@ -621,7 +639,14 @@ async function init() {
         container.style.cursor = 'default';
     });
     
+    log('Step 7: Setting up UI...');
     setupUI();
+    log('Step 8: Init complete!');
+    document.getElementById('debug-log').style.display = 'none';
+    } catch (err) {
+        log('ERROR: ' + err.message);
+        log('STACK: ' + err.stack);
+    }
 }
 
 function handleNodeClick(node) {
