@@ -474,7 +474,7 @@ const CAT_CONFIG = {
 let network, nodes, edges, allNodes, allEdges, graphData;
 let articlesVisible = false;
 let physicsEnabled = true;
-let hoverPausedPhysics = false;
+let hoverPaused = false;
 let activeCategories = new Set(Object.keys(CAT_CONFIG));
 let expandedTags = new Set();
 let selectedNodeId = null;
@@ -622,20 +622,23 @@ async function init() {
             }
         };
         network = new vis.Network(container, { nodes, edges }, options);
+
+        // Hover pause physics: use internal physics API instead of setOptions
         network.on('hoverNode', function(params) {
             container.style.cursor = 'pointer';
-            if (physicsEnabled && !hoverPausedPhysics) {
-                hoverPausedPhysics = true;
-                network.setOptions({ physics: { enabled: false } });
+            if (physicsEnabled && !hoverPaused && network.physics && network.physics.stopSimulation) {
+                hoverPaused = true;
+                network.physics.stopSimulation();
             }
         });
         network.on('blurNode', function(params) {
             container.style.cursor = 'default';
-            if (physicsEnabled && hoverPausedPhysics) {
-                hoverPausedPhysics = false;
-                network.setOptions({ physics: { enabled: true } });
+            if (physicsEnabled && hoverPaused && network.physics && network.physics.startSimulation) {
+                hoverPaused = false;
+                network.physics.startSimulation();
             }
         });
+
         network.on('click', function(params) {
             if (params.nodes.length > 0) {
                 const nodeId = params.nodes[0];
@@ -647,6 +650,7 @@ async function init() {
                 clearSelection();
             }
         });
+
         setupUI();
         renderTodaySection();
     } catch (err) {
@@ -855,8 +859,10 @@ function renderTodaySection() {
     const summary = graphData.today_summary || {};
     const summaryTexts = [];
     for (const [cat, text] of Object.entries(summary)) {
-        if (text && text.trim()) {
+        if (text && text.trim && text.trim()) {
             summaryTexts.push('<strong>' + (CAT_CONFIG[cat]?.name || cat) + '</strong>: ' + text.trim());
+        } else if (typeof text === 'object' && text.titles) {
+            summaryTexts.push('<strong>' + (CAT_CONFIG[cat]?.name || cat) + '</strong>: ' + text.titles.slice(0,3).join('、'));
         }
     }
     if (summaryTexts.length > 0) {
@@ -927,19 +933,23 @@ function setupUI() {
         const statusEl = document.getElementById('search-status');
         if (!query) {
             statusEl.textContent = '';
-            nodes.forEach(n => {
+            const updates = [];
+            nodes.get().forEach(n => {
                 if (n.data?.type === 'article') {
                     const parentTag = getParentTag(n.id);
-                    nodes.update({ id: n.id, hidden: !expandedTags.has(parentTag) && !articlesVisible });
+                    updates.push({ id: n.id, hidden: !expandedTags.has(parentTag) && !articlesVisible });
                 } else {
-                    nodes.update({ id: n.id, hidden: false });
+                    updates.push({ id: n.id, hidden: false });
                 }
             });
+            nodes.update(updates);
             return;
         }
         let matchCount = 0;
         const matchedIds = [];
-        nodes.forEach(n => {
+        const neighborIds = new Set();
+        const updates = [];
+        nodes.get().forEach(n => {
             const d = n.data || {};
             const searchable = [
                 n.label, d.title_en, d.cn_title, d.summary, d.cn_summary,
@@ -948,15 +958,27 @@ function setupUI() {
             const tagMatch = (d.tags || []).some(t => t.toLowerCase().includes(query));
             const match = searchable.includes(query) || tagMatch;
             if (d.type === 'category') {
-                nodes.update({ id: n.id, hidden: false });
+                updates.push({ id: n.id, hidden: false });
             } else if (match) {
-                nodes.update({ id: n.id, hidden: false });
+                updates.push({ id: n.id, hidden: false });
                 matchCount++;
                 matchedIds.push(n.id);
+                // Include neighbors
+                allEdges.forEach(ed => {
+                    if (ed.from === n.id) neighborIds.add(ed.to);
+                    if (ed.to === n.id) neighborIds.add(ed.from);
+                });
             } else {
-                nodes.update({ id: n.id, hidden: true });
+                updates.push({ id: n.id, hidden: true });
             }
         });
+        // Unhide neighbors of matched nodes
+        neighborIds.forEach(nid => {
+            const existing = updates.find(u => u.id === nid);
+            if (existing) existing.hidden = false;
+            else updates.push({ id: nid, hidden: false });
+        });
+        nodes.update(updates);
         statusEl.innerHTML = matchCount > 0
             ? '找到 <span class="match-count">' + matchCount + '</span> 个匹配结果'
             : '未找到匹配结果';
@@ -979,17 +1001,19 @@ function setupUI() {
         articlesVisible = !articlesVisible;
         this.classList.toggle('active', articlesVisible);
         this.textContent = articlesVisible ? '隐藏文章节点' : '显示文章节点';
-        nodes.forEach(n => {
+        const updates = [];
+        nodes.get().forEach(n => {
             if (n.data?.type === 'article') {
                 if (articlesVisible) {
                     const cat = n.data?.category;
-                    nodes.update({ id: n.id, hidden: !activeCategories.has(cat) });
+                    updates.push({ id: n.id, hidden: !activeCategories.has(cat) });
                 } else {
                     const parentTag = getParentTag(n.id);
-                    nodes.update({ id: n.id, hidden: !expandedTags.has(parentTag) });
+                    updates.push({ id: n.id, hidden: !expandedTags.has(parentTag) });
                 }
             }
         });
+        nodes.update(updates);
     });
 
     document.getElementById('btn-physics').addEventListener('click', function() {
@@ -1040,18 +1064,20 @@ function toggleCategory(cat, el) {
         activeCategories.add(cat);
         el.classList.remove('inactive');
     }
-    nodes.forEach(n => {
+    const updates = [];
+    nodes.get().forEach(n => {
         const nodeCat = n.data?.category;
         if (nodeCat === cat) {
             if (n.data?.type === 'article') {
                 const parentTag = getParentTag(n.id);
                 const show = activeCategories.has(cat) && (articlesVisible || expandedTags.has(parentTag));
-                nodes.update({ id: n.id, hidden: !show });
+                updates.push({ id: n.id, hidden: !show });
             } else {
-                nodes.update({ id: n.id, hidden: !activeCategories.has(cat) });
+                updates.push({ id: n.id, hidden: !activeCategories.has(cat) });
             }
         }
     });
+    nodes.update(updates);
 }
 
 init();
