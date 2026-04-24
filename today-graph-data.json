@@ -2387,6 +2387,54 @@
       "target": "tag_GEO",
       "value": 2,
       "label": "包含"
+    },
+    {
+      "source": "cat_ai-search",
+      "target": "cat_agentic-b2b",
+      "value": 1,
+      "type": "inter-cat",
+      "label": "搜索驱动B2B获客",
+      "dashes": true
+    },
+    {
+      "source": "cat_ai-search",
+      "target": "cat_ai-industry",
+      "value": 1,
+      "type": "inter-cat",
+      "label": "搜索产品商业化",
+      "dashes": true
+    },
+    {
+      "source": "cat_ai-search",
+      "target": "cat_academic",
+      "value": 1,
+      "type": "inter-cat",
+      "label": "搜索算法研究",
+      "dashes": true
+    },
+    {
+      "source": "cat_agentic-b2b",
+      "target": "cat_ai-industry",
+      "value": 1,
+      "type": "inter-cat",
+      "label": "B2B AI产品",
+      "dashes": true
+    },
+    {
+      "source": "cat_agentic-b2b",
+      "target": "cat_academic",
+      "value": 1,
+      "type": "inter-cat",
+      "label": "Agentic研究",
+      "dashes": true
+    },
+    {
+      "source": "cat_ai-industry",
+      "target": "cat_academic",
+      "value": 1,
+      "type": "inter-cat",
+      "label": "产学研转化",
+      "dashes": true
     }
   ]
 }
