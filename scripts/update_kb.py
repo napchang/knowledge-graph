@@ -23,6 +23,11 @@ if os.path.exists(os.path.join(BASE_DIR, "rss-data", "data", "aggregated")):
     DATA_DIR = os.path.join(BASE_DIR, "rss-data", "data", "aggregated")
 else:
     DATA_DIR = os.path.join(BASE_DIR, "data", "aggregated")
+# Fallback for local recovery: prefer full historical data from sibling repo
+_base_abs = os.path.abspath(BASE_DIR)
+alt2 = os.path.join(os.path.dirname(_base_abs), "rss_source", "napchang-rss-news-aggregator-0506567", "data", "aggregated")
+if os.path.exists(alt2) and len(os.listdir(alt2)) > len(os.listdir(DATA_DIR)):
+    DATA_DIR = alt2
 KB_DIR = os.path.join(BASE_DIR, "geo-knowledge-base")
 
 def classify_category(article):
@@ -52,43 +57,103 @@ def classify_category(article):
     return "ai-industry"
 
 def get_topic_tags(article, category):
-    """获取Topic标签"""
+    """获取层级Topic标签 (Obsidian风格: Parent/Child)"""
     title = article.get("title", "").lower()
     summary = article.get("cn_summary", "").lower()
-    combined = title + " " + summary
+    content = article.get("content", "").lower()
+    combined = title + " " + summary + " " + content
     tags = []
     
     if category == "ai-search":
-        if "geo" in combined: tags.append("GEO")
-        if "aeo" in combined: tags.append("AEO")
-        if "seo" in combined: tags.append("SEO")
-        if "rank" in combined or "metric" in combined or "measure" in combined: tags.append("度量指标")
-        if "platform" in combined or "chatgpt" in combined or "perplexity" in combined: tags.append("平台特定")
-        if "algorithm" in combined or "search engine" in combined: tags.append("搜索技术")
-        if not tags: tags.append("搜索技术")
+        if "geo" in combined:
+            if "local" in combined or "ecommerce" in combined or "电商" in combined:
+                tags.append("GEO/本地电商")
+            elif "strategy" in combined or "策略" in combined:
+                tags.append("GEO/策略")
+            else:
+                tags.append("GEO")
+        if "aeo" in combined:
+            if "platform" in combined or "平台" in combined:
+                tags.append("AEO/平台优化")
+            else:
+                tags.append("AEO")
+        if "seo" in combined:
+            if "technical" in combined or "技术" in combined or "audit" in combined:
+                tags.append("SEO/技术优化")
+            elif "content" in combined or "内容" in combined:
+                tags.append("SEO/内容策略")
+            else:
+                tags.append("SEO")
+        if "rank" in combined or "metric" in combined or "measure" in combined or "kpi" in combined:
+            tags.append("搜索度量")
+        if "algorithm" in combined or "search engine" in combined or "检索" in combined:
+            tags.append("搜索技术/算法")
+        if "platform" in combined or "chatgpt" in combined or "perplexity" in combined or "claude" in combined:
+            tags.append("平台/AI搜索产品")
+        if not tags:
+            tags.append("搜索技术")
     
     elif category == "agentic-b2b":
-        if "marketing" in combined: tags.append("marketing")
-        if "sales" in combined: tags.append("sales")
-        if "strategy" in combined or "cmo" in combined or "plan" in combined: tags.append("strategy")
-        if "customer" in combined or "cx" in combined or "experience" in combined: tags.append("CX")
-        if "automation" in combined or "agentic" in combined or "workflow" in combined: tags.append("automation")
-        if not tags: tags.append("strategy")
+        if "marketing" in combined:
+            if "automation" in combined or "workflow" in combined or "自动" in combined:
+                tags.append("Marketing/Automation")
+            elif "email" in combined or "邮件" in combined:
+                tags.append("Marketing/Email")
+            elif "content" in combined or "内容" in combined:
+                tags.append("Marketing/Content")
+            elif "strategy" in combined or "cmo" in combined or "战略" in combined:
+                tags.append("Marketing/Strategy")
+            else:
+                tags.append("Marketing")
+        if "sales" in combined or "crm" in combined:
+            if "crm" in combined or "salesforce" in combined or "hubspot" in combined:
+                tags.append("Sales/CRM")
+            else:
+                tags.append("Sales")
+        if "customer" in combined or "cx" in combined or "experience" in combined or "体验" in combined:
+            tags.append("CX/客户体验")
+        if "automation" in combined or "agentic" in combined or "workflow" in combined:
+            if "workflow" in combined:
+                tags.append("Automation/Workflow")
+            else:
+                tags.append("Automation")
+        if "strategy" in combined or "plan" in combined:
+            tags.append("B2B/Strategy")
+        if not tags:
+            tags.append("B2B/Strategy")
     
     elif category == "academic":
-        if "algorithm" in combined: tags.append("算法")
-        if "model" in combined or "architecture" in combined: tags.append("模型架构")
-        if "nlp" in combined or "language" in combined: tags.append("NLP")
-        if "vision" in combined or "image" in combined: tags.append("CV")
-        if "retrieval" in combined or "search" in combined: tags.append("信息检索")
-        if not tags: tags.append("研究")
+        if "algorithm" in combined or "算法" in combined:
+            tags.append("学术/算法")
+        if "model" in combined or "architecture" in combined or "架构" in combined:
+            if "transformer" in combined or "llm" in combined or "gpt" in combined:
+                tags.append("学术/模型架构")
+            else:
+                tags.append("学术/模型架构")
+        if "nlp" in combined or "language" in combined or "语言" in combined:
+            tags.append("学术/NLP")
+        if "vision" in combined or "image" in combined or "多模态" in combined:
+            tags.append("学术/CV")
+        if "retrieval" in combined or "search" in combined or "检索" in combined:
+            tags.append("学术/信息检索")
+        if "paper" in combined or "research" in combined or "论文" in combined or "study" in combined:
+            tags.append("学术前沿")
+        if not tags:
+            tags.append("学术前沿")
     
     else:  # ai-industry
-        if "builder" in combined or "developer" in combined: tags.append("builder动态")
-        if "launch" in combined or "release" in combined or "product" in combined: tags.append("产品发布")
-        if "fund" in combined or "invest" in combined or "million" in combined: tags.append("融资")
-        if "openai" in combined or "google" in combined or "meta" in combined: tags.append("大厂战略")
-        if not tags: tags.append("行业趋势")
+        if "builder" in combined or "developer" in combined or "开发者" in combined:
+            tags.append("行业/Builder动态")
+        if "launch" in combined or "release" in combined or "product" in combined or "发布" in combined:
+            tags.append("行业/产品发布")
+        if "fund" in combined or "invest" in combined or "million" in combined or "融资" in combined:
+            tags.append("行业/融资")
+        if "openai" in combined or "google" in combined or "meta" in combined or "anthropic" in combined or "microsoft" in combined:
+            tags.append("行业/大厂战略")
+        if "agent" in combined or "智能体" in combined:
+            tags.append("行业/Agent生态")
+        if not tags:
+            tags.append("行业/趋势")
     
     return tags
 
