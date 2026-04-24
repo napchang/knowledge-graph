@@ -880,13 +880,13 @@ async function init(dataUrl) {
             physics: {
                 enabled: true,
                 forceAtlas2Based: {
-                    gravitationalConstant: -45,
-                    centralGravity: 0.018,
-                    springLength: 115,
-                    springConstant: 0.07,
-                    damping: 0.4
+                    gravitationalConstant: -60,
+                    centralGravity: 0.015,
+                    springLength: 130,
+                    springConstant: 0.06,
+                    damping: 0.5
                 },
-                maxVelocity: 30,
+                maxVelocity: 25,
                 minVelocity: 0.75,
                 solver: 'forceAtlas2Based',
                 stabilization: {
@@ -1032,15 +1032,16 @@ function handleNodeClick(node) {
         selectArticle(node.id);
         showArticleDetail(data);
         dimAllExcept(getNeighborIds(node.id));
-        // Re-focus after dimming to ensure node is centered correctly
+        // Re-focus with offset to account for detail panel width
         setTimeout(() => {
             if (network && selectedNodeId) {
                 network.focus(selectedNodeId, {
                     scale: 1.5,
+                    offset: { x: -120, y: 0 },
                     animation: { duration: 400, easingFunction: 'easeInOutQuad' }
                 });
             }
-        }, 250);
+        }, 300);
     }
 }
 
