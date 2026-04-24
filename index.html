@@ -184,6 +184,66 @@
             padding-top: 8px;
             border-top: 1px solid rgba(255,107,53,0.15);
         }
+        /* Today Category Cards */
+        .today-cat-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .today-cat-card {
+            background: var(--qian2);
+            border: 1px solid var(--qian3);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.2s;
+        }
+        .today-cat-card.expanded {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 1px rgba(255,107,53,0.2);
+        }
+        .today-cat-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 10px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+            transition: background 0.15s;
+        }
+        .today-cat-header:hover {
+            background: var(--qian3);
+        }
+        .today-cat-count {
+            font-size: 11px;
+            color: var(--accent);
+            font-weight: 700;
+        }
+        .today-cat-body {
+            padding: 0 10px 8px;
+        }
+        .today-cat-item {
+            padding: 6px 8px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 11px;
+            color: var(--text2);
+            line-height: 1.4;
+            transition: all 0.15s;
+            border-left: 2px solid transparent;
+            margin-bottom: 3px;
+        }
+        .today-cat-item:hover {
+            background: var(--qian3);
+            color: var(--text);
+            border-left-color: var(--accent);
+        }
+        .tc-empty {
+            font-size: 11px;
+            color: var(--text3);
+            padding: 6px 0;
+            text-align: center;
+        }
         .cat-item {
             border-radius: 8px;
             margin-bottom: 4px;
@@ -235,6 +295,8 @@
             border-left-color: var(--highlight);
         }
         .tag-item .tag-dot { width: 6px; height: 6px; border-radius: 50%; }
+        .tag-item.parent-tag { font-weight: 600; color: var(--text); }
+        .tag-item.child-tag { padding-left: 24px; font-size: 11px; opacity: 0.85; }
         .tag-item .tag-label { flex: 1; }
         .tag-item .tag-num { font-size: 10px; color: var(--text3); }
         .btn {
@@ -556,8 +618,7 @@ async function switchTab(tab) {
     activeCategories = new Set(Object.keys(CAT_CONFIG));
     selectedNodeId = null;
     dimmedNodeIds.clear();
-    todayFilterCat = null;
-    todayExpanded = false;
+    todayExpandedCat = null;
     articlesVisible = false;
     
     // Clear sidebar lists
@@ -667,7 +728,7 @@ async function init(dataUrl) {
                 arrows: isInterCat ? undefined : 'to',
                 dashes: isInterCat || isCross,
                 title: e.label || '',
-                hidden: false,
+                hidden: e.type === 'layout-anchor',
                 smooth: { type: 'continuous' }
             };
         });
@@ -808,7 +869,8 @@ function dimAllExcept(keepIds) {
         if (keepIds.has(e.from) || keepIds.has(e.to)) {
             edgeUpdates.push({ id: e.id, color: { opacity: e.id.includes('inter') ? 0.25 : 0.55 } });
         } else {
-            edgeUpdates.push({ id: e.id, color: { opacity: 0.02 } });
+            // High transparency but still barely visible (not fully hidden)
+            edgeUpdates.push({ id: e.id, color: { opacity: 0.06 } });
         }
     });
     if (updates.length > 0) nodes.update(updates);
@@ -829,7 +891,7 @@ function restoreAllDimming() {
         }
     });
     edges.get().forEach(e => {
-        edgeUpdates.push({ id: e.id, color: { opacity: e.id.includes('inter') ? 0.25 : (e.id.includes('cross') ? 0.3 : 0.55) } });
+        edgeUpdates.push({ id: e.id, color: { opacity: e.id.includes('inter') ? 0.25 : (e.id.includes('cross') ? 0.3 : (e.id.includes('layout-anchor') ? 0 : 0.55)) } });
     });
     if (updates.length > 0) nodes.update(updates);
     if (edgeUpdates.length > 0) edges.update(edgeUpdates);
@@ -987,6 +1049,50 @@ function toggleTagArticles(tagId) {
     updateTagListUI();
 }
 
+function toggleParentTagArticles(parentTagId, parentLabel) {
+    // Find all child tags
+    const childTagIds = allNodes
+        .filter(n => n.data?.type === 'tag' && n.label.startsWith(parentLabel + '/'))
+        .map(n => n.id);
+    
+    const allRelated = new Set([parentTagId, ...childTagIds]);
+    const anyExpanded = Array.from(allRelated).some(id => expandedTags.has(id));
+    
+    if (anyExpanded) {
+        // Collapse all
+        allRelated.forEach(id => expandedTags.delete(id));
+        const articleIds = new Set();
+        allEdges.forEach(e => {
+            if (allRelated.has(e.from) || allRelated.has(e.to)) {
+                const otherId = allRelated.has(e.from) ? e.to : e.from;
+                const otherNode = allNodes.find(n => n.id === otherId);
+                if (otherNode && otherNode.data?.type === 'article') {
+                    articleIds.add(otherId);
+                }
+            }
+        });
+        articleIds.forEach(id => nodes.update({ id, hidden: true }));
+    } else {
+        // Expand all
+        allRelated.forEach(id => expandedTags.add(id));
+        const articleIds = new Set();
+        allEdges.forEach(e => {
+            if (allRelated.has(e.from) || allRelated.has(e.to)) {
+                const otherId = allRelated.has(e.from) ? e.to : e.from;
+                const otherNode = allNodes.find(n => n.id === otherId);
+                if (otherNode && otherNode.data?.type === 'article') {
+                    const cat = otherNode.data?.category;
+                    if (activeCategories.has(cat)) {
+                        articleIds.add(otherId);
+                    }
+                }
+            }
+        });
+        articleIds.forEach(id => nodes.update({ id, hidden: false }));
+    }
+    updateTagListUI();
+}
+
 function showArticleDetail(data) {
     const cnTitle = data.cn_title || data.label || '';
     const enTitle = data.title_en || '';
@@ -1034,99 +1140,79 @@ function toggleTodaySection() {
     }
 }
 
-let todayFilterCat = null;
-let todayExpanded = false;
+let todayExpandedCat = null;  // Which category card is expanded
 
 function renderTodaySection() {
     const wrapper = document.getElementById('today-content');
-    let todayArticles = allNodes.filter(n => n.data?.is_today && n.data?.type === 'article');
-    
-    // Apply category filter if set
-    const isFiltered = todayFilterCat !== null;
-    if (isFiltered) {
-        todayArticles = todayArticles.filter(n => n.data?.category === todayFilterCat);
-    }
+    const todayArticles = allNodes.filter(n => n.data?.is_today && n.data?.type === 'article');
     
     if (todayArticles.length === 0) {
-        wrapper.innerHTML =
-            '<div class="today-section empty">' +
-            '<h3>今日动态</h3>' +
-            '<div class="today-empty">暂无今日新增情报</div>' +
-            '</div>';
+        wrapper.innerHTML = '<div class="today-empty">暂无今日新增情报</div>';
         return;
     }
     
-    const displayCount = todayExpanded ? todayArticles.length : Math.min(5, todayArticles.length);
-    const hasMore = todayArticles.length > 5 && !todayExpanded;
-    
-    let html = '<div class="today-section">';
-    if (isFiltered) {
-        const cfg = CAT_CONFIG[todayFilterCat];
-        html += '<h3>' + cfg.emoji + ' ' + cfg.name + ' · 今日 ' + todayArticles.length + ' 条 <span class="today-clear-filter" style="color:#64748B;font-size:12px;cursor:pointer;margin-left:8px;">[显示全部]</span></h3>';
-    } else {
-        html += '<h3>今日新增 ' + todayArticles.length + ' 条</h3>';
-    }
-    
-    todayArticles.slice(0, displayCount).forEach(art => {
-        const d = art.data;
-        const badges = [];
-        if (d.is_important_source) badges.push('<span class="ti-badge important">重要来源</span>');
-        if (d.is_major_news) badges.push('<span class="ti-badge major">重大新闻</span>');
-        html +=
-            '<div class="today-item" data-node-id="' + art.id + '">' +
-            '<div class="ti-title">' + (d.cn_title || d.label || '无标题') + '</div>' +
-            '<div class="ti-meta">' +
-            '<span>' + (CAT_CONFIG[d.category]?.name || d.category) + '</span>' +
-            badges.join('') +
-            '</div></div>';
+    // Group by category
+    const byCat = {};
+    Object.keys(CAT_CONFIG).forEach(cat => byCat[cat] = []);
+    todayArticles.forEach(art => {
+        const cat = art.data?.category;
+        if (cat && byCat[cat]) byCat[cat].push(art);
     });
     
-    if (hasMore) {
-        html += '<div class="today-show-more" style="cursor:pointer;color:#FF6B35;font-size:13px;padding:8px 0;text-align:center;">▼ 展开剩余 ' + (todayArticles.length - 5) + ' 条</div>';
-    } else if (todayExpanded && todayArticles.length > 5) {
-        html += '<div class="today-show-more" style="cursor:pointer;color:#64748B;font-size:13px;padding:8px 0;text-align:center;">▲ 收起</div>';
-    }
-    
+    let html = '<div class="today-cat-cards">';
+    Object.entries(CAT_CONFIG).forEach(([cat, cfg]) => {
+        const arts = byCat[cat] || [];
+        const isExpanded = todayExpandedCat === cat;
+        html += '<div class="today-cat-card ' + (isExpanded ? 'expanded' : '') + '" data-cat="' + cat + '">' +
+            '<div class="today-cat-header" onclick="toggleTodayCatCard(\'' + cat + '\')">' +
+            '<span>' + cfg.emoji + ' ' + cfg.name + '</span>' +
+            '<span class="today-cat-count">' + arts.length + ' 新</span>' +
+            '</div>' +
+            '<div class="today-cat-body"' + (isExpanded ? '' : ' style="display:none;"') + '>';
+        if (arts.length === 0) {
+            html += '<div class="tc-empty">暂无今日新增</div>';
+        } else {
+            arts.forEach(art => {
+                html += '<div class="today-cat-item" data-node-id="' + art.id + '">' +
+                    '<div class="tc-title">' + (art.data?.cn_title || art.data?.label || '无标题') + '</div>' +
+                    '</div>';
+            });
+        }
+        html += '</div></div>';
+    });
     html += '</div>';
     wrapper.innerHTML = html;
     
     // Bind click events to article items
-    wrapper.querySelectorAll('.today-item').forEach(el => {
-        el.addEventListener('click', () => {
+    wrapper.querySelectorAll('.today-cat-item').forEach(el => {
+        el.addEventListener('click', (e) => {
+            e.stopPropagation();
             const nodeId = el.dataset.nodeId;
             const node = nodes.get(nodeId);
             if (node) {
                 nodes.update({ id: nodeId, hidden: false });
+                // Expand parent tags so the article is visible
                 const parentTag = getParentTag(nodeId);
                 if (parentTag && !expandedTags.has(parentTag)) {
                     expandedTags.add(parentTag);
                     updateTagListUI();
                 }
-                setTimeout(() => {
-                    const freshNode = nodes.get(nodeId);
-                    if (freshNode) handleNodeClick(freshNode);
-                }, 120);
+                setTimeout(() => handleNodeClick(node), 120);
             }
         });
     });
-    
-    // Bind show-more / show-less
-    const showMoreEl = wrapper.querySelector('.today-show-more');
-    if (showMoreEl) {
-        showMoreEl.addEventListener('click', () => {
-            todayExpanded = !todayExpanded;
-            renderTodaySection();
-        });
+}
+
+function toggleTodayCatCard(cat) {
+    if (todayExpandedCat === cat) {
+        todayExpandedCat = null;
+        renderTodaySection();
+        return;
     }
-    
-    // Bind clear-filter
-    const clearFilterEl = wrapper.querySelector('.today-clear-filter');
-    if (clearFilterEl) {
-        clearFilterEl.addEventListener('click', () => {
-            todayFilterCat = null;
-            renderTodaySection();
-        });
-    }
+    todayExpandedCat = cat;
+    renderTodaySection();
+    // Also focus graph on this category's today articles
+    showCategoryTodayArticles(cat);
 }
 
 function setupUI() {
@@ -1151,7 +1237,7 @@ function setupUI() {
                 toggleTagList(cat, item);
             } else if (e.target.closest('.today-count-span')) {
                 e.stopPropagation();
-                showCategoryTodayArticles(cat);
+                toggleTodayCatCard(cat);
             } else {
                 toggleCategory(cat, header);
             }
@@ -1159,20 +1245,46 @@ function setupUI() {
         const tagList = document.createElement('div');
         tagList.className = 'tag-list';
         tagList.id = 'taglist-' + cat;
-        catTags.forEach(tagNode => {
+        // Group tags: parent tags, child tags (with /), plain tags
+        const parentTags = catTags.filter(t => t.data?.is_parent_tag);
+        const childTags = catTags.filter(t => !t.data?.is_parent_tag && t.label.includes('/'));
+        const plainTags = catTags.filter(t => !t.data?.is_parent_tag && !t.label.includes('/'));
+        
+        // Helper to create tag element
+        function createTagEl(tagNode, isChild) {
             const tagEl = document.createElement('div');
-            tagEl.className = 'tag-item';
+            tagEl.className = 'tag-item' + (tagNode.data?.is_parent_tag ? ' parent-tag' : '') + (isChild ? ' child-tag' : '');
             tagEl.dataset.tagId = tagNode.id;
+            const displayLabel = tagNode.label.includes('/') ? tagNode.label.split('/').slice(1).join('/') : tagNode.label;
             tagEl.innerHTML =
                 '<div class="tag-dot" style="background:' + cfg.color + ';opacity:0.6"></div>' +
-                '<div class="tag-label">' + tagNode.label + '</div>' +
+                '<div class="tag-label">' + displayLabel + '</div>' +
                 '<div class="tag-num">' + (tagNode.data?.count || 0) + '</div>';
             tagEl.addEventListener('click', (e) => {
                 e.stopPropagation();
                 selectTag(tagNode.id);
-                toggleTagArticles(tagNode.id);
+                if (tagNode.data?.is_parent_tag) {
+                    // Toggle all child articles
+                    toggleParentTagArticles(tagNode.id, tagNode.label);
+                } else {
+                    toggleTagArticles(tagNode.id);
+                }
             });
-            tagList.appendChild(tagEl);
+            return tagEl;
+        }
+        
+        // Render parent tags with their children
+        parentTags.forEach(parentTag => {
+            tagList.appendChild(createTagEl(parentTag, false));
+            const children = childTags.filter(t => t.label.startsWith(parentTag.label + '/'));
+            children.forEach(childTag => {
+                tagList.appendChild(createTagEl(childTag, true));
+            });
+        });
+        
+        // Render plain tags
+        plainTags.forEach(tagNode => {
+            tagList.appendChild(createTagEl(tagNode, false));
         });
         item.appendChild(header);
         item.appendChild(tagList);
@@ -1223,27 +1335,39 @@ function setupUI() {
                 updates.push({ id: n.id, hidden: true });
             }
         });
+        // Ensure all neighbors are visible
         neighborIds.forEach(nid => {
             const existing = updates.find(u => u.id === nid);
             if (existing) existing.hidden = false;
             else updates.push({ id: nid, hidden: false });
         });
         nodes.update(updates);
-        dimAllExcept(new Set([...matchedIds, ...neighborIds]));
+        // Build keep set for dimming: matched + neighbors + their connections
+        const keepIds = new Set([...matchedIds, ...neighborIds]);
+        // Also include 2-hop neighbors for better context
+        neighborIds.forEach(nid => {
+            allEdges.forEach(ed => {
+                if (ed.from === nid) keepIds.add(ed.to);
+                if (ed.to === nid) keepIds.add(ed.from);
+            });
+        });
+        dimAllExcept(keepIds);
         statusEl.innerHTML = matchCount > 0
             ? '找到 <span class="match-count">' + matchCount + '</span> 个匹配结果'
             : '未找到匹配结果';
         if (matchedIds.length > 0) {
+            // Focus on all matched nodes, not just the first one
+            network.fit({
+                nodes: matchedIds,
+                animation: { duration: 500, easingFunction: 'easeInOutQuad' }
+            });
+            // Highlight the first match
             const firstId = matchedIds[0];
             const firstNode = nodes.get(firstId);
-            if (firstNode) {
-                if (firstNode.data?.type === 'tag') {
-                    selectTag(firstId);
-                } else if (firstNode.data?.type === 'article') {
-                    selectArticle(firstId);
-                } else {
-                    network.focus(firstId, { scale: 1.3, animation: true });
-                }
+            if (firstNode && firstNode.data?.type === 'article') {
+                selectArticle(firstId);
+            } else if (firstNode && firstNode.data?.type === 'tag') {
+                selectTag(firstId);
             }
         }
     });
@@ -1296,10 +1420,6 @@ function showCategoryTodayArticles(cat) {
     });
     updateTagListUI();
     if (updates.length) nodes.update(updates);
-    // Switch today section to show only this category
-    todayFilterCat = cat;
-    todayExpanded = true;
-    renderTodaySection();
     // Focus the category node and fit all today's articles in view
     setTimeout(() => {
         const keepIds = new Set();
@@ -1309,7 +1429,6 @@ function showCategoryTodayArticles(cat) {
             getNeighborIds(art.id).forEach(id => keepIds.add(id));
         });
         dimAllExcept(keepIds);
-        // Fit all relevant nodes into view (centered)
         network.fit({
             nodes: Array.from(keepIds),
             animation: { duration: 500, easingFunction: 'easeInOutQuad' }
