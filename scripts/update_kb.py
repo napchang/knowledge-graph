@@ -157,9 +157,49 @@ def get_topic_tags(article, category):
     
     return tags
 
+def load_existing_cn_content():
+    """Load existing Chinese content from old markdown files to preserve across updates"""
+    existing = {}
+    if not os.path.exists(KB_DIR):
+        return existing
+    for cat in os.listdir(KB_DIR):
+        cat_dir = os.path.join(KB_DIR, cat)
+        if not os.path.isdir(cat_dir):
+            continue
+        for md_file in os.listdir(cat_dir):
+            if md_file == 'README.md':
+                continue
+            filepath = os.path.join(cat_dir, md_file)
+            try:
+                with open(filepath, 'r', encoding='utf-8') as f:
+                    content = f.read()
+            except:
+                continue
+            parts = re.split(r'\n### ', content)
+            for part in parts[1:]:
+                lines = part.strip().split('\n')
+                link = ''
+                cn_title = ''
+                cn_summary = ''
+                for line in lines:
+                    line = line.strip()
+                    if line.startswith('- **链接**:'):
+                        link = line.split(':', 1)[1].strip()
+                    elif line.startswith('- **标题(CN)**:'):
+                        cn_title = line.split(':', 1)[1].strip()
+                    elif line.startswith('- **摘要(CN)**:'):
+                        cn_summary = line.split(':', 1)[1].strip()
+                if link and (cn_title or cn_summary):
+                    existing[link] = {'cn_title': cn_title, 'cn_summary': cn_summary}
+    print(f'Loaded existing Chinese content: {len(existing)} articles')
+    return existing
+
 def update_kb():
     """主函数：更新知识库"""
     print("=== 开始更新知识库 ===")
+    
+    # Preserve existing Chinese content across updates
+    existing_cn = load_existing_cn_content()
     
     # 收集所有文章
     articles_by_cat = {
@@ -230,10 +270,11 @@ def update_kb():
                     f.write(f"> Category: {cat.replace('-', ' ').title()} | 来源: {source}\n\n---\n\n")
                     
                     for article in source_articles:
-                        title = article.get("cn_title", article.get("title", ""))
                         link = article.get("link", "")
+                        old = existing_cn.get(link, {})
+                        title = article.get("cn_title", "") or old.get('cn_title', '') or article.get("title", "")
+                        summary = article.get("cn_summary", "") or old.get('cn_summary', '') or article.get("content", "")[:150]
                         date = article.get("published", "")[:10]
-                        summary = article.get("cn_summary", article.get("content", "")[:150])
                         tags = ", ".join(article["_tags"])
                         
                         f.write(f"### {title}\n")
@@ -242,6 +283,10 @@ def update_kb():
                         f.write(f"- **采集日期**: {article['_date']}\n")
                         f.write(f"- **Category**: {cat.replace('-', ' ').title()}\n")
                         f.write(f"- **Topic**: `{tags}`\n")
+                        if article.get("cn_title") or old.get('cn_title'):
+                            f.write(f"- **标题(CN)**: {title}\n")
+                        if article.get("cn_summary") or old.get('cn_summary'):
+                            f.write(f"- **摘要(CN)**: {summary}\n")
                         f.write(f"- **摘要**: {summary}\n\n")
             else:
                 other_articles.extend(source_articles)
@@ -263,11 +308,12 @@ def update_kb():
                     f.write(f"> Category: {cat.replace('-', ' ').title()}\n\n---\n\n")
                     
                     for article in date_articles:
-                        title = article.get("cn_title", article.get("title", ""))
                         link = article.get("link", "")
+                        old = existing_cn.get(link, {})
+                        title = article.get("cn_title", "") or old.get('cn_title', '') or article.get("title", "")
+                        summary = article.get("cn_summary", "") or old.get('cn_summary', '') or article.get("content", "")[:150]
                         pub_date = article.get("published", "")[:10]
                         source = article.get("source", "Unknown")
-                        summary = article.get("cn_summary", article.get("content", "")[:150])
                         tags = ", ".join(article["_tags"])
                         
                         f.write(f"### [{source}] {title}\n")
@@ -276,6 +322,10 @@ def update_kb():
                         f.write(f"- **采集日期**: {article['_date']}\n")
                         f.write(f"- **Category**: {cat.replace('-', ' ').title()}\n")
                         f.write(f"- **Topic**: `{tags}`\n")
+                        if article.get("cn_title") or old.get('cn_title'):
+                            f.write(f"- **标题(CN)**: {title}\n")
+                        if article.get("cn_summary") or old.get('cn_summary'):
+                            f.write(f"- **摘要(CN)**: {summary}\n")
                         f.write(f"- **摘要**: {summary}\n\n")
     
     total = sum(len(v) for v in articles_by_cat.values())
