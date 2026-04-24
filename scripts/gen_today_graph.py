@@ -84,9 +84,22 @@ for e in related_edges:
 needed_node_ids = today_article_ids | today_tag_ids | today_cat_ids
 today_nodes = [n for n in full_data['nodes'] if n['id'] in needed_node_ids]
 
-# Ensure category descriptions are present
+# Recalculate tag counts based on today's actual edges
+# Count how many today articles each tag is connected to
+tag_counts = {}
+for e in unique_edges:
+    src = e.get('source', '')
+    tgt = e.get('target', '')
+    if src.startswith('tag_') and tgt.startswith('art_') and tgt in today_article_ids:
+        tag_counts[src] = tag_counts.get(src, 0) + 1
+    if tgt.startswith('tag_') and src.startswith('art_') and src in today_article_ids:
+        tag_counts[tgt] = tag_counts.get(tgt, 0) + 1
+
+# Update tag nodes with recalculated counts
 for n in today_nodes:
-    if n.get('type') == 'category':
+    if n.get('type') == 'tag':
+        n['count'] = tag_counts.get(n['id'], 0)
+    elif n.get('type') == 'category':
         cat_id = n['id'].replace('cat_', '')
         n['description'] = full_data.get('category_descriptions', {}).get(cat_id, '')
 
