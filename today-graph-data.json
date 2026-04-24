@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24T13:38:46.432763",
+  "generated_at": "2026-04-24T15:29:41.455798",
   "date": "2026-04-23",
   "total_articles": 65,
   "today_articles": 65,
@@ -67,8 +67,8 @@
       "category": "academic",
       "color": "#5A92E5",
       "size": 38,
-      "count": 44,
-      "avg_importance": 3.0,
+      "count": 77,
+      "avg_importance": 3.5,
       "is_parent_tag": true
     },
     {
@@ -77,9 +77,9 @@
       "label": "Sales",
       "category": "agentic-b2b",
       "color": "#4A7BC3",
-      "size": 25.6,
-      "count": 7,
-      "avg_importance": 3.0,
+      "size": 29.6,
+      "count": 12,
+      "avg_importance": 3.8,
       "is_parent_tag": true
     },
     {
@@ -89,8 +89,8 @@
       "category": "ai-industry",
       "color": "#E6B85C",
       "size": 38,
-      "count": 205,
-      "avg_importance": 3.0,
+      "count": 361,
+      "avg_importance": 3.1,
       "is_parent_tag": true
     },
     {
@@ -99,9 +99,9 @@
       "label": "Automation",
       "category": "agentic-b2b",
       "color": "#4A7BC3",
-      "size": 27.2,
-      "count": 9,
-      "avg_importance": 3.0,
+      "size": 36.0,
+      "count": 20,
+      "avg_importance": 3.5,
       "is_parent_tag": true
     },
     {
@@ -112,7 +112,7 @@
       "color": "#FF6B35",
       "size": 23.2,
       "count": 4,
-      "avg_importance": 3.0,
+      "avg_importance": 3.8,
       "is_parent_tag": true
     },
     {
@@ -121,9 +121,9 @@
       "label": "CX",
       "category": "agentic-b2b",
       "color": "#4A7BC3",
-      "size": 24.0,
-      "count": 5,
-      "avg_importance": 3.0,
+      "size": 25.6,
+      "count": 7,
+      "avg_importance": 3.1,
       "is_parent_tag": true
     },
     {
@@ -134,7 +134,7 @@
       "color": "#FF6B35",
       "size": 22.4,
       "count": 3,
-      "avg_importance": 3.0,
+      "avg_importance": 3.3,
       "is_parent_tag": true
     },
     {
@@ -143,9 +143,9 @@
       "label": "B2B",
       "category": "agentic-b2b",
       "color": "#4A7BC3",
-      "size": 23.2,
-      "count": 4,
-      "avg_importance": 3.0,
+      "size": 24.8,
+      "count": 6,
+      "avg_importance": 3.3,
       "is_parent_tag": true
     },
     {
@@ -177,8 +177,8 @@
       "category": "academic",
       "color": "#5A92E5",
       "size": 30,
-      "count": 20,
-      "avg_importance": 3.0,
+      "count": 39,
+      "avg_importance": 3.4,
       "is_parent_tag": false
     },
     {
@@ -187,9 +187,9 @@
       "label": "学术/信息检索",
       "category": "academic",
       "color": "#5A92E5",
-      "size": 28.0,
-      "count": 14,
-      "avg_importance": 3.0,
+      "size": 30,
+      "count": 26,
+      "avg_importance": 3.8,
       "is_parent_tag": false
     },
     {
@@ -199,8 +199,8 @@
       "category": "academic",
       "color": "#5A92E5",
       "size": 30,
-      "count": 20,
-      "avg_importance": 3.0,
+      "count": 41,
+      "avg_importance": 3.5,
       "is_parent_tag": false
     },
     {
@@ -209,9 +209,9 @@
       "label": "学术/NLP",
       "category": "academic",
       "color": "#5A92E5",
-      "size": 21.0,
-      "count": 7,
-      "avg_importance": 3.0,
+      "size": 23.0,
+      "count": 9,
+      "avg_importance": 3.8,
       "is_parent_tag": false
     },
     {
@@ -220,9 +220,9 @@
       "label": "Sales/CRM",
       "category": "agentic-b2b",
       "color": "#4A7BC3",
-      "size": 21.0,
-      "count": 7,
-      "avg_importance": 3.0,
+      "size": 26.0,
+      "count": 12,
+      "avg_importance": 3.8,
       "is_parent_tag": false
     },
     {
@@ -232,8 +232,8 @@
       "category": "ai-industry",
       "color": "#E6B85C",
       "size": 30,
-      "count": 19,
-      "avg_importance": 3.0,
+      "count": 41,
+      "avg_importance": 3.1,
       "is_parent_tag": false
     },
     {
@@ -243,8 +243,8 @@
       "category": "ai-industry",
       "color": "#E6B85C",
       "size": 30,
-      "count": 23,
-      "avg_importance": 3.0,
+      "count": 46,
+      "avg_importance": 3.2,
       "is_parent_tag": false
     },
     {
@@ -254,8 +254,8 @@
       "category": "ai-industry",
       "color": "#E6B85C",
       "size": 30,
-      "count": 25,
-      "avg_importance": 3.0,
+      "count": 42,
+      "avg_importance": 3.2,
       "is_parent_tag": false
     },
     {
@@ -264,9 +264,9 @@
       "label": "Automation/Workflow",
       "category": "agentic-b2b",
       "color": "#4A7BC3",
-      "size": 23.0,
-      "count": 9,
-      "avg_importance": 3.0,
+      "size": 30,
+      "count": 20,
+      "avg_importance": 3.5,
       "is_parent_tag": false
     },
     {
@@ -277,7 +277,7 @@
       "color": "#FF6B35",
       "size": 21.0,
       "count": 7,
-      "avg_importance": 3.0,
+      "avg_importance": 4.0,
       "is_parent_tag": false
     },
     {
@@ -288,7 +288,7 @@
       "color": "#FF6B35",
       "size": 18.0,
       "count": 4,
-      "avg_importance": 3.0,
+      "avg_importance": 3.8,
       "is_parent_tag": false
     },
     {
@@ -297,9 +297,9 @@
       "label": "CX/客户体验",
       "category": "agentic-b2b",
       "color": "#4A7BC3",
-      "size": 19.0,
-      "count": 5,
-      "avg_importance": 3.0,
+      "size": 21.0,
+      "count": 7,
+      "avg_importance": 3.1,
       "is_parent_tag": false
     },
     {
@@ -309,8 +309,8 @@
       "category": "ai-industry",
       "color": "#E6B85C",
       "size": 30,
-      "count": 131,
-      "avg_importance": 3.0,
+      "count": 216,
+      "avg_importance": 3.1,
       "is_parent_tag": false
     },
     {
@@ -319,9 +319,9 @@
       "label": "行业/融资",
       "category": "ai-industry",
       "color": "#E6B85C",
-      "size": 19.0,
-      "count": 5,
-      "avg_importance": 3.0,
+      "size": 23.0,
+      "count": 9,
+      "avg_importance": 3.1,
       "is_parent_tag": false
     },
     {
@@ -332,7 +332,7 @@
       "color": "#FF6B35",
       "size": 17.0,
       "count": 3,
-      "avg_importance": 3.0,
+      "avg_importance": 3.3,
       "is_parent_tag": false
     },
     {
@@ -341,21 +341,22 @@
       "label": "B2B/Strategy",
       "category": "agentic-b2b",
       "color": "#4A7BC3",
-      "size": 18.0,
-      "count": 4,
-      "avg_importance": 3.0,
+      "size": 20.0,
+      "count": 6,
+      "avg_importance": 3.3,
       "is_parent_tag": false
     },
     {
       "id": "art_0",
       "type": "article",
-      "label": "Nous Research's NousCoder-...",
+      "label": "Nous Research发布开源编码模型NousC...",
       "title_en": "Nous Research's NousCoder-14B is an open-source coding model landing right in the Claude Code moment",
+      "cn_title": "Nous Research发布开源编码模型NousCoder-14B",
       "link": "https://venturebeat.com/technology/nous-researchs-nouscoder-14b-is-an-open-source-coding-model-landing-right-in",
       "date": "Wed, 07 Ja",
       "summary": "<p><a href=\"https://nousresearch.com/\">Nous Research</a>, the open-source artificial intelligence startup backed by cryp",
-      "cn_summary": "<p><a href=\"https://nousresearch.com/\">Nous Research</a>, the open-source artificial intelligence startup backed by cryp",
-      "key_insight": "",
+      "cn_summary": "Nous Research推出开源编码模型NousCoder-14B，在Claude Code热潮中提供免费替代方案，获得加密风投支持。",
+      "key_insight": "开源编码模型快速迭代，企业可低成本部署内部编码助手，降低对高价闭源工具的依赖。",
       "category": "academic",
       "tags": [
         "学术/模型架构",
@@ -363,122 +364,127 @@
         "学术前沿"
       ],
       "color": "#5A92E5",
-      "size": 10.1,
-      "importance": 3,
+      "size": 13.3,
+      "importance": 4,
       "is_today": true,
       "is_recent": true,
       "is_important_source": false,
-      "is_major_news": false,
-      "border_width": 1,
-      "border_color": "#ffffff"
+      "is_major_news": true,
+      "border_width": 2,
+      "border_color": "#E6B85C"
     },
     {
       "id": "art_1",
       "type": "article",
-      "label": "LLMs+...",
+      "label": "LLMs+：超越基础大语言模型的演进",
       "title_en": "LLMs+",
+      "cn_title": "LLMs+：超越基础大语言模型的演进",
       "link": "https://www.technologyreview.com/2026/04/21/1135645/llm-large-language-models-ai/",
       "date": "Tue, 21 Ap",
       "summary": "When ChatGPT launched as an experimental prototype in late 2022, OpenAI’s chatbot became an everyday everything app for ",
-      "cn_summary": "When ChatGPT launched as an experimental prototype in late 2022, OpenAI’s chatbot became an everyday everything app for ",
-      "key_insight": "",
+      "cn_summary": "文章探讨LLM从ChatGPT原型到超级应用的发展，分析其能力扩展、多模态融合及未来方向。",
+      "key_insight": "LLM正从单一文本模型向多模态超级应用演进，B2B营销需关注内容格式的多样化适配。",
       "category": "academic",
       "tags": [
         "学术前沿"
       ],
       "color": "#5A92E5",
-      "size": 10.1,
-      "importance": 3,
+      "size": 13.3,
+      "importance": 4,
       "is_today": true,
       "is_recent": true,
-      "is_important_source": false,
+      "is_important_source": true,
       "is_major_news": false,
-      "border_width": 1,
-      "border_color": "#ffffff"
+      "border_width": 2,
+      "border_color": "#E6B85C"
     },
     {
       "id": "art_2",
       "type": "article",
-      "label": "Agent orchestration...",
+      "label": "智能体编排：AI代理的协调与自动化",
       "title_en": "Agent orchestration",
+      "cn_title": "智能体编排：AI代理的协调与自动化",
       "link": "https://www.technologyreview.com/2026/04/21/1135654/agent-orchestration-ai-artificial-intelligence/",
       "date": "Tue, 21 Ap",
       "summary": "When people say AI will speed up drug development or fear that it will bring about mass layoffs, what they have in mind—",
-      "cn_summary": "When people say AI will speed up drug development or fear that it will bring about mass layoffs, what they have in mind—",
-      "key_insight": "",
+      "cn_summary": "文章深入分析AI代理（Agent）的编排机制，探讨其在药物研发、自动化工作流等领域的应用潜力与风险。",
+      "key_insight": "Agent编排是实现复杂自动化任务的关键，B2B企业应探索多Agent协作以提升销售/客服流程效率。",
       "category": "academic",
       "tags": [
         "学术/模型架构",
         "学术/NLP"
       ],
       "color": "#5A92E5",
-      "size": 10.1,
-      "importance": 3,
+      "size": 13.3,
+      "importance": 4,
       "is_today": true,
       "is_recent": true,
-      "is_important_source": false,
+      "is_important_source": true,
       "is_major_news": false,
-      "border_width": 1,
-      "border_color": "#ffffff"
+      "border_width": 2,
+      "border_color": "#E6B85C"
     },
     {
       "id": "art_3",
       "type": "article",
-      "label": "Supercharged scams...",
+      "label": "生成式AI助长新型诈骗",
       "title_en": "Supercharged scams",
+      "cn_title": "生成式AI助长新型诈骗",
       "link": "https://www.technologyreview.com/2026/04/21/1135647/supercharged-scams-ai-artificial-intelligence/",
       "date": "Tue, 21 Ap",
       "summary": "When ChatGPT was released to the public in late 2022, it opened people’s eyes to how easily generative AI could churn ou",
-      "cn_summary": "When ChatGPT was released to the public in late 2022, it opened people’s eyes to how easily generative AI could churn ou",
-      "key_insight": "",
+      "cn_summary": "文章指出ChatGPT等生成式AI工具能轻易生成逼真文本，已被诈骗分子利用，大幅提升网络钓鱼和社会工程学攻击的规模与可信度。",
+      "key_insight": "B2B企业需警惕AI生成的钓鱼邮件冒充品牌，应加强邮件认证与员工安全意识培训。",
       "category": "academic",
       "tags": [
         "学术前沿"
       ],
       "color": "#5A92E5",
-      "size": 10.1,
-      "importance": 3,
+      "size": 13.3,
+      "importance": 4,
       "is_today": true,
       "is_recent": true,
-      "is_important_source": false,
+      "is_important_source": true,
       "is_major_news": false,
-      "border_width": 1,
-      "border_color": "#ffffff"
+      "border_width": 2,
+      "border_color": "#E6B85C"
     },
     {
       "id": "art_4",
       "type": "article",
-      "label": "Salesforce rolls out new S...",
+      "label": "Salesforce推出新版Slackbot AI代...",
       "title_en": "Salesforce rolls out new Slackbot AI agent as it battles Microsoft and Google in workplace AI",
+      "cn_title": "Salesforce推出新版Slackbot AI代理",
       "link": "https://venturebeat.com/technology/salesforce-rolls-out-new-slackbot-ai-agent-as-it-battles-microsoft-and",
       "date": "Tue, 13 Ja",
       "summary": "<p><a href=\"https://www.salesforce.com/\">Salesforce</a> on Tuesday launched an entirely rebuilt version of <a href=\"http",
-      "cn_summary": "<p><a href=\"https://www.salesforce.com/\">Salesforce</a> on Tuesday launched an entirely rebuilt version of <a href=\"http",
-      "key_insight": "",
+      "cn_summary": "Salesforce发布重构后的Slackbot AI代理，在办公AI领域与微软和谷歌展开竞争，强化企业协作智能化。",
+      "key_insight": "企业级AI代理正嵌入协作工具，B2B公司应评估Slack/Teams生态中的自动化获客与客户互动机会。",
       "category": "agentic-b2b",
       "tags": [
         "Sales/CRM"
       ],
       "color": "#4A7BC3",
-      "size": 10.1,
-      "importance": 3,
+      "size": 11.3,
+      "importance": 4,
       "is_today": true,
       "is_recent": true,
       "is_important_source": false,
       "is_major_news": false,
-      "border_width": 1,
-      "border_color": "#ffffff"
+      "border_width": 2,
+      "border_color": "#E6B85C"
     },
     {
       "id": "art_5",
       "type": "article",
-      "label": "Another customer of troubl...",
+      "label": "初创公司Delve再曝客户安全事件",
       "title_en": "Another customer of troubled startup Delve suffered a big security incident",
+      "cn_title": "初创公司Delve再曝客户安全事件",
       "link": "https://techcrunch.com/2026/04/23/another-customer-of-troubled-startup-delve-suffered-a-big-security-incident/",
       "date": "Thu, 23 Ap",
       "summary": "TechCrunch has confirmed that Delve was the compliance company that performed the security certifications for Context AI",
-      "cn_summary": "TechCrunch has confirmed that Delve was the compliance company that performed the security certifications for Context AI",
-      "key_insight": "",
+      "cn_summary": "TechCrunch确认Delve为Context AI提供安全认证时发生数据泄露，这是该初创公司第二次重大安全事件。",
+      "key_insight": "AI初创公司的安全合规问题频发，B2B采购方需严格审查供应商的安全认证与历史记录。",
       "category": "ai-industry",
       "tags": [
         "行业/Agent生态"
@@ -496,185 +502,193 @@
     {
       "id": "art_6",
       "type": "article",
-      "label": "OpenAI releases GPT-5.5, b...",
+      "label": "OpenAI发布GPT-5.5迈向超级应用",
       "title_en": "OpenAI releases GPT-5.5, bringing company one step closer to an AI ‘super app’",
+      "cn_title": "OpenAI发布GPT-5.5迈向超级应用",
       "link": "https://techcrunch.com/2026/04/23/openai-chatgpt-gpt-5-5-ai-model-superapp/",
       "date": "Thu, 23 Ap",
       "summary": "OpenAI says its latest model offers increased capabilities across a broad variety of categories.",
-      "cn_summary": "OpenAI says its latest model offers increased capabilities across a broad variety of categories.",
-      "key_insight": "",
+      "cn_summary": "OpenAI推出GPT-5.5模型，在多种任务上能力提升，被视为向AI超级应用迈进的关键一步。",
+      "key_insight": "模型能力持续提升将加速AI超级应用整合，B2B企业应评估自身产品与AI平台的集成机会。",
       "category": "academic",
       "tags": [
         "学术/模型架构"
       ],
       "color": "#5A92E5",
-      "size": 10.1,
-      "importance": 3,
+      "size": 13.3,
+      "importance": 4,
       "is_today": true,
       "is_recent": true,
       "is_important_source": false,
-      "is_major_news": false,
-      "border_width": 1,
-      "border_color": "#ffffff"
+      "is_major_news": true,
+      "border_width": 2,
+      "border_color": "#E6B85C"
     },
     {
       "id": "art_7",
       "type": "article",
-      "label": "Claude Code costs up to $2...",
+      "label": "Claude Code高价催生免费替代品Goose",
       "title_en": "Claude Code costs up to $200 a month. Goose does the same thing for free.",
+      "cn_title": "Claude Code高价催生免费替代品Goose",
       "link": "https://venturebeat.com/infrastructure/claude-code-costs-up-to-usd200-a-month-goose-does-the-same-thing-for-free",
       "date": "Mon, 19 Ja",
       "summary": "<p>The artificial intelligence coding revolution comes with a catch: it&#x27;s expensive.</p><p><a href=\"https://claude.",
-      "cn_summary": "<p>The artificial intelligence coding revolution comes with a catch: it&#x27;s expensive.</p><p><a href=\"https://claude.",
-      "key_insight": "",
+      "cn_summary": "Anthropic的Claude Code每月收费200美元，而开源工具Goose提供类似功能且免费，引发开发者对AI编码工具定价的讨论。",
+      "key_insight": "AI编码工具的高价策略为开源替代品创造市场机会，B2B企业可关注成本敏感型开发者生态。",
       "category": "ai-industry",
       "tags": [
         "行业/产品发布",
         "行业/大厂战略"
       ],
       "color": "#E6B85C",
-      "size": 10.1,
-      "importance": 3,
+      "size": 13.3,
+      "importance": 4,
       "is_today": true,
       "is_recent": true,
       "is_important_source": false,
-      "is_major_news": false,
-      "border_width": 1,
-      "border_color": "#ffffff"
+      "is_major_news": true,
+      "border_width": 2,
+      "border_color": "#E6B85C"
     },
     {
       "id": "art_8",
       "type": "article",
-      "label": "Anthropic launches Cowork,...",
+      "label": "Anthropic发布Claude桌面代理Cowor...",
       "title_en": "Anthropic launches Cowork, a Claude Desktop agent that works in your files — no coding required",
+      "cn_title": "Anthropic发布Claude桌面代理Cowork",
       "link": "https://venturebeat.com/technology/anthropic-launches-cowork-a-claude-desktop-agent-that-works-in-your-files-no",
       "date": "Mon, 12 Ja",
       "summary": "<p><a href=\"https://www.anthropic.com/\">Anthropic</a> released <a href=\"https://claude.com/blog/cowork-research-preview\"",
-      "cn_summary": "<p><a href=\"https://www.anthropic.com/\">Anthropic</a> released <a href=\"https://claude.com/blog/cowork-research-preview\"",
-      "key_insight": "",
+      "cn_summary": "Anthropic推出Cowork，一种新的AI代理能力，扩展Claude Desktop的功能，可直接在用户文件中工作，无需编码，实现文件操作自动化。",
+      "key_insight": "AI代理进入文件操作场景，B2B营销可探索用此类工具自动化内容生成与客户文档处理。",
       "category": "academic",
       "tags": [
         "学术/信息检索",
         "学术前沿"
       ],
       "color": "#5A92E5",
-      "size": 10.1,
-      "importance": 3,
+      "size": 13.3,
+      "importance": 4,
       "is_today": true,
       "is_recent": true,
       "is_important_source": false,
-      "is_major_news": false,
-      "border_width": 1,
-      "border_color": "#ffffff"
+      "is_major_news": true,
+      "border_width": 2,
+      "border_color": "#E6B85C"
     },
     {
       "id": "art_9",
       "type": "article",
-      "label": "The creator of Claude Code...",
+      "label": "Claude Code创建者工作流引发开发者热议",
       "title_en": "The creator of Claude Code just revealed his workflow, and developers are losing their minds",
+      "cn_title": "Claude Code创建者工作流引发开发者热议",
       "link": "https://venturebeat.com/technology/the-creator-of-claude-code-just-revealed-his-workflow-and-developers-are",
       "date": "Mon, 05 Ja",
       "summary": "<p>When the creator of the world&#x27;s most advanced coding agent speaks, Silicon Valley doesn&#x27;t just listen — it ",
-      "cn_summary": "<p>When the creator of the world&#x27;s most advanced coding agent speaks, Silicon Valley doesn&#x27;t just listen — it ",
-      "key_insight": "",
+      "cn_summary": "Claude Code创建者公开其编码工作流，详细展示AI代理在开发中的高效应用，引发硅谷工程师社区广泛讨论。",
+      "key_insight": "顶级AI编码工作流公开，企业可借鉴以提升内部开发效率，并思考如何将类似能力嵌入B2B产品。",
       "category": "agentic-b2b",
       "tags": [
         "Automation/Workflow"
       ],
       "color": "#4A7BC3",
-      "size": 10.1,
-      "importance": 3,
+      "size": 13.3,
+      "importance": 4,
       "is_today": true,
       "is_recent": true,
       "is_important_source": false,
-      "is_major_news": false,
-      "border_width": 1,
-      "border_color": "#ffffff"
+      "is_major_news": true,
+      "border_width": 2,
+      "border_color": "#E6B85C"
     },
     {
       "id": "art_10",
       "type": "article",
-      "label": "A 3 Layer Framework to Mea...",
+      "label": "AI搜索时代三层衡量框架",
       "title_en": "A 3 Layer Framework to Measure AI Presence, Readiness and Business Impact: Redefining Metrics for the AI Search Era",
+      "cn_title": "AI搜索时代三层衡量框架",
       "link": "https://www.aleydasolis.com/en/ai-search/a-3-layer-framework-to-measure-ai-presence-readiness-and-business-impact-redefining-metrics-for-the-ai-search-era/",
       "date": "2026-04-23",
       "summary": "The old organic search measurement model, built largely around rankings, clicks, and sessions, is becoming less sufficie",
-      "cn_summary": "The old organic search measurement model, built largely around rankings, clicks, and sessions, is becoming less sufficie",
-      "key_insight": "",
+      "cn_summary": "Aleyda Solis提出新框架，从AI存在度、就绪度和业务影响三个层面重新定义AI搜索时代的衡量指标，替代传统排名和点击模型。",
+      "key_insight": "B2B需建立AI搜索专属KPI体系，评估品牌在AI引擎中的可见性与影响力。",
       "category": "ai-search",
       "tags": [
         "SEO",
         "搜索度量"
       ],
       "color": "#FF6B35",
-      "size": 10.1,
-      "importance": 3,
+      "size": 12.5,
+      "importance": 5,
       "is_today": true,
       "is_recent": true,
       "is_important_source": false,
       "is_major_news": false,
-      "border_width": 1,
-      "border_color": "#ffffff"
+      "border_width": 3,
+      "border_color": "#FF6B35"
     },
     {
       "id": "art_11",
       "type": "article",
-      "label": "Enterprise Content Moves F...",
+      "label": "企业内容从工具转向系统",
       "title_en": "Enterprise Content Moves From Tools To Systems: Adobe Summit Takeaways",
+      "cn_title": "企业内容从工具转向系统",
       "link": "https://www.forrester.com/blogs/enterprise-content-moves-from-tools-to-systems-adobe-summit-takeaways/",
       "date": "2026-04-23",
       "summary": "Enterprise content leaders are under pressure on three fronts. They need faster time to activation as buyer behavior out",
-      "cn_summary": "Enterprise content leaders are under pressure on three fronts. They need faster time to activation as buyer behavior out",
-      "key_insight": "",
+      "cn_summary": "Forrester总结Adobe峰会要点，企业内容领导者面临激活速度、规模化、个性化三重压力，需从工具思维转向系统化内容运营。",
+      "key_insight": "B2B内容营销需系统化，以应对AI时代的个性化与规模化需求。",
       "category": "ai-search",
       "tags": [
         "GEO"
       ],
       "color": "#FF6B35",
-      "size": 10.1,
-      "importance": 3,
+      "size": 13.3,
+      "importance": 4,
       "is_today": true,
       "is_recent": true,
-      "is_important_source": false,
+      "is_important_source": true,
       "is_major_news": false,
-      "border_width": 1,
-      "border_color": "#ffffff"
+      "border_width": 2,
+      "border_color": "#E6B85C"
     },
     {
       "id": "art_12",
       "type": "article",
-      "label": "Generative engine optimiza...",
+      "label": "营销团队必知的GEO关键指标",
       "title_en": "Generative engine optimization KPIs that actually matter for marketing teams",
+      "cn_title": "营销团队必知的GEO关键指标",
       "link": "https://blog.hubspot.com/marketing/geo-kpis",
       "date": "2026-04-23",
       "summary": "",
-      "cn_summary": "Generative engine optimization KPIs that actually matter for marketing teams",
-      "key_insight": "",
+      "cn_summary": "HubSpot指出生成式AI颠覆买家旅程，需引入GEO新指标如品牌提及率、答案准确度等，以衡量AI引擎中的表现。",
+      "key_insight": "GEO指标应聚焦品牌在AI答案中的出现频率与上下文相关性。",
       "category": "ai-search",
       "tags": [
         "GEO",
         "搜索度量"
       ],
       "color": "#FF6B35",
-      "size": 10.1,
-      "importance": 3,
+      "size": 14.5,
+      "importance": 5,
       "is_today": true,
       "is_recent": true,
-      "is_important_source": false,
+      "is_important_source": true,
       "is_major_news": false,
-      "border_width": 1,
-      "border_color": "#ffffff"
+      "border_width": 3,
+      "border_color": "#FF6B35"
     },
     {
       "id": "art_13",
       "type": "article",
-      "label": "How to use Google Trends f...",
+      "label": "2026年Google Trends SEO使用指南",
       "title_en": "How to use Google Trends for SEO in 2026",
+      "cn_title": "2026年Google Trends SEO使用指南",
       "link": "https://www.semrush.com/blog/google-trends/",
       "date": "2026-04-23",
       "summary": "Learn how to use Google Trends for SEO in 2026. Discover trends, compare keywords, and find opportunities to drive more ",
-      "cn_summary": "Learn how to use Google Trends for SEO in 2026. Discover trends, compare keywords, and find opportunities to drive more ",
-      "key_insight": "",
+      "cn_summary": "Semrush博客介绍如何利用Google Trends进行关键词趋势发现、对比和机会挖掘，以驱动2026年更多自然流量。",
+      "key_insight": "Google Trends仍是发现搜索需求季节性波动和新兴话题的核心工具，需结合AI搜索趋势。",
       "category": "ai-search",
       "tags": [
         "SEO"
@@ -692,157 +706,164 @@
     {
       "id": "art_14",
       "type": "article",
-      "label": "On-page SEO checklist: The...",
+      "label": "2026年页面SEO完整检查清单",
       "title_en": "On-page SEO checklist: The complete task list for 2026",
+      "cn_title": "2026年页面SEO完整检查清单",
       "link": "https://www.semrush.com/blog/on-page-seo-checklist/",
       "date": "2026-04-23",
       "summary": "Follow this 14-step on-page SEO checklist to improve your visibility in traditional and AI search.",
-      "cn_summary": "Follow this 14-step on-page SEO checklist to improve your visibility in traditional and AI search.",
-      "key_insight": "",
+      "cn_summary": "Semrush提供14步页面SEO检查清单，涵盖传统搜索和AI搜索的可见性优化要点，帮助提升排名。",
+      "key_insight": "页面SEO需同时兼顾传统爬虫和AI摘要提取，结构化数据与内容相关性是双核心。",
       "category": "ai-search",
       "tags": [
         "SEO"
       ],
       "color": "#FF6B35",
-      "size": 10.1,
-      "importance": 3,
+      "size": 11.3,
+      "importance": 4,
       "is_today": true,
       "is_recent": true,
       "is_important_source": false,
       "is_major_news": false,
-      "border_width": 1,
-      "border_color": "#ffffff"
+      "border_width": 2,
+      "border_color": "#E6B85C"
     },
     {
       "id": "art_15",
       "type": "article",
-      "label": "What is technical SEO? Bas...",
+      "label": "技术SEO基础与最佳实践指南",
       "title_en": "What is technical SEO? Basics and best practices",
+      "cn_title": "技术SEO基础与最佳实践指南",
       "link": "https://www.semrush.com/blog/technical-seo/",
       "date": "2026-04-23",
       "summary": "Learn what technical SEO is and how to optimize your site for crawling, indexing, and AI visibility with proven best pra",
-      "cn_summary": "Learn what technical SEO is and how to optimize your site for crawling, indexing, and AI visibility with proven best pra",
-      "key_insight": "",
+      "cn_summary": "Semrush解释技术SEO的核心概念，包括爬虫抓取、索引优化以及提升AI可见性的最佳实践。",
+      "key_insight": "技术SEO是AI搜索可见性的地基，站点速度和可抓取性直接影响AI摘要的引用概率。",
       "category": "ai-search",
       "tags": [
         "SEO/技术优化"
       ],
       "color": "#FF6B35",
-      "size": 10.1,
-      "importance": 3,
+      "size": 11.3,
+      "importance": 4,
       "is_today": true,
       "is_recent": true,
       "is_important_source": false,
       "is_major_news": false,
-      "border_width": 1,
-      "border_color": "#ffffff"
+      "border_width": 2,
+      "border_color": "#E6B85C"
     },
     {
       "id": "art_16",
       "type": "article",
-      "label": "btw in talking to friends ...",
+      "label": "GPT-Image-2-Thinking：图像代理新...",
       "title_en": "btw in talking to friends the best framing for how to discuss GPT-Image-2-Thinking taking multiple t...",
+      "cn_title": "GPT-Image-2-Thinking：图像代理新范式",
       "link": "https://x.com/swyx/status/2047140362771132544",
       "date": "2026-04-23",
       "summary": "btw in talking to friends the best framing for how to discuss GPT-Image-2-Thinking taking multiple tens of mins for gene",
-      "cn_summary": "btw in talking to friends the best framing for how to discuss GPT-Image-2-Thinking taking multiple tens of mins for gene",
-      "key_insight": "",
+      "cn_summary": "介绍GPT-Image-2-Thinking作为图像代理模型，具备搜索、合成、审查等工具调用能力，可生成二维码、图表等复杂内容。",
+      "key_insight": "图像代理模型将颠覆B2B视觉内容生产，建议关注其自动化设计能力对获客素材的影响。",
       "category": "agentic-b2b",
       "tags": [
         "Automation"
       ],
       "color": "#4A7BC3",
-      "size": 10.1,
-      "importance": 3,
+      "size": 11.3,
+      "importance": 4,
       "is_today": true,
       "is_recent": true,
       "is_important_source": false,
       "is_major_news": false,
-      "border_width": 1,
-      "border_color": "#ffffff"
+      "border_width": 2,
+      "border_color": "#E6B85C"
     },
     {
       "id": "art_17",
       "type": "article",
-      "label": "CPQ Vendors Face A New Tes...",
+      "label": "CPQ供应商面临复杂性新考验",
       "title_en": "CPQ Vendors Face A New Test: Handling Real-World Complexity",
+      "cn_title": "CPQ供应商面临复杂性新考验",
       "link": "https://www.forrester.com/blogs/cpq-vendors-face-a-new-test-handling-real-world-complexity/",
       "date": "2026-04-23",
       "summary": "The Configure, Price, Quote Solutions Landscape, Q2 2026, reveals a new battleground where vendors differentiate by mana",
-      "cn_summary": "The Configure, Price, Quote Solutions Landscape, Q2 2026, reveals a new battleground where vendors differentiate by mana",
-      "key_insight": "",
+      "cn_summary": "Forrester报告揭示CPQ解决方案新战场：供应商通过管理真实世界复杂性、行业专注度、可互操作架构及嵌入AI来差异化竞争。销售和营收运营领导者需优先考虑。",
+      "key_insight": "CPQ工具需嵌入AI处理复杂场景，B2B销售自动化应优先评估供应商的行业深度与AI集成能力。",
       "category": "agentic-b2b",
       "tags": [
         "Sales"
       ],
       "color": "#4A7BC3",
-      "size": 10.1,
-      "importance": 3,
+      "size": 13.3,
+      "importance": 4,
       "is_today": true,
       "is_recent": true,
-      "is_important_source": false,
+      "is_important_source": true,
       "is_major_news": false,
-      "border_width": 1,
-      "border_color": "#ffffff"
+      "border_width": 2,
+      "border_color": "#E6B85C"
     },
     {
       "id": "art_18",
       "type": "article",
-      "label": "How CX Leaders Build Resil...",
+      "label": "CX领导者如何在动荡中建立韧性",
       "title_en": "How CX Leaders Build Resilience In A Volatile World",
+      "cn_title": "CX领导者如何在动荡中建立韧性",
       "link": "https://www.forrester.com/blogs/how-cx-leaders-build-resilience-in-a-volatile-world/",
       "date": "2026-04-23",
       "summary": "Back in the dim and distant past, when I ran an enterprise architecture team, we spent months building immaculate diagra",
-      "cn_summary": "Back in the dim and distant past, when I ran an enterprise architecture team, we spent months building immaculate diagra",
-      "key_insight": "",
+      "cn_summary": "Forrester指出CX团队常陷入制作精美但无人使用的图表。建议CX领导者放弃完美主义，通过快速迭代、数据驱动和跨部门协作来构建韧性。",
+      "key_insight": "客户体验优化应重实效轻形式，B2B营销需将CX数据直接用于GEO内容策略调整。",
       "category": "agentic-b2b",
       "tags": [
         "CX/客户体验"
       ],
       "color": "#4A7BC3",
-      "size": 10.1,
-      "importance": 3,
+      "size": 13.3,
+      "importance": 4,
       "is_today": true,
       "is_recent": true,
-      "is_important_source": false,
+      "is_important_source": true,
       "is_major_news": false,
-      "border_width": 1,
-      "border_color": "#ffffff"
+      "border_width": 2,
+      "border_color": "#E6B85C"
     },
     {
       "id": "art_19",
       "type": "article",
-      "label": "Redesigning Claude Code on...",
+      "label": "Claude Code桌面版并行代理重构",
       "title_en": "Redesigning Claude Code on desktop for parallel agents",
+      "cn_title": "Claude Code桌面版并行代理重构",
       "link": "https://claude.com/blog/claude-code-desktop-redesign",
       "date": "2026-04-23",
       "summary": "",
-      "cn_summary": "Redesigning Claude Code on desktop for parallel agents",
-      "key_insight": "",
+      "cn_summary": "Anthropic重新设计Claude Code桌面版，支持并行代理运行，提升多任务处理效率，优化开发者工作流。",
+      "key_insight": "并行代理架构将加速AI开发工具在B2B场景中的自动化部署与测试流程。",
       "category": "ai-industry",
       "tags": [
         "行业/Agent生态"
       ],
       "color": "#E6B85C",
-      "size": 10.1,
-      "importance": 3,
+      "size": 13.3,
+      "importance": 4,
       "is_today": true,
       "is_recent": true,
       "is_important_source": false,
-      "is_major_news": false,
-      "border_width": 1,
-      "border_color": "#ffffff"
+      "is_major_news": true,
+      "border_width": 2,
+      "border_color": "#E6B85C"
     },
     {
       "id": "art_20",
       "type": "article",
-      "label": "Replit Security Agent maki...",
+      "label": "Replit安全代理自动审查应用",
       "title_en": "Replit Security Agent making the internet a better place one app review at a time. https://t.co/5tet...",
+      "cn_title": "Replit安全代理自动审查应用",
       "link": "https://x.com/amasad/status/2047150876423516384",
       "date": "2026-04-23",
       "summary": "Replit Security Agent making the internet a better place one app review at a time. https://t.co/5tet1REHgl",
-      "cn_summary": "Replit Security Agent making the internet a better place one app review at a time. https://t.co/5tet1REHgl",
-      "key_insight": "",
+      "cn_summary": "Replit 推出安全代理，自动进行应用审查，提升互联网安全性。",
+      "key_insight": "AI 安全代理可自动化应用安全审查，降低人工成本。",
       "category": "ai-industry",
       "tags": [
         "行业/Agent生态"
@@ -860,157 +881,164 @@
     {
       "id": "art_21",
       "type": "article",
-      "label": "You can now call Replit Ag...",
+      "label": "Gemini企业版集成Replit Agent",
       "title_en": "You can now call Replit Agent from Gemini Enterprise. https://t.co/SpN6qto4Gf",
+      "cn_title": "Gemini企业版集成Replit Agent",
       "link": "https://x.com/amasad/status/2047149103294091301",
       "date": "2026-04-23",
       "summary": "You can now call Replit Agent from Gemini Enterprise. https://t.co/SpN6qto4Gf",
-      "cn_summary": "You can now call Replit Agent from Gemini Enterprise. https://t.co/SpN6qto4Gf",
-      "key_insight": "",
+      "cn_summary": "用户现在可以从 Gemini Enterprise 调用 Replit Agent，实现跨平台 AI 协作。",
+      "key_insight": "AI Agent 的跨平台集成是未来趋势，可提升企业工作流效率。",
       "category": "ai-industry",
       "tags": [
         "行业/Agent生态"
       ],
       "color": "#E6B85C",
-      "size": 10.1,
-      "importance": 3,
+      "size": 13.3,
+      "importance": 4,
       "is_today": true,
       "is_recent": true,
       "is_important_source": false,
-      "is_major_news": false,
-      "border_width": 1,
-      "border_color": "#ffffff"
+      "is_major_news": true,
+      "border_width": 2,
+      "border_color": "#E6B85C"
     },
     {
       "id": "art_22",
       "type": "article",
-      "label": "Canva Recasts Itself As An...",
+      "label": "Canva重塑为企业AI平台",
       "title_en": "Canva Recasts Itself As An AI Platform For Enterprise Work",
+      "cn_title": "Canva重塑为企业AI平台",
       "link": "https://www.forrester.com/blogs/canva-recasts-itself-as-an-ai-platform-for-enterprise-work/",
       "date": "2026-04-23",
       "summary": "For years, Canva’s advantage was accessibility. It made design easier, faster, and available to more people. At its rece",
-      "cn_summary": "For years, Canva’s advantage was accessibility. It made design easier, faster, and available to more people. At its rece",
-      "key_insight": "",
+      "cn_summary": "Forrester分析Canva从设计工具转向AI平台，强调其为企业工作流提供AI驱动的设计能力，改变竞争格局。",
+      "key_insight": "AI平台化趋势下，B2B工具需整合AI能力以提升企业客户粘性。",
       "category": "ai-industry",
       "tags": [
         "行业/趋势"
       ],
       "color": "#E6B85C",
-      "size": 10.1,
-      "importance": 3,
+      "size": 13.3,
+      "importance": 4,
       "is_today": true,
       "is_recent": true,
-      "is_important_source": false,
+      "is_important_source": true,
       "is_major_news": false,
-      "border_width": 1,
-      "border_color": "#ffffff"
+      "border_width": 2,
+      "border_color": "#E6B85C"
     },
     {
       "id": "art_23",
       "type": "article",
-      "label": "Your Growth Strategy Isn’t...",
+      "label": "增长战略失败源于决策回避",
       "title_en": "Your Growth Strategy Isn’t Broken — It’s Avoiding Decisions",
+      "cn_title": "增长战略失败源于决策回避",
       "link": "https://www.forrester.com/blogs/your-growth-strategy-isnt-broken-its-avoiding-decisions/",
       "date": "2026-04-23",
       "summary": "Growth strategies don’t usually fail because they’re wrong. They fail because leaders never make, or never finish, the d",
-      "cn_summary": "Growth strategies don’t usually fail because they’re wrong. They fail because leaders never make, or never finish, the d",
-      "key_insight": "",
+      "cn_summary": "Forrester指出增长战略失败非因错误，而是领导者未做出或完成关键决策，如客户选择、资源分配和停止事项。",
+      "key_insight": "B2B增长需明确客户细分与资源聚焦，避免战略模糊。",
       "category": "ai-industry",
       "tags": [
         "行业/趋势"
       ],
       "color": "#E6B85C",
-      "size": 10.1,
-      "importance": 3,
+      "size": 13.3,
+      "importance": 4,
       "is_today": true,
       "is_recent": true,
-      "is_important_source": false,
+      "is_important_source": true,
       "is_major_news": false,
-      "border_width": 1,
-      "border_color": "#ffffff"
+      "border_width": 2,
+      "border_color": "#E6B85C"
     },
     {
       "id": "art_24",
       "type": "article",
-      "label": "WBD Shareholders Say Yes...",
+      "label": "WBD股东批准派拉蒙收购",
       "title_en": "WBD Shareholders Say Yes",
+      "cn_title": "WBD股东批准派拉蒙收购",
       "link": "https://www.forrester.com/blogs/wbd-shareholders-say-yes/",
       "date": "2026-04-23",
       "summary": "Warner Bros. Discovery (WBD) shareholders voted today to approve Paramount’s all‑cash acquisition of the company, cleari",
-      "cn_summary": "Warner Bros. Discovery (WBD) shareholders voted today to approve Paramount’s all‑cash acquisition of the company, cleari",
-      "key_insight": "",
+      "cn_summary": "华纳兄弟探索公司股东投票批准派拉蒙全现金收购，为数十年来最大的媒体整合案扫清重要障碍。但该程序性障碍门槛较低。",
+      "key_insight": "媒体行业大规模整合加速，B2B营销需关注内容分发渠道的集中化趋势。",
       "category": "ai-industry",
       "tags": [
         "行业/趋势"
       ],
       "color": "#E6B85C",
-      "size": 10.1,
-      "importance": 3,
+      "size": 13.3,
+      "importance": 4,
       "is_today": true,
       "is_recent": true,
-      "is_important_source": false,
+      "is_important_source": true,
       "is_major_news": false,
-      "border_width": 1,
-      "border_color": "#ffffff"
+      "border_width": 2,
+      "border_color": "#E6B85C"
     },
     {
       "id": "art_25",
       "type": "article",
-      "label": "Roadmaps: Preparing To Sel...",
+      "label": "路线图：准备自我毁灭",
       "title_en": "Roadmaps: Preparing To Self-Destruct In Three, Two, One …",
+      "cn_title": "路线图：准备自我毁灭",
       "link": "https://www.forrester.com/blogs/roadmaps-preparing-to-self-destruct-in-three-two-one/",
       "date": "2026-04-23",
       "summary": "I’m Joe Schiavone. I am a principal analyst here at Forrester. My experience has afforded me the opportunity to learn fr",
-      "cn_summary": "I’m Joe Schiavone. I am a principal analyst here at Forrester. My experience has afforded me the opportunity to learn fr",
-      "key_insight": "",
+      "cn_summary": "Forrester分析师Joe Schiavone分享其领导全球科技组织的经验，探讨如何从初创到大型企业制定技术路线图，强调灵活性和避免僵化。",
+      "key_insight": "技术路线图需保持敏捷，避免过度规划，B2B营销应关注客户实际痛点而非完美蓝图。",
       "category": "ai-industry",
       "tags": [
         "行业/趋势"
       ],
       "color": "#E6B85C",
-      "size": 10.1,
-      "importance": 3,
+      "size": 13.3,
+      "importance": 4,
       "is_today": true,
       "is_recent": true,
-      "is_important_source": false,
+      "is_important_source": true,
       "is_major_news": false,
-      "border_width": 1,
-      "border_color": "#ffffff"
+      "border_width": 2,
+      "border_color": "#E6B85C"
     },
     {
       "id": "art_26",
       "type": "article",
-      "label": "How AI Is Rearchitecting L...",
+      "label": "AI如何重构贷款业务",
       "title_en": "How AI Is Rearchitecting Lending",
+      "cn_title": "AI如何重构贷款业务",
       "link": "https://www.forrester.com/blogs/how-ai-is-rearchitecting-lending/",
       "date": "2026-04-23",
       "summary": "Lending Is Reaching An Inflection Point More than 80% of financial services (FS) AI decision‑makers plan to increase inv",
-      "cn_summary": "Lending Is Reaching An Inflection Point More than 80% of financial services (FS) AI decision‑makers plan to increase inv",
-      "key_insight": "",
+      "cn_summary": "超过80%的金融服务AI决策者计划增加预测AI和生成AI投资，重点在于规模化应用以提升效率、降低风险并改善客户体验，贷款业务正迎来转折点。",
+      "key_insight": "金融行业AI投资激增，B2B金融科技营销应突出AI在风控和效率提升上的可量化成果。",
       "category": "ai-industry",
       "tags": [
         "行业/融资"
       ],
       "color": "#E6B85C",
-      "size": 10.1,
-      "importance": 3,
+      "size": 13.3,
+      "importance": 4,
       "is_today": true,
       "is_recent": true,
-      "is_important_source": false,
+      "is_important_source": true,
       "is_major_news": false,
-      "border_width": 1,
-      "border_color": "#ffffff"
+      "border_width": 2,
+      "border_color": "#E6B85C"
     },
     {
       "id": "art_27",
       "type": "article",
-      "label": "So far basically fewer fat...",
+      "label": "更少更粗的技能使解析器更短",
       "title_en": "So far basically fewer fatter skills makes the resolver shorter which itself is less context bloat",
+      "cn_title": "更少更粗的技能使解析器更短",
       "link": "https://x.com/garrytan/status/2047184243164651648",
       "date": "2026-04-23",
       "summary": "So far basically fewer fatter skills makes the resolver shorter which itself is less context bloat",
-      "cn_summary": "So far basically fewer fatter skills makes the resolver shorter which itself is less context bloat",
-      "key_insight": "",
+      "cn_summary": "Garry Tan 分享经验：更少但更粗粒度的技能定义可缩短解析器，减少上下文膨胀。",
+      "key_insight": "AI Agent 设计应追求简洁技能定义，避免上下文过长影响性能。",
       "category": "ai-industry",
       "tags": [
         "行业/趋势"
@@ -1028,13 +1056,14 @@
     {
       "id": "art_28",
       "type": "article",
-      "label": "This is interesting. Anyon...",
+      "label": "Garry Tan探讨技能组合与参数化",
       "title_en": "This is interesting. Anyone experimenting with this? So far anytime I have adjacent skills I just te...",
+      "cn_title": "Garry Tan探讨技能组合与参数化",
       "link": "https://x.com/garrytan/status/2047183884266402275",
       "date": "2026-04-23",
       "summary": "This is interesting. Anyone experimenting with this? So far anytime I have adjacent skills I just tell it to DRY itself ",
-      "cn_summary": "This is interesting. Anyone experimenting with this? So far anytime I have adjacent skills I just tell it to DRY itself ",
-      "key_insight": "",
+      "cn_summary": "Garry Tan在X上分享将相邻技能通过参数化组合成更大技能的经验，并询问社区实践。",
+      "key_insight": "技能参数化组合可提升AI Agent效率，对B2B自动化工作流设计有启发。",
       "category": "ai-industry",
       "tags": [
         "行业/趋势"
@@ -1052,13 +1081,14 @@
     {
       "id": "art_29",
       "type": "article",
-      "label": "Man between this and CrabT...",
+      "label": "Garry Tan关注CrabTrap工具",
       "title_en": "Man between this and CrabTrap from @pedroh96 I am going to have a busy week https://t.co/twDMf4nTa9",
+      "cn_title": "Garry Tan关注CrabTrap工具",
       "link": "https://x.com/garrytan/status/2047148450828136522",
       "date": "2026-04-23",
       "summary": "Man between this and CrabTrap from @pedroh96 I am going to have a busy week https://t.co/twDMf4nTa9",
-      "cn_summary": "Man between this and CrabTrap from @pedroh96 I am going to have a busy week https://t.co/twDMf4nTa9",
-      "key_insight": "",
+      "cn_summary": "Garry Tan提及CrabTrap工具，表示将忙于探索其功能。",
+      "key_insight": "开发者工具动态值得关注，可能影响AI Agent开发效率。",
       "category": "ai-industry",
       "tags": [
         "行业/趋势"
@@ -1076,13 +1106,14 @@
     {
       "id": "art_30",
       "type": "article",
-      "label": "I want to keep everyone up...",
+      "label": "Vercel安全调查：处理近PB日志",
       "title_en": "I want to keep everyone updated on the details of the security investigation.",
+      "cn_title": "Vercel安全调查：处理近PB日志",
       "link": "https://x.com/rauchg/status/2047150411170320808",
       "date": "2026-04-23",
       "summary": "I want to keep everyone updated on the details of the security investigation.",
-      "cn_summary": "I want to keep everyone updated on the details of the security investigation.",
-      "key_insight": "",
+      "cn_summary": "Vercel CEO 更新安全调查进展，团队处理近 PB 日志以追踪威胁行为者。",
+      "key_insight": "大规模日志分析是安全事件响应的关键，需投入大量计算资源。",
       "category": "ai-industry",
       "tags": [
         "行业/融资"
@@ -1100,13 +1131,14 @@
     {
       "id": "art_31",
       "type": "article",
-      "label": "I love these https://t.co/...",
+      "label": "Peter Steinberger表达喜爱",
       "title_en": "I love these https://t.co/NGarQPF6e5",
+      "cn_title": "Peter Steinberger表达喜爱",
       "link": "https://x.com/steipete/status/2047189920104477009",
       "date": "2026-04-23",
       "summary": "I love these https://t.co/NGarQPF6e5",
-      "cn_summary": "I love these https://t.co/NGarQPF6e5",
-      "key_insight": "",
+      "cn_summary": "Peter Steinberger在X上对某内容表示喜爱，但未提供细节。",
+      "key_insight": "无具体信息，需进一步查看链接内容。",
       "category": "ai-industry",
       "tags": [
         "行业/趋势"
@@ -1124,37 +1156,39 @@
     {
       "id": "art_32",
       "type": "article",
-      "label": "Craft &gt; slop...",
+      "label": "匠心胜于AI批量生成",
       "title_en": "Craft &gt; slop",
+      "cn_title": "匠心胜于AI批量生成",
       "link": "https://x.com/petergyang/status/2047124883071816189",
       "date": "2026-04-23",
       "summary": "Craft &gt; slop",
-      "cn_summary": "Craft &gt; slop",
-      "key_insight": "",
+      "cn_summary": "强调AI生成内容需人工精修最后10%以体现品味，多数人忽略这一步骤，导致内容同质化。",
+      "key_insight": "B2B内容营销应避免纯AI生成，人工打磨差异化细节是提升GEO排名的关键。",
       "category": "ai-industry",
       "tags": [
         "行业/趋势"
       ],
       "color": "#E6B85C",
-      "size": 10.1,
-      "importance": 3,
+      "size": 11.3,
+      "importance": 4,
       "is_today": true,
       "is_recent": true,
       "is_important_source": false,
       "is_major_news": false,
-      "border_width": 1,
-      "border_color": "#ffffff"
+      "border_width": 2,
+      "border_color": "#E6B85C"
     },
     {
       "id": "art_33",
       "type": "article",
-      "label": "some more references in fo...",
+      "label": "脚注引用参考链接分享",
       "title_en": "some more references in footnotes https://t.co/n5Nt0PUxzT",
+      "cn_title": "脚注引用参考链接分享",
       "link": "https://x.com/swyx/status/2047220793419989457",
       "date": "2026-04-23",
       "summary": "some more references in footnotes https://t.co/n5Nt0PUxzT",
-      "cn_summary": "some more references in footnotes https://t.co/n5Nt0PUxzT",
-      "key_insight": "",
+      "cn_summary": "Swyx在X平台分享脚注中的额外参考文献链接，内容未明确，可能涉及AI或技术话题。",
+      "key_insight": "社交媒体上的学术引用可成为GEO内容外链建设的潜在来源。",
       "category": "ai-industry",
       "tags": [
         "行业/趋势"
@@ -1172,13 +1206,14 @@
     {
       "id": "art_34",
       "type": "article",
-      "label": "https://t.co/k3XbbNGw5s...",
+      "label": "技术链接分享",
       "title_en": "https://t.co/k3XbbNGw5s",
+      "cn_title": "技术链接分享",
       "link": "https://x.com/swyx/status/2047217611880984935",
       "date": "2026-04-23",
       "summary": "https://t.co/k3XbbNGw5s",
-      "cn_summary": "https://t.co/k3XbbNGw5s",
-      "key_insight": "",
+      "cn_summary": "Swyx在X平台分享一个未指明内容的链接，可能涉及AI或技术资源。",
+      "key_insight": "技术社区链接分享可作为GEO内容发现与引用的信号。",
       "category": "ai-industry",
       "tags": [
         "行业/趋势"
@@ -1196,37 +1231,39 @@
     {
       "id": "art_35",
       "type": "article",
-      "label": "The AI Sandwich: Where Hum...",
+      "label": "AI三明治：人机协作新范式",
       "title_en": "The AI Sandwich: Where Humans Excel in an AI World",
+      "cn_title": "AI三明治：人机协作新范式",
       "link": "https://www.youtube.com/watch?v=G0LTv8hQ5Cs",
       "date": "2026-04-23",
       "summary": "",
-      "cn_summary": "The AI Sandwich: Where Humans Excel in an AI World",
-      "key_insight": "",
+      "cn_summary": "探讨在AI主导的世界中，人类在哪些环节仍不可替代，提出人机协作的“三明治”模型，强调人类在策略与质量控制中的核心价值。",
+      "key_insight": "B2B营销中，AI生成内容需人工把关“最后10%”的品味与策略，提升品牌差异化。",
       "category": "ai-industry",
       "tags": [
         "行业/趋势"
       ],
       "color": "#E6B85C",
-      "size": 10.1,
-      "importance": 3,
+      "size": 11.3,
+      "importance": 4,
       "is_today": true,
       "is_recent": true,
       "is_important_source": false,
       "is_major_news": false,
-      "border_width": 1,
-      "border_color": "#ffffff"
+      "border_width": 2,
+      "border_color": "#E6B85C"
     },
     {
       "id": "art_36",
       "type": "article",
-      "label": "Saw the demo, very impress...",
+      "label": "Zara Zhang展示长时自主编码Agent",
       "title_en": "Saw the demo, very impressive setup that allows a coding agent to work autonomously for long running...",
+      "cn_title": "Zara Zhang展示长时自主编码Agent",
       "link": "https://x.com/zarazhangrui/status/2047166162707042431",
       "date": "2026-04-23",
       "summary": "Saw the demo, very impressive setup that allows a coding agent to work autonomously for long running tasks without human",
-      "cn_summary": "Saw the demo, very impressive setup that allows a coding agent to work autonomously for long running tasks without human",
-      "key_insight": "",
+      "cn_summary": "Zara Zhang分享了一个演示，展示编码Agent无需人工干预即可自主完成长时间运行任务。",
+      "key_insight": "长时自主编码Agent提升开发效率，可应用于B2B自动化流水线。",
       "category": "ai-industry",
       "tags": [
         "行业/Agent生态"
@@ -1244,13 +1281,14 @@
     {
       "id": "art_37",
       "type": "article",
-      "label": "https://t.co/43aL2SN4s4...",
+      "label": "Zara Zhang分享链接",
       "title_en": "https://t.co/43aL2SN4s4",
+      "cn_title": "Zara Zhang分享链接",
       "link": "https://x.com/zarazhangrui/status/2047124027370869016",
       "date": "2026-04-23",
       "summary": "https://t.co/43aL2SN4s4",
-      "cn_summary": "https://t.co/43aL2SN4s4",
-      "key_insight": "",
+      "cn_summary": "Zara Zhang在X上发布了一个链接，内容未明确。",
+      "key_insight": "无具体信息，需进一步查看链接内容。",
       "category": "ai-industry",
       "tags": [
         "行业/趋势"
@@ -1268,13 +1306,14 @@
     {
       "id": "art_38",
       "type": "article",
-      "label": "You don’t have access to M...",
+      "label": "Replit白皮书：静态分析提升LLM性能",
       "title_en": "You don’t have access to Mythos 🫵🤭",
+      "cn_title": "Replit白皮书：静态分析提升LLM性能",
       "link": "https://x.com/amasad/status/2047156858214035590",
       "date": "2026-04-23",
       "summary": "You don’t have access to Mythos 🫵🤭",
-      "cn_summary": "You don’t have access to Mythos 🫵🤭",
-      "key_insight": "",
+      "cn_summary": "Replit 发布白皮书，展示结合静态分析工具可将当前 LLM 性能提升 90% 以上。",
+      "key_insight": "静态分析工具可显著增强 LLM 代码生成能力，是 AI 开发工具的重要方向。",
       "category": "academic",
       "tags": [
         "学术前沿"
@@ -1292,13 +1331,14 @@
     {
       "id": "art_39",
       "type": "article",
-      "label": "✅ Papercut fixed: Conversa...",
+      "label": "对话分支功能上线测试",
       "title_en": "✅ Papercut fixed: Conversation branching",
+      "cn_title": "对话分支功能上线测试",
       "link": "https://x.com/joshwoodward/status/2047147030351642914",
       "date": "2026-04-23",
       "summary": "✅ Papercut fixed: Conversation branching",
-      "cn_summary": "✅ Papercut fixed: Conversation branching",
-      "key_insight": "",
+      "cn_summary": "Josh Woodward宣布对话分支功能已向20%用户推出，正在逐步扩大覆盖，旨在修复用户痛点。",
+      "key_insight": "对话分支功能提升AI交互灵活性，B2B客服场景可借此优化多轮对话管理。",
       "category": "academic",
       "tags": [
         "学术前沿"
@@ -1316,13 +1356,14 @@
     {
       "id": "art_40",
       "type": "article",
-      "label": "AEO metrics every marketer...",
+      "label": "2026年营销者必追踪的AEO指标",
       "title_en": "AEO metrics every marketer should track in 2026",
+      "cn_title": "2026年营销者必追踪的AEO指标",
       "link": "https://blog.hubspot.com/marketing/aeo-metrics",
       "date": "2026-04-22",
       "summary": "",
-      "cn_summary": "AEO metrics every marketer should track in 2026",
-      "key_insight": "",
+      "cn_summary": "HubSpot介绍AEO（答案引擎优化）关键指标，帮助品牌在ChatGPT、Perplexity等AI引擎中更一致、准确地出现。",
+      "key_insight": "AEO指标如答案采纳率、引用频率，是B2B获客的新风向标。",
       "category": "ai-search",
       "tags": [
         "AEO",
@@ -1330,123 +1371,128 @@
         "平台/AI搜索产品"
       ],
       "color": "#FF6B35",
-      "size": 10.1,
-      "importance": 3,
+      "size": 13.3,
+      "importance": 4,
       "is_today": true,
       "is_recent": true,
-      "is_important_source": false,
+      "is_important_source": true,
       "is_major_news": false,
-      "border_width": 1,
-      "border_color": "#ffffff"
+      "border_width": 2,
+      "border_color": "#E6B85C"
     },
     {
       "id": "art_41",
       "type": "article",
-      "label": "AEO Strategy for B2B: 9 Ta...",
+      "label": "B2B企业AEO策略九大战术",
       "title_en": "AEO Strategy for B2B: 9 Tactics to Increase B2B Answer Engine Visibility",
+      "cn_title": "B2B企业AEO策略九大战术",
       "link": "https://blog.hubspot.com/marketing/aeo-b2b-strategy",
       "date": "2026-04-22",
       "summary": "",
-      "cn_summary": "AEO Strategy for B2B: 9 Tactics to Increase B2B Answer Engine Visibility",
-      "key_insight": "",
+      "cn_summary": "HubSpot基于32%买家通过AI聊天机器人发现新供应商的数据，提出9项AEO战术，提升B2B在答案引擎中的可见性。",
+      "key_insight": "B2B需结构化内容以匹配AI问答模式，抢占供应商推荐位。",
       "category": "ai-search",
       "tags": [
         "AEO"
       ],
       "color": "#FF6B35",
-      "size": 10.1,
-      "importance": 3,
+      "size": 14.5,
+      "importance": 5,
       "is_today": true,
       "is_recent": true,
-      "is_important_source": false,
+      "is_important_source": true,
       "is_major_news": false,
-      "border_width": 1,
-      "border_color": "#ffffff"
+      "border_width": 3,
+      "border_color": "#FF6B35"
     },
     {
       "id": "art_42",
       "type": "article",
-      "label": "How to Perform a Complete ...",
+      "label": "2026年完整SEO审计20步清单",
       "title_en": "How to Perform a Complete SEO Audit in 20 Steps",
+      "cn_title": "2026年完整SEO审计20步清单",
       "link": "https://www.semrush.com/blog/seo-audit/",
       "date": "2026-04-22",
       "summary": "Learn how to perform a complete SEO audit for 2026. Follow a step-by-step checklist to improve rankings, fix issues, and",
-      "cn_summary": "Learn how to perform a complete SEO audit for 2026. Follow a step-by-step checklist to improve rankings, fix issues, and",
-      "key_insight": "",
+      "cn_summary": "Semrush提供20步SEO审计清单，涵盖排名提升、问题修复和AI可见性增强，适用于2026年。",
+      "key_insight": "SEO审计需新增AI可见性模块，重点检查结构化数据、实体关联和摘要引用情况。",
       "category": "ai-search",
       "tags": [
         "SEO/技术优化",
         "搜索度量"
       ],
       "color": "#FF6B35",
-      "size": 10.1,
-      "importance": 3,
+      "size": 12.5,
+      "importance": 5,
       "is_today": true,
       "is_recent": true,
       "is_important_source": false,
       "is_major_news": false,
-      "border_width": 1,
-      "border_color": "#ffffff"
+      "border_width": 3,
+      "border_color": "#FF6B35"
     },
     {
       "id": "art_43",
       "type": "article",
-      "label": "This is probably the bigge...",
+      "label": "ChatGPT Agent接入Box实现销售自动化",
       "title_en": "This is probably the biggest news yet in software going headless, and will bring knowledge work agen...",
+      "cn_title": "ChatGPT Agent接入Box实现销售自动化",
       "link": "https://x.com/levie/status/2047028112626749645",
       "date": "2026-04-22",
       "summary": "This is probably the biggest news yet in software going headless, and will bring knowledge work agents to the masses. Th",
-      "cn_summary": "This is probably the biggest news yet in software going headless, and will bring knowledge work agents to the masses. Th",
-      "key_insight": "",
+      "cn_summary": "新 ChatGPT Agent 可调用任意工具和数据，示例中销售助手通过 Box 安全访问企业内容回答问题。",
+      "key_insight": "AI Agent 与知识库集成可赋能销售自动化，提升客户响应效率。",
       "category": "agentic-b2b",
       "tags": [
         "Sales",
         "Automation/Workflow"
       ],
       "color": "#4A7BC3",
-      "size": 10.1,
-      "importance": 3,
+      "size": 12.5,
+      "importance": 5,
       "is_today": true,
       "is_recent": true,
       "is_important_source": false,
       "is_major_news": false,
-      "border_width": 1,
-      "border_color": "#ffffff"
+      "border_width": 3,
+      "border_color": "#FF6B35"
     },
     {
       "id": "art_44",
       "type": "article",
-      "label": "Proof Is The Product: How ...",
+      "label": "证明即产品：试用和POC成为新获客方式",
       "title_en": "Proof Is The Product: How Trials And POCs Have Become A Real Go‑To‑Market Motion",
+      "cn_title": "证明即产品：试用和POC成为新获客方式",
       "link": "https://www.forrester.com/blogs/proof-is-the-product-how-trials-and-pocs-have-become-a-real-go-to-market-motion/",
       "date": "2026-04-22",
       "summary": "Why “Try Before You Buy” Has Become Mission‑Critical For Buyers And Sellers B2B organizations can no longer rely on prom",
-      "cn_summary": "Why “Try Before You Buy” Has Become Mission‑Critical For Buyers And Sellers B2B organizations can no longer rely on prom",
-      "key_insight": "",
+      "cn_summary": "B2B买家不再仅凭承诺做决策，尤其对AI产品。供应商必须通过试用和概念验证（POC）证明可衡量的业务成果，这已成为关键的市场进入策略。",
+      "key_insight": "试用和POC是B2B获客核心，GEO内容应围绕“可验证成果”设计，降低买家决策风险。",
       "category": "agentic-b2b",
       "tags": [
         "B2B/Strategy"
       ],
       "color": "#4A7BC3",
-      "size": 10.1,
-      "importance": 3,
+      "size": 14.5,
+      "importance": 5,
       "is_today": true,
       "is_recent": true,
-      "is_important_source": false,
+      "is_important_source": true,
       "is_major_news": false,
-      "border_width": 1,
-      "border_color": "#ffffff"
+      "border_width": 3,
+      "border_color": "#FF6B35"
     },
     {
       "id": "art_45",
       "type": "article",
-      "label": "Great leaders operate in \"...",
+      "label": "领导者应处于主人模式",
       "title_en": "Great leaders operate in \"owner mode.\"",
+      "cn_title": "领导者应处于主人模式",
       "link": "https://x.com/adityaag/status/2047024961571692747",
       "date": "2026-04-22",
       "summary": "Great leaders operate in \"owner mode.\"",
-      "cn_summary": "Great leaders operate in \"owner mode.\"",
-      "key_insight": "",
+      "cn_summary": "强调领导者需承担风险与不确定性，通过判断快速学习并赢得信任，以主人模式运营。",
+      "key_insight": "B2B销售中，领导者承担风险可增强客户信任，提升lead gen转化。",
       "category": "ai-industry",
       "tags": [
         "行业/趋势"
@@ -1464,13 +1510,14 @@
     {
       "id": "art_46",
       "type": "article",
-      "label": "This is dope https://t.co/...",
+      "label": "对某产品的赞赏",
       "title_en": "This is dope https://t.co/pzUr5R9SHo",
+      "cn_title": "对某产品的赞赏",
       "link": "https://x.com/adityaag/status/2047018146972987774",
       "date": "2026-04-22",
       "summary": "This is dope https://t.co/pzUr5R9SHo",
-      "cn_summary": "This is dope https://t.co/pzUr5R9SHo",
-      "key_insight": "",
+      "cn_summary": "表达对某产品的赞赏，未具体说明产品内容。",
+      "key_insight": "无直接B2B获客或GEO优化价值。",
       "category": "ai-industry",
       "tags": [
         "行业/趋势"
@@ -1488,37 +1535,39 @@
     {
       "id": "art_47",
       "type": "article",
-      "label": "Interactive charts and dia...",
+      "label": "Claude Cowork新增交互图表",
       "title_en": "Interactive charts and diagrams are now in Claude Cowork.",
+      "cn_title": "Claude Cowork新增交互图表",
       "link": "https://x.com/claudeai/status/2047047633416397076",
       "date": "2026-04-22",
       "summary": "Interactive charts and diagrams are now in Claude Cowork.",
-      "cn_summary": "Interactive charts and diagrams are now in Claude Cowork.",
-      "key_insight": "",
+      "cn_summary": "Claude Cowork推出交互式图表和图表功能，面向所有付费计划用户开放测试。",
+      "key_insight": "交互式图表功能可增强B2B产品演示和客户沟通，提升用户体验。",
       "category": "ai-industry",
       "tags": [
         "行业/趋势"
       ],
       "color": "#E6B85C",
-      "size": 10.1,
-      "importance": 3,
+      "size": 13.3,
+      "importance": 4,
       "is_today": true,
       "is_recent": true,
       "is_important_source": false,
-      "is_major_news": false,
-      "border_width": 1,
-      "border_color": "#ffffff"
+      "is_major_news": true,
+      "border_width": 2,
+      "border_color": "#E6B85C"
     },
     {
       "id": "art_48",
       "type": "article",
-      "label": "YouTube: https://t.co/mxQB...",
+      "label": "YouTube与Spotify链接分享",
       "title_en": "YouTube: https://t.co/mxQBcSt014",
+      "cn_title": "YouTube与Spotify链接分享",
       "link": "https://x.com/danshipper/status/2047027510014046497",
       "date": "2026-04-22",
       "summary": "YouTube: https://t.co/mxQBcSt014",
-      "cn_summary": "YouTube: https://t.co/mxQBcSt014",
-      "key_insight": "",
+      "cn_summary": "分享YouTube和Spotify链接，无具体内容说明，可能为播客或视频推广。",
+      "key_insight": "无直接B2B获客或GEO优化价值。",
       "category": "ai-industry",
       "tags": [
         "行业/趋势"
@@ -1536,13 +1585,14 @@
     {
       "id": "art_49",
       "type": "article",
-      "label": "LLMs write better code tha...",
+      "label": "AI代码超越人类后的角色",
       "title_en": "LLMs write better code than most human engineers. If code is handled, what's left for us?",
+      "cn_title": "AI代码超越人类后的角色",
       "link": "https://x.com/danshipper/status/2047027507397005367",
       "date": "2026-04-22",
       "summary": "LLMs write better code than most human engineers. If code is handled, what's left for us?",
-      "cn_summary": "LLMs write better code than most human engineers. If code is handled, what's left for us?",
-      "key_insight": "",
+      "cn_summary": "讨论LLM生成高质量代码后人类的角色，提出人类在流程始末不可或缺，类比为面包。",
+      "key_insight": "AI自动化代码生成后，B2B营销应聚焦人类在创意和策略始末的独特价值。",
       "category": "ai-industry",
       "tags": [
         "行业/趋势"
@@ -1560,13 +1610,14 @@
     {
       "id": "art_50",
       "type": "article",
-      "label": "a lot of good ideas in her...",
+      "label": "好创意集合推文",
       "title_en": "a lot of good ideas in here https://t.co/2dVddTUo5i",
+      "cn_title": "好创意集合推文",
       "link": "https://x.com/danshipper/status/2046947032120574144",
       "date": "2026-04-22",
       "summary": "a lot of good ideas in here https://t.co/2dVddTUo5i",
-      "cn_summary": "a lot of good ideas in here https://t.co/2dVddTUo5i",
-      "key_insight": "",
+      "cn_summary": "转发一条包含许多好创意的链接，未具体说明内容。",
+      "key_insight": "无直接B2B获客或GEO优化价值。",
       "category": "ai-industry",
       "tags": [
         "行业/趋势"
@@ -1584,61 +1635,64 @@
     {
       "id": "art_51",
       "type": "article",
-      "label": "Today’s Regulatory Intelli...",
+      "label": "监管情报解决方案取代繁琐工作",
       "title_en": "Today’s Regulatory Intelligence Solutions Replace Drudgery With Confidence",
+      "cn_title": "监管情报解决方案取代繁琐工作",
       "link": "https://www.forrester.com/blogs/todays-regulatory-intelligence-solutions-replace-drudgery-with-confidence/",
       "date": "2026-04-22",
       "summary": "Over the past five years, security and risk (S&#38;R) professionals have experienced a flood of new cybersecurity regula",
-      "cn_summary": "Over the past five years, security and risk (S&#38;R) professionals have experienced a flood of new cybersecurity regula",
-      "key_insight": "",
+      "cn_summary": "170个国家出台网络安全法规，安全与风险专业人士面临巨大合规压力。新一代监管情报解决方案通过自动化识别、差距分析和控制实施，提升信心。",
+      "key_insight": "合规自动化需求旺盛，B2B安全营销应强调AI如何将繁琐监管转化为竞争优势。",
       "category": "ai-industry",
       "tags": [
         "行业/趋势"
       ],
       "color": "#E6B85C",
-      "size": 10.1,
-      "importance": 3,
+      "size": 13.3,
+      "importance": 4,
       "is_today": true,
       "is_recent": true,
-      "is_important_source": false,
+      "is_important_source": true,
       "is_major_news": false,
-      "border_width": 1,
-      "border_color": "#ffffff"
+      "border_width": 2,
+      "border_color": "#E6B85C"
     },
     {
       "id": "art_52",
       "type": "article",
-      "label": "From Audit to Action: How ...",
+      "label": "AI搜索战略路线图：从审计到行动",
       "title_en": "From Audit to Action: How the AI Search Strategic Roadmap Turns Data into a Plan",
+      "cn_title": "AI搜索战略路线图：从审计到行动",
       "link": "https://ipullrank.com/ai-search-strategic-roadmap",
       "date": "2026-04-22",
       "summary": "There&#8217;s a moment many marketers are experiencing these days: your CEO searches for something you know your brand s",
-      "cn_summary": "There&#8217;s a moment many marketers are experiencing these days: your CEO searches for something you know your brand s",
-      "key_insight": "",
+      "cn_summary": "Mike King提出AI搜索战略路线图，指导营销人员如何将数据审计转化为可执行的优化计划，应对AI生成答案中品牌缺失的问题。",
+      "key_insight": "AI搜索时代，品牌需从被动审计转向主动战略规划，确保在AI摘要中被提及。",
       "category": "ai-industry",
       "tags": [
         "行业/趋势"
       ],
       "color": "#E6B85C",
-      "size": 10.1,
-      "importance": 3,
+      "size": 12.5,
+      "importance": 5,
       "is_today": true,
       "is_recent": true,
       "is_important_source": false,
       "is_major_news": false,
-      "border_width": 1,
-      "border_color": "#ffffff"
+      "border_width": 3,
+      "border_color": "#FF6B35"
     },
     {
       "id": "art_53",
       "type": "article",
-      "label": "Before X kicks me out, I W...",
+      "label": "Nikunj Kothari推广ACV与Jake产品",
       "title_en": "Before X kicks me out, I WOULD use the paid partnership label but I wasn’t actually paid anything fo...",
+      "cn_title": "Nikunj Kothari推广ACV与Jake产品",
       "link": "https://x.com/nikunj/status/2047052668246589574",
       "date": "2026-04-22",
       "summary": "Before X kicks me out, I WOULD use the paid partnership label but I wasn’t actually paid anything for this..",
-      "cn_summary": "Before X kicks me out, I WOULD use the paid partnership label but I wasn’t actually paid anything for this..",
-      "key_insight": "",
+      "cn_summary": "Nikunj Kothari在X上推广ACV和Jake的产品，并鼓励用户提交功能请求。",
+      "key_insight": "B2B产品可通过社区驱动推广，用户反馈可加速迭代。",
       "category": "ai-industry",
       "tags": [
         "行业/产品发布"
@@ -1656,13 +1710,14 @@
     {
       "id": "art_54",
       "type": "article",
-      "label": "How to use Semrush for key...",
+      "label": "Semrush关键词研究实战教程",
       "title_en": "How to use Semrush for keyword research",
+      "cn_title": "Semrush关键词研究实战教程",
       "link": "https://www.semrush.com/blog/how-to-use-semrush-keyword-research/",
       "date": "2026-04-22",
       "summary": "Learn how to use Semrush to find what your audience searches for in Google and AI tools.",
-      "cn_summary": "Learn how to use Semrush to find what your audience searches for in Google and AI tools.",
-      "key_insight": "",
+      "cn_summary": "Semrush教程演示如何利用其工具发现用户在Google和AI工具中搜索的关键词，指导内容策略。",
+      "key_insight": "关键词研究需扩展至AI对话式查询，Semrush可帮助识别长尾和问题型关键词。",
       "category": "academic",
       "tags": [
         "学术/信息检索",
@@ -1681,13 +1736,14 @@
     {
       "id": "art_55",
       "type": "article",
-      "label": "Significantly longer essay...",
+      "label": "Nikunj Kothari分享旧文链接",
       "title_en": "Significantly longer essay I wrote last year on this https://t.co/RqbcPq5VyH",
+      "cn_title": "Nikunj Kothari分享旧文链接",
       "link": "https://x.com/nikunj/status/2047047747585675468",
       "date": "2026-04-22",
       "summary": "Significantly longer essay I wrote last year on this https://t.co/RqbcPq5VyH",
-      "cn_summary": "Significantly longer essay I wrote last year on this https://t.co/RqbcPq5VyH",
-      "key_insight": "",
+      "cn_summary": "Nikunj Kothari在X上分享了一篇去年写的长文链接。",
+      "key_insight": "内容复用可维持话题热度，适合B2B内容营销策略。",
       "category": "ai-industry",
       "tags": [
         "行业/趋势"
@@ -1705,13 +1761,14 @@
     {
       "id": "art_56",
       "type": "article",
-      "label": "Every pixel will be genera...",
+      "label": "Nikunj Kothari预测实时像素生成",
       "title_en": "Every pixel will be generated in real time. It’s just a matter of when, not if. Demos like this show...",
+      "cn_title": "Nikunj Kothari预测实时像素生成",
       "link": "https://x.com/nikunj/status/2047024714116419665",
       "date": "2026-04-22",
       "summary": "Every pixel will be generated in real time. It’s just a matter of when, not if. Demos like this show a view of what’s po",
-      "cn_summary": "Every pixel will be generated in real time. It’s just a matter of when, not if. Demos like this show a view of what’s po",
-      "key_insight": "",
+      "cn_summary": "Nikunj Kothari认为所有像素将实时生成，并引用演示展示可能性。",
+      "key_insight": "实时生成技术趋势将影响UI/UX设计，B2B产品需关注交互创新。",
       "category": "ai-industry",
       "tags": [
         "行业/趋势"
@@ -1729,13 +1786,14 @@
     {
       "id": "art_57",
       "type": "article",
-      "label": "8 React components per lin...",
+      "label": "React组件密度调侃",
       "title_en": "8 React components per line 😅 https://t.co/IJTQgvCliP",
+      "cn_title": "React组件密度调侃",
       "link": "https://x.com/steipete/status/2046991196786979210",
       "date": "2026-04-22",
       "summary": "8 React components per line 😅 https://t.co/IJTQgvCliP",
-      "cn_summary": "8 React components per line 😅 https://t.co/IJTQgvCliP",
-      "key_insight": "",
+      "cn_summary": "一条关于每行代码包含8个React组件的幽默推文，反映前端开发中的组件化趋势。",
+      "key_insight": "开发者工具和组件化趋势影响B2B产品UI效率，但非直接获客优化点。",
       "category": "ai-industry",
       "tags": [
         "行业/趋势"
@@ -1753,37 +1811,39 @@
     {
       "id": "art_58",
       "type": "article",
-      "label": "@mercury Interview is live...",
+      "label": "Mercury访谈：Claude Code第二大脑",
       "title_en": "@mercury Interview is live! Here's where Ryan talks about his Claude Code second brain: https://t.co...",
+      "cn_title": "Mercury访谈：Claude Code第二大脑",
       "link": "https://x.com/petergyang/status/2046982893185188088",
       "date": "2026-04-22",
       "summary": "@mercury Interview is live! Here's where Ryan talks about his Claude Code second brain: https://t.co/ja8t3isUyP",
-      "cn_summary": "@mercury Interview is live! Here's where Ryan talks about his Claude Code second brain: https://t.co/ja8t3isUyP",
-      "key_insight": "",
+      "cn_summary": "Peter Yang分享Mercury访谈，Ryan讨论如何用Claude Code构建个人知识管理系统（第二大脑）。",
+      "key_insight": "AI驱动的知识管理工具可成为B2B团队内部知识库与客户洞察的加速器。",
       "category": "ai-industry",
       "tags": [
         "行业/趋势"
       ],
       "color": "#E6B85C",
-      "size": 10.1,
-      "importance": 3,
+      "size": 13.3,
+      "importance": 4,
       "is_today": true,
       "is_recent": true,
       "is_important_source": false,
-      "is_major_news": false,
-      "border_width": 1,
-      "border_color": "#ffffff"
+      "is_major_news": true,
+      "border_width": 2,
+      "border_color": "#E6B85C"
     },
     {
       "id": "art_59",
       "type": "article",
-      "label": "Also available on:...",
+      "label": "播客与通讯社分发渠道",
       "title_en": "Also available on:",
+      "cn_title": "播客与通讯社分发渠道",
       "link": "https://x.com/petergyang/status/2046961532983193691",
       "date": "2026-04-22",
       "summary": "Also available on:",
-      "cn_summary": "Also available on:",
-      "key_insight": "",
+      "cn_summary": "Peter Yang 分享其内容在 Spotify、Apple Podcasts 和 Newsletter 上的分发链接。",
+      "key_insight": "多渠道分发是内容营销的基础，但缺乏具体策略洞察。",
       "category": "ai-industry",
       "tags": [
         "行业/趋势"
@@ -1801,13 +1861,14 @@
     {
       "id": "art_60",
       "type": "article",
-      "label": "overcooking...",
+      "label": "过度设计：仪表盘信息过载问题",
       "title_en": "overcooking",
+      "cn_title": "过度设计：仪表盘信息过载问题",
       "link": "https://x.com/ryolu_/status/2046957675079237668",
       "date": "2026-04-22",
       "summary": "overcooking",
-      "cn_summary": "overcooking",
-      "key_insight": "",
+      "cn_summary": "文章批评仪表盘过度设计，每个指标都带趋势线、每个操作都弹确认框，导致信息混乱。",
+      "key_insight": "产品设计应聚焦核心功能，避免过度装饰导致用户认知负担。",
       "category": "ai-industry",
       "tags": [
         "行业/趋势"
@@ -1825,13 +1886,14 @@
     {
       "id": "art_61",
       "type": "article",
-      "label": "These are cool! I think mo...",
+      "label": "Sam Altman看好新工具",
       "title_en": "These are cool! I think most companies will want to use them. https://t.co/453qKd7X1R",
+      "cn_title": "Sam Altman看好新工具",
       "link": "https://x.com/sama/status/2047017964105597009",
       "date": "2026-04-22",
       "summary": "These are cool! I think most companies will want to use them. https://t.co/453qKd7X1R",
-      "cn_summary": "These are cool! I think most companies will want to use them. https://t.co/453qKd7X1R",
-      "key_insight": "",
+      "cn_summary": "Sam Altman认为大多数公司会想使用某些新工具，表示赞赏。",
+      "key_insight": "行业领袖背书可提升B2B产品可信度，但非直接获客策略。",
       "category": "ai-industry",
       "tags": [
         "行业/趋势"
@@ -1849,78 +1911,393 @@
     {
       "id": "art_62",
       "type": "article",
-      "label": "10 link building strategie...",
+      "label": "2026年仍有效的10种外链建设策略",
       "title_en": "10 link building strategies that still work in 2026",
+      "cn_title": "2026年仍有效的10种外链建设策略",
       "link": "https://www.semrush.com/blog/link-building-strategies/",
       "date": "2026-04-22",
       "summary": "Learn 10 link building strategies that can help you grow your brand’s authority and search visibility.",
-      "cn_summary": "Learn 10 link building strategies that can help you grow your brand’s authority and search visibility.",
-      "key_insight": "",
+      "cn_summary": "Semrush列举10种在2026年依然有效的外链建设方法，帮助提升品牌权威性和搜索可见性。",
+      "key_insight": "外链仍是权威信号，但AI搜索更看重上下文相关性和品牌提及的语义权重。",
       "category": "ai-industry",
       "tags": [
         "行业/趋势"
       ],
       "color": "#E6B85C",
-      "size": 10.1,
-      "importance": 3,
+      "size": 11.3,
+      "importance": 4,
       "is_today": true,
       "is_recent": true,
       "is_important_source": false,
       "is_major_news": false,
-      "border_width": 1,
-      "border_color": "#ffffff"
+      "border_width": 2,
+      "border_color": "#E6B85C"
     },
     {
       "id": "art_63",
       "type": "article",
-      "label": "How to Get Backlinks in 20...",
+      "label": "2026年获取外链的10个有效战术",
       "title_en": "How to Get Backlinks in 2026: 10 Tactics That Actually Work",
+      "cn_title": "2026年获取外链的10个有效战术",
       "link": "https://www.semrush.com/blog/how-to-get-backlinks/",
       "date": "2026-04-22",
       "summary": "Backlink strategies include finding unlinked brand mentions and fixing broken backlinks. Learn all 10 tactics.",
-      "cn_summary": "Backlink strategies include finding unlinked brand mentions and fixing broken backlinks. Learn all 10 tactics.",
-      "key_insight": "",
+      "cn_summary": "Semrush分享10种外链获取战术，包括寻找未链接的品牌提及和修复失效外链，以提升域名权威。",
+      "key_insight": "修复未链接的品牌提及是低成本高回报的战术，直接增强品牌在AI知识图谱中的信号。",
       "category": "ai-industry",
       "tags": [
         "行业/趋势"
       ],
       "color": "#E6B85C",
-      "size": 10.1,
-      "importance": 3,
+      "size": 11.3,
+      "importance": 4,
       "is_today": true,
       "is_recent": true,
       "is_important_source": false,
       "is_major_news": false,
-      "border_width": 1,
-      "border_color": "#ffffff"
+      "border_width": 2,
+      "border_color": "#E6B85C"
     },
     {
       "id": "art_64",
       "type": "article",
-      "label": "The future of generative e...",
+      "label": "生成式引擎优化未来五大趋势",
       "title_en": "The future of generative engine optimization: How 5 GEO trends reshape loop and inbound marketing",
+      "cn_title": "生成式引擎优化未来五大趋势",
       "link": "https://blog.hubspot.com/marketing/future-of-geo",
       "date": "2026-04-21",
       "summary": "",
-      "cn_summary": "The future of generative engine optimization: How 5 GEO trends reshape loop and inbound marketing",
-      "key_insight": "",
+      "cn_summary": "HubSpot分析GEO五大趋势，指出AI工具首次超越传统搜索，重塑循环营销和集客营销模式。",
+      "key_insight": "GEO将成集客营销核心，企业需提前布局AI内容生态。",
       "category": "ai-search",
       "tags": [
         "GEO",
         "AEO"
       ],
       "color": "#FF6B35",
-      "size": 10.1,
-      "importance": 3,
+      "size": 13.3,
+      "importance": 4,
       "is_today": true,
       "is_recent": true,
-      "is_important_source": false,
+      "is_important_source": true,
       "is_major_news": false,
-      "border_width": 1,
-      "border_color": "#ffffff"
+      "border_width": 2,
+      "border_color": "#E6B85C"
     }
   ],
   "edges": [
+    {
+      "source": "tag_学术",
+      "target": "art_0",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_学术",
+      "target": "art_2",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_学术",
+      "target": "art_6",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_学术",
+      "target": "art_8",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_学术",
+      "target": "art_54",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_Sales",
+      "target": "art_4",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_行业",
+      "target": "art_5",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_行业",
+      "target": "art_7",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_行业",
+      "target": "art_19",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_行业",
+      "target": "art_20",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_行业",
+      "target": "art_21",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_行业",
+      "target": "art_22",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_行业",
+      "target": "art_23",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_行业",
+      "target": "art_24",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_行业",
+      "target": "art_25",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_行业",
+      "target": "art_26",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_行业",
+      "target": "art_27",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_行业",
+      "target": "art_28",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_行业",
+      "target": "art_29",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_行业",
+      "target": "art_30",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_行业",
+      "target": "art_31",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_行业",
+      "target": "art_32",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_行业",
+      "target": "art_33",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_行业",
+      "target": "art_34",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_行业",
+      "target": "art_35",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_行业",
+      "target": "art_36",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_行业",
+      "target": "art_37",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_行业",
+      "target": "art_45",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_行业",
+      "target": "art_46",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_行业",
+      "target": "art_47",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_行业",
+      "target": "art_48",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_行业",
+      "target": "art_49",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_行业",
+      "target": "art_50",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_行业",
+      "target": "art_51",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_行业",
+      "target": "art_52",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_行业",
+      "target": "art_53",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_行业",
+      "target": "art_55",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_行业",
+      "target": "art_56",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_行业",
+      "target": "art_57",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_行业",
+      "target": "art_58",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_行业",
+      "target": "art_59",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_行业",
+      "target": "art_60",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_行业",
+      "target": "art_61",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_行业",
+      "target": "art_62",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_行业",
+      "target": "art_63",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_Automation",
+      "target": "art_9",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_Automation",
+      "target": "art_43",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_15",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_SEO",
+      "target": "art_42",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_CX",
+      "target": "art_18",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_平台",
+      "target": "art_40",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_B2B",
+      "target": "art_44",
+      "value": 1,
+      "label": "关联"
+    },
     {
       "source": "tag_学术/模型架构",
       "target": "art_0",
@@ -2908,36 +3285,6 @@
       "label": "",
       "type": "layout-anchor",
       "hidden": true
-    },
-    {
-      "source": "tag_学术",
-      "target": "tag_学术/模型架构",
-      "value": 2,
-      "label": "子类"
-    },
-    {
-      "source": "tag_行业",
-      "target": "tag_行业/Agent生态",
-      "value": 2,
-      "label": "子类"
-    },
-    {
-      "source": "tag_CX",
-      "target": "tag_CX/客户体验",
-      "value": 2,
-      "label": "子类"
-    },
-    {
-      "source": "tag_平台",
-      "target": "tag_平台/AI搜索产品",
-      "value": 2,
-      "label": "子类"
-    },
-    {
-      "source": "tag_B2B",
-      "target": "tag_B2B/Strategy",
-      "value": 2,
-      "label": "子类"
     },
     {
       "source": "cat_academic",
