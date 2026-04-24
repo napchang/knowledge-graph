@@ -90,9 +90,6 @@
             background: var(--qian3);
             border-radius: 2px;
         }
-        .search-result-item:hover {
-            background: var(--qian3) !important;
-        }
         .section { margin-bottom: 16px; }
         .section-title {
             font-size: 10px;
@@ -310,6 +307,92 @@
         .tag-item.child-tag { padding-left: 24px; font-size: 11px; opacity: 0.85; }
         .tag-item .tag-label { flex: 1; }
         .tag-item .tag-num { font-size: 10px; color: var(--text3); }
+        
+        /* 搜索结果面板 */
+        .search-results-panel {
+            max-height: 360px;
+            overflow-y: auto;
+            margin-top: 8px;
+            padding-right: 4px;
+        }
+        .search-results-panel::-webkit-scrollbar { width: 4px; }
+        .search-results-panel::-webkit-scrollbar-thumb { background: var(--qian3); border-radius: 2px; }
+        .search-group-title {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--text3);
+            margin: 10px 0 6px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .search-group-title:first-child { margin-top: 0; }
+        .search-result-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            padding: 8px 10px;
+            margin-bottom: 4px;
+            background: var(--qian2);
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 12px;
+            line-height: 1.4;
+            border-left: 3px solid transparent;
+            transition: all 0.15s;
+            position: relative;
+        }
+        .search-result-card:hover {
+            background: var(--qian3);
+            transform: translateX(2px);
+        }
+        .search-result-card .card-color-bar {
+            width: 3px;
+            border-radius: 2px;
+            flex-shrink: 0;
+            align-self: stretch;
+            min-height: 24px;
+        }
+        .search-result-card .card-content { flex: 1; min-width: 0; }
+        .search-result-card .card-title {
+            color: var(--text);
+            font-weight: 500;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+        .search-result-card .card-meta {
+            color: var(--text3);
+            font-size: 11px;
+            margin-top: 3px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .search-result-card .card-tag {
+            display: inline-block;
+            font-size: 10px;
+            padding: 1px 6px;
+            border-radius: 4px;
+            background: var(--qian1);
+            color: var(--text2);
+        }
+        .search-back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 11px;
+            color: var(--accent);
+            cursor: pointer;
+            padding: 4px 0;
+            margin-bottom: 8px;
+            transition: opacity 0.15s;
+        }
+        .search-back-btn:hover { opacity: 0.8; }
         .btn {
             padding: 6px 12px;
             border-radius: 6px;
@@ -1035,24 +1118,32 @@ function handleNodeClick(node) {
         dimAllExcept(keepIds);
     } else if (data.type === 'tag') {
         closeCatInfo();
-        selectTag(node.id);
-        toggleTagArticles(node.id);
+        selectTag(node.id, true);
+        // Show tag articles in sidebar
+        showTagArticlesInSidebar(node.id);
+        // Dim all except tag + its direct article neighbors
         dimAllExcept(getNeighborIds(node.id));
+        // Focus on tag
+        if (network) {
+            network.focus(node.id, {
+                scale: 1.4,
+                animation: { duration: 400, easingFunction: 'easeInOutQuad' }
+            });
+        }
     } else if (data.type === 'article') {
         closeCatInfo();
-        selectArticle(node.id);
+        selectArticle(node.id, true);
         showArticleDetail(data);
+        // Dim all except article + its direct neighbors
         dimAllExcept(getNeighborIds(node.id));
-        // Re-focus with offset to account for detail panel width
-        setTimeout(() => {
-            if (network && selectedNodeId) {
-                network.focus(selectedNodeId, {
-                    scale: 1.5,
-                    offset: { x: -120, y: 0 },
-                    animation: { duration: 400, easingFunction: 'easeInOutQuad' }
-                });
-            }
-        }, 300);
+        // Single focus with offset to account for detail panel
+        if (network) {
+            network.focus(node.id, {
+                scale: 1.5,
+                offset: { x: -120, y: 0 },
+                animation: { duration: 400, easingFunction: 'easeInOutQuad' }
+            });
+        }
     }
 }
 
@@ -1113,7 +1204,7 @@ function stopPulse() {
     }
 }
 
-function selectTag(tagId) {
+function selectTag(tagId, skipFocus) {
     clearSelection();
     selectedNodeId = tagId;
     const node = nodes.get(tagId);
@@ -1132,13 +1223,15 @@ function selectTag(tagId) {
             el.classList.add('selected');
         }
     });
-    network.focus(tagId, {
-        scale: 1.4,
-        animation: { duration: 400, easingFunction: 'easeInOutQuad' }
-    });
+    if (!skipFocus && network) {
+        network.focus(tagId, {
+            scale: 1.4,
+            animation: { duration: 400, easingFunction: 'easeInOutQuad' }
+        });
+    }
 }
 
-function selectArticle(articleId) {
+function selectArticle(articleId, skipFocus) {
     clearSelection();
     selectedNodeId = articleId;
     const node = nodes.get(articleId);
@@ -1151,10 +1244,12 @@ function selectArticle(articleId) {
         shadow: { enabled: true, color: HIGHLIGHT_COLOR, size: 20, x: 0, y: 0 }
     });
     startPulse(articleId);
-    network.focus(articleId, {
-        scale: 1.5,
-        animation: { duration: 400, easingFunction: 'easeInOutQuad' }
-    });
+    if (!skipFocus && network) {
+        network.focus(articleId, {
+            scale: 1.5,
+            animation: { duration: 400, easingFunction: 'easeInOutQuad' }
+        });
+    }
 }
 
 function showCatInfo(data) {
@@ -1351,6 +1446,75 @@ let speakPlaylistIndex = 0;
 
 function selectArticleById(articleId) {
     const node = nodes.get(articleId);
+    if (!node) return;
+    handleNodeClick(node);
+}
+
+function showTagArticlesInSidebar(tagId) {
+    const tagNode = nodes.get(tagId);
+    if (!tagNode) return;
+    const catColors = {
+        'ai-search': '#FF6B35',
+        'agentic-b2b': '#4A7BC3',
+        'ai-industry': '#E6B85C',
+        'academic': '#5A92E5'
+    };
+    const color = catColors[tagNode.data?.category] || '#64748B';
+    
+    // Find all connected articles
+    const articleNodes = [];
+    allEdges.forEach(e => {
+        if (e.from === tagId || e.to === tagId) {
+            const otherId = e.from === tagId ? e.to : e.from;
+            const otherNode = allNodes.find(n => n.id === otherId);
+            if (otherNode && otherNode.data?.type === 'article') {
+                articleNodes.push({
+                    id: otherId,
+                    title: otherNode.data?.cn_title || otherNode.label,
+                    importance: otherNode.data?.importance || 3,
+                    cat: otherNode.data?.category,
+                    isToday: otherNode.data?.is_today
+                });
+            }
+        }
+    });
+    articleNodes.sort((a, b) => b.importance - a.importance);
+    
+    const resultsEl = document.getElementById('search-results');
+    let html = '<div class="search-results-panel">';
+    html += '<div class="search-back-btn" onclick="restoreSidebarFromTag()">← 返回分类视图</div>';
+    html += '<div class="search-group-title"><span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:' + color + ';"></span> ' + tagNode.label + ' <span style="color:var(--text3);font-weight:400;">(' + articleNodes.length + '篇)</span></div>';
+    
+    if (articleNodes.length === 0) {
+        html += '<div style="color:var(--text3);font-size:12px;padding:8px;">暂无关联文章</div>';
+    } else {
+        articleNodes.forEach(art => {
+            const artColor = catColors[art.cat] || '#64748B';
+            html += '<div class="search-result-card" onclick="selectArticleById(\'' + art.id + '\')">'
+                + '<div class="card-content">'
+                + '<div class="card-title">' + art.title + '</div>'
+                + '<div class="card-meta">'
+                + '<span>★' + art.importance + '</span>'
+                + (art.isToday ? '<span class="card-tag" style="color:#FF6B35;">今日</span>' : '')
+                + '</div>'
+                + '</div>'
+                + '<div class="card-color-bar" style="background:' + artColor + ';"></div>'
+                + '</div>';
+        });
+    }
+    html += '</div>';
+    resultsEl.innerHTML = html;
+    resultsEl.style.display = 'block';
+}
+
+function restoreSidebarFromTag() {
+    document.getElementById('search-results').style.display = 'none';
+    document.getElementById('search-results').innerHTML = '';
+    clearSelection();
+}
+
+function selectTagAndShowArticles(tagId) {
+    const node = nodes.get(tagId);
     if (!node) return;
     handleNodeClick(node);
 }
@@ -1717,13 +1881,8 @@ function setupUI() {
                 '<div class="tag-num">' + (tagNode.data?.count || 0) + '</div>';
             tagEl.addEventListener('click', (e) => {
                 e.stopPropagation();
-                selectTag(tagNode.id);
-                if (tagNode.data?.is_parent_tag) {
-                    // Toggle all child articles
-                    toggleParentTagArticles(tagNode.id, tagNode.label);
-                } else {
-                    toggleTagArticles(tagNode.id);
-                }
+                const node = nodes.get(tagNode.id);
+                if (node) handleNodeClick(node);
             });
             return tagEl;
         }
@@ -1810,14 +1969,8 @@ document.getElementById('search-box').addEventListener('input', (e) => {
             }
         });
         
-        // Build keep set: matched + neighbors + 2-hop neighbors
+        // Build keep set: matched nodes + their direct neighbors only (no 2-hop)
         const keepIds = new Set([...matchedIds, ...neighborIds]);
-        neighborIds.forEach(nid => {
-            allEdges.forEach(ed => {
-                if (ed.from === nid) keepIds.add(ed.to);
-                if (ed.to === nid) keepIds.add(ed.from);
-            });
-        });
         
         dimAllExcept(keepIds);
         
@@ -1834,36 +1987,43 @@ document.getElementById('search-box').addEventListener('input', (e) => {
             }
         });
         
+        const catColors = {
+            'ai-search': '#FF6B35',
+            'agentic-b2b': '#4A7BC3',
+            'ai-industry': '#E6B85C',
+            'academic': '#5A92E5'
+        };
+        
         if (matchedArticles.length > 0 || matchedTags.length > 0) {
             matchedArticles.sort((a, b) => b.importance - a.importance);
-            const catColors = {
-                'ai-search': '#FF6B35',
-                'agentic-b2b': '#4A7BC3',
-                'ai-industry': '#E6B85C',
-                'academic': '#5A92E5'
-            };
-            let html = '<div style="max-height:320px;overflow-y:auto;">';
+            let html = '<div class="search-results-panel">';
             
             if (matchedArticles.length > 0) {
-                html += '<div style="font-size:11px;color:var(--text3);margin-bottom:6px;">匹配文章 (' + matchedArticles.length + ')</div>';
+                html += '<div class="search-group-title">匹配文章 (' + matchedArticles.length + ')</div>';
                 matchedArticles.slice(0, 15).forEach(art => {
                     const color = catColors[art.cat] || '#64748B';
-                    html += '<div class="search-result-item" onclick="selectArticleById(\'' + art.id + '\')" style="padding:8px 10px;margin-bottom:4px;background:var(--qian2);border-radius:6px;cursor:pointer;font-size:12px;line-height:1.4;border-left:3px solid ' + color + ';transition:all 0.2s;">'
-                        + '<div style="color:var(--text);font-weight:500;">' + art.title + '</div>'
-                        + '<div style="color:var(--text3);font-size:11px;margin-top:2px;">★' + art.importance + '</div>'
+                    html += '<div class="search-result-card" onclick="selectArticleById(\'' + art.id + '\')">'
+                        + '<div class="card-content">'
+                        + '<div class="card-title">' + art.title + '</div>'
+                        + '<div class="card-meta"><span>★' + art.importance + '</span></div>'
+                        + '</div>'
+                        + '<div class="card-color-bar" style="background:' + color + ';"></div>'
                         + '</div>';
                 });
                 if (matchedArticles.length > 15) {
-                    html += '<div style="text-align:center;color:var(--text3);font-size:11px;padding:4px;">还有 ' + (matchedArticles.length - 15) + ' 篇...</div>';
+                    html += '<div style="text-align:center;color:var(--text3);font-size:11px;padding:6px 0;">还有 ' + (matchedArticles.length - 15) + ' 篇...</div>';
                 }
             }
             
             if (matchedTags.length > 0) {
-                html += '<div style="font-size:11px;color:var(--text3);margin:10px 0 6px;">匹配标签 (' + matchedTags.length + ')</div>';
+                html += '<div class="search-group-title">匹配标签 (' + matchedTags.length + ')</div>';
                 matchedTags.slice(0, 10).forEach(tag => {
                     const color = catColors[tag.cat] || '#64748B';
-                    html += '<div class="search-result-item" onclick="selectTag(\'' + tag.id + '\')" style="padding:6px 10px;margin-bottom:3px;background:var(--qian2);border-radius:6px;cursor:pointer;font-size:11px;color:var(--text2);border-left:3px solid ' + color + ';">'
-                        + tag.label
+                    html += '<div class="search-result-card" onclick="selectTagAndShowArticles(\'' + tag.id + '\')">'
+                        + '<div class="card-content">'
+                        + '<div class="card-title">' + tag.label + '</div>'
+                        + '</div>'
+                        + '<div class="card-color-bar" style="background:' + color + ';"></div>'
                         + '</div>';
                 });
             }
@@ -1876,10 +2036,10 @@ document.getElementById('search-box').addEventListener('input', (e) => {
             resultsEl.innerHTML = '';
         }
         
-        if (matchedIds.length > 0) {
+        if (matchedIds.length > 0 && network) {
             network.fit({
-                nodes: Array.from(keepIds),
-                animation: { duration: 500, easingFunction: 'easeInOutQuad' }
+                nodes: Array.from(matchedIds),
+                animation: { duration: 400, easingFunction: 'easeInOutQuad' }
             });
         }
     }, 300);
