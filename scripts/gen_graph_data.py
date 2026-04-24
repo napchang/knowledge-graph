@@ -266,13 +266,18 @@ for topic, art_list in topic_articles.items():
         # Mark hierarchical relationship
         hierarchy_edges.append((f'tag_{parent_name}', f'tag_{topic}'))
 
+# Track created tag nodes to avoid duplicates (a tag can be both parent and plain)
+created_tag_ids = set()
+
 # Create parent tag nodes
 for parent_name, info in parent_tags.items():
     cat = info['cat']
     count = info['count']
     avg_imp = sum(a.get('importance', 3) for a in articles if id(a) in info['arts']) / max(len(info['arts']), 1)
+    tag_id = f'tag_{parent_name}'
+    created_tag_ids.add(tag_id)
     nodes.append({
-        'id': f'tag_{parent_name}',
+        'id': tag_id,
         'type': 'tag',
         'label': parent_name,
         'category': cat,
@@ -284,18 +289,32 @@ for parent_name, info in parent_tags.items():
     })
     edges.append({
         'source': f'cat_{cat}',
-        'target': f'tag_{parent_name}',
+        'target': tag_id,
         'value': 2,
         'label': '包含'
     })
 
 # Create child tag nodes (including non-hierarchical tags)
+# Skip tags already created as parent tags
 for topic, art_list in topic_articles.items():
     cat = tag_to_cat.get(topic, 'ai-industry')
+    tag_id = f'tag_{topic}'
+    if tag_id in created_tag_ids:
+        # Already created as parent tag; only add article edges
+        for art in art_list:
+            idx = art_index[id(art)]
+            edges.append({
+                'source': tag_id,
+                'target': f'art_{idx}',
+                'value': 1,
+                'label': '关联'
+            })
+        continue
+    created_tag_ids.add(tag_id)
     count = len(art_list)
     avg_imp = sum(a.get('importance', 3) for a in art_list) / len(art_list)
     nodes.append({
-        'id': f'tag_{topic}',
+        'id': tag_id,
         'type': 'tag',
         'label': topic,
         'category': cat,
@@ -309,21 +328,21 @@ for topic, art_list in topic_articles.items():
         parent_name = topic.split('/')[0]
         edges.append({
             'source': f'tag_{parent_name}',
-            'target': f'tag_{topic}',
+            'target': tag_id,
             'value': 2,
             'label': '子类'
         })
     else:
         edges.append({
             'source': f'cat_{cat}',
-            'target': f'tag_{topic}',
+            'target': tag_id,
             'value': 2,
             'label': '包含'
         })
     for art in art_list:
         idx = art_index[id(art)]
         edges.append({
-            'source': f'tag_{topic}',
+            'source': tag_id,
             'target': f'art_{idx}',
             'value': 1,
             'label': '关联'
