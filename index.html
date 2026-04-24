@@ -1213,13 +1213,21 @@ function showCategoryTodayArticles(cat) {
     todayExpanded = true;
     renderTodaySection();
     // Focus first article and show its detail
+    // Build a keep-set that includes ALL today's articles in this category,
+    // their neighbors, and the category node itself — so nothing gets dimmed
     setTimeout(() => {
+        const keepIds = new Set();
+        keepIds.add('cat_' + cat);
+        catTodayArts.forEach(art => {
+            keepIds.add(art.id);
+            getNeighborIds(art.id).forEach(id => keepIds.add(id));
+        });
         const first = catTodayArts[0];
         if (first) {
             selectArticle(first.id);
             showArticleDetail(first.data);
-            dimAllExcept(getNeighborIds(first.id));
         }
+        dimAllExcept(keepIds);
     }, 120);
 }
 
