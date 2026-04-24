@@ -36,6 +36,19 @@ for e in full_data['edges']:
         if tgt.startswith('tag_'):
             today_tag_ids.add(tgt)
 
+# Step 2b: collect parent tags for hierarchical tags (Obsidian style)
+# If a child tag is included, include its parent tag and the parent->child edge
+changed = True
+while changed:
+    changed = False
+    for e in full_data['edges']:
+        src = e.get('source', '')
+        tgt = e.get('target', '')
+        if e.get('label') == '子类' and tgt in today_tag_ids and src not in today_tag_ids:
+            today_tag_ids.add(src)
+            related_edges.append(e)
+            changed = True
+
 # Step 3: collect category nodes connected to those tags
 # Also collect cat->tag edges
 today_cat_ids = set()
