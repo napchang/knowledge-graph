@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24T20:09:17.672631",
+  "generated_at": "2026-04-24T20:39:07.155701",
   "date": "2026-04-23",
   "total_articles": 65,
   "today_articles": 65,
@@ -80,17 +80,6 @@
       "size": 34.4,
       "count": 2,
       "avg_importance": 3.9,
-      "is_parent_tag": true
-    },
-    {
-      "id": "tag_行业",
-      "type": "tag",
-      "label": "行业",
-      "category": "ai-industry",
-      "color": "#E6B85C",
-      "size": 38,
-      "count": 0,
-      "avg_importance": 3.1,
       "is_parent_tag": true
     },
     {
@@ -226,9 +215,9 @@
       "is_parent_tag": false
     },
     {
-      "id": "tag_行业/Agent生态",
+      "id": "tag_Agent生态",
       "type": "tag",
-      "label": "行业/Agent生态",
+      "label": "Agent生态",
       "category": "ai-industry",
       "color": "#E6B85C",
       "size": 30,
@@ -237,25 +226,47 @@
       "is_parent_tag": false
     },
     {
-      "id": "tag_行业/产品发布",
+      "id": "tag_融资并购",
       "type": "tag",
-      "label": "行业/产品发布",
+      "label": "融资并购",
       "category": "ai-industry",
       "color": "#E6B85C",
       "size": 30,
-      "count": 2,
-      "avg_importance": 3.2,
+      "count": 5,
+      "avg_importance": 3.1,
       "is_parent_tag": false
     },
     {
-      "id": "tag_行业/大厂战略",
+      "id": "tag_硬件算力",
       "type": "tag",
-      "label": "行业/大厂战略",
+      "label": "硬件算力",
       "category": "ai-industry",
       "color": "#E6B85C",
       "size": 30,
       "count": 1,
+      "avg_importance": 3.0,
+      "is_parent_tag": false
+    },
+    {
+      "id": "tag_Anthropic动态",
+      "type": "tag",
+      "label": "Anthropic动态",
+      "category": "ai-industry",
+      "color": "#E6B85C",
+      "size": 30,
+      "count": 4,
       "avg_importance": 3.2,
+      "is_parent_tag": false
+    },
+    {
+      "id": "tag_开发者工具",
+      "type": "tag",
+      "label": "开发者工具",
+      "category": "ai-industry",
+      "color": "#E6B85C",
+      "size": 30,
+      "count": 3,
+      "avg_importance": 3.3,
       "is_parent_tag": false
     },
     {
@@ -303,25 +314,36 @@
       "is_parent_tag": false
     },
     {
-      "id": "tag_行业/趋势",
+      "id": "tag_谷歌动态",
       "type": "tag",
-      "label": "行业/趋势",
-      "category": "ai-industry",
-      "color": "#E6B85C",
-      "size": 30,
-      "count": 30,
-      "avg_importance": 3.0,
-      "is_parent_tag": false
-    },
-    {
-      "id": "tag_行业/融资",
-      "type": "tag",
-      "label": "行业/融资",
+      "label": "谷歌动态",
       "category": "ai-industry",
       "color": "#E6B85C",
       "size": 30,
       "count": 2,
-      "avg_importance": 3.1,
+      "avg_importance": 3.0,
+      "is_parent_tag": false
+    },
+    {
+      "id": "tag_企业落地",
+      "type": "tag",
+      "label": "企业落地",
+      "category": "ai-industry",
+      "color": "#E6B85C",
+      "size": 30,
+      "count": 2,
+      "avg_importance": 3.0,
+      "is_parent_tag": false
+    },
+    {
+      "id": "tag_AI动态",
+      "type": "tag",
+      "label": "AI动态",
+      "category": "ai-industry",
+      "color": "#E6B85C",
+      "size": 30,
+      "count": 24,
+      "avg_importance": 3.0,
       "is_parent_tag": false
     },
     {
@@ -347,14 +369,36 @@
       "is_parent_tag": false
     },
     {
+      "id": "tag_监管安全",
+      "type": "tag",
+      "label": "监管安全",
+      "category": "ai-industry",
+      "color": "#E6B85C",
+      "size": 30,
+      "count": 1,
+      "avg_importance": 3.0,
+      "is_parent_tag": false
+    },
+    {
+      "id": "tag_产品动态",
+      "type": "tag",
+      "label": "产品动态",
+      "category": "ai-industry",
+      "color": "#E6B85C",
+      "size": 30,
+      "count": 1,
+      "avg_importance": 3.0,
+      "is_parent_tag": false
+    },
+    {
       "id": "art_0",
       "type": "article",
       "label": "Nous Research发布开源编码模型NousC...",
-      "title_en": "Nous Research's NousCoder-14B is an open-source coding model landing right in the Claude Code moment",
+      "title_en": "NousCoder-14B开源编程模型发布",
       "cn_title": "Nous Research发布开源编码模型NousCoder-14B",
       "link": "https://venturebeat.com/technology/nous-researchs-nouscoder-14b-is-an-open-source-coding-model-landing-right-in",
       "date": "Wed, 07 Ja",
-      "summary": "<p><a href=\"https://nousresearch.com/\">Nous Research</a>, the open-source artificial intelligence startup backed by cryp",
+      "summary": "加密风投Paradigm支持的开源AI初创公司Nous Research推出NousCoder-14B编程模型，恰逢Claude Code引发关注之际。",
       "cn_summary": "Nous Research推出开源编码模型NousCoder-14B，在Claude Code热潮中提供免费替代方案，获得加密风投支持。",
       "key_insight": "开源编码模型快速迭代，企业可低成本部署内部编码助手，降低对高价闭源工具的依赖。",
       "category": "academic",
@@ -378,11 +422,11 @@
       "id": "art_1",
       "type": "article",
       "label": "LLMs+：超越基础大语言模型的演进",
-      "title_en": "LLMs+",
+      "title_en": "大语言模型+时代",
       "cn_title": "LLMs+：超越基础大语言模型的演进",
       "link": "https://www.technologyreview.com/2026/04/21/1135645/llm-large-language-models-ai/",
       "date": "Tue, 21 Ap",
-      "summary": "When ChatGPT launched as an experimental prototype in late 2022, OpenAI’s chatbot became an everyday everything app for ",
+      "summary": "2022年底ChatGPT作为实验原型推出，迅速成为数亿用户的日常全能应用，标志着大语言模型引领的全新未来已至。",
       "cn_summary": "文章探讨LLM从ChatGPT原型到超级应用的发展，分析其能力扩展、多模态融合及未来方向。",
       "key_insight": "LLM正从单一文本模型向多模态超级应用演进，B2B营销需关注内容格式的多样化适配。",
       "category": "academic",
@@ -404,11 +448,11 @@
       "id": "art_2",
       "type": "article",
       "label": "智能体编排：AI代理的协调与自动化",
-      "title_en": "Agent orchestration",
+      "title_en": "智能体协同技术",
       "cn_title": "智能体编排：AI代理的协调与自动化",
       "link": "https://www.technologyreview.com/2026/04/21/1135654/agent-orchestration-ai-artificial-intelligence/",
       "date": "Tue, 21 Ap",
-      "summary": "When people say AI will speed up drug development or fear that it will bring about mass layoffs, what they have in mind—",
+      "summary": "当人们讨论AI加速药物研发或担忧其引发大规模失业时，无论是否明确认知，其核心指向的正是智能体技术。ChatGPT使大语言模型……",
       "cn_summary": "文章深入分析AI代理（Agent）的编排机制，探讨其在药物研发、自动化工作流等领域的应用潜力与风险。",
       "key_insight": "Agent编排是实现复杂自动化任务的关键，B2B企业应探索多Agent协作以提升销售/客服流程效率。",
       "category": "academic",
@@ -457,11 +501,11 @@
       "id": "art_4",
       "type": "article",
       "label": "Salesforce推出新版Slackbot AI代...",
-      "title_en": "Salesforce rolls out new Slackbot AI agent as it battles Microsoft and Google in workplace AI",
+      "title_en": "Salesforce推出新版Slackbot AI助手",
       "cn_title": "Salesforce推出新版Slackbot AI代理",
       "link": "https://venturebeat.com/technology/salesforce-rolls-out-new-slackbot-ai-agent-as-it-battles-microsoft-and",
       "date": "Tue, 13 Ja",
-      "summary": "<p><a href=\"https://www.salesforce.com/\">Salesforce</a> on Tuesday launched an entirely rebuilt version of <a href=\"http",
+      "summary": "Salesforce周二发布全新重构的Slackbot AI助手，旨在提升职场协作效率，正与微软、谷歌在职场AI领域展开竞争。",
       "cn_summary": "Salesforce发布重构后的Slackbot AI代理，在办公AI领域与微软和谷歌展开竞争，强化企业协作智能化。",
       "key_insight": "企业级AI代理正嵌入协作工具，B2B公司应评估Slack/Teams生态中的自动化获客与客户互动机会。",
       "category": "agentic-b2b",
@@ -492,7 +536,9 @@
       "key_insight": "AI初创公司的安全合规问题频发，B2B采购方需严格审查供应商的安全认证与历史记录。",
       "category": "ai-industry",
       "tags": [
-        "行业/Agent生态"
+        "Agent生态",
+        "融资并购",
+        "硬件算力"
       ],
       "color": "#E6B85C",
       "size": 10.1,
@@ -535,17 +581,17 @@
       "id": "art_7",
       "type": "article",
       "label": "Claude Code高价催生免费替代品Goose",
-      "title_en": "Claude Code costs up to $200 a month. Goose does the same thing for free.",
+      "title_en": "Claude Code月费200美元，Goose免费提供同类服务",
       "cn_title": "Claude Code高价催生免费替代品Goose",
       "link": "https://venturebeat.com/infrastructure/claude-code-costs-up-to-usd200-a-month-goose-does-the-same-thing-for-free",
       "date": "Mon, 19 Ja",
-      "summary": "<p>The artificial intelligence coding revolution comes with a catch: it&#x27;s expensive.</p><p><a href=\"https://claude.",
+      "summary": "人工智能编程工具虽掀起革命，但成本高昂。Anthropic的Claude Code每月收费高达200美元，而Goose平台提供类似功能却完全免费。",
       "cn_summary": "Anthropic的Claude Code每月收费200美元，而开源工具Goose提供类似功能且免费，引发开发者对AI编码工具定价的讨论。",
       "key_insight": "AI编码工具的高价策略为开源替代品创造市场机会，B2B企业可关注成本敏感型开发者生态。",
       "category": "ai-industry",
       "tags": [
-        "行业/产品发布",
-        "行业/大厂战略"
+        "Anthropic动态",
+        "开发者工具"
       ],
       "color": "#E6B85C",
       "size": 13.3,
@@ -562,11 +608,11 @@
       "id": "art_8",
       "type": "article",
       "label": "Anthropic发布Claude桌面代理Cowor...",
-      "title_en": "Anthropic launches Cowork, a Claude Desktop agent that works in your files — no coding required",
+      "title_en": "Anthropic推出Cowork，桌面AI助手无需代码操作文件",
       "cn_title": "Anthropic发布Claude桌面代理Cowork",
       "link": "https://venturebeat.com/technology/anthropic-launches-cowork-a-claude-desktop-agent-that-works-in-your-files-no",
       "date": "Mon, 12 Ja",
-      "summary": "<p><a href=\"https://www.anthropic.com/\">Anthropic</a> released <a href=\"https://claude.com/blog/cowork-research-preview\"",
+      "summary": "Anthropic发布Claude桌面智能体Cowork，用户无需编程即可通过自然语言指令直接操作本地文件，实现自动化文档处理与数据分析。",
       "cn_summary": "Anthropic推出Cowork，一种新的AI代理能力，扩展Claude Desktop的功能，可直接在用户文件中工作，无需编码，实现文件操作自动化。",
       "key_insight": "AI代理进入文件操作场景，B2B营销可探索用此类工具自动化内容生成与客户文档处理。",
       "category": "academic",
@@ -589,11 +635,11 @@
       "id": "art_9",
       "type": "article",
       "label": "Claude Code创建者工作流引发开发者热议",
-      "title_en": "The creator of Claude Code just revealed his workflow, and developers are losing their minds",
+      "title_en": "Claude Code创造者公开工作流引轰动",
       "cn_title": "Claude Code创建者工作流引发开发者热议",
       "link": "https://venturebeat.com/technology/the-creator-of-claude-code-just-revealed-his-workflow-and-developers-are",
       "date": "Mon, 05 Ja",
-      "summary": "<p>When the creator of the world&#x27;s most advanced coding agent speaks, Silicon Valley doesn&#x27;t just listen — it ",
+      "summary": "全球顶尖编程助手创始人近日公开其工作流程，硅谷工程师群体对此展开深度剖析与热议。",
       "cn_summary": "Claude Code创建者公开其编码工作流，详细展示AI代理在开发中的高效应用，引发硅谷工程师社区广泛讨论。",
       "key_insight": "顶级AI编码工作流公开，企业可借鉴以提升内部开发效率，并思考如何将类似能力嵌入B2B产品。",
       "category": "agentic-b2b",
@@ -851,16 +897,18 @@
       "id": "art_19",
       "type": "article",
       "label": "Claude Code桌面版并行代理重构",
-      "title_en": "Redesigning Claude Code on desktop for parallel agents",
+      "title_en": "桌面端Claude Code并行代理重设计",
       "cn_title": "Claude Code桌面版并行代理重构",
       "link": "https://claude.com/blog/claude-code-desktop-redesign",
       "date": "2026-04-23",
-      "summary": "",
+      "summary": "本次更新聚焦桌面端Claude Code功能重构，旨在支持并行代理运行，提升多任务编程协作效率。",
       "cn_summary": "Anthropic重新设计Claude Code桌面版，支持并行代理运行，提升多任务处理效率，优化开发者工作流。",
       "key_insight": "并行代理架构将加速AI开发工具在B2B场景中的自动化部署与测试流程。",
       "category": "ai-industry",
       "tags": [
-        "行业/Agent生态"
+        "Anthropic动态",
+        "Agent生态",
+        "开发者工具"
       ],
       "color": "#E6B85C",
       "size": 13.3,
@@ -886,7 +934,7 @@
       "key_insight": "AI 安全代理可自动化应用安全审查，降低人工成本。",
       "category": "ai-industry",
       "tags": [
-        "行业/Agent生态"
+        "Agent生态"
       ],
       "color": "#E6B85C",
       "size": 10.1,
@@ -912,7 +960,9 @@
       "key_insight": "AI Agent 的跨平台集成是未来趋势，可提升企业工作流效率。",
       "category": "ai-industry",
       "tags": [
-        "行业/Agent生态"
+        "谷歌动态",
+        "Agent生态",
+        "企业落地"
       ],
       "color": "#E6B85C",
       "size": 13.3,
@@ -938,7 +988,7 @@
       "key_insight": "AI平台化趋势下，B2B工具需整合AI能力以提升企业客户粘性。",
       "category": "ai-industry",
       "tags": [
-        "行业/趋势"
+        "企业落地"
       ],
       "color": "#E6B85C",
       "size": 13.3,
@@ -964,7 +1014,7 @@
       "key_insight": "B2B增长需明确客户细分与资源聚焦，避免战略模糊。",
       "category": "ai-industry",
       "tags": [
-        "行业/趋势"
+        "AI动态"
       ],
       "color": "#E6B85C",
       "size": 13.3,
@@ -990,7 +1040,7 @@
       "key_insight": "媒体行业大规模整合加速，B2B营销需关注内容分发渠道的集中化趋势。",
       "category": "ai-industry",
       "tags": [
-        "行业/趋势"
+        "融资并购"
       ],
       "color": "#E6B85C",
       "size": 13.3,
@@ -1016,7 +1066,7 @@
       "key_insight": "技术路线图需保持敏捷，避免过度规划，B2B营销应关注客户实际痛点而非完美蓝图。",
       "category": "ai-industry",
       "tags": [
-        "行业/趋势"
+        "融资并购"
       ],
       "color": "#E6B85C",
       "size": 13.3,
@@ -1042,7 +1092,7 @@
       "key_insight": "金融行业AI投资激增，B2B金融科技营销应突出AI在风控和效率提升上的可量化成果。",
       "category": "ai-industry",
       "tags": [
-        "行业/融资"
+        "融资并购"
       ],
       "color": "#E6B85C",
       "size": 13.3,
@@ -1068,7 +1118,7 @@
       "key_insight": "AI Agent 设计应追求简洁技能定义，避免上下文过长影响性能。",
       "category": "ai-industry",
       "tags": [
-        "行业/趋势"
+        "AI动态"
       ],
       "color": "#E6B85C",
       "size": 10.1,
@@ -1094,7 +1144,7 @@
       "key_insight": "技能参数化组合可提升AI Agent效率，对B2B自动化工作流设计有启发。",
       "category": "ai-industry",
       "tags": [
-        "行业/趋势"
+        "AI动态"
       ],
       "color": "#E6B85C",
       "size": 10.1,
@@ -1120,7 +1170,7 @@
       "key_insight": "开发者工具动态值得关注，可能影响AI Agent开发效率。",
       "category": "ai-industry",
       "tags": [
-        "行业/趋势"
+        "AI动态"
       ],
       "color": "#E6B85C",
       "size": 10.1,
@@ -1146,7 +1196,7 @@
       "key_insight": "大规模日志分析是安全事件响应的关键，需投入大量计算资源。",
       "category": "ai-industry",
       "tags": [
-        "行业/融资"
+        "融资并购"
       ],
       "color": "#E6B85C",
       "size": 10.1,
@@ -1172,7 +1222,7 @@
       "key_insight": "无具体信息，需进一步查看链接内容。",
       "category": "ai-industry",
       "tags": [
-        "行业/趋势"
+        "AI动态"
       ],
       "color": "#E6B85C",
       "size": 10.1,
@@ -1198,7 +1248,7 @@
       "key_insight": "B2B内容营销应避免纯AI生成，人工打磨差异化细节是提升GEO排名的关键。",
       "category": "ai-industry",
       "tags": [
-        "行业/趋势"
+        "AI动态"
       ],
       "color": "#E6B85C",
       "size": 11.3,
@@ -1224,7 +1274,7 @@
       "key_insight": "社交媒体上的学术引用可成为GEO内容外链建设的潜在来源。",
       "category": "ai-industry",
       "tags": [
-        "行业/趋势"
+        "AI动态"
       ],
       "color": "#E6B85C",
       "size": 10.1,
@@ -1250,7 +1300,7 @@
       "key_insight": "技术社区链接分享可作为GEO内容发现与引用的信号。",
       "category": "ai-industry",
       "tags": [
-        "行业/趋势"
+        "AI动态"
       ],
       "color": "#E6B85C",
       "size": 10.1,
@@ -1276,7 +1326,7 @@
       "key_insight": "B2B营销中，AI生成内容需人工把关“最后10%”的品味与策略，提升品牌差异化。",
       "category": "ai-industry",
       "tags": [
-        "行业/趋势"
+        "AI动态"
       ],
       "color": "#E6B85C",
       "size": 11.3,
@@ -1302,7 +1352,7 @@
       "key_insight": "长时自主编码Agent提升开发效率，可应用于B2B自动化流水线。",
       "category": "ai-industry",
       "tags": [
-        "行业/Agent生态"
+        "Agent生态"
       ],
       "color": "#E6B85C",
       "size": 10.1,
@@ -1328,7 +1378,7 @@
       "key_insight": "无具体信息，需进一步查看链接内容。",
       "category": "ai-industry",
       "tags": [
-        "行业/趋势"
+        "AI动态"
       ],
       "color": "#E6B85C",
       "size": 10.1,
@@ -1540,7 +1590,7 @@
       "key_insight": "B2B销售中，领导者承担风险可增强客户信任，提升lead gen转化。",
       "category": "ai-industry",
       "tags": [
-        "行业/趋势"
+        "AI动态"
       ],
       "color": "#E6B85C",
       "size": 10.1,
@@ -1566,7 +1616,7 @@
       "key_insight": "无直接B2B获客或GEO优化价值。",
       "category": "ai-industry",
       "tags": [
-        "行业/趋势"
+        "AI动态"
       ],
       "color": "#E6B85C",
       "size": 10.1,
@@ -1592,7 +1642,7 @@
       "key_insight": "交互式图表功能可增强B2B产品演示和客户沟通，提升用户体验。",
       "category": "ai-industry",
       "tags": [
-        "行业/趋势"
+        "Anthropic动态"
       ],
       "color": "#E6B85C",
       "size": 13.3,
@@ -1618,7 +1668,7 @@
       "key_insight": "无直接B2B获客或GEO优化价值。",
       "category": "ai-industry",
       "tags": [
-        "行业/趋势"
+        "AI动态"
       ],
       "color": "#E6B85C",
       "size": 10.1,
@@ -1644,7 +1694,7 @@
       "key_insight": "AI自动化代码生成后，B2B营销应聚焦人类在创意和策略始末的独特价值。",
       "category": "ai-industry",
       "tags": [
-        "行业/趋势"
+        "AI动态"
       ],
       "color": "#E6B85C",
       "size": 10.1,
@@ -1670,7 +1720,7 @@
       "key_insight": "无直接B2B获客或GEO优化价值。",
       "category": "ai-industry",
       "tags": [
-        "行业/趋势"
+        "AI动态"
       ],
       "color": "#E6B85C",
       "size": 10.1,
@@ -1696,7 +1746,7 @@
       "key_insight": "合规自动化需求旺盛，B2B安全营销应强调AI如何将繁琐监管转化为竞争优势。",
       "category": "ai-industry",
       "tags": [
-        "行业/趋势"
+        "监管安全"
       ],
       "color": "#E6B85C",
       "size": 13.3,
@@ -1722,7 +1772,7 @@
       "key_insight": "AI搜索时代，品牌需从被动审计转向主动战略规划，确保在AI摘要中被提及。",
       "category": "ai-industry",
       "tags": [
-        "行业/趋势"
+        "AI动态"
       ],
       "color": "#E6B85C",
       "size": 12.5,
@@ -1748,7 +1798,8 @@
       "key_insight": "B2B产品可通过社区驱动推广，用户反馈可加速迭代。",
       "category": "ai-industry",
       "tags": [
-        "行业/产品发布"
+        "谷歌动态",
+        "产品动态"
       ],
       "color": "#E6B85C",
       "size": 10.1,
@@ -1801,7 +1852,7 @@
       "key_insight": "内容复用可维持话题热度，适合B2B内容营销策略。",
       "category": "ai-industry",
       "tags": [
-        "行业/趋势"
+        "AI动态"
       ],
       "color": "#E6B85C",
       "size": 10.1,
@@ -1827,7 +1878,7 @@
       "key_insight": "实时生成技术趋势将影响UI/UX设计，B2B产品需关注交互创新。",
       "category": "ai-industry",
       "tags": [
-        "行业/趋势"
+        "AI动态"
       ],
       "color": "#E6B85C",
       "size": 10.1,
@@ -1853,7 +1904,7 @@
       "key_insight": "开发者工具和组件化趋势影响B2B产品UI效率，但非直接获客优化点。",
       "category": "ai-industry",
       "tags": [
-        "行业/趋势"
+        "AI动态"
       ],
       "color": "#E6B85C",
       "size": 10.1,
@@ -1879,7 +1930,8 @@
       "key_insight": "AI驱动的知识管理工具可成为B2B团队内部知识库与客户洞察的加速器。",
       "category": "ai-industry",
       "tags": [
-        "行业/趋势"
+        "Anthropic动态",
+        "开发者工具"
       ],
       "color": "#E6B85C",
       "size": 13.3,
@@ -1905,7 +1957,7 @@
       "key_insight": "多渠道分发是内容营销的基础，但缺乏具体策略洞察。",
       "category": "ai-industry",
       "tags": [
-        "行业/趋势"
+        "AI动态"
       ],
       "color": "#E6B85C",
       "size": 10.1,
@@ -1931,7 +1983,7 @@
       "key_insight": "产品设计应聚焦核心功能，避免过度装饰导致用户认知负担。",
       "category": "ai-industry",
       "tags": [
-        "行业/趋势"
+        "AI动态"
       ],
       "color": "#E6B85C",
       "size": 10.1,
@@ -1957,7 +2009,7 @@
       "key_insight": "行业领袖背书可提升B2B产品可信度，但非直接获客策略。",
       "category": "ai-industry",
       "tags": [
-        "行业/趋势"
+        "AI动态"
       ],
       "color": "#E6B85C",
       "size": 10.1,
@@ -1983,7 +2035,7 @@
       "key_insight": "外链仍是权威信号，但AI搜索更看重上下文相关性和品牌提及的语义权重。",
       "category": "ai-industry",
       "tags": [
-        "行业/趋势"
+        "AI动态"
       ],
       "color": "#E6B85C",
       "size": 11.3,
@@ -2009,7 +2061,7 @@
       "key_insight": "修复未链接的品牌提及是低成本高回报的战术，直接增强品牌在AI知识图谱中的信号。",
       "category": "ai-industry",
       "tags": [
-        "行业/趋势"
+        "AI动态"
       ],
       "color": "#E6B85C",
       "size": 11.3,
@@ -2026,11 +2078,11 @@
       "id": "art_64",
       "type": "article",
       "label": "生成式引擎优化未来五大趋势",
-      "title_en": "The future of generative engine optimization: How 5 GEO trends reshape loop and inbound marketing",
+      "title_en": "生成式引擎优化五大趋势重塑营销循环",
       "cn_title": "生成式引擎优化未来五大趋势",
       "link": "https://blog.hubspot.com/marketing/future-of-geo",
       "date": "2026-04-21",
-      "summary": "",
+      "summary": "生成式引擎优化已确立其搜索地位，未来前景可期。数据显示，AI工具在2025年第四季度首次实现稳定市场份额，标志结构性转变。",
       "cn_summary": "HubSpot分析GEO五大趋势，指出AI工具首次超越传统搜索，重塑循环营销和集客营销模式。",
       "key_insight": "GEO将成集客营销核心，企业需提前布局AI内容生态。",
       "category": "ai-search",
@@ -2142,50 +2194,110 @@
       "label": "关联"
     },
     {
-      "source": "tag_行业/Agent生态",
+      "source": "tag_Agent生态",
       "target": "art_5",
       "value": 1,
       "label": "关联"
     },
     {
-      "source": "tag_行业/Agent生态",
+      "source": "tag_Agent生态",
       "target": "art_19",
       "value": 1,
       "label": "关联"
     },
     {
-      "source": "tag_行业/Agent生态",
+      "source": "tag_Agent生态",
       "target": "art_20",
       "value": 1,
       "label": "关联"
     },
     {
-      "source": "tag_行业/Agent生态",
+      "source": "tag_Agent生态",
       "target": "art_21",
       "value": 1,
       "label": "关联"
     },
     {
-      "source": "tag_行业/Agent生态",
+      "source": "tag_Agent生态",
       "target": "art_36",
       "value": 1,
       "label": "关联"
     },
     {
-      "source": "tag_行业/产品发布",
+      "source": "tag_融资并购",
+      "target": "art_5",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_融资并购",
+      "target": "art_24",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_融资并购",
+      "target": "art_25",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_融资并购",
+      "target": "art_26",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_融资并购",
+      "target": "art_30",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_硬件算力",
+      "target": "art_5",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_Anthropic动态",
       "target": "art_7",
       "value": 1,
       "label": "关联"
     },
     {
-      "source": "tag_行业/产品发布",
-      "target": "art_53",
+      "source": "tag_Anthropic动态",
+      "target": "art_19",
       "value": 1,
       "label": "关联"
     },
     {
-      "source": "tag_行业/大厂战略",
+      "source": "tag_Anthropic动态",
+      "target": "art_47",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_Anthropic动态",
+      "target": "art_58",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_开发者工具",
       "target": "art_7",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_开发者工具",
+      "target": "art_19",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_开发者工具",
+      "target": "art_58",
       "value": 1,
       "label": "关联"
     },
@@ -2298,194 +2410,170 @@
       "label": "关联"
     },
     {
-      "source": "tag_行业/趋势",
+      "source": "tag_谷歌动态",
+      "target": "art_21",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_谷歌动态",
+      "target": "art_53",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_企业落地",
+      "target": "art_21",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_企业落地",
       "target": "art_22",
       "value": 1,
       "label": "关联"
     },
     {
-      "source": "tag_行业/趋势",
+      "source": "tag_AI动态",
       "target": "art_23",
       "value": 1,
       "label": "关联"
     },
     {
-      "source": "tag_行业/趋势",
-      "target": "art_24",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业/趋势",
-      "target": "art_25",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业/趋势",
+      "source": "tag_AI动态",
       "target": "art_27",
       "value": 1,
       "label": "关联"
     },
     {
-      "source": "tag_行业/趋势",
+      "source": "tag_AI动态",
       "target": "art_28",
       "value": 1,
       "label": "关联"
     },
     {
-      "source": "tag_行业/趋势",
+      "source": "tag_AI动态",
       "target": "art_29",
       "value": 1,
       "label": "关联"
     },
     {
-      "source": "tag_行业/趋势",
+      "source": "tag_AI动态",
       "target": "art_31",
       "value": 1,
       "label": "关联"
     },
     {
-      "source": "tag_行业/趋势",
+      "source": "tag_AI动态",
       "target": "art_32",
       "value": 1,
       "label": "关联"
     },
     {
-      "source": "tag_行业/趋势",
+      "source": "tag_AI动态",
       "target": "art_33",
       "value": 1,
       "label": "关联"
     },
     {
-      "source": "tag_行业/趋势",
+      "source": "tag_AI动态",
       "target": "art_34",
       "value": 1,
       "label": "关联"
     },
     {
-      "source": "tag_行业/趋势",
+      "source": "tag_AI动态",
       "target": "art_35",
       "value": 1,
       "label": "关联"
     },
     {
-      "source": "tag_行业/趋势",
+      "source": "tag_AI动态",
       "target": "art_37",
       "value": 1,
       "label": "关联"
     },
     {
-      "source": "tag_行业/趋势",
+      "source": "tag_AI动态",
       "target": "art_45",
       "value": 1,
       "label": "关联"
     },
     {
-      "source": "tag_行业/趋势",
+      "source": "tag_AI动态",
       "target": "art_46",
       "value": 1,
       "label": "关联"
     },
     {
-      "source": "tag_行业/趋势",
-      "target": "art_47",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业/趋势",
+      "source": "tag_AI动态",
       "target": "art_48",
       "value": 1,
       "label": "关联"
     },
     {
-      "source": "tag_行业/趋势",
+      "source": "tag_AI动态",
       "target": "art_49",
       "value": 1,
       "label": "关联"
     },
     {
-      "source": "tag_行业/趋势",
+      "source": "tag_AI动态",
       "target": "art_50",
       "value": 1,
       "label": "关联"
     },
     {
-      "source": "tag_行业/趋势",
-      "target": "art_51",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业/趋势",
+      "source": "tag_AI动态",
       "target": "art_52",
       "value": 1,
       "label": "关联"
     },
     {
-      "source": "tag_行业/趋势",
+      "source": "tag_AI动态",
       "target": "art_55",
       "value": 1,
       "label": "关联"
     },
     {
-      "source": "tag_行业/趋势",
+      "source": "tag_AI动态",
       "target": "art_56",
       "value": 1,
       "label": "关联"
     },
     {
-      "source": "tag_行业/趋势",
+      "source": "tag_AI动态",
       "target": "art_57",
       "value": 1,
       "label": "关联"
     },
     {
-      "source": "tag_行业/趋势",
-      "target": "art_58",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业/趋势",
+      "source": "tag_AI动态",
       "target": "art_59",
       "value": 1,
       "label": "关联"
     },
     {
-      "source": "tag_行业/趋势",
+      "source": "tag_AI动态",
       "target": "art_60",
       "value": 1,
       "label": "关联"
     },
     {
-      "source": "tag_行业/趋势",
+      "source": "tag_AI动态",
       "target": "art_61",
       "value": 1,
       "label": "关联"
     },
     {
-      "source": "tag_行业/趋势",
+      "source": "tag_AI动态",
       "target": "art_62",
       "value": 1,
       "label": "关联"
     },
     {
-      "source": "tag_行业/趋势",
+      "source": "tag_AI动态",
       "target": "art_63",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业/融资",
-      "target": "art_26",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业/融资",
-      "target": "art_30",
       "value": 1,
       "label": "关联"
     },
@@ -2516,6 +2604,18 @@
     {
       "source": "tag_B2B/Strategy",
       "target": "art_44",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_监管安全",
+      "target": "art_51",
+      "value": 1,
+      "label": "关联"
+    },
+    {
+      "source": "tag_产品动态",
+      "target": "art_53",
       "value": 1,
       "label": "关联"
     },
@@ -3046,12 +3146,6 @@
       "label": "子类"
     },
     {
-      "source": "tag_行业",
-      "target": "tag_行业/Agent生态",
-      "value": 2,
-      "label": "子类"
-    },
-    {
       "source": "tag_CX",
       "target": "tag_CX/客户体验",
       "value": 2,
@@ -3078,12 +3172,6 @@
     {
       "source": "cat_agentic-b2b",
       "target": "tag_Sales",
-      "value": 2,
-      "label": "包含"
-    },
-    {
-      "source": "cat_ai-industry",
-      "target": "tag_行业",
       "value": 2,
       "label": "包含"
     },
@@ -3136,8 +3224,68 @@
       "label": "包含"
     },
     {
+      "source": "cat_ai-industry",
+      "target": "tag_Agent生态",
+      "value": 2,
+      "label": "包含"
+    },
+    {
+      "source": "cat_ai-industry",
+      "target": "tag_融资并购",
+      "value": 2,
+      "label": "包含"
+    },
+    {
+      "source": "cat_ai-industry",
+      "target": "tag_硬件算力",
+      "value": 2,
+      "label": "包含"
+    },
+    {
+      "source": "cat_ai-industry",
+      "target": "tag_Anthropic动态",
+      "value": 2,
+      "label": "包含"
+    },
+    {
+      "source": "cat_ai-industry",
+      "target": "tag_开发者工具",
+      "value": 2,
+      "label": "包含"
+    },
+    {
       "source": "cat_ai-search",
       "target": "tag_搜索度量",
+      "value": 2,
+      "label": "包含"
+    },
+    {
+      "source": "cat_ai-industry",
+      "target": "tag_谷歌动态",
+      "value": 2,
+      "label": "包含"
+    },
+    {
+      "source": "cat_ai-industry",
+      "target": "tag_企业落地",
+      "value": 2,
+      "label": "包含"
+    },
+    {
+      "source": "cat_ai-industry",
+      "target": "tag_AI动态",
+      "value": 2,
+      "label": "包含"
+    },
+    {
+      "source": "cat_ai-industry",
+      "target": "tag_监管安全",
+      "value": 2,
+      "label": "包含"
+    },
+    {
+      "source": "cat_ai-industry",
+      "target": "tag_产品动态",
       "value": 2,
       "label": "包含"
     },
