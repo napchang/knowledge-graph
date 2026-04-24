@@ -82,6 +82,16 @@
             flex-shrink: 0;
             z-index: 50;
         }
+        #sidebar::-webkit-scrollbar {
+            width: 4px;
+        }
+        #sidebar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        #sidebar::-webkit-scrollbar-thumb {
+            background: var(--qian3);
+            border-radius: 2px;
+        }
         .section { margin-bottom: 16px; }
         .section-title {
             font-size: 10px;
@@ -659,12 +669,10 @@
         <div class="dp-meta-row" id="dp-meta"></div>
         <div class="dp-tags" id="dp-tags"></div>
 
-        <!-- Voice Control Bar (compact: 2 buttons + voice selector) -->
+        <!-- Voice Control Bar: 1 button (play/pause toggle) + voice selector -->
         <div class="dp-voice-bar" id="dp-voice-bar">
             <button class="dp-voice-btn" id="btn-voice-play" onclick="toggleSpeak()">▶️ 播放</button>
-            <button class="dp-voice-btn" id="btn-voice-pause" onclick="pauseSpeak()">⏸️ 暂停</button>
             <select class="dp-voice-btn" id="voice-select" onchange="changeVoice()" title="选择语音" style="max-width:120px;overflow:hidden;text-overflow:ellipsis;">
-                <option value="">默认语音</option>
             </select>
             <div class="dp-voice-status" id="dp-voice-status">点击播放收听精华</div>
         </div>
@@ -1024,6 +1032,15 @@ function handleNodeClick(node) {
         selectArticle(node.id);
         showArticleDetail(data);
         dimAllExcept(getNeighborIds(node.id));
+        // Re-focus after dimming to ensure node is centered correctly
+        setTimeout(() => {
+            if (network && selectedNodeId) {
+                network.focus(selectedNodeId, {
+                    scale: 1.5,
+                    animation: { duration: 400, easingFunction: 'easeInOutQuad' }
+                });
+            }
+        }, 250);
     }
 }
 
@@ -1428,6 +1445,14 @@ function toggleSpeak() {
     startSpeakCurrent();
 }
 
+function stopSpeak() {
+    if (!window.speechSynthesis) return;
+    window.speechSynthesis.cancel();
+    isSpeaking = false;
+    isPaused = false;
+    updateVoiceUI();
+}
+
 function startSpeakCurrent() {
     if (!currentArticleData) return;
     stopSpeak();
@@ -1480,22 +1505,7 @@ function startSpeakCurrent() {
     window.speechSynthesis.speak(speechUtterance);
 }
 
-function pauseSpeak() {
-    if (!window.speechSynthesis) return;
-    if (isSpeaking && !isPaused) {
-        window.speechSynthesis.pause();
-        isPaused = true;
-        updateVoiceUI();
-    }
-}
 
-function stopSpeak() {
-    if (!window.speechSynthesis) return;
-    window.speechSynthesis.cancel();
-    isSpeaking = false;
-    isPaused = false;
-    updateVoiceUI();
-}
 
 function speakNextArticle() {
     if (!speakPlaylist.length) {
@@ -1526,33 +1536,28 @@ function speakNextArticle() {
 
 function updateVoiceUI() {
     const playBtn = document.getElementById('btn-voice-play');
-    const pauseBtn = document.getElementById('btn-voice-pause');
     const status = document.getElementById('dp-voice-status');
 
     if (!window.speechSynthesis) {
         status.textContent = '浏览器不支持语音';
         playBtn.disabled = true;
-        pauseBtn.disabled = true;
         return;
     }
 
     if (isSpeaking && !isPaused) {
         playBtn.innerHTML = '⏸️ 暂停';
         playBtn.classList.add('active');
-        pauseBtn.disabled = false;
         status.textContent = '🔊 朗读中...';
         status.classList.add('speaking');
     } else if (isPaused) {
         playBtn.innerHTML = '▶️ 继续';
         playBtn.classList.remove('active');
-        pauseBtn.disabled = true;
         status.textContent = '⏸️ 已暂停';
         status.classList.remove('speaking');
     } else {
         playBtn.innerHTML = '▶️ 播放';
         playBtn.classList.remove('active');
-        pauseBtn.disabled = true;
-        status.textContent = '点击播放收听摘要';
+        status.textContent = '点击播放收听精华';
         status.classList.remove('speaking');
     }
 }
