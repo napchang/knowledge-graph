@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24T15:29:41.455798",
+  "generated_at": "2026-04-24T16:13:25.290483",
   "date": "2026-04-23",
   "total_articles": 65,
   "today_articles": 65,
@@ -67,8 +67,8 @@
       "category": "academic",
       "color": "#5A92E5",
       "size": 38,
-      "count": 77,
-      "avg_importance": 3.5,
+      "count": 133,
+      "avg_importance": 3.4,
       "is_parent_tag": true
     },
     {
@@ -77,9 +77,9 @@
       "label": "Sales",
       "category": "agentic-b2b",
       "color": "#4A7BC3",
-      "size": 29.6,
-      "count": 12,
-      "avg_importance": 3.8,
+      "size": 34.4,
+      "count": 18,
+      "avg_importance": 3.9,
       "is_parent_tag": true
     },
     {
@@ -89,7 +89,7 @@
       "category": "ai-industry",
       "color": "#E6B85C",
       "size": 38,
-      "count": 361,
+      "count": 680,
       "avg_importance": 3.1,
       "is_parent_tag": true
     },
@@ -99,8 +99,8 @@
       "label": "Automation",
       "category": "agentic-b2b",
       "color": "#4A7BC3",
-      "size": 36.0,
-      "count": 20,
+      "size": 38,
+      "count": 37,
       "avg_importance": 3.5,
       "is_parent_tag": true
     },
@@ -110,9 +110,9 @@
       "label": "SEO",
       "category": "ai-search",
       "color": "#FF6B35",
-      "size": 23.2,
-      "count": 4,
-      "avg_importance": 3.8,
+      "size": 32.8,
+      "count": 16,
+      "avg_importance": 3.2,
       "is_parent_tag": true
     },
     {
@@ -121,8 +121,8 @@
       "label": "CX",
       "category": "agentic-b2b",
       "color": "#4A7BC3",
-      "size": 25.6,
-      "count": 7,
+      "size": 32.0,
+      "count": 15,
       "avg_importance": 3.1,
       "is_parent_tag": true
     },
@@ -132,9 +132,9 @@
       "label": "平台",
       "category": "ai-search",
       "color": "#FF6B35",
-      "size": 22.4,
-      "count": 3,
-      "avg_importance": 3.3,
+      "size": 27.2,
+      "count": 9,
+      "avg_importance": 3.1,
       "is_parent_tag": true
     },
     {
@@ -143,9 +143,9 @@
       "label": "B2B",
       "category": "agentic-b2b",
       "color": "#4A7BC3",
-      "size": 24.8,
-      "count": 6,
-      "avg_importance": 3.3,
+      "size": 27.2,
+      "count": 9,
+      "avg_importance": 3.2,
       "is_parent_tag": true
     },
     {
@@ -154,8 +154,8 @@
       "label": "AEO",
       "category": "ai-search",
       "color": "#FF6B35",
-      "size": 20.8,
-      "count": 1,
+      "size": 24.8,
+      "count": 6,
       "avg_importance": 3.0,
       "is_parent_tag": true
     },
@@ -165,8 +165,8 @@
       "label": "GEO",
       "category": "ai-search",
       "color": "#FF6B35",
-      "size": 20.8,
-      "count": 1,
+      "size": 28.0,
+      "count": 10,
       "avg_importance": 3.0,
       "is_parent_tag": true
     },
@@ -177,8 +177,8 @@
       "category": "academic",
       "color": "#5A92E5",
       "size": 30,
-      "count": 39,
-      "avg_importance": 3.4,
+      "count": 66,
+      "avg_importance": 3.3,
       "is_parent_tag": false
     },
     {
@@ -188,8 +188,8 @@
       "category": "academic",
       "color": "#5A92E5",
       "size": 30,
-      "count": 26,
-      "avg_importance": 3.8,
+      "count": 49,
+      "avg_importance": 3.7,
       "is_parent_tag": false
     },
     {
@@ -199,7 +199,7 @@
       "category": "academic",
       "color": "#5A92E5",
       "size": 30,
-      "count": 41,
+      "count": 74,
       "avg_importance": 3.5,
       "is_parent_tag": false
     },
@@ -209,8 +209,8 @@
       "label": "学术/NLP",
       "category": "academic",
       "color": "#5A92E5",
-      "size": 23.0,
-      "count": 9,
+      "size": 26.0,
+      "count": 12,
       "avg_importance": 3.8,
       "is_parent_tag": false
     },
@@ -220,9 +220,9 @@
       "label": "Sales/CRM",
       "category": "agentic-b2b",
       "color": "#4A7BC3",
-      "size": 26.0,
-      "count": 12,
-      "avg_importance": 3.8,
+      "size": 30,
+      "count": 18,
+      "avg_importance": 3.9,
       "is_parent_tag": false
     },
     {
@@ -232,8 +232,8 @@
       "category": "ai-industry",
       "color": "#E6B85C",
       "size": 30,
-      "count": 41,
-      "avg_importance": 3.1,
+      "count": 65,
+      "avg_importance": 3.0,
       "is_parent_tag": false
     },
     {
@@ -243,7 +243,7 @@
       "category": "ai-industry",
       "color": "#E6B85C",
       "size": 30,
-      "count": 46,
+      "count": 69,
       "avg_importance": 3.2,
       "is_parent_tag": false
     },
@@ -254,7 +254,7 @@
       "category": "ai-industry",
       "color": "#E6B85C",
       "size": 30,
-      "count": 42,
+      "count": 99,
       "avg_importance": 3.2,
       "is_parent_tag": false
     },
@@ -265,7 +265,7 @@
       "category": "agentic-b2b",
       "color": "#4A7BC3",
       "size": 30,
-      "count": 20,
+      "count": 37,
       "avg_importance": 3.5,
       "is_parent_tag": false
     },
@@ -275,9 +275,9 @@
       "label": "搜索度量",
       "category": "ai-search",
       "color": "#FF6B35",
-      "size": 21.0,
-      "count": 7,
-      "avg_importance": 4.0,
+      "size": 30,
+      "count": 25,
+      "avg_importance": 3.3,
       "is_parent_tag": false
     },
     {
@@ -286,9 +286,9 @@
       "label": "SEO/技术优化",
       "category": "ai-search",
       "color": "#FF6B35",
-      "size": 18.0,
-      "count": 4,
-      "avg_importance": 3.8,
+      "size": 25.0,
+      "count": 11,
+      "avg_importance": 3.3,
       "is_parent_tag": false
     },
     {
@@ -297,8 +297,8 @@
       "label": "CX/客户体验",
       "category": "agentic-b2b",
       "color": "#4A7BC3",
-      "size": 21.0,
-      "count": 7,
+      "size": 29.0,
+      "count": 15,
       "avg_importance": 3.1,
       "is_parent_tag": false
     },
@@ -309,8 +309,8 @@
       "category": "ai-industry",
       "color": "#E6B85C",
       "size": 30,
-      "count": 216,
-      "avg_importance": 3.1,
+      "count": 407,
+      "avg_importance": 3.0,
       "is_parent_tag": false
     },
     {
@@ -319,8 +319,8 @@
       "label": "行业/融资",
       "category": "ai-industry",
       "color": "#E6B85C",
-      "size": 23.0,
-      "count": 9,
+      "size": 30,
+      "count": 17,
       "avg_importance": 3.1,
       "is_parent_tag": false
     },
@@ -330,9 +330,9 @@
       "label": "平台/AI搜索产品",
       "category": "ai-search",
       "color": "#FF6B35",
-      "size": 17.0,
-      "count": 3,
-      "avg_importance": 3.3,
+      "size": 23.0,
+      "count": 9,
+      "avg_importance": 3.1,
       "is_parent_tag": false
     },
     {
@@ -341,9 +341,9 @@
       "label": "B2B/Strategy",
       "category": "agentic-b2b",
       "color": "#4A7BC3",
-      "size": 20.0,
-      "count": 6,
-      "avg_importance": 3.3,
+      "size": 23.0,
+      "count": 9,
+      "avg_importance": 3.2,
       "is_parent_tag": false
     },
     {
