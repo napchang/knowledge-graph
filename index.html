@@ -462,6 +462,14 @@
         .dp-voice-btn:hover { background: var(--qian3); color: var(--text); }
         .dp-voice-btn.active { background: rgba(0,229,255,0.15); color: #00E5FF; border-color: rgba(0,229,255,0.3); }
         .dp-voice-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+        #voice-select {
+            appearance: none;
+            -webkit-appearance: none;
+            padding-right: 20px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2364748B' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 6px center;
+        }
         .dp-voice-status {
             font-size: 11px;
             color: var(--text3);
@@ -638,11 +646,14 @@
         <div class="dp-meta-row" id="dp-meta"></div>
         <div class="dp-tags" id="dp-tags"></div>
 
-        <!-- Voice Control Bar (compact: 2 buttons) -->
+        <!-- Voice Control Bar (compact: 2 buttons + voice selector) -->
         <div class="dp-voice-bar" id="dp-voice-bar">
             <button class="dp-voice-btn" id="btn-voice-play" onclick="toggleSpeak()">▶️ 播放</button>
             <button class="dp-voice-btn" id="btn-voice-pause" onclick="pauseSpeak()">⏸️ 暂停</button>
-            <div class="dp-voice-status" id="dp-voice-status">点击播放收听摘要</div>
+            <select class="dp-voice-btn" id="voice-select" onchange="changeVoice()" title="选择语音" style="max-width:120px;overflow:hidden;text-overflow:ellipsis;">
+                <option value="">默认语音</option>
+            </select>
+            <div class="dp-voice-status" id="dp-voice-status">点击播放收听精华</div>
         </div>
 
         <!-- Reading Content Area -->
@@ -903,6 +914,13 @@ async function init(dataUrl) {
 
         setupUI();
         renderTodaySection();
+        
+        // Load available voices for speech synthesis
+        if (window.speechSynthesis) {
+            loadVoices();
+            // Voices may load asynchronously
+            window.speechSynthesis.onvoiceschanged = loadVoices;
+        }
     } catch (err) {
         console.error('Init error:', err);
         document.getElementById('graph-container').innerHTML =
@@ -1236,41 +1254,40 @@ function showArticleDetail(data) {
     document.getElementById('dp-meta').innerHTML = metaHtml;
     const tags = data.tags || [];
     document.getElementById('dp-tags').innerHTML = tags.map(t => '<span class="tag-chip">' + t + '</span>').join('');
-    // Reading area: combine summary + insight + English
-    const cnSummary = data.cn_summary || '';
-    const enSummary = data.summary || '';
-    const insight = data.key_insight || '';
-
+    // Reading area: use reading_highlight as primary content
+    const highlight = data.reading_highlight || '';
     const summaryEl = document.getElementById('dp-summary');
     const insightEl = document.getElementById('dp-insight');
     const enEl = document.getElementById('dp-read-en');
 
-    if (cnSummary) {
-        summaryEl.textContent = cnSummary;
+    if (highlight) {
+        // reading_highlight is markdown-like, render with line breaks
+        summaryEl.innerHTML = highlight.replace(/\n/g, '<br>');
         summaryEl.style.display = 'block';
-    } else if (enSummary) {
-        summaryEl.textContent = enSummary;
-        summaryEl.style.display = 'block';
-    } else {
-        summaryEl.style.display = 'none';
-    }
-
-    if (insight) {
-        insightEl.textContent = '💡 ' + insight;
-        insightEl.style.display = 'block';
-    } else {
         insightEl.style.display = 'none';
-    }
-
-    // Show English if it's different from Chinese and Chinese is short
-    const hasDifferentEn = enSummary && enSummary !== cnSummary && enSummary !== data.label;
-    if (hasDifferentEn && cnSummary && cnSummary.length < 200) {
-        enEl.textContent = enSummary;
-        enEl.style.display = 'block';
-    } else if (!cnSummary && enSummary) {
-        enEl.textContent = enSummary;
-        enEl.style.display = 'block';
+        enEl.style.display = 'none';
     } else {
+        // Fallback to old summary + insight
+        const cnSummary = data.cn_summary || '';
+        const enSummary = data.summary || '';
+        const insight = data.key_insight || '';
+
+        if (cnSummary) {
+            summaryEl.textContent = cnSummary;
+            summaryEl.style.display = 'block';
+        } else if (enSummary) {
+            summaryEl.textContent = enSummary;
+            summaryEl.style.display = 'block';
+        } else {
+            summaryEl.style.display = 'none';
+        }
+
+        if (insight) {
+            insightEl.textContent = '💡 ' + insight;
+            insightEl.style.display = 'block';
+        } else {
+            insightEl.style.display = 'none';
+        }
         enEl.style.display = 'none';
     }
 
@@ -1296,7 +1313,69 @@ function selectArticleById(articleId) {
     handleNodeClick(node);
 }
 
+let selectedVoice = null;
+let availableVoices = [];
+
+function loadVoices() {
+    if (!window.speechSynthesis) return;
+    availableVoices = window.speechSynthesis.getVoices();
+    const select = document.getElementById('voice-select');
+    if (!select || availableVoices.length === 0) return;
+    
+    // Preserve current selection
+    const currentVal = select.value;
+    
+    // Filter Chinese voices and sort by quality preference
+    const zhVoices = availableVoices.filter(v => v.lang.startsWith('zh'));
+    const otherVoices = availableVoices.filter(v => !v.lang.startsWith('zh'));
+    
+    // Preferred voice names (high quality)
+    const preferredNames = ['Xiaoxiao', 'Yunyang', 'Yunxi', 'Huihui', 'Kangkang', 'Microsoft'];
+    zhVoices.sort((a, b) => {
+        const aPref = preferredNames.findIndex(n => a.name.includes(n));
+        const bPref = preferredNames.findIndex(n => b.name.includes(n));
+        if (aPref !== bPref) return (aPref === -1 ? 999 : aPref) - (bPref === -1 ? 999 : bPref);
+        return a.name.localeCompare(b.name);
+    });
+    
+    const allVoices = [...zhVoices, ...otherVoices];
+    
+    select.innerHTML = '<option value="">默认语音</option>';
+    allVoices.forEach((voice, idx) => {
+        const option = document.createElement('option');
+        option.value = idx;
+        option.textContent = voice.name + ' (' + voice.lang + ')';
+        select.appendChild(option);
+    });
+    
+    // Auto-select best Chinese voice
+    if (!currentVal && zhVoices.length > 0) {
+        const bestIdx = allVoices.indexOf(zhVoices[0]);
+        select.value = bestIdx;
+        selectedVoice = zhVoices[0];
+    } else if (currentVal) {
+        select.value = currentVal;
+        selectedVoice = allVoices[parseInt(currentVal)] || null;
+    }
+}
+
+function changeVoice() {
+    const select = document.getElementById('voice-select');
+    const idx = parseInt(select.value);
+    selectedVoice = availableVoices[idx] || null;
+    // If currently speaking, restart with new voice
+    if (isSpeaking) {
+        stopSpeak();
+        setTimeout(() => startSpeakCurrent(), 200);
+    }
+}
+
 function buildSpeakText(data) {
+    if (data.reading_highlight) {
+        // reading_highlight already contains structured content
+        const title = data.cn_title || data.label || '';
+        return title + '。\n' + data.reading_highlight;
+    }
     const parts = [];
     if (data.cn_title) parts.push(data.cn_title);
     else if (data.label) parts.push(data.label);
@@ -1339,9 +1418,12 @@ function startSpeakCurrent() {
     }
     speechUtterance = new SpeechSynthesisUtterance(text);
     speechUtterance.lang = 'zh-CN';
-    speechUtterance.rate = 1.1;
+    speechUtterance.rate = 1.15;
     speechUtterance.pitch = 1.0;
     speechUtterance.volume = 1.0;
+    if (selectedVoice) {
+        speechUtterance.voice = selectedVoice;
+    }
 
     // Progress tracking
     const totalLen = text.length;
