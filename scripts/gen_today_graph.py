@@ -49,7 +49,16 @@ for e in full_data['edges']:
         today_cat_ids.add(tgt)
         related_edges.append(e)
 
-# Step 4: deduplicate edges
+# Step 4: Always include ALL 4 category nodes and inter-cat edges
+for n in full_data['nodes']:
+    if n.get('type') == 'category':
+        today_cat_ids.add(n['id'])
+
+for e in full_data['edges']:
+    if e.get('type') == 'inter-cat':
+        related_edges.append(e)
+
+# Step 5: deduplicate edges
 seen_edges = set()
 unique_edges = []
 for e in related_edges:
@@ -58,7 +67,7 @@ for e in related_edges:
         seen_edges.add(key)
         unique_edges.append(e)
 
-# Step 5: build node list
+# Step 6: build node list
 needed_node_ids = today_article_ids | today_tag_ids | today_cat_ids
 today_nodes = [n for n in full_data['nodes'] if n['id'] in needed_node_ids]
 
