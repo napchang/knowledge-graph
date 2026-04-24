@@ -417,6 +417,32 @@
             border-radius: 6px;
             border-left: 3px solid var(--accent);
         }
+    .tab-nav {
+        display: flex;
+        gap: 4px;
+        padding: 8px 16px;
+        background: var(--qian1);
+        border-bottom: 1px solid var(--qian3);
+    }
+    .tab-btn {
+        padding: 6px 16px;
+        border-radius: 6px;
+        border: 1px solid transparent;
+        background: transparent;
+        color: var(--text2);
+        font-size: 14px;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+    .tab-btn:hover {
+        background: var(--qian2);
+        color: var(--text);
+    }
+    .tab-btn.active {
+        background: var(--qian3);
+        color: var(--text);
+        border-color: var(--qian4);
+    }
     </style>
 </head>
 <body>
@@ -430,6 +456,10 @@
             <span id="stat-nodes">0 节点</span>
             <span id="stat-edges">0 连线</span>
         </div>
+    </div>
+    <div class="tab-nav">
+        <button class="tab-btn active" data-tab="today" onclick="switchTab('today')">🔥 今日情报</button>
+        <button class="tab-btn" data-tab="full" onclick="switchTab('full')">📊 全景图谱</button>
     </div>
     <div id="main">
         <div id="sidebar">
@@ -502,10 +532,45 @@ let selectedNodeId = null;
 let dimmedNodeIds = new Set();
 let originalNodeColors = {};
 
-async function init() {
+let currentTab = 'today';
+
+async function switchTab(tab) {
+    currentTab = tab;
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
+    
+    // Reset global state
+    if (network) {
+        network.destroy();
+        network = null;
+    }
+    nodes = null;
+    edges = null;
+    allNodes = [];
+    allEdges = [];
+    graphData = null;
+    originalNodeColors = {};
+    expandedTags = new Set();
+    activeCategories = new Set(Object.keys(CAT_CONFIG));
+    selectedNodeId = null;
+    dimmedNodeIds.clear();
+    todayFilterCat = null;
+    todayExpanded = false;
+    articlesVisible = false;
+    
+    // Clear sidebar lists
+    document.getElementById('cat-list').innerHTML = '';
+    document.getElementById('today-content').innerHTML = '';
+    closeDetail();
+    closeCatInfo();
+    
+    const dataUrl = tab === 'today' ? 'today-graph-data.json' : 'graph-data.json';
+    await init(dataUrl);
+}
+
+async function init(dataUrl) {
     try {
         const cacheBuster = '?v=' + Date.now();
-        const resp = await fetch('graph-data.json' + cacheBuster);
+        const resp = await fetch(dataUrl + cacheBuster);
         graphData = await resp.json();
         document.getElementById('stat-nodes').textContent = graphData.nodes.length + ' 节点';
         document.getElementById('stat-edges').textContent = graphData.edges.length + ' 连线';
@@ -1282,7 +1347,7 @@ function toggleCategory(cat, el) {
     nodes.update(updates);
 }
 
-init();
+switchTab('today');
 </script>
 </body>
 </html>
