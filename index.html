@@ -1827,8 +1827,16 @@ document.getElementById('search-box').addEventListener('input', (e) => {
             ? '找到 <span class="match-count">' + matchCount + '</span> 个匹配结果'
             : '未找到匹配结果';
         
-        // Show matched articles in sidebar
-        if (matchedArticles.length > 0) {
+        // Show matched results in sidebar
+        const matchedTags = [];
+        matchedIds.forEach(id => {
+            const node = nodes.get(id);
+            if (node && node.data?.type === 'tag') {
+                matchedTags.push({ id: id, label: node.label, cat: node.data?.category });
+            }
+        });
+        
+        if (matchedArticles.length > 0 || matchedTags.length > 0) {
             matchedArticles.sort((a, b) => b.importance - a.importance);
             const catColors = {
                 'ai-search': '#FF6B35',
@@ -1836,18 +1844,32 @@ document.getElementById('search-box').addEventListener('input', (e) => {
                 'ai-industry': '#E6B85C',
                 'academic': '#5A92E5'
             };
-            let html = '<div style="max-height:300px;overflow-y:auto;">';
-            html += '<div style="font-size:11px;color:var(--text3);margin-bottom:6px;">匹配文章 (' + matchedArticles.length + ')</div>';
-            matchedArticles.slice(0, 20).forEach(art => {
-                const color = catColors[art.cat] || '#64748B';
-                html += '<div class="search-result-item" onclick="selectArticleById(\'' + art.id + '\')" style="padding:8px 10px;margin-bottom:4px;background:var(--qian2);border-radius:6px;cursor:pointer;font-size:12px;line-height:1.4;border-left:3px solid ' + color + ';transition:all 0.2s;">'
-                    + '<div style="color:var(--text);font-weight:500;">' + art.title + '</div>'
-                    + '<div style="color:var(--text3);font-size:11px;margin-top:2px;">★' + art.importance + '</div>'
-                    + '</div>';
-            });
-            if (matchedArticles.length > 20) {
-                html += '<div style="text-align:center;color:var(--text3);font-size:11px;padding:4px;">还有 ' + (matchedArticles.length - 20) + ' 篇...</div>';
+            let html = '<div style="max-height:320px;overflow-y:auto;">';
+            
+            if (matchedArticles.length > 0) {
+                html += '<div style="font-size:11px;color:var(--text3);margin-bottom:6px;">匹配文章 (' + matchedArticles.length + ')</div>';
+                matchedArticles.slice(0, 15).forEach(art => {
+                    const color = catColors[art.cat] || '#64748B';
+                    html += '<div class="search-result-item" onclick="selectArticleById(\'' + art.id + '\')" style="padding:8px 10px;margin-bottom:4px;background:var(--qian2);border-radius:6px;cursor:pointer;font-size:12px;line-height:1.4;border-left:3px solid ' + color + ';transition:all 0.2s;">'
+                        + '<div style="color:var(--text);font-weight:500;">' + art.title + '</div>'
+                        + '<div style="color:var(--text3);font-size:11px;margin-top:2px;">★' + art.importance + '</div>'
+                        + '</div>';
+                });
+                if (matchedArticles.length > 15) {
+                    html += '<div style="text-align:center;color:var(--text3);font-size:11px;padding:4px;">还有 ' + (matchedArticles.length - 15) + ' 篇...</div>';
+                }
             }
+            
+            if (matchedTags.length > 0) {
+                html += '<div style="font-size:11px;color:var(--text3);margin:10px 0 6px;">匹配标签 (' + matchedTags.length + ')</div>';
+                matchedTags.slice(0, 10).forEach(tag => {
+                    const color = catColors[tag.cat] || '#64748B';
+                    html += '<div class="search-result-item" onclick="selectTag(\'' + tag.id + '\')" style="padding:6px 10px;margin-bottom:3px;background:var(--qian2);border-radius:6px;cursor:pointer;font-size:11px;color:var(--text2);border-left:3px solid ' + color + ';">'
+                        + tag.label
+                        + '</div>';
+                });
+            }
+            
             html += '</div>';
             resultsEl.innerHTML = html;
             resultsEl.style.display = 'block';
