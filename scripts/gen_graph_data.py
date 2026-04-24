@@ -240,7 +240,7 @@ def normalize_topic(topic, art):
         return '学术前沿'
     return ACADEMIC_TAG_MAP.get(topic, topic)
 
-# Collect topic → articles mapping
+# Collect topic → articles mapping & build hierarchy
 for art in articles:
     for topic in art['topics']:
         topic = normalize_topic(topic, art)
@@ -249,11 +249,50 @@ for art in articles:
             tag_to_cat[topic] = art['category']
         topic_articles[topic].append(art)
 
-# Tag nodes
+# Build hierarchical tags (Obsidian style: Parent/Child)
+hierarchy_edges = []  # parent_tag -> child_tag
+parent_tags = {}  # parent_name -> {cat, children_count, articles}
+
+for topic, art_list in topic_articles.items():
+    cat = tag_to_cat.get(topic, 'ai-industry')
+    if '/' in topic:
+        parent_name = topic.split('/')[0]
+        # Create parent tag if not exists
+        if parent_name not in parent_tags:
+            parent_tags[parent_name] = {'cat': cat, 'count': 0, 'arts': set()}
+        parent_tags[parent_name]['count'] += len(art_list)
+        for a in art_list:
+            parent_tags[parent_name]['arts'].add(id(a))
+        # Mark hierarchical relationship
+        hierarchy_edges.append((f'tag_{parent_name}', f'tag_{topic}'))
+
+# Create parent tag nodes
+for parent_name, info in parent_tags.items():
+    cat = info['cat']
+    count = info['count']
+    avg_imp = sum(a.get('importance', 3) for a in articles if id(a) in info['arts']) / max(len(info['arts']), 1)
+    nodes.append({
+        'id': f'tag_{parent_name}',
+        'type': 'tag',
+        'label': parent_name,
+        'category': cat,
+        'color': cat_colors.get(cat, '#64748B'),
+        'size': 20 + min(count * 0.8, 18),
+        'count': count,
+        'avg_importance': round(avg_imp, 1),
+        'is_parent_tag': True
+    })
+    edges.append({
+        'source': f'cat_{cat}',
+        'target': f'tag_{parent_name}',
+        'value': 2,
+        'label': '包含'
+    })
+
+# Create child tag nodes (including non-hierarchical tags)
 for topic, art_list in topic_articles.items():
     cat = tag_to_cat.get(topic, 'ai-industry')
     count = len(art_list)
-    # Calculate avg importance for tag
     avg_imp = sum(a.get('importance', 3) for a in art_list) / len(art_list)
     nodes.append({
         'id': f'tag_{topic}',
@@ -261,16 +300,26 @@ for topic, art_list in topic_articles.items():
         'label': topic,
         'category': cat,
         'color': cat_colors.get(cat, '#64748B'),
-        'size': 16 + min(count * 1.2, 22),
+        'size': 14 + min(count * 1.0, 16),
         'count': count,
-        'avg_importance': round(avg_imp, 1)
+        'avg_importance': round(avg_imp, 1),
+        'is_parent_tag': False
     })
-    edges.append({
-        'source': f'cat_{cat}',
-        'target': f'tag_{topic}',
-        'value': 2,
-        'label': '包含'
-    })
+    if '/' in topic:
+        parent_name = topic.split('/')[0]
+        edges.append({
+            'source': f'tag_{parent_name}',
+            'target': f'tag_{topic}',
+            'value': 2,
+            'label': '子类'
+        })
+    else:
+        edges.append({
+            'source': f'cat_{cat}',
+            'target': f'tag_{topic}',
+            'value': 2,
+            'label': '包含'
+        })
     for art in art_list:
         idx = art_index[id(art)]
         edges.append({
@@ -338,7 +387,7 @@ for i, art in enumerate(articles):
         'cn_summary': (art.get('cn_summary') or art.get('summary') or art.get('title_en') or art.get('title') or '')[:120],
         'key_insight': art.get('key_insight', ''),
         'category': art['category'],
-        'tags': art['topics'] if art['topics'] else ['未分类'],
+        'tags': art['topics'] if art['topics'] else [],
         'color': cat_colors.get(art['category'], '#64748B'),
         'size': size,
         'importance': imp,
@@ -349,13 +398,15 @@ for i, art in enumerate(articles):
         'border_width': border_width,
         'border_color': border_color
     })
-    if not has_tag:
-        edges.append({
-            'source': f'cat_{art["category"]}',
-            'target': f'art_{i}',
-            'value': 1,
-            'label': '未分类'
-        })
+    # Hidden anchor edge: category -> article (for layout attraction)
+    edges.append({
+        'source': f'cat_{art["category"]}',
+        'target': f'art_{i}',
+        'value': 1,
+        'label': '',
+        'type': 'layout-anchor',
+        'hidden': True
+    })
 
 # Cross-category edges: tags sharing articles
 article_tags = {}
