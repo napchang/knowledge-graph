@@ -334,11 +334,26 @@
             background: rgba(10, 31, 59, 0.98);
             border: 1px solid var(--qian3);
             border-radius: 12px;
-            padding: 20px;
+            padding: 20px 24px 20px 20px;
             display: none;
             overflow-y: auto;
-            z-index: 150;
+            z-index: 200;
             box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+        }
+        /* Custom scrollbar for detail panel */
+        #detail-panel::-webkit-scrollbar {
+            width: 6px;
+        }
+        #detail-panel::-webkit-scrollbar-track {
+            background: transparent;
+            margin: 8px 0;
+        }
+        #detail-panel::-webkit-scrollbar-thumb {
+            background: var(--qian3);
+            border-radius: 3px;
+        }
+        #detail-panel::-webkit-scrollbar-thumb:hover {
+            background: var(--qian5);
         }
         #detail-panel.visible { display: block; }
         #detail-panel .dp-close {
@@ -477,15 +492,13 @@
             text-align: right;
         }
         .dp-voice-status.speaking { color: #00E5FF; }
-        /* Reading area - expanded */
+        /* Reading area - no inner scroll, content flows naturally */
         .dp-read-area {
             margin: 12px 0;
             padding: 14px;
             background: var(--qian1);
             border: 1px solid var(--qian3);
             border-radius: 10px;
-            max-height: calc(100vh - 320px);
-            overflow-y: auto;
         }
         .dp-read-summary {
             font-size: 14px;
@@ -1325,38 +1338,45 @@ function loadVoices() {
     // Preserve current selection
     const currentVal = select.value;
     
-    // Filter Chinese voices and sort by quality preference
-    const zhVoices = availableVoices.filter(v => v.lang.startsWith('zh'));
-    const otherVoices = availableVoices.filter(v => !v.lang.startsWith('zh'));
+    // Only keep Microsoft voices (high quality on Edge/Windows)
+    // Filter out Google voices entirely
+    let msVoices = availableVoices.filter(v => 
+        v.name.includes('Microsoft') && v.lang.startsWith('zh')
+    );
     
-    // Preferred voice names (high quality)
-    const preferredNames = ['Xiaoxiao', 'Yunyang', 'Yunxi', 'Huihui', 'Kangkang', 'Microsoft'];
-    zhVoices.sort((a, b) => {
+    // If no Microsoft Chinese voices, fallback to any Microsoft voice
+    if (msVoices.length === 0) {
+        msVoices = availableVoices.filter(v => v.name.includes('Microsoft'));
+    }
+    
+    // Preferred order: Xiaoxiao > Yunyang > Yunxi > others
+    const preferredNames = ['Xiaoxiao', 'Yunyang', 'Yunxi', 'Huihui', 'Kangkang'];
+    msVoices.sort((a, b) => {
         const aPref = preferredNames.findIndex(n => a.name.includes(n));
         const bPref = preferredNames.findIndex(n => b.name.includes(n));
         if (aPref !== bPref) return (aPref === -1 ? 999 : aPref) - (bPref === -1 ? 999 : bPref);
         return a.name.localeCompare(b.name);
     });
     
-    const allVoices = [...zhVoices, ...otherVoices];
+    select.innerHTML = '';
+    if (msVoices.length === 0) {
+        select.innerHTML = '<option value="">无可用语音</option>';
+        select.disabled = true;
+        return;
+    }
     
-    select.innerHTML = '<option value="">默认语音</option>';
-    allVoices.forEach((voice, idx) => {
+    msVoices.forEach((voice, idx) => {
         const option = document.createElement('option');
-        option.value = idx;
-        option.textContent = voice.name + ' (' + voice.lang + ')';
+        option.value = availableVoices.indexOf(voice);
+        option.textContent = voice.name.replace('Microsoft ', '');
         select.appendChild(option);
     });
     
-    // Auto-select best Chinese voice
-    if (!currentVal && zhVoices.length > 0) {
-        const bestIdx = allVoices.indexOf(zhVoices[0]);
-        select.value = bestIdx;
-        selectedVoice = zhVoices[0];
-    } else if (currentVal) {
-        select.value = currentVal;
-        selectedVoice = allVoices[parseInt(currentVal)] || null;
-    }
+    // Auto-select best voice
+    const bestIdx = availableVoices.indexOf(msVoices[0]);
+    select.value = bestIdx;
+    selectedVoice = msVoices[0];
+    select.disabled = false;
 }
 
 function changeVoice() {
