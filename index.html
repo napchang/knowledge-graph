@@ -435,6 +435,98 @@
             font-size: 13px;
             font-weight: 500;
         }
+        .dp-section {
+            margin: 14px 0;
+            padding: 12px;
+            background: var(--qian1);
+            border: 1px solid var(--qian3);
+            border-radius: 8px;
+        }
+        .dp-section-title {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text3);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .dp-en-summary {
+            font-size: 12px;
+            line-height: 1.6;
+            color: var(--text3);
+        }
+        .dp-en-summary a { color: var(--accent); }
+        .dp-related-item {
+            padding: 8px 10px;
+            background: var(--qian2);
+            border-radius: 6px;
+            margin-bottom: 6px;
+            cursor: pointer;
+            font-size: 12px;
+            line-height: 1.5;
+            color: var(--text2);
+            border-left: 2px solid transparent;
+            transition: all 0.2s;
+        }
+        .dp-related-item:hover {
+            background: var(--qian3);
+            color: var(--text);
+            border-left-color: var(--accent);
+        }
+        .dp-related-title { font-weight: 500; color: var(--text); }
+        .dp-related-meta { font-size: 11px; color: var(--text3); margin-top: 2px; }
+        /* Voice control bar */
+        .dp-voice-bar {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 12px;
+            background: linear-gradient(135deg, rgba(0,229,255,0.08), rgba(0,229,255,0.02));
+            border: 1px solid rgba(0,229,255,0.2);
+            border-radius: 8px;
+            margin: 12px 0;
+        }
+        .dp-voice-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 5px 12px;
+            border-radius: 6px;
+            border: 1px solid var(--qian3);
+            background: var(--qian2);
+            color: var(--text2);
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .dp-voice-btn:hover { background: var(--qian3); color: var(--text); }
+        .dp-voice-btn.active { background: rgba(0,229,255,0.15); color: #00E5FF; border-color: rgba(0,229,255,0.3); }
+        .dp-voice-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+        .dp-voice-status {
+            font-size: 11px;
+            color: var(--text3);
+            flex: 1;
+            text-align: right;
+        }
+        .dp-voice-status.speaking { color: #00E5FF; }
+        .dp-progress-bar {
+            width: 100%;
+            height: 3px;
+            background: var(--qian3);
+            border-radius: 2px;
+            margin-top: 6px;
+            overflow: hidden;
+        }
+        .dp-progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent), #00E5FF);
+            border-radius: 2px;
+            transition: width 0.3s;
+            width: 0%;
+        }
         #cat-info {
             position: fixed;
             left: 296px;
@@ -569,8 +661,32 @@
         <div class="dp-stars" id="dp-stars"></div>
         <div class="dp-meta-row" id="dp-meta"></div>
         <div class="dp-tags" id="dp-tags"></div>
+
+        <!-- Voice Control Bar -->
+        <div class="dp-voice-bar" id="dp-voice-bar">
+            <button class="dp-voice-btn" id="btn-voice-play" onclick="toggleSpeak()" title="朗读">▶️ 朗读</button>
+            <button class="dp-voice-btn" id="btn-voice-pause" onclick="pauseSpeak()" title="暂停">⏸️ 暂停</button>
+            <button class="dp-voice-btn" id="btn-voice-stop" onclick="stopSpeak()" title="停止">⏹️ 停止</button>
+            <button class="dp-voice-btn" id="btn-voice-next" onclick="speakNextArticle()" title="下一篇">⏭️ 下一篇</button>
+            <div class="dp-voice-status" id="dp-voice-status">点击朗读收听摘要</div>
+        </div>
+        <div class="dp-progress-bar"><div class="dp-progress-fill" id="dp-progress-fill"></div></div>
+
         <div class="dp-summary" id="dp-summary"></div>
         <div class="dp-insight" id="dp-insight"></div>
+
+        <!-- English Summary -->
+        <div class="dp-section" id="dp-en-summary-section" style="display:none;">
+            <div class="dp-section-title">📝 英文原文摘要</div>
+            <div class="dp-en-summary" id="dp-en-summary"></div>
+        </div>
+
+        <!-- Related Articles -->
+        <div class="dp-section" id="dp-related-section" style="display:none;">
+            <div class="dp-section-title">🔗 同标签推荐</div>
+            <div id="dp-related-list"></div>
+        </div>
+
         <a class="dp-link" id="dp-link" href="#" target="_blank">阅读原文 →</a>
     </div>
 <script>
@@ -1136,6 +1252,7 @@ function toggleParentTagArticles(parentTagId, parentLabel) {
 }
 
 function showArticleDetail(data) {
+    currentArticleData = data;
     const cnTitle = data.cn_title || data.label || '';
     const enTitle = data.title_en || '';
     document.getElementById('dp-cn-title').textContent = cnTitle;
@@ -1161,10 +1278,242 @@ function showArticleDetail(data) {
     document.getElementById('dp-insight').textContent = insight ? '💡 ' + insight : '';
     document.getElementById('dp-insight').style.display = insight ? 'block' : 'none';
     document.getElementById('dp-link').href = data.link || '#';
+
+    // English summary section
+    const enSummary = data.summary || '';
+    const hasEnSummary = enSummary && (!data.cn_summary || enSummary !== data.cn_summary);
+    const enSec = document.getElementById('dp-en-summary-section');
+    const enDiv = document.getElementById('dp-en-summary');
+    if (hasEnSummary) {
+        enDiv.textContent = enSummary;
+        enSec.style.display = 'block';
+    } else {
+        enSec.style.display = 'none';
+    }
+
+    // Related articles (same tags, excluding self)
+    const relatedList = document.getElementById('dp-related-list');
+    const relatedSec = document.getElementById('dp-related-section');
+    if (tags.length > 0 && allNodes) {
+        const selfId = data.id;
+        const related = allNodes
+            .filter(n => n.data?.type === 'article' && n.id !== selfId)
+            .filter(n => {
+                const nTags = n.data?.tags || [];
+                return tags.some(t => nTags.includes(t));
+            })
+            .sort((a, b) => (b.data?.importance || 0) - (a.data?.importance || 0))
+            .slice(0, 5);
+        if (related.length > 0) {
+            relatedList.innerHTML = related.map(n => {
+                const rCat = CAT_CONFIG[n.data?.category]?.name || n.data?.category;
+                const rTitle = n.data?.cn_title || n.label;
+                return '<div class="dp-related-item" onclick="selectArticleById(\'' + n.id + '\')">' +
+                    '<div class="dp-related-title">' + rTitle + '</div>' +
+                    '<div class="dp-related-meta">' + rCat + ' · ★' + (n.data?.importance || 3) + '</div>' +
+                    '</div>';
+            }).join('');
+            relatedSec.style.display = 'block';
+        } else {
+            relatedSec.style.display = 'none';
+        }
+    } else {
+        relatedSec.style.display = 'none';
+    }
+
+    // Reset voice UI
+    updateVoiceUI();
     document.getElementById('detail-panel').classList.add('visible');
 }
 
+// ========== Voice Reading (Web Speech API - Free) ==========
+let currentArticleData = null;
+let speechUtterance = null;
+let isSpeaking = false;
+let isPaused = false;
+let autoPlayEnabled = false;
+let speakPlaylist = [];
+let speakPlaylistIndex = 0;
+
+function selectArticleById(articleId) {
+    const node = nodes.get(articleId);
+    if (!node) return;
+    handleNodeClick(node);
+}
+
+function buildSpeakText(data) {
+    const parts = [];
+    if (data.cn_title) parts.push(data.cn_title);
+    else if (data.label) parts.push(data.label);
+    if (data.cn_summary) parts.push(data.cn_summary);
+    else if (data.summary) parts.push(data.summary);
+    if (data.key_insight) parts.push('关键洞察：' + data.key_insight);
+    return parts.join('。\n');
+}
+
+function toggleSpeak() {
+    if (!window.speechSynthesis) {
+        alert('您的浏览器不支持语音朗读功能，请使用 Chrome 或 Edge 浏览器。');
+        return;
+    }
+    if (isSpeaking && !isPaused) {
+        // Currently speaking -> pause
+        window.speechSynthesis.pause();
+        isPaused = true;
+        updateVoiceUI();
+        return;
+    }
+    if (isPaused) {
+        // Resume
+        window.speechSynthesis.resume();
+        isPaused = false;
+        updateVoiceUI();
+        return;
+    }
+    // Start new speech
+    startSpeakCurrent();
+}
+
+function startSpeakCurrent() {
+    if (!currentArticleData) return;
+    stopSpeak();
+    const text = buildSpeakText(currentArticleData);
+    if (!text.trim()) {
+        document.getElementById('dp-voice-status').textContent = '暂无内容可朗读';
+        return;
+    }
+    speechUtterance = new SpeechSynthesisUtterance(text);
+    speechUtterance.lang = 'zh-CN';
+    speechUtterance.rate = 1.1;
+    speechUtterance.pitch = 1.0;
+    speechUtterance.volume = 1.0;
+
+    // Progress tracking
+    const totalLen = text.length;
+    speechUtterance.onboundary = function(e) {
+        if (e.name === 'word' || e.name === 'sentence') {
+            const pct = Math.min(100, Math.round((e.charIndex / totalLen) * 100));
+            document.getElementById('dp-progress-fill').style.width = pct + '%';
+        }
+    };
+
+    speechUtterance.onstart = function() {
+        isSpeaking = true;
+        isPaused = false;
+        updateVoiceUI();
+    };
+
+    speechUtterance.onend = function() {
+        document.getElementById('dp-progress-fill').style.width = '100%';
+        isSpeaking = false;
+        isPaused = false;
+        updateVoiceUI();
+        // Auto-play next if enabled
+        if (autoPlayEnabled) {
+            setTimeout(() => speakNextArticle(), 800);
+        }
+    };
+
+    speechUtterance.onerror = function(e) {
+        if (e.error !== 'canceled' && e.error !== 'interrupted') {
+            console.error('Speech error:', e.error);
+        }
+        isSpeaking = false;
+        isPaused = false;
+        updateVoiceUI();
+    };
+
+    window.speechSynthesis.speak(speechUtterance);
+}
+
+function pauseSpeak() {
+    if (!window.speechSynthesis) return;
+    if (isSpeaking && !isPaused) {
+        window.speechSynthesis.pause();
+        isPaused = true;
+        updateVoiceUI();
+    }
+}
+
+function stopSpeak() {
+    if (!window.speechSynthesis) return;
+    window.speechSynthesis.cancel();
+    isSpeaking = false;
+    isPaused = false;
+    autoPlayEnabled = false;
+    document.getElementById('dp-progress-fill').style.width = '0%';
+    updateVoiceUI();
+}
+
+function speakNextArticle() {
+    if (!speakPlaylist.length) {
+        // Build playlist from currently visible articles
+        speakPlaylist = allNodes
+            .filter(n => n.data?.type === 'article')
+            .filter(n => {
+                const node = nodes.get(n.id);
+                return node && !node.hidden;
+            })
+            .map(n => n.id);
+    }
+    if (!speakPlaylist.length) return;
+    // Find current index
+    const currentId = currentArticleData?.id;
+    let idx = speakPlaylist.indexOf(currentId);
+    if (idx < 0 || idx >= speakPlaylist.length - 1) {
+        idx = -1; // start from beginning
+    }
+    const nextId = speakPlaylist[idx + 1];
+    if (nextId) {
+        autoPlayEnabled = true;
+        selectArticleById(nextId);
+        // showArticleDetail will be called by handleNodeClick, then startSpeakCurrent will pick it up
+        setTimeout(() => startSpeakCurrent(), 600);
+    }
+}
+
+function updateVoiceUI() {
+    const playBtn = document.getElementById('btn-voice-play');
+    const pauseBtn = document.getElementById('btn-voice-pause');
+    const stopBtn = document.getElementById('btn-voice-stop');
+    const nextBtn = document.getElementById('btn-voice-next');
+    const status = document.getElementById('dp-voice-status');
+
+    if (!window.speechSynthesis) {
+        status.textContent = '浏览器不支持语音';
+        [playBtn, pauseBtn, stopBtn, nextBtn].forEach(b => b.disabled = true);
+        return;
+    }
+
+    if (isSpeaking && !isPaused) {
+        playBtn.innerHTML = '⏸️ 暂停';
+        playBtn.classList.add('active');
+        pauseBtn.disabled = false;
+        stopBtn.disabled = false;
+        nextBtn.disabled = false;
+        status.textContent = autoPlayEnabled ? '🔊 朗读中 (自动连播)' : '🔊 朗读中';
+        status.classList.add('speaking');
+    } else if (isPaused) {
+        playBtn.innerHTML = '▶️ 继续';
+        playBtn.classList.remove('active');
+        pauseBtn.disabled = true;
+        stopBtn.disabled = false;
+        nextBtn.disabled = false;
+        status.textContent = '⏸️ 已暂停';
+        status.classList.remove('speaking');
+    } else {
+        playBtn.innerHTML = '▶️ 朗读';
+        playBtn.classList.remove('active');
+        pauseBtn.disabled = true;
+        stopBtn.disabled = true;
+        nextBtn.disabled = false;
+        status.textContent = autoPlayEnabled ? '点击朗读开始连播' : '点击朗读收听摘要';
+        status.classList.remove('speaking');
+    }
+}
+
 function closeDetail() {
+    stopSpeak();
     document.getElementById('detail-panel').classList.remove('visible');
 }
 
