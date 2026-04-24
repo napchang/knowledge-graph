@@ -1,0 +1,442 @@
+import os, re, json
+from datetime import datetime
+
+import sys
+# Determine base dir: repo root (where geo-knowledge-base lives)
+script_dir = os.path.dirname(os.path.abspath(__file__))
+base_dir = os.path.dirname(script_dir)
+
+kb_dir = os.path.join(base_dir, 'geo-knowledge-base')
+
+# Try load enriched data for Chinese content
+ENRICHED_DATA = {}
+enriched_path = os.path.join(base_dir, 'data', 'semantic', 'latest_enriched.json')
+if not os.path.exists(enriched_path):
+    # fallback for local dev
+    enriched_path = 'rss_source/napchang-rss-news-aggregator-0506567/data/semantic/latest_enriched.json'
+if os.path.exists(enriched_path):
+    try:
+        with open(enriched_path, 'r', encoding='utf-8') as f:
+            enriched = json.load(f)
+            for a in enriched.get('articles', []):
+                link = a.get('link', '')
+                if link:
+                    ENRICHED_DATA[link] = a
+        print(f'Loaded enriched data: {len(ENRICHED_DATA)} articles')
+    except Exception as e:
+        print(f'Failed to load enriched: {e}')
+
+categories = ['ai-search', 'agentic-b2b', 'ai-industry', 'academic']
+cat_names = {
+    'ai-search': 'AI搜索',
+    'agentic-b2b': 'Agentic B2B',
+    'ai-industry': 'AI行业动态',
+    'academic': '学术研究'
+}
+# New color scheme from user
+cat_colors = {
+    'ai-search': '#FF6B35',      # 破晓橙
+    'agentic-b2b': '#4A7BC3',    # 飞天蓝
+    'ai-industry': '#E6B85C',    # 大地金
+    'academic': '#5A92E5'        # 升华蓝
+}
+cat_desc = {
+    'ai-search': '搜索引擎优化、GEO、AEO、SEO、排名算法、搜索产品商业化',
+    'agentic-b2b': '营销自动化、销售工具、CRM、Workflow、HubSpot框架、客户体验',
+    'ai-industry': '产品发布、融资动态、大厂战略、Builder动态、行业趋势',
+    'academic': '论文发布、算法研究、模型架构（MIT/Stanford/arXiv）'
+}
+
+# Use latest collection date from knowledge base as "today"
+# This ensures users see the most recently collected articles
+all_collection_dates = []
+for cat in categories:
+    cat_dir = os.path.join(kb_dir, cat)
+    if not os.path.exists(cat_dir):
+        continue
+    for md_file in os.listdir(cat_dir):
+        m = re.match(r'(\d{4}-\d{2}-\d{2})\.md$', md_file)
+        if m:
+            all_collection_dates.append(m.group(1))
+today_str = max(all_collection_dates) if all_collection_dates else datetime.now().strftime('%Y-%m-%d')
+
+def parse_date(date_str):
+    """Parse various date formats to datetime object"""
+    if not date_str:
+        return None
+    formats = [
+        '%Y-%m-%d',
+        '%a, %d %b %Y %H:%M:%S %Z',
+        '%a, %d %b %Y',
+        '%a, %d %b %Y %H:%M:%S',
+    ]
+    for fmt in formats:
+        try:
+            return datetime.strptime(date_str.strip(), fmt)
+        except:
+            pass
+    # Fallback: try to extract date-like substring
+    import re
+    m = re.search(r'(\d{4}-\d{2}-\d{2})', date_str)
+    if m:
+        try:
+            return datetime.strptime(m.group(1), '%Y-%m-%d')
+        except:
+            pass
+    return None
+
+def is_today(date_str):
+    d = parse_date(date_str)
+    if not d:
+        return False
+    return d.strftime('%Y-%m-%d') == today_str
+
+def is_recent(date_str):
+    d = parse_date(date_str)
+    if not d:
+        return False
+    from datetime import timedelta
+    today_d = datetime.strptime(today_str, '%Y-%m-%d')
+    return (today_d - d).days <= 2
+
+articles = []
+for cat in categories:
+    cat_dir = os.path.join(kb_dir, cat)
+    if not os.path.exists(cat_dir):
+        continue
+    for md_file in os.listdir(cat_dir):
+        if md_file == 'README.md':
+            continue
+        filepath = os.path.join(cat_dir, md_file)
+        # Extract collection date from filename (e.g., "2026-04-22.md")
+        collection_date = ''
+        m = re.match(r'(\d{4}-\d{2}-\d{2})\.md$', md_file)
+        if m:
+            collection_date = m.group(1)
+        try:
+            with open(filepath, 'r', encoding='utf-8') as f:
+                content = f.read()
+        except:
+            continue
+        parts = re.split(r'\n### ', content)
+        for part in parts[1:]:
+            lines = part.strip().split('\n')
+            if len(lines) < 2:
+                continue
+            title = lines[0].strip().lstrip('#').strip()
+            title = re.sub(r'^\[.*?\]\s*', '', title)
+            link = date = collection_date_from_file = topic_str = summary = ''
+            for line in lines[1:]:
+                line = line.strip()
+                if line.startswith('- **链接**:'):
+                    link = line.split(':', 1)[1].strip()
+                elif line.startswith('- **日期**:'):
+                    date = line.split(':', 1)[1].strip()
+                elif line.startswith('- **采集日期**:'):
+                    collection_date_from_file = line.split(':', 1)[1].strip()
+                elif line.startswith('- **Topic**:'):
+                    m = re.search(r'`(.+?)`', line)
+                    if m:
+                        topic_str = m.group(1)
+                elif line.startswith('- **摘要**:'):
+                    summary = line.split(':', 1)[1].strip()
+            if title and link:
+                enriched_art = ENRICHED_DATA.get(link, {})
+                # Use collection date for is_today: article field > filename > published date
+                effective_collection_date = collection_date_from_file or collection_date or date
+                today_check_date = effective_collection_date
+                articles.append({
+                    'title': title,
+                    'link': link,
+                    'date': date,
+                    'category': cat,
+                    'topics': [t.strip() for t in topic_str.split(',')] if topic_str else [],
+                    'summary': summary,
+                    'cn_title': enriched_art.get('cn_title', ''),
+                    'cn_summary': enriched_art.get('cn_summary') or summary or title or '',
+                    'key_insight': enriched_art.get('key_insight', ''),
+                    'importance': enriched_art.get('importance', 3),
+                    'is_important_source': enriched_art.get('is_important_source', False),
+                    'is_major_news': enriched_art.get('is_major_news', False),
+                    'is_today': is_today(today_check_date),
+                    'is_recent': is_recent(today_check_date),
+                    'collection_date': effective_collection_date
+                })
+
+# Smart truncation: ensure each category gets minimum representation
+# Then fill remaining slots with newest articles across all categories
+MIN_PER_CAT = 30
+MAX_TOTAL = 300
+
+# Sort all articles by date first
+articles.sort(key=lambda x: (x.get('collection_date', ''), x.get('date', '')), reverse=True)
+
+selected = []
+selected_ids = set()
+
+# Step 1: guarantee minimum per category
+for cat in categories:
+    cat_arts = [a for a in articles if a['category'] == cat]
+    for art in cat_arts[:MIN_PER_CAT]:
+        art_id = id(art)
+        if art_id not in selected_ids:
+            selected.append(art)
+            selected_ids.add(art_id)
+
+# Step 2: fill remaining slots with top articles from all categories
+remaining_slots = MAX_TOTAL - len(selected)
+if remaining_slots > 0:
+    for art in articles:
+        art_id = id(art)
+        if art_id not in selected_ids:
+            selected.append(art)
+            selected_ids.add(art_id)
+            remaining_slots -= 1
+            if remaining_slots <= 0:
+                break
+
+articles = selected
+# Re-sort final selection
+articles.sort(key=lambda x: (x.get('collection_date', ''), x.get('date', '')), reverse=True)
+
+# Build article index map for stable IDs
+art_index = {id(art): i for i, art in enumerate(articles)}
+
+nodes = []
+edges = []
+tag_to_cat = {}
+topic_articles = {}
+
+# Category nodes
+for cat in categories:
+    nodes.append({
+        'id': f'cat_{cat}',
+        'type': 'category',
+        'label': cat_names[cat],
+        'color': cat_colors[cat],
+        'size': 50,
+        'description': cat_desc[cat]
+    })
+
+# Tag normalization: fix vague academic tags
+ACADEMIC_TAG_MAP = {
+    '研究': '学术前沿',
+    '论文': '顶会论文',
+}
+def normalize_topic(topic, art):
+    """Normalize vague tags, especially for academic category"""
+    if art['category'] == 'academic' and topic.lower() in ('研究', 'research', '论文', 'paper'):
+        # Try to extract meaningful topic from title
+        title = art.get('cn_title', '') or art.get('title', '')
+        # Extract key technical terms
+        tech_terms = re.findall(r'(LLM|RAG|检索|向量|知识图谱|多模态|幻觉|推理|生成|对齐|微调|预训练|Transformer|BERT|GPT|Embedding|语义搜索|对比学习|信息检索)', title, re.I)
+        if tech_terms:
+            return tech_terms[0]
+        # Try English technical terms from title
+        en_terms = re.findall(r'([A-Z][a-z]+(?:\s+[A-Z][a-z]+){0,2})', title)
+        for t in en_terms:
+            if len(t) > 3 and t.lower() not in ('the', 'and', 'for', 'with', 'from', 'how', 'new', 'use', 'using', 'based', 'approach', 'method'):
+                return t.strip()
+        return '学术前沿'
+    return ACADEMIC_TAG_MAP.get(topic, topic)
+
+# Collect topic → articles mapping
+for art in articles:
+    for topic in art['topics']:
+        topic = normalize_topic(topic, art)
+        if topic not in topic_articles:
+            topic_articles[topic] = []
+            tag_to_cat[topic] = art['category']
+        topic_articles[topic].append(art)
+
+# Tag nodes
+for topic, art_list in topic_articles.items():
+    cat = tag_to_cat.get(topic, 'ai-industry')
+    count = len(art_list)
+    # Calculate avg importance for tag
+    avg_imp = sum(a.get('importance', 3) for a in art_list) / len(art_list)
+    nodes.append({
+        'id': f'tag_{topic}',
+        'type': 'tag',
+        'label': topic,
+        'category': cat,
+        'color': cat_colors.get(cat, '#64748B'),
+        'size': 16 + min(count * 1.2, 22),
+        'count': count,
+        'avg_importance': round(avg_imp, 1)
+    })
+    edges.append({
+        'source': f'cat_{cat}',
+        'target': f'tag_{topic}',
+        'value': 2,
+        'label': '包含'
+    })
+    for art in art_list:
+        idx = art_index[id(art)]
+        edges.append({
+            'source': f'tag_{topic}',
+            'target': f'art_{idx}',
+            'value': 1,
+            'label': '关联'
+        })
+
+# Deduplicate labels
+label_counts = {}
+for art in articles:
+    base_label = art['cn_title'][:26] + '...' if art.get('cn_title') and len(art['cn_title']) > 26 else (art['cn_title'] or art['title'][:26] + '...')
+    label_counts[base_label] = label_counts.get(base_label, 0) + 1
+
+# Article nodes
+for i, art in enumerate(articles):
+    has_tag = len(art['topics']) > 0 and any(t in topic_articles for t in art['topics'])
+    imp = art.get('importance', 3)
+    is_today_flag = art.get('is_today', False)
+    is_important = art.get('is_important_source', False)
+    is_major = art.get('is_major_news', False)
+    
+    # Size based on importance + boosts
+    size = 5 + imp * 1.2
+    if is_important:
+        size += 2
+    if is_major:
+        size += 2
+    if is_today_flag:
+        size += 1.5
+    
+    # Border style based on importance
+    border_width = 1
+    border_color = '#ffffff'
+    if imp >= 5:
+        border_width = 3
+        border_color = '#FF6B35'  # 破晓橙边框
+    elif imp >= 4:
+        border_width = 2
+        border_color = '#E6B85C'  # 大地金边框
+    elif is_important:
+        border_width = 2
+        border_color = '#4A7BC3'  # 飞天蓝边框
+    
+    # Build unique label
+    base_label = art['cn_title'][:26] + '...' if art.get('cn_title') and len(art['cn_title']) > 26 else (art['cn_title'] or art['title'][:26] + '...')
+    if label_counts.get(base_label, 0) > 1:
+        source_prefix = art.get('source', '')[:8]
+        if source_prefix:
+            display_label = source_prefix + ': ' + base_label
+        else:
+            display_label = base_label
+    else:
+        display_label = base_label
+    
+    nodes.append({
+        'id': f'art_{i}',
+        'type': 'article',
+        'label': display_label,
+        'title_en': art['title'],
+        'link': art['link'],
+        'date': art['date'],
+        'summary': art['summary'][:120],
+        'cn_summary': (art.get('cn_summary') or art.get('summary') or art.get('title_en') or art.get('title') or '')[:120],
+        'key_insight': art.get('key_insight', ''),
+        'category': art['category'],
+        'tags': art['topics'] if art['topics'] else ['未分类'],
+        'color': cat_colors.get(art['category'], '#64748B'),
+        'size': size,
+        'importance': imp,
+        'is_today': is_today_flag,
+        'is_recent': art.get('is_recent', False),
+        'is_important_source': is_important,
+        'is_major_news': is_major,
+        'border_width': border_width,
+        'border_color': border_color
+    })
+    if not has_tag:
+        edges.append({
+            'source': f'cat_{art["category"]}',
+            'target': f'art_{i}',
+            'value': 1,
+            'label': '未分类'
+        })
+
+# Cross-category edges: tags sharing articles
+article_tags = {}
+for topic, art_list in topic_articles.items():
+    for art in art_list:
+        idx = art_index[id(art)]
+        if idx not in article_tags:
+            article_tags[idx] = []
+        article_tags[idx].append(topic)
+
+for idx, tags in article_tags.items():
+    if len(tags) > 1:
+        for i in range(len(tags)):
+            for j in range(i+1, len(tags)):
+                t1, t2 = tags[i], tags[j]
+                c1, c2 = tag_to_cat.get(t1), tag_to_cat.get(t2)
+                if c1 and c2 and c1 != c2:
+                    edges.append({
+                        'source': f'tag_{t1}',
+                        'target': f'tag_{t2}',
+                        'value': 1,
+                        'type': 'cross',
+                        'label': '跨主题'
+                    })
+
+# Inter-category connections (thematic links between the 4 main categories)
+# These represent semantic relationships between domains
+inter_cat_links = [
+    ('cat_ai-search', 'cat_agentic-b2b', '搜索驱动B2B获客'),
+    ('cat_ai-search', 'cat_ai-industry', '搜索产品商业化'),
+    ('cat_ai-search', 'cat_academic', '搜索算法研究'),
+    ('cat_agentic-b2b', 'cat_ai-industry', 'B2B AI产品'),
+    ('cat_agentic-b2b', 'cat_academic', 'Agentic研究'),
+    ('cat_ai-industry', 'cat_academic', '产学研转化')
+]
+for src, tgt, label in inter_cat_links:
+    edges.append({
+        'source': src,
+        'target': tgt,
+        'value': 1,
+        'type': 'inter-cat',
+        'label': label,
+        'dashes': True
+    })
+
+# Today's summary by category
+today_summary = {}
+for cat in categories:
+    cat_articles = [a for a in articles if a['category'] == cat and a.get('is_today')]
+    today_summary[cat] = {
+        'count': len(cat_articles),
+        'titles': [a.get('cn_title') or a['title'] for a in cat_articles[:5]]
+    }
+
+graph_data = {
+    'generated_at': datetime.now().isoformat(),
+    'date': today_str,
+    'total_articles': len(articles),
+    'today_articles': sum(1 for a in articles if a.get('is_today')),
+    'recent_articles': sum(1 for a in articles if a.get('is_recent')),
+    'categories': categories,
+    'category_names': cat_names,
+    'category_colors': cat_colors,
+    'category_descriptions': cat_desc,
+    'today_summary': today_summary,
+    'nodes': nodes,
+    'edges': edges
+}
+
+output_path = os.path.join(base_dir, 'graph-data.json')
+with open(output_path, 'w', encoding='utf-8') as f:
+    json.dump(graph_data, f, ensure_ascii=False, indent=2)
+
+# Stats
+art_with_edges = set()
+for e in edges:
+    t = e.get('target', '')
+    if t.startswith('art_'):
+        art_with_edges.add(t)
+
+print(f'Graph data saved: {len(nodes)} nodes, {len(edges)} edges')
+print(f'Articles: {len(articles)}, with edges: {len(art_with_edges)}, isolated: {len(articles) - len(art_with_edges)}')
+print(f'Tags: {len(topic_articles)}')
+print(f'Today: {sum(1 for a in articles if a.get("is_today"))}, Recent: {sum(1 for a in articles if a.get("is_recent"))}')
