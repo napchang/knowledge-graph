@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>卯时AI · 情报知识图谱</title>
+    <title>卯时AI · AI动态知识图谱</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <style>
@@ -449,7 +449,7 @@
     <div id="header">
         <h1>
             <div class="logo">卯</div>
-            卯时AI · 情报知识图谱
+            卯时AI · AI动态知识图谱
         </h1>
         <div id="header-stats">
             <span id="stat-today">今日 0 条</span>
@@ -468,7 +468,10 @@
                 <div class="search-status" id="search-status"></div>
             </div>
             <div class="section" id="today-section-wrapper">
-                <div class="section-title">今日动态</div>
+                <div class="section-title" style="display:flex;justify-content:space-between;align-items:center;">
+                    <span>今日动态</span>
+                    <span id="today-toggle-btn" style="cursor:pointer;font-size:12px;color:#64748B;padding:2px 8px;border-radius:4px;" onclick="toggleTodaySection()">收起 ▲</span>
+                </div>
                 <div id="today-content"></div>
             </div>
             <div class="section">
@@ -777,19 +780,25 @@ function dimAllExcept(keepIds) {
         if (keepIds.has(n.id)) {
             if (dimmedNodeIds.has(n.id)) {
                 const orig = originalNodeColors[n.id];
+                // Restore full brightness for kept nodes
+                const isTodayArt = n.data?.type === 'article' && n.data?.is_today;
                 updates.push({
                     id: n.id,
-                    color: { background: orig.background, border: orig.border },
-                    font: { color: n.data?.type === 'category' ? '#F8FAFC' : (n.data?.type === 'tag' ? '#CBD5E1' : '#94A3B8') }
+                    color: {
+                        background: orig.background,
+                        border: isTodayArt ? '#FF6B35' : orig.border
+                    },
+                    font: { color: n.data?.type === 'category' ? '#F8FAFC' : (n.data?.type === 'tag' ? '#CBD5E1' : '#E2E8F0') }
                 });
                 dimmedNodeIds.delete(n.id);
             }
         } else {
             if (!dimmedNodeIds.has(n.id)) {
+                // Much darker for non-related nodes
                 updates.push({
                     id: n.id,
-                    color: { background: DIM_COLOR, border: 'rgba(100,116,139,0.3)' },
-                    font: { color: 'rgba(100,116,139,0.4)' }
+                    color: { background: '#0F1D32', border: 'rgba(60,70,90,0.2)' },
+                    font: { color: 'rgba(60,70,90,0.25)' }
                 });
                 dimmedNodeIds.add(n.id);
             }
@@ -799,7 +808,7 @@ function dimAllExcept(keepIds) {
         if (keepIds.has(e.from) || keepIds.has(e.to)) {
             edgeUpdates.push({ id: e.id, color: { opacity: e.id.includes('inter') ? 0.25 : 0.55 } });
         } else {
-            edgeUpdates.push({ id: e.id, color: { opacity: 0.04 } });
+            edgeUpdates.push({ id: e.id, color: { opacity: 0.02 } });
         }
     });
     if (updates.length > 0) nodes.update(updates);
@@ -1011,6 +1020,20 @@ function closeDetail() {
     document.getElementById('detail-panel').classList.remove('visible');
 }
 
+let todaySectionCollapsed = false;
+function toggleTodaySection() {
+    const wrapper = document.getElementById('today-content');
+    const btn = document.getElementById('today-toggle-btn');
+    todaySectionCollapsed = !todaySectionCollapsed;
+    if (todaySectionCollapsed) {
+        wrapper.style.display = 'none';
+        btn.textContent = '展开 ▼';
+    } else {
+        wrapper.style.display = 'block';
+        btn.textContent = '收起 ▲';
+    }
+}
+
 let todayFilterCat = null;
 let todayExpanded = false;
 
@@ -1182,7 +1205,7 @@ function setupUI() {
             const d = n.data || {};
             const searchable = [
                 n.label, d.title_en, d.cn_title, d.summary, d.cn_summary,
-                d.key_insight, d.source
+                d.key_insight, d.source, d.link
             ].filter(Boolean).join(' ').toLowerCase();
             const tagMatch = (d.tags || []).some(t => t.toLowerCase().includes(query));
             const match = searchable.includes(query) || tagMatch;
@@ -1277,9 +1300,7 @@ function showCategoryTodayArticles(cat) {
     todayFilterCat = cat;
     todayExpanded = true;
     renderTodaySection();
-    // Focus first article and show its detail
-    // Build a keep-set that includes ALL today's articles in this category,
-    // their neighbors, and the category node itself — so nothing gets dimmed
+    // Focus the category node and fit all today's articles in view
     setTimeout(() => {
         const keepIds = new Set();
         keepIds.add('cat_' + cat);
@@ -1287,12 +1308,12 @@ function showCategoryTodayArticles(cat) {
             keepIds.add(art.id);
             getNeighborIds(art.id).forEach(id => keepIds.add(id));
         });
-        const first = catTodayArts[0];
-        if (first) {
-            selectArticle(first.id);
-            showArticleDetail(first.data);
-        }
         dimAllExcept(keepIds);
+        // Fit all relevant nodes into view (centered)
+        network.fit({
+            nodes: Array.from(keepIds),
+            animation: { duration: 500, easingFunction: 'easeInOutQuad' }
+        });
     }, 120);
 }
 
