@@ -14,6 +14,9 @@ enriched_path = os.path.join(base_dir, 'data', 'semantic', 'latest_enriched.json
 if not os.path.exists(enriched_path):
     # fallback for local dev
     enriched_path = 'rss_source/napchang-rss-news-aggregator-0506567/data/semantic/latest_enriched.json'
+if not os.path.exists(enriched_path):
+    # fallback to sibling data dir
+    enriched_path = os.path.join(os.path.dirname(base_dir), 'data', 'semantic', 'latest_enriched.json')
 if os.path.exists(enriched_path):
     try:
         with open(enriched_path, 'r', encoding='utf-8') as f:
@@ -166,7 +169,7 @@ for cat in categories:
 # Smart truncation: ensure each category gets minimum representation
 # Then fill remaining slots with newest articles across all categories
 MIN_PER_CAT = 30
-MAX_TOTAL = 300
+MAX_TOTAL = 500
 
 # Sort all articles by date first
 articles.sort(key=lambda x: (x.get('collection_date', ''), x.get('date', '')), reverse=True)
@@ -293,6 +296,16 @@ for parent_name, info in parent_tags.items():
         'value': 2,
         'label': '包含'
     })
+    # Parent tag directly connects to all child-tag articles for visibility
+    for a in articles:
+        if id(a) in info['arts']:
+            idx = art_index[id(a)]
+            edges.append({
+                'source': tag_id,
+                'target': f'art_{idx}',
+                'value': 1,
+                'label': '关联'
+            })
 
 # Create child tag nodes (including non-hierarchical tags)
 # Skip tags already created as parent tags
@@ -400,10 +413,11 @@ for i, art in enumerate(articles):
         'type': 'article',
         'label': display_label,
         'title_en': art['title'],
+        'cn_title': art.get('cn_title', ''),
         'link': art['link'],
         'date': art['date'],
         'summary': art['summary'][:120],
-        'cn_summary': (art.get('cn_summary') or art.get('summary') or art.get('title_en') or art.get('title') or '')[:120],
+        'cn_summary': (art.get('cn_summary') or art.get('summary') or art.get('title') or '')[:120],
         'key_insight': art.get('key_insight', ''),
         'category': art['category'],
         'tags': art['topics'] if art['topics'] else [],
