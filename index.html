@@ -514,6 +514,7 @@
             卯时AI · AI动态知识图谱
         </h1>
         <div id="header-stats">
+            <span id="stat-total">共 0 篇</span>
             <span id="stat-today">今日 0 条</span>
             <span id="stat-nodes">0 节点</span>
             <span id="stat-edges">0 连线</span>
@@ -636,10 +637,13 @@ async function init(dataUrl) {
         const cacheBuster = '?v=' + Date.now();
         const resp = await fetch(dataUrl + cacheBuster);
         graphData = await resp.json();
+        const totalArticles = graphData.nodes.filter(n => n.type === 'article').length;
+        const todayCount = graphData.today_articles || 0;
+        document.getElementById('stat-total').textContent = '共 ' + totalArticles + ' 篇';
+        document.getElementById('stat-today').textContent = '今日 ' + todayCount + ' 条';
         document.getElementById('stat-nodes').textContent = graphData.nodes.length + ' 节点';
         document.getElementById('stat-edges').textContent = graphData.edges.length + ' 连线';
-        if (graphData.today_articles > 0) {
-            document.getElementById('stat-today').textContent = '今日 ' + graphData.today_articles + ' 条';
+        if (todayCount > 0) {
             document.getElementById('stat-today').style.color = '#FF6B35';
         }
         const visNodes = graphData.nodes.map(n => {
@@ -838,27 +842,13 @@ function dimAllExcept(keepIds) {
     const updates = [];
     const edgeUpdates = [];
     nodes.get().forEach(n => {
-        if (keepIds.has(n.id)) {
-            // Ensure kept nodes are visible
-            if (n.hidden) {
-                updates.push({ id: n.id, hidden: false });
-            }
-        } else {
-            // Hide non-related nodes completely for clean focus
-            if (!n.hidden) {
-                updates.push({ id: n.id, hidden: true });
-            }
-        }
+        updates.push({ id: n.id, hidden: !keepIds.has(n.id) });
     });
     edges.get().forEach(e => {
-        if (keepIds.has(e.from) || keepIds.has(e.to)) {
-            if (e.hidden) {
-                edgeUpdates.push({ id: e.id, hidden: false });
-            }
+        if (e.type === 'layout-anchor') {
+            edgeUpdates.push({ id: e.id, hidden: true });
         } else {
-            if (!e.hidden && e.type !== 'layout-anchor') {
-                edgeUpdates.push({ id: e.id, hidden: true });
-            }
+            edgeUpdates.push({ id: e.id, hidden: !(keepIds.has(e.from) || keepIds.has(e.to)) });
         }
     });
     if (updates.length > 0) nodes.update(updates);
@@ -874,10 +864,7 @@ function restoreAllDimming() {
             const show = articlesVisible || expandedTags.has(parentTag) || n.data?.is_today;
             updates.push({ id: n.id, hidden: !show });
         } else {
-            // Categories and tags always visible
-            if (n.hidden) {
-                updates.push({ id: n.id, hidden: false });
-            }
+            updates.push({ id: n.id, hidden: false });
         }
     });
     edges.get().forEach(e => {
@@ -1341,28 +1328,32 @@ function setupUI() {
         catList.appendChild(item);
     });
 
-    document.getElementById('search-box').addEventListener('input', (e) => {
-        const query = e.target.value.toLowerCase().trim();
-        const statusEl = document.getElementById('search-status');
-        if (!query) {
-            statusEl.textContent = '';
-            const updates = [];
-            nodes.get().forEach(n => {
-                if (n.data?.type === 'article') {
-                    const parentTag = getParentTag(n.id);
-                    updates.push({ id: n.id, hidden: !expandedTags.has(parentTag) && !articlesVisible });
-                } else {
-                    updates.push({ id: n.id, hidden: false });
-                }
-            });
-            nodes.update(updates);
-            restoreAllDimming();
-            return;
+let searchDebounceTimer = null;
+document.getElementById('search-box').addEventListener('input', (e) => {
+    const query = e.target.value.toLowerCase().trim();
+    const statusEl = document.getElementById('search-status');
+    
+    clearTimeout(searchDebounceTimer);
+    
+    if (!query) {
+        statusEl.textContent = '';
+        if (network && physicsEnabled) {
+            network.setOptions({ physics: { enabled: true } });
         }
+        restoreAllDimming();
+        return;
+    }
+    
+    searchDebounceTimer = setTimeout(() => {
+        // Pause physics to prevent jitter
+        if (network) {
+            network.setOptions({ physics: { enabled: false } });
+        }
+        
         let matchCount = 0;
         const matchedIds = [];
         const neighborIds = new Set();
-        const updates = [];
+        
         nodes.get().forEach(n => {
             const d = n.data || {};
             const searchable = [
@@ -1371,56 +1362,39 @@ function setupUI() {
             ].filter(Boolean).join(' ').toLowerCase();
             const tagMatch = (d.tags || []).some(t => t.toLowerCase().includes(query));
             const match = searchable.includes(query) || tagMatch;
-            if (d.type === 'category') {
-                updates.push({ id: n.id, hidden: false });
-            } else if (match) {
-                updates.push({ id: n.id, hidden: false });
+            if (match) {
                 matchCount++;
                 matchedIds.push(n.id);
                 allEdges.forEach(ed => {
                     if (ed.from === n.id) neighborIds.add(ed.to);
                     if (ed.to === n.id) neighborIds.add(ed.from);
                 });
-            } else {
-                updates.push({ id: n.id, hidden: true });
             }
         });
-        // Ensure all neighbors are visible
-        neighborIds.forEach(nid => {
-            const existing = updates.find(u => u.id === nid);
-            if (existing) existing.hidden = false;
-            else updates.push({ id: nid, hidden: false });
-        });
-        nodes.update(updates);
-        // Build keep set for dimming: matched + neighbors + their connections
+        
+        // Build keep set: matched + neighbors + 2-hop neighbors
         const keepIds = new Set([...matchedIds, ...neighborIds]);
-        // Also include 2-hop neighbors for better context
         neighborIds.forEach(nid => {
             allEdges.forEach(ed => {
                 if (ed.from === nid) keepIds.add(ed.to);
                 if (ed.to === nid) keepIds.add(ed.from);
             });
         });
+        
         dimAllExcept(keepIds);
+        
         statusEl.innerHTML = matchCount > 0
             ? '找到 <span class="match-count">' + matchCount + '</span> 个匹配结果'
             : '未找到匹配结果';
+        
         if (matchedIds.length > 0) {
-            // Focus on all matched nodes, not just the first one
             network.fit({
-                nodes: matchedIds,
+                nodes: Array.from(keepIds),
                 animation: { duration: 500, easingFunction: 'easeInOutQuad' }
             });
-            // Highlight the first match
-            const firstId = matchedIds[0];
-            const firstNode = nodes.get(firstId);
-            if (firstNode && firstNode.data?.type === 'article') {
-                selectArticle(firstId);
-            } else if (firstNode && firstNode.data?.type === 'tag') {
-                selectTag(firstId);
-            }
         }
-    });
+    }, 300);
+});
 
     document.getElementById('btn-toggle-articles').addEventListener('click', function() {
         articlesVisible = !articlesVisible;
