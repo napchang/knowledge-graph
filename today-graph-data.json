@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24T18:44:44.269274",
+  "generated_at": "2026-04-24T20:09:17.672631",
   "date": "2026-04-23",
   "total_articles": 65,
   "today_articles": 65,
@@ -67,7 +67,7 @@
       "category": "academic",
       "color": "#5A92E5",
       "size": 38,
-      "count": 5,
+      "count": 0,
       "avg_importance": 3.4,
       "is_parent_tag": true
     },
@@ -78,7 +78,7 @@
       "category": "agentic-b2b",
       "color": "#4A7BC3",
       "size": 34.4,
-      "count": 3,
+      "count": 2,
       "avg_importance": 3.9,
       "is_parent_tag": true
     },
@@ -89,7 +89,7 @@
       "category": "ai-industry",
       "color": "#E6B85C",
       "size": 38,
-      "count": 39,
+      "count": 0,
       "avg_importance": 3.1,
       "is_parent_tag": true
     },
@@ -100,7 +100,7 @@
       "category": "agentic-b2b",
       "color": "#4A7BC3",
       "size": 38,
-      "count": 3,
+      "count": 1,
       "avg_importance": 3.5,
       "is_parent_tag": true
     },
@@ -111,7 +111,7 @@
       "category": "ai-search",
       "color": "#FF6B35",
       "size": 32.8,
-      "count": 5,
+      "count": 3,
       "avg_importance": 3.2,
       "is_parent_tag": true
     },
@@ -122,7 +122,7 @@
       "category": "agentic-b2b",
       "color": "#4A7BC3",
       "size": 32.0,
-      "count": 1,
+      "count": 0,
       "avg_importance": 3.1,
       "is_parent_tag": true
     },
@@ -133,7 +133,7 @@
       "category": "ai-search",
       "color": "#FF6B35",
       "size": 27.2,
-      "count": 1,
+      "count": 0,
       "avg_importance": 3.1,
       "is_parent_tag": true
     },
@@ -144,7 +144,7 @@
       "category": "agentic-b2b",
       "color": "#4A7BC3",
       "size": 27.2,
-      "count": 1,
+      "count": 0,
       "avg_importance": 3.2,
       "is_parent_tag": true
     },
@@ -2052,318 +2052,6 @@
   ],
   "edges": [
     {
-      "source": "tag_学术",
-      "target": "art_0",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_学术",
-      "target": "art_2",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_学术",
-      "target": "art_6",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_学术",
-      "target": "art_8",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_学术",
-      "target": "art_54",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_Sales",
-      "target": "art_4",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业",
-      "target": "art_5",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业",
-      "target": "art_7",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业",
-      "target": "art_19",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业",
-      "target": "art_20",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业",
-      "target": "art_21",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业",
-      "target": "art_22",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业",
-      "target": "art_23",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业",
-      "target": "art_24",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业",
-      "target": "art_25",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业",
-      "target": "art_26",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业",
-      "target": "art_27",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业",
-      "target": "art_28",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业",
-      "target": "art_29",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业",
-      "target": "art_30",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业",
-      "target": "art_31",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业",
-      "target": "art_32",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业",
-      "target": "art_33",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业",
-      "target": "art_34",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业",
-      "target": "art_35",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业",
-      "target": "art_36",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业",
-      "target": "art_37",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业",
-      "target": "art_45",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业",
-      "target": "art_46",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业",
-      "target": "art_47",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业",
-      "target": "art_48",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业",
-      "target": "art_49",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业",
-      "target": "art_50",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业",
-      "target": "art_51",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业",
-      "target": "art_52",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业",
-      "target": "art_53",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业",
-      "target": "art_55",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业",
-      "target": "art_56",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业",
-      "target": "art_57",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业",
-      "target": "art_58",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业",
-      "target": "art_59",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业",
-      "target": "art_60",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业",
-      "target": "art_61",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业",
-      "target": "art_62",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_行业",
-      "target": "art_63",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_Automation",
-      "target": "art_9",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_Automation",
-      "target": "art_43",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_SEO",
-      "target": "art_15",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_SEO",
-      "target": "art_42",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_CX",
-      "target": "art_18",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_平台",
-      "target": "art_40",
-      "value": 1,
-      "label": "关联"
-    },
-    {
-      "source": "tag_B2B",
-      "target": "art_44",
-      "value": 1,
-      "label": "关联"
-    },
-    {
       "source": "tag_学术/模型架构",
       "target": "art_0",
       "value": 1,
@@ -3350,6 +3038,36 @@
       "label": "",
       "type": "layout-anchor",
       "hidden": true
+    },
+    {
+      "source": "tag_学术",
+      "target": "tag_学术/模型架构",
+      "value": 2,
+      "label": "子类"
+    },
+    {
+      "source": "tag_行业",
+      "target": "tag_行业/Agent生态",
+      "value": 2,
+      "label": "子类"
+    },
+    {
+      "source": "tag_CX",
+      "target": "tag_CX/客户体验",
+      "value": 2,
+      "label": "子类"
+    },
+    {
+      "source": "tag_平台",
+      "target": "tag_平台/AI搜索产品",
+      "value": 2,
+      "label": "子类"
+    },
+    {
+      "source": "tag_B2B",
+      "target": "tag_B2B/Strategy",
+      "value": 2,
+      "label": "子类"
     },
     {
       "source": "cat_academic",
