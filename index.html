@@ -608,7 +608,11 @@ async function init() {
         allNodes = visNodes;
         allEdges = visEdges;
 
+        // Default show today's articles
         visNodes.forEach(n => {
+            if (n.data?.type === 'article' && n.data?.is_today) {
+                n.hidden = false;
+            }
             originalNodeColors[n.id] = {
                 background: n.color.background,
                 border: n.color.border
@@ -990,8 +994,18 @@ function renderTodaySection() {
             const nodeId = el.dataset.nodeId;
             const node = nodes.get(nodeId);
             if (node) {
+                // Ensure article is visible before focusing
                 nodes.update({ id: nodeId, hidden: false });
-                handleNodeClick(node);
+                // Also show its parent tag so the edge is visible
+                const parentTag = getParentTag(nodeId);
+                if (parentTag && !expandedTags.has(parentTag)) {
+                    expandedTags.add(parentTag);
+                    updateTagListUI();
+                }
+                setTimeout(() => {
+                    const freshNode = nodes.get(nodeId);
+                    if (freshNode) handleNodeClick(freshNode);
+                }, 120);
             }
         });
     });
@@ -1008,14 +1022,18 @@ function setupUI() {
         item.dataset.cat = cat;
         const header = document.createElement('div');
         header.className = 'cat-header';
+        const todaySpanId = 'today-count-' + cat;
         header.innerHTML =
             '<div class="cat-dot" style="background:' + cfg.color + '"></div>' +
             '<div class="cat-name">' + cfg.emoji + ' ' + cfg.name + '</div>' +
-            '<div class="cat-count">' + catTags.length + '标签' + (todayCount > 0 ? ' · <span style="color:#FF6B35">' + todayCount + '新</span>' : '') + '</div>' +
+            '<div class="cat-count">' + catTags.length + '标签' + (todayCount > 0 ? ' · <span class="today-count-span" id="' + todaySpanId + '" style="color:#FF6B35;cursor:pointer;text-decoration:underline;">' + todayCount + '新</span>' : '') + '</div>' +
             '<div class="cat-toggle">▶</div>';
         header.addEventListener('click', (e) => {
             if (e.target.closest('.cat-toggle')) {
                 toggleTagList(cat, item);
+            } else if (e.target.closest('.today-count-span')) {
+                e.stopPropagation();
+                showCategoryTodayArticles(cat);
             } else {
                 toggleCategory(cat, header);
             }
@@ -1142,6 +1160,33 @@ function setupUI() {
         network.fit({ animation: { duration: 500 } });
         clearSelection();
     });
+}
+
+function showCategoryTodayArticles(cat) {
+    const catTodayArts = allNodes.filter(n => n.data?.category === cat && n.data?.type === 'article' && n.data?.is_today);
+    if (catTodayArts.length === 0) return;
+    closeCatInfo();
+    // Ensure all today's articles in this category are visible, plus their parent tags
+    const updates = [];
+    catTodayArts.forEach(art => {
+        updates.push({ id: art.id, hidden: false });
+        const parentTag = getParentTag(art.id);
+        if (parentTag) {
+            expandedTags.add(parentTag);
+            updates.push({ id: parentTag, hidden: false });
+        }
+    });
+    updateTagListUI();
+    if (updates.length) nodes.update(updates);
+    // Focus first article and show its detail
+    setTimeout(() => {
+        const first = catTodayArts[0];
+        if (first) {
+            selectArticle(first.id);
+            showArticleDetail(first.data);
+            dimAllExcept(getNeighborIds(first.id));
+        }
+    }, 120);
 }
 
 function toggleTagList(cat, item) {
