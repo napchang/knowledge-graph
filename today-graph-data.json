@@ -67,7 +67,7 @@
       "category": "academic",
       "color": "#5A92E5",
       "size": 38,
-      "count": 133,
+      "count": 5,
       "avg_importance": 3.4,
       "is_parent_tag": true
     },
@@ -78,7 +78,7 @@
       "category": "agentic-b2b",
       "color": "#4A7BC3",
       "size": 34.4,
-      "count": 18,
+      "count": 3,
       "avg_importance": 3.9,
       "is_parent_tag": true
     },
@@ -89,7 +89,7 @@
       "category": "ai-industry",
       "color": "#E6B85C",
       "size": 38,
-      "count": 680,
+      "count": 39,
       "avg_importance": 3.1,
       "is_parent_tag": true
     },
@@ -100,7 +100,7 @@
       "category": "agentic-b2b",
       "color": "#4A7BC3",
       "size": 38,
-      "count": 37,
+      "count": 3,
       "avg_importance": 3.5,
       "is_parent_tag": true
     },
@@ -111,7 +111,7 @@
       "category": "ai-search",
       "color": "#FF6B35",
       "size": 32.8,
-      "count": 16,
+      "count": 5,
       "avg_importance": 3.2,
       "is_parent_tag": true
     },
@@ -122,7 +122,7 @@
       "category": "agentic-b2b",
       "color": "#4A7BC3",
       "size": 32.0,
-      "count": 15,
+      "count": 1,
       "avg_importance": 3.1,
       "is_parent_tag": true
     },
@@ -133,7 +133,7 @@
       "category": "ai-search",
       "color": "#FF6B35",
       "size": 27.2,
-      "count": 9,
+      "count": 1,
       "avg_importance": 3.1,
       "is_parent_tag": true
     },
@@ -144,7 +144,7 @@
       "category": "agentic-b2b",
       "color": "#4A7BC3",
       "size": 27.2,
-      "count": 9,
+      "count": 1,
       "avg_importance": 3.2,
       "is_parent_tag": true
     },
@@ -155,7 +155,7 @@
       "category": "ai-search",
       "color": "#FF6B35",
       "size": 24.8,
-      "count": 6,
+      "count": 3,
       "avg_importance": 3.0,
       "is_parent_tag": true
     },
@@ -166,7 +166,7 @@
       "category": "ai-search",
       "color": "#FF6B35",
       "size": 28.0,
-      "count": 10,
+      "count": 3,
       "avg_importance": 3.0,
       "is_parent_tag": true
     },
@@ -177,7 +177,7 @@
       "category": "academic",
       "color": "#5A92E5",
       "size": 30,
-      "count": 66,
+      "count": 3,
       "avg_importance": 3.3,
       "is_parent_tag": false
     },
@@ -188,7 +188,7 @@
       "category": "academic",
       "color": "#5A92E5",
       "size": 30,
-      "count": 49,
+      "count": 3,
       "avg_importance": 3.7,
       "is_parent_tag": false
     },
@@ -199,7 +199,7 @@
       "category": "academic",
       "color": "#5A92E5",
       "size": 30,
-      "count": 74,
+      "count": 7,
       "avg_importance": 3.5,
       "is_parent_tag": false
     },
@@ -210,7 +210,7 @@
       "category": "academic",
       "color": "#5A92E5",
       "size": 26.0,
-      "count": 12,
+      "count": 1,
       "avg_importance": 3.8,
       "is_parent_tag": false
     },
@@ -221,7 +221,7 @@
       "category": "agentic-b2b",
       "color": "#4A7BC3",
       "size": 30,
-      "count": 18,
+      "count": 1,
       "avg_importance": 3.9,
       "is_parent_tag": false
     },
@@ -232,7 +232,7 @@
       "category": "ai-industry",
       "color": "#E6B85C",
       "size": 30,
-      "count": 65,
+      "count": 5,
       "avg_importance": 3.0,
       "is_parent_tag": false
     },
@@ -243,7 +243,7 @@
       "category": "ai-industry",
       "color": "#E6B85C",
       "size": 30,
-      "count": 69,
+      "count": 2,
       "avg_importance": 3.2,
       "is_parent_tag": false
     },
@@ -254,7 +254,7 @@
       "category": "ai-industry",
       "color": "#E6B85C",
       "size": 30,
-      "count": 99,
+      "count": 1,
       "avg_importance": 3.2,
       "is_parent_tag": false
     },
@@ -265,7 +265,7 @@
       "category": "agentic-b2b",
       "color": "#4A7BC3",
       "size": 30,
-      "count": 37,
+      "count": 2,
       "avg_importance": 3.5,
       "is_parent_tag": false
     },
@@ -276,7 +276,7 @@
       "category": "ai-search",
       "color": "#FF6B35",
       "size": 30,
-      "count": 25,
+      "count": 4,
       "avg_importance": 3.3,
       "is_parent_tag": false
     },
@@ -287,7 +287,7 @@
       "category": "ai-search",
       "color": "#FF6B35",
       "size": 25.0,
-      "count": 11,
+      "count": 2,
       "avg_importance": 3.3,
       "is_parent_tag": false
     },
@@ -298,7 +298,7 @@
       "category": "agentic-b2b",
       "color": "#4A7BC3",
       "size": 29.0,
-      "count": 15,
+      "count": 1,
       "avg_importance": 3.1,
       "is_parent_tag": false
     },
@@ -309,7 +309,7 @@
       "category": "ai-industry",
       "color": "#E6B85C",
       "size": 30,
-      "count": 407,
+      "count": 30,
       "avg_importance": 3.0,
       "is_parent_tag": false
     },
@@ -320,7 +320,7 @@
       "category": "ai-industry",
       "color": "#E6B85C",
       "size": 30,
-      "count": 17,
+      "count": 2,
       "avg_importance": 3.1,
       "is_parent_tag": false
     },
@@ -331,7 +331,7 @@
       "category": "ai-search",
       "color": "#FF6B35",
       "size": 23.0,
-      "count": 9,
+      "count": 1,
       "avg_importance": 3.1,
       "is_parent_tag": false
     },
@@ -342,7 +342,7 @@
       "category": "agentic-b2b",
       "color": "#4A7BC3",
       "size": 23.0,
-      "count": 9,
+      "count": 1,
       "avg_importance": 3.2,
       "is_parent_tag": false
     },
