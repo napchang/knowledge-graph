@@ -946,9 +946,19 @@ function closeDetail() {
     document.getElementById('detail-panel').classList.remove('visible');
 }
 
+let todayFilterCat = null;
+let todayExpanded = false;
+
 function renderTodaySection() {
     const wrapper = document.getElementById('today-content');
-    const todayArticles = allNodes.filter(n => n.data?.is_today && n.data?.type === 'article');
+    let todayArticles = allNodes.filter(n => n.data?.is_today && n.data?.type === 'article');
+    
+    // Apply category filter if set
+    const isFiltered = todayFilterCat !== null;
+    if (isFiltered) {
+        todayArticles = todayArticles.filter(n => n.data?.category === todayFilterCat);
+    }
+    
     if (todayArticles.length === 0) {
         wrapper.innerHTML =
             '<div class="today-section empty">' +
@@ -957,9 +967,19 @@ function renderTodaySection() {
             '</div>';
         return;
     }
+    
+    const displayCount = todayExpanded ? todayArticles.length : Math.min(5, todayArticles.length);
+    const hasMore = todayArticles.length > 5 && !todayExpanded;
+    
     let html = '<div class="today-section">';
-    html += '<h3>今日新增 ' + todayArticles.length + ' 条</h3>';
-    todayArticles.slice(0, 5).forEach(art => {
+    if (isFiltered) {
+        const cfg = CAT_CONFIG[todayFilterCat];
+        html += '<h3>' + cfg.emoji + ' ' + cfg.name + ' · 今日 ' + todayArticles.length + ' 条 <span class="today-clear-filter" style="color:#64748B;font-size:12px;cursor:pointer;margin-left:8px;">[显示全部]</span></h3>';
+    } else {
+        html += '<h3>今日新增 ' + todayArticles.length + ' 条</h3>';
+    }
+    
+    todayArticles.slice(0, displayCount).forEach(art => {
         const d = art.data;
         const badges = [];
         if (d.is_important_source) badges.push('<span class="ti-badge important">重要来源</span>');
@@ -972,31 +992,23 @@ function renderTodaySection() {
             badges.join('') +
             '</div></div>';
     });
-    if (todayArticles.length > 5) {
-        html += '<div class="today-empty">还有 ' + (todayArticles.length - 5) + ' 条...</div>';
+    
+    if (hasMore) {
+        html += '<div class="today-show-more" style="cursor:pointer;color:#FF6B35;font-size:13px;padding:8px 0;text-align:center;">▼ 展开剩余 ' + (todayArticles.length - 5) + ' 条</div>';
+    } else if (todayExpanded && todayArticles.length > 5) {
+        html += '<div class="today-show-more" style="cursor:pointer;color:#64748B;font-size:13px;padding:8px 0;text-align:center;">▲ 收起</div>';
     }
-    const summary = graphData.today_summary || {};
-    const summaryTexts = [];
-    for (const [cat, text] of Object.entries(summary)) {
-        if (text && text.trim && text.trim()) {
-            summaryTexts.push('<strong>' + (CAT_CONFIG[cat]?.name || cat) + '</strong>: ' + text.trim());
-        } else if (typeof text === 'object' && text.titles) {
-            summaryTexts.push('<strong>' + (CAT_CONFIG[cat]?.name || cat) + '</strong>: ' + text.titles.slice(0,3).join('、'));
-        }
-    }
-    if (summaryTexts.length > 0) {
-        html += '<div class="today-summary-text">' + summaryTexts.join('<br>') + '</div>';
-    }
+    
     html += '</div>';
     wrapper.innerHTML = html;
+    
+    // Bind click events to article items
     wrapper.querySelectorAll('.today-item').forEach(el => {
         el.addEventListener('click', () => {
             const nodeId = el.dataset.nodeId;
             const node = nodes.get(nodeId);
             if (node) {
-                // Ensure article is visible before focusing
                 nodes.update({ id: nodeId, hidden: false });
-                // Also show its parent tag so the edge is visible
                 const parentTag = getParentTag(nodeId);
                 if (parentTag && !expandedTags.has(parentTag)) {
                     expandedTags.add(parentTag);
@@ -1009,6 +1021,24 @@ function renderTodaySection() {
             }
         });
     });
+    
+    // Bind show-more / show-less
+    const showMoreEl = wrapper.querySelector('.today-show-more');
+    if (showMoreEl) {
+        showMoreEl.addEventListener('click', () => {
+            todayExpanded = !todayExpanded;
+            renderTodaySection();
+        });
+    }
+    
+    // Bind clear-filter
+    const clearFilterEl = wrapper.querySelector('.today-clear-filter');
+    if (clearFilterEl) {
+        clearFilterEl.addEventListener('click', () => {
+            todayFilterCat = null;
+            renderTodaySection();
+        });
+    }
 }
 
 function setupUI() {
@@ -1178,6 +1208,10 @@ function showCategoryTodayArticles(cat) {
     });
     updateTagListUI();
     if (updates.length) nodes.update(updates);
+    // Switch today section to show only this category
+    todayFilterCat = cat;
+    todayExpanded = true;
+    renderTodaySection();
     // Focus first article and show its detail
     setTimeout(() => {
         const first = catTodayArts[0];
