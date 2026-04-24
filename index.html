@@ -435,70 +435,27 @@
             font-size: 13px;
             font-weight: 500;
         }
-        .dp-section {
-            margin: 14px 0;
-            padding: 12px;
-            background: var(--qian1);
-            border: 1px solid var(--qian3);
-            border-radius: 8px;
-        }
-        .dp-section-title {
-            font-size: 11px;
-            font-weight: 600;
-            color: var(--text3);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        .dp-en-summary {
-            font-size: 12px;
-            line-height: 1.6;
-            color: var(--text3);
-        }
-        .dp-en-summary a { color: var(--accent); }
-        .dp-related-item {
-            padding: 8px 10px;
-            background: var(--qian2);
-            border-radius: 6px;
-            margin-bottom: 6px;
-            cursor: pointer;
-            font-size: 12px;
-            line-height: 1.5;
-            color: var(--text2);
-            border-left: 2px solid transparent;
-            transition: all 0.2s;
-        }
-        .dp-related-item:hover {
-            background: var(--qian3);
-            color: var(--text);
-            border-left-color: var(--accent);
-        }
-        .dp-related-title { font-weight: 500; color: var(--text); }
-        .dp-related-meta { font-size: 11px; color: var(--text3); margin-top: 2px; }
-        /* Voice control bar */
+        /* Voice control bar - compact */
         .dp-voice-bar {
             display: flex;
             align-items: center;
             gap: 8px;
-            padding: 10px 12px;
-            background: linear-gradient(135deg, rgba(0,229,255,0.08), rgba(0,229,255,0.02));
-            border: 1px solid rgba(0,229,255,0.2);
+            padding: 8px 10px;
+            background: linear-gradient(135deg, rgba(0,229,255,0.06), rgba(0,229,255,0.02));
+            border: 1px solid rgba(0,229,255,0.15);
             border-radius: 8px;
-            margin: 12px 0;
+            margin: 10px 0;
         }
         .dp-voice-btn {
             display: inline-flex;
             align-items: center;
             gap: 4px;
-            padding: 5px 12px;
+            padding: 4px 10px;
             border-radius: 6px;
             border: 1px solid var(--qian3);
             background: var(--qian2);
             color: var(--text2);
-            font-size: 12px;
+            font-size: 11px;
             cursor: pointer;
             transition: all 0.2s;
         }
@@ -512,20 +469,39 @@
             text-align: right;
         }
         .dp-voice-status.speaking { color: #00E5FF; }
-        .dp-progress-bar {
-            width: 100%;
-            height: 3px;
-            background: var(--qian3);
-            border-radius: 2px;
-            margin-top: 6px;
-            overflow: hidden;
+        /* Reading area - expanded */
+        .dp-read-area {
+            margin: 12px 0;
+            padding: 14px;
+            background: var(--qian1);
+            border: 1px solid var(--qian3);
+            border-radius: 10px;
+            max-height: calc(100vh - 320px);
+            overflow-y: auto;
         }
-        .dp-progress-fill {
-            height: 100%;
-            background: linear-gradient(90deg, var(--accent), #00E5FF);
-            border-radius: 2px;
-            transition: width 0.3s;
-            width: 0%;
+        .dp-read-summary {
+            font-size: 14px;
+            line-height: 1.85;
+            color: var(--text2);
+            margin-bottom: 12px;
+        }
+        .dp-read-insight {
+            font-size: 13px;
+            line-height: 1.7;
+            color: var(--accent);
+            margin-bottom: 12px;
+            padding: 10px 12px;
+            background: rgba(255, 107, 53, 0.06);
+            border-left: 3px solid var(--accent);
+            border-radius: 0 8px 8px 0;
+        }
+        .dp-read-en {
+            font-size: 12px;
+            line-height: 1.7;
+            color: var(--text3);
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid var(--qian3);
         }
         #cat-info {
             position: fixed;
@@ -662,29 +638,18 @@
         <div class="dp-meta-row" id="dp-meta"></div>
         <div class="dp-tags" id="dp-tags"></div>
 
-        <!-- Voice Control Bar -->
+        <!-- Voice Control Bar (compact: 2 buttons) -->
         <div class="dp-voice-bar" id="dp-voice-bar">
-            <button class="dp-voice-btn" id="btn-voice-play" onclick="toggleSpeak()" title="朗读">▶️ 朗读</button>
-            <button class="dp-voice-btn" id="btn-voice-pause" onclick="pauseSpeak()" title="暂停">⏸️ 暂停</button>
-            <button class="dp-voice-btn" id="btn-voice-stop" onclick="stopSpeak()" title="停止">⏹️ 停止</button>
-            <button class="dp-voice-btn" id="btn-voice-next" onclick="speakNextArticle()" title="下一篇">⏭️ 下一篇</button>
-            <div class="dp-voice-status" id="dp-voice-status">点击朗读收听摘要</div>
-        </div>
-        <div class="dp-progress-bar"><div class="dp-progress-fill" id="dp-progress-fill"></div></div>
-
-        <div class="dp-summary" id="dp-summary"></div>
-        <div class="dp-insight" id="dp-insight"></div>
-
-        <!-- English Summary -->
-        <div class="dp-section" id="dp-en-summary-section" style="display:none;">
-            <div class="dp-section-title">📝 英文原文摘要</div>
-            <div class="dp-en-summary" id="dp-en-summary"></div>
+            <button class="dp-voice-btn" id="btn-voice-play" onclick="toggleSpeak()">▶️ 播放</button>
+            <button class="dp-voice-btn" id="btn-voice-pause" onclick="pauseSpeak()">⏸️ 暂停</button>
+            <div class="dp-voice-status" id="dp-voice-status">点击播放收听摘要</div>
         </div>
 
-        <!-- Related Articles -->
-        <div class="dp-section" id="dp-related-section" style="display:none;">
-            <div class="dp-section-title">🔗 同标签推荐</div>
-            <div id="dp-related-list"></div>
+        <!-- Reading Content Area -->
+        <div class="dp-read-area" id="dp-read-area">
+            <div class="dp-read-summary" id="dp-summary"></div>
+            <div class="dp-read-insight" id="dp-insight"></div>
+            <div class="dp-read-en" id="dp-read-en"></div>
         </div>
 
         <a class="dp-link" id="dp-link" href="#" target="_blank">阅读原文 →</a>
@@ -1271,55 +1236,45 @@ function showArticleDetail(data) {
     document.getElementById('dp-meta').innerHTML = metaHtml;
     const tags = data.tags || [];
     document.getElementById('dp-tags').innerHTML = tags.map(t => '<span class="tag-chip">' + t + '</span>').join('');
-    const summary = data.cn_summary || data.summary || '';
-    document.getElementById('dp-summary').textContent = summary;
-    document.getElementById('dp-summary').style.display = summary ? 'block' : 'none';
-    const insight = data.key_insight || '';
-    document.getElementById('dp-insight').textContent = insight ? '💡 ' + insight : '';
-    document.getElementById('dp-insight').style.display = insight ? 'block' : 'none';
-    document.getElementById('dp-link').href = data.link || '#';
-
-    // English summary section
+    // Reading area: combine summary + insight + English
+    const cnSummary = data.cn_summary || '';
     const enSummary = data.summary || '';
-    const hasEnSummary = enSummary && (!data.cn_summary || enSummary !== data.cn_summary);
-    const enSec = document.getElementById('dp-en-summary-section');
-    const enDiv = document.getElementById('dp-en-summary');
-    if (hasEnSummary) {
-        enDiv.textContent = enSummary;
-        enSec.style.display = 'block';
+    const insight = data.key_insight || '';
+
+    const summaryEl = document.getElementById('dp-summary');
+    const insightEl = document.getElementById('dp-insight');
+    const enEl = document.getElementById('dp-read-en');
+
+    if (cnSummary) {
+        summaryEl.textContent = cnSummary;
+        summaryEl.style.display = 'block';
+    } else if (enSummary) {
+        summaryEl.textContent = enSummary;
+        summaryEl.style.display = 'block';
     } else {
-        enSec.style.display = 'none';
+        summaryEl.style.display = 'none';
     }
 
-    // Related articles (same tags, excluding self)
-    const relatedList = document.getElementById('dp-related-list');
-    const relatedSec = document.getElementById('dp-related-section');
-    if (tags.length > 0 && allNodes) {
-        const selfId = data.id;
-        const related = allNodes
-            .filter(n => n.data?.type === 'article' && n.id !== selfId)
-            .filter(n => {
-                const nTags = n.data?.tags || [];
-                return tags.some(t => nTags.includes(t));
-            })
-            .sort((a, b) => (b.data?.importance || 0) - (a.data?.importance || 0))
-            .slice(0, 5);
-        if (related.length > 0) {
-            relatedList.innerHTML = related.map(n => {
-                const rCat = CAT_CONFIG[n.data?.category]?.name || n.data?.category;
-                const rTitle = n.data?.cn_title || n.label;
-                return '<div class="dp-related-item" onclick="selectArticleById(\'' + n.id + '\')">' +
-                    '<div class="dp-related-title">' + rTitle + '</div>' +
-                    '<div class="dp-related-meta">' + rCat + ' · ★' + (n.data?.importance || 3) + '</div>' +
-                    '</div>';
-            }).join('');
-            relatedSec.style.display = 'block';
-        } else {
-            relatedSec.style.display = 'none';
-        }
+    if (insight) {
+        insightEl.textContent = '💡 ' + insight;
+        insightEl.style.display = 'block';
     } else {
-        relatedSec.style.display = 'none';
+        insightEl.style.display = 'none';
     }
+
+    // Show English if it's different from Chinese and Chinese is short
+    const hasDifferentEn = enSummary && enSummary !== cnSummary && enSummary !== data.label;
+    if (hasDifferentEn && cnSummary && cnSummary.length < 200) {
+        enEl.textContent = enSummary;
+        enEl.style.display = 'block';
+    } else if (!cnSummary && enSummary) {
+        enEl.textContent = enSummary;
+        enEl.style.display = 'block';
+    } else {
+        enEl.style.display = 'none';
+    }
+
+    document.getElementById('dp-link').href = data.link || '#';
 
     // Reset voice UI
     updateVoiceUI();
@@ -1404,14 +1359,11 @@ function startSpeakCurrent() {
     };
 
     speechUtterance.onend = function() {
-        document.getElementById('dp-progress-fill').style.width = '100%';
         isSpeaking = false;
         isPaused = false;
         updateVoiceUI();
-        // Auto-play next if enabled
-        if (autoPlayEnabled) {
-            setTimeout(() => speakNextArticle(), 800);
-        }
+        // Auto-play next by default
+        setTimeout(() => speakNextArticle(), 600);
     };
 
     speechUtterance.onerror = function(e) {
@@ -1440,8 +1392,6 @@ function stopSpeak() {
     window.speechSynthesis.cancel();
     isSpeaking = false;
     isPaused = false;
-    autoPlayEnabled = false;
-    document.getElementById('dp-progress-fill').style.width = '0%';
     updateVoiceUI();
 }
 
@@ -1475,13 +1425,12 @@ function speakNextArticle() {
 function updateVoiceUI() {
     const playBtn = document.getElementById('btn-voice-play');
     const pauseBtn = document.getElementById('btn-voice-pause');
-    const stopBtn = document.getElementById('btn-voice-stop');
-    const nextBtn = document.getElementById('btn-voice-next');
     const status = document.getElementById('dp-voice-status');
 
     if (!window.speechSynthesis) {
         status.textContent = '浏览器不支持语音';
-        [playBtn, pauseBtn, stopBtn, nextBtn].forEach(b => b.disabled = true);
+        playBtn.disabled = true;
+        pauseBtn.disabled = true;
         return;
     }
 
@@ -1489,31 +1438,27 @@ function updateVoiceUI() {
         playBtn.innerHTML = '⏸️ 暂停';
         playBtn.classList.add('active');
         pauseBtn.disabled = false;
-        stopBtn.disabled = false;
-        nextBtn.disabled = false;
-        status.textContent = autoPlayEnabled ? '🔊 朗读中 (自动连播)' : '🔊 朗读中';
+        status.textContent = '🔊 朗读中...';
         status.classList.add('speaking');
     } else if (isPaused) {
         playBtn.innerHTML = '▶️ 继续';
         playBtn.classList.remove('active');
         pauseBtn.disabled = true;
-        stopBtn.disabled = false;
-        nextBtn.disabled = false;
         status.textContent = '⏸️ 已暂停';
         status.classList.remove('speaking');
     } else {
-        playBtn.innerHTML = '▶️ 朗读';
+        playBtn.innerHTML = '▶️ 播放';
         playBtn.classList.remove('active');
         pauseBtn.disabled = true;
-        stopBtn.disabled = true;
-        nextBtn.disabled = false;
-        status.textContent = autoPlayEnabled ? '点击朗读开始连播' : '点击朗读收听摘要';
+        status.textContent = '点击播放收听摘要';
         status.classList.remove('speaking');
     }
 }
 
 function closeDetail() {
-    stopSpeak();
+    if (window.speechSynthesis) window.speechSynthesis.cancel();
+    isSpeaking = false;
+    isPaused = false;
     document.getElementById('detail-panel').classList.remove('visible');
 }
 
