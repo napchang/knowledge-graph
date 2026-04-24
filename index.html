@@ -839,38 +839,26 @@ function dimAllExcept(keepIds) {
     const edgeUpdates = [];
     nodes.get().forEach(n => {
         if (keepIds.has(n.id)) {
-            if (dimmedNodeIds.has(n.id)) {
-                const orig = originalNodeColors[n.id];
-                // Restore full brightness for kept nodes
-                const isTodayArt = n.data?.type === 'article' && n.data?.is_today;
-                updates.push({
-                    id: n.id,
-                    color: {
-                        background: orig.background,
-                        border: isTodayArt ? '#FF6B35' : orig.border
-                    },
-                    font: { color: n.data?.type === 'category' ? '#F8FAFC' : (n.data?.type === 'tag' ? '#CBD5E1' : '#E2E8F0') }
-                });
-                dimmedNodeIds.delete(n.id);
+            // Ensure kept nodes are visible
+            if (n.hidden) {
+                updates.push({ id: n.id, hidden: false });
             }
         } else {
-            if (!dimmedNodeIds.has(n.id)) {
-                // Much darker for non-related nodes
-                updates.push({
-                    id: n.id,
-                    color: { background: '#0F1D32', border: 'rgba(60,70,90,0.2)' },
-                    font: { color: 'rgba(60,70,90,0.25)' }
-                });
-                dimmedNodeIds.add(n.id);
+            // Hide non-related nodes completely for clean focus
+            if (!n.hidden) {
+                updates.push({ id: n.id, hidden: true });
             }
         }
     });
     edges.get().forEach(e => {
         if (keepIds.has(e.from) || keepIds.has(e.to)) {
-            edgeUpdates.push({ id: e.id, color: { opacity: e.id.includes('inter') ? 0.25 : 0.55 } });
+            if (e.hidden) {
+                edgeUpdates.push({ id: e.id, hidden: false });
+            }
         } else {
-            // High transparency but still barely visible (not fully hidden)
-            edgeUpdates.push({ id: e.id, color: { opacity: 0.06 } });
+            if (!e.hidden && e.type !== 'layout-anchor') {
+                edgeUpdates.push({ id: e.id, hidden: true });
+            }
         }
     });
     if (updates.length > 0) nodes.update(updates);
@@ -881,17 +869,23 @@ function restoreAllDimming() {
     const updates = [];
     const edgeUpdates = [];
     nodes.get().forEach(n => {
-        if (dimmedNodeIds.has(n.id)) {
-            const orig = originalNodeColors[n.id];
-            updates.push({
-                id: n.id,
-                color: { background: orig.background, border: orig.border },
-                font: { color: n.data?.type === 'category' ? '#F8FAFC' : (n.data?.type === 'tag' ? '#CBD5E1' : '#94A3B8') }
-            });
+        if (n.data?.type === 'article') {
+            const parentTag = getParentTag(n.id);
+            const show = articlesVisible || expandedTags.has(parentTag) || n.data?.is_today;
+            updates.push({ id: n.id, hidden: !show });
+        } else {
+            // Categories and tags always visible
+            if (n.hidden) {
+                updates.push({ id: n.id, hidden: false });
+            }
         }
     });
     edges.get().forEach(e => {
-        edgeUpdates.push({ id: e.id, color: { opacity: e.id.includes('inter') ? 0.25 : (e.id.includes('cross') ? 0.3 : (e.id.includes('layout-anchor') ? 0 : 0.55)) } });
+        if (e.type === 'layout-anchor') {
+            edgeUpdates.push({ id: e.id, hidden: true });
+        } else {
+            edgeUpdates.push({ id: e.id, hidden: false });
+        }
     });
     if (updates.length > 0) nodes.update(updates);
     if (edgeUpdates.length > 0) edges.update(edgeUpdates);
@@ -904,6 +898,15 @@ function handleNodeClick(node) {
         closeDetail();
         showCatInfo(data);
         clearSelection();
+        selectedNodeId = node.id;
+        const baseColor = node.color?.background || '#FF6B35';
+        nodes.update({
+            id: node.id,
+            borderWidth: 5,
+            color: { border: HIGHLIGHT_COLOR },
+            shadow: { enabled: true, color: HIGHLIGHT_COLOR, size: 25, x: 0, y: 0 }
+        });
+        startPulse(node.id, baseColor);
         const keepIds = getNeighborIds(node.id);
         nodes.get().forEach(n => {
             if (n.data?.category === data.id.replace('cat_', '')) keepIds.add(n.id);
@@ -923,16 +926,19 @@ function handleNodeClick(node) {
 }
 
 function clearSelection() {
+    stopPulse();
     if (selectedNodeId) {
         const prev = nodes.get(selectedNodeId);
         if (prev) {
             const originalSize = prev.data?.size || (prev.data?.type === 'tag' ? 20 : (prev.data?.type === 'category' ? 45 : 7));
             const originalBorder = prev.data?.border_color || '#ffffff';
+            const originalColor = originalNodeColors[selectedNodeId]?.background || prev.color?.background;
             nodes.update({
                 id: selectedNodeId,
                 size: originalSize,
                 borderWidth: prev.data?.type === 'category' ? 3 : (prev.data?.type === 'tag' ? 2 : 1),
-                color: { border: originalBorder }
+                color: { border: originalBorder, background: originalColor },
+                shadow: { enabled: true, color: originalColor, size: prev.data?.type === 'category' ? 20 : 8, x: 0, y: 0 }
             });
         }
     }
@@ -941,15 +947,47 @@ function clearSelection() {
     restoreAllDimming();
 }
 
+let pulseInterval = null;
+
+function startPulse(nodeId, baseColor) {
+    stopPulse();
+    let growing = true;
+    let size = 15;
+    pulseInterval = setInterval(() => {
+        if (growing) {
+            size += 1.5;
+            if (size >= 25) growing = false;
+        } else {
+            size -= 1.5;
+            if (size <= 15) growing = true;
+        }
+        nodes.update({
+            id: nodeId,
+            shadow: { enabled: true, color: HIGHLIGHT_COLOR, size: size, x: 0, y: 0 }
+        });
+    }, 60);
+}
+
+function stopPulse() {
+    if (pulseInterval) {
+        clearInterval(pulseInterval);
+        pulseInterval = null;
+    }
+}
+
 function selectTag(tagId) {
     clearSelection();
     selectedNodeId = tagId;
+    const node = nodes.get(tagId);
+    const baseColor = node?.color?.background || '#4A7BC3';
     nodes.update({
         id: tagId,
         size: 32,
         borderWidth: 4,
-        color: { border: HIGHLIGHT_COLOR }
+        color: { border: HIGHLIGHT_COLOR },
+        shadow: { enabled: true, color: HIGHLIGHT_COLOR, size: 20, x: 0, y: 0 }
     });
+    startPulse(tagId, baseColor);
     document.querySelectorAll('.tag-item').forEach(el => {
         el.classList.remove('selected');
         if (el.dataset.tagId === tagId) {
@@ -960,27 +998,21 @@ function selectTag(tagId) {
         scale: 1.4,
         animation: { duration: 400, easingFunction: 'easeInOutQuad' }
     });
-    const node = nodes.get(tagId);
-    if (node) {
-        const origColor = node.color?.background;
-        setTimeout(() => {
-            nodes.update({ id: tagId, color: { background: HIGHLIGHT_COLOR, border: HIGHLIGHT_COLOR } });
-            setTimeout(() => {
-                nodes.update({ id: tagId, color: { background: origColor, border: HIGHLIGHT_COLOR } });
-            }, 250);
-        }, 100);
-    }
 }
 
 function selectArticle(articleId) {
     clearSelection();
     selectedNodeId = articleId;
+    const node = nodes.get(articleId);
+    const baseColor = node?.color?.background || '#64748B';
     nodes.update({
         id: articleId,
         size: 14,
         borderWidth: 3,
-        color: { border: HIGHLIGHT_COLOR }
+        color: { border: HIGHLIGHT_COLOR },
+        shadow: { enabled: true, color: HIGHLIGHT_COLOR, size: 20, x: 0, y: 0 }
     });
+    startPulse(articleId, baseColor);
     network.focus(articleId, {
         scale: 1.5,
         animation: { duration: 400, easingFunction: 'easeInOutQuad' }
