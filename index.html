@@ -71,7 +71,7 @@
         #main {
             display: flex;
             height: 100vh;
-            padding-top: 50px;
+            padding-top: 0;
         }
         #sidebar {
             width: 280px;
@@ -485,6 +485,7 @@
         padding: 8px 16px;
         background: var(--qian1);
         border-bottom: 1px solid var(--qian3);
+        margin-top: 50px;
     }
     .tab-btn {
         padding: 6px 16px;
@@ -853,6 +854,7 @@ function dimAllExcept(keepIds) {
     });
     if (updates.length > 0) nodes.update(updates);
     if (edgeUpdates.length > 0) edges.update(edgeUpdates);
+    if (network) network.redraw();
 }
 
 function restoreAllDimming() {
@@ -876,6 +878,7 @@ function restoreAllDimming() {
     });
     if (updates.length > 0) nodes.update(updates);
     if (edgeUpdates.length > 0) edges.update(edgeUpdates);
+    if (network) network.redraw();
     dimmedNodeIds.clear();
 }
 
@@ -931,6 +934,8 @@ function clearSelection() {
     }
     selectedNodeId = null;
     document.querySelectorAll('.tag-item').forEach(el => el.classList.remove('selected'));
+    closeDetail();
+    closeCatInfo();
     restoreAllDimming();
 }
 
