@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24T13:27:19.315842",
+  "generated_at": "2026-04-24T13:38:46.432763",
   "date": "2026-04-23",
   "total_articles": 65,
   "today_articles": 65,
@@ -270,17 +270,6 @@
       "is_parent_tag": false
     },
     {
-      "id": "tag_SEO",
-      "type": "tag",
-      "label": "SEO",
-      "category": "ai-search",
-      "color": "#FF6B35",
-      "size": 25.0,
-      "count": 11,
-      "avg_importance": 3.0,
-      "is_parent_tag": false
-    },
-    {
       "id": "tag_搜索度量",
       "type": "tag",
       "label": "搜索度量",
@@ -292,17 +281,6 @@
       "is_parent_tag": false
     },
     {
-      "id": "tag_GEO",
-      "type": "tag",
-      "label": "GEO",
-      "category": "ai-search",
-      "color": "#FF6B35",
-      "size": 23.0,
-      "count": 9,
-      "avg_importance": 3.0,
-      "is_parent_tag": false
-    },
-    {
       "id": "tag_SEO/技术优化",
       "type": "tag",
       "label": "SEO/技术优化",
@@ -310,28 +288,6 @@
       "color": "#FF6B35",
       "size": 18.0,
       "count": 4,
-      "avg_importance": 3.0,
-      "is_parent_tag": false
-    },
-    {
-      "id": "tag_Automation",
-      "type": "tag",
-      "label": "Automation",
-      "category": "agentic-b2b",
-      "color": "#4A7BC3",
-      "size": 24.0,
-      "count": 10,
-      "avg_importance": 3.0,
-      "is_parent_tag": false
-    },
-    {
-      "id": "tag_Sales",
-      "type": "tag",
-      "label": "Sales",
-      "category": "agentic-b2b",
-      "color": "#4A7BC3",
-      "size": 16.0,
-      "count": 2,
       "avg_importance": 3.0,
       "is_parent_tag": false
     },
@@ -365,17 +321,6 @@
       "color": "#E6B85C",
       "size": 19.0,
       "count": 5,
-      "avg_importance": 3.0,
-      "is_parent_tag": false
-    },
-    {
-      "id": "tag_AEO",
-      "type": "tag",
-      "label": "AEO",
-      "category": "ai-search",
-      "color": "#FF6B35",
-      "size": 18.0,
-      "count": 4,
       "avg_importance": 3.0,
       "is_parent_tag": false
     },
