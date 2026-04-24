@@ -267,7 +267,7 @@
         }
         .cat-name { flex: 1; font-size: 13px; }
         .cat-count { font-size: 11px; color: var(--text3); }
-        .cat-toggle { font-size: 11px; color: var(--text3); transition: transform 0.2s; }
+        .cat-toggle { font-size: 11px; color: var(--text3); transition: transform 0.2s; padding: 4px 8px; cursor: pointer; }
         .cat-toggle.open { transform: rotate(90deg); }
         .tag-list {
             padding-left: 32px;
@@ -906,7 +906,7 @@ function handleNodeClick(node) {
             color: { border: HIGHLIGHT_COLOR },
             shadow: { enabled: true, color: HIGHLIGHT_COLOR, size: 25, x: 0, y: 0 }
         });
-        startPulse(node.id, baseColor);
+        startPulse(node.id);
         const keepIds = getNeighborIds(node.id);
         nodes.get().forEach(n => {
             if (n.data?.category === data.id.replace('cat_', '')) keepIds.add(n.id);
@@ -949,23 +949,28 @@ function clearSelection() {
 
 let pulseInterval = null;
 
-function startPulse(nodeId, baseColor) {
+function startPulse(nodeId) {
     stopPulse();
+    const node = nodes.get(nodeId);
+    const baseSize = node?.size || 20;
+    const baseBorder = node?.data?.type === 'category' ? 3 : (node?.data?.type === 'tag' ? 2 : 1);
     let growing = true;
-    let size = 15;
+    let offset = 0;
     pulseInterval = setInterval(() => {
         if (growing) {
-            size += 1.5;
-            if (size >= 25) growing = false;
+            offset += 0.8;
+            if (offset >= 4) growing = false;
         } else {
-            size -= 1.5;
-            if (size <= 15) growing = true;
+            offset -= 0.8;
+            if (offset <= 0) growing = true;
         }
         nodes.update({
             id: nodeId,
-            shadow: { enabled: true, color: HIGHLIGHT_COLOR, size: size, x: 0, y: 0 }
+            size: baseSize + offset,
+            borderWidth: baseBorder + offset * 0.8,
+            color: { border: HIGHLIGHT_COLOR }
         });
-    }, 60);
+    }, 70);
 }
 
 function stopPulse() {
@@ -987,7 +992,7 @@ function selectTag(tagId) {
         color: { border: HIGHLIGHT_COLOR },
         shadow: { enabled: true, color: HIGHLIGHT_COLOR, size: 20, x: 0, y: 0 }
     });
-    startPulse(tagId, baseColor);
+    startPulse(tagId);
     document.querySelectorAll('.tag-item').forEach(el => {
         el.classList.remove('selected');
         if (el.dataset.tagId === tagId) {
@@ -1012,7 +1017,7 @@ function selectArticle(articleId) {
         color: { border: HIGHLIGHT_COLOR },
         shadow: { enabled: true, color: HIGHLIGHT_COLOR, size: 20, x: 0, y: 0 }
     });
-    startPulse(articleId, baseColor);
+    startPulse(articleId);
     network.focus(articleId, {
         scale: 1.5,
         animation: { duration: 400, easingFunction: 'easeInOutQuad' }
@@ -1064,6 +1069,7 @@ function toggleTagArticles(tagId) {
                 nodes.update({ id: otherId, hidden: true });
             }
         });
+        restoreAllDimming();
     } else {
         expandedTags.add(tagId);
         const connectedEdges = allEdges.filter(e => e.from === tagId || e.to === tagId);
@@ -1077,6 +1083,7 @@ function toggleTagArticles(tagId) {
                 }
             }
         });
+        dimAllExcept(getNeighborIds(tagId));
     }
     updateTagListUI();
 }
@@ -1104,6 +1111,7 @@ function toggleParentTagArticles(parentTagId, parentLabel) {
             }
         });
         articleIds.forEach(id => nodes.update({ id, hidden: true }));
+        restoreAllDimming();
     } else {
         // Expand all
         allRelated.forEach(id => expandedTags.add(id));
@@ -1121,6 +1129,16 @@ function toggleParentTagArticles(parentTagId, parentLabel) {
             }
         });
         articleIds.forEach(id => nodes.update({ id, hidden: false }));
+        // Build keepIds set: parent tag, all child tags, and all their neighbor articles
+        const keepIds = new Set(allRelated);
+        articleIds.forEach(id => keepIds.add(id));
+        allEdges.forEach(e => {
+            if (allRelated.has(e.from) || allRelated.has(e.to)) {
+                keepIds.add(e.from);
+                keepIds.add(e.to);
+            }
+        });
+        dimAllExcept(keepIds);
     }
     updateTagListUI();
 }
