@@ -808,6 +808,7 @@
                     <span>今日动态</span>
                     <span id="today-toggle-btn" style="cursor:pointer;font-size:12px;color:#64748B;padding:2px 8px;border-radius:4px;" onclick="toggleTodaySection()">收起 ▲</span>
                 </div>
+                <div id="today-gen-time" style="font-size:11px;color:var(--text3);margin-bottom:8px;display:none;"></div>
                 <div id="today-content"></div>
             </div>
             <div class="section">
@@ -936,6 +937,15 @@ async function init(dataUrl) {
         document.getElementById('stat-today').textContent = '今日 ' + todayCount + ' 条';
         document.getElementById('stat-nodes').textContent = graphData.nodes.length + ' 节点';
         document.getElementById('stat-edges').textContent = graphData.edges.length + ' 连线';
+        // Update generated time display
+        const genDate = graphData.date || '';
+        const genTimeEl = document.getElementById('today-gen-time');
+        if (genTimeEl && genDate) {
+            genTimeEl.textContent = '数据更新于 ' + genDate;
+            genTimeEl.style.display = 'inline';
+        } else if (genTimeEl) {
+            genTimeEl.style.display = 'none';
+        }
         if (todayCount > 0) {
             document.getElementById('stat-today').style.color = '#FF6B35';
         }
@@ -1468,7 +1478,12 @@ function showArticleDetail(data) {
     ).join('');
     document.getElementById('dp-stars').innerHTML = starsHtml;
     const catName = CAT_CONFIG[data.category]?.name || data.category;
-    let metaHtml = '<span>日期 ' + (data.date || '') + '</span><span>' + catName + '</span>';
+    const pubDate = data.date || '';
+    const collDate = data.collection_date || pubDate;
+    let dateLabel = collDate !== pubDate && pubDate
+        ? '采集 ' + collDate + ' · 发布 ' + pubDate
+        : '日期 ' + collDate;
+    let metaHtml = '<span>' + dateLabel + '</span><span>' + catName + '</span>';
     if (data.source) metaHtml += '<span>' + data.source + '</span>';
     if (data.is_today) metaHtml += '<span class="dp-badge badge-today">今日</span>';
     if (data.is_important_source) metaHtml += '<span class="dp-badge badge-important">重要来源</span>';
