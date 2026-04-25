@@ -433,7 +433,7 @@ for i, art in enumerate(articles):
         'is_major_news': is_major,
         'border_width': border_width,
         'border_color': border_color,
-        'reading_highlight': READING_HIGHLIGHTS.get(f'art_{i}', '')
+        'reading_highlight': READING_HIGHLIGHTS.get(art['link'], '')
     })
     # Hidden anchor edge: category -> article (for layout attraction)
     edges.append({
