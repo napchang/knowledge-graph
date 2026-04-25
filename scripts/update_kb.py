@@ -39,7 +39,7 @@ def classify_category(article):
     combined = title + " " + summary + " " + content + " " + source
     
     # AI搜索关键词
-    search_keywords = ["geo", "aeo", "seo", "search engine", "ranking", "perplexity", "sge", "google search", "bing", "search optimization"]
+    search_keywords = ["geo", "aeo", "seo", "search engine", "ranking", "perplexity", "sge", "google search", "bing", "search optimization", "ai search", "search strategy", "search roadmap", "search audit"]
     if any(k in combined for k in search_keywords):
         return "ai-search"
     
@@ -48,9 +48,13 @@ def classify_category(article):
     if any(k in combined for k in b2b_keywords):
         return "agentic-b2b"
     
-    # 学术研究关键词
-    academic_keywords = ["paper", "research", "algorithm", "model", "study", "mit ", "stanford", "university", "conference"]
-    if any(k in combined for k in academic_keywords):
+    # 学术研究关键词 (收紧: 需要明确的学术指标)
+    academic_keywords = ["paper", "research paper", "arxiv", "algorithm", "mit ", "stanford", "university research", "conference", "neurips", "icml", "acl", "cvpr"]
+    # 同时检查是否有学术来源
+    academic_sources = ["arxiv", "mit", "stanford", "researchgate", "academia.edu"]
+    has_academic_kw = any(k in combined for k in academic_keywords)
+    has_academic_src = any(s in source for s in academic_sources)
+    if has_academic_kw or has_academic_src:
         return "academic"
     
     # 默认AI行业动态
@@ -141,57 +145,130 @@ def get_topic_tags(article, category):
         if not tags:
             tags.append("学术前沿")
     
-    else:  # ai-industry
-        if "builder" in combined or "developer" in combined or "开发者" in combined:
-            tags.append("行业/Builder动态")
-        if "launch" in combined or "release" in combined or "product" in combined or "发布" in combined:
-            tags.append("行业/产品发布")
-        if "fund" in combined or "invest" in combined or "million" in combined or "融资" in combined:
-            tags.append("行业/融资")
-        if "openai" in combined or "google" in combined or "meta" in combined or "anthropic" in combined or "microsoft" in combined:
-            tags.append("行业/大厂战略")
-        if "agent" in combined or "智能体" in combined:
-            tags.append("行业/Agent生态")
+    else:  # ai-industry - flat tags without "行业/" prefix
+        title_lower = article.get("title", "").lower()
+        
+        # 1. 大厂动态 (优先匹配)
+        if any(k in combined for k in ["openai", "chatgpt", "gpt-4", "gpt-5", "gpt4", "gpt5", "sam altman", "奥特曼", "sora", "o1", "o3", "open ai"]):
+            tags.append("OpenAI动态")
+        if any(k in combined for k in ["google", "gemini", "bard", "deepmind", "alphabet", "waymo", "google ai"]):
+            tags.append("谷歌动态")
+        if any(k in combined for k in ["meta", "facebook", "llama", "instagram", "whatsapp", "meta ai"]):
+            tags.append("Meta动态")
+        if any(k in combined for k in ["anthropic", "claude", "克劳德", "constitutional ai", "claude 3", "claude 4"]):
+            tags.append("Anthropic动态")
+        if any(k in combined for k in ["microsoft", "azure", "copilot", "bing", "microsoft ai"]):
+            tags.append("微软动态")
+        if any(k in combined for k in ["nvidia", "黄仁勋", "jensen"]):
+            tags.append("英伟达动态")
+        if any(k in combined for k in ["x.ai", "xai", "grok", "elon musk", "musk"]):
+            tags.append("xAI动态")
+        
+        # 2. 模型与产品
+        if any(k in combined for k in ["model release", "新模型", "模型发布", "foundation model", "大模型", "llm release", "model launch"]):
+            tags.append("模型发布")
+        if any(k in combined for k in ["product launch", "feature", "new tool", "app release", "产品发布", "新功能", "工具上线", "应用发布", "platform launch"]):
+            tags.append("产品动态")
+        
+        # 3. Agent与开发者
+        if any(k in combined for k in ["agent", "智能体", "multi-agent", "autonomous agent", "ai agent", "crewai", "langchain", "autogpt", "computer use"]):
+            tags.append("Agent生态")
+        if any(k in combined for k in ["cursor", "windsurf", "claude code", "github copilot", "devin", "coding assistant", "code generation", "代码生成", "编程助手"]):
+            tags.append("开发者工具")
+        
+        # 4. 商业与硬件
+        if any(k in combined for k in ["fund", "invest", "million", "billion", "valuation", "acquisition", "并购", "融资", "投资", "估值", "series a", "series b", "ipo", "startup", "独角兽"]):
+            tags.append("融资并购")
+        if any(k in combined for k in ["enterprise", "deploy", "adoption", "企业", "落地", "商用", "b2b", "saas", "workflow", "integration", "数字化转型"]):
+            tags.append("企业落地")
+        if any(k in combined for k in ["chip", "gpu", "hardware", "芯片", "算力", "推理", "training", "tpu", "apple silicon", "nvlink", "cluster", "数据中心", "云"]):
+            tags.append("硬件算力")
+        
+        # 5. 监管与其他
+        if any(k in combined for k in ["regulation", "policy", "safety", "监管", "政策", "法规", "安全", "风险", "合规", "gdpr", "copyright", "lawsuit", "诉讼", "反垄断"]):
+            tags.append("监管安全")
+        
+        # 6. 兜底: 根据标题做最后分类
         if not tags:
-            tags.append("行业/趋势")
+            if any(k in title_lower for k in ["openai", "chatgpt", "gpt", "sam altman", "sora"]):
+                tags.append("OpenAI动态")
+            elif any(k in title_lower for k in ["google", "gemini", "deepmind", "bard"]):
+                tags.append("谷歌动态")
+            elif any(k in title_lower for k in ["meta", "llama", "facebook"]):
+                tags.append("Meta动态")
+            elif any(k in title_lower for k in ["anthropic", "claude"]):
+                tags.append("Anthropic动态")
+            elif any(k in title_lower for k in ["microsoft", "azure", "copilot"]):
+                tags.append("微软动态")
+            elif any(k in title_lower for k in ["nvidia", "gpu", "芯片", "算力"]):
+                tags.append("硬件算力")
+            elif any(k in title_lower for k in ["agent", "智能体", "copilot"]):
+                tags.append("Agent生态")
+            elif any(k in title_lower for k in ["cursor", "devin", "github copilot", "编程"]):
+                tags.append("开发者工具")
+            elif any(k in title_lower for k in ["fund", "融资", "投资", "million", "billion", "估值"]):
+                tags.append("融资并购")
+            elif any(k in title_lower for k in ["launch", "发布", "product", "model", "新版本"]):
+                tags.append("产品动态")
+            elif any(k in title_lower for k in ["builder", "startup", "创始人", "创业"]):
+                tags.append("创业动态")
+            else:
+                tags.append("AI动态")
     
     return tags
 
 def load_existing_cn_content():
-    """Load existing Chinese content from old markdown files to preserve across updates"""
+    """Load existing Chinese content from old markdown files to preserve across updates.
+    Also load from rss-data/geo-knowledge-base/ if available (source of truth for enriched Chinese content)."""
     existing = {}
-    if not os.path.exists(KB_DIR):
-        return existing
-    for cat in os.listdir(KB_DIR):
-        cat_dir = os.path.join(KB_DIR, cat)
-        if not os.path.isdir(cat_dir):
-            continue
-        for md_file in os.listdir(cat_dir):
-            if md_file == 'README.md':
+    
+    def scan_kb_dir(kb_dir_path, label):
+        count = 0
+        if not os.path.exists(kb_dir_path):
+            return 0
+        for cat in os.listdir(kb_dir_path):
+            cat_dir = os.path.join(kb_dir_path, cat)
+            if not os.path.isdir(cat_dir):
                 continue
-            filepath = os.path.join(cat_dir, md_file)
-            try:
-                with open(filepath, 'r', encoding='utf-8') as f:
-                    content = f.read()
-            except:
-                continue
-            parts = re.split(r'\n### ', content)
-            for part in parts[1:]:
-                lines = part.strip().split('\n')
-                link = ''
-                cn_title = ''
-                cn_summary = ''
-                for line in lines:
-                    line = line.strip()
-                    if line.startswith('- **链接**:'):
-                        link = line.split(':', 1)[1].strip()
-                    elif line.startswith('- **标题(CN)**:'):
-                        cn_title = line.split(':', 1)[1].strip()
-                    elif line.startswith('- **摘要(CN)**:'):
-                        cn_summary = line.split(':', 1)[1].strip()
-                if link and (cn_title or cn_summary):
-                    existing[link] = {'cn_title': cn_title, 'cn_summary': cn_summary}
-    print(f'Loaded existing Chinese content: {len(existing)} articles')
+            for md_file in os.listdir(cat_dir):
+                if md_file == 'README.md':
+                    continue
+                filepath = os.path.join(cat_dir, md_file)
+                try:
+                    with open(filepath, 'r', encoding='utf-8') as f:
+                        content = f.read()
+                except:
+                    continue
+                parts = re.split(r'\n### ', content)
+                for part in parts[1:]:
+                    lines = part.strip().split('\n')
+                    link = ''
+                    cn_title = ''
+                    cn_summary = ''
+                    for line in lines:
+                        line = line.strip()
+                        if line.startswith('- **链接**:'):
+                            link = line.split(':', 1)[1].strip()
+                        elif line.startswith('- **标题(CN)**:'):
+                            cn_title = line.split(':', 1)[1].strip()
+                        elif line.startswith('- **摘要(CN)**:'):
+                            cn_summary = line.split(':', 1)[1].strip()
+                    if link and (cn_title or cn_summary):
+                        # rss-data source takes precedence
+                        existing[link] = {'cn_title': cn_title, 'cn_summary': cn_summary}
+                        count += 1
+        return count
+    
+    # First scan local knowledge-graph geo-kb
+    local_count = scan_kb_dir(KB_DIR, 'local')
+    
+    # Then scan rss-data geo-kb (source of truth, overwrites local)
+    rss_kb_dir = os.path.join(os.path.dirname(KB_DIR), 'rss-data', 'geo-knowledge-base')
+    if not os.path.exists(rss_kb_dir):
+        rss_kb_dir = os.path.join(os.path.dirname(os.path.dirname(KB_DIR)), 'rss-data', 'geo-knowledge-base')
+    rss_count = scan_kb_dir(rss_kb_dir, 'rss-data')
+    
+    print(f'Loaded Chinese content: {local_count} from local, {rss_count} from rss-data, total {len(existing)} articles')
     return existing
 
 def update_kb():
