@@ -62,14 +62,14 @@ jobs:
           echo "total_nodes=$TOTAL_NODES" >> $GITHUB_OUTPUT
 
       - name: Notify Feishu on success
-        if: steps.commit.outputs.changed == 'true' && env.FEISHU_WEBHOOK != ''
+        if: steps.commit.outputs.changed == 'true' && env.FEISHU_WEBHOOK_URL != ''
         env:
-          FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
         run: |
           TODAY_ARTICLES="${{ steps.stats.outputs.today_articles }}"
           TOTAL_NODES="${{ steps.stats.outputs.total_nodes }}"
           DATE=$(date +%F)
-          curl -X POST "$FEISHU_WEBHOOK" \
+          curl -X POST "$FEISHU_WEBHOOK_URL" \
             -H "Content-Type: application/json" \
             -d "{
               \"msg_type\": \"interactive\",
@@ -96,14 +96,14 @@ jobs:
       - name: Notify Feishu on failure
         if: failure()
         env:
-          FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
         run: |
-          if [ -z "$FEISHU_WEBHOOK" ]; then
-            echo "FEISHU_WEBHOOK not configured, skipping notification"
+          if [ -z "$FEISHU_WEBHOOK_URL" ]; then
+            echo "FEISHU_WEBHOOK_URL not configured, skipping notification"
             exit 0
           fi
           DATE=$(date +%F)
-          curl -X POST "$FEISHU_WEBHOOK" \
+          curl -X POST "$FEISHU_WEBHOOK_URL" \
             -H "Content-Type: application/json" \
             -d "{
               \"msg_type\": \"interactive\",
@@ -111,7 +111,7 @@ jobs:
                 \"header\": {
                   \"title\": {
                     \"tag\": \"plain_text\",
-                    "content": \"❌ 知识图谱更新失败 - $DATE\"
+                    \"content\": \"❌ 知识图谱更新失败 - $DATE\"
                   },
                   \"template\": \"red\"
                 },
