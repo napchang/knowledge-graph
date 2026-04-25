@@ -58,10 +58,12 @@ jobs:
         if: steps.commit.outputs.changed == 'true'
         id: stats
         run: |
-          TODAY_NODES=$(python -c "import json; d=json.load(open('today-graph-data.json')); print(len([n for n in d.get('nodes',[]) if n.get('data',{}).get('type')=='article']))")
+          TODAY_NODES=$(python -c "import json; d=json.load(open('today-graph-data.json')); print(len([n for n in d.get('nodes',[]) if n.get('type')=='article']))")
           TOTAL_NODES=$(python -c "import json; d=json.load(open('graph-data.json')); print(len(d.get('nodes',[])))")
+          TODAY_STR=$(python -c "import json; d=json.load(open('today-graph-data.json')); print(d.get('date',''))")
           echo "today_articles=$TODAY_NODES" >> $GITHUB_OUTPUT
           echo "total_nodes=$TOTAL_NODES" >> $GITHUB_OUTPUT
+          echo "today_str=$TODAY_STR" >> $GITHUB_OUTPUT
 
       - name: Notify Feishu on success
         if: steps.commit.outputs.changed == 'true' && env.FEISHU_WEBHOOK_URL != ''
@@ -70,6 +72,7 @@ jobs:
         run: |
           TODAY_ARTICLES="${{ steps.stats.outputs.today_articles }}"
           TOTAL_NODES="${{ steps.stats.outputs.total_nodes }}"
+          TODAY_STR="${{ steps.stats.outputs.today_str }}"
           DATE=$(date +%F)
           curl -X POST "$FEISHU_WEBHOOK_URL" \
             -H "Content-Type: application/json" \
@@ -88,7 +91,7 @@ jobs:
                     \"tag\": \"div\",
                     \"text\": {
                       \"tag\": \"lark_md\",
-                      \"content\": \"**今日新增文章：**$TODAY_ARTICLES 篇\\n**图谱总节点：**$TOTAL_NODES 个\\n**更新链接：**[点击查看](https://napchang.github.io/knowledge-graph/)\"
+                      \"content\": \"**采集日期：**$TODAY_STR\\n**今日新增文章：**$TODAY_ARTICLES 篇\\n**图谱总节点：**$TOTAL_NODES 个\\n**更新链接：**[点击查看](https://napchang.github.io/knowledge-graph/)\"
                     }
                   }
                 ]
