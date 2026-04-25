@@ -8,6 +8,17 @@ base_dir = os.path.dirname(script_dir)
 
 kb_dir = os.path.join(base_dir, 'geo-knowledge-base')
 
+# Try load reading highlights cache
+READING_HIGHLIGHTS = {}
+hl_cache_path = os.path.join(base_dir, 'reading_highlights_cache.json')
+if os.path.exists(hl_cache_path):
+    try:
+        with open(hl_cache_path, 'r', encoding='utf-8') as f:
+            READING_HIGHLIGHTS = json.load(f)
+        print(f'Loaded reading highlights: {len(READING_HIGHLIGHTS)} articles')
+    except Exception as e:
+        print(f'Failed to load highlights: {e}')
+
 # Try load enriched data for Chinese content
 ENRICHED_DATA = {}
 enriched_path = os.path.join(base_dir, 'data', 'semantic', 'latest_enriched.json')
@@ -296,16 +307,7 @@ for parent_name, info in parent_tags.items():
         'value': 2,
         'label': '包含'
     })
-    # Parent tag directly connects to all child-tag articles for visibility
-    for a in articles:
-        if id(a) in info['arts']:
-            idx = art_index[id(a)]
-            edges.append({
-                'source': tag_id,
-                'target': f'art_{idx}',
-                'value': 1,
-                'label': '关联'
-            })
+    # Parent tag only connects to child tags, not articles (to avoid overcrowding)
 
 # Create child tag nodes (including non-hierarchical tags)
 # Skip tags already created as parent tags
@@ -416,6 +418,7 @@ for i, art in enumerate(articles):
         'cn_title': art.get('cn_title', ''),
         'link': art['link'],
         'date': art['date'],
+        'collection_date': art.get('collection_date', art['date']),
         'summary': art['summary'][:120],
         'cn_summary': (art.get('cn_summary') or art.get('summary') or art.get('title') or '')[:120],
         'key_insight': art.get('key_insight', ''),
@@ -429,7 +432,8 @@ for i, art in enumerate(articles):
         'is_important_source': is_important,
         'is_major_news': is_major,
         'border_width': border_width,
-        'border_color': border_color
+        'border_color': border_color,
+        'reading_highlight': READING_HIGHLIGHTS.get(f'art_{i}', '')
     })
     # Hidden anchor edge: category -> article (for layout attraction)
     edges.append({
