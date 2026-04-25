@@ -17,11 +17,16 @@ jobs:
         with:
           repository: napchang/rss-news-aggregator
           path: rss-data
+          token: ${{ secrets.RSS_REPO_PAT }}
 
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install requests
 
       - name: Update knowledge base
         run: python scripts/update_kb.py
@@ -33,11 +38,91 @@ jobs:
         run: python scripts/gen_today_graph.py
 
       - name: Commit and push if changed
+        id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add graph-data.json today-graph-data.json geo-knowledge-base/
-          git diff --cached --quiet || (
-            git commit -m "auto: update graph $(date +%F)" &&
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            git commit -m "auto: update graph $(date +%F)"
             git push
-          )
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Get update stats
+        if: steps.commit.outputs.changed == 'true'
+        id: stats
+        run: |
+          TODAY_NODES=$(python -c "import json; d=json.load(open('today-graph-data.json')); print(len([n for n in d.get('nodes',[]) if n.get('data',{}).get('type')=='article']))")
+          TOTAL_NODES=$(python -c "import json; d=json.load(open('graph-data.json')); print(len(d.get('nodes',[])))")
+          echo "today_articles=$TODAY_NODES" >> $GITHUB_OUTPUT
+          echo "total_nodes=$TOTAL_NODES" >> $GITHUB_OUTPUT
+
+      - name: Notify Feishu on success
+        if: steps.commit.outputs.changed == 'true' && env.FEISHU_WEBHOOK != ''
+        env:
+          FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
+        run: |
+          TODAY_ARTICLES="${{ steps.stats.outputs.today_articles }}"
+          TOTAL_NODES="${{ steps.stats.outputs.total_nodes }}"
+          DATE=$(date +%F)
+          curl -X POST "$FEISHU_WEBHOOK" \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"msg_type\": \"interactive\",
+              \"card\": {
+                \"header\": {
+                  \"title\": {
+                    \"tag\": \"plain_text\",
+                    \"content\": \"✅ 知识图谱更新成功 - $DATE\"
+                  },
+                  \"template\": \"green\"
+                },
+                \"elements\": [
+                  {
+                    \"tag\": \"div\",
+                    \"text\": {
+                      \"tag\": \"lark_md\",
+                      \"content\": \"**今日新增文章：**$TODAY_ARTICLES 篇\\n**图谱总节点：**$TOTAL_NODES 个\\n**更新链接：**[点击查看](https://napchang.github.io/knowledge-graph/)\"
+                    }
+                  }
+                ]
+              }
+            }"
+
+      - name: Notify Feishu on failure
+        if: failure()
+        env:
+          FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
+        run: |
+          if [ -z "$FEISHU_WEBHOOK" ]; then
+            echo "FEISHU_WEBHOOK not configured, skipping notification"
+            exit 0
+          fi
+          DATE=$(date +%F)
+          curl -X POST "$FEISHU_WEBHOOK" \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"msg_type\": \"interactive\",
+              \"card\": {
+                \"header\": {
+                  \"title\": {
+                    \"tag\": \"plain_text\",
+                    "content": \"❌ 知识图谱更新失败 - $DATE\"
+                  },
+                  \"template\": \"red\"
+                },
+                \"elements\": [
+                  {
+                    \"tag\": \"div\",
+                    \"text\": {
+                      \"tag\": \"lark_md\",
+                      \"content\": \"请检查 GitHub Actions 日志排查问题\\n**工作流链接：**[点击查看](https://github.com/napchang/knowledge-graph/actions)\"
+                    }
+                  }
+                ]
+              }
+            }"
