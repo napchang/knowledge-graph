@@ -4,68 +4,65 @@
 
 ---
 
-### Is AI Killing Web Traffic? How AI Overviews Impact Organic Website Traffic
+### AI搜索会终结网站流量吗？
 - **链接**: https://blog.hubspot.com/marketing/is-ai-killing-web-traffic
 - **日期**: Mon, 06 Ap
 - **采集日期**: 2026-04-06
 - **Category**: Agentic B2B
 - **Topic**: `Marketing`
-- **摘要**: <div class="hs-featured-image-wrapper"> 
- <a class="hs-featured-image-link" href="https://blog.hubspot.com/marketing/is-ai-killing-web-traffic" title=
+- **标题(CN)**: AI搜索会终结网站流量吗？
+- **摘要(CN)**: AI概览功能正改变传统搜索模式，可能大幅降低用户点击网站的需求，引发行业对流量的普遍担忧。
+- **摘要**: AI概览功能正改变传统搜索模式，可能大幅降低用户点击网站的需求，引发行业对流量的普遍担忧。
 
-### Best workflow automation software: How to choose the right tool for your growth stage
+### 选择适合发展阶段的工作流自动化软件
 - **链接**: https://blog.hubspot.com/marketing/workflow-automation-tools
 - **日期**: Mon, 06 Ap
 - **采集日期**: 2026-04-06
 - **Category**: Agentic B2B
 - **Topic**: `Marketing/Automation, Automation/Workflow`
-- **摘要**: <div class="hs-featured-image-wrapper"> 
- <a class="hs-featured-image-link" href="https://blog.hubspot.com/marketing/workflow-automation-tools" title=
+- **标题(CN)**: 选择适合发展阶段的工作流自动化软件
+- **摘要(CN)**: 本文探讨如何根据企业不同成长阶段，选择匹配的工作流自动化工具，以提升运营效率与可扩展性。
+- **摘要**: 本文探讨如何根据企业不同成长阶段，选择匹配的工作流自动化工具，以提升运营效率与可扩展性。
 
-### AI-driven email personalization strategies that actually work
+### AI邮件个性化实战策略
 - **链接**: https://blog.hubspot.com/marketing/ai-driven-email-personalization
 - **日期**: Mon, 06 Ap
 - **采集日期**: 2026-04-06
 - **Category**: Agentic B2B
 - **Topic**: `Marketing/Email`
-- **摘要**: <div class="hs-featured-image-wrapper"> 
- <a class="hs-featured-image-link" href="https://blog.hubspot.com/marketing/ai-driven-email-personalization" 
+- **标题(CN)**: AI邮件个性化实战策略
+- **摘要(CN)**: 本文探讨了AI驱动的邮件个性化有效方法，通过智能数据分析与内容优化，提升用户互动与转化率。
+- **摘要**: 本文探讨了AI驱动的邮件个性化有效方法，通过智能数据分析与内容优化，提升用户互动与转化率。
 
-### How AI improves email deliverability beyond send times
+### AI提升邮件送达率新策略
 - **链接**: https://blog.hubspot.com/marketing/ai-email-deliverability-optimization
 - **日期**: Thu, 02 Ap
 - **采集日期**: 2026-04-06
 - **Category**: Agentic B2B
 - **Topic**: `Marketing/Email`
-- **摘要**: <div class="hs-featured-image-wrapper"> 
- <a class="hs-featured-image-link" href="https://blog.hubspot.com/marketing/ai-email-deliverability-optimizat
+- **标题(CN)**: AI提升邮件送达率新策略
+- **摘要(CN)**: AI不仅优化发送时机，更通过内容个性化、信誉监控与收件箱互动分析，全面提升邮件送达效果。
+- **摘要**: AI不仅优化发送时机，更通过内容个性化、信誉监控与收件箱互动分析，全面提升邮件送达效果。
 
-### Page Authority: How to Build Pages That Rank
+### 页面权威性提升指南
 - **链接**: https://blog.hubspot.com/marketing/page-authority
 - **日期**: Tue, 31 Ma
 - **采集日期**: 2026-04-06
 - **Category**: Agentic B2B
 - **Topic**: `Marketing`
-- **摘要**: <div class="hs-featured-image-wrapper"> 
- <a class="hs-featured-image-link" href="https://blog.hubspot.com/marketing/page-authority" title=""> <img al
+- **标题(CN)**: 页面权威性提升指南
+- **摘要(CN)**: 本文探讨如何通过优化内容质量、获取高质量外链及提升用户体验，构建具备高排名潜力的网页。
+- **摘要**: 本文探讨如何通过优化内容质量、获取高质量外链及提升用户体验，构建具备高排名潜力的网页。
 
-### Brand optimization: What it is and why your AI visibility depends on it
+### 品牌优化决定AI可见度
 - **链接**: https://blog.hubspot.com/marketing/brand-optimization
 - **日期**: Mon, 30 Ma
 - **采集日期**: 2026-04-06
 - **Category**: Agentic B2B
 - **Topic**: `Marketing`
-- **摘要**: <div class="hs-featured-image-wrapper"> 
- <a class="hs-featured-image-link" href="https://blog.hubspot.com/marketing/brand-optimization" title=""> <im
-
-### AI content optimization: How to get found in Google and AI search in 2026
-- **链接**: https://blog.hubspot.com/marketing/ai-content-optimization
-- **日期**: Mon, 30 Ma
-- **采集日期**: 2026-04-06
-- **Category**: Agentic B2B
-- **Topic**: `Marketing/Content`
-- **摘要**: <div class="hs-featured-image-wrapper"> 
- <a class="hs-featured-image-link" href="https://blog.hubspot.com/marketing/ai-content-optimization" title=""
+- **标题(CN)**: 品牌优化决定AI可见度
+- **摘要(CN)**: 品牌优化通过系统化提升品牌数字资产质量与一致性，直接影响企业在AI驱动搜索环境中的被发现概率。
+- **摘要**: 品牌优化通过系统化提升品牌数字资产质量与一致性，直接影响企业在AI驱动搜索环境中的被发现概率。
 
 ### AI搜索会终结网站流量吗？
 - **链接**: https://blog.hubspot.com/marketing/is-ai-killing-web-traffic
@@ -126,16 +123,6 @@
 - **标题(CN)**: 品牌优化决定AI可见度
 - **摘要(CN)**: 品牌优化通过系统化提升品牌数字资产质量与一致性，增强AI搜索与推荐系统中的识别度，直接影响企业在智能时代的市场曝光。
 - **摘要**: 品牌优化通过系统化提升品牌数字资产质量与一致性，增强AI搜索与推荐系统中的识别度，直接影响企业在智能时代的市场曝光。
-
-### AI内容优化：2026年搜索可见性策略
-- **链接**: https://blog.hubspot.com/marketing/ai-content-optimization
-- **日期**: Mon, 30 Ma
-- **采集日期**: 2026-04-07
-- **Category**: Agentic B2B
-- **Topic**: `Marketing/Content`
-- **标题(CN)**: AI内容优化：2026年搜索可见性策略
-- **摘要(CN)**: 本文探讨如何通过AI优化内容，以适应2026年谷歌与AI搜索引擎的变化，提升内容被发现的机会。
-- **摘要**: 本文探讨如何通过AI优化内容，以适应2026年谷歌与AI搜索引擎的变化，提升内容被发现的机会。
 
 ### 循环营销与传统营销差异解析
 - **链接**: https://blog.hubspot.com/marketing/loop-marketing-vs-traditional-marketing

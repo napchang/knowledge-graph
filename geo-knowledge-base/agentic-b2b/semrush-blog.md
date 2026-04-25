@@ -4,21 +4,25 @@
 
 ---
 
-### The agentic web: How AI agents decide which brands make the cut
+### 智能体网络重塑品牌筛选
 - **链接**: https://www.semrush.com/blog/the-agentic-web/
 - **日期**: Mon, 30 Ma
 - **采集日期**: 2026-04-06
 - **Category**: Agentic B2B
 - **Topic**: `CX/客户体验, Automation, B2B/Strategy`
-- **摘要**: <p>AI agents are browsing, comparing, and buying on behalf of your customers. Here‘s what the agentic web means for your brand visibility strategy.</p
+- **标题(CN)**: 智能体网络重塑品牌筛选
+- **摘要(CN)**: AI智能体正代表消费者进行浏览、比价与购买，品牌可见性策略需重新审视智能体网络带来的变革。
+- **摘要**: AI智能体正代表消费者进行浏览、比价与购买，品牌可见性策略需重新审视智能体网络带来的变革。
 
-### 20 marketing KPIs to track & improve in 2026
+### 2026年20个营销关键指标
 - **链接**: https://www.semrush.com/blog/kpi-marketing/
 - **日期**: Fri, 27 Ma
 - **采集日期**: 2026-04-06
 - **Category**: Agentic B2B
 - **Topic**: `Marketing`
-- **摘要**: <p><img alt="20 marketing KPIs to track &amp; improve in 2026" src="https://static.semrush.com/blog/uploads/media/f9/21/f9215558063287a2a8aa1372c4b204
+- **标题(CN)**: 2026年20个营销关键指标
+- **摘要(CN)**: 本文系统梳理了2026年需重点关注的20个营销绩效指标，涵盖流量、转化、留存等维度，助力团队精准评估策略效果。
+- **摘要**: 本文系统梳理了2026年需重点关注的20个营销绩效指标，涵盖流量、转化、留存等维度，助力团队精准评估策略效果。
 
 ### 智能体网络如何筛选品牌
 - **链接**: https://www.semrush.com/blog/the-agentic-web/

@@ -4,21 +4,25 @@
 
 ---
 
-### The AI Hype Index: AI goes to war
+### AI军备竞赛升温
 - **链接**: https://www.technologyreview.com/2026/03/25/1134571/the-ai-hype-index-ai-goes-to-war/
 - **日期**: Wed, 25 Ma
 - **采集日期**: 2026-04-06
 - **Category**: Academic
 - **Topic**: `学术/模型架构`
-- **摘要**: AI is at war. Anthropic and the Pentagon feuded over how to weaponize Anthropic’s AI model Claude; then OpenAI swept the Pentagon off its feet with an
+- **标题(CN)**: AI军备竞赛升温
+- **摘要(CN)**: AI技术正被加速应用于军事领域，Anthropic与五角大楼就Claude模型武器化产生分歧，而OpenAI则以争议性合作抢占先机。
+- **摘要**: AI技术正被加速应用于军事领域，Anthropic与五角大楼就Claude模型武器化产生分歧，而OpenAI则以争议性合作抢占先机。
 
-### There are more AI health tools than ever—but how well do they work?
+### AI健康工具效能几何？
 - **链接**: https://www.technologyreview.com/2026/03/30/1134795/there-are-more-ai-health-tools-than-ever-but-how-well-do-they-work/
 - **日期**: Mon, 30 Ma
 - **采集日期**: 2026-04-06
 - **Category**: Academic
 - **Topic**: `学术前沿`
-- **摘要**: Earlier this month, Microsoft launched Copilot Health, a new space within its Copilot app where users will be able to connect their medical records an
+- **标题(CN)**: AI健康工具效能几何？
+- **摘要(CN)**: 本月微软推出Copilot Health，用户可关联病历并咨询健康问题。当前AI医疗工具激增，但其实际效果与可靠性仍需验证。
+- **摘要**: 本月微软推出Copilot Health，用户可关联病历并咨询健康问题。当前AI医疗工具激增，但其实际效果与可靠性仍需验证。
 
 ### AI军备竞赛升温
 - **链接**: https://www.technologyreview.com/2026/03/25/1134571/the-ai-hype-index-ai-goes-to-war/
@@ -258,21 +262,25 @@
 - **Topic**: `学术前沿`
 - **摘要**: When ChatGPT was released to the public in late 2022, it opened people’s eyes to how easily generative AI could churn out vast amounts of human-seemin
 
-### LLMs+
+### 大语言模型+时代
 - **链接**: https://www.technologyreview.com/2026/04/21/1135645/llm-large-language-models-ai/
 - **日期**: Tue, 21 Ap
 - **采集日期**: 2026-04-23
 - **Category**: Academic
 - **Topic**: `学术前沿`
-- **摘要**: When ChatGPT launched as an experimental prototype in late 2022, OpenAI’s chatbot became an everyday everything app for hundreds of millions of people
+- **标题(CN)**: 大语言模型+时代
+- **摘要(CN)**: 2022年底ChatGPT作为实验原型推出，迅速成为数亿用户的日常全能应用，标志着大语言模型引领的全新未来已至。
+- **摘要**: 2022年底ChatGPT作为实验原型推出，迅速成为数亿用户的日常全能应用，标志着大语言模型引领的全新未来已至。
 
-### Agent orchestration
+### 智能体协同技术
 - **链接**: https://www.technologyreview.com/2026/04/21/1135654/agent-orchestration-ai-artificial-intelligence/
 - **日期**: Tue, 21 Ap
 - **采集日期**: 2026-04-23
 - **Category**: Academic
 - **Topic**: `学术/模型架构, 学术/NLP`
-- **摘要**: When people say AI will speed up drug development or fear that it will bring about mass layoffs, what they have in mind—whether they know it or not—ar
+- **标题(CN)**: 智能体协同技术
+- **摘要(CN)**: 当人们讨论AI加速药物研发或担忧其引发大规模失业时，无论是否明确认知，其核心指向的正是智能体技术。ChatGPT使大语言模型……
+- **摘要**: 当人们讨论AI加速药物研发或担忧其引发大规模失业时，无论是否明确认知，其核心指向的正是智能体技术。ChatGPT使大语言模型……
 
 ### Supercharged scams
 - **链接**: https://www.technologyreview.com/2026/04/21/1135647/supercharged-scams-ai-artificial-intelligence/
@@ -282,26 +290,66 @@
 - **Topic**: `学术前沿`
 - **摘要**: When ChatGPT was released to the public in late 2022, it opened people’s eyes to how easily generative AI could churn out vast amounts of human-seemin
 
-### LLMs+
+### 大语言模型+时代
 - **链接**: https://www.technologyreview.com/2026/04/21/1135645/llm-large-language-models-ai/
 - **日期**: Tue, 21 Ap
 - **采集日期**: 2026-04-24
 - **Category**: Academic
 - **Topic**: `学术前沿`
-- **摘要**: When ChatGPT launched as an experimental prototype in late 2022, OpenAI’s chatbot became an everyday everything app for hundreds of millions of people
+- **标题(CN)**: 大语言模型+时代
+- **摘要(CN)**: 2022年底ChatGPT作为实验原型推出，迅速成为数亿用户的日常全能应用，标志着大语言模型引领的全新未来已至。
+- **摘要**: 2022年底ChatGPT作为实验原型推出，迅速成为数亿用户的日常全能应用，标志着大语言模型引领的全新未来已至。
 
-### Agent orchestration
+### 智能体协同技术
 - **链接**: https://www.technologyreview.com/2026/04/21/1135654/agent-orchestration-ai-artificial-intelligence/
 - **日期**: Tue, 21 Ap
 - **采集日期**: 2026-04-24
 - **Category**: Academic
 - **Topic**: `学术/模型架构, 学术/NLP`
-- **摘要**: When people say AI will speed up drug development or fear that it will bring about mass layoffs, what they have in mind—whether they know it or not—ar
+- **标题(CN)**: 智能体协同技术
+- **摘要(CN)**: 当人们讨论AI加速药物研发或担忧其引发大规模失业时，无论是否明确认知，其核心指向的正是智能体技术。ChatGPT使大语言模型……
+- **摘要**: 当人们讨论AI加速药物研发或担忧其引发大规模失业时，无论是否明确认知，其核心指向的正是智能体技术。ChatGPT使大语言模型……
 
 ### Supercharged scams
 - **链接**: https://www.technologyreview.com/2026/04/21/1135647/supercharged-scams-ai-artificial-intelligence/
 - **日期**: Tue, 21 Ap
 - **采集日期**: 2026-04-24
+- **Category**: Academic
+- **Topic**: `学术前沿`
+- **摘要**: When ChatGPT was released to the public in late 2022, it opened people’s eyes to how easily generative AI could churn out vast amounts of human-seemin
+
+### 大语言模型+时代
+- **链接**: https://www.technologyreview.com/2026/04/21/1135645/llm-large-language-models-ai/
+- **日期**: Tue, 21 Ap
+- **采集日期**: 2026-04-25
+- **Category**: Academic
+- **Topic**: `学术前沿`
+- **标题(CN)**: 大语言模型+时代
+- **摘要(CN)**: 2022年底ChatGPT作为实验原型推出，迅速成为数亿用户的日常全能应用，标志着大语言模型引领的全新未来已至。
+- **摘要**: 2022年底ChatGPT作为实验原型推出，迅速成为数亿用户的日常全能应用，标志着大语言模型引领的全新未来已至。
+
+### 智能体协同技术
+- **链接**: https://www.technologyreview.com/2026/04/21/1135654/agent-orchestration-ai-artificial-intelligence/
+- **日期**: Tue, 21 Ap
+- **采集日期**: 2026-04-25
+- **Category**: Academic
+- **Topic**: `学术/模型架构, 学术/NLP`
+- **标题(CN)**: 智能体协同技术
+- **摘要(CN)**: 当人们讨论AI加速药物研发或担忧其引发大规模失业时，无论是否明确认知，其核心指向的正是智能体技术。ChatGPT使大语言模型……
+- **摘要**: 当人们讨论AI加速药物研发或担忧其引发大规模失业时，无论是否明确认知，其核心指向的正是智能体技术。ChatGPT使大语言模型……
+
+### Three reasons why DeepSeek’s new model matters
+- **链接**: https://www.technologyreview.com/2026/04/24/1136422/why-deepseeks-v4-matters/
+- **日期**: Fri, 24 Ap
+- **采集日期**: 2026-04-25
+- **Category**: Academic
+- **Topic**: `学术/模型架构`
+- **摘要**: On Friday, Chinese AI firm DeepSeek released a preview of V4, its long-awaited new flagship model. Notably, the model can process much longer prompts 
+
+### Supercharged scams
+- **链接**: https://www.technologyreview.com/2026/04/21/1135647/supercharged-scams-ai-artificial-intelligence/
+- **日期**: Tue, 21 Ap
+- **采集日期**: 2026-04-25
 - **Category**: Academic
 - **Topic**: `学术前沿`
 - **摘要**: When ChatGPT was released to the public in late 2022, it opened people’s eyes to how easily generative AI could churn out vast amounts of human-seemin

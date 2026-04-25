@@ -4,21 +4,25 @@
 
 ---
 
-### 8 Best AI SEO Tools for 2026 (Tested Firsthand)
+### 2026年八大AI SEO工具实测推荐
 - **链接**: https://www.semrush.com/blog/best-ai-seo-tools/
 - **日期**: Wed, 01 Ap
 - **采集日期**: 2026-04-06
 - **Category**: Ai Search
 - **Topic**: `SEO`
-- **摘要**: <p><img alt="8 Best AI SEO Tools for 2026 (Tested Firsthand)" src="https://static.semrush.com/blog/uploads/media/bd/e0/bde0ecced7ff4b219b263f04ad37849
+- **标题(CN)**: 2026年八大AI SEO工具实测推荐
+- **摘要(CN)**: 本文基于一手测试，精选出2026年最具潜力的AI SEO工具，涵盖内容优化、关键词分析等核心功能，助力高效提升网站搜索排名。
+- **摘要**: 本文基于一手测试，精选出2026年最具潜力的AI SEO工具，涵盖内容优化、关键词分析等核心功能，助力高效提升网站搜索排名。
 
-### What 3,900 SEO Job Listings Reveal for 2026: Experiments, AI, and Six-Figure Salaries
+### 2026年SEO职位趋势洞察
 - **链接**: https://www.semrush.com/blog/seo-job-market-study/
 - **日期**: Mon, 30 Ma
 - **采集日期**: 2026-04-06
 - **Category**: Ai Search
 - **Topic**: `SEO`
-- **摘要**: <p>What does it take to build a career in SEO in 2026? We analyzed 3,900 job listings to uncover how the role is evolving—from experimentation and AI 
+- **标题(CN)**: 2026年SEO职位趋势洞察
+- **摘要(CN)**: 分析3900份招聘清单发现，SEO岗位正朝实验驱动与AI融合转型，薪资与职责范畴同步演变。
+- **摘要**: 分析3900份招聘清单发现，SEO岗位正朝实验驱动与AI融合转型，薪资与职责范畴同步演变。
 
 ### 2026年八大AI SEO工具实测
 - **链接**: https://www.semrush.com/blog/best-ai-seo-tools/
@@ -281,4 +285,36 @@
 - **Category**: Ai Search
 - **Topic**: `SEO/技术优化, 搜索度量`
 - **摘要**: Learn how to perform a complete SEO audit for 2026. Follow a step-by-step checklist to improve rankings, fix issues, and boost AI visibility.
+
+### How to find low-competition keywords with Semrush
+- **链接**: https://www.semrush.com/blog/how-to-find-low-competition-keywords-with-semrush/
+- **日期**: 2026-04-24
+- **采集日期**: 2026-04-25
+- **Category**: Ai Search
+- **Topic**: `SEO, 搜索度量`
+- **摘要**: How can you find low-competition keywords to boost your website’s SEO rankings? Find out here.
+
+### How to use Google Trends for SEO in 2026
+- **链接**: https://www.semrush.com/blog/google-trends/
+- **日期**: 2026-04-23
+- **采集日期**: 2026-04-25
+- **Category**: Ai Search
+- **Topic**: `SEO`
+- **摘要**: Learn how to use Google Trends for SEO in 2026. Discover trends, compare keywords, and find opportunities to drive more organic traffic.
+
+### On-page SEO checklist: The complete task list for 2026
+- **链接**: https://www.semrush.com/blog/on-page-seo-checklist/
+- **日期**: 2026-04-23
+- **采集日期**: 2026-04-25
+- **Category**: Ai Search
+- **Topic**: `SEO`
+- **摘要**: Follow this 14-step on-page SEO checklist to improve your visibility in traditional and AI search.
+
+### What is technical SEO? Basics and best practices
+- **链接**: https://www.semrush.com/blog/technical-seo/
+- **日期**: 2026-04-23
+- **采集日期**: 2026-04-25
+- **Category**: Ai Search
+- **Topic**: `SEO/技术优化`
+- **摘要**: Learn what technical SEO is and how to optimize your site for crawling, indexing, and AI visibility with proven best practices.
 

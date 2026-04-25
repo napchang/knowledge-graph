@@ -9,7 +9,7 @@
 - **日期**: 2026-04-06
 - **采集日期**: 2026-04-07
 - **Category**: Ai Industry
-- **Topic**: `行业/趋势`
+- **Topic**: `AI动态`
 - **标题(CN)**: 开源与专有技术竞争案例
 - **摘要(CN)**: 开源与专有技术在不同领域各有胜负，如移动市场中安卓占份额而iOS获高利润，体现多元成功模式。
 - **摘要**: 开源与专有技术在不同领域各有胜负，如移动市场中安卓占份额而iOS获高利润，体现多元成功模式。
@@ -19,17 +19,27 @@
 - **日期**: 2026-04-06
 - **采集日期**: 2026-04-07
 - **Category**: Ai Industry
-- **Topic**: `行业/趋势`
+- **Topic**: `AI动态`
 - **标题(CN)**: 美味视觉冲击😅
 - **摘要(CN)**: 网友分享诱人美食图片并@steipete，附推文链接引发食欲与好奇。
 - **摘要**: 网友分享诱人美食图片并@steipete，附推文链接引发食欲与好奇。
+
+### OpenAI为何不设产品路线图
+- **链接**: https://x.com/petergyang/status/2040943889822232790
+- **日期**: 2026-04-06
+- **采集日期**: 2026-04-07
+- **Category**: Ai Industry
+- **Topic**: `OpenAI动态`
+- **标题(CN)**: OpenAI为何不设产品路线图
+- **摘要(CN)**: OpenAI产品负责人指出，公司只规划短期（8周内可交付）与长期（一年期技术愿景），避免尴尬的中期路线图。
+- **摘要**: OpenAI产品负责人指出，公司只规划短期（8周内可交付）与长期（一年期技术愿景），避免尴尬的中期路线图。
 
 ### Anthropic高效研发探秘
 - **链接**: https://x.com/petergyang/status/2041678988318543908
 - **日期**: 2026-04-08
 - **采集日期**: 2026-04-08
 - **Category**: Ai Industry
-- **Topic**: `行业/大厂战略`
+- **Topic**: `Anthropic动态`
 - **标题(CN)**: Anthropic高效研发探秘
 - **摘要(CN)**: 网友好奇Anthropic是否借助内部方法论实现近期惊人的产品迭代速度，并附相关讨论链接。
 - **摘要**: 网友好奇Anthropic是否借助内部方法论实现近期惊人的产品迭代速度，并附相关讨论链接。
@@ -39,7 +49,7 @@
 - **日期**: 2026-04-07
 - **采集日期**: 2026-04-08
 - **Category**: Ai Industry
-- **Topic**: `行业/趋势`
+- **Topic**: `AI动态`
 - **标题(CN)**: 环湖畅跑，尽享自然之美
 - **摘要(CN)**: 推文分享了一次环湖跑步的愉悦体验，强调因环境宜人而激发全程奔跑的冲动，并附有链接。
 - **摘要**: 推文分享了一次环湖跑步的愉悦体验，强调因环境宜人而激发全程奔跑的冲动，并附有链接。
@@ -49,7 +59,7 @@
 - **日期**: 2026-04-09
 - **采集日期**: 2026-04-09
 - **Category**: Ai Industry
-- **Topic**: `行业/趋势`
+- **Topic**: `AI动态`
 - **标题(CN)**: 头衔并非关键
 - **摘要(CN)**: 本文探讨头衔在职业发展中的实际意义，指出其象征性大于实质性，强调个人能力与贡献才是核心。
 - **摘要**: 本文探讨头衔在职业发展中的实际意义，指出其象征性大于实质性，强调个人能力与贡献才是核心。
@@ -59,27 +69,47 @@
 - **日期**: 2026-04-08
 - **采集日期**: 2026-04-09
 - **Category**: Ai Industry
-- **Topic**: `行业/趋势`
+- **Topic**: `AI动态`
 - **标题(CN)**: 支持好友Aadit的新公司
 - **摘要(CN)**: 诚邀您关注好友Aadit创立的新公司，其公司名称别具巧思，值得支持与期待。
 - **摘要**: 诚邀您关注好友Aadit创立的新公司，其公司名称别具巧思，值得支持与期待。
+
+### AI订阅模式或难持久
+- **链接**: https://x.com/petergyang/status/2041989206495653915
+- **日期**: 2026-04-08
+- **采集日期**: 2026-04-09
+- **Category**: Ai Industry
+- **Topic**: `OpenAI动态, Anthropic动态`
+- **标题(CN)**: AI订阅模式或难持久
+- **摘要(CN)**: 尽管喜爱Claude Max与ChatGPT Pro，作者认为当前“不限量”AI订阅模式恐难持续。深度分析涵盖：Anthropic关闭OpenClaw原因、Mac本地模型运行方案及中国AI市场实地观察
+- **摘要**: 尽管喜爱Claude Max与ChatGPT Pro，作者认为当前“不限量”AI订阅模式恐难持续。深度分析涵盖：Anthropic关闭OpenClaw原因、Mac本地模型运行方案及中国AI市场实地观察
 
 ### 培养孩子适应AGI时代的职业
 - **链接**: https://x.com/petergyang/status/2042472016566239320
 - **日期**: 2026-04-10
 - **采集日期**: 2026-04-10
 - **Category**: Ai Industry
-- **Topic**: `行业/趋势`
+- **Topic**: `硬件算力`
 - **标题(CN)**: 培养孩子适应AGI时代的职业
 - **摘要(CN)**: 本文探讨在人工智能快速发展的背景下，如何引导孩子选择不易被自动化取代的职业方向，强调创造力与人性化技能。
 - **摘要**: 本文探讨在人工智能快速发展的背景下，如何引导孩子选择不易被自动化取代的职业方向，强调创造力与人性化技能。
+
+### 模型优势与使用体验并存
+- **链接**: https://x.com/petergyang/status/2042411572241608913
+- **日期**: 2026-04-10
+- **采集日期**: 2026-04-10
+- **Category**: Ai Industry
+- **Topic**: `Anthropic动态, 开发者工具`
+- **标题(CN)**: 模型优势与使用体验并存
+- **摘要(CN)**: 尽管在OpenClaw任务上尚无模型能接近Opus的表现，但将Claude Code用作个人助手替代方案虽可接受，却缺乏OpenClaw的专属感。
+- **摘要**: 尽管在OpenClaw任务上尚无模型能接近Opus的表现，但将Claude Code用作个人助手替代方案虽可接受，却缺乏OpenClaw的专属感。
 
 ### 揭秘Hermes智能体
 - **链接**: https://x.com/petergyang/status/2042405414999069145
 - **日期**: 2026-04-10
 - **采集日期**: 2026-04-10
 - **Category**: Ai Industry
-- **Topic**: `行业/Agent生态`
+- **Topic**: `Agent生态`
 - **标题(CN)**: 揭秘Hermes智能体
 - **摘要(CN)**: Hermes智能体并非奢侈品牌衍生物，而是与OpenClaw类似的高级AI代理工具，专注于执行复杂自动化任务。
 - **摘要**: Hermes智能体并非奢侈品牌衍生物，而是与OpenClaw类似的高级AI代理工具，专注于执行复杂自动化任务。
@@ -89,7 +119,7 @@
 - **日期**: 2026-04-11
 - **采集日期**: 2026-04-11
 - **Category**: Ai Industry
-- **Topic**: `行业/趋势`
+- **Topic**: `Anthropic动态, 开发者工具`
 - **标题(CN)**: 中国AI行业工作文化观察
 - **摘要(CN)**: 中国AI从业者普遍呈现晚到迟退的工作节奏，年轻员工占比高，普遍使用VPN接入国际先进工具，新一代职场人生活习惯更趋健康。
 - **摘要**: 中国AI从业者普遍呈现晚到迟退的工作节奏，年轻员工占比高，普遍使用VPN接入国际先进工具，新一代职场人生活习惯更趋健康。
@@ -99,7 +129,7 @@
 - **日期**: 2026-04-11
 - **采集日期**: 2026-04-12
 - **Category**: Ai Industry
-- **Topic**: `行业/趋势`
+- **Topic**: `Anthropic动态, 开发者工具`
 - **标题(CN)**: 中国AI行业工作文化观察
 - **摘要(CN)**: 中国AI从业者普遍呈现晚到迟退的工作节奏，年轻员工占比高，普遍使用VPN接入国际先进工具，新一代职场人生活方式趋向简单化。
 - **摘要**: 中国AI从业者普遍呈现晚到迟退的工作节奏，年轻员工占比高，普遍使用VPN接入国际先进工具，新一代职场人生活方式趋向简单化。
@@ -109,17 +139,27 @@
 - **日期**: 2026-04-13
 - **采集日期**: 2026-04-13
 - **Category**: Ai Industry
-- **Topic**: `行业/趋势`
+- **Topic**: `AI动态`
 - **标题(CN)**: 时差地狱
 - **摘要(CN)**: 长途飞行后昼夜节律紊乱，导致疲劳、失眠与认知下降，严重影响跨时区旅行者的身心健康与工作效率。
 - **摘要**: 长途飞行后昼夜节律紊乱，导致疲劳、失眠与认知下降，严重影响跨时区旅行者的身心健康与工作效率。
+
+### 用户质疑Claude模型性能下降
+- **链接**: https://x.com/petergyang/status/2043466663258140685
+- **日期**: 2026-04-12
+- **采集日期**: 2026-04-13
+- **Category**: Ai Industry
+- **Topic**: `Anthropic动态`
+- **标题(CN)**: 用户质疑Claude模型性能下降
+- **摘要(CN)**: 近期社交媒体及Claude讨论区涌现大量用户反馈，称Opus模型性能明显下滑，引发对Anthropic主动削弱模型能力的质疑。
+- **摘要**: 近期社交媒体及Claude讨论区涌现大量用户反馈，称Opus模型性能明显下滑，引发对Anthropic主动削弱模型能力的质疑。
 
 ### 多平台收听渠道
 - **链接**: https://x.com/petergyang/status/2043328453181943988
 - **日期**: 2026-04-12
 - **采集日期**: 2026-04-13
 - **Category**: Ai Industry
-- **Topic**: `行业/趋势`
+- **Topic**: `AI动态`
 - **标题(CN)**: 多平台收听渠道
 - **摘要(CN)**: 本内容已在Spotify、Apple及Newsletter等平台同步上线，用户可通过对应链接便捷获取。
 - **摘要**: 本内容已在Spotify、Apple及Newsletter等平台同步上线，用户可通过对应链接便捷获取。
@@ -129,7 +169,7 @@
 - **日期**: 2026-04-14
 - **采集日期**: 2026-04-14
 - **Category**: Ai Industry
-- **Topic**: `行业/趋势`
+- **Topic**: `AI动态`
 - **标题(CN)**: 游戏高光时刻🔥
 - **摘要(CN)**: 一段《英雄联盟》精彩操作集锦视频，展示玩家极限反应与团队配合，画面极具冲击力。
 - **摘要**: 一段《英雄联盟》精彩操作集锦视频，展示玩家极限反应与团队配合，画面极具冲击力。
@@ -139,7 +179,7 @@
 - **日期**: 2026-04-13
 - **采集日期**: 2026-04-14
 - **Category**: Ai Industry
-- **Topic**: `行业/大厂战略`
+- **Topic**: `OpenAI动态, 企业落地`
 - **标题(CN)**: GPT整合遇挑战，OpenAI陷小危机
 - **摘要(CN)**: 尽管OpenClaw并非OpenAI旗下产品，但其GPT整合若无法迅速改进，仍将引发OpenAI的信任危机。用户期待GPT性能至少比肩Opus模型。
 - **摘要**: 尽管OpenClaw并非OpenAI旗下产品，但其GPT整合若无法迅速改进，仍将引发OpenAI的信任危机。用户期待GPT性能至少比肩Opus模型。
@@ -149,7 +189,7 @@
 - **日期**: 2026-04-15
 - **采集日期**: 2026-04-15
 - **Category**: Ai Industry
-- **Topic**: `行业/趋势`
+- **Topic**: `AI动态`
 - **标题(CN)**: 权限设置疑云待解
 - **摘要(CN)**: 用户反馈在开启“绕过权限”并设置“始终接受编辑”后，系统仍反复请求权限，相关讨论链接已附。
 - **摘要**: 用户反馈在开启“绕过权限”并设置“始终接受编辑”后，系统仍反复请求权限，相关讨论链接已附。
@@ -159,7 +199,7 @@
 - **日期**: 2026-04-15
 - **采集日期**: 2026-04-15
 - **Category**: Ai Industry
-- **Topic**: `行业/趋势`
+- **Topic**: `Anthropic动态, 开发者工具`
 - **标题(CN)**: Claude Code应用体验与跨设备同步需求
 - **摘要(CN)**: 用户赞赏新版Claude Code应用，但提出需改进移动端与桌面端会话同步功能。目前远程控制指令无效，跨平台操作体验有待优化。
 - **摘要**: 用户赞赏新版Claude Code应用，但提出需改进移动端与桌面端会话同步功能。目前远程控制指令无效，跨平台操作体验有待优化。
@@ -169,7 +209,7 @@
 - **日期**: 2026-04-14
 - **采集日期**: 2026-04-15
 - **Category**: Ai Industry
-- **Topic**: `行业/Agent生态`
+- **Topic**: `Agent生态, 硬件算力`
 - **标题(CN)**: 勿将AI输出视为最终成果
 - **摘要(CN)**: @zoink指出，使用AI时应将其输出视为可塑黏土，在无限可能性中主动筛选与打磨，而非直接采用结果。
 - **摘要**: @zoink指出，使用AI时应将其输出视为可塑黏土，在无限可能性中主动筛选与打磨，而非直接采用结果。
@@ -179,7 +219,7 @@
 - **日期**: 2026-04-15
 - **采集日期**: 2026-04-16
 - **Category**: Ai Industry
-- **Topic**: `行业/趋势`
+- **Topic**: `Anthropic动态, 硬件算力`
 - **标题(CN)**: Claude频繁故障引深思
 - **摘要(CN)**: 用户反映Claude服务近期频繁中断，质疑其是否与更新节奏过快、算力扩展或其他潜在问题相关。
 - **摘要**: 用户反映Claude服务近期频繁中断，质疑其是否与更新节奏过快、算力扩展或其他潜在问题相关。
@@ -189,7 +229,7 @@
 - **日期**: 2026-04-15
 - **采集日期**: 2026-04-16
 - **Category**: Ai Industry
-- **Topic**: `行业/Builder动态, 行业/产品发布`
+- **Topic**: `AI动态`
 - **标题(CN)**: 中国考察见闻：15个洞察
 - **摘要(CN)**: 作者结束两周中国之行，亲身体验世界第二大经济体的运作模式，认为产品开发者都应实地考察AI工作文化、电动车生态及生活方式。
 - **摘要**: 作者结束两周中国之行，亲身体验世界第二大经济体的运作模式，认为产品开发者都应实地考察AI工作文化、电动车生态及生活方式。
@@ -199,7 +239,7 @@
 - **日期**: 2026-04-17
 - **采集日期**: 2026-04-17
 - **Category**: Ai Industry
-- **Topic**: `行业/趋势`
+- **Topic**: `Anthropic动态`
 - **标题(CN)**: 优化Markdown编辑体验
 - **摘要(CN)**: 用户建议Claude与Codex应用在网页端与移动端构建便捷的Markdown文件查看与编辑功能，以便手动微调最后10%的指令内容。
 - **摘要**: 用户建议Claude与Codex应用在网页端与移动端构建便捷的Markdown文件查看与编辑功能，以便手动微调最后10%的指令内容。
@@ -209,17 +249,27 @@
 - **日期**: 2026-04-17
 - **采集日期**: 2026-04-17
 - **Category**: Ai Industry
-- **Topic**: `行业/Agent生态`
+- **Topic**: `Agent生态, 硬件算力`
 - **标题(CN)**: AI双代理评估机制优化技能构建
 - **摘要(CN)**: 作者在开发AI技能时，会创建独立评估代理进行是非判断，若未全数通过则要求主代理迭代优化，目前正将此方法应用于YouTube缩略图与标题生成。
 - **摘要**: 作者在开发AI技能时，会创建独立评估代理进行是非判断，若未全数通过则要求主代理迭代优化，目前正将此方法应用于YouTube缩略图与标题生成。
+
+### 呼吁Anthropic日更模型
+- **链接**: https://x.com/petergyang/status/2045335553059746259
+- **日期**: 2026-04-18
+- **采集日期**: 2026-04-19
+- **Category**: Ai Industry
+- **Topic**: `Anthropic动态`
+- **标题(CN)**: 呼吁Anthropic日更模型
+- **摘要(CN)**: 用户建议Anthropic应像更新其他产品一样每日发布模型更新，并表达了对未来版本Opus的迫切期待。
+- **摘要**: 用户建议Anthropic应像更新其他产品一样每日发布模型更新，并表达了对未来版本Opus的迫切期待。
 
 ### 产品思维革命：AI赋能新视野
 - **链接**: https://x.com/petergyang/status/2045334450461192270
 - **日期**: 2026-04-18
 - **采集日期**: 2026-04-19
 - **Category**: Ai Industry
-- **Topic**: `行业/Builder动态, 行业/产品发布`
+- **Topic**: `产品动态`
 - **标题(CN)**: 产品思维革命：AI赋能新视野
 - **摘要(CN)**: 开发者@steipete彻底改变了我对产品的认知，其“AI竟能实现这些功能”的观点极具启发性，相关视频值得一看。
 - **摘要**: 开发者@steipete彻底改变了我对产品的认知，其“AI竟能实现这些功能”的观点极具启发性，相关视频值得一看。
@@ -229,7 +279,7 @@
 - **日期**: 2026-04-18
 - **采集日期**: 2026-04-19
 - **Category**: Ai Industry
-- **Topic**: `行业/大厂战略`
+- **Topic**: `Anthropic动态`
 - **标题(CN)**: 体验Claude设计趣味
 - **摘要(CN)**: 视频展示Claude Design五大应用场景，涵盖视频制作、幻灯片、网站、移动应用及设计系统，展现其多功能设计能力。
 - **摘要**: 视频展示Claude Design五大应用场景，涵盖视频制作、幻灯片、网站、移动应用及设计系统，展现其多功能设计能力。
@@ -239,7 +289,7 @@
 - **日期**: 2026-04-19
 - **采集日期**: 2026-04-20
 - **Category**: Ai Industry
-- **Topic**: `行业/产品发布`
+- **Topic**: `Anthropic动态, 开发者工具, 企业落地`
 - **标题(CN)**: Claude切换使用后Telegram集成失效
 - **摘要(CN)**: 用户从桌面应用转向主要使用Claude Code后，发现Telegram集成功能无法正常工作，希望实现跨设备聊天同步。
 - **摘要**: 用户从桌面应用转向主要使用Claude Code后，发现Telegram集成功能无法正常工作，希望实现跨设备聊天同步。
@@ -249,7 +299,7 @@
 - **日期**: 2026-04-19
 - **采集日期**: 2026-04-20
 - **Category**: Ai Industry
-- **Topic**: `行业/产品发布`
+- **Topic**: `产品动态`
 - **标题(CN)**: 免费订阅AI与产品指南
 - **摘要(CN)**: 若您喜欢本期内容，欢迎免费订阅我的简报，获取精选AI技术与产品指导。
 - **摘要**: 若您喜欢本期内容，欢迎免费订阅我的简报，获取精选AI技术与产品指导。
@@ -259,7 +309,7 @@
 - **日期**: 2026-04-18
 - **采集日期**: 2026-04-20
 - **Category**: Ai Industry
-- **Topic**: `行业/趋势`
+- **Topic**: `AI动态`
 - **标题(CN)**: 山羊推文荐山羊游戏
 - **摘要(CN)**: 用户以“山羊（史上最佳）推文”盛赞《大金刚国度》系列，并迫切呼吁任天堂尽快推出新的横版卷轴续作。
 - **摘要**: 用户以“山羊（史上最佳）推文”盛赞《大金刚国度》系列，并迫切呼吁任天堂尽快推出新的横版卷轴续作。
@@ -269,7 +319,7 @@
 - **日期**: 2026-04-21
 - **采集日期**: 2026-04-21
 - **Category**: Ai Industry
-- **Topic**: `行业/Agent生态`
+- **Topic**: `Agent生态`
 - **标题(CN)**: 智能体设计之趣胜于编程
 - **摘要(CN)**: 相较于使用智能体进行编程，利用智能体进行设计过程更具趣味性与创造性，展现了人机协作的新维度。
 - **摘要**: 相较于使用智能体进行编程，利用智能体进行设计过程更具趣味性与创造性，展现了人机协作的新维度。
@@ -279,7 +329,7 @@
 - **日期**: 2026-04-21
 - **采集日期**: 2026-04-21
 - **Category**: Ai Industry
-- **Topic**: `行业/趋势`
+- **Topic**: `AI动态`
 - **标题(CN)**: AI设计工具可弥补前端设计短板
 - **摘要(CN)**: 作者认为借助AI设计工具，能够轻松弥补Codex在前端设计能力上的不足。
 - **摘要**: 作者认为借助AI设计工具，能够轻松弥补Codex在前端设计能力上的不足。
@@ -289,7 +339,7 @@
 - **日期**: 2026-04-21
 - **采集日期**: 2026-04-21
 - **Category**: Ai Industry
-- **Topic**: `行业/趋势`
+- **Topic**: `企业落地`
 - **标题(CN)**: 创新越强，路线图越淡
 - **摘要(CN)**: 企业创新程度与长期规划详程度呈反比，过度具体的远期路线图可能反而会限制突破性探索。
 - **摘要**: 企业创新程度与长期规划详程度呈反比，过度具体的远期路线图可能反而会限制突破性探索。
@@ -299,7 +349,7 @@
 - **日期**: 2026-04-21
 - **采集日期**: 2026-04-22
 - **Category**: Ai Industry
-- **Topic**: `行业/Agent生态`
+- **Topic**: `Agent生态`
 - **标题(CN)**: 与智能体协同设计，乐趣更胜编程
 - **摘要(CN)**: 相比与智能体共同编程，与其协同进行创意设计能带来更丰富的乐趣与灵感碰撞。
 - **摘要**: 相比与智能体共同编程，与其协同进行创意设计能带来更丰富的乐趣与灵感碰撞。
@@ -309,7 +359,7 @@
 - **日期**: 2026-04-21
 - **采集日期**: 2026-04-22
 - **Category**: Ai Industry
-- **Topic**: `行业/趋势`
+- **Topic**: `AI动态`
 - **标题(CN)**: AI设计工具弥补前端技能缺口
 - **摘要(CN)**: 作者认为，借助AI设计工具可轻松弥补Codex在前端设计能力上的不足。
 - **摘要**: 作者认为，借助AI设计工具可轻松弥补Codex在前端设计能力上的不足。
@@ -319,7 +369,7 @@
 - **日期**: 2026-04-21
 - **采集日期**: 2026-04-22
 - **Category**: Ai Industry
-- **Topic**: `行业/趋势`
+- **Topic**: `企业落地`
 - **标题(CN)**: 企业越创新，越无固定路线图
 - **摘要(CN)**: 创新型企业往往不依赖僵化的长期规划，而是保持灵活应变能力，以快速适应市场变化与技术迭代。
 - **摘要**: 创新型企业往往不依赖僵化的长期规划，而是保持灵活应变能力，以快速适应市场变化与技术迭代。
@@ -329,7 +379,7 @@
 - **日期**: 2026-04-22
 - **采集日期**: 2026-04-22
 - **Category**: Ai Industry
-- **Topic**: `行业/趋势`
+- **Topic**: `OpenAI动态`
 - **摘要**: ChatGPT Images works great from the mobile app, but when I try to generate images on @ChatGPTapp web - it often forgets it has access to the image too
 
 ### Done https://t.co/R6NeDr0SWc
@@ -337,7 +387,7 @@
 - **日期**: 2026-04-22
 - **采集日期**: 2026-04-22
 - **Category**: Ai Industry
-- **Topic**: `行业/趋势`
+- **Topic**: `AI动态`
 - **摘要**: Done https://t.co/R6NeDr0SWc
 
 ### Making a birthday party invite website with my soon to be 8 year old it's gonna be dope (thanks Chat...
@@ -345,7 +395,7 @@
 - **日期**: 2026-04-22
 - **采集日期**: 2026-04-22
 - **Category**: Ai Industry
-- **Topic**: `行业/趋势`
+- **Topic**: `OpenAI动态`
 - **摘要**: Making a birthday party invite website with my soon to be 8 year old it's gonna be dope (thanks ChatGPT image) https://t.co/smRmUlf6Xf
 
 ### Craft &gt; slop
@@ -355,7 +405,7 @@ I love using AI to generate things too but craft is in that last 10% where you m
 - **日期**: 2026-04-23
 - **采集日期**: 2026-04-23
 - **Category**: Ai Industry
-- **Topic**: `行业/趋势`
+- **Topic**: `AI动态`
 - **摘要**: Craft &gt; slop
 
 I love using AI to generate things too but craft is in that last 10% where you manually apply your taste to make something you can be
@@ -365,7 +415,7 @@ I love using AI to generate things too but craft is in that last 10% where you m
 - **日期**: 2026-04-22
 - **采集日期**: 2026-04-23
 - **Category**: Ai Industry
-- **Topic**: `行业/趋势`
+- **Topic**: `Anthropic动态, 开发者工具`
 - **摘要**: @mercury Interview is live! Here's where Ryan talks about his Claude Code second brain: https://t.co/ja8t3isUyP
 
 https://t.co/JrtFSWaKCC
@@ -381,7 +431,7 @@ Newsletter: ht...
 - **日期**: 2026-04-22
 - **采集日期**: 2026-04-23
 - **Category**: Ai Industry
-- **Topic**: `行业/趋势`
+- **Topic**: `AI动态`
 - **摘要**: Also available on:
 
 Spotify: https://t.co/110HZoHaLI
@@ -395,14 +445,48 @@ Newsletter: https://t.co/t7w4L5uDfp
 - **日期**: 2026-04-24
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
-- **Topic**: `行业/趋势`
+- **Topic**: `OpenAI动态`
 - **摘要**: I shared my full impressions for GPT 5.5 and ChatGPT Images 2 here, watch now: https://t.co/hdSCW7iaKT
+
+### I've been doing the F-Zero test each time a new model comes out and GPT 5.5 and Codex is the only co...
+- **链接**: https://x.com/petergyang/status/2047502885710410159
+- **日期**: 2026-04-24
+- **采集日期**: 2026-04-24
+- **Category**: Ai Industry
+- **Topic**: `OpenAI动态`
+- **摘要**: I've been doing the F-Zero test each time a new model comes out and GPT 5.5 and Codex is the only combo that built a working game so far.
+
+Even made a
 
 ### Can 5.5 drop soon it's distracting to wait
 - **链接**: https://x.com/petergyang/status/2047365167902826729
 - **日期**: 2026-04-23
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
-- **Topic**: `行业/趋势`
+- **Topic**: `AI动态`
 - **摘要**: Can 5.5 drop soon it's distracting to wait
+
+### Check out what else you can make with GPT 5.5 in my video: https://t.co/hdSCW7iaKT
+- **链接**: https://x.com/petergyang/status/2047882580603899915
+- **日期**: 2026-04-25
+- **采集日期**: 2026-04-25
+- **Category**: Ai Industry
+- **Topic**: `OpenAI动态`
+- **摘要**: Check out what else you can make with GPT 5.5 in my video: https://t.co/hdSCW7iaKT
+
+### Asked GPT 5.5 and Codex to make Star Fox. This is after 15 min of prompting 🔥 https://t.co/GrnBjR6dG...
+- **链接**: https://x.com/petergyang/status/2047882568520102226
+- **日期**: 2026-04-25
+- **采集日期**: 2026-04-25
+- **Category**: Ai Industry
+- **Topic**: `OpenAI动态`
+- **摘要**: Asked GPT 5.5 and Codex to make Star Fox. This is after 15 min of prompting 🔥 https://t.co/GrnBjR6dGj https://t.co/OHODnf2yL4
+
+### What's brilliant is it's play testing it's own game for fun https://t.co/Z9hh12pcJW
+- **链接**: https://x.com/petergyang/status/2047880605204144159
+- **日期**: 2026-04-25
+- **采集日期**: 2026-04-25
+- **Category**: Ai Industry
+- **Topic**: `AI动态`
+- **摘要**: What's brilliant is it's play testing it's own game for fun https://t.co/Z9hh12pcJW
 

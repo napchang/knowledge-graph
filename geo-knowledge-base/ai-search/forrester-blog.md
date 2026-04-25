@@ -58,3 +58,11 @@
 - **Topic**: `GEO`
 - **摘要**: Enterprise content leaders are under pressure on three fronts. They need faster time to activation as buyer behavior outpaces traditional campaign cyc
 
+### Enterprise Content Moves From Tools To Systems: Adobe Summit Takeaways
+- **链接**: https://www.forrester.com/blogs/enterprise-content-moves-from-tools-to-systems-adobe-summit-takeaways/
+- **日期**: 2026-04-23
+- **采集日期**: 2026-04-25
+- **Category**: Ai Search
+- **Topic**: `GEO`
+- **摘要**: Enterprise content leaders are under pressure on three fronts. They need faster time to activation as buyer behavior outpaces traditional campaign cyc
+
