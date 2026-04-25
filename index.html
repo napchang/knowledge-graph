@@ -689,11 +689,95 @@
         color: var(--text);
         border-color: var(--qian4);
     }
+    /* Mobile responsive */
+    #mobile-menu-btn {
+        display: none;
+        background: none;
+        border: 1px solid var(--qian3);
+        color: var(--text);
+        padding: 4px 10px;
+        border-radius: 6px;
+        font-size: 12px;
+        cursor: pointer;
+    }
+    @media (max-width: 768px) {
+        #header {
+            padding: 0 12px;
+        }
+        #header h1 {
+            font-size: 13px;
+            gap: 6px;
+        }
+        #header-stats {
+            display: none;
+        }
+        #mobile-menu-btn {
+            display: inline-block;
+        }
+        #main {
+            flex-direction: column;
+        }
+        #sidebar {
+            position: fixed;
+            left: 0;
+            top: 50px;
+            width: 85vw;
+            max-width: 300px;
+            height: calc(100vh - 50px);
+            z-index: 90;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+        #sidebar.open {
+            transform: translateX(0);
+        }
+        #sidebar-overlay {
+            display: none;
+            position: fixed;
+            top: 50px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 85;
+        }
+        #sidebar-overlay.open {
+            display: block;
+        }
+        #graph-container {
+            width: 100vw;
+            height: calc(100vh - 50px);
+        }
+        #detail-panel {
+            right: 0;
+            left: 0;
+            top: auto;
+            bottom: 0;
+            width: 100%;
+            max-height: 70vh;
+            border-radius: 12px 12px 0 0;
+            padding: 16px;
+        }
+        #cat-info {
+            left: 12px;
+            right: 12px;
+            top: 58px;
+            width: auto;
+        }
+        .tab-nav {
+            padding: 6px 12px;
+        }
+        .tab-btn {
+            padding: 5px 12px;
+            font-size: 12px;
+        }
+    }
     </style>
 </head>
 <body>
     <div id="header">
         <h1>
+            <button id="mobile-menu-btn" onclick="toggleMobileSidebar()">☰ 菜单</button>
             <img src="https://www.agentm6.com/wp-content/uploads/2026/03/site-logo.png" class="logo-img" alt="卯时AI">
             卯时AI · AI动态知识图谱
         </h1>
@@ -709,6 +793,7 @@
         <button class="tab-btn" data-tab="full" onclick="switchTab('full')">📊 全景图谱</button>
     </div>
     <div id="main">
+        <div id="sidebar-overlay" onclick="toggleMobileSidebar()"></div>
         <div id="sidebar">
             <div class="section">
                 <div style="display:flex;gap:6px;align-items:center;">
@@ -1757,6 +1842,13 @@ function toggleTodaySection() {
         wrapper.style.display = 'block';
         btn.textContent = '收起 ▲';
     }
+}
+
+function toggleMobileSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebar-overlay');
+    sidebar.classList.toggle('open');
+    overlay.classList.toggle('open');
 }
 
 let todayExpandedCat = null;  // Which category card is expanded
