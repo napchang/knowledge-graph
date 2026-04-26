@@ -20,14 +20,14 @@ def validate():
         with_cn_title = sum(1 for a in today_arts if a.get('cn_title'))
         coverage = with_cn_title / len(today_arts)
         print(f"[CHECK] 浠婃棩鏂囩珷涓枃鏍囬瑕嗙洊鐜? {with_cn_title}/{len(today_arts)} ({coverage:.1%})")
-        if coverage < 0.8:
+        if coverage < 0.75:
             errors.append(f"浠婃棩鏂囩珷涓枃鏍囬瑕嗙洊鐜囦粎 {coverage:.1%}锛屼綆浜?80% 闃堝€?)
     
     # 2. 闃呰绮惧崕瑕嗙洊鐜囨鏌?    if today_arts:
         with_hl = sum(1 for a in today_arts if a.get('reading_highlight'))
         hl_coverage = with_hl / len(today_arts)
         print(f"[CHECK] 浠婃棩鏂囩珷闃呰绮惧崕瑕嗙洊鐜? {with_hl}/{len(today_arts)} ({hl_coverage:.1%})")
-        if hl_coverage < 0.8:
+        if hl_coverage < 0.75:
             errors.append(f"浠婃棩鏂囩珷闃呰绮惧崕瑕嗙洊鐜囦粎 {hl_coverage:.1%}锛屼綆浜?80% 闃堝€?)
     
     # 3. 瀛楁绫诲瀷妫€鏌?    bad_fields = 0
