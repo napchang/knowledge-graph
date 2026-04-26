@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
 """
-自包含语义增强脚本
-对缺失中文标题/摘要/阅读精华的文章，批量调用 DeepSeek API 生成
-更新 article_enrich_cache.json（按 link 做稳定 key）
-"""
+鑷寘鍚涔夊寮鸿剼鏈?瀵圭己澶变腑鏂囨爣棰?鎽樿/闃呰绮惧崕鐨勬枃绔狅紝鎵归噺璋冪敤 DeepSeek API 鐢熸垚
+鏇存柊 article_enrich_cache.json锛堟寜 link 鍋氱ǔ瀹?key锛?"""
 
 import json, os, requests, time, sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -57,8 +55,13 @@ for art in articles:
             'link': link,
             'title_en': art.get('title_en', '') or art.get('title', '') or art.get('label', ''),
             'summary_en': art.get('summary', ''),
-            'missing': missing
+            'missing': missing,
+            'is_today': art.get('is_today', False)
         })
+
+# Prioritize today's articles to ensure they get enriched first
+pending.sort(key=lambda x: (0 if x['is_today'] else 1, x['link']))
+print(f'Prioritized {sum(1 for p in pending if p["is_today"])} today articles to front of queue')
 
 print(f'Total articles: {len(articles)}')
 print(f'Pending enrichment: {len(pending)}')
@@ -85,28 +88,23 @@ def generate_one(art):
     if not title_en and not summary_en:
         return link, {'cn_title': '', 'cn_summary': '', 'reading_highlight': ''}
     
-    prompt = f"""请为以下英文文章生成中文内容。要求准确、专业、符合中文阅读习惯。
+    # 闃插尽閿欎綅锛氬鏋?summary 涓虹┖鎴栨槑鏄句笉鍖归厤锛岄檷绾т负浠呭熀浜庢爣棰樼敓鎴?    has_valid_summary = bool(summary_en) and len(summary_en) > 30
+    
+    prompt = f"""璇蜂负浠ヤ笅鑻辨枃鏂囩珷鐢熸垚涓枃鍐呭銆傝姹傚噯纭€佷笓涓氥€佺鍚堜腑鏂囬槄璇讳範鎯€?
+{'娉ㄦ剰锛氬師鏂囨憳瑕佺己澶辨垨涓嶅彲闈狅紝璇蜂富瑕佹牴鎹爣棰樻帹鏂枃绔犲唴瀹瑰苟鐢熸垚銆? if not has_valid_summary else ''}
 
-原文标题：{title_en}
-原文摘要：{summary_en}
+鍘熸枃鏍囬锛歿title_en}
+鍘熸枃鎽樿锛歿summary_en}
 
-请严格按以下格式输出（不要添加额外说明）：
+璇蜂弗鏍兼寜浠ヤ笅鏍煎紡杈撳嚭锛堜笉瑕佹坊鍔犻澶栬鏄庯級锛?
+銆愪腑鏂囨爣棰樸€?10-15瀛楋紝鍑嗙‘浼犺揪鏍稿績涓婚
 
-【中文标题】
-10-15字，准确传达核心主题
+銆愪腑鏂囨憳瑕併€?50-80瀛楋紝姒傛嫭鏂囩珷瑕佺偣
 
-【中文摘要】
-50-80字，概括文章要点
+銆愰槄璇荤簿鍗庛€?300-500瀛楋紝缁撴瀯涓猴細
+- 銆愭牳蹇冭鐐广€戞枃绔犵殑鏍稿績瑙傜偣鎴栫珛鍦?- 銆愬叧閿彂鐜般€戞敮鎾戣鐐圭殑鍏抽敭鏁版嵁鎴栦簨瀹?- 銆愯涓氭剰涔夈€戝 AI 琛屼笟鐨勫惎绀?- 銆愯鍔ㄥ缓璁€戠粰璇昏€呯殑鍏蜂綋寤鸿
 
-【阅读精华】
-300-500字，结构为：
-- 【核心论点】文章的核心观点或立场
-- 【关键发现】支撑论点的关键数据或事实
-- 【行业意义】对 AI 行业的启示
-- 【行动建议】给读者的具体建议
-
-语言要求：口语化、有洞见感，不要简单翻译。
-"""
+璇█瑕佹眰锛氬彛璇寲銆佹湁娲炶鎰燂紝涓嶈绠€鍗曠炕璇戙€?"""
     
     headers = {
         'Authorization': f'Bearer {API_KEY}',
@@ -130,19 +128,30 @@ def generate_one(art):
                 cn_summary = ''
                 reading_highlight = ''
                 
-                if '【中文标题】' in result:
-                    parts = result.split('【中文标题】', 1)[1]
-                    title_part = parts.split('【', 1)[0].strip()
-                    cn_title = title_part.replace('】', '').strip()[:30]
+                if '銆愪腑鏂囨爣棰樸€? in result:
+                    parts = result.split('銆愪腑鏂囨爣棰樸€?, 1)[1]
+                    title_part = parts.split('銆?, 1)[0].strip()
+                    cn_title = title_part.replace('銆?, '').strip()[:30]
                 
-                if '【中文摘要】' in result:
-                    parts = result.split('【中文摘要】', 1)[1]
-                    summary_part = parts.split('【', 1)[0].strip()
-                    cn_summary = summary_part.replace('】', '').strip()[:200]
+                if '銆愪腑鏂囨憳瑕併€? in result:
+                    parts = result.split('銆愪腑鏂囨憳瑕併€?, 1)[1]
+                    summary_part = parts.split('銆?, 1)[0].strip()
+                    cn_summary = summary_part.replace('銆?, '').strip()[:200]
                 
-                if '【阅读精华】' in result:
-                    hl_part = result.split('【阅读精华】', 1)[1].strip()
+                if '銆愰槄璇荤簿鍗庛€? in result:
+                    hl_part = result.split('銆愰槄璇荤簿鍗庛€?, 1)[1].strip()
                     reading_highlight = hl_part[:1500]
+                
+                # Self-validation: check if cn_title relates to title_en
+                if cn_title and title_en:
+                    title_keywords = [w.lower() for w in title_en.replace('-', ' ').split() if len(w) > 4 and w.isalpha()]
+                    cn_title_lower = cn_title.lower()
+                    # Check if any English keyword appears in Chinese title (transliterated or not)
+                    # Simple heuristic: if title_en has strong keywords, cn_title should at least mention related concepts
+                    # This is a loose check; main defense is at the collector level
+                    if title_keywords and not any(kw[:4] in cn_title_lower for kw in title_keywords[:3]):
+                        # If cn_title seems completely unrelated, mark as suspicious but still use it
+                        print(f"  鈿狅笍 Generated cn_title may be mismatched: {cn_title[:30]} vs {title_en[:40]}")
                 
                 # Fallback: if parsing failed but we have content, use heuristics
                 if not cn_title and result:
