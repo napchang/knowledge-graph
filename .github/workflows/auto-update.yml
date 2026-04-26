@@ -127,7 +127,7 @@ jobs:
                 \"header\": {
                   \"title\": {
                     \"tag\": \"plain_text\",
-                    \"content\": \"鉂?鐭ヨ瘑鍥捐氨鏇存柊澶辫触 - $DATE\"
+                    \"content\": \"❌ 知识图谱更新失败"
                   },
                   \"template\": \"red\"
                 },
@@ -136,7 +136,7 @@ jobs:
                     \"tag\": \"div\",
                     \"text\": {
                       \"tag\": \"lark_md\",
-                      \"content\": \"璇锋鏌?GitHub Actions 鏃ュ織鎺掓煡闂\\n**宸ヤ綔娴侀摼鎺ワ細**[鐐瑰嚮鏌ョ湅](https://github.com/napchang/knowledge-graph/actions)\"
+                      \"content\": \"请检查 GitHub Actions 日志排查问题\n**工作流链接：**[点击查看](https://github.com/napchang/knowledge-graph/actions)"
                     }
                   }
                 ]
