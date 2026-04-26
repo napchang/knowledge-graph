@@ -2,7 +2,8 @@ name: Auto Update Knowledge Graph
 
 on:
   schedule:
-    - cron: '0 22 * * *'  # UTC 22:00 = 鍖椾含鏃堕棿鏃?鐐?  workflow_dispatch:  # 鏀寔鎵嬪姩瑙﹀彂
+    - cron: '0 22 * * *'  # UTC 22:00 = 鍖椾含鏃堕棿鏃?鐐?
+  workflow_dispatch:
 
 jobs:
   update:
