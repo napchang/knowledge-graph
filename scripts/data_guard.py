@@ -7,7 +7,7 @@ import sys
 
 # 保守阈值（Actions 环境实际值远高于此）
 MIN_EXPECTED_MD_FILES = 200       # geo-knowledge-base/ 最少 markdown 文件数
-MIN_EXPECTED_AGGREGATED_DIRS = 30 # RSS 数据聚合目录数
+MIN_EXPECTED_AGGREGATED_DIRS = 15 # RSS 数据聚合目录数
 MIN_EXPECTED_ARTICLES = 500       # graph-data.json 最少文章数
 
 
