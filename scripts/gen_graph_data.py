@@ -19,26 +19,16 @@ if os.path.exists(hl_cache_path):
     except Exception as e:
         print(f'Failed to load highlights: {e}')
 
-# Try load enriched data for Chinese content
-ENRICHED_DATA = {}
-enriched_path = os.path.join(base_dir, 'data', 'semantic', 'latest_enriched.json')
-if not os.path.exists(enriched_path):
-    # fallback for local dev
-    enriched_path = 'rss_source/napchang-rss-news-aggregator-0506567/data/semantic/latest_enriched.json'
-if not os.path.exists(enriched_path):
-    # fallback to sibling data dir
-    enriched_path = os.path.join(os.path.dirname(base_dir), 'data', 'semantic', 'latest_enriched.json')
-if os.path.exists(enriched_path):
+# Try load article enrich cache (unified source for Chinese content + reading highlights)
+ENRICH_CACHE = {}
+enrich_cache_path = os.path.join(base_dir, 'article_enrich_cache.json')
+if os.path.exists(enrich_cache_path):
     try:
-        with open(enriched_path, 'r', encoding='utf-8') as f:
-            enriched = json.load(f)
-            for a in enriched.get('articles', []):
-                link = a.get('link', '')
-                if link:
-                    ENRICHED_DATA[link] = a
-        print(f'Loaded enriched data: {len(ENRICHED_DATA)} articles')
+        with open(enrich_cache_path, 'r', encoding='utf-8') as f:
+            ENRICH_CACHE = json.load(f)
+        print(f'Loaded enrich cache: {len(ENRICH_CACHE)} articles')
     except Exception as e:
-        print(f'Failed to load enriched: {e}')
+        print(f'Failed to load enrich cache: {e}')
 
 categories = ['ai-search', 'agentic-b2b', 'ai-industry', 'academic']
 cat_names = {
@@ -137,9 +127,18 @@ for cat in categories:
             lines = part.strip().split('\n')
             if len(lines) < 2:
                 continue
-            title = lines[0].strip().lstrip('#').strip()
-            title = re.sub(r'^\[.*?\]\s*', '', title)
+            title_line = lines[0].strip().lstrip('#').strip()
+            # Extract source prefix like "[Semrush Blog]" if present
+            source_prefix = ''
+            m = re.match(r'^\[(.*?)\]\s*(.*)', title_line)
+            if m:
+                source_prefix = m.group(1)
+                en_title = m.group(2).strip()
+            else:
+                en_title = title_line
             link = date = collection_date_from_file = topic_str = summary = ''
+            cn_title = ''
+            cn_summary = ''
             for line in lines[1:]:
                 line = line.strip()
                 if line.startswith('- **链接**:'):
@@ -152,26 +151,30 @@ for cat in categories:
                     m = re.search(r'`(.+?)`', line)
                     if m:
                         topic_str = m.group(1)
+                elif line.startswith('- **标题(CN)**:'):
+                    cn_title = line.split(':', 1)[1].strip()
+                elif line.startswith('- **摘要(CN)**:'):
+                    cn_summary = line.split(':', 1)[1].strip()
                 elif line.startswith('- **摘要**:'):
                     summary = line.split(':', 1)[1].strip()
-            if title and link:
-                enriched_art = ENRICHED_DATA.get(link, {})
+            if en_title and link:
+                cache = ENRICH_CACHE.get(link, {})
                 # Use collection date for is_today: article field > filename > published date
                 effective_collection_date = collection_date_from_file or collection_date or date
                 today_check_date = effective_collection_date
                 articles.append({
-                    'title': title,
+                    'title': en_title,
                     'link': link,
                     'date': date,
                     'category': cat,
                     'topics': [t.strip() for t in topic_str.split(',')] if topic_str else [],
                     'summary': summary,
-                    'cn_title': enriched_art.get('cn_title', ''),
-                    'cn_summary': enriched_art.get('cn_summary') or summary or title or '',
-                    'key_insight': enriched_art.get('key_insight', ''),
-                    'importance': enriched_art.get('importance', 3),
-                    'is_important_source': enriched_art.get('is_important_source', False),
-                    'is_major_news': enriched_art.get('is_major_news', False),
+                    'cn_title': cn_title or cache.get('cn_title', ''),
+                    'cn_summary': cn_summary or cache.get('cn_summary', '') or summary or en_title or '',
+                    'key_insight': cache.get('key_insight', ''),
+                    'importance': cache.get('importance', 3),
+                    'is_important_source': cache.get('is_important_source', False),
+                    'is_major_news': cache.get('is_major_news', False),
                     'is_today': is_today(today_check_date),
                     'is_recent': is_recent(today_check_date),
                     'collection_date': effective_collection_date
@@ -433,7 +436,7 @@ for i, art in enumerate(articles):
         'is_major_news': is_major,
         'border_width': border_width,
         'border_color': border_color,
-        'reading_highlight': READING_HIGHLIGHTS.get(art['link'], '')
+        'reading_highlight': ENRICH_CACHE.get(art['link'], {}).get('reading_highlight', '') or READING_HIGHLIGHTS.get(art['link'], '')
     })
     # Hidden anchor edge: category -> article (for layout attraction)
     edges.append({
