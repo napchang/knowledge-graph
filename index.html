@@ -1080,8 +1080,8 @@ async function init(dataUrl) {
                 solver: 'forceAtlas2Based',
                 stabilization: {
                     enabled: true,
-                    iterations: 250,
-                    updateInterval: 25
+                    iterations: 1000,
+                    updateInterval: 50
                 }
             },
             interaction: {
@@ -1103,6 +1103,19 @@ async function init(dataUrl) {
                 }
             });
         }, 500);
+
+        // Auto-disable physics after stabilization to prevent jitter
+        network.on('stabilizationIterationsDone', function() {
+            if (physicsEnabled) {
+                network.setOptions({ physics: { enabled: false } });
+                physicsEnabled = false;
+                var btn = document.getElementById('btn-physics');
+                if (btn) {
+                    btn.classList.add('active');
+                    btn.textContent = '恢复物理';
+                }
+            }
+        });
 
         network.on('hoverNode', function(params) {
             container.style.cursor = 'pointer';
