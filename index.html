@@ -1994,8 +1994,9 @@ function toggleTodayCatCard(cat) {
     showCategoryTodayArticles(cat);
 }
 
-function setupUI() {
+function renderCategoryList() {
     const catList = document.getElementById('cat-list');
+    catList.innerHTML = '';
     Object.entries(CAT_CONFIG).forEach(([cat, cfg]) => {
         const catTags = allNodes.filter(n => n.data?.category === cat && n.data?.type === 'tag');
         const catArticles = allNodes.filter(n => n.data?.category === cat && n.data?.type === 'article');
@@ -2064,6 +2065,11 @@ function setupUI() {
         item.appendChild(tagList);
         catList.appendChild(item);
     });
+}
+
+function setupUI() {
+    renderCategoryList();
+}
 
 function clearSearch() {
     document.getElementById('search-box').value = '';
@@ -2204,8 +2210,6 @@ document.getElementById('search-box').addEventListener('input', (e) => {
         }
     }, 300);
 });
-
-}
 
 // Setup control buttons once at page load
 document.getElementById('btn-toggle-articles').addEventListener('click', function() {

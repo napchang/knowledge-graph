@@ -8,6 +8,11 @@ base_dir = os.path.dirname(script_dir)
 
 kb_dir = os.path.join(base_dir, 'geo-knowledge-base')
 
+# Data integrity guard: prevent running with incomplete local data
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from data_guard import assert_kb_complete
+assert_kb_complete(kb_dir)
+
 # Try load reading highlights cache
 READING_HIGHLIGHTS = {}
 hl_cache_path = os.path.join(base_dir, 'reading_highlights_cache.json')
@@ -216,8 +221,8 @@ articles = selected
 # Re-sort final selection
 articles.sort(key=lambda x: (x.get('collection_date', ''), x.get('date', '')), reverse=True)
 
-# Build article index map for stable IDs
-art_index = {id(art): i for i, art in enumerate(articles)}
+# Build article index map: use link as stable key
+art_index = {art['link']: i for i, art in enumerate(articles)}
 
 nodes = []
 edges = []
@@ -320,7 +325,9 @@ for topic, art_list in topic_articles.items():
     if tag_id in created_tag_ids:
         # Already created as parent tag; only add article edges
         for art in art_list:
-            idx = art_index[id(art)]
+            idx = art_index.get(art['link'])
+            if idx is None:
+                continue
             edges.append({
                 'source': tag_id,
                 'target': f'art_{idx}',
@@ -358,7 +365,9 @@ for topic, art_list in topic_articles.items():
             'label': '包含'
         })
     for art in art_list:
-        idx = art_index[id(art)]
+        idx = art_index.get(art['link'])
+        if idx is None:
+            continue
         edges.append({
             'source': tag_id,
             'target': f'art_{idx}',
@@ -452,7 +461,9 @@ for i, art in enumerate(articles):
 article_tags = {}
 for topic, art_list in topic_articles.items():
     for art in art_list:
-        idx = art_index[id(art)]
+        idx = art_index.get(art['link'])
+        if idx is None:
+            continue
         if idx not in article_tags:
             article_tags[idx] = []
         article_tags[idx].append(topic)
@@ -491,6 +502,18 @@ for src, tgt, label in inter_cat_links:
         'label': label,
         'dashes': True
     })
+
+# Deduplicate edges: same (source, target, type) should not appear twice
+seen_edges = set()
+deduped_edges = []
+for e in edges:
+    key = (e.get('source'), e.get('target'), e.get('type', ''))
+    if key not in seen_edges:
+        seen_edges.add(key)
+        deduped_edges.append(e)
+    else:
+        print(f'[WARN] Duplicate edge removed: {key}')
+edges = deduped_edges
 
 # Today's summary by category
 today_summary = {}

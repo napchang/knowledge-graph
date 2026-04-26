@@ -30,6 +30,12 @@ if os.path.exists(alt2) and len(os.listdir(alt2)) > len(os.listdir(DATA_DIR)):
     DATA_DIR = alt2
 KB_DIR = os.path.join(BASE_DIR, "geo-knowledge-base")
 
+# Data integrity guard: prevent running with incomplete local data
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from data_guard import assert_rss_complete, assert_kb_complete
+assert_rss_complete(DATA_DIR)
+assert_kb_complete(KB_DIR)
+
 def classify_category(article):
     """判断文章属于哪个Category"""
     title = article.get("title", "").lower()

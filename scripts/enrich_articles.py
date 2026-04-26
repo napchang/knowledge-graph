@@ -31,6 +31,11 @@ if os.path.exists(cache_path):
 with open(graph_path, 'r', encoding='utf-8') as f:
     graph_data = json.load(f)
 
+# Data integrity guard
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from data_guard import assert_graph_sanity
+assert_graph_sanity(graph_data)
+
 articles = [n for n in graph_data['nodes'] if n.get('type') == 'article']
 
 # Find articles missing Chinese content or reading highlight

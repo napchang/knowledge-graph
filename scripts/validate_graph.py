@@ -80,6 +80,30 @@ def validate():
     total_hl_coverage = total_with_hl / len(articles) if articles else 1.0
     print(f"[CHECK] 全量阅读精华覆盖率: {total_with_hl}/{len(articles)} ({total_hl_coverage:.1%})")
     
+    # 8. 重复文章检测
+    from collections import Counter
+    links = [a.get('link', '') for a in articles if a.get('link')]
+    dup_links = [link for link, count in Counter(links).items() if count > 1]
+    if dup_links:
+        errors.append(f"发现 {len(dup_links)} 个重复链接的文章节点")
+    else:
+        print(f"[CHECK] 重复文章检测通过")
+    
+    # 9. 数据量骤降检测
+    if len(articles) < 500:
+        errors.append(f"文章总数仅 {len(articles)}，严重低于历史水平（~1000+），可能数据丢失")
+    else:
+        print(f"[CHECK] 数据量检测通过: {len(articles)} 篇文章")
+    
+    # 10. 今日文章数量异常
+    today_count = len(today_arts)
+    if today_count == 0:
+        warnings.append("今日文章数量为 0，请检查采集流程")
+    elif today_count < 5:
+        warnings.append(f"今日文章仅 {today_count} 条，低于正常水平")
+    else:
+        print(f"[CHECK] 今日文章数量检测通过: {today_count} 条")
+    
     # Summary
     print(f"\n{'='*50}")
     print(f"验证结果: {len(errors)} 个错误, {len(warnings)} 个警告")
