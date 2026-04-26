@@ -116,6 +116,7 @@ def is_recent(date_str):
     return (today_d - d).days <= 2
 
 articles = []
+seen_article_links = set()  # deduplicate across all markdown files
 for cat in categories:
     cat_dir = os.path.join(kb_dir, cat)
     if not os.path.exists(cat_dir):
