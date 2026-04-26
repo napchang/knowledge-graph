@@ -1011,7 +1011,6 @@ async function init(dataUrl) {
                     borderWidth: n.border_width || 1,
                     borderWidthSelected: 4,
                     title: titleLines.join('\n'),
-                    hidden: true,
                     data: { ...n }
                 };
             }
@@ -1104,16 +1103,28 @@ async function init(dataUrl) {
             });
         }, 500);
 
-        // Auto-disable physics after stabilization to prevent jitter
+        // After stabilization completes, store positions then freeze physics
+        // All nodes participate in stabilization so they have correct positions
         network.on('stabilizationIterationsDone', function() {
-            if (physicsEnabled) {
-                network.setOptions({ physics: { enabled: false } });
-                physicsEnabled = false;
-                var btn = document.getElementById('btn-physics');
-                if (btn) {
-                    btn.classList.add('active');
-                    btn.textContent = '恢复物理';
+            // Save positions for all nodes before hiding any
+            network.storePositions();
+            
+            // Hide non-today articles
+            const updates = [];
+            nodes.get().forEach(n => {
+                if (n.data?.type === 'article' && !n.data?.is_today && currentTab !== 'full') {
+                    updates.push({ id: n.id, hidden: true });
                 }
+            });
+            if (updates.length > 0) nodes.update(updates);
+            
+            // Disable physics to prevent any movement
+            network.setOptions({ physics: { enabled: false } });
+            physicsEnabled = false;
+            var btn = document.getElementById('btn-physics');
+            if (btn) {
+                btn.classList.add('active');
+                btn.textContent = '恢复物理';
             }
         });
 
