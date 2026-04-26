@@ -180,7 +180,7 @@ for cat in categories:
 # Smart truncation: ensure each category gets minimum representation
 # Then fill remaining slots with newest articles across all categories
 MIN_PER_CAT = 30
-MAX_TOTAL = 1000
+MAX_TOTAL = 2000
 
 # Sort all articles by date first
 articles.sort(key=lambda x: (x.get('collection_date', ''), x.get('date', '')), reverse=True)
