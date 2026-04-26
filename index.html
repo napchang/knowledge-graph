@@ -1079,8 +1079,8 @@ async function init(dataUrl) {
                 solver: 'forceAtlas2Based',
                 stabilization: {
                     enabled: true,
-                    iterations: 1000,
-                    updateInterval: 50
+                    iterations: 500,
+                    updateInterval: 100
                 }
             },
             interaction: {
@@ -1109,7 +1109,8 @@ async function init(dataUrl) {
         function doAutoFit() {
             if (hasAutoFitted || !network) return;
             hasAutoFitted = true;
-            network.fit({ animation: { duration: 300 } });
+            // Use immediate fit (no animation) for reliability on first load
+            network.fit();
         }
         
         network.on('stabilizationIterationsDone', function() {
@@ -1138,10 +1139,10 @@ async function init(dataUrl) {
             }
         });
         
-        // Fallback: ensure fit on first draw (in case stabilization event is missed)
-        network.on('afterDrawing', function() {
+        // Fallback: if stabilization event never fires, force fit after timeout
+        setTimeout(function() {
             doAutoFit();
-        });
+        }, 3000);
 
         network.on('hoverNode', function(params) {
             container.style.cursor = 'pointer';
