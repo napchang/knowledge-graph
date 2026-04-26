@@ -50,15 +50,15 @@ categories = ['ai-search', 'agentic-b2b', 'ai-industry', 'academic']
 cat_names = {
     'ai-search': 'AI搜索',
     'agentic-b2b': 'Agentic B2B',
-    'ai-industry': 'AI琛屼笟鍔ㄦ€?,
+    'ai-industry': 'AI行业动态
     'academic': '学术研究'
 }
 # New color scheme from user
 cat_colors = {
     'ai-search': '#FF6B35',      # 珊瑚橙    'agentic-b2b': '#4A7BC3',    # 飞天蓝    'ai-industry': '#E6B85C',    # 大地金    'academic': '#5A92E5'        # 升华蓝}
 cat_desc = {
-    'ai-search': '鎼滅储寮曟搸浼樺寲銆丟EO銆丄EO銆丼EO銆佹帓鍚嶇畻娉曘€佹悳绱骇鍝佸晢涓氬寲',
-    'agentic-b2b': '钀ラ攢鑷姩鍖栥€侀攢鍞伐鍏枫€丆RM銆乄orkflow銆丠ubSpot妗嗘灦銆佸鎴蜂綋楠?,
+    'ai-search': '搜索引擎优化、SEO、AEO、GEO、排名算法、搜索产品商业化',
+    'agentic-b2b': '营销自动化、销售工具、CRM、Workflow、HubSpot框架、客户体验
     'ai-industry': '产品发布、融资动态、大厂战略、Builder动态、行业趋势',
     'academic': '论文发布、算法研究、模型架构（MIT/Stanford/arXiv）'
 }
