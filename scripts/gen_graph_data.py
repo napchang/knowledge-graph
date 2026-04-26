@@ -2,7 +2,7 @@ import os, re, json
 from datetime import datetime
 
 def check_title_summary_match(title, summary, min_overlap=0.2):
-    """妫€鏌?title 鍜?summary 鏄惁鍖归厤銆俧eedparser 鍦ㄦ煇浜?RSS feed 涓婁細鍑虹幇閿欎綅銆?""
+    """Check if title and summary match. Feedparser may misalign on some RSS feeds."""
     if not title or not summary or len(summary) < 50:
         return True
     title_words = [w.strip('.,-:;!?').lower() for w in title.split() if len(w.strip('.,-:;!?')) >= 4]
