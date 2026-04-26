@@ -199,7 +199,7 @@
       "category": "academic",
       "color": "#5A92E5",
       "size": 30,
-      "count": 2,
+      "count": 1,
       "avg_importance": 3.0,
       "is_parent_tag": false
     },
@@ -210,7 +210,7 @@
       "category": "academic",
       "color": "#5A92E5",
       "size": 30,
-      "count": 3,
+      "count": 1,
       "avg_importance": 3.0,
       "is_parent_tag": false
     },
@@ -221,7 +221,7 @@
       "category": "academic",
       "color": "#5A92E5",
       "size": 30,
-      "count": 9,
+      "count": 5,
       "avg_importance": 3.0,
       "is_parent_tag": false
     },
@@ -331,7 +331,7 @@
       "category": "ai-industry",
       "color": "#E6B85C",
       "size": 30,
-      "count": 3,
+      "count": 2,
       "avg_importance": 3.0,
       "is_parent_tag": false
     },

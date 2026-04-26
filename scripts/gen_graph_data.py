@@ -295,8 +295,10 @@ for topic, art_list in topic_articles.items():
         if parent_name not in parent_tags:
             parent_tags[parent_name] = {'cat': cat, 'count': 0, 'arts': set()}
         parent_tags[parent_name]['count'] += len(art_list)
-        for a in art_list:
+            for a in art_list:
             parent_tags[parent_name]['arts'].add(id(a))
+        # Count should be unique articles, not sum of child lists (same article may appear in multiple children)
+        parent_tags[parent_name]['count'] = len(parent_tags[parent_name]['arts'])
         # Mark hierarchical relationship
         hierarchy_edges.append((f'tag_{parent_name}', f'tag_{topic}'))
 
