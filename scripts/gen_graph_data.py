@@ -189,25 +189,25 @@ MAX_TOTAL = 2000
 articles.sort(key=lambda x: (x.get('collection_date', ''), x.get('date', '')), reverse=True)
 
 selected = []
-selected_ids = set()
+selected_links = set()
 
 # Step 1: guarantee minimum per category
 for cat in categories:
     cat_arts = [a for a in articles if a['category'] == cat]
     for art in cat_arts[:MIN_PER_CAT]:
-        art_id = id(art)
-        if art_id not in selected_ids:
+        link = art.get('link', '')
+        if link and link not in selected_links:
             selected.append(art)
-            selected_ids.add(art_id)
+            selected_links.add(link)
 
 # Step 2: fill remaining slots with top articles from all categories
 remaining_slots = MAX_TOTAL - len(selected)
 if remaining_slots > 0:
     for art in articles:
-        art_id = id(art)
-        if art_id not in selected_ids:
+        link = art.get('link', '')
+        if link and link not in selected_links:
             selected.append(art)
-            selected_ids.add(art_id)
+            selected_links.add(link)
             remaining_slots -= 1
             if remaining_slots <= 0:
                 break

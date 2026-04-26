@@ -1118,6 +1118,9 @@ async function init(dataUrl) {
             });
             if (updates.length > 0) nodes.update(updates);
             
+            // Ensure all visible nodes are in view
+            network.fit({ animation: { duration: 300 } });
+            
             // Disable physics to prevent any movement
             network.setOptions({ physics: { enabled: false } });
             physicsEnabled = false;
@@ -1157,6 +1160,18 @@ async function init(dataUrl) {
 
         setupUI();
         renderTodaySection();
+        
+        // Sync control button states with current global state
+        var btnArticles = document.getElementById('btn-toggle-articles');
+        if (btnArticles) {
+            btnArticles.classList.toggle('active', articlesVisible);
+            btnArticles.textContent = articlesVisible ? '隐藏文章节点' : '显示文章节点';
+        }
+        var btnPhysics = document.getElementById('btn-physics');
+        if (btnPhysics) {
+            btnPhysics.classList.toggle('active', !physicsEnabled);
+            btnPhysics.textContent = physicsEnabled ? '暂停物理' : '恢复物理';
+        }
         
         // Load available voices for speech synthesis
         if (window.speechSynthesis) {
@@ -2190,37 +2205,39 @@ document.getElementById('search-box').addEventListener('input', (e) => {
     }, 300);
 });
 
-    document.getElementById('btn-toggle-articles').addEventListener('click', function() {
-        articlesVisible = !articlesVisible;
-        this.classList.toggle('active', articlesVisible);
-        this.textContent = articlesVisible ? '隐藏文章节点' : '显示文章节点';
-        const updates = [];
-        nodes.get().forEach(n => {
-            if (n.data?.type === 'article') {
-                if (articlesVisible) {
-                    const cat = n.data?.category;
-                    updates.push({ id: n.id, hidden: !activeCategories.has(cat) });
-                } else {
-                    const parentTag = getParentTag(n.id);
-                    updates.push({ id: n.id, hidden: !expandedTags.has(parentTag) });
-                }
-            }
-        });
-        nodes.update(updates);
-    });
-
-    document.getElementById('btn-physics').addEventListener('click', function() {
-        physicsEnabled = !physicsEnabled;
-        this.classList.toggle('active', !physicsEnabled);
-        this.textContent = physicsEnabled ? '暂停物理' : '恢复物理';
-        network.setOptions({ physics: { enabled: physicsEnabled } });
-    });
-
-    document.getElementById('btn-reset').addEventListener('click', () => {
-        network.fit({ animation: { duration: 500 } });
-        clearSelection();
-    });
 }
+
+// Setup control buttons once at page load
+document.getElementById('btn-toggle-articles').addEventListener('click', function() {
+    articlesVisible = !articlesVisible;
+    this.classList.toggle('active', articlesVisible);
+    this.textContent = articlesVisible ? '隐藏文章节点' : '显示文章节点';
+    const updates = [];
+    nodes.get().forEach(n => {
+        if (n.data?.type === 'article') {
+            if (articlesVisible) {
+                const cat = n.data?.category;
+                updates.push({ id: n.id, hidden: !activeCategories.has(cat) });
+            } else {
+                const parentTag = getParentTag(n.id);
+                updates.push({ id: n.id, hidden: !expandedTags.has(parentTag) });
+            }
+        }
+    });
+    nodes.update(updates);
+});
+
+document.getElementById('btn-physics').addEventListener('click', function() {
+    physicsEnabled = !physicsEnabled;
+    this.classList.toggle('active', !physicsEnabled);
+    this.textContent = physicsEnabled ? '暂停物理' : '恢复物理';
+    network.setOptions({ physics: { enabled: physicsEnabled } });
+});
+
+document.getElementById('btn-reset').addEventListener('click', () => {
+    network.fit({ animation: { duration: 500 } });
+    clearSelection();
+});
 
 function showCategoryTodayArticles(cat) {
     const catTodayArts = allNodes.filter(n => n.data?.category === cat && n.data?.type === 'article' && n.data?.is_today);
