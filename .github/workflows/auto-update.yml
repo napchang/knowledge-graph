@@ -93,7 +93,7 @@ jobs:
                 \"header\": {
                   \"title\": {
                     \"tag\": \"plain_text\",
-                    \"content\": \"鉁?鐭ヨ瘑鍥捐氨鏇存柊鎴愬姛 - $DATE\"
+                    \"content\": \"✅ 知识图谱更新成功"
                   },
                   \"template\": \"green\"
                 },
@@ -102,7 +102,7 @@ jobs:
                     \"tag\": \"div\",
                     \"text\": {
                       \"tag\": \"lark_md\",
-                      \"content\": \"**閲囬泦鏃ユ湡锛?*$TODAY_STR\\n**浠婃棩鏂板鏂囩珷锛?*$TODAY_ARTICLES 绡嘰\n**鍥捐氨鎬昏妭鐐癸細**$TOTAL_NODES 涓猏\n**鏇存柊閾炬帴锛?*[鐐瑰嚮鏌ョ湅](https://napchang.github.io/knowledge-graph/)\"
+                      \"content\": \"**采集日期：**$TODAY_STR\n**今日新增文章：**$TODAY_ARTICLES 篇\n**图谱总节点：**$TOTAL_NODES 个\n**更新链接：**[点击查看](https://napchang.github.io/knowledge-graph/)"
                     }
                   }
                 ]
