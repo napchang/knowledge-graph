@@ -118,12 +118,21 @@ def validate():
     print(f"楠岃瘉缁撴灉: {len(errors)} 涓敊璇? {len(warnings)} 涓鍛?)
     
     for e in errors:
-        print(f"  鉂?ERROR: {e}")
+        try:
+            print(f"  [FAIL] ERROR: {e}")
+        except UnicodeEncodeError:
+            print(f"  [FAIL] ERROR: {e.encode('ascii', 'replace').decode()}")
     for w in warnings:
-        print(f"  鈿狅笍  WARNING: {w}")
+        try:
+            print(f"  [WARN] WARNING: {w}")
+        except UnicodeEncodeError:
+            print(f"  [WARN] WARNING: {w.encode('ascii', 'replace').decode()}")
     
     if not errors and not warnings:
-        print("  鉁?鍏ㄩ儴閫氳繃")
+        try:
+            print("  [OK] 全部通过")
+        except UnicodeEncodeError:
+            print("  [OK] All passed")
     
     return len(errors) == 0
 
