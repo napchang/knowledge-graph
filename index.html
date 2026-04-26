@@ -908,7 +908,7 @@ async function switchTab(tab) {
     selectedNodeId = null;
     dimmedNodeIds.clear();
     todayExpandedCat = null;
-    articlesVisible = false;
+    articlesVisible = tab === 'full';
     
     // Clear sidebar lists
     document.getElementById('cat-list').innerHTML = '';
@@ -1044,10 +1044,10 @@ async function init(dataUrl) {
         allNodes = visNodes;
         allEdges = visEdges;
 
-        // Default show today's articles
+        // Default show today's articles (or all articles in full graph)
         visNodes.forEach(n => {
-            if (n.data?.type === 'article' && n.data?.is_today) {
-                n.hidden = false;
+            if (n.data?.type === 'article') {
+                n.hidden = !(articlesVisible || n.data?.is_today);
             }
             originalNodeColors[n.id] = {
                 background: n.color.background,
