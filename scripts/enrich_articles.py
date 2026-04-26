@@ -55,8 +55,13 @@ for art in articles:
             'link': link,
             'title_en': art.get('title_en', '') or art.get('title', '') or art.get('label', ''),
             'summary_en': art.get('summary', ''),
-            'missing': missing
+            'missing': missing,
+            'is_today': art.get('is_today', False)
         })
+
+# Prioritize today's articles to ensure they get enriched first
+pending.sort(key=lambda x: (0 if x['is_today'] else 1, x['link']))
+print(f'Prioritized {sum(1 for p in pending if p["is_today"])} today articles to front of queue')
 
 print(f'Total articles: {len(articles)}')
 print(f'Pending enrichment: {len(pending)}')
