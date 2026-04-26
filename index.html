@@ -1105,6 +1105,13 @@ async function init(dataUrl) {
 
         // After stabilization completes, store positions then freeze physics
         // All nodes participate in stabilization so they have correct positions
+        let hasAutoFitted = false;
+        function doAutoFit() {
+            if (hasAutoFitted || !network) return;
+            hasAutoFitted = true;
+            network.fit({ animation: { duration: 300 } });
+        }
+        
         network.on('stabilizationIterationsDone', function() {
             // Save positions for all nodes before hiding any
             network.storePositions();
@@ -1119,7 +1126,7 @@ async function init(dataUrl) {
             if (updates.length > 0) nodes.update(updates);
             
             // Ensure all visible nodes are in view
-            network.fit({ animation: { duration: 300 } });
+            doAutoFit();
             
             // Disable physics to prevent any movement
             network.setOptions({ physics: { enabled: false } });
@@ -1129,6 +1136,11 @@ async function init(dataUrl) {
                 btn.classList.add('active');
                 btn.textContent = '恢复物理';
             }
+        });
+        
+        // Fallback: ensure fit on first draw (in case stabilization event is missed)
+        network.on('afterDrawing', function() {
+            doAutoFit();
         });
 
         network.on('hoverNode', function(params) {
