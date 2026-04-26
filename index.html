@@ -1095,6 +1095,15 @@ async function init(dataUrl) {
         };
         network = new vis.Network(container, { nodes, edges }, options);
 
+        // Auto-pulse all is_today article nodes
+        setTimeout(() => {
+            nodes.get().forEach(n => {
+                if (n.data?.type === 'article' && n.data?.is_today) {
+                    startPulse(n.id);
+                }
+            });
+        }, 500);
+
         network.on('hoverNode', function(params) {
             container.style.cursor = 'pointer';
             if (physicsEnabled && !hoverPaused && network.physics && network.physics.stopSimulation) {
@@ -1243,7 +1252,7 @@ function handleNodeClick(node) {
 }
 
 function clearSelection() {
-    stopPulse();
+    stopPulse(selectedNodeId);
     if (selectedNodeId) {
         const prev = nodes.get(selectedNodeId);
         if (prev) {
@@ -1266,16 +1275,16 @@ function clearSelection() {
     restoreAllDimming();
 }
 
-let pulseInterval = null;
+let pulseIntervals = {};
 
 function startPulse(nodeId) {
-    stopPulse();
+    stopPulse(nodeId);
     const node = nodes.get(nodeId);
     const baseSize = node?.size || 20;
     const baseBorder = node?.data?.type === 'category' ? 3 : (node?.data?.type === 'tag' ? 2 : 1);
     let growing = true;
     let offset = 0;
-    pulseInterval = setInterval(() => {
+    pulseIntervals[nodeId] = setInterval(() => {
         if (growing) {
             offset += 0.8;
             if (offset >= 4) growing = false;
@@ -1292,10 +1301,15 @@ function startPulse(nodeId) {
     }, 70);
 }
 
-function stopPulse() {
-    if (pulseInterval) {
-        clearInterval(pulseInterval);
-        pulseInterval = null;
+function stopPulse(nodeId) {
+    if (nodeId) {
+        if (pulseIntervals[nodeId]) {
+            clearInterval(pulseIntervals[nodeId]);
+            delete pulseIntervals[nodeId];
+        }
+    } else {
+        Object.values(pulseIntervals).forEach(clearInterval);
+        pulseIntervals = {};
     }
 }
 
