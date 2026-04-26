@@ -55,13 +55,8 @@ for art in articles:
             'link': link,
             'title_en': art.get('title_en', '') or art.get('title', '') or art.get('label', ''),
             'summary_en': art.get('summary', ''),
-            'missing': missing,
-            'is_today': art.get('is_today', False)
+            'missing': missing
         })
-
-# Prioritize today's articles to ensure they get enriched first
-pending.sort(key=lambda x: (0 if x['is_today'] else 1, x['link']))
-print(f'Prioritized {sum(1 for p in pending if p["is_today"])} today articles to front of queue')
 
 print(f'Total articles: {len(articles)}')
 print(f'Pending enrichment: {len(pending)}')
@@ -88,7 +83,11 @@ def generate_one(art):
     if not title_en and not summary_en:
         return link, {'cn_title': '', 'cn_summary': '', 'reading_highlight': ''}
     
+    # 闃插尽閿欎綅锛氬鏋?summary 涓虹┖鎴栨槑鏄句笉鍖归厤锛岄檷绾т负浠呭熀浜庢爣棰樼敓鎴?    has_valid_summary = bool(summary_en) and len(summary_en) > 30
+    
     prompt = f"""璇蜂负浠ヤ笅鑻辨枃鏂囩珷鐢熸垚涓枃鍐呭銆傝姹傚噯纭€佷笓涓氥€佺鍚堜腑鏂囬槄璇讳範鎯€?
+{'娉ㄦ剰锛氬師鏂囨憳瑕佺己澶辨垨涓嶅彲闈狅紝璇蜂富瑕佹牴鎹爣棰樻帹鏂枃绔犲唴瀹瑰苟鐢熸垚銆? if not has_valid_summary else ''}
+
 鍘熸枃鏍囬锛歿title_en}
 鍘熸枃鎽樿锛歿summary_en}
 
@@ -137,6 +136,17 @@ def generate_one(art):
                 if '銆愰槄璇荤簿鍗庛€? in result:
                     hl_part = result.split('銆愰槄璇荤簿鍗庛€?, 1)[1].strip()
                     reading_highlight = hl_part[:1500]
+                
+                # Self-validation: check if cn_title relates to title_en
+                if cn_title and title_en:
+                    title_keywords = [w.lower() for w in title_en.replace('-', ' ').split() if len(w) > 4 and w.isalpha()]
+                    cn_title_lower = cn_title.lower()
+                    # Check if any English keyword appears in Chinese title (transliterated or not)
+                    # Simple heuristic: if title_en has strong keywords, cn_title should at least mention related concepts
+                    # This is a loose check; main defense is at the collector level
+                    if title_keywords and not any(kw[:4] in cn_title_lower for kw in title_keywords[:3]):
+                        # If cn_title seems completely unrelated, mark as suspicious but still use it
+                        print(f"  鈿狅笍 Generated cn_title may be mismatched: {cn_title[:30]} vs {title_en[:40]}")
                 
                 # Fallback: if parsing failed but we have content, use heuristics
                 if not cn_title and result:
