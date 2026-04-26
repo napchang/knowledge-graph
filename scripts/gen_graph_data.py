@@ -1,6 +1,17 @@
 import os, re, json
 from datetime import datetime
 
+def check_title_summary_match(title, summary, min_overlap=0.2):
+    """妫€鏌?title 鍜?summary 鏄惁鍖归厤銆俧eedparser 鍦ㄦ煇浜?RSS feed 涓婁細鍑虹幇閿欎綅銆?""
+    if not title or not summary or len(summary) < 50:
+        return True
+    title_words = [w.strip('.,-:;!?').lower() for w in title.split() if len(w.strip('.,-:;!?')) >= 4]
+    if not title_words:
+        return True
+    summary_lower = summary.lower()
+    matches = sum(1 for w in title_words if w in summary_lower)
+    return matches / len(title_words) >= min_overlap
+
 import sys
 # Determine base dir: repo root (where geo-knowledge-base lives)
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -105,7 +116,6 @@ def is_recent(date_str):
     return (today_d - d).days <= 2
 
 articles = []
-seen_article_links = set()  # deduplicate across all markdown files
 for cat in categories:
     cat_dir = os.path.join(kb_dir, cat)
     if not os.path.exists(cat_dir):
@@ -160,9 +170,10 @@ for cat in categories:
                 elif line.startswith('- **鎽樿**:'):
                     summary = line.split(':', 1)[1].strip()
             if en_title and link:
-                if link in seen_article_links:
-                    continue
-                seen_article_links.add(link)
+                # 闃插尽閿欎綅鏁版嵁锛氭鏌?title 鍜?summary 鏄惁鍖归厤
+                if not check_title_summary_match(en_title, summary):
+                    print(f'  鈿狅笍 Title-summary mismatch in markdown, clearing summary: {en_title[:50]}')
+                    summary = ''
                 cache = ENRICH_CACHE.get(link, {})
                 # Use collection date for is_today: article field > filename > published date
                 effective_collection_date = collection_date_from_file or collection_date or date
