@@ -250,6 +250,7 @@
 - **采集日期**: 2026-04-19
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: Vancouver, it’s been a blast! 🇨🇦 https://t.co/pGSqgpZZm9
 - **摘要**: Vancouver, it’s been a blast! 🇨🇦 https://t.co/pGSqgpZZm9
 
 ### CodexBar 0.21更新发布
@@ -310,9 +311,8 @@ Small release, important fix: npm updates now repair bundled plugin run...
 - **采集日期**: 2026-04-22
 - **Category**: Ai Industry
 - **Topic**: `OpenAI动态`
+- **摘要(CN)**: OpenClaw 2026.4.21 is live.
 - **摘要**: OpenClaw 2026.4.21 is live.
-
-Small release, important fix: npm updates now repair bundled plugin runtime deps, with Docker E2E coverage so Telegram/Di
 
 ### Did some work to get our CI times down from 8 to two minutes via some... parallelization. Kudos to t...
 - **链接**: https://x.com/steipete/status/2046787353906167992
@@ -320,6 +320,7 @@ Small release, important fix: npm updates now repair bundled plugin runtime deps
 - **采集日期**: 2026-04-22
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: Did some work to get our CI times down from 8 to two minutes via some... parallelization. Kudos to the @useblacksmith folks for sponsoring + letting u
 - **摘要**: Did some work to get our CI times down from 8 to two minutes via some... parallelization. Kudos to the @useblacksmith folks for sponsoring + letting u
 
 ### discrawl 0.3.0 is out.
@@ -330,9 +331,8 @@ This release adds Git-backed archive sync, so a Discord archive can be publi...
 - **采集日期**: 2026-04-22
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: discrawl 0.3.0 is out.
 - **摘要**: discrawl 0.3.0 is out.
-
-This release adds Git-backed archive sync, so a Discord archive can be published to a private repo and queried locally without
 
 ### I love these https://t.co/NGarQPF6e5
 - **链接**: https://x.com/steipete/status/2047189920104477009
@@ -340,6 +340,7 @@ This release adds Git-backed archive sync, so a Discord archive can be published
 - **采集日期**: 2026-04-23
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: I love these https://t.co/NGarQPF6e5
 - **摘要**: I love these https://t.co/NGarQPF6e5
 
 ### 8 React components per line 😅 https://t.co/IJTQgvCliP
@@ -348,6 +349,7 @@ This release adds Git-backed archive sync, so a Discord archive can be published
 - **采集日期**: 2026-04-23
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: 8 React components per line 😅 https://t.co/IJTQgvCliP
 - **摘要**: 8 React components per line 😅 https://t.co/IJTQgvCliP
 
 ### The @github folks are amazing! https://t.co/dPN0ToC0Xf
@@ -356,6 +358,7 @@ This release adds Git-backed archive sync, so a Discord archive can be published
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: The @github folks are amazing! https://t.co/dPN0ToC0Xf
 - **摘要**: The @github folks are amazing! https://t.co/dPN0ToC0Xf
 
 ### My favorite security advisories. https://t.co/JWCy9ySLzp
@@ -364,6 +367,7 @@ This release adds Git-backed archive sync, so a Discord archive can be published
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: My favorite security advisories. https://t.co/JWCy9ySLzp
 - **摘要**: My favorite security advisories. https://t.co/JWCy9ySLzp
 
 ### GPT 5.5 is definitely a step up in the character game. https://t.co/nXKtkjkZbu
@@ -372,6 +376,7 @@ This release adds Git-backed archive sync, so a Discord archive can be published
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `OpenAI动态`
+- **摘要(CN)**: GPT 5.5 is definitely a step up in the character game. https://t.co/nXKtkjkZbu
 - **摘要**: GPT 5.5 is definitely a step up in the character game. https://t.co/nXKtkjkZbu
 
 ### 🛰️ discrawl 0.6.0 is out!
@@ -382,7 +387,6 @@ Biggest new feature is that it can now *read* Discord DMs without any cus...
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `产品动态`
+- **摘要(CN)**: 🛰️ discrawl 0.6.0 is out!
 - **摘要**: 🛰️ discrawl 0.6.0 is out!
-
-Biggest new feature is that it can now *read* Discord DMs without any custom login tricks that might get you blocked. No wr
 

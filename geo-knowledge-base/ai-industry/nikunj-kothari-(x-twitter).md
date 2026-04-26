@@ -290,9 +290,8 @@
 - **采集日期**: 2026-04-22
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: Double opt in is cool, but I highly highly recommend  giving 10-15 people you trust FULL blind intro privilege.
 - **摘要**: Double opt in is cool, but I highly highly recommend  giving 10-15 people you trust FULL blind intro privilege.
-
-It’s the fastest way to maximize sere
 
 ### Before X kicks me out, I WOULD use the paid partnership label but I wasn’t actually paid anything fo...
 - **链接**: https://x.com/nikunj/status/2047052668246589574
@@ -300,9 +299,8 @@ It’s the fastest way to maximize sere
 - **采集日期**: 2026-04-23
 - **Category**: Ai Industry
 - **Topic**: `谷歌动态, 产品动态`
+- **摘要(CN)**: Before X kicks me out, I WOULD use the paid partnership label but I wasn’t actually paid anything for this..
 - **摘要**: Before X kicks me out, I WOULD use the paid partnership label but I wasn’t actually paid anything for this..
-
-@acv x @JustJake forced me do this so pl
 
 ### Significantly longer essay I wrote last year on this https://t.co/RqbcPq5VyH
 - **链接**: https://x.com/nikunj/status/2047047747585675468
@@ -310,6 +308,7 @@ It’s the fastest way to maximize sere
 - **采集日期**: 2026-04-23
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: Significantly longer essay I wrote last year on this https://t.co/RqbcPq5VyH
 - **摘要**: Significantly longer essay I wrote last year on this https://t.co/RqbcPq5VyH
 
 ### Every pixel will be generated in real time. It’s just a matter of when, not if. Demos like this show...
@@ -318,6 +317,7 @@ It’s the fastest way to maximize sere
 - **采集日期**: 2026-04-23
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: Every pixel will be generated in real time. It’s just a matter of when, not if. Demos like this show a view of what’s possible 👏 https://t.co/ykpQcR2j
 - **摘要**: Every pixel will be generated in real time. It’s just a matter of when, not if. Demos like this show a view of what’s possible 👏 https://t.co/ykpQcR2j
 
 ### Exhibit 237 on why Silicon Valley, the TV show, is a documentary.. https://t.co/NQO09BclNM
@@ -326,6 +326,7 @@ It’s the fastest way to maximize sere
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: Exhibit 237 on why Silicon Valley, the TV show, is a documentary.. https://t.co/NQO09BclNM
 - **摘要**: Exhibit 237 on why Silicon Valley, the TV show, is a documentary.. https://t.co/NQO09BclNM
 
 ### Even with all the model releases, this “stack” continues to be undefeated (for me)..
@@ -336,10 +337,8 @@ It’s the fastest way to maximize sere
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `OpenAI动态, Anthropic动态, 模型发布, 企业落地`
+- **摘要(CN)**: Even with all the model releases, this “stack” continues to be undefeated (for me)..
 - **摘要**: Even with all the model releases, this “stack” continues to be undefeated (for me)..
-
-- @claudeai Opus for planning and frontend design
-- @OpenAI code
 
 ### M&A is hitting a fever pitch.. at this rate, it’ll soon eclipse fundraising announcements. 
 
@@ -351,11 +350,8 @@ Why?
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `融资并购`
-- **摘要**: M&A is hitting a fever pitch.. at this rate, it’ll soon eclipse fundraising announcements. 
-
-Why?
-
-> seed to series A gap keeps getting worse - never 
+- **摘要(CN)**: M&A is hitting a fever pitch.. at this rate, it’ll soon eclipse fundraising announcements.
+- **摘要**: M&A is hitting a fever pitch.. at this rate, it’ll soon eclipse fundraising announcements.
 
 ### Some of my relatively new favorite follows..
 
@@ -367,12 +363,8 @@ Why?
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `融资并购`
+- **摘要(CN)**: Some of my relatively new favorite follows..
 - **摘要**: Some of my relatively new favorite follows..
-
-&gt; @amypretzel (texture)
-&gt; @Vtrivedy10 (harness)
-&gt; @oliverhamrin (sheer aura)
-&gt; @jakubkrehel 
 
 ### When the designer finds out the PM shipped their vibe coded designs straight to production.. https:/...
 - **链接**: https://x.com/nikunj/status/2047790294184374565
@@ -380,6 +372,7 @@ Why?
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `产品动态`
+- **摘要(CN)**: When the designer finds out the PM shipped their vibe coded designs straight to production.. https://t.co/WDbVJd9AXZ
 - **摘要**: When the designer finds out the PM shipped their vibe coded designs straight to production.. https://t.co/WDbVJd9AXZ
 
 ### Note to all product teams: project code names are not temporary, they are permanent. Like truly eter...
@@ -388,7 +381,6 @@ Why?
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `产品动态`
-- **摘要**: Note to all product teams: project code names are not temporary, they are permanent. Like truly eternal. 
-
-Choose very very wisely.
+- **摘要(CN)**: Note to all product teams: project code names are not temporary, they are permanent. Like truly eternal.
+- **摘要**: Note to all product teams: project code names are not temporary, they are permanent. Like truly eternal.
 

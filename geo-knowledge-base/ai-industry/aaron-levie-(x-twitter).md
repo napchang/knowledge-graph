@@ -100,9 +100,8 @@
 - **采集日期**: 2026-04-22
 - **Category**: Ai Industry
 - **Topic**: `Agent生态, 企业落地`
-- **摘要**: If you read this and don’t understand why it’s happening it’s an opportunity to reset your understanding of how the real world works. 
-
-The real world
+- **摘要(CN)**: If you read this and don’t understand why it’s happening it’s an opportunity to reset your understanding of how the real world works.
+- **摘要**: If you read this and don’t understand why it’s happening it’s an opportunity to reset your understanding of how the real world works.
 
 ### Sorry to anyone who thought AI would mean we’d work less (at least for now). AI makes it easy to exp...
 - **链接**: https://x.com/levie/status/2047540230694350958
@@ -110,6 +109,7 @@ The real world
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `Agent生态`
+- **摘要(CN)**: Sorry to anyone who thought AI would mean we’d work less (at least for now). AI makes it easy to explore more than you did before, and so you start do
 - **摘要**: Sorry to anyone who thought AI would mean we’d work less (at least for now). AI makes it easy to explore more than you did before, and so you start do
 
 ### Clarification: rolling out soon!
@@ -118,6 +118,7 @@ The real world
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: Clarification: rolling out soon!
 - **摘要**: Clarification: rolling out soon!
 
 ### GPT-5.5 is live. We’ve been testing the model over the last couple of weeks at Box on our most compl...
@@ -126,6 +127,7 @@ The real world
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `OpenAI动态, 企业落地, 监管安全`
+- **摘要(CN)**: GPT-5.5 is live. We’ve been testing the model over the last couple of weeks at Box on our most complex knowledge work evals, and the model saw a 10 pe
 - **摘要**: GPT-5.5 is live. We’ve been testing the model over the last couple of weeks at Box on our most complex knowledge work evals, and the model saw a 10 pe
 
 ### “If AI can make employees more productive, which is widely accepted as fact, then companies are goin...
@@ -134,5 +136,6 @@ The real world
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `产品动态`
+- **摘要(CN)**: “If AI can make employees more productive, which is widely accepted as fact, then companies are going to want as many productive units of labor as pos
 - **摘要**: “If AI can make employees more productive, which is widely accepted as fact, then companies are going to want as many productive units of labor as pos
 

@@ -420,6 +420,7 @@
 - **采集日期**: 2026-04-22
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: It's a lot of work to get GBrain to instruct your OpenClaw/Hermes to do the right thing, but it's worth it https://t.co/wB9ONJm07K
 - **摘要**: It's a lot of work to get GBrain to instruct your OpenClaw/Hermes to do the right thing, but it's worth it https://t.co/wB9ONJm07K
 
 ### Here's a big upgrade to the capability of GBrain Minions, the job server I made for your agent https...
@@ -428,6 +429,7 @@
 - **采集日期**: 2026-04-22
 - **Category**: Ai Industry
 - **Topic**: `Agent生态`
+- **摘要(CN)**: Here's a big upgrade to the capability of GBrain Minions, the job server I made for your agent https://t.co/TvK4wnraGP
 - **摘要**: Here's a big upgrade to the capability of GBrain Minions, the job server I made for your agent https://t.co/TvK4wnraGP
 
 ### So far basically fewer fatter skills makes the resolver shorter which itself is less context bloat
@@ -438,9 +440,8 @@
 - **采集日期**: 2026-04-23
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: So far basically fewer fatter skills makes the resolver shorter which itself is less context bloat
 - **摘要**: So far basically fewer fatter skills makes the resolver shorter which itself is less context bloat
-
-Short resolvers are better than long ones https://
 
 ### This is interesting. Anyone experimenting with this? So far anytime I have adjacent skills I just te...
 - **链接**: https://x.com/garrytan/status/2047183884266402275
@@ -448,6 +449,7 @@ Short resolvers are better than long ones https://
 - **采集日期**: 2026-04-23
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: This is interesting. Anyone experimenting with this? So far anytime I have adjacent skills I just tell it to DRY itself up and turn it into a bigger s
 - **摘要**: This is interesting. Anyone experimenting with this? So far anytime I have adjacent skills I just tell it to DRY itself up and turn it into a bigger s
 
 ### Man between this and CrabTrap from @pedroh96 I am going to have a busy week https://t.co/twDMf4nTa9
@@ -456,6 +458,7 @@ Short resolvers are better than long ones https://
 - **采集日期**: 2026-04-23
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: Man between this and CrabTrap from @pedroh96 I am going to have a busy week https://t.co/twDMf4nTa9
 - **摘要**: Man between this and CrabTrap from @pedroh96 I am going to have a busy week https://t.co/twDMf4nTa9
 
 ### Let's see... Ro Khanna is defending someone who incites murder, "let the streets soak in their red-c...
@@ -464,6 +467,7 @@ Short resolvers are better than long ones https://
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: Let's see... Ro Khanna is defending someone who incites murder, "let the streets soak in their red-capitalist blood," and who said America deserved 9/
 - **摘要**: Let's see... Ro Khanna is defending someone who incites murder, "let the streets soak in their red-capitalist blood," and who said America deserved 9/
 
 ### Finally I'm still trying to move as much of my OpenClaw cron jobs and subagents over to GBrain Minio...
@@ -472,6 +476,7 @@ Short resolvers are better than long ones https://
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `Agent生态`
+- **摘要(CN)**: Finally I'm still trying to move as much of my OpenClaw cron jobs and subagents over to GBrain Minions and this is more stability improvements for tha
 - **摘要**: Finally I'm still trying to move as much of my OpenClaw cron jobs and subagents over to GBrain Minions and this is more stability improvements for tha
 
 ### Next, I finally created new evals for GBrain which show how much more awesome GBrain is when you hav...
@@ -480,6 +485,7 @@ Short resolvers are better than long ones https://
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: Next, I finally created new evals for GBrain which show how much more awesome GBrain is when you have graph AND vector search on top of grep on knowle
 - **摘要**: Next, I finally created new evals for GBrain which show how much more awesome GBrain is when you have graph AND vector search on top of grep on knowle
 
 ### Change the party to murder all capitalists (Piker) and destroy the schools (Bowman), brought to you ...
@@ -488,5 +494,6 @@ Short resolvers are better than long ones https://
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `融资并购`
-- **摘要**: Change the party to murder all capitalists (Piker) and destroy the schools (Bowman), brought to you by a tech centimillionaire who is using his money 
+- **摘要(CN)**: Change the party to murder all capitalists (Piker) and destroy the schools (Bowman), brought to you by a tech centimillionaire who is using his money
+- **摘要**: Change the party to murder all capitalists (Piker) and destroy the schools (Bowman), brought to you by a tech centimillionaire who is using his money
 

@@ -102,9 +102,8 @@ Pomelli is one of our newer Labs experiments, and SMBs are running with...
 - **采集日期**: 2026-04-22
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: Welcome to Europe, Pomelli!
 - **摘要**: Welcome to Europe, Pomelli!
-
-Pomelli is one of our newer Labs experiments, and SMBs are running with it https://t.co/cQF0dYgd4Y
 
 ### DESIGN.md is one of my favorite things that Stitch is doing! If you know, you know. https://t.co/aWI...
 - **链接**: https://x.com/joshwoodward/status/2046754179499356594
@@ -112,6 +111,7 @@ Pomelli is one of our newer Labs experiments, and SMBs are running with it https
 - **采集日期**: 2026-04-22
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: DESIGN.md is one of my favorite things that Stitch is doing! If you know, you know. https://t.co/aWI7GbrViB
 - **摘要**: DESIGN.md is one of my favorite things that Stitch is doing! If you know, you know. https://t.co/aWI7GbrViB
 
 ### NotebookLM can now auto-label &amp; categorize sources! https://t.co/z35183ZoDk
@@ -120,5 +120,6 @@ Pomelli is one of our newer Labs experiments, and SMBs are running with it https
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: NotebookLM can now auto-label &amp; categorize sources! https://t.co/z35183ZoDk
 - **摘要**: NotebookLM can now auto-label &amp; categorize sources! https://t.co/z35183ZoDk
 

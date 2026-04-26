@@ -301,9 +301,8 @@
 - **采集日期**: 2026-04-22
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: Several old books that are surprisingly relevant to what's happening in AI today:
 - **摘要**: Several old books that are surprisingly relevant to what's happening in AI today:
-1. The Mythical Man-Month (1975 book by Fred Brooks)
-2. Diffusion of
 
 ### Asking Claude Code to make an HTML visualizing its current context window is a pretty wild way to le...
 - **链接**: https://x.com/zarazhangrui/status/2046758723998425433
@@ -311,6 +310,7 @@
 - **采集日期**: 2026-04-22
 - **Category**: Ai Industry
 - **Topic**: `Anthropic动态, 开发者工具`
+- **摘要(CN)**: Asking Claude Code to make an HTML visualizing its current context window is a pretty wild way to learn about how context window works https://t.co/sI
 - **摘要**: Asking Claude Code to make an HTML visualizing its current context window is a pretty wild way to learn about how context window works https://t.co/sI
 
 ### Have you ever felt like you have more agents/AI tools than you have work for them to do
@@ -319,6 +319,7 @@
 - **采集日期**: 2026-04-22
 - **Category**: Ai Industry
 - **Topic**: `Agent生态`
+- **摘要(CN)**: Have you ever felt like you have more agents/AI tools than you have work for them to do
 - **摘要**: Have you ever felt like you have more agents/AI tools than you have work for them to do
 
 ### Saw the demo, very impressive setup that allows a coding agent to work autonomously for long running...
@@ -327,6 +328,7 @@
 - **采集日期**: 2026-04-23
 - **Category**: Ai Industry
 - **Topic**: `Agent生态`
+- **摘要(CN)**: Saw the demo, very impressive setup that allows a coding agent to work autonomously for long running tasks without human intervention! https://t.co/3f
 - **摘要**: Saw the demo, very impressive setup that allows a coding agent to work autonomously for long running tasks without human intervention! https://t.co/3f
 
 ### https://t.co/43aL2SN4s4
@@ -343,5 +345,6 @@
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: Fascinating read https://t.co/31NGFmVk2z
 - **摘要**: Fascinating read https://t.co/31NGFmVk2z
 

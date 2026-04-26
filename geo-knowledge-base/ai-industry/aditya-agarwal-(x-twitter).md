@@ -144,13 +144,8 @@ Learn...
 - **采集日期**: 2026-04-23
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
-- **摘要**: Great leaders operate in "owner mode." 
-
-Assume the responsibility for risk and uncertainty. 
-
-Learn fast and earn trust through judgment. 
-
-@nikeshar
+- **摘要(CN)**: Great leaders operate in "owner mode."
+- **摘要**: Great leaders operate in "owner mode."
 
 ### This is dope https://t.co/pzUr5R9SHo
 - **链接**: https://x.com/adityaag/status/2047018146972987774
@@ -158,6 +153,7 @@ Learn fast and earn trust through judgment.
 - **采集日期**: 2026-04-23
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: This is dope https://t.co/pzUr5R9SHo
 - **摘要**: This is dope https://t.co/pzUr5R9SHo
 
 ### How does one make sense of SF?
@@ -168,9 +164,8 @@ We are living through the craziest computing revolution of the last ...
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: How does one make sense of SF?
 - **摘要**: How does one make sense of SF?
-
-We are living through the craziest computing revolution of the last 2 decades....and 95% of the value being created is
 
 ### Sign up here:
 
@@ -180,9 +175,8 @@ https://t.co/X7z2xJTJtI
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: Sign up here:
 - **摘要**: Sign up here:
-
-https://t.co/X7z2xJTJtI
 
 ### We're approaching a post-prompting world. https://t.co/2lbYe7HYZj
 - **链接**: https://x.com/adityaag/status/2047669585667666321
@@ -190,5 +184,6 @@ https://t.co/X7z2xJTJtI
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: We're approaching a post-prompting world. https://t.co/2lbYe7HYZj
 - **摘要**: We're approaching a post-prompting world. https://t.co/2lbYe7HYZj
 

@@ -130,6 +130,7 @@
 - **采集日期**: 2026-04-22
 - **Category**: Agentic B2B
 - **Topic**: `B2B/Strategy`
+- **摘要(CN)**: Why “Try Before You Buy” Has Become Mission‑Critical For Buyers And Sellers B2B organizations can no longer rely on promises alone. Today’s buyers exp
 - **摘要**: Why “Try Before You Buy” Has Become Mission‑Critical For Buyers And Sellers B2B organizations can no longer rely on promises alone. Today’s buyers exp
 
 ### CPQ Vendors Face A New Test: Handling Real-World Complexity
@@ -138,6 +139,7 @@
 - **采集日期**: 2026-04-23
 - **Category**: Agentic B2B
 - **Topic**: `Sales`
+- **摘要(CN)**: The Configure, Price, Quote Solutions Landscape, Q2 2026, reveals a new battleground where vendors differentiate by managing real-world complexity. Ve
 - **摘要**: The Configure, Price, Quote Solutions Landscape, Q2 2026, reveals a new battleground where vendors differentiate by managing real-world complexity. Ve
 
 ### How CX Leaders Build Resilience In A Volatile World
@@ -146,6 +148,7 @@
 - **采集日期**: 2026-04-23
 - **Category**: Agentic B2B
 - **Topic**: `CX/客户体验`
+- **摘要(CN)**: Back in the dim and distant past, when I ran an enterprise architecture team, we spent months building immaculate diagrams that were technically corre
 - **摘要**: Back in the dim and distant past, when I ran an enterprise architecture team, we spent months building immaculate diagrams that were technically corre
 
 ### Proof Is The Product: How Trials And POCs Have Become A Real Go‑To‑Market Motion
@@ -154,6 +157,7 @@
 - **采集日期**: 2026-04-23
 - **Category**: Agentic B2B
 - **Topic**: `B2B/Strategy`
+- **摘要(CN)**: Why “Try Before You Buy” Has Become Mission‑Critical For Buyers And Sellers B2B organizations can no longer rely on promises alone. Today’s buyers exp
 - **摘要**: Why “Try Before You Buy” Has Become Mission‑Critical For Buyers And Sellers B2B organizations can no longer rely on promises alone. Today’s buyers exp
 
 ### Digital Natives Are Rewriting B2B Buying — And It’s Impacting Your Revenue Performance
@@ -162,6 +166,7 @@
 - **采集日期**: 2026-04-24
 - **Category**: Agentic B2B
 - **Topic**: `Marketing, Sales`
+- **摘要(CN)**: As Millennials and Gen Zers take the lead in B2B buying groups, traditional revenue assumptions are breaking down. This post explores how digital nati
 - **摘要**: As Millennials and Gen Zers take the lead in B2B buying groups, traditional revenue assumptions are breaking down. This post explores how digital nati
 
 ### Your Growth Strategy Isn’t Broken. The Problem Is That You’re Avoiding Decisions.
@@ -170,7 +175,8 @@
 - **采集日期**: 2026-04-24
 - **Category**: Agentic B2B
 - **Topic**: `B2B/Strategy`
-- **摘要**: Many B2B growth strategies fail not because the ambition behind them is wrong, but because leaders avoid or defer making critical decisions.
+- **摘要(CN)**: Growth strategies don’t usually fail because they’re wrong. They fail because leaders never make, or never finish, the decisions that strategy demands
+- **摘要**: Growth strategies don’t usually fail because they’re wrong. They fail because leaders never make, or never finish, the decisions that strategy demands
 
 ### CPQ Vendors Face A New Test: Handling Real-World Complexity
 - **链接**: https://www.forrester.com/blogs/cpq-vendors-face-a-new-test-handling-real-world-complexity/
@@ -178,6 +184,7 @@
 - **采集日期**: 2026-04-24
 - **Category**: Agentic B2B
 - **Topic**: `Sales`
+- **摘要(CN)**: The Configure, Price, Quote Solutions Landscape, Q2 2026, reveals a new battleground where vendors differentiate by managing real-world complexity. Ve
 - **摘要**: The Configure, Price, Quote Solutions Landscape, Q2 2026, reveals a new battleground where vendors differentiate by managing real-world complexity. Ve
 
 ### How CX Leaders Build Resilience In A Volatile World
@@ -186,6 +193,7 @@
 - **采集日期**: 2026-04-24
 - **Category**: Agentic B2B
 - **Topic**: `CX/客户体验`
+- **摘要(CN)**: Back in the dim and distant past, when I ran an enterprise architecture team, we spent months building immaculate diagrams that were technically corre
 - **摘要**: Back in the dim and distant past, when I ran an enterprise architecture team, we spent months building immaculate diagrams that were technically corre
 
 ### Digital Natives Are Rewriting B2B Buying — And It’s Impacting Your Revenue Performance
@@ -194,6 +202,7 @@
 - **采集日期**: 2026-04-25
 - **Category**: Agentic B2B
 - **Topic**: `Marketing, Sales`
+- **摘要(CN)**: As Millennials and Gen Zers take the lead in B2B buying groups, traditional revenue assumptions are breaking down. This post explores how digital nati
 - **摘要**: As Millennials and Gen Zers take the lead in B2B buying groups, traditional revenue assumptions are breaking down. This post explores how digital nati
 
 ### Your Growth Strategy Isn’t Broken. The Problem Is That You’re Avoiding Decisions.
@@ -202,7 +211,8 @@
 - **采集日期**: 2026-04-25
 - **Category**: Agentic B2B
 - **Topic**: `B2B/Strategy`
-- **摘要**: Many B2B growth strategies fail not because the ambition behind them is wrong, but because leaders avoid or defer making critical decisions.
+- **摘要(CN)**: Growth strategies don’t usually fail because they’re wrong. They fail because leaders never make, or never finish, the decisions that strategy demands
+- **摘要**: Growth strategies don’t usually fail because they’re wrong. They fail because leaders never make, or never finish, the decisions that strategy demands
 
 ### CPQ Vendors Face A New Test: Handling Real-World Complexity
 - **链接**: https://www.forrester.com/blogs/cpq-vendors-face-a-new-test-handling-real-world-complexity/
@@ -210,6 +220,7 @@
 - **采集日期**: 2026-04-25
 - **Category**: Agentic B2B
 - **Topic**: `Sales`
+- **摘要(CN)**: The Configure, Price, Quote Solutions Landscape, Q2 2026, reveals a new battleground where vendors differentiate by managing real-world complexity. Ve
 - **摘要**: The Configure, Price, Quote Solutions Landscape, Q2 2026, reveals a new battleground where vendors differentiate by managing real-world complexity. Ve
 
 ### How CX Leaders Build Resilience In A Volatile World
@@ -218,5 +229,6 @@
 - **采集日期**: 2026-04-25
 - **Category**: Agentic B2B
 - **Topic**: `CX/客户体验`
+- **摘要(CN)**: Back in the dim and distant past, when I ran an enterprise architecture team, we spent months building immaculate diagrams that were technically corre
 - **摘要**: Back in the dim and distant past, when I ran an enterprise architecture team, we spent months building immaculate diagrams that were technically corre
 

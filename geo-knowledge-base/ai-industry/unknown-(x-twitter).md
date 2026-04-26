@@ -44,15 +44,16 @@
 - **摘要(CN)**: 网友分享诱人美食图片并@steipete，附推文链接引发食欲与好奇。
 - **摘要**: 网友分享诱人美食图片并@steipete，附推文链接引发食欲与好奇。
 
-### OpenAI为何不设产品路线图
+### Why OpenAI doesn't focus on roadmaps from @embirico (Codex product lead):
+
+"At @OpenAI, you either p...
 - **链接**: https://x.com/petergyang/status/2040943889822232790
 - **日期**: 2026-04-06
 - **采集日期**: 2026-04-06
 - **Category**: Ai Industry
 - **Topic**: `OpenAI动态`
-- **标题(CN)**: OpenAI为何不设产品路线图
-- **摘要(CN)**: OpenAI产品负责人指出，公司只规划短期（8周内可交付）与长期（一年期技术愿景），避免尴尬的中期路线图。
-- **摘要**: OpenAI产品负责人指出，公司只规划短期（8周内可交付）与长期（一年期技术愿景），避免尴尬的中期路线图。
+- **摘要(CN)**: Why OpenAI doesn't focus on roadmaps from @embirico (Codex product lead):
+- **摘要**: Why OpenAI doesn't focus on roadmaps from @embirico (Codex product lead):
 
 ### 加州高铁的真实使命
 - **链接**: https://x.com/thenanyu/status/2040902216085537159
@@ -244,13 +245,14 @@
 - **摘要(CN)**: 用户发现GPT-5.4的“爪子”功能表现卓越，但需手动开启“思维”模式才能发挥其智能，否则效果会大打折扣。
 - **摘要**: 用户发现GPT-5.4的“爪子”功能表现卓越，但需手动开启“思维”模式才能发挥其智能，否则效果会大打折扣。
 
-### 急诊拒诊违法，AI拒答合规？
+### Emergency rooms are not allowed to turn away patients…..
+
+Why is an LLM allowed to deny me medical a...
 - **链接**: https://x.com/adityaag/status/2041016861027193239
 - **日期**: 2026-04-06
 - **采集日期**: 2026-04-06
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
-- **标题(CN)**: 急诊拒诊违法，AI拒答合规？
-- **摘要(CN)**: 急诊拒收病人违反医疗伦理与法律，但AI语言模型拒绝提供医疗建议却属合规操作。这揭示了现行法规在数字健康领域的滞后性。
-- **摘要**: 急诊拒收病人违反医疗伦理与法律，但AI语言模型拒绝提供医疗建议却属合规操作。这揭示了现行法规在数字健康领域的滞后性。
+- **摘要(CN)**: Emergency rooms are not allowed to turn away patients…..
+- **摘要**: Emergency rooms are not allowed to turn away patients…..
 

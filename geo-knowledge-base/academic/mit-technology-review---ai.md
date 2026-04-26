@@ -260,6 +260,7 @@
 - **采集日期**: 2026-04-22
 - **Category**: Academic
 - **Topic**: `学术前沿`
+- **摘要(CN)**: When ChatGPT was released to the public in late 2022, it opened people’s eyes to how easily generative AI could churn out vast amounts of human-seemin
 - **摘要**: When ChatGPT was released to the public in late 2022, it opened people’s eyes to how easily generative AI could churn out vast amounts of human-seemin
 
 ### 大语言模型+时代
@@ -288,6 +289,7 @@
 - **采集日期**: 2026-04-23
 - **Category**: Academic
 - **Topic**: `学术前沿`
+- **摘要(CN)**: When ChatGPT was released to the public in late 2022, it opened people’s eyes to how easily generative AI could churn out vast amounts of human-seemin
 - **摘要**: When ChatGPT was released to the public in late 2022, it opened people’s eyes to how easily generative AI could churn out vast amounts of human-seemin
 
 ### 大语言模型+时代
@@ -316,6 +318,7 @@
 - **采集日期**: 2026-04-24
 - **Category**: Academic
 - **Topic**: `学术前沿`
+- **摘要(CN)**: When ChatGPT was released to the public in late 2022, it opened people’s eyes to how easily generative AI could churn out vast amounts of human-seemin
 - **摘要**: When ChatGPT was released to the public in late 2022, it opened people’s eyes to how easily generative AI could churn out vast amounts of human-seemin
 
 ### 大语言模型+时代
@@ -344,7 +347,8 @@
 - **采集日期**: 2026-04-25
 - **Category**: Academic
 - **Topic**: `学术/模型架构`
-- **摘要**: On Friday, Chinese AI firm DeepSeek released a preview of V4, its long-awaited new flagship model. Notably, the model can process much longer prompts 
+- **摘要(CN)**: On Friday, Chinese AI firm DeepSeek released a preview of V4, its long-awaited new flagship model. Notably, the model can process much longer prompts
+- **摘要**: On Friday, Chinese AI firm DeepSeek released a preview of V4, its long-awaited new flagship model. Notably, the model can process much longer prompts
 
 ### Supercharged scams
 - **链接**: https://www.technologyreview.com/2026/04/21/1135647/supercharged-scams-ai-artificial-intelligence/
@@ -352,5 +356,6 @@
 - **采集日期**: 2026-04-25
 - **Category**: Academic
 - **Topic**: `学术前沿`
+- **摘要(CN)**: When ChatGPT was released to the public in late 2022, it opened people’s eyes to how easily generative AI could churn out vast amounts of human-seemin
 - **摘要**: When ChatGPT was released to the public in late 2022, it opened people’s eyes to how easily generative AI could churn out vast amounts of human-seemin
 

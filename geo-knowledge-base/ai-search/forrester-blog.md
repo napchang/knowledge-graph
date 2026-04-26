@@ -40,6 +40,7 @@
 - **采集日期**: 2026-04-22
 - **Category**: Ai Search
 - **Topic**: `GEO`
+- **摘要(CN)**: Amid escalating geopolitical conflicts, economic turmoil, and ongoing tariff chaos, chief information security officers (CISOs) are operating in a pro
 - **摘要**: Amid escalating geopolitical conflicts, economic turmoil, and ongoing tariff chaos, chief information security officers (CISOs) are operating in a pro
 
 ### Enterprise Content Moves From Tools To Systems: Adobe Summit Takeaways
@@ -48,6 +49,7 @@
 - **采集日期**: 2026-04-23
 - **Category**: Ai Search
 - **Topic**: `GEO`
+- **摘要(CN)**: Enterprise content leaders are under pressure on three fronts. They need faster time to activation as buyer behavior outpaces traditional campaign cyc
 - **摘要**: Enterprise content leaders are under pressure on three fronts. They need faster time to activation as buyer behavior outpaces traditional campaign cyc
 
 ### Enterprise Content Moves From Tools To Systems: Adobe Summit Takeaways
@@ -56,6 +58,7 @@
 - **采集日期**: 2026-04-24
 - **Category**: Ai Search
 - **Topic**: `GEO`
+- **摘要(CN)**: Enterprise content leaders are under pressure on three fronts. They need faster time to activation as buyer behavior outpaces traditional campaign cyc
 - **摘要**: Enterprise content leaders are under pressure on three fronts. They need faster time to activation as buyer behavior outpaces traditional campaign cyc
 
 ### Enterprise Content Moves From Tools To Systems: Adobe Summit Takeaways
@@ -64,5 +67,6 @@
 - **采集日期**: 2026-04-25
 - **Category**: Ai Search
 - **Topic**: `GEO`
+- **摘要(CN)**: Enterprise content leaders are under pressure on three fronts. They need faster time to activation as buyer behavior outpaces traditional campaign cyc
 - **摘要**: Enterprise content leaders are under pressure on three fronts. They need faster time to activation as buyer behavior outpaces traditional campaign cyc
 

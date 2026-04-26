@@ -302,9 +302,8 @@ listen back to baby @amanrsanger when they were 5 people a...
 - **采集日期**: 2026-04-22
 - **Category**: Ai Industry
 - **Topic**: `开发者工具`
+- **摘要(CN)**: LS was the first podcast cursor ever did
 - **摘要**: LS was the first podcast cursor ever did
-
-listen back to baby @amanrsanger when they were 5 people and pre-PMF https://t.co/0tIvpIwjC4 https://t.co/yL
 
 ### jesus h christ that seed round https://t.co/KXsxpmJGqg
 - **链接**: https://x.com/swyx/status/2046790380889272527
@@ -312,6 +311,7 @@ listen back to baby @amanrsanger when they were 5 people and pre-PMF https://t.c
 - **采集日期**: 2026-04-22
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: jesus h christ that seed round https://t.co/KXsxpmJGqg
 - **摘要**: jesus h christ that seed round https://t.co/KXsxpmJGqg
 
 ### https://t.co/cMdyu5O1R1
@@ -328,6 +328,7 @@ listen back to baby @amanrsanger when they were 5 people and pre-PMF https://t.c
 - **采集日期**: 2026-04-23
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: some more references in footnotes https://t.co/n5Nt0PUxzT
 - **摘要**: some more references in footnotes https://t.co/n5Nt0PUxzT
 
 ### https://t.co/k3XbbNGw5s
@@ -346,9 +347,8 @@ listen back to baby @amanrsanger when they were 5 people and pre-PMF https://t.c
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `Anthropic动态`
+- **摘要(CN)**: come to the most ai pilled country per capita
 - **摘要**: come to the most ai pilled country per capita
-
-@anthropicai we want u https://t.co/u2as58vuWy
 
 ### i think the most underated part of today's launch is not GPT 5.5 at all
 
@@ -358,9 +358,8 @@ https://t.co/uwJtuJwgRx
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `OpenAI动态`
+- **摘要(CN)**: i think the most underated part of today's launch is not GPT 5.5 at all
 - **摘要**: i think the most underated part of today's launch is not GPT 5.5 at all
-
-https://t.co/uwJtuJwgRx
 
 ### wow the codex app is unrecognizable… almost like it shouldve been Atlas the whole time https://t.co/...
 - **链接**: https://x.com/swyx/status/2047461691580195310
@@ -368,6 +367,7 @@ https://t.co/uwJtuJwgRx
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: wow the codex app is unrecognizable… almost like it shouldve been Atlas the whole time https://t.co/PLTMJQwJmQ
 - **摘要**: wow the codex app is unrecognizable… almost like it shouldve been Atlas the whole time https://t.co/PLTMJQwJmQ
 
 ### @jsconfeu @cramforce talk now live! @vercel is doing incredible AI engineering work and it comes dir...
@@ -376,6 +376,7 @@ https://t.co/uwJtuJwgRx
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: @jsconfeu @cramforce talk now live! @vercel is doing incredible AI engineering work and it comes direct from the C-suite, this should be more common b
 - **摘要**: @jsconfeu @cramforce talk now live! @vercel is doing incredible AI engineering work and it comes direct from the C-suite, this should be more common b
 
 ### btw the hot skills of today become 
@@ -385,8 +386,8 @@ the posttrain targets of tomorrow https://t.co/JqetW5bzKl
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
-- **摘要**: btw the hot skills of today become 
-the posttrain targets of tomorrow https://t.co/JqetW5bzKl
+- **摘要(CN)**: btw the hot skills of today become
+- **摘要**: btw the hot skills of today become
 
 ### for the record, i put "undecided" as the last choice, not the second choice, @nikitabier sorry i kno...
 - **链接**: https://x.com/swyx/status/2047705175847256452
@@ -394,5 +395,6 @@ the posttrain targets of tomorrow https://t.co/JqetW5bzKl
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `开发者工具`
+- **摘要(CN)**: for the record, i put "undecided" as the last choice, not the second choice, @nikitabier sorry i know this is minor but it should be a 2 second fix in
 - **摘要**: for the record, i put "undecided" as the last choice, not the second choice, @nikitabier sorry i know this is minor but it should be a 2 second fix in
 

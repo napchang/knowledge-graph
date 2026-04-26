@@ -360,7 +360,8 @@
 - **采集日期**: 2026-04-23
 - **Category**: Ai Search
 - **Topic**: `SEO, 搜索度量`
-- **摘要**: The old organic search measurement model, built largely around rankings, clicks, and sessions, is becoming less sufficient on its own in an AI search 
+- **摘要(CN)**: The old organic search measurement model, built largely around rankings, clicks, and sessions, is becoming less sufficient on its own in an AI search
+- **摘要**: The old organic search measurement model, built largely around rankings, clicks, and sessions, is becoming less sufficient on its own in an AI search
 
 ### A 3 Layer Framework to Measure AI Presence, Readiness and Business Impact: Redefining Metrics for the AI Search Era
 - **链接**: https://www.aleydasolis.com/en/ai-search/a-3-layer-framework-to-measure-ai-presence-readiness-and-business-impact-redefining-metrics-for-the-ai-search-era/
@@ -368,7 +369,8 @@
 - **采集日期**: 2026-04-24
 - **Category**: Ai Search
 - **Topic**: `SEO, 搜索度量`
-- **摘要**: The old organic search measurement model, built largely around rankings, clicks, and sessions, is becoming less sufficient on its own in an AI search 
+- **摘要(CN)**: The old organic search measurement model, built largely around rankings, clicks, and sessions, is becoming less sufficient on its own in an AI search
+- **摘要**: The old organic search measurement model, built largely around rankings, clicks, and sessions, is becoming less sufficient on its own in an AI search
 
 ### A 3 Layer Framework to Measure AI Presence, Readiness and Business Impact: Redefining Metrics for the AI Search Era
 - **链接**: https://www.aleydasolis.com/en/ai-search/a-3-layer-framework-to-measure-ai-presence-readiness-and-business-impact-redefining-metrics-for-the-ai-search-era/
@@ -376,5 +378,6 @@
 - **采集日期**: 2026-04-25
 - **Category**: Ai Search
 - **Topic**: `SEO, 搜索度量`
-- **摘要**: The old organic search measurement model, built largely around rankings, clicks, and sessions, is becoming less sufficient on its own in an AI search 
+- **摘要(CN)**: The old organic search measurement model, built largely around rankings, clicks, and sessions, is becoming less sufficient on its own in an AI search
+- **摘要**: The old organic search measurement model, built largely around rankings, clicks, and sessions, is becoming less sufficient on its own in an AI search
 

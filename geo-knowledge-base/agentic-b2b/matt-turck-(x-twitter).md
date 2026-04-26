@@ -32,9 +32,6 @@ Come meet fellow AI builders and o...
 - **采集日期**: 2026-04-24
 - **Category**: Agentic B2B
 - **Topic**: `Automation`
-- **摘要**: AI folks in NYC -- Data Driven NYC (#121) this Tuesday at 6pm.  
-
-Come meet fellow AI builders and our speakers:
-
-* @RampLabs has been cooking lately 
+- **摘要(CN)**: AI folks in NYC -- Data Driven NYC (#121) this Tuesday at 6pm.
+- **摘要**: AI folks in NYC -- Data Driven NYC (#121) this Tuesday at 6pm.
 

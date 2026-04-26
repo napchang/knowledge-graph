@@ -130,5 +130,6 @@
 - **采集日期**: 2026-04-23
 - **Category**: Agentic B2B
 - **Topic**: `Sales, Automation/Workflow`
+- **摘要(CN)**: This is probably the biggest news yet in software going headless, and will bring knowledge work agents to the masses. The new ChatGPT agents have acce
 - **摘要**: This is probably the biggest news yet in software going headless, and will bring knowledge work agents to the masses. The new ChatGPT agents have acce
 

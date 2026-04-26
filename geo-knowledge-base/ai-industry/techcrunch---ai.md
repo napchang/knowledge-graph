@@ -10,6 +10,7 @@
 - **采集日期**: 2026-04-06
 - **Category**: Ai Industry
 - **Topic**: `Anthropic动态, 开发者工具`
+- **摘要(CN)**: It’s about to become more expensive for Claude Code subscribers to use Anthropic’s coding assistant with OpenClaw and other third-party tools.
 - **摘要**: It’s about to become more expensive for Claude Code subscribers to use Anthropic’s coding assistant with OpenClaw and other third-party tools.
 
 ### Anthropic is having a moment in the private markets; SpaceX could spoil the party
@@ -18,6 +19,7 @@
 - **采集日期**: 2026-04-06
 - **Category**: Ai Industry
 - **Topic**: `OpenAI动态, Anthropic动态`
+- **摘要(CN)**: Glen Anderson, president of Rainmaker Securities, says the secondary market for private shares has never been more active — with Anthropic the hottest
 - **摘要**: Glen Anderson, president of Rainmaker Securities, says the secondary market for private shares has never been more active — with Anthropic the hottest
 
 ### OpenAI前员工低调启动亿元风投基金
@@ -416,6 +418,7 @@
 - **采集日期**: 2026-04-22
 - **Category**: Ai Industry
 - **Topic**: `开发者工具, 融资并购`
+- **摘要(CN)**: Cursor was on track to close a $2 billion funding round this week but chose to halt discussions after SpaceX offered a $10 billion "collaboration fee"
 - **摘要**: Cursor was on track to close a $2 billion funding round this week but chose to halt discussions after SpaceX offered a $10 billion "collaboration fee"
 
 ### Google turns Chrome into an AI co-worker for the workplace
@@ -424,7 +427,8 @@
 - **采集日期**: 2026-04-22
 - **Category**: Ai Industry
 - **Topic**: `谷歌动态, 企业落地`
-- **摘要**: Google brings Gemini-powered "auto browse" capabilities to Chrome for enterprise users, letting workers automate tasks like research, data entry, and 
+- **摘要(CN)**: Google brings Gemini-powered "auto browse" capabilities to Chrome for enterprise users, letting workers automate tasks like research, data entry, and
+- **摘要**: Google brings Gemini-powered "auto browse" capabilities to Chrome for enterprise users, letting workers automate tasks like research, data entry, and
 
 ### OpenAI releases GPT-5.5, bringing company one step closer to an AI ‘super app’
 - **链接**: https://techcrunch.com/2026/04/23/openai-chatgpt-gpt-5-5-ai-model-superapp/
@@ -432,6 +436,7 @@
 - **采集日期**: 2026-04-23
 - **Category**: Ai Industry
 - **Topic**: `OpenAI动态`
+- **摘要(CN)**: OpenAI says its latest model offers increased capabilities across a broad variety of categories.
 - **摘要**: OpenAI says its latest model offers increased capabilities across a broad variety of categories.
 
 ### Another customer of troubled startup Delve suffered a big security incident
@@ -440,6 +445,7 @@
 - **采集日期**: 2026-04-23
 - **Category**: Ai Industry
 - **Topic**: `Agent生态, 融资并购, 硬件算力`
+- **摘要(CN)**: TechCrunch has confirmed that Delve was the compliance company that performed the security certifications for Context AI, the AI agent training startu
 - **摘要**: TechCrunch has confirmed that Delve was the compliance company that performed the security certifications for Context AI, the AI agent training startu
 
 ### Google to invest up to $40B in Anthropic in cash and compute
@@ -448,6 +454,7 @@
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `谷歌动态, Anthropic动态, 融资并购`
+- **摘要(CN)**: Google plans up to $40B investment in Anthropic as AI rivals race to secure massive compute capacity, following the limited release of its powerful, c
 - **摘要**: Google plans up to $40B investment in Anthropic as AI rivals race to secure massive compute capacity, following the limited release of its powerful, c
 
 ### OpenAI CEO apologizes to Tumbler Ridge community
@@ -456,5 +463,6 @@
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `OpenAI动态`
+- **摘要(CN)**: In a letter to the residents of Tumbler Ridge, Canada, OpenAI CEO Sam Altman said he is “deeply sorry” that his company failed to alert law enforcemen
 - **摘要**: In a letter to the residents of Tumbler Ridge, Canada, OpenAI CEO Sam Altman said he is “deeply sorry” that his company failed to alert law enforcemen
 

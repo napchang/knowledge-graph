@@ -80,6 +80,7 @@
 - **采集日期**: 2026-04-10
 - **Category**: Ai Industry
 - **Topic**: `产品动态`
+- **摘要(CN)**: This is a very useful feature https://t.co/SMMtjUDu2t
 - **摘要**: This is a very useful feature https://t.co/SMMtjUDu2t
 
 ### AI技术新突破
@@ -378,6 +379,7 @@
 - **采集日期**: 2026-04-22
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: huge huge deal https://t.co/addvlAyON4
 - **摘要**: huge huge deal https://t.co/addvlAyON4
 
 ### Okay this is sick but how does it avoid butterfly effect issues? https://t.co/VA0i4keiYy
@@ -386,6 +388,7 @@
 - **采集日期**: 2026-04-22
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: Okay this is sick but how does it avoid butterfly effect issues? https://t.co/VA0i4keiYy
 - **摘要**: Okay this is sick but how does it avoid butterfly effect issues? https://t.co/VA0i4keiYy
 
 ### Monologue Notes is live!
@@ -398,11 +401,8 @@ Bu...
 - **采集日期**: 2026-04-22
 - **Category**: Ai Industry
 - **Topic**: `Agent生态`
+- **摘要(CN)**: Monologue Notes is live!
 - **摘要**: Monologue Notes is live!
-
-Record a note on a walk, in a meeting, or in the middle of the night. 
-
-Built to be agent native: your agents can access you
 
 ### YouTube: https://t.co/mxQBcSt014 
 
@@ -412,9 +412,8 @@ Spotify: https://t.co/GhHxzfZyaJ
 - **采集日期**: 2026-04-23
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
-- **摘要**: YouTube: https://t.co/mxQBcSt014 
-
-Spotify: https://t.co/GhHxzfZyaJ
+- **摘要(CN)**: YouTube: https://t.co/mxQBcSt014
+- **摘要**: YouTube: https://t.co/mxQBcSt014
 
 ### LLMs write better code than most human engineers. If code is handled, what's left for us?
 
@@ -424,9 +423,8 @@ I chatted...
 - **采集日期**: 2026-04-23
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: LLMs write better code than most human engineers. If code is handled, what's left for us?
 - **摘要**: LLMs write better code than most human engineers. If code is handled, what's left for us?
-
-I chatted with @kieranklaassen, GM of @CoraComputerCora and
 
 ### a lot of good ideas in here https://t.co/2dVddTUo5i
 - **链接**: https://x.com/danshipper/status/2046947032120574144
@@ -434,6 +432,7 @@ I chatted with @kieranklaassen, GM of @CoraComputerCora and
 - **采集日期**: 2026-04-23
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: a lot of good ideas in here https://t.co/2dVddTUo5i
 - **摘要**: a lot of good ideas in here https://t.co/2dVddTUo5i
 
 ### 👇👇👇 https://t.co/r6OXL7QzBM
@@ -442,6 +441,7 @@ I chatted with @kieranklaassen, GM of @CoraComputerCora and
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: 👇👇👇 https://t.co/r6OXL7QzBM
 - **摘要**: 👇👇👇 https://t.co/r6OXL7QzBM
 
 ### Full GPT-5.5 vibe check: https://t.co/pjNxHR9ADq
@@ -450,6 +450,7 @@ I chatted with @kieranklaassen, GM of @CoraComputerCora and
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `OpenAI动态`
+- **摘要(CN)**: Full GPT-5.5 vibe check: https://t.co/pjNxHR9ADq
 - **摘要**: Full GPT-5.5 vibe check: https://t.co/pjNxHR9ADq
 
 ### many models write a great plan and then get scared of it.
@@ -460,11 +461,8 @@ I chatted with @kieranklaassen, GM of @CoraComputerCora and
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `OpenAI动态`
+- **摘要(CN)**: many models write a great plan and then get scared of it.
 - **摘要**: many models write a great plan and then get scared of it.
-
-@OpenAI's new GPT-5.5 just does the thing.
-
-here's what changed 👇 https://t.co/Z79GUK7Opd
 
 ### Any AI knows more than any individual human 
 
@@ -474,9 +472,8 @@ But any individual human learns faster than any AI
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
-- **摘要**: Any AI knows more than any individual human 
-
-But any individual human learns faster than any AI
+- **摘要(CN)**: Any AI knows more than any individual human
+- **摘要**: Any AI knows more than any individual human
 
 ### generated in one shot with NotebookLM based on a book im reading
 
@@ -486,7 +483,6 @@ holy fuckin shit https://t.co/xZTD...
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: generated in one shot with NotebookLM based on a book im reading
 - **摘要**: generated in one shot with NotebookLM based on a book im reading
-
-holy fuckin shit https://t.co/xZTDmaIk3T
 

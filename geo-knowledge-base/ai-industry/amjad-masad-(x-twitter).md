@@ -302,9 +302,8 @@ He tried to weasel out of the case by unblocki...
 - **采集日期**: 2026-04-22
 - **Category**: Ai Industry
 - **Topic**: `监管安全`
+- **摘要(CN)**: Update on my lawsuit against Congressman Randy Fine.
 - **摘要**: Update on my lawsuit against Congressman Randy Fine.
-
-He tried to weasel out of the case by unblocking me, but this isn’t just about me. It’s about Fi
 
 ### “Mum, can we have the SpaceX IDE?”
 
@@ -316,11 +315,8 @@ Space IDE at home: https://t.c...
 - **采集日期**: 2026-04-22
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: “Mum, can we have the SpaceX IDE?”
 - **摘要**: “Mum, can we have the SpaceX IDE?”
-
-“No we have a space IDE at home”
-
-Space IDE at home: https://t.co/kRXv26iY3j
 
 ### Replit testified in support of the BASED Act: Stopping Big Tech from rigging software marketplaces (...
 - **链接**: https://x.com/amasad/status/2046762468199071765
@@ -328,6 +324,7 @@ Space IDE at home: https://t.co/kRXv26iY3j
 - **采集日期**: 2026-04-22
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: Replit testified in support of the BASED Act: Stopping Big Tech from rigging software marketplaces (very unbased). https://t.co/ZZwIzxgAVb
 - **摘要**: Replit testified in support of the BASED Act: Stopping Big Tech from rigging software marketplaces (very unbased). https://t.co/ZZwIzxgAVb
 
 ### Replit Security Agent making the internet a better place one app review at a time. https://t.co/5tet...
@@ -336,6 +333,7 @@ Space IDE at home: https://t.co/kRXv26iY3j
 - **采集日期**: 2026-04-23
 - **Category**: Ai Industry
 - **Topic**: `Agent生态`
+- **摘要(CN)**: Replit Security Agent making the internet a better place one app review at a time. https://t.co/5tet1REHgl
 - **摘要**: Replit Security Agent making the internet a better place one app review at a time. https://t.co/5tet1REHgl
 
 ### You can now call Replit Agent from Gemini Enterprise. https://t.co/SpN6qto4Gf
@@ -344,6 +342,7 @@ Space IDE at home: https://t.co/kRXv26iY3j
 - **采集日期**: 2026-04-23
 - **Category**: Ai Industry
 - **Topic**: `谷歌动态, Agent生态, 企业落地`
+- **摘要(CN)**: You can now call Replit Agent from Gemini Enterprise. https://t.co/SpN6qto4Gf
 - **摘要**: You can now call Replit Agent from Gemini Enterprise. https://t.co/SpN6qto4Gf
 
 ### While US politicians/lobbyists are scaremongering about “Chinese distillation,” Chinese scientists a...
@@ -352,6 +351,7 @@ Space IDE at home: https://t.co/kRXv26iY3j
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: While US politicians/lobbyists are scaremongering about “Chinese distillation,” Chinese scientists are actually sharing real AI breakthroughs in the o
 - **摘要**: While US politicians/lobbyists are scaremongering about “Chinese distillation,” Chinese scientists are actually sharing real AI breakthroughs in the o
 
 ### Dumbest design mistake in Apple history is folding “find on page” in Safari under “Share.” It is 3 c...
@@ -360,6 +360,7 @@ Space IDE at home: https://t.co/kRXv26iY3j
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: Dumbest design mistake in Apple history is folding “find on page” in Safari under “Share.” It is 3 clicks deep and makes no sense.
 - **摘要**: Dumbest design mistake in Apple history is folding “find on page” in Safari under “Share.” It is 3 clicks deep and makes no sense.
 
 ### DeepSeek v4 just dropped https://t.co/KE3qggapPg
@@ -368,6 +369,7 @@ Space IDE at home: https://t.co/kRXv26iY3j
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: DeepSeek v4 just dropped https://t.co/KE3qggapPg
 - **摘要**: DeepSeek v4 just dropped https://t.co/KE3qggapPg
 
 ### Import your Vercel or Lovable apps to Replit with a few clicks: https://t.co/RRtqzwnw2G
@@ -376,5 +378,6 @@ Space IDE at home: https://t.co/kRXv26iY3j
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: Import your Vercel or Lovable apps to Replit with a few clicks: https://t.co/RRtqzwnw2G
 - **摘要**: Import your Vercel or Lovable apps to Replit with a few clicks: https://t.co/RRtqzwnw2G
 
