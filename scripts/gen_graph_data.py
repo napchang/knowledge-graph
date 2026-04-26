@@ -37,23 +37,19 @@ if os.path.exists(enrich_cache_path):
 
 categories = ['ai-search', 'agentic-b2b', 'ai-industry', 'academic']
 cat_names = {
-    'ai-search': 'AI搜索',
+    'ai-search': 'AI鎼滅储',
     'agentic-b2b': 'Agentic B2B',
-    'ai-industry': 'AI行业动态',
-    'academic': '学术研究'
+    'ai-industry': 'AI琛屼笟鍔ㄦ€?,
+    'academic': '瀛︽湳鐮旂┒'
 }
 # New color scheme from user
 cat_colors = {
-    'ai-search': '#FF6B35',      # 破晓橙
-    'agentic-b2b': '#4A7BC3',    # 飞天蓝
-    'ai-industry': '#E6B85C',    # 大地金
-    'academic': '#5A92E5'        # 升华蓝
-}
+    'ai-search': '#FF6B35',      # 鐮存檽姗?    'agentic-b2b': '#4A7BC3',    # 椋炲ぉ钃?    'ai-industry': '#E6B85C',    # 澶у湴閲?    'academic': '#5A92E5'        # 鍗囧崕钃?}
 cat_desc = {
-    'ai-search': '搜索引擎优化、GEO、AEO、SEO、排名算法、搜索产品商业化',
-    'agentic-b2b': '营销自动化、销售工具、CRM、Workflow、HubSpot框架、客户体验',
-    'ai-industry': '产品发布、融资动态、大厂战略、Builder动态、行业趋势',
-    'academic': '论文发布、算法研究、模型架构（MIT/Stanford/arXiv）'
+    'ai-search': '鎼滅储寮曟搸浼樺寲銆丟EO銆丄EO銆丼EO銆佹帓鍚嶇畻娉曘€佹悳绱骇鍝佸晢涓氬寲',
+    'agentic-b2b': '钀ラ攢鑷姩鍖栥€侀攢鍞伐鍏枫€丆RM銆乄orkflow銆丠ubSpot妗嗘灦銆佸鎴蜂綋楠?,
+    'ai-industry': '浜у搧鍙戝竷銆佽瀺璧勫姩鎬併€佸ぇ鍘傛垬鐣ャ€丅uilder鍔ㄦ€併€佽涓氳秼鍔?,
+    'academic': '璁烘枃鍙戝竷銆佺畻娉曠爺绌躲€佹ā鍨嬫灦鏋勶紙MIT/Stanford/arXiv锛?
 }
 
 # Use latest collection date from knowledge base as "today"
@@ -109,6 +105,7 @@ def is_recent(date_str):
     return (today_d - d).days <= 2
 
 articles = []
+seen_article_links = set()  # deduplicate across all markdown files
 for cat in categories:
     cat_dir = os.path.join(kb_dir, cat)
     if not os.path.exists(cat_dir):
@@ -146,23 +143,26 @@ for cat in categories:
             cn_summary = ''
             for line in lines[1:]:
                 line = line.strip()
-                if line.startswith('- **链接**:'):
+                if line.startswith('- **閾炬帴**:'):
                     link = line.split(':', 1)[1].strip()
-                elif line.startswith('- **日期**:'):
+                elif line.startswith('- **鏃ユ湡**:'):
                     date = line.split(':', 1)[1].strip()
-                elif line.startswith('- **采集日期**:'):
+                elif line.startswith('- **閲囬泦鏃ユ湡**:'):
                     collection_date_from_file = line.split(':', 1)[1].strip()
                 elif line.startswith('- **Topic**:'):
                     m = re.search(r'`(.+?)`', line)
                     if m:
                         topic_str = m.group(1)
-                elif line.startswith('- **标题(CN)**:'):
+                elif line.startswith('- **鏍囬(CN)**:'):
                     cn_title = line.split(':', 1)[1].strip()
-                elif line.startswith('- **摘要(CN)**:'):
+                elif line.startswith('- **鎽樿(CN)**:'):
                     cn_summary = line.split(':', 1)[1].strip()
-                elif line.startswith('- **摘要**:'):
+                elif line.startswith('- **鎽樿**:'):
                     summary = line.split(':', 1)[1].strip()
             if en_title and link:
+                if link in seen_article_links:
+                    continue
+                seen_article_links.add(link)
                 cache = ENRICH_CACHE.get(link, {})
                 # Use collection date for is_today: article field > filename > published date
                 effective_collection_date = collection_date_from_file or collection_date or date
@@ -242,16 +242,16 @@ for cat in categories:
 
 # Tag normalization: fix vague academic tags
 ACADEMIC_TAG_MAP = {
-    '研究': '学术前沿',
-    '论文': '顶会论文',
+    '鐮旂┒': '瀛︽湳鍓嶆部',
+    '璁烘枃': '椤朵細璁烘枃',
 }
 def normalize_topic(topic, art):
     """Normalize vague tags, especially for academic category"""
-    if art['category'] == 'academic' and topic.lower() in ('研究', 'research', '论文', 'paper'):
+    if art['category'] == 'academic' and topic.lower() in ('鐮旂┒', 'research', '璁烘枃', 'paper'):
         # Try to extract meaningful topic from title
         title = art.get('cn_title', '') or art.get('title', '')
         # Extract key technical terms
-        tech_terms = re.findall(r'(LLM|RAG|检索|向量|知识图谱|多模态|幻觉|推理|生成|对齐|微调|预训练|Transformer|BERT|GPT|Embedding|语义搜索|对比学习|信息检索)', title, re.I)
+        tech_terms = re.findall(r'(LLM|RAG|妫€绱鍚戦噺|鐭ヨ瘑鍥捐氨|澶氭ā鎬亅骞昏|鎺ㄧ悊|鐢熸垚|瀵归綈|寰皟|棰勮缁億Transformer|BERT|GPT|Embedding|璇箟鎼滅储|瀵规瘮瀛︿範|淇℃伅妫€绱?', title, re.I)
         if tech_terms:
             return tech_terms[0]
         # Try English technical terms from title
@@ -259,10 +259,10 @@ def normalize_topic(topic, art):
         for t in en_terms:
             if len(t) > 3 and t.lower() not in ('the', 'and', 'for', 'with', 'from', 'how', 'new', 'use', 'using', 'based', 'approach', 'method'):
                 return t.strip()
-        return '学术前沿'
+        return '瀛︽湳鍓嶆部'
     return ACADEMIC_TAG_MAP.get(topic, topic)
 
-# Collect topic → articles mapping & build hierarchy
+# Collect topic 鈫?articles mapping & build hierarchy
 for art in articles:
     for topic in art['topics']:
         topic = normalize_topic(topic, art)
@@ -313,7 +313,7 @@ for parent_name, info in parent_tags.items():
         'source': f'cat_{cat}',
         'target': tag_id,
         'value': 2,
-        'label': '包含'
+        'label': '鍖呭惈'
     })
     # Parent tag only connects to child tags, not articles (to avoid overcrowding)
 
@@ -332,7 +332,7 @@ for topic, art_list in topic_articles.items():
                 'source': tag_id,
                 'target': f'art_{idx}',
                 'value': 1,
-                'label': '关联'
+                'label': '鍏宠仈'
             })
         continue
     created_tag_ids.add(tag_id)
@@ -355,14 +355,14 @@ for topic, art_list in topic_articles.items():
             'source': f'tag_{parent_name}',
             'target': tag_id,
             'value': 2,
-            'label': '子类'
+            'label': '瀛愮被'
         })
     else:
         edges.append({
             'source': f'cat_{cat}',
             'target': tag_id,
             'value': 2,
-            'label': '包含'
+            'label': '鍖呭惈'
         })
     for art in art_list:
         idx = art_index.get(art['link'])
@@ -372,7 +372,7 @@ for topic, art_list in topic_articles.items():
             'source': tag_id,
             'target': f'art_{idx}',
             'value': 1,
-            'label': '关联'
+            'label': '鍏宠仈'
         })
 
 # Deduplicate labels
@@ -403,14 +403,11 @@ for i, art in enumerate(articles):
     border_color = '#ffffff'
     if imp >= 5:
         border_width = 3
-        border_color = '#FF6B35'  # 破晓橙边框
-    elif imp >= 4:
+        border_color = '#FF6B35'  # 鐮存檽姗欒竟妗?    elif imp >= 4:
         border_width = 2
-        border_color = '#E6B85C'  # 大地金边框
-    elif is_important:
+        border_color = '#E6B85C'  # 澶у湴閲戣竟妗?    elif is_important:
         border_width = 2
-        border_color = '#4A7BC3'  # 飞天蓝边框
-    
+        border_color = '#4A7BC3'  # 椋炲ぉ钃濊竟妗?    
     # Build unique label
     base_label = art['cn_title'][:26] + '...' if art.get('cn_title') and len(art['cn_title']) > 26 else (art['cn_title'] or art['title'][:26] + '...')
     if label_counts.get(base_label, 0) > 1:
@@ -480,18 +477,18 @@ for idx, tags in article_tags.items():
                         'target': f'tag_{t2}',
                         'value': 1,
                         'type': 'cross',
-                        'label': '跨主题'
+                        'label': '璺ㄤ富棰?
                     })
 
 # Inter-category connections (thematic links between the 4 main categories)
 # These represent semantic relationships between domains
 inter_cat_links = [
-    ('cat_ai-search', 'cat_agentic-b2b', '搜索驱动B2B获客'),
-    ('cat_ai-search', 'cat_ai-industry', '搜索产品商业化'),
-    ('cat_ai-search', 'cat_academic', '搜索算法研究'),
-    ('cat_agentic-b2b', 'cat_ai-industry', 'B2B AI产品'),
-    ('cat_agentic-b2b', 'cat_academic', 'Agentic研究'),
-    ('cat_ai-industry', 'cat_academic', '产学研转化')
+    ('cat_ai-search', 'cat_agentic-b2b', '鎼滅储椹卞姩B2B鑾峰'),
+    ('cat_ai-search', 'cat_ai-industry', '鎼滅储浜у搧鍟嗕笟鍖?),
+    ('cat_ai-search', 'cat_academic', '鎼滅储绠楁硶鐮旂┒'),
+    ('cat_agentic-b2b', 'cat_ai-industry', 'B2B AI浜у搧'),
+    ('cat_agentic-b2b', 'cat_academic', 'Agentic鐮旂┒'),
+    ('cat_ai-industry', 'cat_academic', '浜у鐮旇浆鍖?)
 ]
 for src, tgt, label in inter_cat_links:
     edges.append({
