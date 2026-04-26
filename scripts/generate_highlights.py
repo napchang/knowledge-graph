@@ -71,7 +71,7 @@ def generate_one(art):
         'Content-Type': 'application/json'
     }
     payload = {
-        'model': 'deepseek-v4-pro',
+        'model': 'deepseek-v4-flash',
         'messages': [{'role': 'user', 'content': prompt}],
         'max_tokens': 800,
         'temperature': 0.7
@@ -82,7 +82,7 @@ def generate_one(art):
             r = requests.post(API_URL, headers=headers, json=payload, timeout=30)
             if r.status_code == 200:
                 result = r.json()['choices'][0]['message']['content'].strip()
-                return art['id'], result
+                return art.get('link', art['id']), result
             else:
                 print(f"  API error {r.status_code} for {art['id']}: {r.text[:80]}")
                 time.sleep(2)
@@ -112,7 +112,7 @@ for batch_start in range(0, len(pending), batch_size):
             processed += 1
             if result:
                 success += 1
-            print(f"  [{processed}/{len(pending)}] {art_id}: {'OK' if result else 'FAIL'}")
+            print(f"  [{processed}/{len(pending)}] {art_key[:40]}...: {'OK' if result else 'FAIL'}")
     
     # Save cache after each batch
     with open(cache_path, 'w', encoding='utf-8') as f:
