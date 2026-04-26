@@ -20,8 +20,8 @@ def validate():
         with_cn_title = sum(1 for a in today_arts if a.get('cn_title'))
         coverage = with_cn_title / len(today_arts)
         print(f"[CHECK] 浠婃棩鏂囩珷涓枃鏍囬瑕嗙洊鐜? {with_cn_title}/{len(today_arts)} ({coverage:.1%})")
-        if coverage < 0.75:
-            errors.append(f"浠婃棩鏂囩珷涓枃鏍囬瑕嗙洊鐜囦粎 {coverage:.1%}锛屼綆浜?75% 闃堝€?)
+        if coverage < 0.8:
+            errors.append(f"浠婃棩鏂囩珷涓枃鏍囬瑕嗙洊鐜囦粎 {coverage:.1%}锛屼綆浜?80% 闃堝€?)
     
     # 2. 闃呰绮惧崕瑕嗙洊鐜囨鏌?    if today_arts:
         with_hl = sum(1 for a in today_arts if a.get('reading_highlight'))
@@ -95,26 +95,35 @@ def validate():
     else:
         print(f"[CHECK] 浠婃棩鏂囩珷鏁伴噺妫€娴嬮€氳繃: {today_count} 鏉?)
     
+    # 11. title-summary 涓€鑷存€ф娴嬶紙闃插尽 feedparser 閿欎綅锛?    def check_title_summary_match(title, summary, min_overlap=0.2):
+        if not title or not summary or len(summary) < 50:
+            return True
+        title_words = [w.strip('.,-:;!?').lower() for w in title.split() if len(w.strip('.,-:;!?')) >= 4]
+        if not title_words:
+            return True
+        summary_lower = summary.lower()
+        matches = sum(1 for w in title_words if w in summary_lower)
+        return matches / len(title_words) >= min_overlap
+    
+    mismatch_count = sum(1 for a in articles if not check_title_summary_match(a.get('title_en', ''), a.get('summary', '')))
+    mismatch_rate = mismatch_count / len(articles) if articles else 0
+    print(f"[CHECK] title-summary 涓€鑷存€? {len(articles) - mismatch_count}/{len(articles)} 閫氳繃 ({1-mismatch_rate:.1%})")
+    if mismatch_rate > 0.1:
+        errors.append(f"title-summary 閿欎綅鐜?{mismatch_rate:.1%}锛屼弗閲嶈秴鏍囷紙闃堝€?10%锛夈€俧eedparser 鍙兘杩斿洖浜嗛敊浣嶆暟鎹紝璇锋鏌ラ噰闆嗗櫒銆?)
+    elif mismatch_rate > 0.05:
+        warnings.append(f"title-summary 閿欎綅鐜?{mismatch_rate:.1%}锛屽缓璁鏌?RSS 閲囬泦婧?)
+    
     # Summary
     print(f"\n{'='*50}")
     print(f"楠岃瘉缁撴灉: {len(errors)} 涓敊璇? {len(warnings)} 涓鍛?)
     
     for e in errors:
-        try:
-            print(f"  [FAIL] ERROR: {e}")
-        except UnicodeEncodeError:
-            print(f"  [FAIL] ERROR: {e.encode('ascii', 'replace').decode()}")
+        print(f"  鉂?ERROR: {e}")
     for w in warnings:
-        try:
-            print(f"  [WARN] WARNING: {w}")
-        except UnicodeEncodeError:
-            print(f"  [WARN] WARNING: {w.encode('ascii', 'replace').decode()}")
+        print(f"  鈿狅笍  WARNING: {w}")
     
     if not errors and not warnings:
-        try:
-            print("  [OK] 鍏ㄩ儴閫氳繃")
-        except UnicodeEncodeError:
-            print("  [OK] All passed")
+        print("  鉁?鍏ㄩ儴閫氳繃")
     
     return len(errors) == 0
 
