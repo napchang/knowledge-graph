@@ -242,10 +242,15 @@ def load_existing_cn_content():
                 parts = re.split(r'\n### ', content)
                 for part in parts[1:]:
                     lines = part.strip().split('\n')
+                    if not lines:
+                        continue
+                    # Parse title line: "### [Source] Title" or "### Title"
+                    title_line = lines[0].strip().lstrip('#').strip()
+                    title_line = re.sub(r'^\[.*?\]\s*', '', title_line)
                     link = ''
                     cn_title = ''
                     cn_summary = ''
-                    for line in lines:
+                    for line in lines[1:]:
                         line = line.strip()
                         if line.startswith('- **链接**:'):
                             link = line.split(':', 1)[1].strip()
@@ -253,8 +258,17 @@ def load_existing_cn_content():
                             cn_title = line.split(':', 1)[1].strip()
                         elif line.startswith('- **摘要(CN)**:'):
                             cn_summary = line.split(':', 1)[1].strip()
+                        elif line.startswith('- **摘要**:'):
+                            # rss-news-aggregator format: Chinese summary in 摘要 field
+                            val = line.split(':', 1)[1].strip()
+                            if val and len(val) > 10 and not val.startswith('http'):
+                                cn_summary = val
+                    # If no explicit cn_title, use the title line if it looks Chinese
+                    if not cn_title and title_line:
+                        # Heuristic: if title contains Chinese characters, use it as cn_title
+                        if any('\u4e00' <= c <= '\u9fff' for c in title_line):
+                            cn_title = title_line
                     if link and (cn_title or cn_summary):
-                        # rss-data source takes precedence
                         existing[link] = {'cn_title': cn_title, 'cn_summary': cn_summary}
                         count += 1
         return count
