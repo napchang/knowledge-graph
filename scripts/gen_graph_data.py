@@ -48,19 +48,19 @@ if os.path.exists(enrich_cache_path):
 
 categories = ['ai-search', 'agentic-b2b', 'ai-industry', 'academic']
 cat_names = {
-    'ai-search': 'AI鎼滅储',
+    'ai-search': 'AI搜索',
     'agentic-b2b': 'Agentic B2B',
     'ai-industry': 'AI琛屼笟鍔ㄦ€?,
-    'academic': '瀛︽湳鐮旂┒'
+    'academic': '学术研究'
 }
 # New color scheme from user
 cat_colors = {
-    'ai-search': '#FF6B35',      # 鐮存檽姗?    'agentic-b2b': '#4A7BC3',    # 椋炲ぉ钃?    'ai-industry': '#E6B85C',    # 澶у湴閲?    'academic': '#5A92E5'        # 鍗囧崕钃?}
+    'ai-search': '#FF6B35',      # 珊瑚橙    'agentic-b2b': '#4A7BC3',    # 飞天蓝    'ai-industry': '#E6B85C',    # 大地金    'academic': '#5A92E5'        # 升华蓝}
 cat_desc = {
     'ai-search': '鎼滅储寮曟搸浼樺寲銆丟EO銆丄EO銆丼EO銆佹帓鍚嶇畻娉曘€佹悳绱骇鍝佸晢涓氬寲',
     'agentic-b2b': '钀ラ攢鑷姩鍖栥€侀攢鍞伐鍏枫€丆RM銆乄orkflow銆丠ubSpot妗嗘灦銆佸鎴蜂綋楠?,
-    'ai-industry': '浜у搧鍙戝竷銆佽瀺璧勫姩鎬併€佸ぇ鍘傛垬鐣ャ€丅uilder鍔ㄦ€併€佽涓氳秼鍔?,
-    'academic': '璁烘枃鍙戝竷銆佺畻娉曠爺绌躲€佹ā鍨嬫灦鏋勶紙MIT/Stanford/arXiv锛?
+    'ai-industry': '产品发布、融资动态、大厂战略、Builder动态、行业趋势',
+    'academic': '论文发布、算法研究、模型架构（MIT/Stanford/arXiv）'
 }
 
 # Use latest collection date from knowledge base as "today"
