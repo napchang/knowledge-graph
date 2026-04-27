@@ -26,16 +26,6 @@ def check_title_summary_match(title, summary, min_overlap=0.2):
     return matches / len(title_words) >= min_overlap
 
 # Try load reading highlights cache
-READING_HIGHLIGHTS = {}
-hl_cache_path = os.path.join(base_dir, 'reading_highlights_cache.json')
-if os.path.exists(hl_cache_path):
-    try:
-        with open(hl_cache_path, 'r', encoding='utf-8') as f:
-            READING_HIGHLIGHTS = json.load(f)
-        print(f'Loaded reading highlights: {len(READING_HIGHLIGHTS)} articles')
-    except Exception as e:
-        print(f'Failed to load highlights: {e}')
-
 # Try load article enrich cache (unified source for Chinese content + reading highlights)
 ENRICH_CACHE = {}
 enrich_cache_path = os.path.join(base_dir, 'article_enrich_cache.json')
@@ -465,7 +455,7 @@ for i, art in enumerate(articles):
         'is_major_news': is_major,
         'border_width': border_width,
         'border_color': border_color,
-        'reading_highlight': ENRICH_CACHE.get(art['link'], {}).get('reading_highlight', '') or READING_HIGHLIGHTS.get(art['link'], '')
+        'reading_highlight': ENRICH_CACHE.get(art['link'], {}).get('reading_highlight', '')
     })
     # Hidden anchor edge: category -> article (for layout attraction)
     edges.append({
