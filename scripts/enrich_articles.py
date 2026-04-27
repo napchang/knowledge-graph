@@ -99,20 +99,16 @@ def generate_one(art):
 原文标题：{title_en}
 原文摘要：{summary_en}
 
-请严格按以下格式输出（不要添加额外说明）：
+请严格按以下格式输出（不要添加额外说明，不要输出示例中的提示文字，每个标签后直接跟实际内容）：
 
 【中文标题】
-10-15字，准确传达核心主题
+（此处写10-15字中文标题，准确传达核心主题）
 
 【中文摘要】
-50-80字，概括文章要点
+（此处写50-80字中文摘要，概括文章要点）
 
 【阅读精华】
-300-500字，结构为：
-- 【核心论点】文章的核心观点或立场
-- 【关键发现】支撑论点的关键数据或事实
-- 【行业意义】对 AI 行业的启示
-- 【行动建议】给读者的具体建议
+（此处写300-500字阅读精华，结构为：核心论点、关键发现、行业意义、行动建议）
 
 语言要求：口语化、有洞见感，不要简单翻译。
 """
@@ -139,19 +135,48 @@ def generate_one(art):
                 cn_summary = ''
                 reading_highlight = ''
                 
+                # Parse result with robust filtering for instruction text
+                EXCLUDE_PATTERNS = ['字，', '字、', '准确传达', '概括文章', '核心主题', '文章要点',
+                                    '此处写', '结构为', '核心论点', '关键发现', '行业意义', '行动建议',
+                                    '口语化', '不要简单翻译', '支撑论点', '对 AI 行业', '给读者的']
+                
                 if '【中文标题】' in result:
                     parts = result.split('【中文标题】', 1)[1]
-                    title_part = parts.split('【', 1)[0].strip()
-                    cn_title = title_part.replace('】', '').strip()[:30]
+                    lines = [l.strip() for l in parts.split('\n') if l.strip()]
+                    for line in lines:
+                        if line.startswith('【'):
+                            break
+                        if any(p in line for p in EXCLUDE_PATTERNS):
+                            continue
+                        if any('\u4e00' <= c <= '\u9fff' for c in line) and 5 <= len(line) <= 30:
+                            cn_title = line[:30]
+                            break
                 
                 if '【中文摘要】' in result:
                     parts = result.split('【中文摘要】', 1)[1]
-                    summary_part = parts.split('【', 1)[0].strip()
-                    cn_summary = summary_part.replace('】', '').strip()[:200]
+                    lines = [l.strip() for l in parts.split('\n') if l.strip()]
+                    summary_lines = []
+                    for line in lines:
+                        if line.startswith('【'):
+                            break
+                        if any(p in line for p in EXCLUDE_PATTERNS):
+                            continue
+                        if any('\u4e00' <= c <= '\u9fff' for c in line):
+                            summary_lines.append(line)
+                    cn_summary = '\n'.join(summary_lines)[:200]
                 
                 if '【阅读精华】' in result:
                     hl_part = result.split('【阅读精华】', 1)[1].strip()
-                    reading_highlight = hl_part[:1500]
+                    # Remove trailing instruction text
+                    hl_lines = []
+                    for line in hl_part.split('\n'):
+                        line = line.strip()
+                        if line.startswith('【') and not line.startswith('【核心论点】') and not line.startswith('【关键发现】') and not line.startswith('【行业意义】') and not line.startswith('【行动建议】'):
+                            break
+                        if any(p in line for p in EXCLUDE_PATTERNS) and len(line) < 40:
+                            continue
+                        hl_lines.append(line)
+                    reading_highlight = '\n'.join(hl_lines)[:1500]
                 
                 # Validate: highlight must contain core keywords from title
                 if reading_highlight and cn_title:
@@ -168,7 +193,9 @@ def generate_one(art):
                 if not cn_title and result:
                     lines = [l.strip() for l in result.split('\n') if l.strip()]
                     for line in lines:
-                        if any('\u4e00' <= c <= '\u9fff' for c in line) and len(line) <= 30:
+                        if any(p in line for p in EXCLUDE_PATTERNS):
+                            continue
+                        if any('\u4e00' <= c <= '\u9fff' for c in line) and 5 <= len(line) <= 30:
                             cn_title = line[:30]
                             break
                 
