@@ -25,17 +25,46 @@ def check_title_summary_match(title, summary, min_overlap=0.2):
     matches = sum(1 for w in title_words if w in summary_lower)
     return matches / len(title_words) >= min_overlap
 
-# Try load reading highlights cache
-# Try load article enrich cache (unified source for Chinese content + reading highlights)
+# Try load article enrich cache (legacy fallback)
 ENRICH_CACHE = {}
 enrich_cache_path = os.path.join(base_dir, 'article_enrich_cache.json')
 if os.path.exists(enrich_cache_path):
     try:
         with open(enrich_cache_path, 'r', encoding='utf-8') as f:
             ENRICH_CACHE = json.load(f)
-        print(f'Loaded enrich cache: {len(ENRICH_CACHE)} articles')
+        print(f'Loaded legacy enrich cache: {len(ENRICH_CACHE)} articles')
     except Exception as e:
         print(f'Failed to load enrich cache: {e}')
+
+# Load Article Packets (new source of truth for Chinese content)
+PACKET_MAP = {}
+packet_paths = [
+    os.path.join(base_dir, 'data', 'aggregated', 'latest_packets.json'),
+    os.path.join(base_dir, 'data', 'aggregated', 'article_packets.json'),
+]
+# Check dated subdirectories
+agg_dir = os.path.join(base_dir, 'data', 'aggregated')
+if os.path.exists(agg_dir):
+    for sub in sorted(os.listdir(agg_dir)):
+        if sub.startswith('2026'):
+            p = os.path.join(agg_dir, sub, 'article_packets.json')
+            if os.path.exists(p):
+                packet_paths.insert(0, p)
+
+for pp in packet_paths:
+    if os.path.exists(pp):
+        try:
+            with open(pp, 'r', encoding='utf-8') as f:
+                pdata = json.load(f)
+            for pkt in pdata.get('packets', []):
+                citations = pkt.get('evidence', {}).get('citations', [])
+                link = citations[0].get('url', '') if citations else ''
+                if link:
+                    PACKET_MAP[link] = pkt
+            print(f'Loaded {len(PACKET_MAP)} article packets from {pp}')
+            break
+        except Exception as e:
+            print(f'Failed to load packets from {pp}: {e}')
 
 categories = ['ai-search', 'agentic-b2b', 'ai-industry', 'academic']
 cat_names = {
@@ -184,8 +213,8 @@ for cat in categories:
                     'category': cat,
                     'topics': [t.strip() for t in topic_str.split(',')] if topic_str else [],
                     'summary': summary,
-                    'cn_title': cn_title or cache.get('cn_title', ''),
-                    'cn_summary': cn_summary or cache.get('cn_summary', '') or summary or en_title or '',
+                    'cn_title': cn_title or pkt.get('cn', {}).get('title', '') or cache.get('cn_title', ''),
+                    'cn_summary': cn_summary or pkt.get('cn', {}).get('summary', '') or cache.get('cn_summary', '') or summary or en_title or '',
                     'key_insight': cache.get('key_insight', ''),
                     'importance': cache.get('importance', 3),
                     'is_important_source': cache.get('is_important_source', False),
@@ -455,7 +484,8 @@ for i, art in enumerate(articles):
         'is_major_news': is_major,
         'border_width': border_width,
         'border_color': border_color,
-        'reading_highlight': ENRICH_CACHE.get(art['link'], {}).get('reading_highlight', '')
+        'reading_highlight': (PACKET_MAP.get(art['link'], {}).get('cn', {}).get('highlight', {}).get('claim_one_line', '')
+                               or ENRICH_CACHE.get(art['link'], {}).get('reading_highlight', ''))
     })
     # Hidden anchor edge: category -> article (for layout attraction)
     edges.append({

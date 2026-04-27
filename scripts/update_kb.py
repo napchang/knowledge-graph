@@ -7,7 +7,6 @@
 import json
 import os
 import re
-import sys
 import glob
 from datetime import datetime
 
@@ -299,14 +298,42 @@ def update_kb():
     # Preserve existing Chinese content across updates
     existing_cn = load_existing_cn_content()
     
-    # Load article enrich cache (source of truth for Chinese content)
+    # Load article packets (new source of truth for Chinese content)
+    packet_map = {}
+    packet_files = [
+        os.path.join(DATA_DIR, 'latest_packets.json'),
+        os.path.join(DATA_DIR, 'article_packets.json'),
+    ]
+    # Also check dated subdirectories for packets
+    for date_dir in sorted([d for d in os.listdir(DATA_DIR) if d.startswith('2026')]):
+        dated_packet = os.path.join(DATA_DIR, date_dir, 'article_packets.json')
+        if os.path.exists(dated_packet):
+            packet_files.insert(0, dated_packet)
+    
+    for pf in packet_files:
+        if os.path.exists(pf):
+            try:
+                with open(pf, 'r', encoding='utf-8') as f:
+                    pdata = json.load(f)
+                packets = pdata.get('packets', [])
+                for pkt in packets:
+                    citations = pkt.get('evidence', {}).get('citations', [])
+                    link = citations[0].get('url', '') if citations else ''
+                    if link:
+                        packet_map[link] = pkt
+                print(f'Loaded {len(packets)} article packets from {pf}')
+                break  # Use first found
+            except Exception as e:
+                print(f'Failed to load packets from {pf}: {e}')
+    
+    # Fallback: load article enrich cache (legacy)
     enrich_cache = {}
     enrich_cache_path = os.path.join(BASE_DIR, 'article_enrich_cache.json')
     if os.path.exists(enrich_cache_path):
         try:
             with open(enrich_cache_path, 'r', encoding='utf-8') as f:
                 enrich_cache = json.load(f)
-            print(f'Loaded enrich cache: {len(enrich_cache)} articles')
+            print(f'Loaded legacy enrich cache: {len(enrich_cache)} articles')
         except Exception as e:
             print(f'Failed to load enrich cache: {e}')
     
@@ -382,9 +409,18 @@ def update_kb():
                         link = article.get("link", "")
                         old = existing_cn.get(link, {})
                         cache = enrich_cache.get(link, {})
+                        pkt = packet_map.get(link, {})
                         en_title = article.get("title", "")
-                        cn_title = article.get("cn_title", "") or old.get('cn_title', '') or cache.get('cn_title', '')
-                        cn_summary = article.get("cn_summary", "") or old.get('cn_summary', '') or cache.get('cn_summary', '')
+                        # Priority: packet > article field > existing > legacy cache
+                        cn_title = (pkt.get('cn', {}).get('title', '') 
+                                    or article.get("cn_title", "") 
+                                    or old.get('cn_title', '') 
+                                    or cache.get('cn_title', ''))
+                        cn_summary = (pkt.get('cn', {}).get('summary', '') 
+                                      or article.get("cn_summary", "") 
+                                      or old.get('cn_summary', '') 
+                                      or cache.get('cn_summary', ''))
+                        cn_highlight = pkt.get('cn', {}).get('highlight', {})
                         en_summary = article.get("content", "")[:150] or article.get("summary", "")[:150]
                         date = article.get("published", "")[:10]
                         tags = ", ".join(article["_tags"])
@@ -423,9 +459,18 @@ def update_kb():
                         link = article.get("link", "")
                         old = existing_cn.get(link, {})
                         cache = enrich_cache.get(link, {})
+                        pkt = packet_map.get(link, {})
                         en_title = article.get("title", "")
-                        cn_title = article.get("cn_title", "") or old.get('cn_title', '') or cache.get('cn_title', '')
-                        cn_summary = article.get("cn_summary", "") or old.get('cn_summary', '') or cache.get('cn_summary', '')
+                        # Priority: packet > article field > existing > legacy cache
+                        cn_title = (pkt.get('cn', {}).get('title', '') 
+                                    or article.get("cn_title", "") 
+                                    or old.get('cn_title', '') 
+                                    or cache.get('cn_title', ''))
+                        cn_summary = (pkt.get('cn', {}).get('summary', '') 
+                                      or article.get("cn_summary", "") 
+                                      or old.get('cn_summary', '') 
+                                      or cache.get('cn_summary', ''))
+                        cn_highlight = pkt.get('cn', {}).get('highlight', {})
                         en_summary = article.get("content", "")[:150] or article.get("summary", "")[:150]
                         pub_date = article.get("published", "")[:10]
                         source = article.get("source", "Unknown")
