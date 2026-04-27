@@ -38,7 +38,19 @@ if os.path.exists(enrich_cache_path):
 
 # Load Article Packets (new source of truth for Chinese content)
 PACKET_MAP = {}
+IP_PACKET_MAP = {}  # flat CAP format for node detail popup
+
+def _link_from_flat(pkt):
+    cits = pkt.get('citations', [])
+    return cits[0].get('url', '') if cits else ''
+
+def _link_from_nested(pkt):
+    cits = pkt.get('evidence', {}).get('citations', [])
+    return cits[0].get('url', '') if cits else ''
+
 packet_paths = [
+    os.path.join(base_dir, 'data', 'aggregated', 'latest_ip_packets.json'),
+    os.path.join(base_dir, 'data', 'aggregated', 'ip_packets.json'),
     os.path.join(base_dir, 'data', 'aggregated', 'latest_packets.json'),
     os.path.join(base_dir, 'data', 'aggregated', 'article_packets.json'),
 ]
@@ -47,21 +59,39 @@ agg_dir = os.path.join(base_dir, 'data', 'aggregated')
 if os.path.exists(agg_dir):
     for sub in sorted(os.listdir(agg_dir)):
         if sub.startswith('2026'):
-            p = os.path.join(agg_dir, sub, 'article_packets.json')
-            if os.path.exists(p):
-                packet_paths.insert(0, p)
+            for fname in ['ip_packets.json', 'article_packets.json']:
+                p = os.path.join(agg_dir, sub, fname)
+                if os.path.exists(p):
+                    packet_paths.insert(0, p)
 
 for pp in packet_paths:
     if os.path.exists(pp):
         try:
             with open(pp, 'r', encoding='utf-8') as f:
                 pdata = json.load(f)
-            for pkt in pdata.get('packets', []):
-                citations = pkt.get('evidence', {}).get('citations', [])
-                link = citations[0].get('url', '') if citations else ''
-                if link:
+            packets = pdata.get('packets', [])
+            is_flat = pdata.get('schema') == 'cap_flat' or 'core_thesis' in (packets[0] if packets else {})
+            for pkt in packets:
+                if is_flat:
+                    link = _link_from_flat(pkt)
+                    IP_PACKET_MAP[link] = pkt
+                    # 同时生成 nested 兼容格式存入 PACKET_MAP
+                    se = pkt.get('supporting_evidence', [])
+                    PACKET_MAP[link] = {
+                        'cn': {
+                            'title': pkt.get('title', ''),
+                            'summary': pkt.get('content', ''),
+                            'highlight': {
+                                'claim_one_line': pkt.get('core_thesis', ''),
+                                'why_matters': se[0] if se else '',
+                                'surprise_factor': (pkt.get('claims_to_verify', ['']) or [''])[0],
+                            }
+                        }
+                    }
+                else:
+                    link = _link_from_nested(pkt)
                     PACKET_MAP[link] = pkt
-            print(f'Loaded {len(PACKET_MAP)} article packets from {pp}')
+            print(f'Loaded {len(PACKET_MAP)} article packets from {pp} (schema: {"flat" if is_flat else "nested"})')
             break
         except Exception as e:
             print(f'Failed to load packets from {pp}: {e}')
@@ -213,8 +243,8 @@ for cat in categories:
                     'category': cat,
                     'topics': [t.strip() for t in topic_str.split(',')] if topic_str else [],
                     'summary': summary,
-                    'cn_title': cn_title or pkt.get('cn', {}).get('title', '') or cache.get('cn_title', ''),
-                    'cn_summary': cn_summary or pkt.get('cn', {}).get('summary', '') or cache.get('cn_summary', '') or summary or en_title or '',
+                    'cn_title': cn_title or PACKET_MAP.get(link, {}).get('cn', {}).get('title', '') or cache.get('cn_title', ''),
+                    'cn_summary': cn_summary or PACKET_MAP.get(link, {}).get('cn', {}).get('summary', '') or cache.get('cn_summary', '') or summary or en_title or '',
                     'key_insight': cache.get('key_insight', ''),
                     'importance': cache.get('importance', 3),
                     'is_important_source': cache.get('is_important_source', False),
@@ -485,7 +515,11 @@ for i, art in enumerate(articles):
         'border_width': border_width,
         'border_color': border_color,
         'reading_highlight': (PACKET_MAP.get(art['link'], {}).get('cn', {}).get('highlight', {}).get('claim_one_line', '')
-                               or ENRICH_CACHE.get(art['link'], {}).get('reading_highlight', ''))
+                               or ENRICH_CACHE.get(art['link'], {}).get('reading_highlight', '')),
+        'why_matters': PACKET_MAP.get(art['link'], {}).get('cn', {}).get('highlight', {}).get('why_matters', ''),
+        'surprise_factor': PACKET_MAP.get(art['link'], {}).get('cn', {}).get('highlight', {}).get('surprise_factor', ''),
+        # 完整 CAP IP 字段（供 vis-network 节点点击展示）
+        'ip': IP_PACKET_MAP.get(art['link'], {}),
     })
     # Hidden anchor edge: category -> article (for layout attraction)
     edges.append({
