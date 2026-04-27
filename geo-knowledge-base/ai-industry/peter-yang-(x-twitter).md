@@ -467,6 +467,7 @@ My favorite is @tomkrcha's Pencil
 - **采集日期**: 2026-04-22
 - **Category**: Ai Industry
 - **Topic**: `OpenAI动态`
+- **标题(CN)**: ChatGPT图片生成：移动端流畅，网页端常失效
 - **摘要(CN)**: ChatGPT Images works great from the mobile app, but when I try to generate images on @ChatGPTapp web - it often forgets it has access to the image too
 - **摘要**: ChatGPT Images works great from the mobile app, but when I try to generate images on @ChatGPTapp web - it often forgets it has access to the image too
 
@@ -544,6 +545,7 @@ Newsletter: https://t.co/t7w4L5uDfp
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `OpenAI动态`
+- **摘要(CN)**: I shared my full impressions for GPT 5.5 and ChatGPT Images 2 here, watch now: https://t.co/hdSCW7iaKT
 - **摘要**: I shared my full impressions for GPT 5.5 and ChatGPT Images 2 here, watch now: https://t.co/hdSCW7iaKT
 
 ### I've been doing the F-Zero test each time a new model comes out and GPT 5.5 and Codex is the only co...
@@ -563,6 +565,7 @@ Even made a
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: Can 5.5 drop soon it's distracting to wait
 - **摘要**: Can 5.5 drop soon it's distracting to wait
 
 ### Check out what else you can make with GPT 5.5 in my video: https://t.co/hdSCW7iaKT
@@ -571,6 +574,7 @@ Even made a
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `OpenAI动态`
+- **摘要(CN)**: Check out what else you can make with GPT 5.5 in my video: https://t.co/hdSCW7iaKT
 - **摘要**: Check out what else you can make with GPT 5.5 in my video: https://t.co/hdSCW7iaKT
 
 ### Asked GPT 5.5 and Codex to make Star Fox. This is after 15 min of prompting 🔥 https://t.co/GrnBjR6dG...
@@ -579,6 +583,7 @@ Even made a
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `OpenAI动态`
+- **摘要(CN)**: Asked GPT 5.5 and Codex to make Star Fox. This is after 15 min of prompting 🔥 https://t.co/GrnBjR6dGj https://t.co/OHODnf2yL4
 - **摘要**: Asked GPT 5.5 and Codex to make Star Fox. This is after 15 min of prompting 🔥 https://t.co/GrnBjR6dGj https://t.co/OHODnf2yL4
 
 ### What's brilliant is it's play testing it's own game for fun https://t.co/Z9hh12pcJW
@@ -587,5 +592,6 @@ Even made a
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: What's brilliant is it's play testing it's own game for fun https://t.co/Z9hh12pcJW
 - **摘要**: What's brilliant is it's play testing it's own game for fun https://t.co/Z9hh12pcJW
 

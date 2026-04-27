@@ -170,6 +170,7 @@ I am very thankful for everything he has done and I am very thankful for Apple.
 - **采集日期**: 2026-04-22
 - **Category**: Ai Industry
 - **Topic**: `OpenAI动态, 硬件算力`
+- **标题(CN)**: AI漫画秀：我们用ChatGPT画寻GPU之旅
 - **摘要(CN)**: Here is a manga made by ChatGPT Images 2.0 of @gabeeegoooh and me looking for more GPUs: https://t.co/ek95JfUN5V
 - **摘要**: Here is a manga made by ChatGPT Images 2.0 of @gabeeegoooh and me looking for more GPUs: https://t.co/ek95JfUN5V
 
@@ -191,6 +192,7 @@ ah fuck it, life imitates art. http...
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: "don't retweet this, don't retweet this, don't retweet this..."
 - **摘要**: "don't retweet this, don't retweet this, don't retweet this..."
 
 ah fuck it, life imitates art. https://t.co/5HYvYXfQzd
@@ -201,6 +203,7 @@ ah fuck it, life imitates art. https://t.co/5HYvYXfQzd
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `英伟达动态`
+- **摘要(CN)**: We tried a new thing with NVIDIA to roll out Codex across a whole company and it was awesome to see it work.
 - **摘要**: We tried a new thing with NVIDIA to roll out Codex across a whole company and it was awesome to see it work.
 
 Let us know if you'd like to do it at yo
@@ -211,6 +214,7 @@ Let us know if you'd like to do it at yo
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: embers https://t.co/BFyEr4z7rZ
 - **摘要**: embers https://t.co/BFyEr4z7rZ
 
 ### this was a good week.
@@ -223,6 +227,7 @@ happy building!
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: this was a good week.
 - **摘要**: this was a good week.
 
 proud of the team.
@@ -235,6 +240,7 @@ happy building!
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `OpenAI动态`
+- **摘要(CN)**: GPT-5.5 and GPT-5.5 Pro are now available in the API!
 - **摘要**: GPT-5.5 and GPT-5.5 Pro are now available in the API!
 
 ### 🫶 https://t.co/y2V2w64BhL
@@ -243,5 +249,6 @@ happy building!
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: 🫶 https://t.co/y2V2w64BhL
 - **摘要**: 🫶 https://t.co/y2V2w64BhL
 

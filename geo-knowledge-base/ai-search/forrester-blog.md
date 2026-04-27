@@ -40,6 +40,7 @@
 - **采集日期**: 2026-04-22
 - **Category**: Ai Search
 - **Topic**: `GEO`
+- **标题(CN)**: 地缘政治与经济动荡下，CISO如何逆势破局
 - **摘要(CN)**: Amid escalating geopolitical conflicts, economic turmoil, and ongoing tariff chaos, chief information security officers (CISOs) are operating in a pro
 - **摘要**: Amid escalating geopolitical conflicts, economic turmoil, and ongoing tariff chaos, chief information security officers (CISOs) are operating in a pro
 

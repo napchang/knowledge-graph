@@ -310,6 +310,7 @@
 - **采集日期**: 2026-04-25
 - **Category**: Ai Search
 - **Topic**: `SEO, 搜索度量`
+- **摘要(CN)**: How can you find low-competition keywords to boost your website’s SEO rankings? Find out here.
 - **摘要**: How can you find low-competition keywords to boost your website’s SEO rankings? Find out here.
 
 ### How to use Google Trends for SEO in 2026

@@ -190,6 +190,7 @@
 - **采集日期**: 2026-04-23
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **标题(CN)**: 增长战略没坏，是你在逃避决策
 - **摘要(CN)**: Growth strategies don’t usually fail because they’re wrong. They fail because leaders never make, or never finish, the decisions that strategy demands
 - **摘要**: Growth strategies don’t usually fail because they’re wrong. They fail because leaders never make, or never finish, the decisions that strategy demands
 
@@ -199,7 +200,8 @@
 - **采集日期**: 2026-04-23
 - **Category**: Ai Industry
 - **Topic**: `融资并购`
-- **摘要(CN)**: Warner Bros. Discovery (WBD) shareholders voted today to approve Paramount’s all‑cash acquisition of the company, clearing an important hurdle for one
+- **标题(CN)**: 华纳兄弟探索股东批准派拉蒙全现金收购
+- **摘要(CN)**: The real question has always been what comes next — i.e., whether the merger ultimately clears the higher regulatory and political hurdles that still
 - **摘要**: Warner Bros. Discovery (WBD) shareholders voted today to approve Paramount’s all‑cash acquisition of the company, clearing an important hurdle for one
 
 ### Roadmaps: Preparing To Self-Destruct In Three, Two, One …
@@ -218,6 +220,7 @@
 - **采集日期**: 2026-04-23
 - **Category**: Ai Industry
 - **Topic**: `融资并购`
+- **标题(CN)**: AI如何重塑贷款行业格局
 - **摘要(CN)**: Lending Is Reaching An Inflection Point More than 80% of financial services (FS) AI decision‑makers plan to increase investments in both predictive AI
 - **摘要**: Lending Is Reaching An Inflection Point More than 80% of financial services (FS) AI decision‑makers plan to increase investments in both predictive AI
 
@@ -237,6 +240,7 @@
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: Revenue enablement teams often deliver strong operational value but struggle to build sustained executive influence. Looking to IT security’s evolutio
 - **摘要**: Revenue enablement teams often deliver strong operational value but struggle to build sustained executive influence. Looking to IT security’s evolutio
 
 ### In The AI Era, Banks Need Dynamic Platforms — Results From The Forrester Wave™: Digital Banking Engagement Platforms, Q2 2026
@@ -245,6 +249,7 @@
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: To compete for customers and grow profitably, banks need the ability to adjust as much and as fast as required at any given moment. Leading digital ba
 - **摘要**: To compete for customers and grow profitably, banks need the ability to adjust as much and as fast as required at any given moment. Leading digital ba
 
 ### Canva Recasts Itself As An AI Platform For Enterprise Work
@@ -263,7 +268,8 @@
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
-- **摘要(CN)**: Warner Bros. Discovery (WBD) shareholders voted today to approve Paramount’s all‑cash acquisition of the company, clearing an important hurdle for one
+- **标题(CN)**: 华纳兄弟探索股东批准派拉蒙全现金收购
+- **摘要(CN)**: The real question has always been what comes next — i.e., whether the merger ultimately clears the higher regulatory and political hurdles that still
 - **摘要**: The real question has always been what comes next — i.e., whether the merger ultimately clears the higher regulatory and political hurdles that still 
 
 ### Roadmaps: Preparing To Self-Destruct In Three, Two, One …
@@ -282,6 +288,7 @@
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: Revenue enablement teams often deliver strong operational value but struggle to build sustained executive influence. Looking to IT security’s evolutio
 - **摘要**: Revenue enablement teams often deliver strong operational value but struggle to build sustained executive influence. Looking to IT security’s evolutio
 
 ### In The AI Era, Banks Need Dynamic Platforms — Results From The Forrester Wave™: Digital Banking Engagement Platforms, Q2 2026
@@ -290,6 +297,7 @@
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: To compete for customers and grow profitably, banks need the ability to adjust as much and as fast as required at any given moment. Leading digital ba
 - **摘要**: To compete for customers and grow profitably, banks need the ability to adjust as much and as fast as required at any given moment. Leading digital ba
 
 ### Canva Recasts Itself As An AI Platform For Enterprise Work
@@ -308,7 +316,8 @@
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
-- **摘要(CN)**: Warner Bros. Discovery (WBD) shareholders voted today to approve Paramount’s all‑cash acquisition of the company, clearing an important hurdle for one
+- **标题(CN)**: 华纳兄弟探索股东批准派拉蒙全现金收购
+- **摘要(CN)**: The real question has always been what comes next — i.e., whether the merger ultimately clears the higher regulatory and political hurdles that still
 - **摘要**: The real question has always been what comes next — i.e., whether the merger ultimately clears the higher regulatory and political hurdles that still 
 
 ### Roadmaps: Preparing To Self-Destruct In Three, Two, One …

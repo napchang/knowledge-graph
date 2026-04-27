@@ -467,6 +467,7 @@ we broke down how it performs on coding, writing, spreadsheets and more: https:/
 - **采集日期**: 2026-04-22
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **标题(CN)**: AI领域重磅交易，行业格局或迎巨变
 - **摘要(CN)**: huge huge deal https://t.co/addvlAyON4
 - **摘要**: huge huge deal https://t.co/addvlAyON4
 
@@ -476,6 +477,7 @@ we broke down how it performs on coding, writing, spreadsheets and more: https:/
 - **采集日期**: 2026-04-22
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **标题(CN)**: 惊人技术如何避免蝴蝶效应？
 - **摘要(CN)**: Okay this is sick but how does it avoid butterfly effect issues? https://t.co/VA0i4keiYy
 - **摘要**: Okay this is sick but how does it avoid butterfly effect issues? https://t.co/VA0i4keiYy
 
@@ -541,6 +543,7 @@ I chatted with @kieranklaassen, GM of @CoraComputerCora and
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: 👇👇👇 https://t.co/r6OXL7QzBM
 - **摘要**: 👇👇👇 https://t.co/r6OXL7QzBM
 
 ### Full GPT-5.5 vibe check: https://t.co/pjNxHR9ADq
@@ -549,6 +552,7 @@ I chatted with @kieranklaassen, GM of @CoraComputerCora and
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `OpenAI动态`
+- **摘要(CN)**: Full GPT-5.5 vibe check: https://t.co/pjNxHR9ADq
 - **摘要**: Full GPT-5.5 vibe check: https://t.co/pjNxHR9ADq
 
 ### many models write a great plan and then get scared of it.
@@ -574,6 +578,7 @@ But any individual human learns faster than any AI
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: Any AI knows more than any individual human
 - **摘要**: Any AI knows more than any individual human 
 
 But any individual human learns faster than any AI
@@ -586,6 +591,7 @@ holy fuckin shit https://t.co/xZTD...
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: generated in one shot with NotebookLM based on a book im reading
 - **摘要**: generated in one shot with NotebookLM based on a book im reading
 
 holy fuckin shit https://t.co/xZTDmaIk3T

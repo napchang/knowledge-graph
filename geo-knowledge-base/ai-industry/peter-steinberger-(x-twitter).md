@@ -260,6 +260,7 @@ reality: we are just an indicator of the coming storm https://t.co/UApg11cIzr
 - **采集日期**: 2026-04-19
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **标题(CN)**: 温哥华，难忘的精彩时光！
 - **摘要(CN)**: Vancouver, it’s been a blast! 🇨🇦 https://t.co/pGSqgpZZm9
 - **摘要**: Vancouver, it’s been a blast! 🇨🇦 https://t.co/pGSqgpZZm9
 
@@ -337,6 +338,7 @@ Small release, important fix: npm updates now repair bundled plugin run...
 - **采集日期**: 2026-04-22
 - **Category**: Ai Industry
 - **Topic**: `OpenAI动态`
+- **标题(CN)**: 【中文标题】
 - **摘要(CN)**: OpenClaw 2026.4.21 is live.
 - **摘要**: OpenClaw 2026.4.21 is live.
 
@@ -392,6 +394,7 @@ This release adds Git-backed archive sync, so a Discord archive can be published
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: The @github folks are amazing! https://t.co/dPN0ToC0Xf
 - **摘要**: The @github folks are amazing! https://t.co/dPN0ToC0Xf
 
 ### My favorite security advisories. https://t.co/JWCy9ySLzp
@@ -400,6 +403,7 @@ This release adds Git-backed archive sync, so a Discord archive can be published
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: My favorite security advisories. https://t.co/JWCy9ySLzp
 - **摘要**: My favorite security advisories. https://t.co/JWCy9ySLzp
 
 ### GPT 5.5 is definitely a step up in the character game. https://t.co/nXKtkjkZbu
@@ -408,6 +412,7 @@ This release adds Git-backed archive sync, so a Discord archive can be published
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `OpenAI动态`
+- **摘要(CN)**: GPT 5.5 is definitely a step up in the character game. https://t.co/nXKtkjkZbu
 - **摘要**: GPT 5.5 is definitely a step up in the character game. https://t.co/nXKtkjkZbu
 
 ### 🛰️ discrawl 0.6.0 is out!
@@ -418,6 +423,7 @@ Biggest new feature is that it can now *read* Discord DMs without any cus...
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `产品动态`
+- **摘要(CN)**: 🛰️ discrawl 0.6.0 is out!
 - **摘要**: 🛰️ discrawl 0.6.0 is out!
 
 Biggest new feature is that it can now *read* Discord DMs without any custom login tricks that might get you blocked. No wr

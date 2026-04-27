@@ -20,6 +20,7 @@
 - **采集日期**: 2026-04-06
 - **Category**: Ai Industry
 - **Topic**: `OpenAI动态, Anthropic动态`
+- **标题(CN)**: Anthropic风头正劲，SpaceX或成搅局者
 - **摘要(CN)**: Glen Anderson, president of Rainmaker Securities, says the secondary market for private shares has never been more active — with Anthropic the hottest
 - **摘要**: Glen Anderson, president of Rainmaker Securities, says the secondary market for private shares has never been more active — with Anthropic the hottest
 
@@ -419,6 +420,7 @@
 - **采集日期**: 2026-04-22
 - **Category**: Ai Industry
 - **Topic**: `开发者工具, 融资并购`
+- **摘要(CN)**: Cursor was on track to close a $2 billion funding round this week but chose to halt discussions after SpaceX offered a $10 billion "collaboration fee"
 - **摘要**: Cursor was on track to close a $2 billion funding round this week but chose to halt discussions after SpaceX offered a $10 billion "collaboration fee"
 
 ### Google turns Chrome into an AI co-worker for the workplace
@@ -427,6 +429,7 @@
 - **采集日期**: 2026-04-22
 - **Category**: Ai Industry
 - **Topic**: `谷歌动态, 企业落地`
+- **摘要(CN)**: Google brings Gemini-powered "auto browse" capabilities to Chrome for enterprise users, letting workers automate tasks like research, data entry, and
 - **摘要**: Google brings Gemini-powered "auto browse" capabilities to Chrome for enterprise users, letting workers automate tasks like research, data entry, and 
 
 ### OpenAI releases GPT-5.5, bringing company one step closer to an AI ‘super app’
@@ -455,6 +458,7 @@
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `谷歌动态, Anthropic动态, 融资并购`
+- **摘要(CN)**: Google plans up to $40B investment in Anthropic as AI rivals race to secure massive compute capacity, following the limited release of its powerful, c
 - **摘要**: Google plans up to $40B investment in Anthropic as AI rivals race to secure massive compute capacity, following the limited release of its powerful, c
 
 ### OpenAI CEO apologizes to Tumbler Ridge community
@@ -463,5 +467,6 @@
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `OpenAI动态`
+- **摘要(CN)**: In a letter to the residents of Tumbler Ridge, Canada, OpenAI CEO Sam Altman said he is “deeply sorry” that his company failed to alert law enforcemen
 - **摘要**: In a letter to the residents of Tumbler Ridge, Canada, OpenAI CEO Sam Altman said he is “deeply sorry” that his company failed to alert law enforcemen
 

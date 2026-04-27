@@ -440,6 +440,7 @@
 - **采集日期**: 2026-04-22
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **标题(CN)**: 2026年依然有效的10种外链建设策略
 - **摘要(CN)**: Learn 10 link building strategies that can help you grow your brand’s authority and search visibility.
 - **摘要**: Learn 10 link building strategies that can help you grow your brand’s authority and search visibility.
 
@@ -469,6 +470,7 @@
 - **采集日期**: 2026-04-23
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **标题(CN)**: 2026年依然有效的10种外链建设策略
 - **摘要(CN)**: Learn 10 link building strategies that can help you grow your brand’s authority and search visibility.
 - **摘要**: Learn 10 link building strategies that can help you grow your brand’s authority and search visibility.
 
@@ -498,6 +500,7 @@
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `谷歌动态`
+- **摘要(CN)**: You can find Google reviews by searching your business on Google or Maps. Follow these steps.
 - **摘要**: You can find Google reviews by searching your business on Google or Maps. Follow these steps.
 
 ### How to use Semrush for keyword research
@@ -516,6 +519,7 @@
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **标题(CN)**: 2026年依然有效的10种外链建设策略
 - **摘要(CN)**: Learn 10 link building strategies that can help you grow your brand’s authority and search visibility.
 - **摘要**: Learn 10 link building strategies that can help you grow your brand’s authority and search visibility.
 
@@ -545,5 +549,6 @@
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `谷歌动态`
+- **摘要(CN)**: You can find Google reviews by searching your business on Google or Maps. Follow these steps.
 - **摘要**: You can find Google reviews by searching your business on Google or Maps. Follow these steps.
 

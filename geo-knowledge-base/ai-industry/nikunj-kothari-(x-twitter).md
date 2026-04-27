@@ -410,6 +410,7 @@ It’s the fastest way to maximize sere
 - **采集日期**: 2026-04-23
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **标题(CN)**: 实时像素生成时代已定，未来已来
 - **摘要(CN)**: Every pixel will be generated in real time. It’s just a matter of when, not if. Demos like this show a view of what’s possible 👏 https://t.co/ykpQcR2j
 - **摘要**: Every pixel will be generated in real time. It’s just a matter of when, not if. Demos like this show a view of what’s possible 👏 https://t.co/ykpQcR2j
 
@@ -419,6 +420,7 @@ It’s the fastest way to maximize sere
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: Exhibit 237 on why Silicon Valley, the TV show, is a documentary.. https://t.co/NQO09BclNM
 - **摘要**: Exhibit 237 on why Silicon Valley, the TV show, is a documentary.. https://t.co/NQO09BclNM
 
 ### Even with all the model releases, this “stack” continues to be undefeated (for me)..
@@ -445,6 +447,7 @@ Why?
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `融资并购`
+- **摘要(CN)**: M&A is hitting a fever pitch.. at this rate, it’ll soon eclipse fundraising announcements.
 - **摘要**: M&A is hitting a fever pitch.. at this rate, it’ll soon eclipse fundraising announcements. 
 
 Why?
@@ -461,6 +464,7 @@ Why?
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `融资并购`
+- **摘要(CN)**: Some of my relatively new favorite follows..
 - **摘要**: Some of my relatively new favorite follows..
 
 &gt; @amypretzel (texture)
@@ -474,6 +478,7 @@ Why?
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `产品动态`
+- **摘要(CN)**: When the designer finds out the PM shipped their vibe coded designs straight to production.. https://t.co/WDbVJd9AXZ
 - **摘要**: When the designer finds out the PM shipped their vibe coded designs straight to production.. https://t.co/WDbVJd9AXZ
 
 ### Note to all product teams: project code names are not temporary, they are permanent. Like truly eter...
@@ -482,6 +487,7 @@ Why?
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `产品动态`
+- **摘要(CN)**: Note to all product teams: project code names are not temporary, they are permanent. Like truly eternal.
 - **摘要**: Note to all product teams: project code names are not temporary, they are permanent. Like truly eternal. 
 
 Choose very very wisely.

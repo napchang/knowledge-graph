@@ -170,6 +170,7 @@
 - **采集日期**: 2026-04-24
 - **Category**: Agentic B2B
 - **Topic**: `Marketing, Sales`
+- **摘要(CN)**: As Millennials and Gen Zers take the lead in B2B buying groups, traditional revenue assumptions are breaking down. This post explores how digital nati
 - **摘要**: As Millennials and Gen Zers take the lead in B2B buying groups, traditional revenue assumptions are breaking down. This post explores how digital nati
 
 ### Your Growth Strategy Isn’t Broken. The Problem Is That You’re Avoiding Decisions.
@@ -178,6 +179,7 @@
 - **采集日期**: 2026-04-24
 - **Category**: Agentic B2B
 - **Topic**: `B2B/Strategy`
+- **标题(CN)**: 增长战略没坏，是你在逃避决策
 - **摘要(CN)**: Growth strategies don’t usually fail because they’re wrong. They fail because leaders never make, or never finish, the decisions that strategy demands
 - **摘要**: Many B2B growth strategies fail not because the ambition behind them is wrong, but because leaders avoid or defer making critical decisions.
 
@@ -207,6 +209,7 @@
 - **采集日期**: 2026-04-25
 - **Category**: Agentic B2B
 - **Topic**: `Marketing, Sales`
+- **摘要(CN)**: As Millennials and Gen Zers take the lead in B2B buying groups, traditional revenue assumptions are breaking down. This post explores how digital nati
 - **摘要**: As Millennials and Gen Zers take the lead in B2B buying groups, traditional revenue assumptions are breaking down. This post explores how digital nati
 
 ### Your Growth Strategy Isn’t Broken. The Problem Is That You’re Avoiding Decisions.
@@ -215,6 +218,7 @@
 - **采集日期**: 2026-04-25
 - **Category**: Agentic B2B
 - **Topic**: `B2B/Strategy`
+- **标题(CN)**: 增长战略没坏，是你在逃避决策
 - **摘要(CN)**: Growth strategies don’t usually fail because they’re wrong. They fail because leaders never make, or never finish, the decisions that strategy demands
 - **摘要**: Many B2B growth strategies fail not because the ambition behind them is wrong, but because leaders avoid or defer making critical decisions.
 

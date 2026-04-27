@@ -314,6 +314,7 @@ Available in beta on all paid plans. https://t.co/Bqm0kHdsVY
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `Agent生态`
+- **摘要(CN)**: Memories are stored as files, so developers can export them, manage them via the API, and keep full control over what agents retain.
 - **摘要**: Memories are stored as files, so developers can export them, manage them via the API, and keep full control over what agents retain.
 
 Read more: https
@@ -326,6 +327,7 @@ Your agents can now learn from every session...
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `Anthropic动态, Agent生态`
+- **摘要(CN)**: Memory on Claude Managed Agents is now in public beta.
 - **摘要**: Memory on Claude Managed Agents is now in public beta.
 
 Your agents can now learn from every session, using an intelligence-optimized memory layer tha
@@ -338,6 +340,7 @@ Read more: https://t.co/UPh4p2NO...
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: Available now on web, desktop, and mobile (beta) across all plans.
 - **摘要**: Available now on web, desktop, and mobile (beta) across all plans.
 
 Read more: https://t.co/UPh4p2NODu

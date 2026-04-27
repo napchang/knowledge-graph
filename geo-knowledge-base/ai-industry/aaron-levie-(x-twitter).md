@@ -118,6 +118,7 @@ The real world
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `Agent生态`
+- **摘要(CN)**: Sorry to anyone who thought AI would mean we’d work less (at least for now). AI makes it easy to explore more than you did before, and so you start do
 - **摘要**: Sorry to anyone who thought AI would mean we’d work less (at least for now). AI makes it easy to explore more than you did before, and so you start do
 
 ### Clarification: rolling out soon!
@@ -126,6 +127,7 @@ The real world
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: Clarification: rolling out soon!
 - **摘要**: Clarification: rolling out soon!
 
 ### GPT-5.5 is live. We’ve been testing the model over the last couple of weeks at Box on our most compl...
@@ -143,5 +145,6 @@ The real world
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `产品动态`
+- **摘要(CN)**: “If AI can make employees more productive, which is widely accepted as fact, then companies are going to want as many productive units of labor as pos
 - **摘要**: “If AI can make employees more productive, which is widely accepted as fact, then companies are going to want as many productive units of labor as pos
 

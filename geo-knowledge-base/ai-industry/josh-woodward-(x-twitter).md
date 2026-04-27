@@ -154,5 +154,6 @@ Pomelli is one of our newer Labs experiments, and SMBs are running with it https
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: NotebookLM can now auto-label &amp; categorize sources! https://t.co/z35183ZoDk
 - **摘要**: NotebookLM can now auto-label &amp; categorize sources! https://t.co/z35183ZoDk
 

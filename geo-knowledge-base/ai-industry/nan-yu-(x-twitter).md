@@ -186,6 +186,7 @@ https://t.co/gG063RcMrZ
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: Think about how many “weather” apps and “dashboards” you saw on behance and dribbble in the pre-AI era
 - **摘要**: Think about how many “weather” apps and “dashboards” you saw on behance and dribbble in the pre-AI era
 
 All hallucinations
@@ -198,6 +199,7 @@ A design is an intention. Not an image or a p...
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `硬件算力`
+- **摘要(CN)**: “The core design is about understanding, not output.”
 - **摘要**: “The core design is about understanding, not output.”
 
 A design is an intention. Not an image or a prototype. Output without intention is hallucinatio
@@ -208,5 +210,6 @@ A design is an intention. Not an image or a prototype. Output without intention 
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **摘要(CN)**: Cathedrals. Everywhere. https://t.co/gPgSCVmXB5
 - **摘要**: Cathedrals. Everywhere. https://t.co/gPgSCVmXB5
 
