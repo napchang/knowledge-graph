@@ -100,6 +100,7 @@
 - **采集日期**: 2026-04-24
 - **Category**: Agentic B2B
 - **Topic**: `Automation`
+- **标题(CN)**: Meta签下数百万颗亚马逊AI CPU大单
 - **摘要(CN)**: Meta has commandeered a big chunk of Amazon's homegrown CPUs (not GPUs) for AI agentic workloads, signaling that a new kind of chip race has begun.
 - **摘要**: Meta has commandeered a big chunk of Amazon's homegrown CPUs (not GPUs) for AI agentic workloads, signaling that a new kind of chip race has begun.
 

@@ -420,6 +420,7 @@ It’s the fastest way to maximize sere
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **标题(CN)**: 《硅谷》剧集成真：第237次现实神预言
 - **摘要(CN)**: Exhibit 237 on why Silicon Valley, the TV show, is a documentary.. https://t.co/NQO09BclNM
 - **摘要**: Exhibit 237 on why Silicon Valley, the TV show, is a documentary.. https://t.co/NQO09BclNM
 
@@ -431,6 +432,7 @@ It’s the fastest way to maximize sere
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `OpenAI动态, Anthropic动态, 模型发布, 企业落地`
+- **标题(CN)**: 模型层出不穷，但这套技术栈依然无敌
 - **摘要(CN)**: Even with all the model releases, this “stack” continues to be undefeated (for me)..
 - **摘要**: Even with all the model releases, this “stack” continues to be undefeated (for me)..
 
@@ -447,6 +449,7 @@ Why?
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `融资并购`
+- **标题(CN)**: 并购热潮汹涌，即将超越融资公告量
 - **摘要(CN)**: M&A is hitting a fever pitch.. at this rate, it’ll soon eclipse fundraising announcements.
 - **摘要**: M&A is hitting a fever pitch.. at this rate, it’ll soon eclipse fundraising announcements. 
 
@@ -464,6 +467,7 @@ Why?
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `融资并购`
+- **标题(CN)**: 近期新关注的一些宝藏账号推荐
 - **摘要(CN)**: Some of my relatively new favorite follows..
 - **摘要**: Some of my relatively new favorite follows..
 
@@ -478,6 +482,7 @@ Why?
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `产品动态`
+- **标题(CN)**: 当产品经理把设计师的“氛围编码”直接部署上线时
 - **摘要(CN)**: When the designer finds out the PM shipped their vibe coded designs straight to production.. https://t.co/WDbVJd9AXZ
 - **摘要**: When the designer finds out the PM shipped their vibe coded designs straight to production.. https://t.co/WDbVJd9AXZ
 
@@ -487,6 +492,7 @@ Why?
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `产品动态`
+- **标题(CN)**: 项目代号非临时，一经启用即永恒
 - **摘要(CN)**: Note to all product teams: project code names are not temporary, they are permanent. Like truly eternal.
 - **摘要**: Note to all product teams: project code names are not temporary, they are permanent. Like truly eternal. 
 

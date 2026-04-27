@@ -292,6 +292,8 @@ Research shows that 32% of buyers discover new B2B vendors using generative AI c
 - **采集日期**: 2026-04-24
 - **Category**: Ai Search
 - **Topic**: `搜索度量, 搜索技术/算法`
+- **标题(CN)**: AI引用追踪：监控并提升引擎引用量
+- **摘要(CN)**: 本文介绍如何追踪来自AI引擎（如ChatGPT、Perplexity等）的引用，并分析其与搜索引擎优化的异同。通过识别品牌在AI回答中被提及的频率、来源及上下文，企业可制定策略，提升内容在AI时代的可见性和权威性。
 - **摘要**:  
     
  
@@ -343,6 +345,8 @@ Research shows that 32% of buyers discover new B2B vendors using generative AI c
 - **采集日期**: 2026-04-25
 - **Category**: Ai Search
 - **Topic**: `搜索度量, 搜索技术/算法`
+- **标题(CN)**: AI引用追踪：监控并提升引擎引用量
+- **摘要(CN)**: 本文介绍如何追踪来自AI引擎（如ChatGPT、Perplexity等）的引用，并分析其与搜索引擎优化的异同。通过识别品牌在AI回答中被提及的频率、来源及上下文，企业可制定策略，提升内容在AI时代的可见性和权威性。
 - **摘要**:  
     
  

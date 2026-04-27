@@ -192,6 +192,7 @@ ah fuck it, life imitates art. http...
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **标题(CN)**: Sam Altman的“别转发”反套路：越禁止越传播
 - **摘要(CN)**: "don't retweet this, don't retweet this, don't retweet this..."
 - **摘要**: "don't retweet this, don't retweet this, don't retweet this..."
 
@@ -203,6 +204,7 @@ ah fuck it, life imitates art. https://t.co/5HYvYXfQzd
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `英伟达动态`
+- **标题(CN)**: OpenAI与NVIDIA联手全员部署Codex，效果惊艳
 - **摘要(CN)**: We tried a new thing with NVIDIA to roll out Codex across a whole company and it was awesome to see it work.
 - **摘要**: We tried a new thing with NVIDIA to roll out Codex across a whole company and it was awesome to see it work.
 
@@ -214,6 +216,7 @@ Let us know if you'd like to do it at yo
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **标题(CN)**: 余烬中的反思：技术狂热后的理性回归
 - **摘要(CN)**: embers https://t.co/BFyEr4z7rZ
 - **摘要**: embers https://t.co/BFyEr4z7rZ
 
@@ -227,6 +230,7 @@ happy building!
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **标题(CN)**: AI领域突破性进展的一周总结
 - **摘要(CN)**: this was a good week.
 - **摘要**: this was a good week.
 
@@ -240,6 +244,7 @@ happy building!
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `OpenAI动态`
+- **标题(CN)**: GPT-5.5与Pro版API正式上线，性能跃升
 - **摘要(CN)**: GPT-5.5 and GPT-5.5 Pro are now available in the API!
 - **摘要**: GPT-5.5 and GPT-5.5 Pro are now available in the API!
 
@@ -249,6 +254,7 @@ happy building!
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **标题(CN)**: Sam Altman发爱心表情感谢社区支持
 - **摘要(CN)**: 🫶 https://t.co/y2V2w64BhL
 - **摘要**: 🫶 https://t.co/y2V2w64BhL
 

@@ -118,6 +118,7 @@ The real world
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `Agent生态`
+- **标题(CN)**: AI暂时不会让我们少干活，反而更忙了
 - **摘要(CN)**: Sorry to anyone who thought AI would mean we’d work less (at least for now). AI makes it easy to explore more than you did before, and so you start do
 - **摘要**: Sorry to anyone who thought AI would mean we’d work less (at least for now). AI makes it easy to explore more than you did before, and so you start do
 
@@ -127,6 +128,7 @@ The real world
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **标题(CN)**: 关于产品新功能即将上线的澄清说明
 - **摘要(CN)**: Clarification: rolling out soon!
 - **摘要**: Clarification: rolling out soon!
 
@@ -136,6 +138,7 @@ The real world
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `OpenAI动态, 企业落地, 监管安全`
+- **标题(CN)**: GPT-5.5上线，Box实测复杂知识工作表现
 - **摘要(CN)**: GPT-5.5 is live. We’ve been testing the model over the last couple of weeks at Box on our most complex knowledge work evals, and the model saw a 10 pe
 - **摘要**: GPT-5.5 is live. We’ve been testing the model over the last couple of weeks at Box on our most complex knowledge work evals, and the model saw a 10 pe
 
@@ -145,6 +148,7 @@ The real world
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `产品动态`
+- **标题(CN)**: AI提升生产力，企业反而需要更多员工
 - **摘要(CN)**: “If AI can make employees more productive, which is widely accepted as fact, then companies are going to want as many productive units of labor as pos
 - **摘要**: “If AI can make employees more productive, which is widely accepted as fact, then companies are going to want as many productive units of labor as pos
 

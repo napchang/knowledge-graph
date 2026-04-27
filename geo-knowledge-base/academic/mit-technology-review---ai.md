@@ -350,6 +350,7 @@
 - **采集日期**: 2026-04-25
 - **Category**: Academic
 - **Topic**: `学术/模型架构`
+- **标题(CN)**: DeepSeek V4发布，三大理由证明其重要性
 - **摘要(CN)**: On Friday, Chinese AI firm DeepSeek released a preview of V4, its long-awaited new flagship model. Notably, the model can process much longer prompts
 - **摘要**: On Friday, Chinese AI firm DeepSeek released a preview of V4, its long-awaited new flagship model. Notably, the model can process much longer prompts 
 

@@ -545,6 +545,7 @@ Newsletter: https://t.co/t7w4L5uDfp
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `OpenAI动态`
+- **标题(CN)**: GPT 5.5与ChatGPT图像2完整体验报告
 - **摘要(CN)**: I shared my full impressions for GPT 5.5 and ChatGPT Images 2 here, watch now: https://t.co/hdSCW7iaKT
 - **摘要**: I shared my full impressions for GPT 5.5 and ChatGPT Images 2 here, watch now: https://t.co/hdSCW7iaKT
 
@@ -554,6 +555,7 @@ Newsletter: https://t.co/t7w4L5uDfp
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `OpenAI动态`
+- **标题(CN)**: F-Zero测试结论：GPT 5.5和Codex组合唯一能跑
 - **摘要(CN)**: I've been doing the F-Zero test each time a new model comes out and GPT 5.5 and Codex is the only combo that built a working game so far.
 - **摘要**: I've been doing the F-Zero test each time a new model comes out and GPT 5.5 and Codex is the only combo that built a working game so far.
 
@@ -565,6 +567,7 @@ Even made a
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **标题(CN)**: 5.5版本何时上线？等待让人分心
 - **摘要(CN)**: Can 5.5 drop soon it's distracting to wait
 - **摘要**: Can 5.5 drop soon it's distracting to wait
 
@@ -574,6 +577,7 @@ Even made a
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `OpenAI动态`
+- **标题(CN)**: GPT 5.5视频揭秘：还能这样玩？
 - **摘要(CN)**: Check out what else you can make with GPT 5.5 in my video: https://t.co/hdSCW7iaKT
 - **摘要**: Check out what else you can make with GPT 5.5 in my video: https://t.co/hdSCW7iaKT
 
@@ -583,6 +587,7 @@ Even made a
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `OpenAI动态`
+- **标题(CN)**: GPT 5.5与Codex 15分钟速成《星际火狐》
 - **摘要(CN)**: Asked GPT 5.5 and Codex to make Star Fox. This is after 15 min of prompting 🔥 https://t.co/GrnBjR6dGj https://t.co/OHODnf2yL4
 - **摘要**: Asked GPT 5.5 and Codex to make Star Fox. This is after 15 min of prompting 🔥 https://t.co/GrnBjR6dGj https://t.co/OHODnf2yL4
 
@@ -592,6 +597,7 @@ Even made a
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **标题(CN)**: 用玩自家游戏的方式做测试，妙在哪
 - **摘要(CN)**: What's brilliant is it's play testing it's own game for fun https://t.co/Z9hh12pcJW
 - **摘要**: What's brilliant is it's play testing it's own game for fun https://t.co/Z9hh12pcJW
 

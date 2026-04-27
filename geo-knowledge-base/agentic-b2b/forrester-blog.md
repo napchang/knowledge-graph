@@ -170,6 +170,7 @@
 - **采集日期**: 2026-04-24
 - **Category**: Agentic B2B
 - **Topic**: `Marketing, Sales`
+- **标题(CN)**: 数字原生代重塑B2B采购，收入策略亟待革新
 - **摘要(CN)**: As Millennials and Gen Zers take the lead in B2B buying groups, traditional revenue assumptions are breaking down. This post explores how digital nati
 - **摘要**: As Millennials and Gen Zers take the lead in B2B buying groups, traditional revenue assumptions are breaking down. This post explores how digital nati
 
@@ -209,6 +210,7 @@
 - **采集日期**: 2026-04-25
 - **Category**: Agentic B2B
 - **Topic**: `Marketing, Sales`
+- **标题(CN)**: 数字原生代重塑B2B采购，收入策略亟待革新
 - **摘要(CN)**: As Millennials and Gen Zers take the lead in B2B buying groups, traditional revenue assumptions are breaking down. This post explores how digital nati
 - **摘要**: As Millennials and Gen Zers take the lead in B2B buying groups, traditional revenue assumptions are breaking down. This post explores how digital nati
 

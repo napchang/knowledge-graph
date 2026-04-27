@@ -40,6 +40,7 @@
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **标题(CN)**: 身处历史关键期却无力：这怪异感受从何而来
 - **摘要(CN)**: It's odd to be living through what feels like one of the most critical periods in human history and to feel all of the weight of it from the inside.
 - **摘要**: It's odd to be living through what feels like one of the most critical periods in human history and to feel all of the weight of it from the inside.
 

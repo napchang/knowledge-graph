@@ -424,6 +424,7 @@ listen back to baby @amanrsanger when they were 5 people and pre-PMF https://t.c
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `Anthropic动态`
+- **标题(CN)**: 人均AI浓度最高国家，快来朝圣！
 - **摘要(CN)**: come to the most ai pilled country per capita
 - **摘要**: come to the most ai pilled country per capita
 
@@ -437,6 +438,7 @@ https://t.co/uwJtuJwgRx
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `OpenAI动态`
+- **标题(CN)**: 今日发布最被低估的并非GPT 5.5
 - **摘要(CN)**: i think the most underated part of today's launch is not GPT 5.5 at all
 - **摘要**: i think the most underated part of today's launch is not GPT 5.5 at all
 
@@ -448,6 +450,7 @@ https://t.co/uwJtuJwgRx
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **标题(CN)**: Codex应用改头换面，本该一直是Atlas
 - **摘要(CN)**: wow the codex app is unrecognizable… almost like it shouldve been Atlas the whole time https://t.co/PLTMJQwJmQ
 - **摘要**: wow the codex app is unrecognizable… almost like it shouldve been Atlas the whole time https://t.co/PLTMJQwJmQ
 
@@ -457,6 +460,7 @@ https://t.co/uwJtuJwgRx
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **标题(CN)**: Vercel高层揭秘：AI工程化前沿实践
 - **摘要(CN)**: @jsconfeu @cramforce talk now live! @vercel is doing incredible AI engineering work and it comes direct from the C-suite, this should be more common b
 - **摘要**: @jsconfeu @cramforce talk now live! @vercel is doing incredible AI engineering work and it comes direct from the C-suite, this should be more common b
 
@@ -467,6 +471,7 @@ the posttrain targets of tomorrow https://t.co/JqetW5bzKl
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **标题(CN)**: 今日热门技能正被AI重塑，你该关注什么？
 - **摘要(CN)**: btw the hot skills of today become
 - **摘要**: btw the hot skills of today become 
 the posttrain targets of tomorrow https://t.co/JqetW5bzKl
@@ -477,6 +482,7 @@ the posttrain targets of tomorrow https://t.co/JqetW5bzKl
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `开发者工具`
+- **标题(CN)**: 声明：选项“未决定”应置末位而非第二位
 - **摘要(CN)**: for the record, i put "undecided" as the last choice, not the second choice, @nikitabier sorry i know this is minor but it should be a 2 second fix in
 - **摘要**: for the record, i put "undecided" as the last choice, not the second choice, @nikitabier sorry i know this is minor but it should be a 2 second fix in
 

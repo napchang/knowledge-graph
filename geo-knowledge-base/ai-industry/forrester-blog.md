@@ -240,6 +240,7 @@
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **标题(CN)**: 从IT安全学到的：营收赋能如何赢得高管关注
 - **摘要(CN)**: Revenue enablement teams often deliver strong operational value but struggle to build sustained executive influence. Looking to IT security’s evolutio
 - **摘要**: Revenue enablement teams often deliver strong operational value but struggle to build sustained executive influence. Looking to IT security’s evolutio
 
@@ -249,6 +250,7 @@
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **标题(CN)**: 【中文标题】
 - **摘要(CN)**: To compete for customers and grow profitably, banks need the ability to adjust as much and as fast as required at any given moment. Leading digital ba
 - **摘要**: To compete for customers and grow profitably, banks need the ability to adjust as much and as fast as required at any given moment. Leading digital ba
 
@@ -288,6 +290,7 @@
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **标题(CN)**: 从IT安全学到的：营收赋能如何赢得高管关注
 - **摘要(CN)**: Revenue enablement teams often deliver strong operational value but struggle to build sustained executive influence. Looking to IT security’s evolutio
 - **摘要**: Revenue enablement teams often deliver strong operational value but struggle to build sustained executive influence. Looking to IT security’s evolutio
 
@@ -297,6 +300,7 @@
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **标题(CN)**: 【中文标题】
 - **摘要(CN)**: To compete for customers and grow profitably, banks need the ability to adjust as much and as fast as required at any given moment. Leading digital ba
 - **摘要**: To compete for customers and grow profitably, banks need the ability to adjust as much and as fast as required at any given moment. Leading digital ba
 

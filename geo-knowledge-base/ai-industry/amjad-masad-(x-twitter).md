@@ -382,6 +382,7 @@ Space IDE at home: https://t.co/kRXv26iY3j
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **标题(CN)**: 美政客炒作“中国蒸馏”，中国科学家却在共享成果
 - **摘要(CN)**: While US politicians/lobbyists are scaremongering about “Chinese distillation,” Chinese scientists are actually sharing real AI breakthroughs in the o
 - **摘要**: While US politicians/lobbyists are scaremongering about “Chinese distillation,” Chinese scientists are actually sharing real AI breakthroughs in the o
 
@@ -391,6 +392,7 @@ Space IDE at home: https://t.co/kRXv26iY3j
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **标题(CN)**: 苹果最蠢设计：将Safari“页面查找”藏在分享菜单
 - **摘要(CN)**: Dumbest design mistake in Apple history is folding “find on page” in Safari under “Share.” It is 3 clicks deep and makes no sense.
 - **摘要**: Dumbest design mistake in Apple history is folding “find on page” in Safari under “Share.” It is 3 clicks deep and makes no sense.
 
@@ -400,6 +402,7 @@ Space IDE at home: https://t.co/kRXv26iY3j
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **标题(CN)**: DeepSeek v4版本突然发布更新
 - **摘要(CN)**: DeepSeek v4 just dropped https://t.co/KE3qggapPg
 - **摘要**: DeepSeek v4 just dropped https://t.co/KE3qggapPg
 
@@ -409,6 +412,7 @@ Space IDE at home: https://t.co/kRXv26iY3j
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **标题(CN)**: Replit一键导入Vercel/Lovable应用
 - **摘要(CN)**: Import your Vercel or Lovable apps to Replit with a few clicks: https://t.co/RRtqzwnw2G
 - **摘要**: Import your Vercel or Lovable apps to Replit with a few clicks: https://t.co/RRtqzwnw2G
 

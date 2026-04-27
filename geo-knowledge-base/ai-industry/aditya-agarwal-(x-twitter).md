@@ -224,6 +224,7 @@ We are living through the craziest computing revolution of the last ...
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **标题(CN)**: 如何真正理解科幻作品的意义
 - **摘要(CN)**: How does one make sense of SF?
 - **摘要**: How does one make sense of SF?
 
@@ -237,6 +238,7 @@ https://t.co/X7z2xJTJtI
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **标题(CN)**: 立即注册：AI工具内测体验营开放申请
 - **摘要(CN)**: Sign up here:
 - **摘要**: Sign up here:
 
@@ -248,6 +250,7 @@ https://t.co/X7z2xJTJtI
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **标题(CN)**: 我们正迈入后提示词时代
 - **摘要(CN)**: We're approaching a post-prompting world. https://t.co/2lbYe7HYZj
 - **摘要**: We're approaching a post-prompting world. https://t.co/2lbYe7HYZj
 

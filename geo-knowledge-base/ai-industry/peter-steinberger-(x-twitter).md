@@ -394,6 +394,7 @@ This release adds Git-backed archive sync, so a Discord archive can be published
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **标题(CN)**: GitHub团队令人惊叹的创新与贡献
 - **摘要(CN)**: The @github folks are amazing! https://t.co/dPN0ToC0Xf
 - **摘要**: The @github folks are amazing! https://t.co/dPN0ToC0Xf
 
@@ -403,6 +404,7 @@ This release adds Git-backed archive sync, so a Discord archive can be published
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **标题(CN)**: 我最钟爱的安全公告推荐
 - **摘要(CN)**: My favorite security advisories. https://t.co/JWCy9ySLzp
 - **摘要**: My favorite security advisories. https://t.co/JWCy9ySLzp
 
@@ -412,6 +414,7 @@ This release adds Git-backed archive sync, so a Discord archive can be published
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `OpenAI动态`
+- **标题(CN)**: GPT 5.5角色扮演能力显著跃升
 - **摘要(CN)**: GPT 5.5 is definitely a step up in the character game. https://t.co/nXKtkjkZbu
 - **摘要**: GPT 5.5 is definitely a step up in the character game. https://t.co/nXKtkjkZbu
 
@@ -423,6 +426,7 @@ Biggest new feature is that it can now *read* Discord DMs without any cus...
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `产品动态`
+- **标题(CN)**: 🛰️ discrawl 0.6.0 版本发布，爬虫效率再升级
 - **摘要(CN)**: 🛰️ discrawl 0.6.0 is out!
 - **摘要**: 🛰️ discrawl 0.6.0 is out!
 

@@ -529,6 +529,7 @@ Short resolvers are better than long ones https://
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **标题(CN)**: Ro Khanna为煽动杀人的言论辩护引发激愤
 - **摘要(CN)**: Let's see... Ro Khanna is defending someone who incites murder, "let the streets soak in their red-capitalist blood," and who said America deserved 9/
 - **摘要**: Let's see... Ro Khanna is defending someone who incites murder, "let the streets soak in their red-capitalist blood," and who said America deserved 9/
 
@@ -538,6 +539,7 @@ Short resolvers are better than long ones https://
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `Agent生态`
+- **标题(CN)**: 【中文标题】
 - **摘要(CN)**: Finally I'm still trying to move as much of my OpenClaw cron jobs and subagents over to GBrain Minions and this is more stability improvements for tha
 - **摘要**: Finally I'm still trying to move as much of my OpenClaw cron jobs and subagents over to GBrain Minions and this is more stability improvements for tha
 
@@ -547,6 +549,7 @@ Short resolvers are better than long ones https://
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `AI动态`
+- **标题(CN)**: GBrain新评测：图+向量协同效果惊艳
 - **摘要(CN)**: Next, I finally created new evals for GBrain which show how much more awesome GBrain is when you have graph AND vector search on top of grep on knowle
 - **摘要**: Next, I finally created new evals for GBrain which show how much more awesome GBrain is when you have graph AND vector search on top of grep on knowle
 
@@ -556,6 +559,7 @@ Short resolvers are better than long ones https://
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `融资并购`
+- **标题(CN)**: 科技富豪资助左翼极端：杀资本家毁学校？
 - **摘要(CN)**: Change the party to murder all capitalists (Piker) and destroy the schools (Bowman), brought to you by a tech centimillionaire who is using his money
 - **摘要**: Change the party to murder all capitalists (Piker) and destroy the schools (Bowman), brought to you by a tech centimillionaire who is using his money 
 

@@ -500,6 +500,7 @@
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `谷歌动态`
+- **标题(CN)**: 如何查找并轻松管理你的Google评论
 - **摘要(CN)**: You can find Google reviews by searching your business on Google or Maps. Follow these steps.
 - **摘要**: You can find Google reviews by searching your business on Google or Maps. Follow these steps.
 
@@ -549,6 +550,7 @@
 - **采集日期**: 2026-04-25
 - **Category**: Ai Industry
 - **Topic**: `谷歌动态`
+- **标题(CN)**: 如何查找并轻松管理你的Google评论
 - **摘要(CN)**: You can find Google reviews by searching your business on Google or Maps. Follow these steps.
 - **摘要**: You can find Google reviews by searching your business on Google or Maps. Follow these steps.
 

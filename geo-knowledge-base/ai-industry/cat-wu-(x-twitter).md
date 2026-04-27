@@ -80,6 +80,7 @@ Excited for you to try Claude Code with
 - **采集日期**: 2026-04-24
 - **Category**: Ai Industry
 - **Topic**: `Anthropic动态, 开发者工具`
+- **标题(CN)**: Claude Code如何通过产品管理保持高速迭代
 - **摘要(CN)**: Thanks @lennysan for a great conversation about how Claude Code maintains product velocity, how the product management role is shifting in the AI era,
 - **摘要**: Thanks @lennysan for a great conversation about how Claude Code maintains product velocity, how the product management role is shifting in the AI era,
 
