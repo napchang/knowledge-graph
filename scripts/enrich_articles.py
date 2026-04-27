@@ -136,9 +136,12 @@ def generate_one(art):
                 reading_highlight = ''
                 
                 # Parse result with robust filtering for instruction text
+                # IMPORTANT: Also filter out raw tag lines like "【中文标题】" itself
                 EXCLUDE_PATTERNS = ['字，', '字、', '准确传达', '概括文章', '核心主题', '文章要点',
                                     '此处写', '结构为', '核心论点', '关键发现', '行业意义', '行动建议',
-                                    '口语化', '不要简单翻译', '支撑论点', '对 AI 行业', '给读者的']
+                                    '口语化', '不要简单翻译', '支撑论点', '对 AI 行业', '给读者的',
+                                    '【中文标题】', '【中文摘要】', '【阅读精华】',
+                                    '【核心论点】', '【关键发现】', '【行业意义】', '【行动建议】']
                 
                 if '【中文标题】' in result:
                     parts = result.split('【中文标题】', 1)[1]
@@ -198,6 +201,11 @@ def generate_one(art):
                         if any('\u4e00' <= c <= '\u9fff' for c in line) and 5 <= len(line) <= 30:
                             cn_title = line[:30]
                             break
+                
+                # Final guard: reject pure tag lines or empty strings
+                if cn_title and cn_title.strip() in ('【中文标题】', '【中文摘要】', '【阅读精华】', ''):
+                    print(f"  [WARN] Rejected garbage cn_title for {link[:50]}: {cn_title}")
+                    cn_title = ''
                 
                 return link, {
                     'cn_title': cn_title,
