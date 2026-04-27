@@ -148,3 +148,11 @@ Pomelli is one of our newer Labs experiments, and SMBs are running with it https
 - **摘要(CN)**: DESIGN.md is one of my favorite things that Stitch is doing! If you know, you know. https://t.co/aWI7GbrViB
 - **摘要**: DESIGN.md is one of my favorite things that Stitch is doing! If you know, you know. https://t.co/aWI7GbrViB
 
+### NotebookLM can now auto-label &amp; categorize sources! https://t.co/z35183ZoDk
+- **链接**: https://x.com/joshwoodward/status/2047795981534847413
+- **日期**: 2026-04-24
+- **采集日期**: 2026-04-25
+- **Category**: Ai Industry
+- **Topic**: `AI动态`
+- **摘要**: NotebookLM can now auto-label &amp; categorize sources! https://t.co/z35183ZoDk
+

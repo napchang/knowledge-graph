@@ -183,3 +183,65 @@ I am very thankful for everything he has done and I am very thankful for Apple.
 - **摘要(CN)**: These are cool! I think most companies will want to use them. https://t.co/453qKd7X1R
 - **摘要**: These are cool! I think most companies will want to use them. https://t.co/453qKd7X1R
 
+### "don't retweet this, don't retweet this, don't retweet this..."
+
+ah fuck it, life imitates art. http...
+- **链接**: https://x.com/sama/status/2047403771416940715
+- **日期**: 2026-04-23
+- **采集日期**: 2026-04-24
+- **Category**: Ai Industry
+- **Topic**: `AI动态`
+- **摘要**: "don't retweet this, don't retweet this, don't retweet this..."
+
+ah fuck it, life imitates art. https://t.co/5HYvYXfQzd
+
+### We tried a new thing with NVIDIA to roll out Codex across a whole company and it was awesome to see ...
+- **链接**: https://x.com/sama/status/2047395562501411058
+- **日期**: 2026-04-23
+- **采集日期**: 2026-04-24
+- **Category**: Ai Industry
+- **Topic**: `英伟达动态`
+- **摘要**: We tried a new thing with NVIDIA to roll out Codex across a whole company and it was awesome to see it work.
+
+Let us know if you'd like to do it at yo
+
+### embers https://t.co/BFyEr4z7rZ
+- **链接**: https://x.com/sama/status/2047392357482639749
+- **日期**: 2026-04-23
+- **采集日期**: 2026-04-24
+- **Category**: Ai Industry
+- **Topic**: `AI动态`
+- **摘要**: embers https://t.co/BFyEr4z7rZ
+
+### this was a good week.
+
+proud of the team.
+
+happy building!
+- **链接**: https://x.com/sama/status/2047823357635354814
+- **日期**: 2026-04-24
+- **采集日期**: 2026-04-25
+- **Category**: Ai Industry
+- **Topic**: `AI动态`
+- **摘要**: this was a good week.
+
+proud of the team.
+
+happy building!
+
+### GPT-5.5 and GPT-5.5 Pro are now available in the API!
+- **链接**: https://x.com/sama/status/2047787124846653895
+- **日期**: 2026-04-24
+- **采集日期**: 2026-04-25
+- **Category**: Ai Industry
+- **Topic**: `OpenAI动态`
+- **摘要**: GPT-5.5 and GPT-5.5 Pro are now available in the API!
+
+### 🫶 https://t.co/y2V2w64BhL
+- **链接**: https://x.com/sama/status/2047683787828703289
+- **日期**: 2026-04-24
+- **采集日期**: 2026-04-25
+- **Category**: Ai Industry
+- **Topic**: `AI动态`
+- **摘要**: 🫶 https://t.co/y2V2w64BhL
+

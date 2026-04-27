@@ -214,6 +214,16 @@
 - **摘要(CN)**: 本清单助您针对谷歌与AI搜索引擎优化网站，涵盖技术设置、内容策略及用户体验等关键维度。
 - **摘要**: Use this SEO checklist to optimize your site for both Google and AI-driven search results.
 
+### How to Perform a Complete SEO Audit in 20 Steps
+- **链接**: https://www.semrush.com/blog/seo-audit/
+- **日期**: 2026-04-22
+- **采集日期**: 2026-04-22
+- **Category**: Ai Search
+- **Topic**: `SEO/技术优化, 搜索度量`
+- **标题(CN)**: 20步完成网站SEO全面诊断
+- **摘要(CN)**: Learn how to perform a complete SEO audit for 2026. Follow a step-by-step checklist to improve rankings, fix issues, and boost AI visibility.
+- **摘要**: Learn how to perform a complete SEO audit for 2026. Follow a step-by-step checklist to improve rankings, fix issues, and boost AI visibility.
+
 ### How to use Google Trends for SEO in 2026
 - **链接**: https://www.semrush.com/blog/google-trends/
 - **日期**: 2026-04-23
@@ -253,4 +263,82 @@
 - **标题(CN)**: 20步完成网站SEO全面诊断
 - **摘要(CN)**: Learn how to perform a complete SEO audit for 2026. Follow a step-by-step checklist to improve rankings, fix issues, and boost AI visibility.
 - **摘要**: Learn how to perform a complete SEO audit for 2026. Follow a step-by-step checklist to improve rankings, fix issues, and boost AI visibility.
+
+### How to use Google Trends for SEO in 2026
+- **链接**: https://www.semrush.com/blog/google-trends/
+- **日期**: 2026-04-23
+- **采集日期**: 2026-04-24
+- **Category**: Ai Search
+- **Topic**: `SEO`
+- **标题(CN)**: 2026年用谷歌趋势做SEO实战指南
+- **摘要(CN)**: Learn how to use Google Trends for SEO in 2026. Discover trends, compare keywords, and find opportunities to drive more organic traffic.
+- **摘要**: Learn how to use Google Trends for SEO in 2026. Discover trends, compare keywords, and find opportunities to drive more organic traffic.
+
+### On-page SEO checklist: The complete task list for 2026
+- **链接**: https://www.semrush.com/blog/on-page-seo-checklist/
+- **日期**: 2026-04-23
+- **采集日期**: 2026-04-24
+- **Category**: Ai Search
+- **Topic**: `SEO`
+- **标题(CN)**: 2026年页面SEO终极清单
+- **摘要(CN)**: Follow this 14-step on-page SEO checklist to improve your visibility in traditional and AI search.
+- **摘要**: Follow this 14-step on-page SEO checklist to improve your visibility in traditional and AI search.
+
+### What is technical SEO? Basics and best practices
+- **链接**: https://www.semrush.com/blog/technical-seo/
+- **日期**: 2026-04-23
+- **采集日期**: 2026-04-24
+- **Category**: Ai Search
+- **Topic**: `SEO/技术优化`
+- **标题(CN)**: 技术型SEO是什么？基础与最佳实践
+- **摘要(CN)**: Learn what technical SEO is and how to optimize your site for crawling, indexing, and AI visibility with proven best practices.
+- **摘要**: Learn what technical SEO is and how to optimize your site for crawling, indexing, and AI visibility with proven best practices.
+
+### How to Perform a Complete SEO Audit in 20 Steps
+- **链接**: https://www.semrush.com/blog/seo-audit/
+- **日期**: 2026-04-22
+- **采集日期**: 2026-04-24
+- **Category**: Ai Search
+- **Topic**: `SEO/技术优化, 搜索度量`
+- **标题(CN)**: 20步完成网站SEO全面诊断
+- **摘要(CN)**: Learn how to perform a complete SEO audit for 2026. Follow a step-by-step checklist to improve rankings, fix issues, and boost AI visibility.
+- **摘要**: Learn how to perform a complete SEO audit for 2026. Follow a step-by-step checklist to improve rankings, fix issues, and boost AI visibility.
+
+### How to find low-competition keywords with Semrush
+- **链接**: https://www.semrush.com/blog/how-to-find-low-competition-keywords-with-semrush/
+- **日期**: 2026-04-24
+- **采集日期**: 2026-04-25
+- **Category**: Ai Search
+- **Topic**: `SEO, 搜索度量`
+- **摘要**: How can you find low-competition keywords to boost your website’s SEO rankings? Find out here.
+
+### How to use Google Trends for SEO in 2026
+- **链接**: https://www.semrush.com/blog/google-trends/
+- **日期**: 2026-04-23
+- **采集日期**: 2026-04-25
+- **Category**: Ai Search
+- **Topic**: `SEO`
+- **标题(CN)**: 2026年用谷歌趋势做SEO实战指南
+- **摘要(CN)**: Learn how to use Google Trends for SEO in 2026. Discover trends, compare keywords, and find opportunities to drive more organic traffic.
+- **摘要**: Learn how to use Google Trends for SEO in 2026. Discover trends, compare keywords, and find opportunities to drive more organic traffic.
+
+### On-page SEO checklist: The complete task list for 2026
+- **链接**: https://www.semrush.com/blog/on-page-seo-checklist/
+- **日期**: 2026-04-23
+- **采集日期**: 2026-04-25
+- **Category**: Ai Search
+- **Topic**: `SEO`
+- **标题(CN)**: 2026年页面SEO终极清单
+- **摘要(CN)**: Follow this 14-step on-page SEO checklist to improve your visibility in traditional and AI search.
+- **摘要**: Follow this 14-step on-page SEO checklist to improve your visibility in traditional and AI search.
+
+### What is technical SEO? Basics and best practices
+- **链接**: https://www.semrush.com/blog/technical-seo/
+- **日期**: 2026-04-23
+- **采集日期**: 2026-04-25
+- **Category**: Ai Search
+- **Topic**: `SEO/技术优化`
+- **标题(CN)**: 技术型SEO是什么？基础与最佳实践
+- **摘要(CN)**: Learn what technical SEO is and how to optimize your site for crawling, indexing, and AI visibility with proven best practices.
+- **摘要**: Learn what technical SEO is and how to optimize your site for crawling, indexing, and AI visibility with proven best practices.
 

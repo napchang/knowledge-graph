@@ -538,3 +538,54 @@ Apple: https://t.co/shNRmPP2Wb
 
 Newsletter: https://t.co/t7w4L5uDfp
 
+### I shared my full impressions for GPT 5.5 and ChatGPT Images 2 here, watch now: https://t.co/hdSCW7ia...
+- **链接**: https://x.com/petergyang/status/2047502897412468770
+- **日期**: 2026-04-24
+- **采集日期**: 2026-04-24
+- **Category**: Ai Industry
+- **Topic**: `OpenAI动态`
+- **摘要**: I shared my full impressions for GPT 5.5 and ChatGPT Images 2 here, watch now: https://t.co/hdSCW7iaKT
+
+### I've been doing the F-Zero test each time a new model comes out and GPT 5.5 and Codex is the only co...
+- **链接**: https://x.com/petergyang/status/2047502885710410159
+- **日期**: 2026-04-24
+- **采集日期**: 2026-04-24
+- **Category**: Ai Industry
+- **Topic**: `OpenAI动态`
+- **摘要(CN)**: I've been doing the F-Zero test each time a new model comes out and GPT 5.5 and Codex is the only combo that built a working game so far.
+- **摘要**: I've been doing the F-Zero test each time a new model comes out and GPT 5.5 and Codex is the only combo that built a working game so far.
+
+Even made a
+
+### Can 5.5 drop soon it's distracting to wait
+- **链接**: https://x.com/petergyang/status/2047365167902826729
+- **日期**: 2026-04-23
+- **采集日期**: 2026-04-24
+- **Category**: Ai Industry
+- **Topic**: `AI动态`
+- **摘要**: Can 5.5 drop soon it's distracting to wait
+
+### Check out what else you can make with GPT 5.5 in my video: https://t.co/hdSCW7iaKT
+- **链接**: https://x.com/petergyang/status/2047882580603899915
+- **日期**: 2026-04-25
+- **采集日期**: 2026-04-25
+- **Category**: Ai Industry
+- **Topic**: `OpenAI动态`
+- **摘要**: Check out what else you can make with GPT 5.5 in my video: https://t.co/hdSCW7iaKT
+
+### Asked GPT 5.5 and Codex to make Star Fox. This is after 15 min of prompting 🔥 https://t.co/GrnBjR6dG...
+- **链接**: https://x.com/petergyang/status/2047882568520102226
+- **日期**: 2026-04-25
+- **采集日期**: 2026-04-25
+- **Category**: Ai Industry
+- **Topic**: `OpenAI动态`
+- **摘要**: Asked GPT 5.5 and Codex to make Star Fox. This is after 15 min of prompting 🔥 https://t.co/GrnBjR6dGj https://t.co/OHODnf2yL4
+
+### What's brilliant is it's play testing it's own game for fun https://t.co/Z9hh12pcJW
+- **链接**: https://x.com/petergyang/status/2047880605204144159
+- **日期**: 2026-04-25
+- **采集日期**: 2026-04-25
+- **Category**: Ai Industry
+- **Topic**: `AI动态`
+- **摘要**: What's brilliant is it's play testing it's own game for fun https://t.co/Z9hh12pcJW
+

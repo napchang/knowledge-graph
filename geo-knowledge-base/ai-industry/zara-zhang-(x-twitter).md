@@ -432,3 +432,11 @@ Let agents express themselves in their native language
 - **Topic**: `AI动态`
 - **摘要**: https://t.co/43aL2SN4s4
 
+### Fascinating read https://t.co/31NGFmVk2z
+- **链接**: https://x.com/zarazhangrui/status/2047386837266886872
+- **日期**: 2026-04-23
+- **采集日期**: 2026-04-24
+- **Category**: Ai Industry
+- **Topic**: `AI动态`
+- **摘要**: Fascinating read https://t.co/31NGFmVk2z
+

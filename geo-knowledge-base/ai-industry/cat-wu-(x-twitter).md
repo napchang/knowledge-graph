@@ -74,3 +74,11 @@ You can now kick off Claude Code on a schedule, from GH events, and from other A
 
 Excited for you to try Claude Code with
 
+### Thanks @lennysan for a great conversation about how Claude Code maintains product velocity, how the ...
+- **链接**: https://x.com/_catwu/status/2047427510091366533
+- **日期**: 2026-04-23
+- **采集日期**: 2026-04-24
+- **Category**: Ai Industry
+- **Topic**: `Anthropic动态, 开发者工具`
+- **摘要**: Thanks @lennysan for a great conversation about how Claude Code maintains product velocity, how the product management role is shifting in the AI era,
+

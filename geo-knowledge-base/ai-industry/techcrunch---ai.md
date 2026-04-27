@@ -413,15 +413,21 @@
 - **摘要(CN)**: OpenAI最新图像生成模型ChatGPT Images 2.0，展现了人工智能能力近年来的显著进化。
 - **摘要**: ChatGPT Images 2.0, the newest image-generation model from OpenAI, shows just how much AI capabilities have evolved over the last few years.
 
-### SpaceX is working with Cursor and has an option to buy the startup for $60B
-- **链接**: https://techcrunch.com/2026/04/21/spacex-is-working-with-cursor-and-has-an-option-to-buy-the-startup-for-60-billion/
-- **日期**: Tue, 21 Ap
+### How SpaceX preempted a $2B fundraise with a $60B buyout offer
+- **链接**: https://techcrunch.com/2026/04/22/how-spacex-preempted-a-2b-fundraise-with-a-60b-buyout-offer/
+- **日期**: Wed, 22 Ap
 - **采集日期**: 2026-04-22
 - **Category**: Ai Industry
-- **Topic**: `OpenAI动态, Anthropic动态, xAI动态, 开发者工具, 融资并购`
-- **标题(CN)**: SpaceX与Cursor合作，600亿收购选项浮出水面
-- **摘要(CN)**: SpaceX正与AI编程工具Cursor深度合作，并获得以600亿美元收购后者的选择权。这笔交易意在彼此补强，但也暴露了两家公司的共同软肋——Cursor和马斯克旗下的xAI都缺乏真正属于自己的专有模型。
-- **摘要**: The move could shore up weaknesses at each company, but it also reveals them. Neither Cursor nor xAI has proprietary models that can match the leading
+- **Topic**: `开发者工具, 融资并购`
+- **摘要**: Cursor was on track to close a $2 billion funding round this week but chose to halt discussions after SpaceX offered a $10 billion "collaboration fee"
+
+### Google turns Chrome into an AI co-worker for the workplace
+- **链接**: https://techcrunch.com/2026/04/22/google-turns-chrome-into-an-ai-coworker-for-the-workplace/
+- **日期**: Wed, 22 Ap
+- **采集日期**: 2026-04-22
+- **Category**: Ai Industry
+- **Topic**: `谷歌动态, 企业落地`
+- **摘要**: Google brings Gemini-powered "auto browse" capabilities to Chrome for enterprise users, letting workers automate tasks like research, data entry, and 
 
 ### OpenAI releases GPT-5.5, bringing company one step closer to an AI ‘super app’
 - **链接**: https://techcrunch.com/2026/04/23/openai-chatgpt-gpt-5-5-ai-model-superapp/
@@ -442,4 +448,20 @@
 - **标题(CN)**: 问题初创Delve再爆客户安全事件
 - **摘要(CN)**: TechCrunch has confirmed that Delve was the compliance company that performed the security certifications for Context AI, the AI agent training startu
 - **摘要**: TechCrunch has confirmed that Delve was the compliance company that performed the security certifications for Context AI, the AI agent training startu
+
+### Google to invest up to $40B in Anthropic in cash and compute
+- **链接**: https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/
+- **日期**: Fri, 24 Ap
+- **采集日期**: 2026-04-24
+- **Category**: Ai Industry
+- **Topic**: `谷歌动态, Anthropic动态, 融资并购`
+- **摘要**: Google plans up to $40B investment in Anthropic as AI rivals race to secure massive compute capacity, following the limited release of its powerful, c
+
+### OpenAI CEO apologizes to Tumbler Ridge community
+- **链接**: https://techcrunch.com/2026/04/25/openai-ceo-apologizes-to-tumbler-ridge-community/
+- **日期**: Sat, 25 Ap
+- **采集日期**: 2026-04-25
+- **Category**: Ai Industry
+- **Topic**: `OpenAI动态`
+- **摘要**: In a letter to the residents of Tumbler Ridge, Canada, OpenAI CEO Sam Altman said he is “deeply sorry” that his company failed to alert law enforcemen
 

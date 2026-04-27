@@ -124,6 +124,16 @@
 - **摘要(CN)**: 了解银行如何在2026年EMEA客户体验峰会上实现对话式体验的规模化应用。
 - **摘要**: Learn how banks can scale conversational experiences at CX Summit EMEA 2026
 
+### Proof Is The Product: How Trials And POCs Have Become A Real Go‑To‑Market Motion
+- **链接**: https://www.forrester.com/blogs/proof-is-the-product-how-trials-and-pocs-have-become-a-real-go-to-market-motion/
+- **日期**: 2026-04-22
+- **采集日期**: 2026-04-22
+- **Category**: Agentic B2B
+- **Topic**: `B2B/Strategy`
+- **标题(CN)**: 验证即产品：试用驱动市场新引擎
+- **摘要(CN)**: Why “Try Before You Buy” Has Become Mission‑Critical For Buyers And Sellers B2B organizations can no longer rely on promises alone. Today’s buyers exp
+- **摘要**: Why “Try Before You Buy” Has Become Mission‑Critical For Buyers And Sellers B2B organizations can no longer rely on promises alone. Today’s buyers exp
+
 ### CPQ Vendors Face A New Test: Handling Real-World Complexity
 - **链接**: https://www.forrester.com/blogs/cpq-vendors-face-a-new-test-handling-real-world-complexity/
 - **日期**: 2026-04-23
@@ -153,4 +163,78 @@
 - **标题(CN)**: 验证即产品：试用驱动市场新引擎
 - **摘要(CN)**: Why “Try Before You Buy” Has Become Mission‑Critical For Buyers And Sellers B2B organizations can no longer rely on promises alone. Today’s buyers exp
 - **摘要**: Why “Try Before You Buy” Has Become Mission‑Critical For Buyers And Sellers B2B organizations can no longer rely on promises alone. Today’s buyers exp
+
+### Digital Natives Are Rewriting B2B Buying — And It’s Impacting Your Revenue Performance
+- **链接**: https://www.forrester.com/blogs/digital-natives-are-rewriting-b2b-buying-and-its-impacting-your-revenue-performance/
+- **日期**: 2026-04-24
+- **采集日期**: 2026-04-24
+- **Category**: Agentic B2B
+- **Topic**: `Marketing, Sales`
+- **摘要**: As Millennials and Gen Zers take the lead in B2B buying groups, traditional revenue assumptions are breaking down. This post explores how digital nati
+
+### Your Growth Strategy Isn’t Broken. The Problem Is That You’re Avoiding Decisions.
+- **链接**: https://www.forrester.com/blogs/your-growth-strategy-isnt-broken-its-avoiding-decisions/
+- **日期**: 2026-04-23
+- **采集日期**: 2026-04-24
+- **Category**: Agentic B2B
+- **Topic**: `B2B/Strategy`
+- **摘要(CN)**: Growth strategies don’t usually fail because they’re wrong. They fail because leaders never make, or never finish, the decisions that strategy demands
+- **摘要**: Many B2B growth strategies fail not because the ambition behind them is wrong, but because leaders avoid or defer making critical decisions.
+
+### CPQ Vendors Face A New Test: Handling Real-World Complexity
+- **链接**: https://www.forrester.com/blogs/cpq-vendors-face-a-new-test-handling-real-world-complexity/
+- **日期**: 2026-04-23
+- **采集日期**: 2026-04-24
+- **Category**: Agentic B2B
+- **Topic**: `Sales`
+- **标题(CN)**: CPQ厂商迎来新考验：驾驭真实复杂性
+- **摘要(CN)**: The Configure, Price, Quote Solutions Landscape, Q2 2026, reveals a new battleground where vendors differentiate by managing real-world complexity. Ve
+- **摘要**: The Configure, Price, Quote Solutions Landscape, Q2 2026, reveals a new battleground where vendors differentiate by managing real-world complexity. Ve
+
+### How CX Leaders Build Resilience In A Volatile World
+- **链接**: https://www.forrester.com/blogs/how-cx-leaders-build-resilience-in-a-volatile-world/
+- **日期**: 2026-04-23
+- **采集日期**: 2026-04-24
+- **Category**: Agentic B2B
+- **Topic**: `CX/客户体验`
+- **标题(CN)**: CX领导者如何锻造动荡中的韧性
+- **摘要(CN)**: Back in the dim and distant past, when I ran an enterprise architecture team, we spent months building immaculate diagrams that were technically corre
+- **摘要**: Back in the dim and distant past, when I ran an enterprise architecture team, we spent months building immaculate diagrams that were technically corre
+
+### Digital Natives Are Rewriting B2B Buying — And It’s Impacting Your Revenue Performance
+- **链接**: https://www.forrester.com/blogs/digital-natives-are-rewriting-b2b-buying-and-its-impacting-your-revenue-performance/
+- **日期**: 2026-04-24
+- **采集日期**: 2026-04-25
+- **Category**: Agentic B2B
+- **Topic**: `Marketing, Sales`
+- **摘要**: As Millennials and Gen Zers take the lead in B2B buying groups, traditional revenue assumptions are breaking down. This post explores how digital nati
+
+### Your Growth Strategy Isn’t Broken. The Problem Is That You’re Avoiding Decisions.
+- **链接**: https://www.forrester.com/blogs/your-growth-strategy-isnt-broken-its-avoiding-decisions/
+- **日期**: 2026-04-23
+- **采集日期**: 2026-04-25
+- **Category**: Agentic B2B
+- **Topic**: `B2B/Strategy`
+- **摘要(CN)**: Growth strategies don’t usually fail because they’re wrong. They fail because leaders never make, or never finish, the decisions that strategy demands
+- **摘要**: Many B2B growth strategies fail not because the ambition behind them is wrong, but because leaders avoid or defer making critical decisions.
+
+### CPQ Vendors Face A New Test: Handling Real-World Complexity
+- **链接**: https://www.forrester.com/blogs/cpq-vendors-face-a-new-test-handling-real-world-complexity/
+- **日期**: 2026-04-23
+- **采集日期**: 2026-04-25
+- **Category**: Agentic B2B
+- **Topic**: `Sales`
+- **标题(CN)**: CPQ厂商迎来新考验：驾驭真实复杂性
+- **摘要(CN)**: The Configure, Price, Quote Solutions Landscape, Q2 2026, reveals a new battleground where vendors differentiate by managing real-world complexity. Ve
+- **摘要**: The Configure, Price, Quote Solutions Landscape, Q2 2026, reveals a new battleground where vendors differentiate by managing real-world complexity. Ve
+
+### How CX Leaders Build Resilience In A Volatile World
+- **链接**: https://www.forrester.com/blogs/how-cx-leaders-build-resilience-in-a-volatile-world/
+- **日期**: 2026-04-23
+- **采集日期**: 2026-04-25
+- **Category**: Agentic B2B
+- **Topic**: `CX/客户体验`
+- **标题(CN)**: CX领导者如何锻造动荡中的韧性
+- **摘要(CN)**: Back in the dim and distant past, when I ran an enterprise architecture team, we spent months building immaculate diagrams that were technically corre
+- **摘要**: Back in the dim and distant past, when I ran an enterprise architecture team, we spent months building immaculate diagrams that were technically corre
 

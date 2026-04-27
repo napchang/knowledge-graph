@@ -386,3 +386,39 @@ This release adds Git-backed archive sync, so a Discord archive can be published
 - **摘要(CN)**: 8 React components per line 😅 https://t.co/IJTQgvCliP
 - **摘要**: 8 React components per line 😅 https://t.co/IJTQgvCliP
 
+### The @github folks are amazing! https://t.co/dPN0ToC0Xf
+- **链接**: https://x.com/steipete/status/2047408665888432579
+- **日期**: 2026-04-23
+- **采集日期**: 2026-04-24
+- **Category**: Ai Industry
+- **Topic**: `AI动态`
+- **摘要**: The @github folks are amazing! https://t.co/dPN0ToC0Xf
+
+### My favorite security advisories. https://t.co/JWCy9ySLzp
+- **链接**: https://x.com/steipete/status/2047362803560841364
+- **日期**: 2026-04-23
+- **采集日期**: 2026-04-24
+- **Category**: Ai Industry
+- **Topic**: `AI动态`
+- **摘要**: My favorite security advisories. https://t.co/JWCy9ySLzp
+
+### GPT 5.5 is definitely a step up in the character game. https://t.co/nXKtkjkZbu
+- **链接**: https://x.com/steipete/status/2047871519762567468
+- **日期**: 2026-04-25
+- **采集日期**: 2026-04-25
+- **Category**: Ai Industry
+- **Topic**: `OpenAI动态`
+- **摘要**: GPT 5.5 is definitely a step up in the character game. https://t.co/nXKtkjkZbu
+
+### 🛰️ discrawl 0.6.0 is out!
+
+Biggest new feature is that it can now *read* Discord DMs without any cus...
+- **链接**: https://x.com/steipete/status/2047797210427859450
+- **日期**: 2026-04-24
+- **采集日期**: 2026-04-25
+- **Category**: Ai Industry
+- **Topic**: `产品动态`
+- **摘要**: 🛰️ discrawl 0.6.0 is out!
+
+Biggest new feature is that it can now *read* Discord DMs without any custom login tricks that might get you blocked. No wr
+

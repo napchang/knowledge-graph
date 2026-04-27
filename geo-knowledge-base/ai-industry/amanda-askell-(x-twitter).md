@@ -32,3 +32,11 @@
 - **摘要(CN)**: Not replying to messages is my love language.
 - **摘要**: Not replying to messages is my love language.
 
+### It's odd to be living through what feels like one of the most critical periods in human history and ...
+- **链接**: https://x.com/AmandaAskell/status/2047429629263454377
+- **日期**: 2026-04-23
+- **采集日期**: 2026-04-24
+- **Category**: Ai Industry
+- **Topic**: `AI动态`
+- **摘要**: It's odd to be living through what feels like one of the most critical periods in human history and to feel all of the weight of it from the inside.
+

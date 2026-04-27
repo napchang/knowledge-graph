@@ -146,3 +146,25 @@ you've seen this: someone ships a dashboard that shows every number with a spark
 
 you've seen this: someone ships a dashboard that shows every number with a sparkline, every action has a confirmation modal, every empty 
 
+### switched fully to GPT-5.5 + Composer 2
+
+the perfect duo for intelligence, speed, and cost, only in C...
+- **链接**: https://x.com/ryolu_/status/2047879353313431649
+- **日期**: 2026-04-25
+- **采集日期**: 2026-04-25
+- **Category**: Ai Industry
+- **Topic**: `OpenAI动态, 开发者工具`
+- **摘要**: switched fully to GPT-5.5 + Composer 2
+
+the perfect duo for intelligence, speed, and cost, only in Cursor https://t.co/XTw2GRugxU
+
+### try /multitask to break out of the queue
+and work on many things at once https://t.co/FpztfsVBbX
+- **链接**: https://x.com/ryolu_/status/2047766831105220799
+- **日期**: 2026-04-24
+- **采集日期**: 2026-04-25
+- **Category**: Ai Industry
+- **Topic**: `AI动态`
+- **摘要**: try /multitask to break out of the queue
+and work on many things at once https://t.co/FpztfsVBbX
+

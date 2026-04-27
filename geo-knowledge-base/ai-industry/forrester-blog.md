@@ -172,7 +172,7 @@
 - **Topic**: `监管安全`
 - **标题(CN)**: 智能合规工具让繁琐监管变底气
 - **摘要(CN)**: Over the past five years, security and risk (S&#38;R) professionals have experienced a flood of new cybersecurity regulations, with 170 countries now
-- **摘要**: Written with Zaklina Ber, Senior Research Associate Over the past five years, security and risk (S&#38;R) professionals have experienced a flood of ne
+- **摘要**: Over the past five years, security and risk (S&#38;R) professionals have experienced a flood of new cybersecurity regulations, with 170 countries now 
 
 ### Canva Recasts Itself As An AI Platform For Enterprise Work
 - **链接**: https://www.forrester.com/blogs/canva-recasts-itself-as-an-ai-platform-for-enterprise-work/
@@ -199,7 +199,7 @@
 - **采集日期**: 2026-04-23
 - **Category**: Ai Industry
 - **Topic**: `融资并购`
-- **摘要(CN)**: The real question has always been what comes next — i.e., whether the merger ultimately clears the higher regulatory and political hurdles that still
+- **摘要(CN)**: Warner Bros. Discovery (WBD) shareholders voted today to approve Paramount’s all‑cash acquisition of the company, clearing an important hurdle for one
 - **摘要**: Warner Bros. Discovery (WBD) shareholders voted today to approve Paramount’s all‑cash acquisition of the company, clearing an important hurdle for one
 
 ### Roadmaps: Preparing To Self-Destruct In Three, Two, One …
@@ -230,4 +230,94 @@
 - **标题(CN)**: 智能合规工具让繁琐监管变底气
 - **摘要(CN)**: Over the past five years, security and risk (S&#38;R) professionals have experienced a flood of new cybersecurity regulations, with 170 countries now
 - **摘要**: Over the past five years, security and risk (S&#38;R) professionals have experienced a flood of new cybersecurity regulations, with 170 countries now 
+
+### Lessons From IT Security: How Revenue Enablement Builds Executive Relevance
+- **链接**: https://www.forrester.com/blogs/lessons-from-it-security-how-revenue-enablement-builds-executive-relevance/
+- **日期**: 2026-04-24
+- **采集日期**: 2026-04-24
+- **Category**: Ai Industry
+- **Topic**: `AI动态`
+- **摘要**: Revenue enablement teams often deliver strong operational value but struggle to build sustained executive influence. Looking to IT security’s evolutio
+
+### In The AI Era, Banks Need Dynamic Platforms — Results From The Forrester Wave™: Digital Banking Engagement Platforms, Q2 2026
+- **链接**: https://www.forrester.com/blogs/in-the-ai-era-banks-need-dynamic-platforms-results-from-our-dbep-wave/
+- **日期**: 2026-04-24
+- **采集日期**: 2026-04-24
+- **Category**: Ai Industry
+- **Topic**: `AI动态`
+- **摘要**: To compete for customers and grow profitably, banks need the ability to adjust as much and as fast as required at any given moment. Leading digital ba
+
+### Canva Recasts Itself As An AI Platform For Enterprise Work
+- **链接**: https://www.forrester.com/blogs/canva-recasts-itself-as-an-ai-platform-for-enterprise-work/
+- **日期**: 2026-04-23
+- **采集日期**: 2026-04-24
+- **Category**: Ai Industry
+- **Topic**: `企业落地`
+- **标题(CN)**: Canva转型企业级AI设计平台
+- **摘要(CN)**: For years, Canva’s advantage was accessibility. It made design easier, faster, and available to more people. At its recent Canva Create 2026, the big
+- **摘要**: For years, Canva’s advantage was accessibility. It made design easier, faster, and available to more people. At its recent Canva Create 2026, the big 
+
+### WBD Shareholders Say Yes
+- **链接**: https://www.forrester.com/blogs/wbd-shareholders-say-yes/
+- **日期**: 2026-04-23
+- **采集日期**: 2026-04-24
+- **Category**: Ai Industry
+- **Topic**: `AI动态`
+- **摘要(CN)**: Warner Bros. Discovery (WBD) shareholders voted today to approve Paramount’s all‑cash acquisition of the company, clearing an important hurdle for one
+- **摘要**: The real question has always been what comes next — i.e., whether the merger ultimately clears the higher regulatory and political hurdles that still 
+
+### Roadmaps: Preparing To Self-Destruct In Three, Two, One …
+- **链接**: https://www.forrester.com/blogs/roadmaps-preparing-to-self-destruct-in-three-two-one/
+- **日期**: 2026-04-23
+- **采集日期**: 2026-04-24
+- **Category**: Ai Industry
+- **Topic**: `融资并购`
+- **标题(CN)**: 路线图倒计时：为何注定自我瓦解
+- **摘要(CN)**: I’m Joe Schiavone. I am a principal analyst here at Forrester. My experience has afforded me the opportunity to learn from some amazing leaders while
+- **摘要**: I’m Joe Schiavone. I am a principal analyst here at Forrester. My experience has afforded me the opportunity to learn from some amazing leaders while 
+
+### Lessons From IT Security: How Revenue Enablement Builds Executive Relevance
+- **链接**: https://www.forrester.com/blogs/lessons-from-it-security-how-revenue-enablement-builds-executive-relevance/
+- **日期**: 2026-04-24
+- **采集日期**: 2026-04-25
+- **Category**: Ai Industry
+- **Topic**: `AI动态`
+- **摘要**: Revenue enablement teams often deliver strong operational value but struggle to build sustained executive influence. Looking to IT security’s evolutio
+
+### In The AI Era, Banks Need Dynamic Platforms — Results From The Forrester Wave™: Digital Banking Engagement Platforms, Q2 2026
+- **链接**: https://www.forrester.com/blogs/in-the-ai-era-banks-need-dynamic-platforms-results-from-our-dbep-wave/
+- **日期**: 2026-04-24
+- **采集日期**: 2026-04-25
+- **Category**: Ai Industry
+- **Topic**: `AI动态`
+- **摘要**: To compete for customers and grow profitably, banks need the ability to adjust as much and as fast as required at any given moment. Leading digital ba
+
+### Canva Recasts Itself As An AI Platform For Enterprise Work
+- **链接**: https://www.forrester.com/blogs/canva-recasts-itself-as-an-ai-platform-for-enterprise-work/
+- **日期**: 2026-04-23
+- **采集日期**: 2026-04-25
+- **Category**: Ai Industry
+- **Topic**: `企业落地`
+- **标题(CN)**: Canva转型企业级AI设计平台
+- **摘要(CN)**: For years, Canva’s advantage was accessibility. It made design easier, faster, and available to more people. At its recent Canva Create 2026, the big
+- **摘要**: For years, Canva’s advantage was accessibility. It made design easier, faster, and available to more people. At its recent Canva Create 2026, the big 
+
+### WBD Shareholders Say Yes
+- **链接**: https://www.forrester.com/blogs/wbd-shareholders-say-yes/
+- **日期**: 2026-04-23
+- **采集日期**: 2026-04-25
+- **Category**: Ai Industry
+- **Topic**: `AI动态`
+- **摘要(CN)**: Warner Bros. Discovery (WBD) shareholders voted today to approve Paramount’s all‑cash acquisition of the company, clearing an important hurdle for one
+- **摘要**: The real question has always been what comes next — i.e., whether the merger ultimately clears the higher regulatory and political hurdles that still 
+
+### Roadmaps: Preparing To Self-Destruct In Three, Two, One …
+- **链接**: https://www.forrester.com/blogs/roadmaps-preparing-to-self-destruct-in-three-two-one/
+- **日期**: 2026-04-23
+- **采集日期**: 2026-04-25
+- **Category**: Ai Industry
+- **Topic**: `融资并购`
+- **标题(CN)**: 路线图倒计时：为何注定自我瓦解
+- **摘要(CN)**: I’m Joe Schiavone. I am a principal analyst here at Forrester. My experience has afforded me the opportunity to learn from some amazing leaders while
+- **摘要**: I’m Joe Schiavone. I am a principal analyst here at Forrester. My experience has afforded me the opportunity to learn from some amazing leaders while 
 

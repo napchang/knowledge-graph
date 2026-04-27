@@ -11,7 +11,7 @@
 - **Category**: Ai Industry
 - **Topic**: `Anthropic动态, Agent生态`
 - **标题(CN)**: Anthropic推出Cowork，桌面AI助手无需代码操作文件
-- **摘要(CN)**: Anthropic发布Claude桌面智能体Cowork，用户无需编程即可通过自然语言指令直接操作本地文件，实现自动化文档处理与数据分析。
+- **摘要(CN)**: <p><a href="https://www.anthropic.com/">Anthropic</a> released <a href="https://claude.com/blog/cowork-research-preview">Cowork</a> on Monday, a new A
 - **摘要**: <p><a href="https://www.anthropic.com/">Anthropic</a> released <a href="https://claude.com/blog/cowork-research-preview">Cowork</a> on Monday, a new A
 
 ### Claude Code costs up to $200 a month. Goose does the same thing for free.
@@ -21,7 +21,7 @@
 - **Category**: Ai Industry
 - **Topic**: `Anthropic动态, 开发者工具`
 - **标题(CN)**: Claude Code月费200美元，Goose免费提供同类服务
-- **摘要(CN)**: 人工智能编程工具虽掀起革命，但成本高昂。Anthropic的Claude Code每月收费高达200美元，而Goose平台提供类似功能却完全免费。
+- **摘要(CN)**: <p>The artificial intelligence coding revolution comes with a catch: it&#x27;s expensive.</p><p><a href="https://claude.com/product/claude-code">Claud
 - **摘要**: <p>The artificial intelligence coding revolution comes with a catch: it&#x27;s expensive.</p><p><a href="https://claude.com/product/claude-code">Claud
 
 ### Nous Research's NousCoder-14B is an open-source coding model landing right in the Claude Code moment
@@ -31,7 +31,7 @@
 - **Category**: Ai Industry
 - **Topic**: `Anthropic动态, 开发者工具, 融资并购`
 - **标题(CN)**: NousCoder-14B开源编程模型发布
-- **摘要(CN)**: 加密风投Paradigm支持的开源AI初创公司Nous Research推出NousCoder-14B编程模型，恰逢Claude Code引发关注之际。
+- **摘要(CN)**: <p><a href="https://nousresearch.com/">Nous Research</a>, the open-source artificial intelligence startup backed by crypto venture firm <a href="https
 - **摘要**: <p><a href="https://nousresearch.com/">Nous Research</a>, the open-source artificial intelligence startup backed by crypto venture firm <a href="https
 
 ### Anthropic launches Cowork, a Claude Desktop agent that works in your files — no coding required
@@ -491,7 +491,7 @@
 - **Category**: Ai Industry
 - **Topic**: `Anthropic动态, Agent生态`
 - **标题(CN)**: Anthropic推出Cowork，桌面AI助手无需代码操作文件
-- **摘要(CN)**: Anthropic发布Claude桌面智能体Cowork，用户无需编程即可通过自然语言指令直接操作本地文件，实现自动化文档处理与数据分析。
+- **摘要(CN)**: <p><a href="https://www.anthropic.com/">Anthropic</a> released <a href="https://claude.com/blog/cowork-research-preview">Cowork</a> on Monday, a new A
 - **摘要**: <p><a href="https://www.anthropic.com/">Anthropic</a> released <a href="https://claude.com/blog/cowork-research-preview">Cowork</a> on Monday, a new A
 
 ### Claude Code costs up to $200 a month. Goose does the same thing for free.
@@ -501,7 +501,7 @@
 - **Category**: Ai Industry
 - **Topic**: `Anthropic动态, 开发者工具`
 - **标题(CN)**: Claude Code月费200美元，Goose免费提供同类服务
-- **摘要(CN)**: 人工智能编程工具虽掀起革命，但成本高昂。Anthropic的Claude Code每月收费高达200美元，而Goose平台提供类似功能却完全免费。
+- **摘要(CN)**: <p>The artificial intelligence coding revolution comes with a catch: it&#x27;s expensive.</p><p><a href="https://claude.com/product/claude-code">Claud
 - **摘要**: <p>The artificial intelligence coding revolution comes with a catch: it&#x27;s expensive.</p><p><a href="https://claude.com/product/claude-code">Claud
 
 ### Nous Research's NousCoder-14B is an open-source coding model landing right in the Claude Code moment
@@ -511,6 +511,66 @@
 - **Category**: Ai Industry
 - **Topic**: `Anthropic动态, 开发者工具, 融资并购`
 - **标题(CN)**: NousCoder-14B开源编程模型发布
-- **摘要(CN)**: 加密风投Paradigm支持的开源AI初创公司Nous Research推出NousCoder-14B编程模型，恰逢Claude Code引发关注之际。
+- **摘要(CN)**: <p><a href="https://nousresearch.com/">Nous Research</a>, the open-source artificial intelligence startup backed by crypto venture firm <a href="https
+- **摘要**: <p><a href="https://nousresearch.com/">Nous Research</a>, the open-source artificial intelligence startup backed by crypto venture firm <a href="https
+
+### Anthropic launches Cowork, a Claude Desktop agent that works in your files — no coding required
+- **链接**: https://venturebeat.com/technology/anthropic-launches-cowork-a-claude-desktop-agent-that-works-in-your-files-no
+- **日期**: Mon, 12 Ja
+- **采集日期**: 2026-04-24
+- **Category**: Ai Industry
+- **Topic**: `Anthropic动态, Agent生态`
+- **标题(CN)**: Anthropic推出Cowork，桌面AI助手无需代码操作文件
+- **摘要(CN)**: <p><a href="https://www.anthropic.com/">Anthropic</a> released <a href="https://claude.com/blog/cowork-research-preview">Cowork</a> on Monday, a new A
+- **摘要**: <p><a href="https://www.anthropic.com/">Anthropic</a> released <a href="https://claude.com/blog/cowork-research-preview">Cowork</a> on Monday, a new A
+
+### Claude Code costs up to $200 a month. Goose does the same thing for free.
+- **链接**: https://venturebeat.com/infrastructure/claude-code-costs-up-to-usd200-a-month-goose-does-the-same-thing-for-free
+- **日期**: Mon, 19 Ja
+- **采集日期**: 2026-04-24
+- **Category**: Ai Industry
+- **Topic**: `Anthropic动态, 开发者工具`
+- **标题(CN)**: Claude Code月费200美元，Goose免费提供同类服务
+- **摘要(CN)**: <p>The artificial intelligence coding revolution comes with a catch: it&#x27;s expensive.</p><p><a href="https://claude.com/product/claude-code">Claud
+- **摘要**: <p>The artificial intelligence coding revolution comes with a catch: it&#x27;s expensive.</p><p><a href="https://claude.com/product/claude-code">Claud
+
+### Nous Research's NousCoder-14B is an open-source coding model landing right in the Claude Code moment
+- **链接**: https://venturebeat.com/technology/nous-researchs-nouscoder-14b-is-an-open-source-coding-model-landing-right-in
+- **日期**: Wed, 07 Ja
+- **采集日期**: 2026-04-24
+- **Category**: Ai Industry
+- **Topic**: `Anthropic动态, 开发者工具, 融资并购`
+- **标题(CN)**: NousCoder-14B开源编程模型发布
+- **摘要(CN)**: <p><a href="https://nousresearch.com/">Nous Research</a>, the open-source artificial intelligence startup backed by crypto venture firm <a href="https
+- **摘要**: <p><a href="https://nousresearch.com/">Nous Research</a>, the open-source artificial intelligence startup backed by crypto venture firm <a href="https
+
+### Anthropic launches Cowork, a Claude Desktop agent that works in your files — no coding required
+- **链接**: https://venturebeat.com/technology/anthropic-launches-cowork-a-claude-desktop-agent-that-works-in-your-files-no
+- **日期**: Mon, 12 Ja
+- **采集日期**: 2026-04-25
+- **Category**: Ai Industry
+- **Topic**: `Anthropic动态, Agent生态`
+- **标题(CN)**: Anthropic推出Cowork，桌面AI助手无需代码操作文件
+- **摘要(CN)**: <p><a href="https://www.anthropic.com/">Anthropic</a> released <a href="https://claude.com/blog/cowork-research-preview">Cowork</a> on Monday, a new A
+- **摘要**: <p><a href="https://www.anthropic.com/">Anthropic</a> released <a href="https://claude.com/blog/cowork-research-preview">Cowork</a> on Monday, a new A
+
+### Claude Code costs up to $200 a month. Goose does the same thing for free.
+- **链接**: https://venturebeat.com/infrastructure/claude-code-costs-up-to-usd200-a-month-goose-does-the-same-thing-for-free
+- **日期**: Mon, 19 Ja
+- **采集日期**: 2026-04-25
+- **Category**: Ai Industry
+- **Topic**: `Anthropic动态, 开发者工具`
+- **标题(CN)**: Claude Code月费200美元，Goose免费提供同类服务
+- **摘要(CN)**: <p>The artificial intelligence coding revolution comes with a catch: it&#x27;s expensive.</p><p><a href="https://claude.com/product/claude-code">Claud
+- **摘要**: <p>The artificial intelligence coding revolution comes with a catch: it&#x27;s expensive.</p><p><a href="https://claude.com/product/claude-code">Claud
+
+### Nous Research's NousCoder-14B is an open-source coding model landing right in the Claude Code moment
+- **链接**: https://venturebeat.com/technology/nous-researchs-nouscoder-14b-is-an-open-source-coding-model-landing-right-in
+- **日期**: Wed, 07 Ja
+- **采集日期**: 2026-04-25
+- **Category**: Ai Industry
+- **Topic**: `Anthropic动态, 开发者工具, 融资并购`
+- **标题(CN)**: NousCoder-14B开源编程模型发布
+- **摘要(CN)**: <p><a href="https://nousresearch.com/">Nous Research</a>, the open-source artificial intelligence startup backed by crypto venture firm <a href="https
 - **摘要**: <p><a href="https://nousresearch.com/">Nous Research</a>, the open-source artificial intelligence startup backed by crypto venture firm <a href="https
 

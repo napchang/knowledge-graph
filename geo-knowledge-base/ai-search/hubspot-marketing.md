@@ -206,6 +206,33 @@ GEO has found its place in the search landscape, and it’s reasonable to think 
  
 GEO has found its place in the search landscape, and it’s reasonable to think that the future of generative engine optimization is guaranteed
 
+### AEO metrics every marketer should track in 2026
+- **链接**: https://blog.hubspot.com/marketing/aeo-metrics
+- **日期**: 2026-04-22
+- **采集日期**: 2026-04-22
+- **Category**: Ai Search
+- **Topic**: `AEO, 搜索度量, 平台/AI搜索产品`
+- **标题(CN)**: 2026年，营销人必须追踪的AEO指标
+- **摘要(CN)**: 当AI搜索取代传统引擎，答案引擎优化（AEO）成为品牌生死线。本文将揭示2026年不容忽视的核心指标，从AI引用率到对话转化深度，帮助你在无点击时代量化内容影响力，抢占生成式答案的先机。
+- **摘要**:  
+    
+ 
+AEO metrics every marketer should track in 2026 
+Answer engine optimization (AEO) is a marketing strategy designed to help brands appear more
+
+### AEO Strategy for B2B: 9 Tactics to Increase B2B Answer Engine Visibility
+- **链接**: https://blog.hubspot.com/marketing/aeo-b2b-strategy
+- **日期**: 2026-04-22
+- **采集日期**: 2026-04-22
+- **Category**: Ai Search
+- **Topic**: `AEO`
+- **标题(CN)**: B2B答案引擎优化：9大战术提升可见度
+- **摘要(CN)**: 随着AI答案引擎崛起，传统搜索正被对话式问答取代。本文剖析B2B企业如何通过九种战术构建答案引擎优化体系，从结构化数据到权威内容设计，在AI生成的答案中抢占席位，把品牌变成大模型首选的引用来源。
+- **摘要**:  
+    
+ 
+Research shows that 32% of buyers discover new B2B vendors using generative AI chatbots. This is why an answer engine optimization (AEO) stra
+
 ### Generative engine optimization KPIs that actually matter for marketing teams
 - **链接**: https://blog.hubspot.com/marketing/geo-kpis
 - **日期**: 2026-04-23
@@ -258,4 +285,79 @@ Research shows that 32% of buyers discover new B2B vendors using generative AI c
     
  
 ​​GEO — or, as HubSpot refers to it, AEO — has found its place in the search landscape, and it’s reasonable to think that the future of gener
+
+### AI citation tracking: How to track (and grow) AI engine citations
+- **链接**: https://blog.hubspot.com/marketing/ai-citation-tracking
+- **日期**: 2026-04-24
+- **采集日期**: 2026-04-24
+- **Category**: Ai Search
+- **Topic**: `搜索度量, 搜索技术/算法`
+- **摘要**:  
+    
+ 
+AI search engine citation tracking helps measure brand visibility and authority in AI-powered search results. As AI-powered search experience
+
+### Generative engine optimization KPIs that actually matter for marketing teams
+- **链接**: https://blog.hubspot.com/marketing/geo-kpis
+- **日期**: 2026-04-23
+- **采集日期**: 2026-04-24
+- **Category**: Ai Search
+- **Topic**: `GEO, 搜索度量`
+- **标题(CN)**: 生成式引擎优化，营销该看哪些KPI
+- **摘要(CN)**: 别再只看传统搜索排名了。生成式AI正在重塑用户获取信息的方式，营销团队的评估体系必须跟上。本文拆解真正能衡量生成式引擎优化（GEO）成效的指标，帮你把不确定的AI流量变得可衡量、可优化。
+- **摘要**:  
+    
+ 
+Generative AI is changing how people discover brands, products, and information. Because it disrupts the buyer journey, it requires new metri
+
+### AEO metrics every marketer should track in 2026
+- **链接**: https://blog.hubspot.com/marketing/aeo-metrics
+- **日期**: 2026-04-22
+- **采集日期**: 2026-04-24
+- **Category**: Ai Search
+- **Topic**: `AEO, 搜索度量, 平台/AI搜索产品`
+- **标题(CN)**: 2026年，营销人必须追踪的AEO指标
+- **摘要(CN)**: 当AI搜索取代传统引擎，答案引擎优化（AEO）成为品牌生死线。本文将揭示2026年不容忽视的核心指标，从AI引用率到对话转化深度，帮助你在无点击时代量化内容影响力，抢占生成式答案的先机。
+- **摘要**:  
+    
+ 
+AEO metrics every marketer should track in 2026 
+Answer engine optimization (AEO) is a marketing strategy designed to help brands appear more
+
+### AEO Strategy for B2B: 9 Tactics to Increase B2B Answer Engine Visibility
+- **链接**: https://blog.hubspot.com/marketing/aeo-b2b-strategy
+- **日期**: 2026-04-22
+- **采集日期**: 2026-04-24
+- **Category**: Ai Search
+- **Topic**: `AEO`
+- **标题(CN)**: B2B答案引擎优化：9大战术提升可见度
+- **摘要(CN)**: 随着AI答案引擎崛起，传统搜索正被对话式问答取代。本文剖析B2B企业如何通过九种战术构建答案引擎优化体系，从结构化数据到权威内容设计，在AI生成的答案中抢占席位，把品牌变成大模型首选的引用来源。
+- **摘要**:  
+    
+ 
+Research shows that 32% of buyers discover new B2B vendors using generative AI chatbots. This is why an answer engine optimization (AEO) stra
+
+### AI citation tracking: How to track (and grow) AI engine citations
+- **链接**: https://blog.hubspot.com/marketing/ai-citation-tracking
+- **日期**: 2026-04-24
+- **采集日期**: 2026-04-25
+- **Category**: Ai Search
+- **Topic**: `搜索度量, 搜索技术/算法`
+- **摘要**:  
+    
+ 
+AI search engine citation tracking helps measure brand visibility and authority in AI-powered search results. As AI-powered search experience
+
+### Generative engine optimization KPIs that actually matter for marketing teams
+- **链接**: https://blog.hubspot.com/marketing/geo-kpis
+- **日期**: 2026-04-23
+- **采集日期**: 2026-04-25
+- **Category**: Ai Search
+- **Topic**: `GEO, 搜索度量`
+- **标题(CN)**: 生成式引擎优化，营销该看哪些KPI
+- **摘要(CN)**: 别再只看传统搜索排名了。生成式AI正在重塑用户获取信息的方式，营销团队的评估体系必须跟上。本文拆解真正能衡量生成式引擎优化（GEO）成效的指标，帮你把不确定的AI流量变得可衡量、可优化。
+- **摘要**:  
+    
+ 
+Generative AI is changing how people discover brands, products, and information. Because it disrupts the buyer journey, it requires new metri
 

@@ -375,3 +375,35 @@ Space IDE at home: https://t.co/kRXv26iY3j
 - **摘要(CN)**: You can now call Replit Agent from Gemini Enterprise. https://t.co/SpN6qto4Gf
 - **摘要**: You can now call Replit Agent from Gemini Enterprise. https://t.co/SpN6qto4Gf
 
+### While US politicians/lobbyists are scaremongering about “Chinese distillation,” Chinese scientists a...
+- **链接**: https://x.com/amasad/status/2047547275682214384
+- **日期**: 2026-04-24
+- **采集日期**: 2026-04-24
+- **Category**: Ai Industry
+- **Topic**: `AI动态`
+- **摘要**: While US politicians/lobbyists are scaremongering about “Chinese distillation,” Chinese scientists are actually sharing real AI breakthroughs in the o
+
+### Dumbest design mistake in Apple history is folding “find on page” in Safari under “Share.” It is 3 c...
+- **链接**: https://x.com/amasad/status/2047524053314109600
+- **日期**: 2026-04-24
+- **采集日期**: 2026-04-24
+- **Category**: Ai Industry
+- **Topic**: `AI动态`
+- **摘要**: Dumbest design mistake in Apple history is folding “find on page” in Safari under “Share.” It is 3 clicks deep and makes no sense.
+
+### DeepSeek v4 just dropped https://t.co/KE3qggapPg
+- **链接**: https://x.com/amasad/status/2047519635063631914
+- **日期**: 2026-04-24
+- **采集日期**: 2026-04-24
+- **Category**: Ai Industry
+- **Topic**: `AI动态`
+- **摘要**: DeepSeek v4 just dropped https://t.co/KE3qggapPg
+
+### Import your Vercel or Lovable apps to Replit with a few clicks: https://t.co/RRtqzwnw2G
+- **链接**: https://x.com/amasad/status/2047747978690232550
+- **日期**: 2026-04-24
+- **采集日期**: 2026-04-25
+- **Category**: Ai Industry
+- **Topic**: `AI动态`
+- **摘要**: Import your Vercel or Lovable apps to Replit with a few clicks: https://t.co/RRtqzwnw2G
+

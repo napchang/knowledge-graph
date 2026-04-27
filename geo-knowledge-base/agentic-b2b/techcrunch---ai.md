@@ -94,3 +94,11 @@
 - **摘要(CN)**: OpenAI CEO奥特曼在播客中指责竞争对手Anthropic的新网络安全模型采用“恐惧式营销”，夸大产品威胁以制造市场优势。
 - **摘要**: This week, during a podcast appearance, OpenAI CEO Sam Altman called out his competitor's new cybersecurity model, noting that the company was using f
 
+### In another wild turn for AI chips, Meta signs deal for millions of Amazon AI CPUs
+- **链接**: https://techcrunch.com/2026/04/24/in-another-wild-turn-for-ai-chips-meta-signs-deal-for-millions-of-amazon-ai-cpus/
+- **日期**: Fri, 24 Ap
+- **采集日期**: 2026-04-24
+- **Category**: Agentic B2B
+- **Topic**: `Automation`
+- **摘要**: Meta has commandeered a big chunk of Amazon's homegrown CPUs (not GPUs) for AI agentic workloads, signaling that a new kind of chip race has begun.
+

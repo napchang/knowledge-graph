@@ -413,3 +413,76 @@ It’s the fastest way to maximize sere
 - **摘要(CN)**: Every pixel will be generated in real time. It’s just a matter of when, not if. Demos like this show a view of what’s possible 👏 https://t.co/ykpQcR2j
 - **摘要**: Every pixel will be generated in real time. It’s just a matter of when, not if. Demos like this show a view of what’s possible 👏 https://t.co/ykpQcR2j
 
+### Exhibit 237 on why Silicon Valley, the TV show, is a documentary.. https://t.co/NQO09BclNM
+- **链接**: https://x.com/nikunj/status/2047539976766931067
+- **日期**: 2026-04-24
+- **采集日期**: 2026-04-24
+- **Category**: Ai Industry
+- **Topic**: `AI动态`
+- **摘要**: Exhibit 237 on why Silicon Valley, the TV show, is a documentary.. https://t.co/NQO09BclNM
+
+### Even with all the model releases, this “stack” continues to be undefeated (for me)..
+
+- @claudeai Op...
+- **链接**: https://x.com/nikunj/status/2047382587258364204
+- **日期**: 2026-04-23
+- **采集日期**: 2026-04-24
+- **Category**: Ai Industry
+- **Topic**: `OpenAI动态, Anthropic动态, 模型发布, 企业落地`
+- **摘要(CN)**: Even with all the model releases, this “stack” continues to be undefeated (for me)..
+- **摘要**: Even with all the model releases, this “stack” continues to be undefeated (for me)..
+
+- @claudeai Opus for planning and frontend design
+- @OpenAI code
+
+### M&A is hitting a fever pitch.. at this rate, it’ll soon eclipse fundraising announcements. 
+
+Why?
+
+>...
+- **链接**: https://x.com/nikunj/status/2047336067972624870
+- **日期**: 2026-04-23
+- **采集日期**: 2026-04-24
+- **Category**: Ai Industry
+- **Topic**: `融资并购`
+- **摘要**: M&A is hitting a fever pitch.. at this rate, it’ll soon eclipse fundraising announcements. 
+
+Why?
+
+> seed to series A gap keeps getting worse - never 
+
+### Some of my relatively new favorite follows..
+
+&gt; @amypretzel (texture)
+&gt; @Vtrivedy10 (harness)
+...
+- **链接**: https://x.com/nikunj/status/2047861559075250687
+- **日期**: 2026-04-25
+- **采集日期**: 2026-04-25
+- **Category**: Ai Industry
+- **Topic**: `融资并购`
+- **摘要**: Some of my relatively new favorite follows..
+
+&gt; @amypretzel (texture)
+&gt; @Vtrivedy10 (harness)
+&gt; @oliverhamrin (sheer aura)
+&gt; @jakubkrehel 
+
+### When the designer finds out the PM shipped their vibe coded designs straight to production.. https:/...
+- **链接**: https://x.com/nikunj/status/2047790294184374565
+- **日期**: 2026-04-24
+- **采集日期**: 2026-04-25
+- **Category**: Ai Industry
+- **Topic**: `产品动态`
+- **摘要**: When the designer finds out the PM shipped their vibe coded designs straight to production.. https://t.co/WDbVJd9AXZ
+
+### Note to all product teams: project code names are not temporary, they are permanent. Like truly eter...
+- **链接**: https://x.com/nikunj/status/2047707257073524897
+- **日期**: 2026-04-24
+- **采集日期**: 2026-04-25
+- **Category**: Ai Industry
+- **Topic**: `产品动态`
+- **摘要**: Note to all product teams: project code names are not temporary, they are permanent. Like truly eternal. 
+
+Choose very very wisely.
+

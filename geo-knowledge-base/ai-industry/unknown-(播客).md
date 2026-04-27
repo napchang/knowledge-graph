@@ -154,3 +154,21 @@
 - **摘要(CN)**: AI并非要取代人类，而是逼出了我们独有的价值。文章提出“AI三明治”模型，说明在数据与执行之间，人类在判断、共情和创造力上形成不可替代的夹层，重新定义了人机协作的本质。
 - **摘要**: 
 
+### Ep 85: Has AI Infra Stabilized, FM Vibe Shift, &amp; What&apos;s Next for Coding Agents
+- **链接**: https://www.youtube.com/@RedpointAI
+- **日期**: 2026-04-24
+- **采集日期**: 2026-04-24
+- **Category**: Ai Industry
+- **Topic**: `Agent生态`
+- **标题(CN)**: OpenAI首席科学家谈持续学习与AI对齐
+- **摘要(CN)**: 本期探讨持续学习热潮、超越代码的强化学习及未来AI对齐方向，揭示技术前沿与伦理挑战。
+- **摘要**: 
+
+### SAP: Bringing the ‘Operating System’ of a Company into the AI Era with CTO Philipp Herzig
+- **链接**: https://www.youtube.com/watch?v=5u7AjPardvo
+- **日期**: 2026-04-25
+- **采集日期**: 2026-04-25
+- **Category**: Ai Industry
+- **Topic**: `AI动态`
+- **摘要**: 
+

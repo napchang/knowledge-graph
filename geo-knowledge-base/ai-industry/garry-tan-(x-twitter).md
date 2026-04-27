@@ -523,3 +523,35 @@ Short resolvers are better than long ones https://
 - **摘要(CN)**: Man between this and CrabTrap from @pedroh96 I am going to have a busy week https://t.co/twDMf4nTa9
 - **摘要**: Man between this and CrabTrap from @pedroh96 I am going to have a busy week https://t.co/twDMf4nTa9
 
+### Let's see... Ro Khanna is defending someone who incites murder, "let the streets soak in their red-c...
+- **链接**: https://x.com/garrytan/status/2047584723531444465
+- **日期**: 2026-04-24
+- **采集日期**: 2026-04-24
+- **Category**: Ai Industry
+- **Topic**: `AI动态`
+- **摘要**: Let's see... Ro Khanna is defending someone who incites murder, "let the streets soak in their red-capitalist blood," and who said America deserved 9/
+
+### Finally I'm still trying to move as much of my OpenClaw cron jobs and subagents over to GBrain Minio...
+- **链接**: https://x.com/garrytan/status/2047578207629819919
+- **日期**: 2026-04-24
+- **采集日期**: 2026-04-24
+- **Category**: Ai Industry
+- **Topic**: `Agent生态`
+- **摘要**: Finally I'm still trying to move as much of my OpenClaw cron jobs and subagents over to GBrain Minions and this is more stability improvements for tha
+
+### Next, I finally created new evals for GBrain which show how much more awesome GBrain is when you hav...
+- **链接**: https://x.com/garrytan/status/2047578205528477711
+- **日期**: 2026-04-24
+- **采集日期**: 2026-04-24
+- **Category**: Ai Industry
+- **Topic**: `AI动态`
+- **摘要**: Next, I finally created new evals for GBrain which show how much more awesome GBrain is when you have graph AND vector search on top of grep on knowle
+
+### Change the party to murder all capitalists (Piker) and destroy the schools (Bowman), brought to you ...
+- **链接**: https://x.com/garrytan/status/2047883265516924976
+- **日期**: 2026-04-25
+- **采集日期**: 2026-04-25
+- **Category**: Ai Industry
+- **Topic**: `融资并购`
+- **摘要**: Change the party to murder all capitalists (Piker) and destroy the schools (Bowman), brought to you by a tech centimillionaire who is using his money 
+

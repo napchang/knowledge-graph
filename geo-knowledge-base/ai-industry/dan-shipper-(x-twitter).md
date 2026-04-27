@@ -535,3 +535,58 @@ I chatted with @kieranklaassen, GM of @CoraComputerCora and
 - **摘要(CN)**: a lot of good ideas in here https://t.co/2dVddTUo5i
 - **摘要**: a lot of good ideas in here https://t.co/2dVddTUo5i
 
+### 👇👇👇 https://t.co/r6OXL7QzBM
+- **链接**: https://x.com/danshipper/status/2047455920377012375
+- **日期**: 2026-04-23
+- **采集日期**: 2026-04-24
+- **Category**: Ai Industry
+- **Topic**: `AI动态`
+- **摘要**: 👇👇👇 https://t.co/r6OXL7QzBM
+
+### Full GPT-5.5 vibe check: https://t.co/pjNxHR9ADq
+- **链接**: https://x.com/danshipper/status/2047388895562842162
+- **日期**: 2026-04-23
+- **采集日期**: 2026-04-24
+- **Category**: Ai Industry
+- **Topic**: `OpenAI动态`
+- **摘要**: Full GPT-5.5 vibe check: https://t.co/pjNxHR9ADq
+
+### many models write a great plan and then get scared of it.
+
+@OpenAI's new GPT-5.5 just does the thing...
+- **链接**: https://x.com/danshipper/status/2047388883823087633
+- **日期**: 2026-04-23
+- **采集日期**: 2026-04-24
+- **Category**: Ai Industry
+- **Topic**: `OpenAI动态`
+- **摘要(CN)**: many models write a great plan and then get scared of it.
+- **摘要**: many models write a great plan and then get scared of it.
+
+@OpenAI's new GPT-5.5 just does the thing.
+
+here's what changed 👇 https://t.co/Z79GUK7Opd
+
+### Any AI knows more than any individual human 
+
+But any individual human learns faster than any AI
+- **链接**: https://x.com/danshipper/status/2047797874600161334
+- **日期**: 2026-04-24
+- **采集日期**: 2026-04-25
+- **Category**: Ai Industry
+- **Topic**: `AI动态`
+- **摘要**: Any AI knows more than any individual human 
+
+But any individual human learns faster than any AI
+
+### generated in one shot with NotebookLM based on a book im reading
+
+holy fuckin shit https://t.co/xZTD...
+- **链接**: https://x.com/danshipper/status/2047674383469093079
+- **日期**: 2026-04-24
+- **采集日期**: 2026-04-25
+- **Category**: Ai Industry
+- **Topic**: `AI动态`
+- **摘要**: generated in one shot with NotebookLM based on a book im reading
+
+holy fuckin shit https://t.co/xZTDmaIk3T
+

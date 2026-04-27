@@ -180,3 +180,33 @@ https://t.co/gG063RcMrZ
 - **摘要(CN)**: 用户呼吁Venmo关闭一项允许用户查看共同好友间交易动态的功能，认为这可能暴露私人关系。
 - **摘要**: When is Venmo gonna finally turn off that feature that lets me see when two of my mutual friends are hooking up?
 
+### Think about how many “weather” apps and “dashboards” you saw on behance and dribbble in the pre-AI e...
+- **链接**: https://x.com/thenanyu/status/2047758400948408831
+- **日期**: 2026-04-24
+- **采集日期**: 2026-04-25
+- **Category**: Ai Industry
+- **Topic**: `AI动态`
+- **摘要**: Think about how many “weather” apps and “dashboards” you saw on behance and dribbble in the pre-AI era
+
+All hallucinations
+
+### “The core design is about understanding, not output.”
+
+A design is an intention. Not an image or a p...
+- **链接**: https://x.com/thenanyu/status/2047751915271020920
+- **日期**: 2026-04-24
+- **采集日期**: 2026-04-25
+- **Category**: Ai Industry
+- **Topic**: `硬件算力`
+- **摘要**: “The core design is about understanding, not output.”
+
+A design is an intention. Not an image or a prototype. Output without intention is hallucinatio
+
+### Cathedrals. Everywhere. https://t.co/gPgSCVmXB5
+- **链接**: https://x.com/thenanyu/status/2047674913557803284
+- **日期**: 2026-04-24
+- **采集日期**: 2026-04-25
+- **Category**: Ai Industry
+- **Topic**: `AI动态`
+- **摘要**: Cathedrals. Everywhere. https://t.co/gPgSCVmXB5
+

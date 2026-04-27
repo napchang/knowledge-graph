@@ -412,3 +412,61 @@ listen back to baby @amanrsanger when they were 5 people and pre-PMF https://t.c
 - **Topic**: `AI动态`
 - **摘要**: https://t.co/k3XbbNGw5s
 
+### come to the most ai pilled country per capita
+
+@anthropicai we want u https://t.co/u2as58vuWy
+- **链接**: https://x.com/swyx/status/2047545640180445400
+- **日期**: 2026-04-24
+- **采集日期**: 2026-04-24
+- **Category**: Ai Industry
+- **Topic**: `Anthropic动态`
+- **摘要**: come to the most ai pilled country per capita
+
+@anthropicai we want u https://t.co/u2as58vuWy
+
+### i think the most underated part of today's launch is not GPT 5.5 at all
+
+https://t.co/uwJtuJwgRx
+- **链接**: https://x.com/swyx/status/2047536499999346812
+- **日期**: 2026-04-24
+- **采集日期**: 2026-04-24
+- **Category**: Ai Industry
+- **Topic**: `OpenAI动态`
+- **摘要**: i think the most underated part of today's launch is not GPT 5.5 at all
+
+https://t.co/uwJtuJwgRx
+
+### wow the codex app is unrecognizable… almost like it shouldve been Atlas the whole time https://t.co/...
+- **链接**: https://x.com/swyx/status/2047461691580195310
+- **日期**: 2026-04-23
+- **采集日期**: 2026-04-24
+- **Category**: Ai Industry
+- **Topic**: `AI动态`
+- **摘要**: wow the codex app is unrecognizable… almost like it shouldve been Atlas the whole time https://t.co/PLTMJQwJmQ
+
+### @jsconfeu @cramforce talk now live! @vercel is doing incredible AI engineering work and it comes dir...
+- **链接**: https://x.com/swyx/status/2047749587163877668
+- **日期**: 2026-04-24
+- **采集日期**: 2026-04-25
+- **Category**: Ai Industry
+- **Topic**: `AI动态`
+- **摘要**: @jsconfeu @cramforce talk now live! @vercel is doing incredible AI engineering work and it comes direct from the C-suite, this should be more common b
+
+### btw the hot skills of today become 
+the posttrain targets of tomorrow https://t.co/JqetW5bzKl
+- **链接**: https://x.com/swyx/status/2047715417867907539
+- **日期**: 2026-04-24
+- **采集日期**: 2026-04-25
+- **Category**: Ai Industry
+- **Topic**: `AI动态`
+- **摘要**: btw the hot skills of today become 
+the posttrain targets of tomorrow https://t.co/JqetW5bzKl
+
+### for the record, i put "undecided" as the last choice, not the second choice, @nikitabier sorry i kno...
+- **链接**: https://x.com/swyx/status/2047705175847256452
+- **日期**: 2026-04-24
+- **采集日期**: 2026-04-25
+- **Category**: Ai Industry
+- **Topic**: `开发者工具`
+- **摘要**: for the record, i put "undecided" as the last choice, not the second choice, @nikitabier sorry i know this is minor but it should be a 2 second fix in
+
