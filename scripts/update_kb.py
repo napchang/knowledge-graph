@@ -298,17 +298,64 @@ def update_kb():
     # Preserve existing Chinese content across updates
     existing_cn = load_existing_cn_content()
     
+    def _to_nested(pkt):
+        """将 CAP flat IP 转换为 legacy nested 格式（兼容现有代码）"""
+        if 'packet_id' in pkt or 'cn' in pkt:
+            return pkt  # 已经是 nested
+        flat = pkt
+        se = flat.get('supporting_evidence', [])
+        return {
+            'packet_id': flat.get('id', ''),
+            'source': {
+                'name': flat.get('source_name', ''),
+                'type': flat.get('source_slug', ''),
+                'credibility': (flat.get('citations', [{}])[0] or {}).get('credibility', 'C'),
+            },
+            'en': {'title': '', 'summary': '', 'full_text': ''},
+            'cn': {
+                'title': flat.get('title', ''),
+                'summary': flat.get('content', ''),
+                'highlight': {
+                    'claim_one_line': flat.get('core_thesis', ''),
+                    'why_matters': se[0] if se else '',
+                    'surprise_factor': (flat.get('claims_to_verify', ['']) or [''])[0],
+                }
+            },
+            'metadata': {
+                'category': flat.get('category', ''),
+                'tags': [],
+                'published': '',
+                'collected': flat.get('created_at', ''),
+                'importance': flat.get('tier', 3),
+            },
+            'quality': {
+                'distill_density': flat.get('style_tags', {}).get('density', 0.14),
+                'fact_check_status': 'unverified',
+                'freshness_days': 0,
+                'surprise_factor': 0.5,
+            },
+            'evidence': {
+                'core_claims': [{'text': t} for t in se[1:]] if len(se) > 1 else [],
+                'citations': flat.get('citations', []),
+            },
+            'voice_print_free': True,
+            '_ip_flat': flat,  # 保留原始 flat 供其他脚本使用
+        }
+    
     # Load article packets (new source of truth for Chinese content)
     packet_map = {}
     packet_files = [
+        os.path.join(DATA_DIR, 'latest_ip_packets.json'),
+        os.path.join(DATA_DIR, 'ip_packets.json'),
         os.path.join(DATA_DIR, 'latest_packets.json'),
         os.path.join(DATA_DIR, 'article_packets.json'),
     ]
     # Also check dated subdirectories for packets
     for date_dir in sorted([d for d in os.listdir(DATA_DIR) if d.startswith('2026')]):
-        dated_packet = os.path.join(DATA_DIR, date_dir, 'article_packets.json')
-        if os.path.exists(dated_packet):
-            packet_files.insert(0, dated_packet)
+        for fname in ['ip_packets.json', 'article_packets.json']:
+            dated_packet = os.path.join(DATA_DIR, date_dir, fname)
+            if os.path.exists(dated_packet):
+                packet_files.insert(0, dated_packet)
     
     for pf in packet_files:
         if os.path.exists(pf):
@@ -316,12 +363,17 @@ def update_kb():
                 with open(pf, 'r', encoding='utf-8') as f:
                     pdata = json.load(f)
                 packets = pdata.get('packets', [])
+                is_flat = pdata.get('schema') == 'cap_flat' or 'core_thesis' in (packets[0] if packets else {})
                 for pkt in packets:
-                    citations = pkt.get('evidence', {}).get('citations', [])
-                    link = citations[0].get('url', '') if citations else ''
+                    if is_flat:
+                        link = (pkt.get('citations', [{}])[0] or {}).get('url', '')
+                        pkt = _to_nested(pkt)
+                    else:
+                        citations = pkt.get('evidence', {}).get('citations', [])
+                        link = citations[0].get('url', '') if citations else ''
                     if link:
                         packet_map[link] = pkt
-                print(f'Loaded {len(packets)} article packets from {pf}')
+                print(f'Loaded {len(packets)} article packets from {pf} (schema: {"flat" if is_flat else "nested"})')
                 break  # Use first found
             except Exception as e:
                 print(f'Failed to load packets from {pf}: {e}')
@@ -435,6 +487,13 @@ def update_kb():
                             f.write(f"- **标题(CN)**: {cn_title}\n")
                         if cn_summary:
                             f.write(f"- **摘要(CN)**: {cn_summary}\n")
+                        if cn_highlight:
+                            if cn_highlight.get('claim_one_line'):
+                                f.write(f"- **精华**: {cn_highlight['claim_one_line']}\n")
+                            if cn_highlight.get('why_matters'):
+                                f.write(f"- **重要性**: {cn_highlight['why_matters']}\n")
+                            if cn_highlight.get('surprise_factor'):
+                                f.write(f"- **反直觉点**: {cn_highlight['surprise_factor']}\n")
                         f.write(f"- **摘要**: {en_summary}\n\n")
             else:
                 other_articles.extend(source_articles)
@@ -486,6 +545,13 @@ def update_kb():
                             f.write(f"- **标题(CN)**: {cn_title}\n")
                         if cn_summary:
                             f.write(f"- **摘要(CN)**: {cn_summary}\n")
+                        if cn_highlight:
+                            if cn_highlight.get('claim_one_line'):
+                                f.write(f"- **精华**: {cn_highlight['claim_one_line']}\n")
+                            if cn_highlight.get('why_matters'):
+                                f.write(f"- **重要性**: {cn_highlight['why_matters']}\n")
+                            if cn_highlight.get('surprise_factor'):
+                                f.write(f"- **反直觉点**: {cn_highlight['surprise_factor']}\n")
                         f.write(f"- **摘要**: {en_summary}\n\n")
     
     total = sum(len(v) for v in articles_by_cat.values())
