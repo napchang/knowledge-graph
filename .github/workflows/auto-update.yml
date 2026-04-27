@@ -80,6 +80,9 @@ jobs:
         if: steps.commit.outputs.changed == 'true' && env.FEISHU_WEBHOOK_URL != ''
         env:
           FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+          TODAY_ARTICLES: ${{ steps.stats.outputs.today_articles }}
+          TOTAL_NODES: ${{ steps.stats.outputs.total_nodes }}
+          TODAY_STR: ${{ steps.stats.outputs.today_str }}
         run: |
           python3 -c "
           import json, urllib.request, os
@@ -106,10 +109,6 @@ jobs:
           resp = urllib.request.urlopen(req)
           print('Feishu notify status:', resp.status)
           "
-        env:
-          TODAY_ARTICLES: ${{ steps.stats.outputs.today_articles }}
-          TOTAL_NODES: ${{ steps.stats.outputs.total_nodes }}
-          TODAY_STR: ${{ steps.stats.outputs.today_str }}
 
       - name: Notify Feishu on failure
         if: failure()
