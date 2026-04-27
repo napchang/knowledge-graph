@@ -1,17 +1,6 @@
 import os, re, json
 from datetime import datetime
 
-def check_title_summary_match(title, summary, min_overlap=0.2):
-    """Check if title and summary match. Feedparser may misalign on some RSS feeds."""
-    if not title or not summary or len(summary) < 50:
-        return True
-    title_words = [w.strip('.,-:;!?').lower() for w in title.split() if len(w.strip('.,-:;!?')) >= 4]
-    if not title_words:
-        return True
-    summary_lower = summary.lower()
-    matches = sum(1 for w in title_words if w in summary_lower)
-    return matches / len(title_words) >= min_overlap
-
 import sys
 # Determine base dir: repo root (where geo-knowledge-base lives)
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -23,6 +12,18 @@ kb_dir = os.path.join(base_dir, 'geo-knowledge-base')
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from data_guard import assert_kb_complete
 assert_kb_complete(kb_dir)
+
+
+def check_title_summary_match(title, summary, min_overlap=0.2):
+    """Check if title and summary match. Feedparser may misalign on some RSS feeds."""
+    if not title or not summary or len(summary) < 50:
+        return True
+    title_words = [w.strip('.,-:;!?').lower() for w in title.split() if len(w.strip('.,-:;!?')) >= 4]
+    if not title_words:
+        return True
+    summary_lower = summary.lower()
+    matches = sum(1 for w in title_words if w in summary_lower)
+    return matches / len(title_words) >= min_overlap
 
 # Try load reading highlights cache
 READING_HIGHLIGHTS = {}
@@ -55,9 +56,13 @@ cat_names = {
 }
 # New color scheme from user
 cat_colors = {
-    'ai-search': '#FF6B35',      # 珊瑚橙    'agentic-b2b': '#4A7BC3',    # 飞天蓝    'ai-industry': '#E6B85C',    # 大地金    'academic': '#5A92E5'        # 升华蓝}
+    'ai-search': '#FF6B35',      # 破晓橙
+    'agentic-b2b': '#4A7BC3',    # 飞天蓝
+    'ai-industry': '#E6B85C',    # 大地金
+    'academic': '#5A92E5'        # 升华蓝
+}
 cat_desc = {
-    'ai-search': '搜索引擎优化、SEO、AEO、GEO、排名算法、搜索产品商业化',
+    'ai-search': '搜索引擎优化、GEO、AEO、SEO、排名算法、搜索产品商业化',
     'agentic-b2b': '营销自动化、销售工具、CRM、Workflow、HubSpot框架、客户体验',
     'ai-industry': '产品发布、融资动态、大厂战略、Builder动态、行业趋势',
     'academic': '论文发布、算法研究、模型架构（MIT/Stanford/arXiv）'
@@ -116,7 +121,7 @@ def is_recent(date_str):
     return (today_d - d).days <= 2
 
 articles = []
-seen_article_links = set()  # deduplicate across all markdown files
+seen_article_links = set()  # cross-file dedup
 for cat in categories:
     cat_dir = os.path.join(kb_dir, cat)
     if not os.path.exists(cat_dir):
@@ -154,26 +159,29 @@ for cat in categories:
             cn_summary = ''
             for line in lines[1:]:
                 line = line.strip()
-                if line.startswith('- **閾炬帴**:'):
+                if line.startswith('- **链接**:'):
                     link = line.split(':', 1)[1].strip()
-                elif line.startswith('- **鏃ユ湡**:'):
+                elif line.startswith('- **日期**:'):
                     date = line.split(':', 1)[1].strip()
-                elif line.startswith('- **閲囬泦鏃ユ湡**:'):
+                elif line.startswith('- **采集日期**:'):
                     collection_date_from_file = line.split(':', 1)[1].strip()
                 elif line.startswith('- **Topic**:'):
                     m = re.search(r'`(.+?)`', line)
                     if m:
                         topic_str = m.group(1)
-                elif line.startswith('- **鏍囬(CN)**:'):
+                elif line.startswith('- **标题(CN)**:'):
                     cn_title = line.split(':', 1)[1].strip()
-                elif line.startswith('- **鎽樿(CN)**:'):
+                elif line.startswith('- **摘要(CN)**:'):
                     cn_summary = line.split(':', 1)[1].strip()
-                elif line.startswith('- **鎽樿**:'):
+                elif line.startswith('- **摘要**:'):
                     summary = line.split(':', 1)[1].strip()
             if en_title and link:
-                # 闃插尽閿欎綅鏁版嵁锛氭鏌?title 鍜?summary 鏄惁鍖归厤
-                if not check_title_summary_match(en_title, summary):
-                    print(f'  鈿狅笍 Title-summary mismatch in markdown, clearing summary: {en_title[:50]}')
+                # Cross-file dedup
+                if link in seen_article_links:
+                    continue
+                seen_article_links.add(link)
+                # Filter misaligned summary
+                if summary and not check_title_summary_match(en_title, summary):
                     summary = ''
                 cache = ENRICH_CACHE.get(link, {})
                 # Use collection date for is_today: article field > filename > published date
@@ -254,16 +262,16 @@ for cat in categories:
 
 # Tag normalization: fix vague academic tags
 ACADEMIC_TAG_MAP = {
-    '鐮旂┒': '瀛︽湳鍓嶆部',
-    '璁烘枃': '椤朵細璁烘枃',
+    '研究': '学术前沿',
+    '论文': '顶会论文',
 }
 def normalize_topic(topic, art):
     """Normalize vague tags, especially for academic category"""
-    if art['category'] == 'academic' and topic.lower() in ('鐮旂┒', 'research', '璁烘枃', 'paper'):
+    if art['category'] == 'academic' and topic.lower() in ('研究', 'research', '论文', 'paper'):
         # Try to extract meaningful topic from title
         title = art.get('cn_title', '') or art.get('title', '')
         # Extract key technical terms
-        tech_terms = re.findall(r'(LLM|RAG|妫€绱鍚戦噺|鐭ヨ瘑鍥捐氨|澶氭ā鎬亅骞昏|鎺ㄧ悊|鐢熸垚|瀵归綈|寰皟|棰勮缁億Transformer|BERT|GPT|Embedding|璇箟鎼滅储|瀵规瘮瀛︿範|淇℃伅妫€绱?', title, re.I)
+        tech_terms = re.findall(r'(LLM|RAG|检索|向量|知识图谱|多模态|幻觉|推理|生成|对齐|微调|预训练|Transformer|BERT|GPT|Embedding|语义搜索|对比学习|信息检索)', title, re.I)
         if tech_terms:
             return tech_terms[0]
         # Try English technical terms from title
@@ -271,10 +279,10 @@ def normalize_topic(topic, art):
         for t in en_terms:
             if len(t) > 3 and t.lower() not in ('the', 'and', 'for', 'with', 'from', 'how', 'new', 'use', 'using', 'based', 'approach', 'method'):
                 return t.strip()
-        return '瀛︽湳鍓嶆部'
+        return '学术前沿'
     return ACADEMIC_TAG_MAP.get(topic, topic)
 
-# Collect topic 鈫?articles mapping & build hierarchy
+# Collect topic → articles mapping & build hierarchy
 for art in articles:
     for topic in art['topics']:
         topic = normalize_topic(topic, art)
@@ -294,10 +302,8 @@ for topic, art_list in topic_articles.items():
         # Create parent tag if not exists
         if parent_name not in parent_tags:
             parent_tags[parent_name] = {'cat': cat, 'count': 0, 'arts': set()}
-        parent_tags[parent_name]['count'] += len(art_list)
-            for a in art_list:
-            parent_tags[parent_name]['arts'].add(id(a))
-        # Count should be unique articles, not sum of child lists (same article may appear in multiple children)
+        for a in art_list:
+            parent_tags[parent_name]['arts'].add(a['link'])
         parent_tags[parent_name]['count'] = len(parent_tags[parent_name]['arts'])
         # Mark hierarchical relationship
         hierarchy_edges.append((f'tag_{parent_name}', f'tag_{topic}'))
@@ -309,7 +315,7 @@ created_tag_ids = set()
 for parent_name, info in parent_tags.items():
     cat = info['cat']
     count = info['count']
-    avg_imp = sum(a.get('importance', 3) for a in articles if id(a) in info['arts']) / max(len(info['arts']), 1)
+    avg_imp = sum(a.get('importance', 3) for a in articles if a['link'] in info['arts']) / max(len(info['arts']), 1)
     tag_id = f'tag_{parent_name}'
     created_tag_ids.add(tag_id)
     nodes.append({
@@ -327,7 +333,7 @@ for parent_name, info in parent_tags.items():
         'source': f'cat_{cat}',
         'target': tag_id,
         'value': 2,
-        'label': '鍖呭惈'
+        'label': '包含'
     })
     # Parent tag only connects to child tags, not articles (to avoid overcrowding)
 
@@ -346,7 +352,7 @@ for topic, art_list in topic_articles.items():
                 'source': tag_id,
                 'target': f'art_{idx}',
                 'value': 1,
-                'label': '鍏宠仈'
+                'label': '关联'
             })
         continue
     created_tag_ids.add(tag_id)
@@ -369,14 +375,14 @@ for topic, art_list in topic_articles.items():
             'source': f'tag_{parent_name}',
             'target': tag_id,
             'value': 2,
-            'label': '瀛愮被'
+            'label': '子类'
         })
     else:
         edges.append({
             'source': f'cat_{cat}',
             'target': tag_id,
             'value': 2,
-            'label': '鍖呭惈'
+            'label': '包含'
         })
     for art in art_list:
         idx = art_index.get(art['link'])
@@ -386,7 +392,7 @@ for topic, art_list in topic_articles.items():
             'source': tag_id,
             'target': f'art_{idx}',
             'value': 1,
-            'label': '鍏宠仈'
+            'label': '关联'
         })
 
 # Deduplicate labels
@@ -417,11 +423,14 @@ for i, art in enumerate(articles):
     border_color = '#ffffff'
     if imp >= 5:
         border_width = 3
-        border_color = '#FF6B35'  # 鐮存檽姗欒竟妗?    elif imp >= 4:
+        border_color = '#FF6B35'  # 破晓橙边框
+    elif imp >= 4:
         border_width = 2
-        border_color = '#E6B85C'  # 澶у湴閲戣竟妗?    elif is_important:
+        border_color = '#E6B85C'  # 大地金边框
+    elif is_important:
         border_width = 2
-        border_color = '#4A7BC3'  # 椋炲ぉ钃濊竟妗?    
+        border_color = '#4A7BC3'  # 飞天蓝边框
+    
     # Build unique label
     base_label = art['cn_title'][:26] + '...' if art.get('cn_title') and len(art['cn_title']) > 26 else (art['cn_title'] or art['title'][:26] + '...')
     if label_counts.get(base_label, 0) > 1:
@@ -491,18 +500,18 @@ for idx, tags in article_tags.items():
                         'target': f'tag_{t2}',
                         'value': 1,
                         'type': 'cross',
-                        'label': '璺ㄤ富棰?
+                        'label': '跨主题'
                     })
 
 # Inter-category connections (thematic links between the 4 main categories)
 # These represent semantic relationships between domains
 inter_cat_links = [
-    ('cat_ai-search', 'cat_agentic-b2b', '鎼滅储椹卞姩B2B鑾峰'),
-    ('cat_ai-search', 'cat_ai-industry', '鎼滅储浜у搧鍟嗕笟鍖?),
-    ('cat_ai-search', 'cat_academic', '鎼滅储绠楁硶鐮旂┒'),
-    ('cat_agentic-b2b', 'cat_ai-industry', 'B2B AI浜у搧'),
-    ('cat_agentic-b2b', 'cat_academic', 'Agentic鐮旂┒'),
-    ('cat_ai-industry', 'cat_academic', '浜у鐮旇浆鍖?)
+    ('cat_ai-search', 'cat_agentic-b2b', '搜索驱动B2B获客'),
+    ('cat_ai-search', 'cat_ai-industry', '搜索产品商业化'),
+    ('cat_ai-search', 'cat_academic', '搜索算法研究'),
+    ('cat_agentic-b2b', 'cat_ai-industry', 'B2B AI产品'),
+    ('cat_agentic-b2b', 'cat_academic', 'Agentic研究'),
+    ('cat_ai-industry', 'cat_academic', '产学研转化')
 ]
 for src, tgt, label in inter_cat_links:
     edges.append({
